@@ -28,10 +28,9 @@ class BrazilFetcher(base.RiverDataFetcher):
         """Downloads and extracts the data file."""
         params = {"tipo": 3, "documentos": self.site_id}
         s = utils.requests_retry_session()
-        headers = {'User-Agent': 'Mozilla/5.0'}
 
         try:
-            response = s.get(self.BASE_URL, params=params, headers=headers)
+            response = s.get(self.BASE_URL, params=params, headers=utils.DEFAULT_HEADERS)
             response.raise_for_status()
 
             with zipfile.ZipFile(io.BytesIO(response.content)) as zf:

@@ -3,9 +3,11 @@
 import io
 import logging
 import os
+import re
 import shutil
 import sqlite3
 import zipfile
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Optional
 
@@ -38,8 +40,6 @@ class CanadaFetcher(base.RiverDataFetcher):
             links = soup.find_all('a')
             latest_date = None
             latest_link = None
-            import re
-            from datetime import datetime
 
             for link in links:
                 href = link.get('href')

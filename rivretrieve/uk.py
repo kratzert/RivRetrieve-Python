@@ -95,9 +95,10 @@ class UKFetcher(base.RiverDataFetcher):
 
         if variable == "stage":
             # UK stage data is 15-min, average to daily
-            # A full day has 24 * 4 = 96 readings
-            df_daily = df.groupby("Date").agg(Value=("Value", "sum"), Count=("Value", "size")).reset_index()
-            df_daily = df_daily[df_daily["Count"] == 96]
+            # A full day has 24 * 4 = 96 readings. We accept days with at least 90 readings.
+            min_readings = 90
+            df_daily = df.groupby("Date").agg(Value=("Value", "mean"), Count=("Value", "size")).reset_index()
+            df_daily = df_daily[df_daily["Count"] >= min_readings]
             df_daily = df_daily[["Date", "Value"]]
         else:  # discharge is already daily
             df_daily = df[["Date", "Value"]]

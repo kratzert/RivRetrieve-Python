@@ -12,6 +12,8 @@ from urllib3.util.retry import Retry
 
 logger = logging.getLogger(__name__)
 
+DEFAULT_HEADERS = {'User-Agent': 'Mozilla/5.0'}
+
 
 def format_start_date(start_date: Optional[str]) -> str:
     """Formats the start date, defaulting to 1900-01-01 if None."""
