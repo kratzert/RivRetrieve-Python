@@ -9,11 +9,31 @@ The entire translation into this Python package was performed by Gemini 2.5 Pro,
 
 ## Installation
 
+1. Clone or download the repository to your computer.
+
+2. Setup your evenvironment, e.g. using the following command from within the RivRetrieve-Python directory.
+
 ```bash
-pip install .
+# Creates a virtual Python environment within the directory.
+python3 -m venv .venv
 ```
 
-## Usage
+3. Install the package and all requirements.
+
+
+```bash
+# The -e makes the installed version editable, in case you want to change some code.
+.venv/bin/python3 -m pip install -e .
+```
+
+4. Test installation.
+
+```bash
+# Downloads data for one gauge from the US and saves a plot with the discharge data.
+.venv/bin/python3 examples/test_usa_fetcher.py
+```
+
+## Example usage
 
 ```python
 from rivretrieve import UKFetcher
