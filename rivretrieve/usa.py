@@ -39,10 +39,9 @@ class USAFetcher(base.RiverDataFetcher):
 
     def _parse_data(self, raw_data: pd.DataFrame, variable: str) -> pd.DataFrame:
         """Parses the DataFrame from dataretrieval."""
+
         if raw_data.empty:
             return pd.DataFrame(columns=["Date", utils.get_column_name(variable)])
-
-        logger.info(f"DataFrame columns for site {self.site_id}: {raw_data.columns.tolist()}")
 
         col_name = utils.get_column_name(variable)
         param_code = self._get_param_code(variable)

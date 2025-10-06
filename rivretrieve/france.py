@@ -73,7 +73,6 @@ class FranceFetcher(base.RiverDataFetcher):
             df = pd.DataFrame(raw_data)
             if df.empty:
                 return pd.DataFrame(columns=["Date", col_name])
-            logger.info(f"FranceFetcher columns: {df.columns.tolist()}")
 
             grandeur_code = "QmnJ" if variable == "discharge" else "HnJ"
             df = df[df['grandeur_hydro_elab'] == grandeur_code]

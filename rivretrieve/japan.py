@@ -48,7 +48,10 @@ class JapanFetcher(base.RiverDataFetcher):
         while current_dt <= end_dt:
             month_start_str = current_dt.strftime("%Y%m%d")
             # End date for the request can be a bit beyond the current month
-            request_end_str = (current_dt + relativedelta(months=1)).strftime("%Y%m%d")
+            request_end_dt = current_dt + relativedelta(months=1, days=-1)
+            if request_end_dt > end_dt:
+                request_end_dt = end_date
+            request_end_str = request_end_dt.strftime("%Y%m%d")
 
             params = {
                 "KIND": kind,
