@@ -1,6 +1,7 @@
 .venv/
 .vscode/
 *.egg-info/
+downloaded_data/
 
 **/*.pyc
 **/*.sqlite3
