@@ -71,7 +71,7 @@ def requests_retry_session(
 def load_sites_csv(country_code: str) -> pd.DataFrame:
     """Loads site data from a CSV file in the data directory."""
     current_dir = os.path.dirname(__file__)
-    file_path = os.path.join(current_dir, "data", f"{country_code}_sites.csv")
+    file_path = os.path.join(current_dir, "..", "cached_site_data", f"{country_code}_sites.csv")
     try:
         return pd.read_csv(file_path, dtype={'site': str})
     except FileNotFoundError:
