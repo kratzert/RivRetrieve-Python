@@ -6,3 +6,4 @@ downloaded_data/
 **/*.pyc
 **/*.sqlite3
 **/*.png
+.env
