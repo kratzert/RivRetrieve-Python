@@ -1,8 +1,9 @@
 """Utility functions for the RivRetrieve package."""
 
 import datetime
+import io
 import logging
-import os
+import pkgutil
 from typing import Optional
 
 import pandas as pd
@@ -12,7 +13,7 @@ from urllib3.util.retry import Retry
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_HEADERS = {'User-Agent': 'Mozilla/5.0'}
+DEFAULT_HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 
 def format_start_date(start_date: Optional[str]) -> str:
@@ -44,14 +45,16 @@ def get_column_name(variable: str) -> str:
     elif variable == "discharge":
         return "Q"
     else:
-        raise ValueError(f"Unsupported variable: {variable}. Must be 'stage' or 'discharge'.")
+        raise ValueError(
+            f"Unsupported variable: {variable}. Must be 'stage' or 'discharge'."
+        )
 
 
 def requests_retry_session(
-        retries=3,
-        backoff_factor=0.3,
-        status_forcelist=(500, 502, 504),
-        session=None,
+    retries=3,
+    backoff_factor=0.3,
+    status_forcelist=(500, 502, 504),
+    session=None,
 ) -> requests.Session:
     """Creates a requests session with retry logic."""
     session = session or requests.Session()
@@ -71,7 +74,7 @@ def requests_retry_session(
 def load_sites_csv(country_code: str) -> pd.DataFrame:
     """Loads site data from a CSV file in the data directory."""
     current_dir = os.path.dirname(__file__)
-    file_path = os.path.join(current_dir, "..", "cached_site_data", f"{country_code}_sites.csv")
+    file_path = os.path.join(current_dir, "cached_site_data", f"{country_code}_sites.csv")
     try:
         return pd.read_csv(file_path, dtype={'site': str})
     except FileNotFoundError:
