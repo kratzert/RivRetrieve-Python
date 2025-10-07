@@ -1,9 +1,7 @@
 """Utility functions for the RivRetrieve package."""
 
 import datetime
-import io
 import logging
-import pkgutil
 from typing import Optional
 
 import pandas as pd
