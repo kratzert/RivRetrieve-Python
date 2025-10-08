@@ -37,18 +37,6 @@ def format_end_date(end_date: Optional[str]) -> str:
         raise ValueError("Incorrect end_date format, should be YYYY-MM-DD")
 
 
-def get_column_name(variable: str) -> str:
-    """Returns the standard column name for the given variable."""
-    if variable == "stage":
-        return "H"
-    elif variable == "discharge":
-        return "Q"
-    else:
-        raise ValueError(
-            f"Unsupported variable: {variable}. Must be 'stage' or 'discharge'."
-        )
-
-
 def requests_retry_session(
     retries=3,
     backoff_factor=0.3,
@@ -73,9 +61,11 @@ def requests_retry_session(
 def load_sites_csv(country_code: str) -> pd.DataFrame:
     """Loads site data from a CSV file in the data directory."""
     current_dir = os.path.dirname(__file__)
-    file_path = os.path.join(current_dir, "cached_site_data", f"{country_code}_sites.csv")
+    file_path = os.path.join(
+        current_dir, "cached_site_data", f"{country_code}_sites.csv"
+    )
     try:
-        return pd.read_csv(file_path, dtype={'site': str})
+        return pd.read_csv(file_path, dtype={"site": str})
     except FileNotFoundError:
         logger.error(f"Site file not found: {file_path}")
         raise

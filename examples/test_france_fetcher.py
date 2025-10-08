@@ -3,13 +3,14 @@ import logging
 import matplotlib.pyplot as plt
 
 from rivretrieve import FranceFetcher
+from rivretrieve import constants
 
 logging.basicConfig(level=logging.INFO)
 
 site_ids = [
     "K027401001",
 ]
-variable = "discharge"
+variable = constants.DISCHARGE
 
 plt.figure(figsize=(12, 6))
 
@@ -20,15 +21,23 @@ for site_id in site_ids:
     if not data.empty:
         print(f"Data for {site_id}:")
         print(data.head())
-        print(f"Time series from {data['Date'].min()} to {data['Date'].max()}")
-        plt.plot(data['Date'], data['Q'], label=site_id, marker='.', linestyle='-')
-        plt.xlim(data['Date'].min(), data['Date'].max())
+        print(
+            f"Time series from {data[constants.TIME_INDEX].min()} to {data[constants.TIME_INDEX].max()}"
+        )
+        plt.plot(
+            data[constants.TIME_INDEX],
+            data[constants.DISCHARGE],
+            label=site_id,
+            marker=".",
+            linestyle="-",
+        )
+        plt.xlim(data[constants.TIME_INDEX].min(), data[constants.TIME_INDEX].max())
     else:
         print(f"No data found for {site_id}")
 
 if not data.empty:
-    plt.xlabel("Date")
-    plt.ylabel("Discharge (m3/s)")
+    plt.xlabel(constants.TIME_INDEX)
+    plt.ylabel(f"{constants.DISCHARGE} (m3/s)")
     plt.title(f"France River Discharge ({site_id} - Full Time Series)")
     plt.legend()
     plt.grid(True)

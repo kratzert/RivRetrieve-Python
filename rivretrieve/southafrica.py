@@ -10,7 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 from dateutil.relativedelta import relativedelta
 
-from . import base, utils
+from . import base, utils, constants
 
 logger = logging.getLogger(__name__)
 
@@ -25,29 +25,44 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
         """Retrieves a DataFrame of available South African gauge sites."""
         return utils.load_sites_csv("southAfrican")
 
-    def _construct_endpoint(self, data_type: str, chunk_start_date: date, chunk_end_date: date) -> str:
+    def _construct_endpoint(
+        self, data_type: str, chunk_start_date: date, chunk_end_date: date
+    ) -> str:
         start_str = chunk_start_date.strftime("%Y-%m-%d")
         end_str = chunk_end_date.strftime("%Y-%m-%d")
-        endpoint = (f"{self.BASE_URL}?Station={self.site_id}100.00"
-                    f"&DataType={data_type}&StartDT={start_str}&EndDT={end_str}&SiteType=RIV")
+        endpoint = (
+            f"{self.BASE_URL}?Station={self.site_id}100.00"
+            f"&DataType={data_type}&StartDT={start_str}&EndDT={end_str}&SiteType=RIV"
+        )
         return endpoint
 
-    def _download_data(self, variable: str, start_date: str, end_date: str) -> List[pd.DataFrame]:
+    def _download_data(
+        self, variable: str, start_date: str, end_date: str
+    ) -> List[pd.DataFrame]:
         """Downloads raw data in chunks."""
         start_dt = datetime.strptime(start_date, "%Y-%m-%d").date()
         end_dt = datetime.strptime(end_date, "%Y-%m-%d").date()
         s = utils.requests_retry_session()
-        headers = {'User-Agent': 'Mozilla/5.0'}
+        headers = {"User-Agent": "Mozilla/5.0"}
         data_list = []
 
-        if variable == "stage":
+        if variable == constants.STAGE:
             data_type = "Point"
             chunk_years = 1
-            header = ["DATE", "TIME", "COR_LEVEL", "COR_LEVEL_QUAL", "COR_FLOW", "COR_FLOW_QUAL"]
-        else:  # discharge
+            header = [
+                "DATE",
+                "TIME",
+                "COR_LEVEL",
+                "COR_LEVEL_QUAL",
+                "COR_FLOW",
+                "COR_FLOW_QUAL",
+            ]
+        elif variable == constants.DISCHARGE:  # discharge
             data_type = "Daily"
             chunk_years = 20
             header = ["DATE", "D_AVG_FR", "QUAL"]
+        else:
+            raise ValueError(f"Unsupported variable: {variable}")
 
         current_start_dt = start_dt
         while current_start_dt <= end_dt:
@@ -55,14 +70,18 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
             if chunk_end_dt > end_dt:
                 chunk_end_dt = end_dt
 
-            endpoint = self._construct_endpoint(data_type, current_start_dt, chunk_end_dt)
-            logger.info(f"Fetching {variable} for site {self.site_id} from {current_start_dt} to {chunk_end_dt}")
+            endpoint = self._construct_endpoint(
+                data_type, current_start_dt, chunk_end_dt
+            )
+            logger.info(
+                f"Fetching {variable} for site {self.site_id} from {current_start_dt} to {chunk_end_dt}"
+            )
 
             try:
                 response = s.get(endpoint, headers=headers)
                 response.raise_for_status()
-                soup = BeautifulSoup(response.text, 'lxml')
-                pre_tag = soup.find('pre')
+                soup = BeautifulSoup(response.text, "lxml")
+                pre_tag = soup.find("pre")
 
                 if pre_tag:
                     data_text = pre_tag.text
@@ -70,7 +89,7 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
                         logger.info("No data found for this chunk.")
                     else:
                         # Clean up lines and split by spaces
-                        lines = data_text.strip().split('\n')
+                        lines = data_text.strip().split("\n")
                         data_rows = []
                         header_found = False
                         for line in lines:
@@ -78,7 +97,7 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
                                 header_found = True
                                 continue
                             if header_found and re.match(r"^[0-9]{8}", line):
-                                data_rows.append(re.split(r'\s+', line.strip()))
+                                data_rows.append(re.split(r"\s+", line.strip()))
 
                         if data_rows:
                             df = pd.DataFrame(data_rows)
@@ -86,11 +105,13 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
                             if df.shape[1] < len(header):
                                 for i in range(len(header) - df.shape[1]):
                                     df[df.shape[1] + i] = None
-                            df = df.iloc[:, :len(header)]
+                            df = df.iloc[:, : len(header)]
                             df.columns = header
                             data_list.append(df)
                 else:
-                    logger.warning(f"No <pre> tag found for site {self.site_id} at {endpoint}")
+                    logger.warning(
+                        f"No <pre> tag found for site {self.site_id} at {endpoint}"
+                    )
 
             except requests.exceptions.RequestException as e:
                 logger.error(f"Error fetching data for site {self.site_id}: {e}")
@@ -101,45 +122,70 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
 
         return data_list
 
-    def _parse_data(self, raw_data_list: List[pd.DataFrame], variable: str) -> pd.DataFrame:
+    def _parse_data(
+        self, raw_data_list: List[pd.DataFrame], variable: str
+    ) -> pd.DataFrame:
         """Parses the list of DataFrames."""
-        col_name = utils.get_column_name(variable)
         if not raw_data_list:
-            return pd.DataFrame(columns=["Date", col_name])
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         try:
             full_df = pd.concat(raw_data_list, ignore_index=True)
             if full_df.empty:
-                return pd.DataFrame(columns=["Date", col_name])
+                return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-            full_df["Date"] = pd.to_datetime(full_df["DATE"], format="%Y%m%d", errors='coerce')
-            full_df = full_df.dropna(subset=["Date"])
+            full_df[constants.TIME_INDEX] = pd.to_datetime(
+                full_df["DATE"], format="%Y%m%d", errors="coerce"
+            )
+            full_df = full_df.dropna(subset=[constants.TIME_INDEX])
 
-            if variable == "stage":
-                full_df["COR_LEVEL"] = pd.to_numeric(full_df["COR_LEVEL"], errors='coerce')
+            if variable == constants.STAGE:
+                full_df["COR_LEVEL"] = pd.to_numeric(
+                    full_df["COR_LEVEL"], errors="coerce"
+                )
                 # Average stage if multiple readings per day
-                daily_df = full_df.groupby("Date").agg(Value=("COR_LEVEL", "mean")).reset_index()
+                daily_df = (
+                    full_df.groupby(constants.TIME_INDEX)
+                    .agg(Value=("COR_LEVEL", "mean"))
+                    .reset_index()
+                )
             else:  # discharge
-                full_df["D_AVG_FR"] = pd.to_numeric(full_df["D_AVG_FR"], errors='coerce')
-                daily_df = full_df[["Date", "D_AVG_FR"]].rename(columns={"D_AVG_FR": "Value"})
+                full_df["D_AVG_FR"] = pd.to_numeric(
+                    full_df["D_AVG_FR"], errors="coerce"
+                )
+                daily_df = full_df[[constants.TIME_INDEX, "D_AVG_FR"]].rename(
+                    columns={"D_AVG_FR": "Value"}
+                )
 
-            daily_df = daily_df.rename(columns={"Value": col_name})
-            return daily_df.dropna().sort_values(by="Date").reset_index(drop=True)
+            daily_df = daily_df.rename(columns={"Value": variable})
+            return (
+                daily_df.dropna()
+                .sort_values(by=constants.TIME_INDEX)
+                .reset_index(drop=True)
+            )
 
         except Exception as e:
             logger.error(f"Error parsing data for site {self.site_id}: {e}")
-            return pd.DataFrame(columns=["Date", col_name])
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-    def get_data(self, variable: str, start_date: Optional[str] = None, end_date: Optional[str] = None) -> pd.DataFrame:
+    def get_data(
+        self,
+        variable: str,
+        start_date: Optional[str] = None,
+        end_date: Optional[str] = None,
+    ) -> pd.DataFrame:
         """Fetches and parses South African river gauge data."""
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
-        utils.get_column_name(variable)  # Validate variable
+        if variable not in [constants.DISCHARGE, constants.STAGE]:
+            raise ValueError(f"Unsupported variable: {variable}")
 
         try:
             raw_data_list = self._download_data(variable, start_date, end_date)
             df = self._parse_data(raw_data_list, variable)
             return df
         except Exception as e:
-            logger.error(f"Failed to get data for site {self.site_id}, variable {variable}: {e}")
-            return pd.DataFrame(columns=["Date", utils.get_column_name(variable)])
+            logger.error(
+                f"Failed to get data for site {self.site_id}, variable {variable}: {e}"
+            )
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

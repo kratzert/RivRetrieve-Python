@@ -8,7 +8,7 @@ from typing import Optional
 import pandas as pd
 import requests
 
-from . import base, utils
+from . import base, utils, constants
 
 logger = logging.getLogger(__name__)
 
@@ -48,54 +48,55 @@ class SloveniaFetcher(base.RiverDataFetcher):
 
     def _parse_data(self, raw_data: Optional[str], variable: str) -> pd.DataFrame:
         """Parses the raw CSV data."""
-        col_name = utils.get_column_name(variable)
         if not raw_data:
-            return pd.DataFrame(columns=["Date", col_name])
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         try:
             df = pd.read_csv(StringIO(raw_data), sep=";", encoding="utf-8")
 
             if df.empty:
-                return pd.DataFrame(columns=["Date", col_name])
+                return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-            df = df.rename(columns={"Datum": "Date"})
-            df["Date"] = pd.to_datetime(df["Date"], format="%d.%m.%Y", errors="coerce")
-            df = df.dropna(subset=["Date"])
+            df = df.rename(columns={"Datum": constants.TIME_INDEX})
+            df[constants.TIME_INDEX] = pd.to_datetime(
+                df[constants.TIME_INDEX], format="%d.%m.%Y", errors="coerce"
+            )
+            df = df.dropna(subset=[constants.TIME_INDEX])
 
-            if variable == "stage":
+            if variable == constants.STAGE:
                 raw_col = "vodostaj (cm)"
                 if raw_col in df.columns:
-                    df[col_name] = (
+                    df[variable] = (
                         pd.to_numeric(df[raw_col], errors="coerce") / 100.0
                     )  # cm to m
                 else:
                     logger.warning(
                         f"Column {raw_col} not found for site {self.site_id}"
                     )
-                    return pd.DataFrame(columns=["Date", col_name])
-            elif variable == "discharge":
+                    return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
+            elif variable == constants.DISCHARGE:
                 raw_col = "pretok (m3/s)"
                 if raw_col in df.columns:
-                    df[col_name] = pd.to_numeric(df[raw_col], errors="coerce")
+                    df[variable] = pd.to_numeric(df[raw_col], errors="coerce")
                 else:
                     logger.warning(
                         f"Column {raw_col} not found for site {self.site_id}"
                     )
-                    return pd.DataFrame(columns=["Date", col_name])
+                    return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
             else:
                 # Should not happen due to check in get_data
-                return pd.DataFrame(columns=["Date", col_name])
+                return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
             return (
-                df[["Date", col_name]]
+                df[[constants.TIME_INDEX, variable]]
                 .dropna()
-                .sort_values(by="Date")
+                .sort_values(by=constants.TIME_INDEX)
                 .reset_index(drop=True)
             )
 
         except Exception as e:
             logger.error(f"Error parsing data for site {self.site_id}: {e}")
-            return pd.DataFrame(columns=["Date", col_name])
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     def get_data(
         self,
@@ -106,11 +107,10 @@ class SloveniaFetcher(base.RiverDataFetcher):
         """Fetches and parses Slovenian river gauge data."""
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
-        utils.get_column_name(variable)  # Validate variable
 
-        if variable not in ["stage", "discharge"]:
+        if variable not in [constants.STAGE, constants.DISCHARGE]:
             logger.warning(f"Unsupported variable: {variable} for SloveniaFetcher")
-            return pd.DataFrame(columns=["Date", utils.get_column_name(variable)])
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         try:
             raw_data = self._download_data(variable, start_date, end_date)
@@ -119,10 +119,13 @@ class SloveniaFetcher(base.RiverDataFetcher):
             # Filter by date range
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[(df["Date"] >= start_date_dt) & (df["Date"] <= end_date_dt)]
+            df = df[
+                (df[constants.TIME_INDEX] >= start_date_dt)
+                & (df[constants.TIME_INDEX] <= end_date_dt)
+            ]
             return df
         except Exception as e:
             logger.error(
                 f"Failed to get data for site {self.site_id}, variable {variable}: {e}"
             )
-            return pd.DataFrame(columns=["Date", utils.get_column_name(variable)])
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

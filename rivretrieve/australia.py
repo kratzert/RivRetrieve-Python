@@ -8,7 +8,7 @@ from typing import Any, Dict, Optional
 import pandas as pd
 import requests
 
-from . import base, utils
+from . import base, utils, constants
 
 logger = logging.getLogger(__name__)
 
@@ -42,21 +42,23 @@ class AustraliaFetcher(base.RiverDataFetcher):
             logger.error(f"BoM API request failed for params {params}: {e}")
             raise
         except json.JSONDecodeError as e:
-            logger.error(f"BoM API JSON decode failed for params {params}: {e}\nResponse: {response.text}")
+            logger.error(
+                f"BoM API JSON decode failed for params {params}: {e}\nResponse: {response.text}"
+            )
             raise
 
     def _get_timeseries_id(self, variable: str) -> Optional[str]:
         """Retrieves the timeseries ID for the given site and variable."""
-        if variable == "stage":
+        if variable == constants.STAGE:
             bom_variable = "Water Course Level"
             # ts_name = "H.Merged.DailyMean"
-        elif variable == "discharge":
+        elif variable == constants.DISCHARGE:
             bom_variable = "Water Course Discharge"
             # ts_name = "Q.Merged.DailyMean"
         else:
             raise ValueError(f"Unsupported variable: {variable}")
 
-        ts_name = 'DMQaQc.Merged.DailyMean.24HR'  # Daily Mean Quality Controlled
+        ts_name = "DMQaQc.Merged.DailyMean.24HR"  # Daily Mean Quality Controlled
 
         params = {
             "request": "getTimeseriesList",
@@ -72,22 +74,34 @@ class AustraliaFetcher(base.RiverDataFetcher):
                 header = json_data[0]
                 data = json_data[1:]
                 df = pd.DataFrame(data, columns=header)
-                if not df.empty and 'ts_id' in df.columns:
-                    return df['ts_id'].iloc[0]
+                if not df.empty and "ts_id" in df.columns:
+                    return df["ts_id"].iloc[0]
                 else:
-                    logger.warning(f"No ts_id found for site {self.site_id}, variable {variable}")
+                    logger.warning(
+                        f"No ts_id found for site {self.site_id}, variable {variable}"
+                    )
                     return None
-            elif isinstance(json_data, list) and len(json_data) == 1 and json_data[0] == "No matches.":
-                logger.warning(f"No matches for site {self.site_id}, variable {variable} in getTimeseriesList")
+            elif (
+                isinstance(json_data, list)
+                and len(json_data) == 1
+                and json_data[0] == "No matches."
+            ):
+                logger.warning(
+                    f"No matches for site {self.site_id}, variable {variable} in getTimeseriesList"
+                )
                 return None
             else:
-                logger.warning(f"Unexpected response from getTimeseriesList for site {self.site_id}: {json_data}")
+                logger.warning(
+                    f"Unexpected response from getTimeseriesList for site {self.site_id}: {json_data}"
+                )
                 return None
         except Exception as e:
             logger.error(f"Error getting timeseries ID for site {self.site_id}: {e}")
             return None
 
-    def _download_data(self, variable: str, start_date: str, end_date: str) -> Optional[str]:
+    def _download_data(
+        self, variable: str, start_date: str, end_date: str
+    ) -> Optional[str]:
         """Downloads the raw CSV data."""
         ts_id = self._get_timeseries_id(variable)
         if not ts_id:
@@ -112,23 +126,24 @@ class AustraliaFetcher(base.RiverDataFetcher):
 
     def _parse_data(self, raw_data: Optional[str], variable: str) -> pd.DataFrame:
         """Parses the raw CSV data."""
-        col_name = utils.get_column_name(variable)
         if not raw_data:
-            return pd.DataFrame(columns=["Date", col_name])
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         try:
-            lines = raw_data.strip().split('\n')
+            lines = raw_data.strip().split("\n")
             header_line_index = -1
             header_line = ""
             for i, line in enumerate(lines):
                 if line.startswith("#Timestamp;Value;Quality Code"):
                     header_line_index = i
-                    header_line = line.lstrip('#')
+                    header_line = line.lstrip("#")
                     break
 
             if header_line_index == -1:
-                logger.warning(f"Could not find data header in CSV for site {self.site_id}")
-                return pd.DataFrame(columns=["Date", col_name])
+                logger.warning(
+                    f"Could not find data header in CSV for site {self.site_id}"
+                )
+                return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
             # Join lines from the header row onwards
             csv_content = "\n".join(lines[header_line_index:])
@@ -136,30 +151,38 @@ class AustraliaFetcher(base.RiverDataFetcher):
             csv_content = csv_content.replace(lines[header_line_index], header_line)
 
             csv_io = StringIO(csv_content)
-            df = pd.read_csv(csv_io, sep=';')
+            df = pd.read_csv(csv_io, sep=";")
 
             if df.empty:
-                return pd.DataFrame(columns=["Date", col_name])
+                return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-            df["Date"] = pd.to_datetime(df["Timestamp"]).dt.date
-            df["Value"] = pd.to_numeric(df["Value"], errors='coerce')
-            df = df.rename(columns={"Value": col_name})
-            df["Date"] = pd.to_datetime(df["Date"])
-            return df[["Date", col_name]].dropna()
+            df[constants.TIME_INDEX] = pd.to_datetime(df["Timestamp"]).dt.date
+            df["Value"] = pd.to_numeric(df["Value"], errors="coerce")
+            df = df.rename(columns={"Value": variable})
+            df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX])
+            return df[[constants.TIME_INDEX, variable]].dropna()
         except Exception as e:
             logger.error(f"Error parsing CSV data for site {self.site_id}: {e}")
-            return pd.DataFrame(columns=["Date", col_name])
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-    def get_data(self, variable: str, start_date: Optional[str] = None, end_date: Optional[str] = None) -> pd.DataFrame:
+    def get_data(
+        self,
+        variable: str,
+        start_date: Optional[str] = None,
+        end_date: Optional[str] = None,
+    ) -> pd.DataFrame:
         """Fetches and parses Australian river gauge data."""
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
-        utils.get_column_name(variable)  # Validate variable
+        if variable not in [constants.DISCHARGE, constants.STAGE]:
+            raise ValueError(f"Unsupported variable: {variable}")
 
         try:
             raw_data = self._download_data(variable, start_date, end_date)
             df = self._parse_data(raw_data, variable)
             return df
         except Exception as e:
-            logger.error(f"Failed to get data for site {self.site_id}, variable {variable}: {e}")
-            return pd.DataFrame(columns=["Date", utils.get_column_name(variable)])
+            logger.error(
+                f"Failed to get data for site {self.site_id}, variable {variable}: {e}"
+            )
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

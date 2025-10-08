@@ -14,7 +14,7 @@ from typing import Any, Optional
 import pandas as pd
 from bs4 import BeautifulSoup
 
-from . import base, utils
+from . import base, utils, constants
 
 logger = logging.getLogger(__name__)
 
@@ -36,13 +36,13 @@ class CanadaFetcher(base.RiverDataFetcher):
         try:
             response = s.get(self.HYDAT_URL)
             response.raise_for_status()
-            soup = BeautifulSoup(response.text, 'lxml')
-            links = soup.find_all('a')
+            soup = BeautifulSoup(response.text, "lxml")
+            links = soup.find_all("a")
             latest_date = None
             latest_link = None
 
             for link in links:
-                href = link.get('href')
+                href = link.get("href")
                 if href:
                     match = re.match(r"Hydat_sqlite3_(\d{8})\.zip", href)
                     if match:
@@ -72,7 +72,9 @@ class CanadaFetcher(base.RiverDataFetcher):
         self.HYDAT_PATH = self.DATA_DIR / sqlite_filename
 
         if self.HYDAT_PATH.exists():
-            logger.info(f"Latest HYDAT database {sqlite_filename} already exists at {self.HYDAT_PATH}")
+            logger.info(
+                f"Latest HYDAT database {sqlite_filename} already exists at {self.HYDAT_PATH}"
+            )
             return True
 
         logger.info(f"Downloading {zip_filename}...")
@@ -96,7 +98,9 @@ class CanadaFetcher(base.RiverDataFetcher):
                     logger.error(f"No .sqlite3 file found in {zip_filename}.")
                     return False
 
-            logger.info(f"Successfully downloaded and extracted HYDAT to {self.HYDAT_PATH}")
+            logger.info(
+                f"Successfully downloaded and extracted HYDAT to {self.HYDAT_PATH}"
+            )
             return True
 
         except Exception as e:
@@ -111,16 +115,20 @@ class CanadaFetcher(base.RiverDataFetcher):
                 raise FileNotFoundError("Failed to download HYDAT database.")
         return sqlite3.connect(self.HYDAT_PATH)
 
-    def get_data(self, variable: str, start_date: Optional[str] = None, end_date: Optional[str] = None) -> pd.DataFrame:
+    def get_data(
+        self,
+        variable: str,
+        start_date: Optional[str] = None,
+        end_date: Optional[str] = None,
+    ) -> pd.DataFrame:
         """Fetches data from the local HYDAT SQLite database."""
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
-        col_name = utils.get_column_name(variable)
 
-        if variable == "discharge":
+        if variable == constants.DISCHARGE:
             table = "DLY_FLOWS"
             value_prefix = "FLOW"
-        elif variable == "stage":
+        elif variable == constants.STAGE:
             table = "DLY_LEVELS"
             value_prefix = "LEVEL"
         else:
@@ -138,38 +146,60 @@ class CanadaFetcher(base.RiverDataFetcher):
                 WHERE STATION_NUMBER = ?
                   AND YEAR BETWEEN ? AND ?
             """
-            df = pd.read_sql_query(query, conn, params=(self.site_id, start_dt.year, end_dt.year))
+            df = pd.read_sql_query(
+                query, conn, params=(self.site_id, start_dt.year, end_dt.year)
+            )
             conn.close()
 
             if df.empty:
-                return pd.DataFrame(columns=["Date", col_name])
+                return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
             # Unpivot day columns
             day_cols = [f"{value_prefix}{i}" for i in range(1, 32)]
-            id_vars = ['STATION_NUMBER', 'YEAR', 'MONTH']
+            id_vars = ["STATION_NUMBER", "YEAR", "MONTH"]
 
             # Ensure all day columns exist, add if not
             for col in day_cols:
                 if col not in df.columns:
                     df[col] = None
 
-            df_long = pd.melt(df, id_vars=id_vars, value_vars=day_cols, var_name='Day_Col', value_name=col_name)
-            df_long['DAY'] = df_long['Day_Col'].str.replace(value_prefix, "").astype(int)
+            df_long = pd.melt(
+                df,
+                id_vars=id_vars,
+                value_vars=day_cols,
+                var_name="Day_Col",
+                value_name=variable,
+            )
+            df_long["DAY"] = (
+                df_long["Day_Col"].str.replace(value_prefix, "").astype(int)
+            )
 
             # Create Date column
-            date_cols = ['YEAR', 'MONTH', 'DAY']
-            df_long['Date'] = pd.to_datetime(df_long[date_cols], errors='coerce')
-            df_long = df_long.dropna(subset=['Date'])
+            date_cols = ["YEAR", "MONTH", "DAY"]
+            df_long[constants.TIME_INDEX] = pd.to_datetime(
+                df_long[date_cols], errors="coerce"
+            )
+            df_long = df_long.dropna(subset=[constants.TIME_INDEX])
 
             # Filter by date range
-            df_long = df_long[(df_long["Date"] >= start_dt) & (df_long["Date"] <= end_dt)]
+            df_long = df_long[
+                (df_long[constants.TIME_INDEX] >= start_dt)
+                & (df_long[constants.TIME_INDEX] <= end_dt)
+            ]
 
-            df_long[col_name] = pd.to_numeric(df_long[col_name], errors='coerce')
-            return df_long[["Date", col_name]].dropna().sort_values(by="Date").reset_index(drop=True)
+            df_long[variable] = pd.to_numeric(df_long[variable], errors="coerce")
+            return (
+                df_long[[constants.TIME_INDEX, variable]]
+                .dropna()
+                .sort_values(by=constants.TIME_INDEX)
+                .reset_index(drop=True)
+            )
 
         except Exception as e:
-            logger.error(f"Error querying or processing HYDAT for site {self.site_id}, variable {variable}: {e}")
-            return pd.DataFrame(columns=["Date", col_name])
+            logger.error(
+                f"Error querying or processing HYDAT for site {self.site_id}, variable {variable}: {e}"
+            )
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     # These are not used for Canada as data is local
     def _download_data(self, variable: str, start_date: str, end_date: str) -> Any:
