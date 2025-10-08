@@ -7,6 +7,7 @@ import concurrent.futures
 import logging
 import random
 import sys
+import argparse
 
 # Add rivretrieve to path
 sys.path.append(os.path.join(os.path.dirname(__file__), "rivretrieve"))
@@ -77,10 +78,34 @@ def download_site_data(country, fetcher_class, site_id, start_date, end_date):
 def main():
     """Main function to download all data."""
     logging.info("Starting data download process...")
-    fetcher_classes = get_fetcher_classes()
+    all_fetcher_classes = get_fetcher_classes()
+    fetcher_names = list(all_fetcher_classes.keys())
+
+    parser = argparse.ArgumentParser(description="Download river gauge data.")
+    parser.add_argument(
+        "--fetchers",
+        nargs='+',
+        choices=fetcher_names + ["all"],
+        default=["all"],
+        help=f"Specify which fetchers to use. Choices are {fetcher_names + ['all']}"
+    )
+    args = parser.parse_args()
+
+    selected_fetchers = args.fetchers
+    logging.info(f"Selected fetchers: {selected_fetchers}")
+
+    fetcher_classes_to_run = {}
+    if "all" in selected_fetchers:
+        fetcher_classes_to_run = all_fetcher_classes
+    else:
+        for fetcher_name in selected_fetchers:
+            if fetcher_name in all_fetcher_classes:
+                fetcher_classes_to_run[fetcher_name] = all_fetcher_classes[fetcher_name]
+            else:
+                logging.warning(f"Fetcher '{fetcher_name}' not found, skipping.")
 
     tasks = []
-    for country, fetcher_class in fetcher_classes.items():
+    for country, fetcher_class in fetcher_classes_to_run.items():
         try:
             sites = fetcher_class.get_sites()
             if sites is None or sites.empty:
@@ -99,9 +124,12 @@ def main():
         except Exception as e:
             logging.error(f"Error getting sites for {country}: {e}")
 
-
     random.shuffle(tasks)
-    logging.info(f"Found {len(tasks)} total sites to process.")
+    logging.info(f"Found {len(tasks)} total sites to process for fetchers: {list(fetcher_classes_to_run.keys())}.")
+
+    if not tasks:
+        logging.info("No tasks to process. Exiting.")
+        return
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=N_WORKERS) as executor:
         futures = [executor.submit(download_site_data, *task) for task in tasks]
