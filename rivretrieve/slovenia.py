@@ -23,6 +23,10 @@ class SloveniaFetcher(base.RiverDataFetcher):
         """Retrieves a DataFrame of available Slovenian gauge sites."""
         return utils.load_sites_csv("slovenia")
 
+    @staticmethod
+    def get_available_variables() -> tuple[str, ...]:
+        return (constants.DISCHARGE, constants.STAGE)
+
     def _download_data(
         self, variable: str, start_date: str, end_date: str
     ) -> Optional[str]:

@@ -25,6 +25,10 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
         """Retrieves a DataFrame of available South African gauge sites."""
         return utils.load_sites_csv("southAfrican")
 
+    @staticmethod
+    def get_available_variables() -> tuple[str, ...]:
+        return (constants.DISCHARGE, constants.STAGE)
+
     def _construct_endpoint(
         self, data_type: str, chunk_start_date: date, chunk_end_date: date
     ) -> str:

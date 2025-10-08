@@ -46,6 +46,12 @@ class RiverDataFetcher(abc.ABC):
         """
         pass
 
+    @staticmethod
+    @abc.abstractmethod
+    def get_available_variables() -> tuple[str, ...]:
+        """Returns a tuple of supported variables."""
+        pass
+
     @abc.abstractmethod
     def _download_data(self, variable: str, start_date: str, end_date: str) -> any:
         """Downloads the raw data from the source.

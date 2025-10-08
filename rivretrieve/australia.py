@@ -23,6 +23,10 @@ class AustraliaFetcher(base.RiverDataFetcher):
         """Retrieves a DataFrame of available Australian gauge sites."""
         return utils.load_sites_csv("australia")
 
+    @staticmethod
+    def get_available_variables() -> tuple[str, ...]:
+        return (constants.DISCHARGE, constants.STAGE)
+
     def _make_bom_request(self, params: Dict[str, Any]) -> Any:
         """Helper function to make requests to the BoM API."""
         base_params = {

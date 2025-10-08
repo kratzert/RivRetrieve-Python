@@ -25,6 +25,10 @@ class JapanFetcher(base.RiverDataFetcher):
         """Retrieves a DataFrame of available Japanese gauge sites."""
         return utils.load_sites_csv("japan")
 
+    @staticmethod
+    def get_available_variables() -> tuple[str, ...]:
+        return (constants.DISCHARGE, constants.STAGE)
+
     def _get_kind(self, variable: str) -> int:
         if variable == constants.STAGE:
             return 2

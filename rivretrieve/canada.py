@@ -31,6 +31,10 @@ class CanadaFetcher(base.RiverDataFetcher):
         """Retrieves a DataFrame of available Canadian gauge sites."""
         return utils.load_sites_csv("canada")
 
+    @staticmethod
+    def get_available_variables() -> tuple[str, ...]:
+        return (constants.DISCHARGE, constants.STAGE)
+
     def _find_latest_hydat_link(self) -> Optional[str]:
         s = utils.requests_retry_session()
         try:

@@ -21,6 +21,10 @@ class FranceFetcher(base.RiverDataFetcher):
         """Retrieves a DataFrame of available French gauge sites."""
         return utils.load_sites_csv("french")  # Note: CSV file name is french_sites.csv
 
+    @staticmethod
+    def get_available_variables() -> tuple[str, ...]:
+        return (constants.DISCHARGE, constants.STAGE)
+
     def _download_data(
         self, variable: str, start_date: str, end_date: str
     ) -> List[Dict[str, Any]]:

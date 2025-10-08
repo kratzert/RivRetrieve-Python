@@ -19,6 +19,10 @@ class USAFetcher(base.RiverDataFetcher):
         """Retrieves a DataFrame of available USA gauge sites."""
         return utils.load_sites_csv("usa")
 
+    @staticmethod
+    def get_available_variables() -> tuple[str, ...]:
+        return (constants.DISCHARGE, constants.STAGE)
+
     def _get_param_code(self, variable: str) -> str:
         if variable == constants.STAGE:
             return "00065"

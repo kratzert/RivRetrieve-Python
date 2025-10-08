@@ -22,6 +22,10 @@ class ChileFetcher(base.RiverDataFetcher):
         """Retrieves a DataFrame of available Chilean gauge sites."""
         return utils.load_sites_csv("chile")
 
+    @staticmethod
+    def get_available_variables() -> tuple[str, ...]:
+        return (constants.DISCHARGE,)
+
     def _download_data(
         self, variable: str, start_date: str, end_date: str
     ) -> Optional[pd.DataFrame]:

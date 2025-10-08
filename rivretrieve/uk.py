@@ -22,6 +22,10 @@ class UKFetcher(base.RiverDataFetcher):
         """Retrieves a DataFrame of available UK gauge sites."""
         return utils.load_sites_csv("uk")
 
+    @staticmethod
+    def get_available_variables() -> tuple[str, ...]:
+        return (constants.DISCHARGE, constants.STAGE)
+
     def _get_measure_notation(self, variable: str) -> str:
         """Gets the notation for the given variable."""
         if variable == constants.STAGE:
