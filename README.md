@@ -6,6 +6,9 @@ This package is a Python translation of the [RivRetrieve R package](https://gith
 
 The entire translation into this Python package was performed by Gemini 2.5 Pro, using the Gemini-cli tool. A few API access points seemed to have changed, which was corrected along the way. The Brazil data requires an login creditials, which I don't have at this point, hence this part is untested and most likely needs fixes.
 
+**Disclaimer**
+
+This package is intended solely to simplify access to streamflow data. All data rights remain with the original providers. Users are responsible for reviewing and adhering to the license terms of each data provider, which can be found on their respective homepages. The MIT license in the LICENSE file applies only to the code of this package, not to any data downloaded through it.
 
 ## Installation
 
