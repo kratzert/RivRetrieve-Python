@@ -11,7 +11,7 @@ import requests
 from dateutil.relativedelta import relativedelta
 from dotenv import load_dotenv
 
-from . import base, utils
+from . import base, utils, constants
 
 logger = logging.getLogger(__name__)
 
@@ -39,8 +39,8 @@ class BrazilFetcher(base.RiverDataFetcher):
             logger.error("ANA Username or Password not provided. Please set ANA_USERNAME and ANA_PASSWORD in your .env file or pass them to the constructor.")
 
     @staticmethod
-    def get_sites() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Brazilian gauge sites."""
+    def get_gauge_ids() -> pd.DataFrame:
+        """Retrieves a DataFrame of available Brazilian gauge IDs."""
         return utils.load_sites_csv("brazil")
 
     def _get_token(self) -> Optional[str]:
@@ -392,26 +392,32 @@ class BrazilFetcher(base.RiverDataFetcher):
             return df.sort_values(by="Date").reset_index(drop=True)
 
         except Exception as e:
-            logger.error(f"Error parsing data for site {self.site_id}: {e}")
-            return pd.DataFrame(columns=["Date", col_name])
+            logger.error(f"Error parsing data for site {self.gauge_id}: {e}")
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-    def get_data(self, variable: str, start_date: Optional[str] = None, end_date: Optional[str] = None) -> pd.DataFrame:
+    def get_data(
+        self,
+        variable: str,
+        start_date: Optional[str] = None,
+        end_date: Optional[str] = None,
+    ) -> pd.DataFrame:
         """Fetches and parses Brazilian river gauge data."""
         if not self.username or not self.password:
             logger.error("ANA Username or Password not provided. Check your .env file or constructor arguments.")
-            return pd.DataFrame(columns=["Date", utils.get_column_name(variable)])
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
-        utils.get_column_name(variable)  # Validate variable
+        if variable not in self.get_available_variables():
+            raise ValueError(f"Unsupported variable: {variable}")
 
         try:
             raw_data = self._download_data(variable, start_date, end_date)
             df = self._parse_data(raw_data, variable)
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[(df["Date"] >= start_date_dt) & (df["Date"] <= end_date_dt)]
+            df = df[(df[constants.TIME_INDEX] >= start_date_dt) & (df[constants.TIME_INDEX] <= end_date_dt)]
             return df
         except Exception as e:
             logger.error(f"Failed to get data for site {self.site_id}, variable {variable}: {e}")
-            return pd.DataFrame(columns=["Date", utils.get_column_name(variable)])
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

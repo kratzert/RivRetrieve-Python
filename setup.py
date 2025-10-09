@@ -19,7 +19,7 @@ setup(
     url="https://github.com/your_username/RivRetrieve-Python",  # Replace with actual URL
     packages=find_packages(),
     include_package_data=True,
-    package_data={'rivretrieve': ['cached_site_data/*.csv']},
+    package_data={"rivretrieve": ["cached_site_data/*.csv"]},
     install_requires=requirements,
     classifiers=[
         "Programming Language :: Python :: 3",

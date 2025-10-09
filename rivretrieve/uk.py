@@ -7,7 +7,7 @@ from typing import Any, Dict, List, Optional
 import pandas as pd
 import requests
 
-from . import base, utils
+from . import base, utils, constants
 
 logger = logging.getLogger(__name__)
 
@@ -18,36 +18,47 @@ class UKFetcher(base.RiverDataFetcher):
     BASE_URL = "http://environment.data.gov.uk"
 
     @staticmethod
-    def get_sites() -> pd.DataFrame:
-        """Retrieves a DataFrame of available UK gauge sites."""
+    def get_gauge_ids() -> pd.DataFrame:
+        """Retrieves a DataFrame of available UK gauge IDs."""
         return utils.load_sites_csv("uk")
+
+    @staticmethod
+    def get_available_variables() -> tuple[str, ...]:
+        return (constants.DISCHARGE, constants.STAGE)
 
     def _get_measure_notation(self, variable: str) -> str:
         """Gets the notation for the given variable."""
-        if variable == "stage":
+        if variable == constants.STAGE:
             return "level-i-900-m-qualified"
-        elif variable == "discharge":
+        elif variable == constants.DISCHARGE:
             return "flow-m-86400-m3s-qualified"
         else:
-            utils.get_column_name(variable)  # To raise error for invalid variable
+            raise ValueError(f"Unsupported variable: {variable}")
 
-    def _download_data(self, variable: str, start_date: str, end_date: str) -> List[Dict[str, Any]]:
+    def _download_data(
+        self, variable: str, start_date: str, end_date: str
+    ) -> List[Dict[str, Any]]:
         """Downloads the raw data from the UK Environment Agency API."""
         notation = self._get_measure_notation(variable)
-        site = self.site_id.split("/")[-1]
+        site = self.gauge_id.split("/")[-1]
 
         # Check if the station has data for the given variable
         measure_url = f"{self.BASE_URL}/hydrology/id/measures?station={site}"
         try:
             r = utils.requests_retry_session().get(measure_url)
             r.raise_for_status()
-            measures = r.json()['items']
-            ix = next((i for i, item in enumerate(measures) if notation in item['notation']), None)
+            measures = r.json()["items"]
+            ix = next(
+                (i for i, item in enumerate(measures) if notation in item["notation"]),
+                None,
+            )
             if ix is None:
-                raise ValueError(f"Site {self.site_id} does not have {variable} data ({notation})")
-            target_notation = measures[ix]['notation']
+                raise ValueError(
+                    f"Site {self.gauge_id} does not have {variable} data ({notation})"
+                )
+            target_notation = measures[ix]["notation"]
         except requests.exceptions.RequestException as e:
-            logger.error(f"Error fetching measures for site {self.site_id}: {e}")
+            logger.error(f"Error fetching measures for site {self.gauge_id}: {e}")
             raise
 
         all_items = []
@@ -55,22 +66,28 @@ class UKFetcher(base.RiverDataFetcher):
         limit = 2000000  # API limit
 
         while True:
-            api_url = (f"{self.BASE_URL}/hydrology/id/measures/{target_notation}/readings"
-                       f"?mineq-date={current_start_date}&maxeq-date={end_date}&_limit={limit}")
+            api_url = (
+                f"{self.BASE_URL}/hydrology/id/measures/{target_notation}/readings"
+                f"?mineq-date={current_start_date}&maxeq-date={end_date}&_limit={limit}"
+            )
             try:
                 r = utils.requests_retry_session().get(api_url)
                 r.raise_for_status()
                 data = r.json()
-                items = data.get('items', [])
+                items = data.get("items", [])
                 all_items.extend(items)
 
                 if len(items) < limit:
                     break
                 else:
                     # Prepare for the next chunk
-                    last_datetime_str = items[-1]['dateTime']
-                    last_date = datetime.fromisoformat(last_datetime_str.replace('Z', '+00:00')).date()
-                    current_start_date = (last_date + timedelta(days=1)).strftime("%Y-%m-%d")
+                    last_datetime_str = items[-1]["dateTime"]
+                    last_date = datetime.fromisoformat(
+                        last_datetime_str.replace("Z", "+00:00")
+                    ).date()
+                    current_start_date = (last_date + timedelta(days=1)).strftime(
+                        "%Y-%m-%d"
+                    )
                     if current_start_date > end_date:
                         break
 
@@ -83,42 +100,59 @@ class UKFetcher(base.RiverDataFetcher):
 
         return all_items
 
-    def _parse_data(self, raw_data: List[Dict[str, Any]], variable: str) -> pd.DataFrame:
+    def _parse_data(
+        self, raw_data: List[Dict[str, Any]], variable: str
+    ) -> pd.DataFrame:
         """Parses the raw JSON data into a pandas DataFrame."""
         if not raw_data:
-            return pd.DataFrame(columns=["Date", utils.get_column_name(variable)])
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         df = pd.DataFrame(raw_data)
-        df["Date"] = pd.to_datetime(df["dateTime"]).dt.date
-        df["Value"] = pd.to_numeric(df["value"], errors='coerce')
-        col_name = utils.get_column_name(variable)
+        df[constants.TIME_INDEX] = pd.to_datetime(df["dateTime"]).dt.date
+        df["Value"] = pd.to_numeric(df["value"], errors="coerce")
 
-        if variable == "stage":
+        if variable == constants.STAGE:
             # UK stage data is 15-min, average to daily
             # A full day has 24 * 4 = 96 readings. We accept days with at least 90 readings.
             min_readings = 90
-            df_daily = df.groupby("Date").agg(Value=("Value", "mean"), Count=("Value", "size")).reset_index()
+            df_daily = (
+                df.groupby(constants.TIME_INDEX)
+                .agg(Value=("Value", "mean"), Count=("Value", "size"))
+                .reset_index()
+            )
             df_daily = df_daily[df_daily["Count"] >= min_readings]
-            df_daily = df_daily[["Date", "Value"]]
+            df_daily = df_daily[[constants.TIME_INDEX, "Value"]]
         else:  # discharge is already daily
-            df_daily = df[["Date", "Value"]]
+            df_daily = df[[constants.TIME_INDEX, "Value"]]
 
-        df_daily = df_daily.rename(columns={"Value": col_name})
-        df_daily["Date"] = pd.to_datetime(df_daily["Date"])
+        df_daily = df_daily.rename(columns={"Value": variable})
+        df_daily[constants.TIME_INDEX] = pd.to_datetime(df_daily[constants.TIME_INDEX])
 
         # Ensure complete time series within the data range
         if not df_daily.empty:
-            date_range = pd.date_range(start=df_daily["Date"].min(), end=df_daily["Date"].max(), freq='D')
-            complete_ts = pd.DataFrame(date_range, columns=["Date"])
-            df_daily = pd.merge(complete_ts, df_daily, on="Date", how="left")
+            date_range = pd.date_range(
+                start=df_daily[constants.TIME_INDEX].min(),
+                end=df_daily[constants.TIME_INDEX].max(),
+                freq="D",
+            )
+            complete_ts = pd.DataFrame(date_range, columns=[constants.TIME_INDEX])
+            df_daily = pd.merge(
+                complete_ts, df_daily, on=constants.TIME_INDEX, how="left"
+            )
 
         return df_daily
 
-    def get_data(self, variable: str, start_date: Optional[str] = None, end_date: Optional[str] = None) -> pd.DataFrame:
+    def get_data(
+        self,
+        variable: str,
+        start_date: Optional[str] = None,
+        end_date: Optional[str] = None,
+    ) -> pd.DataFrame:
         """Fetches and parses UK river gauge data."""
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
-        utils.get_column_name(variable)  # Validate variable
+        if variable not in self.get_available_variables():
+            raise ValueError(f"Unsupported variable: {variable}")
 
         try:
             raw_data = self._download_data(variable, start_date, end_date)
@@ -127,9 +161,14 @@ class UKFetcher(base.RiverDataFetcher):
             # Filter by exact start and end date after processing
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[(df["Date"] >= start_date_dt) & (df["Date"] <= end_date_dt)]
+            df = df[
+                (df[constants.TIME_INDEX] >= start_date_dt)
+                & (df[constants.TIME_INDEX] <= end_date_dt)
+            ]
             return df
 
         except Exception as e:
-            logger.error(f"Failed to get data for site {self.site_id}, variable {variable}: {e}")
-            return pd.DataFrame(columns=["Date", utils.get_column_name(variable)])
+            logger.error(
+                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
+            )
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
