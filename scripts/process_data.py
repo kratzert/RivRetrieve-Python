@@ -7,40 +7,49 @@ import xarray as xr
 import logging
 from tqdm import tqdm
 
+from rivretrieve import constants
+
 # Configuration
 ROOT_DIR = "downloaded_data"
 OUTPUT_FILE = "all_streamflow.zarr"
 COMMON_START_DATE = "1950-01-01"
 COMMON_END_DATE = "2025-10-06"
-DATE_RANGE = pd.date_range(start=COMMON_START_DATE, end=COMMON_END_DATE, freq='D')
+DATE_RANGE = pd.date_range(start=COMMON_START_DATE, end=COMMON_END_DATE, freq="D")
 
 # Setup logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
 
 def process_csv_to_xarray(file_path):
     """Reads a CSV file and converts it to a a properly formatted xarray Dataset."""
     try:
-        # Extract country and site_id
+        # Extract country and gauge_id
         parts = file_path.split(os.sep)
         country = parts[-2]
-        sanitized_site_id = os.path.splitext(parts[-1])[0]
+        sanitized_gauge_id = os.path.splitext(parts[-1])[0]
 
-        site_id = sanitized_site_id
+        gauge_id = sanitized_gauge_id
         if country == "uk":
             # For UK, extract the UUID part after the last '_'
-            site_id = sanitized_site_id.split('_')[-1]
+            gauge_id = sanitized_gauge_id.split("_")[-1]
 
-        gauge_id = f"{country}_{site_id}"
+        gauge_id = f"{country}_{gauge_id}"
 
         df = pd.read_csv(file_path)
 
-        if 'Date' not in df.columns or 'Q' not in df.columns:
-            logging.warning(f"Skipping {file_path}: Missing 'Date' or 'Q' column.")
+        if (
+            constants.TIME_INDEX not in df.columns
+            or constants.DISCHARGE not in df.columns
+        ):
+            logging.warning(
+                f"Skipping {file_path}: Missing '{constants.TIME_INDEX}' or '{constants.DISCHARGE}' column."
+            )
             return None
 
-        df['Date'] = pd.to_datetime(df['Date'])
-        df = df.rename(columns={"Date": "time", "Q": "streamflow"})
-        df = df.set_index('time')
+        df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX])
+        df = df.set_index(constants.TIME_INDEX)
 
         # Reindex to the common date range
         df = df.reindex(DATE_RANGE)
@@ -60,6 +69,7 @@ def process_csv_to_xarray(file_path):
         logging.error(f"Error processing {file_path}: {e}")
         return None
 
+
 def main():
     """Main function to process all CSV files."""
     logging.info("Starting data processing...")
@@ -70,15 +80,12 @@ def main():
     datasets = []
 
     for file_path in tqdm(csv_files, desc="Processing CSVs"):
-
         ds = process_csv_to_xarray(file_path)
 
         if ds is not None:
-
             datasets.append(ds)
 
     if not datasets:
-
         logging.warning("No datasets were successfully processed.")
 
         return
@@ -93,7 +100,7 @@ def main():
 
         # Save the combined dataset to Zarr
         logging.info(f"Saving combined dataset to {OUTPUT_FILE}...")
-        combined_ds.to_zarr(OUTPUT_FILE, mode='w')
+        combined_ds.to_zarr(OUTPUT_FILE, mode="w")
         logging.info(f"Successfully saved to {OUTPUT_FILE}.")
         print(combined_ds)
 
@@ -101,6 +108,7 @@ def main():
         logging.error(f"Error during concatenation or saving: {e}")
 
     logging.info("Data processing finished.")
+
 
 if __name__ == "__main__":
     main()

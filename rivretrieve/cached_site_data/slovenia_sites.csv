@@ -1,4 +1,4 @@
-site,gauge_name,river,longitude,latitude,area
+gauge_id,gauge_name,river,longitude,latitude,area
 1020,Cmurek,Mura,15.7951602232,46.709625604,9796.4
 1030,Vizjakov kanal,Mura - kanal Vizjak,,,
 1040,11 Mlinski kanal,Mlinski potok,,,
