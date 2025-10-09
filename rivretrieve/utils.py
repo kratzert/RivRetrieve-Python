@@ -10,6 +10,8 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
+from . import constants
+
 logger = logging.getLogger(__name__)
 
 DEFAULT_HEADERS = {"User-Agent": "Mozilla/5.0"}
@@ -65,7 +67,7 @@ def load_sites_csv(country_code: str) -> pd.DataFrame:
         current_dir, "cached_site_data", f"{country_code}_sites.csv"
     )
     try:
-        return pd.read_csv(file_path, dtype={"site": str})
+        return pd.read_csv(file_path, dtype={constants.GAUGE_ID: str})
     except FileNotFoundError:
         logger.error(f"Site file not found: {file_path}")
         raise

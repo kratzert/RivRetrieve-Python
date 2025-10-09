@@ -19,8 +19,8 @@ class AustraliaFetcher(base.RiverDataFetcher):
     BOM_URL = "http://www.bom.gov.au/waterdata/services"
 
     @staticmethod
-    def get_sites() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Australian gauge sites."""
+    def get_gauge_ids() -> pd.DataFrame:
+        """Retrieves a DataFrame of available Australian gauge IDs."""
         return utils.load_sites_csv("australia")
 
     @staticmethod
@@ -68,7 +68,7 @@ class AustraliaFetcher(base.RiverDataFetcher):
             "request": "getTimeseriesList",
             "parametertype_name": bom_variable,
             "ts_name": ts_name,
-            "station_no": self.site_id,
+            "station_no": self.gauge_id,
             "format": "json",
         }
         try:

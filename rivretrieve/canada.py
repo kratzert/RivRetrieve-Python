@@ -27,8 +27,8 @@ class CanadaFetcher(base.RiverDataFetcher):
     HYDAT_PATH = DATA_DIR / "Hydat.sqlite3"
 
     @staticmethod
-    def get_sites() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Canadian gauge sites."""
+    def get_gauge_ids() -> pd.DataFrame:
+        """Retrieves a DataFrame of available Canadian gauge IDs."""
         return utils.load_sites_csv("canada")
 
     @staticmethod
@@ -153,7 +153,7 @@ class CanadaFetcher(base.RiverDataFetcher):
                   AND YEAR BETWEEN ? AND ?
             """
             df = pd.read_sql_query(
-                query, conn, params=(self.site_id, start_dt.year, end_dt.year)
+                query, conn, params=(self.gauge_id, start_dt.year, end_dt.year)
             )
             conn.close()
 
@@ -203,7 +203,7 @@ class CanadaFetcher(base.RiverDataFetcher):
 
         except Exception as e:
             logger.error(
-                f"Error querying or processing HYDAT for site {self.site_id}, variable {variable}: {e}"
+                f"Error querying or processing HYDAT for site {self.gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 

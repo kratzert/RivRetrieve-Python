@@ -15,8 +15,8 @@ class USAFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from USGS NWIS."""
 
     @staticmethod
-    def get_sites() -> pd.DataFrame:
-        """Retrieves a DataFrame of available USA gauge sites."""
+    def get_gauge_ids() -> pd.DataFrame:
+        """Retrieves a DataFrame of available USA gauge IDs."""
         return utils.load_sites_csv("usa")
 
     @staticmethod
@@ -38,7 +38,7 @@ class USAFetcher(base.RiverDataFetcher):
         param_code = self._get_param_code(variable)
         try:
             df, meta = nwis.get_dv(
-                sites=[self.site_id],
+                self.gauge_id,
                 startDT=start_date,
                 endDT=end_date,
                 parameterCd=[param_code],

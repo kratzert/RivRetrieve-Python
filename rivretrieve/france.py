@@ -1,4 +1,4 @@
-"""Fetcher for French river gauge data from Hubeau."""
+"Fetcher for French river gauge data from Hubeau."
 
 import logging
 from typing import Any, Dict, List, Optional
@@ -17,8 +17,8 @@ class FranceFetcher(base.RiverDataFetcher):
     BASE_URL = "https://hubeau.eaufrance.fr/api/v2/hydrometrie/obs_elab"
 
     @staticmethod
-    def get_sites() -> pd.DataFrame:
-        """Retrieves a DataFrame of available French gauge sites."""
+    def get_gauge_ids() -> pd.DataFrame:
+        """Retrieves a DataFrame of available French gauge IDs."""
         return utils.load_sites_csv("french")  # Note: CSV file name is french_sites.csv
 
     @staticmethod
@@ -26,7 +26,10 @@ class FranceFetcher(base.RiverDataFetcher):
         return (constants.DISCHARGE, constants.STAGE)
 
     def _download_data(
-        self, variable: str, start_date: str, end_date: str
+        self,
+        variable: str,
+        start_date: str,
+        end_date: str,
     ) -> List[Dict[str, Any]]:
         """Downloads raw data from the Hubeau API."""
         if variable == constants.DISCHARGE:
@@ -40,7 +43,7 @@ class FranceFetcher(base.RiverDataFetcher):
             logger.warning(f"Unsupported variable: {variable}")
             return []
         params = {
-            "code_entite": self.site_id,
+            "code_entite": self.gauge_id,
             "date_debut_obs": start_date,
             "date_fin_obs": end_date,
             "grandeur_hydro": grandeur,
@@ -68,17 +71,19 @@ class FranceFetcher(base.RiverDataFetcher):
                 # Subsequent requests use the full URL from "next"
                 params = None
             except requests.exceptions.RequestException as e:
-                logger.error(f"Hubeau API request failed for site {self.site_id}: {e}")
+                logger.error(f"Hubeau API request failed for site {self.gauge_id}: {e}")
                 raise
             except ValueError as e:
                 logger.error(
-                    f"Hubeau API JSON decode failed for site {self.site_id}: {e}\nResponse: {response.text}"
+                    f"Hubeau API JSON decode failed for site {self.gauge_id}: {e}\nResponse: {response.text}"
                 )
                 raise
         return all_data
 
     def _parse_data(
-        self, raw_data: List[Dict[str, Any]], variable: str
+        self,
+        raw_data: List[Dict[str, Any]],
+        variable: str,
     ) -> pd.DataFrame:
         """Parses the raw JSON data."""
         if not raw_data:
@@ -97,7 +102,7 @@ class FranceFetcher(base.RiverDataFetcher):
                 or "date_obs_elab" not in df.columns
                 or "resultat_obs_elab" not in df.columns
             ):
-                logger.warning(f"Missing expected columns for site {self.site_id}")
+                logger.warning(f"Missing expected columns for site {self.gauge_id}")
                 return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
             df[constants.TIME_INDEX] = pd.to_datetime(df["date_obs_elab"]).dt.date
@@ -113,7 +118,7 @@ class FranceFetcher(base.RiverDataFetcher):
                 .reset_index(drop=True)
             )
         except Exception as e:
-            logger.error(f"Error parsing JSON data for site {self.site_id}: {e}")
+            logger.error(f"Error parsing JSON data for site {self.gauge_id}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     def get_data(
@@ -135,6 +140,6 @@ class FranceFetcher(base.RiverDataFetcher):
             return df
         except Exception as e:
             logger.error(
-                f"Failed to get data for site {self.site_id}, variable {variable}: {e}"
+                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

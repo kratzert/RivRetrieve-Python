@@ -9,7 +9,7 @@ from typing import Optional
 import pandas as pd
 import requests
 
-from . import base, utils
+from . import base, utils, constants
 
 logger = logging.getLogger(__name__)
 
@@ -20,8 +20,8 @@ class BrazilFetcher(base.RiverDataFetcher):
     BASE_URL = "https://www.snirh.gov.br/hidroweb/rest/api/documento/convencionais"
 
     @staticmethod
-    def get_sites() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Brazilian gauge sites."""
+    def get_gauge_ids() -> pd.DataFrame:
+        """Retrieves a DataFrame of available Brazilian gauge IDs."""
         return utils.load_sites_csv("brazil")
 
     @staticmethod
@@ -32,7 +32,7 @@ class BrazilFetcher(base.RiverDataFetcher):
         self, variable: str, start_date: str, end_date: str
     ) -> Optional[pd.DataFrame]:
         """Downloads and extracts the data file."""
-        params = {"tipo": 3, "documentos": self.site_id}
+        params = {"tipo": 3, "documentos": self.gauge_id}
         s = utils.requests_retry_session()
 
         try:
@@ -44,18 +44,18 @@ class BrazilFetcher(base.RiverDataFetcher):
             with zipfile.ZipFile(io.BytesIO(response.content)) as zf:
                 # Find the correct inner zip file (vazoes for discharge, cotas for stage)
                 inner_zip_name = None
-                pattern = f"^{self.site_id}/(vazoes|cotas)_{self.site_id}.zip$"
+                pattern = f"^{self.gauge_id}/(vazoes|cotas)_{self.gauge_id}.zip$"
                 for name in zf.namelist():
                     if re.match(pattern, name):
-                        if (variable == "discharge" and "vazoes" in name) or (
-                            variable == "stage" and "cotas" in name
+                        if (variable == constants.DISCHARGE and "vazoes" in name) or (
+                            variable == constants.STAGE and "cotas" in name
                         ):
                             inner_zip_name = name
                             break
 
                 if not inner_zip_name:
                     logger.warning(
-                        f"Could not find inner zip for site {self.site_id}, variable {variable}"
+                        f"Could not find inner zip for site {self.gauge_id}, variable {variable}"
                     )
                     return None
 
@@ -76,27 +76,26 @@ class BrazilFetcher(base.RiverDataFetcher):
 
         except requests.exceptions.RequestException as e:
             logger.error(
-                f"Error downloading from Hidroweb for site {self.site_id}: {e}"
+                f"Error downloading from Hidroweb for site {self.gauge_id}: {e}"
             )
             return None
         except zipfile.BadZipFile:
-            logger.error(f"Bad zip file for site {self.site_id}")
+            logger.error(f"Bad zip file for site {self.gauge_id}")
             return None
         except Exception as e:
-            logger.error(f"Error processing file for site {self.site_id}: {e}")
+            logger.error(f"Error processing file for site {self.gauge_id}: {e}")
             return None
 
     def _parse_data(
         self, raw_df: Optional[pd.DataFrame], variable: str
     ) -> pd.DataFrame:
         """Parses the raw DataFrame."""
-        col_name = utils.get_column_name(variable)
         if raw_df is None or raw_df.empty:
-            return pd.DataFrame(columns=["Date", col_name])
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         try:
             id_cols = ["EstacaoCodigo", "NivelConsistencia", "Data", "Hora"]
-            if variable == "discharge":
+            if variable == constants.DISCHARGE:
                 prefix = "Vazao"
                 id_cols.append("MetodoObtencaoVazoes")
             else:  # stage
@@ -145,19 +144,19 @@ class BrazilFetcher(base.RiverDataFetcher):
 
             # Handle potential errors in make_date by coercing
             date_df = df_merged[["year", "month", "day"]].copy()
-            df_merged["Date"] = pd.to_datetime(date_df, errors="coerce")
-            df_merged = df_merged.dropna(subset=["Date"])
+            df_merged[constants.TIME_INDEX] = pd.to_datetime(date_df, errors="coerce")
+            df_merged = df_merged.dropna(subset=[constants.TIME_INDEX])
 
             df_merged["Value"] = pd.to_numeric(df_merged["Value"], errors="coerce")
-            if variable == "stage":  # cm to m
+            if variable == constants.STAGE:  # cm to m
                 df_merged["Value"] = df_merged["Value"] / 100.0
 
-            df_final = df_merged[["Date", "Value"]].rename(columns={"Value": col_name})
-            return df_final.dropna().sort_values(by="Date").reset_index(drop=True)
+            df_final = df_merged[[constants.TIME_INDEX, "Value"]].rename(columns={"Value": variable})
+            return df_final.dropna().sort_values(by=constants.TIME_INDEX).reset_index(drop=True)
 
         except Exception as e:
-            logger.error(f"Error parsing data for site {self.site_id}: {e}")
-            return pd.DataFrame(columns=["Date", col_name])
+            logger.error(f"Error parsing data for site {self.gauge_id}: {e}")
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     def get_data(
         self,
@@ -168,7 +167,8 @@ class BrazilFetcher(base.RiverDataFetcher):
         """Fetches and parses Brazilian river gauge data."""
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
-        utils.get_column_name(variable)  # Validate variable
+        if variable not in self.get_available_variables():
+            raise ValueError(f"Unsupported variable: {variable}")
 
         try:
             raw_data = self._download_data(variable, start_date, end_date)
@@ -177,10 +177,10 @@ class BrazilFetcher(base.RiverDataFetcher):
             # Filter by date range
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[(df["Date"] >= start_date_dt) & (df["Date"] <= end_date_dt)]
+            df = df[(df[constants.TIME_INDEX] >= start_date_dt) & (df[constants.TIME_INDEX] <= end_date_dt)]
             return df
         except Exception as e:
             logger.error(
-                f"Failed to get data for site {self.site_id}, variable {variable}: {e}"
+                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
             )
-            return pd.DataFrame(columns=["Date", utils.get_column_name(variable)])
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

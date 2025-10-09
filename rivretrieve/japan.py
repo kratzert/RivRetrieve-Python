@@ -1,4 +1,4 @@
-"""Fetcher for Japanese river gauge data."""
+"Fetcher for Japanese river gauge data."
 
 import io
 import logging
@@ -21,8 +21,8 @@ class JapanFetcher(base.RiverDataFetcher):
     BASE_URL = "http://www1.river.go.jp/cgi-bin/DspWaterData.exe"
 
     @staticmethod
-    def get_sites() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Japanese gauge sites."""
+    def get_gauge_ids() -> pd.DataFrame:
+        """Retrieves a DataFrame of available Japanese gauge IDs."""
         return utils.load_sites_csv("japan")
 
     @staticmethod
@@ -38,11 +38,14 @@ class JapanFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
     def _download_data(
-        self, variable: str, start_date: str, end_date: str
+        self,
+        variable: str,
+        start_date: str,
+        end_date: str,
     ) -> List[pd.DataFrame]:
         """Downloads raw data month by month."""
         kind = self._get_kind(variable)
-        site_id = self.site_id
+        gauge_id = self.gauge_id
 
         start_dt = datetime.strptime(start_date, "%Y-%m-%d")
         end_dt = datetime.strptime(end_date, "%Y-%m-%d")
@@ -61,7 +64,7 @@ class JapanFetcher(base.RiverDataFetcher):
 
             params = {
                 "KIND": kind,
-                "ID": site_id,
+                "ID": gauge_id,
                 "BGNDATE": month_start_str,
                 "ENDDATE": request_end_str,
             }
@@ -82,16 +85,16 @@ class JapanFetcher(base.RiverDataFetcher):
                     monthly_data.append(df)
                 else:
                     logger.warning(
-                        f"No table found for site {site_id} for {current_dt.strftime('%Y-%m')}"
+                        f"No table found for site {gauge_id} for {current_dt.strftime('%Y-%m')}"
                     )
 
             except requests.exceptions.RequestException as e:
                 logger.error(
-                    f"Error fetching data for site {site_id} for {current_dt.strftime('%Y-%m')}: {e}"
+                    f"Error fetching data for site {gauge_id} for {current_dt.strftime('%Y-%m')}: {e}"
                 )
             except Exception as e:
                 logger.error(
-                    f"Error processing data for site {site_id} for {current_dt.strftime('%Y-%m')}: {e}"
+                    f"Error processing data for site {gauge_id} for {current_dt.strftime('%Y-%m')}: {e}"
                 )
 
             current_dt += relativedelta(months=1)
@@ -99,7 +102,9 @@ class JapanFetcher(base.RiverDataFetcher):
         return monthly_data
 
     def _parse_data(
-        self, raw_data_list: List[pd.DataFrame], variable: str
+        self,
+        raw_data_list: List[pd.DataFrame],
+        variable: str,
     ) -> pd.DataFrame:
         """Parses the list of monthly DataFrames."""
         if not raw_data_list:
@@ -119,7 +124,7 @@ class JapanFetcher(base.RiverDataFetcher):
             # We need Date (index 0) and the value at 12h (index 12)
             if data_df.shape[1] < 13:
                 logger.warning(
-                    f"Unexpected table structure for site {self.site_id}, skipping month."
+                    f"Unexpected table structure for site {self.gauge_id}, skipping month."
                 )
                 continue
 
@@ -173,6 +178,6 @@ class JapanFetcher(base.RiverDataFetcher):
 
         except Exception as e:
             logger.error(
-                f"Failed to get data for site {self.site_id}, variable {variable}: {e}"
+                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

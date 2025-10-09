@@ -18,8 +18,8 @@ class UKFetcher(base.RiverDataFetcher):
     BASE_URL = "http://environment.data.gov.uk"
 
     @staticmethod
-    def get_sites() -> pd.DataFrame:
-        """Retrieves a DataFrame of available UK gauge sites."""
+    def get_gauge_ids() -> pd.DataFrame:
+        """Retrieves a DataFrame of available UK gauge IDs."""
         return utils.load_sites_csv("uk")
 
     @staticmethod
@@ -40,7 +40,7 @@ class UKFetcher(base.RiverDataFetcher):
     ) -> List[Dict[str, Any]]:
         """Downloads the raw data from the UK Environment Agency API."""
         notation = self._get_measure_notation(variable)
-        site = self.site_id.split("/")[-1]
+        site = self.gauge_id.split("/")[-1]
 
         # Check if the station has data for the given variable
         measure_url = f"{self.BASE_URL}/hydrology/id/measures?station={site}"
@@ -54,11 +54,11 @@ class UKFetcher(base.RiverDataFetcher):
             )
             if ix is None:
                 raise ValueError(
-                    f"Site {self.site_id} does not have {variable} data ({notation})"
+                    f"Site {self.gauge_id} does not have {variable} data ({notation})"
                 )
             target_notation = measures[ix]["notation"]
         except requests.exceptions.RequestException as e:
-            logger.error(f"Error fetching measures for site {self.site_id}: {e}")
+            logger.error(f"Error fetching measures for site {self.gauge_id}: {e}")
             raise
 
         all_items = []
@@ -169,6 +169,6 @@ class UKFetcher(base.RiverDataFetcher):
 
         except Exception as e:
             logger.error(
-                f"Failed to get data for site {self.site_id}, variable {variable}: {e}"
+                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

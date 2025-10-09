@@ -1,4 +1,4 @@
-"""Fetcher for South African river gauge data."""
+"Fetcher for South African river gauge data."
 
 import logging
 import re
@@ -21,8 +21,8 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
     BASE_URL = "https://www.dws.gov.za/Hydrology/Verified/HyData.aspx"
 
     @staticmethod
-    def get_sites() -> pd.DataFrame:
-        """Retrieves a DataFrame of available South African gauge sites."""
+    def get_gauge_ids() -> pd.DataFrame:
+        """Retrieves a DataFrame of available South African gauge IDs."""
         return utils.load_sites_csv("southAfrican")
 
     @staticmethod
@@ -30,18 +30,24 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
         return (constants.DISCHARGE, constants.STAGE)
 
     def _construct_endpoint(
-        self, data_type: str, chunk_start_date: date, chunk_end_date: date
+        self,
+        data_type: str,
+        chunk_start_date: date,
+        chunk_end_date: date,
     ) -> str:
         start_str = chunk_start_date.strftime("%Y-%m-%d")
         end_str = chunk_end_date.strftime("%Y-%m-%d")
         endpoint = (
-            f"{self.BASE_URL}?Station={self.site_id}100.00"
+            f"{self.BASE_URL}?Station={self.gauge_id}100.00"
             f"&DataType={data_type}&StartDT={start_str}&EndDT={end_str}&SiteType=RIV"
         )
         return endpoint
 
     def _download_data(
-        self, variable: str, start_date: str, end_date: str
+        self,
+        variable: str,
+        start_date: str,
+        end_date: str,
     ) -> List[pd.DataFrame]:
         """Downloads raw data in chunks."""
         start_dt = datetime.strptime(start_date, "%Y-%m-%d").date()
@@ -78,7 +84,7 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
                 data_type, current_start_dt, chunk_end_dt
             )
             logger.info(
-                f"Fetching {variable} for site {self.site_id} from {current_start_dt} to {chunk_end_dt}"
+                f"Fetching {variable} for site {self.gauge_id} from {current_start_dt} to {chunk_end_dt}"
             )
 
             try:
@@ -114,20 +120,22 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
                             data_list.append(df)
                 else:
                     logger.warning(
-                        f"No <pre> tag found for site {self.site_id} at {endpoint}"
+                        f"No <pre> tag found for site {self.gauge_id} at {endpoint}"
                     )
 
             except requests.exceptions.RequestException as e:
-                logger.error(f"Error fetching data for site {self.site_id}: {e}")
+                logger.error(f"Error fetching data for site {self.gauge_id}: {e}")
             except Exception as e:
-                logger.error(f"Error processing data for site {self.site_id}: {e}")
+                logger.error(f"Error processing data for site {self.gauge_id}: {e}")
 
             current_start_dt = chunk_end_dt + relativedelta(days=1)
 
         return data_list
 
     def _parse_data(
-        self, raw_data_list: List[pd.DataFrame], variable: str
+        self,
+        raw_data_list: List[pd.DataFrame],
+        variable: str,
     ) -> pd.DataFrame:
         """Parses the list of DataFrames."""
         if not raw_data_list:
@@ -169,7 +177,7 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
             )
 
         except Exception as e:
-            logger.error(f"Error parsing data for site {self.site_id}: {e}")
+            logger.error(f"Error parsing data for site {self.gauge_id}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     def get_data(
@@ -190,6 +198,6 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
             return df
         except Exception as e:
             logger.error(
-                f"Failed to get data for site {self.site_id}, variable {variable}: {e}"
+                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

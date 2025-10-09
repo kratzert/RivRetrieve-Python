@@ -7,3 +7,7 @@ TIME_INDEX = "time"
 # Data Variables
 DISCHARGE = "discharge"
 STAGE = "stage"
+
+# Attributes
+LATITUDE = "latitude"
+LONGITUDE = "longitude"

@@ -9,13 +9,13 @@ import pandas as pd
 class RiverDataFetcher(abc.ABC):
     """Abstract base class for fetching river gauge data."""
 
-    def __init__(self, site_id: str):
+    def __init__(self, gauge_id: str):
         """Initializes the data fetcher.
 
         Args:
-            site_id: The site-specific identifier for the gauge.
+            gauge_id: The site-specific identifier for the gauge.
         """
-        self.site_id = site_id
+        self.gauge_id = gauge_id
 
     @abc.abstractmethod
     def get_data(
@@ -38,11 +38,11 @@ class RiverDataFetcher(abc.ABC):
 
     @staticmethod
     @abc.abstractmethod
-    def get_sites() -> pd.DataFrame:
-        """Retrieves a DataFrame of available gauge sites.
+    def get_gauge_ids() -> pd.DataFrame:
+        """Retrieves a DataFrame of available gauge IDs.
 
         Returns:
-            A pandas DataFrame containing site information.
+            A pandas DataFrame containing gauge ID information.
         """
         pass
 
