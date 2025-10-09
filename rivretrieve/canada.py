@@ -129,6 +129,9 @@ class CanadaFetcher(base.RiverDataFetcher):
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
 
+        if variable not in self.get_available_variables():
+            raise ValueError(f"Unsupported variable: {variable}")
+
         if variable == constants.DISCHARGE:
             table = "DLY_FLOWS"
             value_prefix = "FLOW"

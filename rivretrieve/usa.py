@@ -93,7 +93,7 @@ class USAFetcher(base.RiverDataFetcher):
         """Fetches and parses USA river gauge data."""
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
-        if variable not in [constants.DISCHARGE, constants.STAGE]:
+        if variable not in self.get_available_variables():
             raise ValueError(f"Unsupported variable: {variable}")
 
         try:

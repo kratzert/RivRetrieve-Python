@@ -129,6 +129,9 @@ class ChileFetcher(base.RiverDataFetcher):
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
 
+        if variable not in self.get_available_variables():
+            raise ValueError(f"Unsupported variable: {variable}")
+
         try:
             raw_data = self._download_data(variable, start_date, end_date)
             df = self._parse_data(raw_data, variable)
