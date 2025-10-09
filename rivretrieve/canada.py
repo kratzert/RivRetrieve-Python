@@ -132,14 +132,13 @@ class CanadaFetcher(base.RiverDataFetcher):
         if variable not in self.get_available_variables():
             raise ValueError(f"Unsupported variable: {variable}")
 
-        if variable == constants.DISCHARGE:
-            table = "DLY_FLOWS"
-            value_prefix = "FLOW"
-        elif variable == constants.STAGE:
-            table = "DLY_LEVELS"
-            value_prefix = "LEVEL"
-        else:
-            raise ValueError(f"Unsupported variable: {variable}")
+        var_map = {
+            constants.DISCHARGE: {"table": "DLY_FLOWS", "prefix": "FLOW"},
+            constants.STAGE: {"table": "DLY_LEVELS", "prefix": "LEVEL"},
+        }
+
+        table = var_map[variable]["table"]
+        value_prefix = var_map[variable]["prefix"]
 
         try:
             conn = self._get_hydat_connection()
