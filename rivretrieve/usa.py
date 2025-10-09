@@ -46,7 +46,7 @@ class USAFetcher(base.RiverDataFetcher):
             return df
         except Exception as e:
             logger.error(
-                f"Error fetching NWIS data for site {self.site_id}, param {param_code}: {e}"
+                f"Error fetching NWIS data for site {self.gauge_id}, param {param_code}: {e}"
             )
             return pd.DataFrame()
 
@@ -66,7 +66,7 @@ class USAFetcher(base.RiverDataFetcher):
 
         if value_col is None:
             logger.warning(
-                f"Could not find value column for param {param_code} in data for site {self.site_id}"
+                f"Could not find value column for param {param_code} in data for site {self.gauge_id}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
@@ -102,6 +102,6 @@ class USAFetcher(base.RiverDataFetcher):
             return df
         except Exception as e:
             logger.error(
-                f"Failed to get data for site {self.site_id}, variable {variable}: {e}"
+                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
