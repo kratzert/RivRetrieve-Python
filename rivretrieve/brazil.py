@@ -392,11 +392,12 @@ class BrazilFetcher(base.RiverDataFetcher):
             return df.sort_values(by="Date").reset_index(drop=True)
 
         except Exception as e:
-            logger.error(f"Error parsing data for site {self.gauge_id}: {e}")
+            logger.error(f"Error parsing data for site {gauge_id}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     def get_data(
         self,
+        gauge_id: str,
         variable: str,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
@@ -416,8 +417,13 @@ class BrazilFetcher(base.RiverDataFetcher):
             df = self._parse_data(raw_data, variable)
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[(df[constants.TIME_INDEX] >= start_date_dt) & (df[constants.TIME_INDEX] <= end_date_dt)]
+            df = df[
+                (df[constants.TIME_INDEX] >= start_date_dt)
+                & (df[constants.TIME_INDEX] <= end_date_dt)
+            ]
             return df
         except Exception as e:
-            logger.error(f"Failed to get data for site {self.site_id}, variable {variable}: {e}")
+            logger.error(
+                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
+            )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

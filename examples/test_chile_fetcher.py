@@ -14,10 +14,10 @@ variable = constants.DISCHARGE
 
 plt.figure(figsize=(12, 6))
 
+fetcher = ChileFetcher()
 for gauge_id in gauge_ids:
-    fetcher = ChileFetcher(gauge_id=gauge_id)
     print(f"Fetching data for {gauge_id}...")
-    data = fetcher.get_data(variable=variable)
+    data = fetcher.get_data(gauge_id=gauge_id, variable=variable)
     if not data.empty:
         print(f"Data for {gauge_id}:")
         print(data.head())

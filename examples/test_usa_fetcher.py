@@ -17,10 +17,12 @@ end_date = None
 
 plt.figure(figsize=(12, 6))
 
+fetcher = USAFetcher()
 for gauge_id in gauge_ids:
-    fetcher = USAFetcher(gauge_id=gauge_id)
     print(f"Fetching data for {gauge_id} from {start_date} to {end_date}...")
-    data = fetcher.get_data(variable=variable, start_date=start_date, end_date=end_date)
+    data = fetcher.get_data(
+        gauge_id=gauge_id, variable=variable, start_date=start_date, end_date=end_date
+    )
     if not data.empty:
         print(f"Data for {gauge_id}:")
         print(data.head())
