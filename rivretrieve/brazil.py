@@ -25,9 +25,8 @@ PASSWORD = os.environ.get("ANA_PASSWORD")
 class BrazilFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from Brazil's ANA Hidroweb API v2."""
 
-    BASE_URL = "https://www.ana.gov.br/hidrowebservice" #EstacoesTelemetricas"
+    BASE_URL = "https://www.ana.gov.br/hidrowebservice"
     AUTH_URL = f"{BASE_URL}/EstacoesTelemetricas/OAUth/v1"
-    # DATA_URL = f"{BASE_URL}/HidroinfoanaSerieTelemetricaAdotada/v1"
 
     def __init__(self, site_id: str, username: Optional[str] = None, password: Optional[str] = None):
         super().__init__(site_id)
@@ -120,6 +119,8 @@ class BrazilFetcher(base.RiverDataFetcher):
 
         df = df[columns]
         df["DATA_HORA_DADO"] = pd.to_datetime(df["DATA_HORA_DADO"])
+
+        # The API returns the data values and the status. We separate these and join back together later. 
         values = df.melt(
             id_vars=['DATA_HORA_DADO', 'NIVEL_CONSISTENCIA'],
             value_vars=[col for col in df.columns if col.startswith(prefix) and not col.endswith('_STATUS')],
@@ -149,11 +150,9 @@ class BrazilFetcher(base.RiverDataFetcher):
         # Create actual dates safely
         df['DATA_HORA_DADO'] = pd.to_datetime(
             df[['YEAR', 'MONTH', 'DAY']],
-            errors='coerce'  # invalid days become NaT
+            errors='coerce'  # Invalid days (e.g. Feb 30) become NaT
         )
-
-        # Step 6: Drop invalid dates (e.g. Feb 30)
-        df = df.dropna(subset=['DATA_HORA_DADO'])
+        df = df.dropna(subset=['DATA_HORA_DADO']) # Drop invalid days
         df = df[['DATA_HORA_DADO', 'NIVEL_CONSISTENCIA', f'{prefix}', f'{prefix}_STATUS']]
         df['Date'] = df['DATA_HORA_DADO']
 
@@ -167,21 +166,22 @@ class BrazilFetcher(base.RiverDataFetcher):
         return df[['Date', col_name]].sort_values(by="Date").reset_index(drop=True)
 
     def _download_data(self, variable: str, start_date: str, end_date: str) -> List[Dict[str, Any]]: 
+        """Downloads daily data from the ANA API"""
         if not self.username or not self.password:
             return []
 
         if end_date is None: # I.e. get the most recent
             end_date = datetime.strftime(datetime.today(), "%Y-%m-%d")
 
-        if start_date is None: 
-            start_date = datetime.strptime(end_date, "%Y-%m-%d") - timedelta(days=30)
+        if start_date is None: # Get the previous year of data
+            start_date = datetime.strptime(end_date, "%Y-%m-%d") - relativedelta(years=1)
             start_date = datetime.strftime(start_date, "%Y-%m-%d")
 
         # Convert to datetime
         start_date = datetime.strptime(start_date, "%Y-%m-%d")
         end_date = datetime.strptime(end_date, "%Y-%m-%d")
 
-        # Now we check whether the station has telemetry 
+        # Now we check whether the station has data for the requested variable
         metadata = self._get_station_metadata()
         metadata.columns = metadata.columns.str.upper()
         has_discharge = bool(metadata['TIPO_ESTACAO_DESC_LIQUIDA'].iloc[0])
@@ -192,28 +192,31 @@ class BrazilFetcher(base.RiverDataFetcher):
             else:
                 column_varname = 'DESC_LIQUIDA'
         
-        if (variable == 'stage') and not has_stage: 
+        if (variable == 'stage'):
             if not has_stage: 
                 return []
             else:
                 column_varname = 'ESCALA'
 
+        # Get the start and end dates of the record
         record_start_date = pd.to_datetime(metadata[f'DATA_PERIODO_{column_varname}_INICIO'].iloc[0])
         record_end_date = pd.to_datetime(metadata[f'DATA_PERIODO_{column_varname}_FIM'].iloc[0])
-        if record_end_date is None: 
+        
+        if pd.isna(record_end_date):
             record_end_date = datetime.today()
 
-        if start_date < record_start_date: 
+        # Clip start and end dates to available record period
+        if start_date < record_start_date:
             start_date = record_start_date
-        if end_date > record_end_date: 
+        if end_date > record_end_date:
             end_date = record_end_date
-        elif end_date < start_date:
+
+        # If adjusted end date is now earlier than start date, nothing to return
+        if end_date < start_date:
             return []
         
-        # Set up the requests session
-        s = utils.requests_retry_session()
-        # Get the endpoint for the given variable
-        # NOTE these services allow up to one year of data to be retrieved
+        # Get the endpoint for the given variable. These services allow up to 
+        # one year of data to be retrieved
         if variable == "discharge": 
             endpoint = "EstacoesTelemetricas/HidroSerieVazao/v1" 
         elif variable == "stage": 
@@ -221,18 +224,23 @@ class BrazilFetcher(base.RiverDataFetcher):
         elif variable == "precipitation":
             endpoint = "EstacoesTelemetricas/HidroSerieChuva/v1"
         data_url = f"{self.BASE_URL}/{endpoint}"
+        
+        s = utils.requests_retry_session()
+
+        # Start at the end of the requested period and work backwards
         current_date = end_date
         all_data = []
         while current_date >= start_date:
+            
             token = self._get_token()
-            headers = {
-                'accept': '*/*',
-                "Authorization": f"Bearer {token}"
-            }
             if not token:
                 logger.error("Cannot download data without a token.")
                 break
 
+            headers = {
+                'accept': '*/*',
+                "Authorization": f"Bearer {token}"
+            }
             chunk_start_date = current_date - relativedelta(years=1) + timedelta(days=1)
             if chunk_start_date < start_date:
                 chunk_start_date = start_date
@@ -243,7 +251,7 @@ class BrazilFetcher(base.RiverDataFetcher):
                 "Data Inicial (yyyy-MM-dd)": chunk_start_date,
                 "Data Final (yyyy-MM-dd)": current_date
             }
-            logger.info(f"Fetching Brazil data for site {self.site_id} from {current_date.strftime('%Y-%m-%d')}")
+            logger.info(f"Fetching Brazil data for site {self.site_id} from {chunk_start_date.strftime('%Y-%m-%d')} to {current_date.strftime('%Y-%m-%d')}")
             try:
                 response = s.get(data_url, params=params, headers=headers)
                 response.raise_for_status()
@@ -251,7 +259,7 @@ class BrazilFetcher(base.RiverDataFetcher):
                 if data.get("status") == "OK" and data.get("items"):
                     all_data.extend(data["items"])
                 elif data.get("status") == "OK":
-                    logger.info(f"No items returned for {self.site_id} for period starting {current_date.strftime('%Y-%m-%d')}")
+                    logger.info(f"No items returned for {self.site_id} for period {chunk_start_date.strftime('%Y-%m-%d')} to {current_date.strftime('%Y-%m-%d')}")
                 else:
                     logger.warning(f"API returned non-OK status: {data}")
 
@@ -277,7 +285,6 @@ class BrazilFetcher(base.RiverDataFetcher):
             start_date = datetime.strptime(end_date, "%Y-%m-%d") - timedelta(days=30)
             start_date = datetime.strftime(start_date, "%Y-%m-%d")
 
-        # Convert to datetime
         start_date = datetime.strptime(start_date, "%Y-%m-%d")
         end_date = datetime.strptime(end_date, "%Y-%m-%d")
 
@@ -288,24 +295,27 @@ class BrazilFetcher(base.RiverDataFetcher):
         if not has_telemetry: 
             return []
 
-        # Otherwise we work out the start and end dates for the telemetry data 
         telemetry_start_date = pd.to_datetime(metadata['DATA_PERIODO_TELEMETRICA_INICIO'].iloc[0])
         telemetry_end_date = pd.to_datetime(metadata['DATA_PERIODO_TELEMETRICA_FIM'].iloc[0])
-        if telemetry_end_date is None: 
-            telemetry_end_date = datetime.today() 
 
-        if start_date < telemetry_start_date: 
+        if pd.isna(telemetry_end_date):
+            telemetry_end_date = datetime.today()
+
+        # Clip to available telemetry period
+        if start_date < telemetry_start_date:
             start_date = telemetry_start_date
-
-        if end_date > telemetry_end_date: 
+        if end_date > telemetry_end_date:
             end_date = telemetry_end_date
-        elif end_date < start_date:
+
+        # If adjusted end is earlier than start, no overlap
+        if end_date < start_date:
             return []
 
         # Set up requests session
-        s = utils.requests_retry_session()
         endpoint = "EstacoesTelemetricas/HidroinfoanaSerieTelemetricaAdotada/v1"
         data_url = f"{self.BASE_URL}/{endpoint}" 
+
+        s = utils.requests_retry_session()
 
         # This API returns data for timesteps *prior* to the given start date, so it makes sense to work back in time
         current_date = end_date 
@@ -320,7 +330,7 @@ class BrazilFetcher(base.RiverDataFetcher):
                 logger.error("Cannot download data without a token.")
                 break
 
-            chunk_start_date = current_date - timedelta(days=29)
+            chunk_start_date = current_date - timedelta(days=30) + timedelta(days=1)
             if chunk_start_date < start_date:
                 chunk_start_date = start_date
 
@@ -331,7 +341,7 @@ class BrazilFetcher(base.RiverDataFetcher):
                 "Range Intervalo de busca": "DIAS_30",
             }
 
-            logger.info(f"Fetching Brazil data for site {self.site_id} from {current_date.strftime('%Y-%m-%d')}")
+            logger.info(f"Fetching Brazil data for site {self.site_id} from {chunk_start_date.strftime('%Y-%m-%d')} to {current_date.strftime('%Y-%m-%d')}")
             try:
                 response = s.get(data_url, params=params, headers=headers)
                 response.raise_for_status()
@@ -339,7 +349,7 @@ class BrazilFetcher(base.RiverDataFetcher):
                 if data.get("status") == "OK" and data.get("items"):
                     all_data.extend(data["items"])
                 elif data.get("status") == "OK":
-                    logger.info(f"No items returned for {self.site_id} for period starting {current_date.strftime('%Y-%m-%d')}")
+                    logger.info(f"No items returned for {self.site_id} for period {chunk_start_date.strftime('%Y-%m-%d')} to {current_date.strftime('%Y-%m-%d')}")
                 else:
                     logger.warning(f"API returned non-OK status: {data}")
 
