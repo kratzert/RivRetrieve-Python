@@ -18,10 +18,15 @@ end_date = "2001-12-31"
 for variable in variables:
     plt.figure(figsize=(12, 6))
     print(f"\nTesting variable: {variable}")
+    fetcher = PolandFetcher()
     for gauge_id in gauge_ids:
-        fetcher = PolandFetcher(gauge_id=gauge_id)
         print(f"Fetching {variable} for {gauge_id} from {start_date} to {end_date}...")
-        data = fetcher.get_data(variable=variable, start_date=start_date, end_date=end_date)
+        data = fetcher.get_data(
+            gauge_id=gauge_id,
+            variable=variable,
+            start_date=start_date,
+            end_date=end_date,
+        )
         if not data.empty:
             print(f"Data for {gauge_id}:")
             print(data.head())
@@ -41,7 +46,9 @@ for variable in variables:
     if "data" in locals() and not data.empty:
         plt.xlabel(constants.TIME_INDEX)
         plt.ylabel(f"{variable}")
-        plt.title(f"Poland River {variable} ({gauge_ids[0]} - {start_date} to {end_date})")
+        plt.title(
+            f"Poland River {variable} ({gauge_ids[0]} - {start_date} to {end_date})"
+        )
         plt.legend()
         plt.grid(True)
         plt.tight_layout()

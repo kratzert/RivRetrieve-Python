@@ -14,10 +14,12 @@ variable = constants.DISCHARGE
 
 plt.figure(figsize=(12, 6))
 
+fetcher = SloveniaFetcher()
 for gauge_id in gauge_ids:
-    fetcher = SloveniaFetcher(gauge_id=gauge_id)
     print(f"Fetching all data for {gauge_id}...")
-    data = fetcher.get_data(variable=variable)  # Removed start_date and end_date
+    data = fetcher.get_data(
+        gauge_id=gauge_id, variable=variable
+    )  # Removed start_date and end_date
     if not data.empty:
         print(f"Data for {gauge_id}:")
         print(data.head())

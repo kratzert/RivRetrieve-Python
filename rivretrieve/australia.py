@@ -51,7 +51,7 @@ class AustraliaFetcher(base.RiverDataFetcher):
             )
             raise
 
-    def _get_timeseries_id(self, variable: str) -> Optional[str]:
+    def _get_timeseries_id(self, gauge_id: str, variable: str) -> Optional[str]:
         """Retrieves the timeseries ID for the given site and variable."""
         if variable == constants.STAGE:
             bom_variable = "Water Course Level"
@@ -68,7 +68,7 @@ class AustraliaFetcher(base.RiverDataFetcher):
             "request": "getTimeseriesList",
             "parametertype_name": bom_variable,
             "ts_name": ts_name,
-            "station_no": self.gauge_id,
+            "station_no": gauge_id,
             "format": "json",
         }
         try:
@@ -82,7 +82,7 @@ class AustraliaFetcher(base.RiverDataFetcher):
                     return df["ts_id"].iloc[0]
                 else:
                     logger.warning(
-                        f"No ts_id found for site {self.gauge_id}, variable {variable}"
+                        f"No ts_id found for site {gauge_id}, variable {variable}"
                     )
                     return None
             elif (
@@ -91,23 +91,23 @@ class AustraliaFetcher(base.RiverDataFetcher):
                 and json_data[0] == "No matches."
             ):
                 logger.warning(
-                    f"No matches for site {self.gauge_id}, variable {variable} in getTimeseriesList"
+                    f"No matches for site {gauge_id}, variable {variable} in getTimeseriesList"
                 )
                 return None
             else:
                 logger.warning(
-                    f"Unexpected response from getTimeseriesList for site {self.gauge_id}: {json_data}"
+                    f"Unexpected response from getTimeseriesList for site {gauge_id}: {json_data}"
                 )
                 return None
         except Exception as e:
-            logger.error(f"Error getting timeseries ID for site {self.gauge_id}: {e}")
+            logger.error(f"Error getting timeseries ID for site {gauge_id}: {e}")
             return None
 
     def _download_data(
-        self, variable: str, start_date: str, end_date: str
+        self, gauge_id: str, variable: str, start_date: str, end_date: str
     ) -> Optional[str]:
         """Downloads the raw CSV data."""
-        ts_id = self._get_timeseries_id(variable)
+        ts_id = self._get_timeseries_id(gauge_id, variable)
         if not ts_id:
             return None
 
@@ -128,7 +128,9 @@ class AustraliaFetcher(base.RiverDataFetcher):
             logger.error(f"Error downloading data for ts_id {ts_id}: {e}")
             return None
 
-    def _parse_data(self, raw_data: Optional[str], variable: str) -> pd.DataFrame:
+    def _parse_data(
+        self, gauge_id: str, raw_data: Optional[str], variable: str
+    ) -> pd.DataFrame:
         """Parses the raw CSV data."""
         if not raw_data:
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
@@ -144,9 +146,7 @@ class AustraliaFetcher(base.RiverDataFetcher):
                     break
 
             if header_line_index == -1:
-                logger.warning(
-                    f"Could not find data header in CSV for site {self.gauge_id}"
-                )
+                logger.warning(f"Could not find data header in CSV for site {gauge_id}")
                 return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
             # Join lines from the header row onwards
@@ -166,11 +166,12 @@ class AustraliaFetcher(base.RiverDataFetcher):
             df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX])
             return df[[constants.TIME_INDEX, variable]].dropna()
         except Exception as e:
-            logger.error(f"Error parsing CSV data for site {self.gauge_id}: {e}")
+            logger.error(f"Error parsing CSV data for site {gauge_id}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     def get_data(
         self,
+        gauge_id: str,
         variable: str,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
@@ -182,11 +183,11 @@ class AustraliaFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
         try:
-            raw_data = self._download_data(variable, start_date, end_date)
-            df = self._parse_data(raw_data, variable)
+            raw_data = self._download_data(gauge_id, variable, start_date, end_date)
+            df = self._parse_data(gauge_id, raw_data, variable)
             return df
         except Exception as e:
             logger.error(
-                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
+                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
