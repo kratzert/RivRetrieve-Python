@@ -7,6 +7,7 @@ TIME_INDEX = "time"
 # Data Variables
 DISCHARGE = "discharge"
 STAGE = "stage"
+WATER_TEMPERATURE = "water_temperature"
 
 # Attributes
 LATITUDE = "latitude"
