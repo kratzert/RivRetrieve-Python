@@ -39,14 +39,17 @@ class PolandFetcher(base.RiverDataFetcher):
             response1.raise_for_status()
             content1 = response1.content.decode("cp1250", errors="ignore")
             lines1 = content1.splitlines()[2:12]  # Daily data has 10 header lines
-            cleaned1 = [re.sub(r"\s+", " ", re.sub(r"[?'^]", "", line)).strip() for line in lines1]
+            cleaned1 = [
+                re.sub(r"\s+", " ", re.sub(r"[?'^]", "", line)).strip()
+                for line in lines1
+            ]
             return cleaned1
         except requests.exceptions.RequestException as e:
             logger.error(f"Error fetching metadata headers: {e}")
             raise
 
     def _download_data(
-        self, variable: str, start_date: str, end_date: str
+        self, gauge_id: str, variable: str, start_date: str, end_date: str
     ) -> List[pd.DataFrame]:
         """Downloads raw data from IMGW for the specified date range."""
         start_dt = datetime.strptime(start_date, "%Y-%m-%d")
@@ -80,13 +83,17 @@ class PolandFetcher(base.RiverDataFetcher):
                                         if df.shape[1] == len(meta_headers):
                                             df.columns = meta_headers
                                             all_data.append(df)
-                                        elif df.shape[1] == 9:  # Special case for current year format
+                                        elif (
+                                            df.shape[1] == 9
+                                        ):  # Special case for current year format
                                             df["flow"] = None
                                             df = df.iloc[:, list(range(7)) + [9, 7, 8]]
                                             df.columns = meta_headers
                                             all_data.append(df)
                                         else:
-                                            logger.warning(f"Column mismatch in {fname} for {self.gauge_id}")
+                                            logger.warning(
+                                                f"Column mismatch in {fname} for {gauge_id}"
+                                            )
 
             except requests.exceptions.RequestException as e:
                 logger.error(f"Error fetching data for year {year}: {e}")
@@ -95,7 +102,9 @@ class PolandFetcher(base.RiverDataFetcher):
 
         return all_data
 
-    def _parse_data(self, raw_data_list: List[pd.DataFrame], variable: str) -> pd.DataFrame:
+    def _parse_data(
+        self, gauge_id: str, raw_data_list: List[pd.DataFrame], variable: str
+    ) -> pd.DataFrame:
         """Parses the raw dataframes into a standardized format."""
         if not raw_data_list:
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
@@ -106,17 +115,19 @@ class PolandFetcher(base.RiverDataFetcher):
                 return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
             # Filter for the specific gauge ID
-            full_df = full_df[full_df["Kod stacji"] == int(self.gauge_id)]
+            full_df = full_df[full_df["Kod stacji"] == int(gauge_id)]
             if full_df.empty:
                 return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
             # Build Date column
-            df_dates = full_df[["Rok hydrologiczny", "Miesiąc kalendarzowy", "Dzień"]].astype(int)
+            df_dates = full_df[
+                ["Rok hydrologiczny", "Miesiąc kalendarzowy", "Dzień"]
+            ].astype(int)
             df_dates.columns = ["hyy", "mm", "dd"]
             df_dates["yy"] = df_dates["hyy"] - (df_dates["mm"] >= 11).astype(int)
             full_df[constants.TIME_INDEX] = pd.to_datetime(
                 dict(year=df_dates["yy"], month=df_dates["mm"], day=df_dates["dd"]),
-                errors="coerce"
+                errors="coerce",
             )
             full_df = full_df.dropna(subset=[constants.TIME_INDEX])
 
@@ -136,17 +147,25 @@ class PolandFetcher(base.RiverDataFetcher):
                 full_df[variable] = full_df[variable] / 100.0  # cm to m
 
             # Clean placeholder values
-            full_df.replace({9999: None, 99999.999: None, 99.9: None, 999: None}, inplace=True)
+            full_df.replace(
+                {9999: None, 99999.999: None, 99.9: None, 999: None}, inplace=True
+            )
 
-            result_df = full_df[[constants.TIME_INDEX, variable]].dropna().sort_values(by=constants.TIME_INDEX).reset_index(drop=True)
+            result_df = (
+                full_df[[constants.TIME_INDEX, variable]]
+                .dropna()
+                .sort_values(by=constants.TIME_INDEX)
+                .reset_index(drop=True)
+            )
             return result_df
 
         except Exception as e:
-            logger.error(f"Error parsing data for site {self.gauge_id}: {e}")
+            logger.error(f"Error parsing data for site {gauge_id}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     def get_data(
         self,
+        gauge_id: str,
         variable: str,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
@@ -159,8 +178,10 @@ class PolandFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
         try:
-            raw_data_list = self._download_data(variable, start_date, end_date)
-            df = self._parse_data(raw_data_list, variable)
+            raw_data_list = self._download_data(
+                gauge_id, variable, start_date, end_date
+            )
+            df = self._parse_data(gauge_id, raw_data_list, variable)
 
             # Filter by date range
             start_date_dt = pd.to_datetime(start_date)
@@ -172,7 +193,7 @@ class PolandFetcher(base.RiverDataFetcher):
             return df
         except Exception as e:
             logger.error(
-                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
+                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 

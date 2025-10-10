@@ -36,11 +36,11 @@ class UKFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
     def _download_data(
-        self, variable: str, start_date: str, end_date: str
+        self, gauge_id: str, variable: str, start_date: str, end_date: str
     ) -> List[Dict[str, Any]]:
         """Downloads the raw data from the UK Environment Agency API."""
         notation = self._get_measure_notation(variable)
-        site = self.gauge_id.split("/")[-1]
+        site = gauge_id.split("/")[-1]
 
         # Check if the station has data for the given variable
         measure_url = f"{self.BASE_URL}/hydrology/id/measures?station={site}"
@@ -54,11 +54,11 @@ class UKFetcher(base.RiverDataFetcher):
             )
             if ix is None:
                 raise ValueError(
-                    f"Site {self.gauge_id} does not have {variable} data ({notation})"
+                    f"Site {gauge_id} does not have {variable} data ({notation})"
                 )
             target_notation = measures[ix]["notation"]
         except requests.exceptions.RequestException as e:
-            logger.error(f"Error fetching measures for site {self.gauge_id}: {e}")
+            logger.error(f"Error fetching measures for site {gauge_id}: {e}")
             raise
 
         all_items = []
@@ -101,7 +101,7 @@ class UKFetcher(base.RiverDataFetcher):
         return all_items
 
     def _parse_data(
-        self, raw_data: List[Dict[str, Any]], variable: str
+        self, gauge_id: str, raw_data: List[Dict[str, Any]], variable: str
     ) -> pd.DataFrame:
         """Parses the raw JSON data into a pandas DataFrame."""
         if not raw_data:
@@ -144,6 +144,7 @@ class UKFetcher(base.RiverDataFetcher):
 
     def get_data(
         self,
+        gauge_id: str,
         variable: str,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
@@ -155,8 +156,8 @@ class UKFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
         try:
-            raw_data = self._download_data(variable, start_date, end_date)
-            df = self._parse_data(raw_data, variable)
+            raw_data = self._download_data(gauge_id, variable, start_date, end_date)
+            df = self._parse_data(gauge_id, raw_data, variable)
 
             # Filter by exact start and end date after processing
             start_date_dt = pd.to_datetime(start_date)
@@ -169,6 +170,6 @@ class UKFetcher(base.RiverDataFetcher):
 
         except Exception as e:
             logger.error(
-                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
+                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

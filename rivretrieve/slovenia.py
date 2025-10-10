@@ -28,14 +28,14 @@ class SloveniaFetcher(base.RiverDataFetcher):
         return (constants.DISCHARGE, constants.STAGE)
 
     def _download_data(
-        self, variable: str, start_date: str, end_date: str
+        self, gauge_id: str, variable: str, start_date: str, end_date: str
     ) -> Optional[str]:
         """Downloads the raw CSV data from the ARSO API."""
         start_year = datetime.strptime(start_date, "%Y-%m-%d").year
         end_year = datetime.strptime(end_date, "%Y-%m-%d").year
 
         query = (
-            f"?p_postaja={self.gauge_id}"
+            f"?p_postaja={gauge_id}"
             f"&p_od_leto={start_year}"
             f"&p_do_leto={end_year}"
             "&b_oddo_CSV=Izvoz+dnevnih+vrednosti+v+CSV"
@@ -47,10 +47,12 @@ class SloveniaFetcher(base.RiverDataFetcher):
             response.raise_for_status()
             return response.text
         except requests.exceptions.RequestException as e:
-            logger.error(f"Error fetching data for site {self.gauge_id}: {e}")
+            logger.error(f"Error fetching data for site {gauge_id}: {e}")
             return None
 
-    def _parse_data(self, raw_data: Optional[str], variable: str) -> pd.DataFrame:
+    def _parse_data(
+        self, gauge_id: str, raw_data: Optional[str], variable: str
+    ) -> pd.DataFrame:
         """Parses the raw CSV data."""
         if not raw_data:
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
@@ -74,18 +76,14 @@ class SloveniaFetcher(base.RiverDataFetcher):
                         pd.to_numeric(df[raw_col], errors="coerce") / 100.0
                     )  # cm to m
                 else:
-                    logger.warning(
-                        f"Column {raw_col} not found for site {self.gauge_id}"
-                    )
+                    logger.warning(f"Column {raw_col} not found for site {gauge_id}")
                     return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
             elif variable == constants.DISCHARGE:
                 raw_col = "pretok (m3/s)"
                 if raw_col in df.columns:
                     df[variable] = pd.to_numeric(df[raw_col], errors="coerce")
                 else:
-                    logger.warning(
-                        f"Column {raw_col} not found for site {self.gauge_id}"
-                    )
+                    logger.warning(f"Column {raw_col} not found for site {gauge_id}")
                     return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
             else:
                 # Should not happen due to check in get_data
@@ -99,11 +97,12 @@ class SloveniaFetcher(base.RiverDataFetcher):
             )
 
         except Exception as e:
-            logger.error(f"Error parsing data for site {self.gauge_id}: {e}")
+            logger.error(f"Error parsing data for site {gauge_id}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     def get_data(
         self,
+        gauge_id: str,
         variable: str,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
@@ -116,8 +115,8 @@ class SloveniaFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
         try:
-            raw_data = self._download_data(variable, start_date, end_date)
-            df = self._parse_data(raw_data, variable)
+            raw_data = self._download_data(gauge_id, variable, start_date, end_date)
+            df = self._parse_data(gauge_id, raw_data, variable)
 
             # Filter by date range
             start_date_dt = pd.to_datetime(start_date)
@@ -129,6 +128,6 @@ class SloveniaFetcher(base.RiverDataFetcher):
             return df
         except Exception as e:
             logger.error(
-                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
+                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

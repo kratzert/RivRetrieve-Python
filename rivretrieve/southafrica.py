@@ -31,6 +31,7 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
 
     def _construct_endpoint(
         self,
+        gauge_id: str,
         data_type: str,
         chunk_start_date: date,
         chunk_end_date: date,
@@ -38,13 +39,14 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
         start_str = chunk_start_date.strftime("%Y-%m-%d")
         end_str = chunk_end_date.strftime("%Y-%m-%d")
         endpoint = (
-            f"{self.BASE_URL}?Station={self.gauge_id}100.00"
+            f"{self.BASE_URL}?Station={gauge_id}100.00"
             f"&DataType={data_type}&StartDT={start_str}&EndDT={end_str}&SiteType=RIV"
         )
         return endpoint
 
     def _download_data(
         self,
+        gauge_id: str,
         variable: str,
         start_date: str,
         end_date: str,
@@ -81,10 +83,10 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
                 chunk_end_dt = end_dt
 
             endpoint = self._construct_endpoint(
-                data_type, current_start_dt, chunk_end_dt
+                gauge_id, data_type, current_start_dt, chunk_end_dt
             )
             logger.info(
-                f"Fetching {variable} for site {self.gauge_id} from {current_start_dt} to {chunk_end_dt}"
+                f"Fetching {variable} for site {gauge_id} from {current_start_dt} to {chunk_end_dt}"
             )
 
             try:
@@ -120,13 +122,13 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
                             data_list.append(df)
                 else:
                     logger.warning(
-                        f"No <pre> tag found for site {self.gauge_id} at {endpoint}"
+                        f"No <pre> tag found for site {gauge_id} at {endpoint}"
                     )
 
             except requests.exceptions.RequestException as e:
-                logger.error(f"Error fetching data for site {self.gauge_id}: {e}")
+                logger.error(f"Error fetching data for site {gauge_id}: {e}")
             except Exception as e:
-                logger.error(f"Error processing data for site {self.gauge_id}: {e}")
+                logger.error(f"Error processing data for site {gauge_id}: {e}")
 
             current_start_dt = chunk_end_dt + relativedelta(days=1)
 
@@ -134,6 +136,7 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
 
     def _parse_data(
         self,
+        gauge_id: str,
         raw_data_list: List[pd.DataFrame],
         variable: str,
     ) -> pd.DataFrame:
@@ -177,11 +180,12 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
             )
 
         except Exception as e:
-            logger.error(f"Error parsing data for site {self.gauge_id}: {e}")
+            logger.error(f"Error parsing data for site {gauge_id}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     def get_data(
         self,
+        gauge_id: str,
         variable: str,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
@@ -193,11 +197,13 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
         try:
-            raw_data_list = self._download_data(variable, start_date, end_date)
-            df = self._parse_data(raw_data_list, variable)
+            raw_data_list = self._download_data(
+                gauge_id, variable, start_date, end_date
+            )
+            df = self._parse_data(gauge_id, raw_data_list, variable)
             return df
         except Exception as e:
             logger.error(
-                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
+                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

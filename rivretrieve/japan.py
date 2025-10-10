@@ -39,13 +39,13 @@ class JapanFetcher(base.RiverDataFetcher):
 
     def _download_data(
         self,
+        gauge_id: str,
         variable: str,
         start_date: str,
         end_date: str,
     ) -> List[pd.DataFrame]:
         """Downloads raw data month by month."""
         kind = self._get_kind(variable)
-        gauge_id = self.gauge_id
 
         start_dt = datetime.strptime(start_date, "%Y-%m-%d")
         end_dt = datetime.strptime(end_date, "%Y-%m-%d")
@@ -59,7 +59,7 @@ class JapanFetcher(base.RiverDataFetcher):
             # End date for the request can be a bit beyond the current month
             request_end_dt = current_dt + relativedelta(months=1, days=-1)
             if request_end_dt > end_dt:
-                request_end_dt = end_date
+                request_end_dt = end_dt
             request_end_str = request_end_dt.strftime("%Y%m%d")
 
             params = {
@@ -103,6 +103,7 @@ class JapanFetcher(base.RiverDataFetcher):
 
     def _parse_data(
         self,
+        gauge_id: str,
         raw_data_list: List[pd.DataFrame],
         variable: str,
     ) -> pd.DataFrame:
@@ -124,7 +125,7 @@ class JapanFetcher(base.RiverDataFetcher):
             # We need Date (index 0) and the value at 12h (index 12)
             if data_df.shape[1] < 13:
                 logger.warning(
-                    f"Unexpected table structure for site {self.gauge_id}, skipping month."
+                    f"Unexpected table structure for site {gauge_id}, skipping month."
                 )
                 continue
 
@@ -154,6 +155,7 @@ class JapanFetcher(base.RiverDataFetcher):
 
     def get_data(
         self,
+        gauge_id: str,
         variable: str,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
@@ -165,8 +167,10 @@ class JapanFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
         try:
-            raw_data_list = self._download_data(variable, start_date, end_date)
-            df = self._parse_data(raw_data_list, variable)
+            raw_data_list = self._download_data(
+                gauge_id, variable, start_date, end_date
+            )
+            df = self._parse_data(gauge_id, raw_data_list, variable)
 
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
@@ -178,6 +182,6 @@ class JapanFetcher(base.RiverDataFetcher):
 
         except Exception as e:
             logger.error(
-                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
+                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

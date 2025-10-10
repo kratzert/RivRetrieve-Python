@@ -32,13 +32,13 @@ class USAFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
     def _download_data(
-        self, variable: str, start_date: str, end_date: str
+        self, gauge_id: str, variable: str, start_date: str, end_date: str
     ) -> pd.DataFrame:
         """Downloads data using the dataretrieval package."""
         param_code = self._get_param_code(variable)
         try:
             df, meta = nwis.get_dv(
-                self.gauge_id,
+                sites=gauge_id,
                 startDT=start_date,
                 endDT=end_date,
                 parameterCd=[param_code],
@@ -46,11 +46,13 @@ class USAFetcher(base.RiverDataFetcher):
             return df
         except Exception as e:
             logger.error(
-                f"Error fetching NWIS data for site {self.gauge_id}, param {param_code}: {e}"
+                f"Error fetching NWIS data for site {gauge_id}, param {param_code}: {e}"
             )
             return pd.DataFrame()
 
-    def _parse_data(self, raw_data: pd.DataFrame, variable: str) -> pd.DataFrame:
+    def _parse_data(
+        self, gauge_id: str, raw_data: pd.DataFrame, variable: str
+    ) -> pd.DataFrame:
         """Parses the DataFrame from dataretrieval."""
 
         if raw_data.empty:
@@ -66,7 +68,7 @@ class USAFetcher(base.RiverDataFetcher):
 
         if value_col is None:
             logger.warning(
-                f"Could not find value column for param {param_code} in data for site {self.gauge_id}"
+                f"Could not find value column for param {param_code} in data for site {gauge_id}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
@@ -86,6 +88,7 @@ class USAFetcher(base.RiverDataFetcher):
 
     def get_data(
         self,
+        gauge_id: str,
         variable: str,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
@@ -97,11 +100,11 @@ class USAFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
         try:
-            raw_data = self._download_data(variable, start_date, end_date)
-            df = self._parse_data(raw_data, variable)
+            raw_data = self._download_data(gauge_id, variable, start_date, end_date)
+            df = self._parse_data(gauge_id, raw_data, variable)
             return df
         except Exception as e:
             logger.error(
-                f"Failed to get data for site {self.gauge_id}, variable {variable}: {e}"
+                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
