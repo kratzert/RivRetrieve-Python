@@ -160,6 +160,20 @@ def main():
         logging.info("No tasks to process. Exiting.")
         return
 
+    if "poland" in fetcher_classes_to_run:
+        logging.info("Poland fetcher selected, ensuring cache exists...")
+        try:
+            poland_fetcher = fetcher_classes_to_run["poland"]()
+            # This call will block if the cache needs to be built
+            poland_fetcher.get_data(gauge_id="dummy", variable=constants.DISCHARGE, start_date="2000-01-01", end_date="2000-01-01")
+            logging.info("Poland cache check complete.")
+        except Exception as e:
+            logging.error(f"Error during Poland cache pre-check: {e}")
+            # Optionally, remove poland from fetcher_classes_to_run if pre-check fails
+            if "poland" in fetcher_classes_to_run:
+                del fetcher_classes_to_run["poland"]
+                logging.info("Removed Poland from fetchers to run due to pre-check error.")
+
     with concurrent.futures.ThreadPoolExecutor(max_workers=N_WORKERS) as executor:
         futures = [executor.submit(download_gauge_data, *task) for task in tasks]
         for future in concurrent.futures.as_completed(futures):

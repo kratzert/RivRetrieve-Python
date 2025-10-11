@@ -4,6 +4,9 @@ build/
 *.egg-info/
 downloaded_data/
 
+# Internal data cache
+rivretrieve/data
+
 **/*.pyc
 **/*.sqlite3
 **/*.png
