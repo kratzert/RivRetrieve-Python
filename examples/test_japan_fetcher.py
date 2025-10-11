@@ -16,10 +16,12 @@ end_date = "2019-12-31"  # Fetching a few months to test
 
 plt.figure(figsize=(12, 6))
 
+fetcher = JapanFetcher()
 for gauge_id in gauge_ids:
-    fetcher = JapanFetcher(gauge_id=gauge_id)
     print(f"Fetching data for {gauge_id} from {start_date} to {end_date}...")
-    data = fetcher.get_data(variable=variable, start_date=start_date, end_date=end_date)
+    data = fetcher.get_data(
+        gauge_id=gauge_id, variable=variable, start_date=start_date, end_date=end_date
+    )
     if not data.empty:
         print(f"Data for {gauge_id}:")
         print(data.head())

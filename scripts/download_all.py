@@ -74,9 +74,12 @@ def download_gauge_data(country, fetcher_class, gauge_id, start_date, end_date):
         f"Processing {country} - {gauge_id} with dates {start_date} to {end_date}"
     )
     try:
-        fetcher = fetcher_class(gauge_id=gauge_id)
+        fetcher = fetcher_class()
         data = fetcher.get_data(
-            variable=VARIABLE, start_date=start_date, end_date=end_date
+            gauge_id=gauge_id,
+            variable=VARIABLE,
+            start_date=start_date,
+            end_date=end_date,
         )
 
         if data is not None and not data.empty:

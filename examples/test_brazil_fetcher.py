@@ -14,15 +14,23 @@ variable = constants.DISCHARGE
 
 plt.figure(figsize=(12, 6))
 
+fetcher = BrazilFetcher()
 for gauge_id in gauge_ids:
-    fetcher = BrazilFetcher(gauge_id=gauge_id)
     print(f"Fetching data for {gauge_id}...")
-    data = fetcher.get_data(variable=variable)
+    data = fetcher.get_data(gauge_id=gauge_id, variable=variable)
     if not data.empty:
         print(f"Data for {gauge_id}:")
         print(data.head())
-        print(f"Time series from {data[constants.TIME_INDEX].min()} to {data[constants.TIME_INDEX].max()}")
-        plt.plot(data[constants.TIME_INDEX], data[constants.DISCHARGE], label=gauge_id, marker=".", linestyle="-")
+        print(
+            f"Time series from {data[constants.TIME_INDEX].min()} to {data[constants.TIME_INDEX].max()}"
+        )
+        plt.plot(
+            data[constants.TIME_INDEX],
+            data[constants.DISCHARGE],
+            label=gauge_id,
+            marker=".",
+            linestyle="-",
+        )
     else:
         print(f"No data found for {gauge_id}")
 

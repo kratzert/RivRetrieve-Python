@@ -17,10 +17,12 @@ end_date = "2024-03-31"
 
 plt.figure(figsize=(12, 6))
 
+fetcher = AustraliaFetcher()
 for gauge_id in gauge_ids:
-    fetcher = AustraliaFetcher(gauge_id=gauge_id)
     print(f"Fetching data for {gauge_id} from {start_date} to {end_date}...")
-    data = fetcher.get_data(variable=variable)
+    data = fetcher.get_data(
+        gauge_id=gauge_id, variable=variable, start_date=start_date, end_date=end_date
+    )
     if not data.empty:
         print(f"Data for {gauge_id}:")
         print(data.head())

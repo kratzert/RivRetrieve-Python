@@ -121,6 +121,7 @@ class CanadaFetcher(base.RiverDataFetcher):
 
     def get_data(
         self,
+        gauge_id: str,
         variable: str,
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
@@ -153,7 +154,7 @@ class CanadaFetcher(base.RiverDataFetcher):
                   AND YEAR BETWEEN ? AND ?
             """
             df = pd.read_sql_query(
-                query, conn, params=(self.gauge_id, start_dt.year, end_dt.year)
+                query, conn, params=(gauge_id, start_dt.year, end_dt.year)
             )
             conn.close()
 
@@ -203,13 +204,15 @@ class CanadaFetcher(base.RiverDataFetcher):
 
         except Exception as e:
             logger.error(
-                f"Error querying or processing HYDAT for site {self.gauge_id}, variable {variable}: {e}"
+                f"Error querying or processing HYDAT for site {gauge_id}, variable {variable}: {e}"
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     # These are not used for Canada as data is local
-    def _download_data(self, variable: str, start_date: str, end_date: str) -> Any:
+    def _download_data(
+        self, gauge_id: str, variable: str, start_date: str, end_date: str
+    ) -> Any:
         return None
 
-    def _parse_data(self, raw_data: Any, variable: str) -> pd.DataFrame:
+    def _parse_data(self, gauge_id: str, raw_data: Any, variable: str) -> pd.DataFrame:
         return pd.DataFrame()
