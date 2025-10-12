@@ -2,27 +2,24 @@ import logging
 
 import matplotlib.pyplot as plt
 
-from rivretrieve import USAFetcher
+from rivretrieve import SloveniaFetcher
 from rivretrieve import constants
 
 logging.basicConfig(level=logging.INFO)
 
 gauge_ids = [
-    "07374000",
+    "1020",  # Cmurek on Mura
 ]
 variable = constants.DISCHARGE
-# Fetch a recent period for testing
-start_date = "1950-01-01"
-end_date = None
 
 plt.figure(figsize=(12, 6))
 
-fetcher = USAFetcher()
+fetcher = SloveniaFetcher()
 for gauge_id in gauge_ids:
-    print(f"Fetching data for {gauge_id} from {start_date} to {end_date}...")
+    print(f"Fetching all data for {gauge_id}...")
     data = fetcher.get_data(
-        gauge_id=gauge_id, variable=variable, start_date=start_date, end_date=end_date
-    )
+        gauge_id=gauge_id, variable=variable
+    )  # Removed start_date and end_date
     if not data.empty:
         print(f"Data for {gauge_id}:")
         print(data.head())
@@ -38,12 +35,17 @@ for gauge_id in gauge_ids:
     else:
         print(f"No data found for {gauge_id}")
 
-plt.xlabel(constants.TIME_INDEX)
-plt.ylabel(f"{constants.DISCHARGE} (m3/s)")
-plt.title(f"USA River Discharge ({gauge_ids[0]} - 1950 to Present)")
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plot_path = "usa_discharge_plot.png"
-plt.savefig(plot_path)
-print(f"Plot saved to {plot_path}")
+if "data" in locals() and not data.empty:
+    plt.xlabel(constants.TIME_INDEX)
+    plt.ylabel(f"{constants.DISCHARGE} (m3/s)")
+    plt.title(f"Slovenia River Discharge ({gauge_ids[0]} - Full Time Series)")
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plot_path = "slovenia_discharge_plot.png"
+    plt.savefig(plot_path)
+    print(f"Plot saved to {plot_path}")
+else:
+    print("No data to plot.")
+
+print("Test finished.")

@@ -1,4 +1,4 @@
-"site","latitude","longitude"
+"gauge_id","latitude","longitude"
 "http://environment.data.gov.uk/hydrology/id/stations/951f7162-24d4-45f4-a03e-ee55d3c864c1",50.196411,-5.136703
 "http://environment.data.gov.uk/hydrology/id/stations/d9f8ae6e-a12e-4fbf-972e-21c89e521789",51.551558,-0.267837
 "http://environment.data.gov.uk/hydrology/id/stations/655a16a0-8498-4b83-a8f6-6816952b2262",53.801716,-1.57548
