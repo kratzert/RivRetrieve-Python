@@ -25,6 +25,10 @@ class TestPolandFetcher(unittest.TestCase):
         with zipfile.ZipFile(self.test_zip_file, "r") as zip_ref:
             zip_ref.extractall(self.temp_dir.name)
 
+        print(
+            f"Contents of temp dir ({self.temp_dir.name}): {os.listdir(self.temp_dir.name)}"
+        )
+
         self.test_cache_file = Path(self.temp_dir.name) / "poland_test.zarr"
 
     def tearDown(self):
