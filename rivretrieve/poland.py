@@ -41,10 +41,7 @@ class PolandFetcher(base.RiverDataFetcher):
             response1.raise_for_status()
             content1 = response1.content.decode("cp1250", errors="ignore")
             lines1 = content1.splitlines()[2:12]  # Daily data has 10 header lines
-            cleaned1 = [
-                re.sub(r"\s+", " ", re.sub(r"[?'^]", "", line)).strip()
-                for line in lines1
-            ]
+            cleaned1 = [re.sub(r"\s+", " ", re.sub(r"[?'^]", "", line)).strip() for line in lines1]
             return cleaned1
         except requests.exceptions.RequestException as e:
             logger.error(f"Error fetching metadata headers: {e}")
@@ -66,9 +63,7 @@ class PolandFetcher(base.RiverDataFetcher):
                 logger.info(f"Found {len(zip_files)} zip files for year {year}")
 
                 for i, fname in enumerate(zip_files):
-                    logger.info(
-                        f"Downloading and processing {fname} ({i + 1}/{len(zip_files)})"
-                    )
+                    logger.info(f"Downloading and processing {fname} ({i + 1}/{len(zip_files)})")
                     file_url = f"{year_url}{fname}"
                     resp = s.get(file_url)
                     resp.raise_for_status()
@@ -85,17 +80,13 @@ class PolandFetcher(base.RiverDataFetcher):
                                         if df.shape[1] == len(meta_headers):
                                             df.columns = meta_headers
                                             all_data.append(df)
-                                        elif (
-                                            df.shape[1] == 9
-                                        ):  # Special case for current year format
+                                        elif df.shape[1] == 9:  # Special case for current year format
                                             df["flow"] = None
                                             df = df.iloc[:, list(range(7)) + [9, 7, 8]]
                                             df.columns = meta_headers
                                             all_data.append(df)
                                         else:
-                                            logger.warning(
-                                                f"Column mismatch in {fname}"
-                                            )
+                                            logger.warning(f"Column mismatch in {fname}")
 
             except requests.exceptions.RequestException as e:
                 logger.error(f"Error fetching data for year {year}: {e}")
@@ -151,13 +142,11 @@ class PolandFetcher(base.RiverDataFetcher):
                 full_df[constants.STAGE] = full_df[constants.STAGE] / 100.0  # cm to m
 
             # Clean placeholder values
-            full_df.replace(
-                {9999: None, 99999.999: None, 99.9: None, 999: None}, inplace=True
-            )
+            full_df.replace({9999: None, 99999.999: None, 99.9: None, 999: None}, inplace=True)
 
-            result_df = full_df[
-                [constants.GAUGE_ID, constants.TIME_INDEX] + var_cols
-            ].dropna(how="all", subset=var_cols)
+            result_df = full_df[[constants.GAUGE_ID, constants.TIME_INDEX] + var_cols].dropna(
+                how="all", subset=var_cols
+            )
             return result_df
 
         except Exception as e:
@@ -218,29 +207,18 @@ class PolandFetcher(base.RiverDataFetcher):
                 logger.warning(f"Variable {variable} not found in cache.")
                 return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-            data_array = ds[variable].sel(
-                gauge_id=gauge_id, time=slice(start_date, end_date)
-            )
-            df = (
-                data_array.to_pandas()
-                .dropna()
-                .reset_index()
-                .rename(columns={variable: variable})
-            )
+            data_array = ds[variable].sel(gauge_id=gauge_id, time=slice(start_date, end_date))
+            df = data_array.to_pandas().dropna().reset_index().rename(columns={variable: variable})
             return df[[constants.TIME_INDEX, variable]]
 
         except KeyError:
-            logger.info(
-                f"No data found for gauge {gauge_id} in the selected date range."
-            )
+            logger.info(f"No data found for gauge {gauge_id} in the selected date range.")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
             logger.error("Error reading from cache")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-    def _download_data(
-        self, gauge_id: str, variable: str, start_date: str, end_date: str
-    ) -> any:
+    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> any:
         """Not used for PolandFetcher, cache is created from all data."""
         raise NotImplementedError("This method is not used in PolandFetcher.")
 
@@ -252,9 +230,7 @@ class PolandFetcher(base.RiverDataFetcher):
 def _imgw_read(fpath: str) -> pd.DataFrame:
     """Helper function to read IMGW CSV files with various encodings and separators."""
     try:
-        data = pd.read_csv(
-            fpath, header=None, sep=",", encoding="cp1250", low_memory=False
-        )
+        data = pd.read_csv(fpath, header=None, sep=",", encoding="cp1250", low_memory=False)
     except Exception:
         try:
             data = pd.read_csv(fpath, header=None, sep=";", low_memory=False)
@@ -263,9 +239,7 @@ def _imgw_read(fpath: str) -> pd.DataFrame:
 
     if data.empty or data.shape[1] == 1:
         try:
-            data = pd.read_csv(
-                fpath, header=None, sep=";", encoding="utf-8", low_memory=False
-            )
+            data = pd.read_csv(fpath, header=None, sep=";", encoding="utf-8", low_memory=False)
         except Exception:
             try:
                 data = pd.read_csv(fpath, header=None, sep=";", low_memory=False)
@@ -274,9 +248,7 @@ def _imgw_read(fpath: str) -> pd.DataFrame:
 
     if data.empty or data.shape[1] == 1:
         try:
-            data = pd.read_csv(
-                fpath, header=None, sep=",", encoding="cp1250", low_memory=False
-            )
+            data = pd.read_csv(fpath, header=None, sep=",", encoding="cp1250", low_memory=False)
         except Exception:
             pass
 

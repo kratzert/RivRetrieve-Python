@@ -14,9 +14,7 @@ class TestJapanFetcher(unittest.TestCase):
         self.test_data_dir = os.path.join(os.path.dirname(__file__), "test_data")
 
     def load_sample_data(self, filename):
-        with open(
-            os.path.join(self.test_data_dir, filename), "r", encoding="utf-8"
-        ) as f:
+        with open(os.path.join(self.test_data_dir, filename), "r", encoding="utf-8") as f:
             return f.read()
 
     @patch("requests.Session.get")
@@ -36,9 +34,7 @@ class TestJapanFetcher(unittest.TestCase):
 
         result_df = self.fetcher.get_data(gauge_id, variable, start_date, end_date)
 
-        expected_dates = pd.to_datetime(
-            ["2019-01-13", "2019-01-14", "2019-01-15", "2019-01-16", "2019-01-17"]
-        )
+        expected_dates = pd.to_datetime(["2019-01-13", "2019-01-14", "2019-01-15", "2019-01-16", "2019-01-17"])
         expected_values = [2.09, 1.78, 1.78, 2.09, 1.78]
         expected_data = {
             constants.TIME_INDEX: expected_dates,

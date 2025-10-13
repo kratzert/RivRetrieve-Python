@@ -32,15 +32,11 @@ class TestUKFetcher(unittest.TestCase):
         mock_requests_session.return_value = mock_session
 
         mock_measures_response = MagicMock()
-        mock_measures_response.json.return_value = self.load_sample_json(
-            self.measures_file
-        )
+        mock_measures_response.json.return_value = self.load_sample_json(self.measures_file)
         mock_measures_response.raise_for_status = MagicMock()
 
         mock_readings_response = MagicMock()
-        mock_readings_response.json.return_value = self.load_sample_json(
-            self.readings_file
-        )
+        mock_readings_response.json.return_value = self.load_sample_json(self.readings_file)
         mock_readings_response.raise_for_status = MagicMock()
 
         def mock_get_side_effect(url, *args, **kwargs):
@@ -67,9 +63,7 @@ class TestUKFetcher(unittest.TestCase):
         }
         expected_df = pd.DataFrame(expected_data)
 
-        assert_frame_equal(
-            result_df.reset_index(drop=True), expected_df, check_dtype=False
-        )
+        assert_frame_equal(result_df.reset_index(drop=True), expected_df, check_dtype=False)
         self.assertEqual(mock_session.get.call_count, 2)
 
 

@@ -37,9 +37,7 @@ class FranceFetcher(base.RiverDataFetcher):
             grandeur = "QmnJ"
         elif variable == constants.STAGE:
             grandeur = "HnJ"  # Assuming daily mean stage, though doc mentions HIXnJ
-            logger.warning(
-                "Using grandeur_hydro='HnJ' for stage, this might not be daily mean."
-            )
+            logger.warning("Using grandeur_hydro='HnJ' for stage, this might not be daily mean.")
         else:
             logger.warning(f"Unsupported variable: {variable}")
             return []
@@ -75,9 +73,7 @@ class FranceFetcher(base.RiverDataFetcher):
                 logger.error(f"Hubeau API request failed for site {gauge_id}: {e}")
                 raise
             except ValueError as e:
-                logger.error(
-                    f"Hubeau API JSON decode failed for site {gauge_id}: {e}\nResponse: {response.text}"
-                )
+                logger.error(f"Hubeau API JSON decode failed for site {gauge_id}: {e}\nResponse: {response.text}")
                 raise
         return all_data
 
@@ -99,19 +95,13 @@ class FranceFetcher(base.RiverDataFetcher):
             grandeur_code = "QmnJ" if variable == constants.DISCHARGE else "HnJ"
             df = df[df["grandeur_hydro_elab"] == grandeur_code]
 
-            if (
-                df.empty
-                or "date_obs_elab" not in df.columns
-                or "resultat_obs_elab" not in df.columns
-            ):
+            if df.empty or "date_obs_elab" not in df.columns or "resultat_obs_elab" not in df.columns:
                 logger.warning(f"Missing expected columns for site {gauge_id}")
                 return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
             df[constants.TIME_INDEX] = pd.to_datetime(df["date_obs_elab"]).dt.date
             # Convert L/s to m3/s
-            df[variable] = (
-                pd.to_numeric(df["resultat_obs_elab"], errors="coerce") / 1000.0
-            )
+            df[variable] = pd.to_numeric(df["resultat_obs_elab"], errors="coerce") / 1000.0
             df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX])
             return (
                 df[[constants.TIME_INDEX, variable]]
@@ -142,7 +132,5 @@ class FranceFetcher(base.RiverDataFetcher):
             df = self._parse_data(gauge_id, raw_data, variable)
             return df
         except Exception as e:
-            logger.error(
-                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
-            )
+            logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

@@ -47,9 +47,7 @@ class TestChileFetcher(unittest.TestCase):
         result_df = self.fetcher.get_data(gauge_id, variable, start_date, end_date)
 
         expected_data = {
-            constants.TIME_INDEX: pd.to_datetime(
-                ["2022-01-01", "2022-01-02", "2022-01-03"]
-            ),
+            constants.TIME_INDEX: pd.to_datetime(["2022-01-01", "2022-01-02", "2022-01-03"]),
             constants.DISCHARGE: [15.5, 16.0, 15.8],
         }
         expected_df = pd.DataFrame(expected_data)

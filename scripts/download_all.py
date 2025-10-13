@@ -27,9 +27,7 @@ JAPAN_START_DATE = "1980-01-01"
 JAPAN_END_DATE = "2024-12-31"
 
 # Setup logging
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 
 def get_fetcher_classes():
@@ -47,9 +45,7 @@ def get_fetcher_classes():
                         and attribute is not rivretrieve.base.RiverDataFetcher
                     ):
                         fetchers[module_name] = attribute
-                        logging.info(
-                            f"Found fetcher: {attribute_name} in {module_name}"
-                        )
+                        logging.info(f"Found fetcher: {attribute_name} in {module_name}")
                 except TypeError:
                     continue
     return fetchers
@@ -61,18 +57,14 @@ def download_gauge_data(country, fetcher_class, gauge_id, start_date, end_date):
     os.makedirs(output_dir, exist_ok=True)
 
     # Sanitize gauge_id to be used as a filename
-    sanitized_gauge_id = "".join(
-        c if c.isalnum() or c in ["-", "_"] else "_" for c in gauge_id
-    )
+    sanitized_gauge_id = "".join(c if c.isalnum() or c in ["-", "_"] else "_" for c in gauge_id)
     output_file = os.path.join(output_dir, f"{sanitized_gauge_id}.csv")
 
     if os.path.exists(output_file):
         logging.info(f"Skipping {country} - {gauge_id} (already downloaded)")
         return f"SKIPPED: {country} - {gauge_id}"
 
-    logging.info(
-        f"Processing {country} - {gauge_id} with dates {start_date} to {end_date}"
-    )
+    logging.info(f"Processing {country} - {gauge_id} with dates {start_date} to {end_date}")
     try:
         fetcher = fetcher_class()
         data = fetcher.get_data(
@@ -152,9 +144,7 @@ def main():
             logging.error(f"Error getting sites for {country}: {e}")
 
     random.shuffle(tasks)
-    logging.info(
-        f"Found {len(tasks)} total sites to process for fetchers: {list(fetcher_classes_to_run.keys())}."
-    )
+    logging.info(f"Found {len(tasks)} total sites to process for fetchers: {list(fetcher_classes_to_run.keys())}.")
 
     if not tasks:
         logging.info("No tasks to process. Exiting.")
@@ -177,9 +167,7 @@ def main():
             # Optionally, remove poland from fetcher_classes_to_run if pre-check fails
             if "poland" in fetcher_classes_to_run:
                 del fetcher_classes_to_run["poland"]
-                logging.info(
-                    "Removed Poland from fetchers to run due to pre-check error."
-                )
+                logging.info("Removed Poland from fetchers to run due to pre-check error.")
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=N_WORKERS) as executor:
         futures = [executor.submit(download_gauge_data, *task) for task in tasks]

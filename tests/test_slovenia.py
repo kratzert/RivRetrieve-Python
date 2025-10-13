@@ -39,9 +39,7 @@ class TestSloveniaFetcher(unittest.TestCase):
 
         result_df = self.fetcher.get_data(gauge_id, variable, start_date, end_date)
 
-        expected_dates = pd.to_datetime(
-            ["1980-01-01", "1980-01-02", "1980-01-03", "1980-01-04", "1980-01-05"]
-        )
+        expected_dates = pd.to_datetime(["1980-01-01", "1980-01-02", "1980-01-03", "1980-01-04", "1980-01-05"])
         expected_values = [115.0, 119.0, 115.0, 108.0, 108.0]  # Values from sample file
         expected_data = {
             constants.TIME_INDEX: expected_dates,

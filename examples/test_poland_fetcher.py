@@ -29,9 +29,7 @@ for variable in variables:
         if not data.empty:
             print(f"Data for {gauge_id}:")
             print(data.head())
-            print(
-                f"Time series from {data[constants.TIME_INDEX].min()} to {data[constants.TIME_INDEX].max()}"
-            )
+            print(f"Time series from {data[constants.TIME_INDEX].min()} to {data[constants.TIME_INDEX].max()}")
             plt.plot(
                 data[constants.TIME_INDEX],
                 data[variable],
@@ -45,9 +43,7 @@ for variable in variables:
     if "data" in locals() and not data.empty:
         plt.xlabel(constants.TIME_INDEX)
         plt.ylabel(f"{variable}")
-        plt.title(
-            f"Poland River {variable} ({gauge_ids[0]} - {start_date} to {end_date})"
-        )
+        plt.title(f"Poland River {variable} ({gauge_ids[0]} - {start_date} to {end_date})")
         plt.legend()
         plt.grid(True)
         plt.tight_layout()

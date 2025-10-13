@@ -11,9 +11,7 @@ class TestSouthAfricaFetcher(unittest.TestCase):
         self.fetcher = SouthAfricaFetcher()
         self.test_data_dir = Path(os.path.dirname(__file__)) / "test_data"
         # Assuming no data in sample files, so we mock the response text
-        self.no_data_html = (
-            "<html><body><pre>No data for this period</pre></body></html>"
-        )
+        self.no_data_html = "<html><body><pre>No data for this period</pre></body></html>"
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_nodata(self, mock_requests_session):
@@ -33,9 +31,7 @@ class TestSouthAfricaFetcher(unittest.TestCase):
         result_df = self.fetcher.get_data(gauge_id, variable, start_date, end_date)
 
         self.assertTrue(result_df.empty)
-        self.assertEqual(
-            list(result_df.columns), [constants.TIME_INDEX, constants.DISCHARGE]
-        )
+        self.assertEqual(list(result_df.columns), [constants.TIME_INDEX, constants.DISCHARGE])
         mock_session.get.assert_called_once()
 
     # TODO: Add tests with actual data when sample is available

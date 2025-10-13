@@ -16,15 +16,11 @@ plt.figure(figsize=(12, 6))
 fetcher = SloveniaFetcher()
 for gauge_id in gauge_ids:
     print(f"Fetching all data for {gauge_id}...")
-    data = fetcher.get_data(
-        gauge_id=gauge_id, variable=variable
-    )  # Removed start_date and end_date
+    data = fetcher.get_data(gauge_id=gauge_id, variable=variable)  # Removed start_date and end_date
     if not data.empty:
         print(f"Data for {gauge_id}:")
         print(data.head())
-        print(
-            f"Time series from {data[constants.TIME_INDEX].min()} to {data[constants.TIME_INDEX].max()}"
-        )
+        print(f"Time series from {data[constants.TIME_INDEX].min()} to {data[constants.TIME_INDEX].max()}")
         plt.plot(
             data[constants.TIME_INDEX],
             data[constants.DISCHARGE],

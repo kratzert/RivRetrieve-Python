@@ -12,17 +12,13 @@ from rivretrieve import CanadaFetcher, constants
 class TestCanadaFetcher(unittest.TestCase):
     def setUp(self):
         self.fetcher = CanadaFetcher()
-        self.test_db_path = (
-            Path(os.path.dirname(__file__)) / "test_data" / "test_hydat.sqlite3"
-        )
+        self.test_db_path = Path(os.path.dirname(__file__)) / "test_data" / "test_hydat.sqlite3"
 
     @patch("rivretrieve.utils.requests_retry_session")
     @patch("rivretrieve.canada.CanadaFetcher._download_hydat")
     @patch(
         "rivretrieve.canada.CanadaFetcher.HYDAT_PATH",
-        new_callable=lambda: Path(
-            os.path.join(os.path.dirname(__file__), "test_data", "test_hydat.sqlite3")
-        ),
+        new_callable=lambda: Path(os.path.join(os.path.dirname(__file__), "test_data", "test_hydat.sqlite3")),
     )
     def test_get_data_discharge(self, mock_hydat_path, mock_download, mock_requests):
         mock_download.return_value = True  # Prevent download attempt
@@ -48,9 +44,7 @@ class TestCanadaFetcher(unittest.TestCase):
     @patch("rivretrieve.canada.CanadaFetcher._download_hydat")
     @patch(
         "rivretrieve.canada.CanadaFetcher.HYDAT_PATH",
-        new_callable=lambda: Path(
-            os.path.join(os.path.dirname(__file__), "test_data", "test_hydat.sqlite3")
-        ),
+        new_callable=lambda: Path(os.path.join(os.path.dirname(__file__), "test_data", "test_hydat.sqlite3")),
     )
     def test_get_data_stage(self, mock_hydat_path, mock_download, mock_requests):
         mock_download.return_value = True  # Prevent download attempt

@@ -76,9 +76,7 @@ class CanadaFetcher(base.RiverDataFetcher):
         self.HYDAT_PATH = self.DATA_DIR / sqlite_filename
 
         if self.HYDAT_PATH.exists():
-            logger.info(
-                f"Latest HYDAT database {sqlite_filename} already exists at {self.HYDAT_PATH}"
-            )
+            logger.info(f"Latest HYDAT database {sqlite_filename} already exists at {self.HYDAT_PATH}")
             return True
 
         logger.info(f"Downloading {zip_filename}...")
@@ -102,9 +100,7 @@ class CanadaFetcher(base.RiverDataFetcher):
                     logger.error(f"No .sqlite3 file found in {zip_filename}.")
                     return False
 
-            logger.info(
-                f"Successfully downloaded and extracted HYDAT to {self.HYDAT_PATH}"
-            )
+            logger.info(f"Successfully downloaded and extracted HYDAT to {self.HYDAT_PATH}")
             return True
 
         except Exception as e:
@@ -153,9 +149,7 @@ class CanadaFetcher(base.RiverDataFetcher):
                 WHERE STATION_NUMBER = ?
                   AND YEAR BETWEEN ? AND ?
             """
-            df = pd.read_sql_query(
-                query, conn, params=(gauge_id, start_dt.year, end_dt.year)
-            )
+            df = pd.read_sql_query(query, conn, params=(gauge_id, start_dt.year, end_dt.year))
             conn.close()
 
             if df.empty:
@@ -177,22 +171,15 @@ class CanadaFetcher(base.RiverDataFetcher):
                 var_name="Day_Col",
                 value_name=variable,
             )
-            df_long["DAY"] = (
-                df_long["Day_Col"].str.replace(value_prefix, "").astype(int)
-            )
+            df_long["DAY"] = df_long["Day_Col"].str.replace(value_prefix, "").astype(int)
 
             # Create Date column
             date_cols = ["YEAR", "MONTH", "DAY"]
-            df_long[constants.TIME_INDEX] = pd.to_datetime(
-                df_long[date_cols], errors="coerce"
-            )
+            df_long[constants.TIME_INDEX] = pd.to_datetime(df_long[date_cols], errors="coerce")
             df_long = df_long.dropna(subset=[constants.TIME_INDEX])
 
             # Filter by date range
-            df_long = df_long[
-                (df_long[constants.TIME_INDEX] >= start_dt)
-                & (df_long[constants.TIME_INDEX] <= end_dt)
-            ]
+            df_long = df_long[(df_long[constants.TIME_INDEX] >= start_dt) & (df_long[constants.TIME_INDEX] <= end_dt)]
 
             df_long[variable] = pd.to_numeric(df_long[variable], errors="coerce")
             return (
@@ -203,15 +190,11 @@ class CanadaFetcher(base.RiverDataFetcher):
             )
 
         except Exception as e:
-            logger.error(
-                f"Error querying or processing HYDAT for site {gauge_id}, variable {variable}: {e}"
-            )
+            logger.error(f"Error querying or processing HYDAT for site {gauge_id}, variable {variable}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     # These are not used for Canada as data is local
-    def _download_data(
-        self, gauge_id: str, variable: str, start_date: str, end_date: str
-    ) -> Any:
+    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> Any:
         return None
 
     def _parse_data(self, gauge_id: str, raw_data: Any, variable: str) -> pd.DataFrame:

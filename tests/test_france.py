@@ -35,9 +35,7 @@ class TestFranceFetcher(unittest.TestCase):
         result_df = self.fetcher.get_data(gauge_id, variable, start_date, end_date)
 
         expected_data = {
-            constants.TIME_INDEX: pd.to_datetime(
-                ["2023-01-01", "2023-01-02", "2023-01-03"]
-            ),
+            constants.TIME_INDEX: pd.to_datetime(["2023-01-01", "2023-01-02", "2023-01-03"]),
             constants.DISCHARGE: [15.0005, 16.0000, 15.5002],  # Divided by 1000
         }
         expected_df = pd.DataFrame(expected_data)

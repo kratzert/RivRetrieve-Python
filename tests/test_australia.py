@@ -44,9 +44,7 @@ class TestAustraliaFetcher(unittest.TestCase):
         result_df = self.fetcher.get_data(gauge_id, variable, start_date, end_date)
 
         expected_data = {
-            constants.TIME_INDEX: pd.to_datetime(
-                ["2010-01-01", "2010-01-02", "2010-01-03"]
-            ),
+            constants.TIME_INDEX: pd.to_datetime(["2010-01-01", "2010-01-02", "2010-01-03"]),
             constants.DISCHARGE: [0.000, 3.710, 3.211],
         }
         expected_df = pd.DataFrame(expected_data)

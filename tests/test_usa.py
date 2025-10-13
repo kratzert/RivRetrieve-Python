@@ -38,9 +38,7 @@ class TestUSAFetcher(unittest.TestCase):
 
         result_df = self.fetcher.get_data(gauge_id, variable, start_date, end_date)
 
-        expected_dates = pd.to_datetime(
-            ["2023-01-01", "2023-01-02", "2023-01-03", "2023-01-04", "2023-01-05"]
-        )
+        expected_dates = pd.to_datetime(["2023-01-01", "2023-01-02", "2023-01-03", "2023-01-04", "2023-01-05"])
         cfs_to_m3s = 0.0283168466
         expected_values = [
             373000 * cfs_to_m3s,
@@ -55,9 +53,7 @@ class TestUSAFetcher(unittest.TestCase):
         }
         expected_df = pd.DataFrame(expected_data)
 
-        assert_frame_equal(
-            result_df.reset_index(drop=True), expected_df, check_dtype=False
-        )
+        assert_frame_equal(result_df.reset_index(drop=True), expected_df, check_dtype=False)
         mock_get_dv.assert_called_once()
         mock_args, mock_kwargs = mock_get_dv.call_args
         self.assertEqual(mock_kwargs["sites"], gauge_id)
