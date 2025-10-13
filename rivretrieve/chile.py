@@ -35,9 +35,7 @@ class ChileFetcher(base.RiverDataFetcher):
     ) -> Optional[pd.DataFrame]:
         """Downloads the raw CSV data by first finding the download link."""
         if variable != constants.DISCHARGE:
-            logger.warning(
-                f"ChileFetcher only supports variable='{constants.DISCHARGE}'"
-            )
+            logger.warning(f"ChileFetcher only supports variable='{constants.DISCHARGE}'")
             return None
 
         # This long URL was extracted from the R code
@@ -53,13 +51,9 @@ class ChileFetcher(base.RiverDataFetcher):
             response.raise_for_status()
 
             # The response body contains the URL to the CSV file
-            match = re.search(
-                r"https://www\.explorador\.cr2\.cl/tmp/[^/]+/[^\"]+\.csv", response.text
-            )
+            match = re.search(r"https://www\.explorador\.cr2\.cl/tmp/[^/]+/[^\"]+\.csv", response.text)
             if not match:
-                logger.error(
-                    f"Could not find download link in response for site {gauge_id}"
-                )
+                logger.error(f"Could not find download link in response for site {gauge_id}")
                 return None
 
             csv_url = match.group(0)
@@ -93,17 +87,13 @@ class ChileFetcher(base.RiverDataFetcher):
             # Clean column names (remove leading/trailing spaces)
             raw_df.columns = raw_df.columns.str.strip()
 
-            if not all(
-                col in raw_df.columns for col in ["agno", "mes", "dia", "valor"]
-            ):
+            if not all(col in raw_df.columns for col in ["agno", "mes", "dia", "valor"]):
                 logger.warning(f"Missing expected columns for site {gauge_id}")
                 return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
             df = raw_df.copy()
             df[constants.TIME_INDEX] = pd.to_datetime(
-                df[["agno", "mes", "dia"]].rename(
-                    columns={"agno": "year", "mes": "month", "dia": "day"}
-                ),
+                df[["agno", "mes", "dia"]].rename(columns={"agno": "year", "mes": "month", "dia": "day"}),
                 errors="coerce",
             )
             df = df.dropna(subset=[constants.TIME_INDEX])
@@ -129,9 +119,7 @@ class ChileFetcher(base.RiverDataFetcher):
     ) -> pd.DataFrame:
         """Fetches and parses Chilean river gauge data."""
         if variable != constants.DISCHARGE:
-            logger.warning(
-                f"ChileFetcher only supports variable='{constants.DISCHARGE}'"
-            )
+            logger.warning(f"ChileFetcher only supports variable='{constants.DISCHARGE}'")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         start_date = utils.format_start_date(start_date)
@@ -147,13 +135,8 @@ class ChileFetcher(base.RiverDataFetcher):
             # Filter by date range
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[
-                (df[constants.TIME_INDEX] >= start_date_dt)
-                & (df[constants.TIME_INDEX] <= end_date_dt)
-            ]
+            df = df[(df[constants.TIME_INDEX] >= start_date_dt) & (df[constants.TIME_INDEX] <= end_date_dt)]
             return df
         except Exception as e:
-            logger.error(
-                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
-            )
+            logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

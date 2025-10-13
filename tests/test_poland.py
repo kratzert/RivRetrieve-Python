@@ -40,9 +40,7 @@ class TestPolandFetcher(unittest.TestCase):
 
             result_df = self.fetcher.get_data(gauge_id, variable, start_date, end_date)
 
-            expected_dates = pd.to_datetime(
-                ["2020-01-01", "2020-01-02", "2020-01-03", "2020-01-04", "2020-01-05"]
-            )
+            expected_dates = pd.to_datetime(["2020-01-01", "2020-01-02", "2020-01-03", "2020-01-04", "2020-01-05"])
             expected_values = [45.9, 41.0, 39.3, 37.5, 38.1]
             expected_data = {
                 constants.TIME_INDEX: expected_dates,
@@ -63,9 +61,7 @@ class TestPolandFetcher(unittest.TestCase):
 
             result_df = self.fetcher.get_data(gauge_id, variable, start_date, end_date)
 
-            expected_dates = pd.to_datetime(
-                ["2020-01-03", "2020-01-04", "2020-01-05", "2020-01-06", "2020-01-07"]
-            )
+            expected_dates = pd.to_datetime(["2020-01-03", "2020-01-04", "2020-01-05", "2020-01-06", "2020-01-07"])
             expected_values = [1.19, 1.16, 1.17, 1.12, 1.07]
             expected_data = {
                 constants.TIME_INDEX: expected_dates,
@@ -111,13 +107,13 @@ class TestPolandFetcher(unittest.TestCase):
                     return mock_response
                 else:
                     mock_response.status_code = 404
-                    mock_response.raise_for_status.side_effect = (
-                        requests.exceptions.HTTPError("404 Client Error")
-                    )
+                    mock_response.raise_for_status.side_effect = requests.exceptions.HTTPError("404 Client Error")
                     return mock_response
             elif url.endswith("2022/"):
                 # List only the test zip files
-                mock_response.text = '<a href="codz_2022_01.zip">codz_2022_01.zip</a> <a href="codz_2022_02.zip">codz_2022_02.zip</a>'
+                mock_response.text = (
+                    '<a href="codz_2022_01.zip">codz_2022_01.zip</a> <a href="codz_2022_02.zip">codz_2022_02.zip</a>'
+                )
                 mock_response.raise_for_status = MagicMock()
                 return mock_response
             return MagicMock()  # Should not be called for other URLs
@@ -129,9 +125,7 @@ class TestPolandFetcher(unittest.TestCase):
 
         parsed_df = self.fetcher._parse_all_data(raw_data_list)
         self.assertFalse(parsed_df.empty)
-        self.assertGreater(
-            len(parsed_df), 20000
-        )  # Expect many rows from two months of data
+        self.assertGreater(len(parsed_df), 20000)  # Expect many rows from two months of data
         self.assertIn(constants.GAUGE_ID, parsed_df.columns)
         self.assertIn(constants.TIME_INDEX, parsed_df.columns)
         self.assertIn(constants.DISCHARGE, parsed_df.columns)
@@ -139,12 +133,8 @@ class TestPolandFetcher(unittest.TestCase):
         self.assertIn(constants.WATER_TEMPERATURE, parsed_df.columns)
 
         # Check date range
-        self.assertEqual(
-            parsed_df[constants.TIME_INDEX].min(), pd.to_datetime("2022-01-01")
-        )
-        self.assertEqual(
-            parsed_df[constants.TIME_INDEX].max(), pd.to_datetime("2022-02-28")
-        )
+        self.assertEqual(parsed_df[constants.TIME_INDEX].min(), pd.to_datetime("2022-01-01"))
+        self.assertEqual(parsed_df[constants.TIME_INDEX].max(), pd.to_datetime("2022-02-28"))
 
 
 if __name__ == "__main__":
