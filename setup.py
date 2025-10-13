@@ -29,5 +29,5 @@ setup(
         "Intended Audience :: Science/Research",
         "Topic :: Scientific/Engineering :: Hydrology",
     ],
-    python_requires=">=3.10",
+    python_requires=">=3.11",
 )
