@@ -1,9 +1,8 @@
 import unittest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 import pandas as pd
 from pandas.testing import assert_frame_equal
 import os
-import sqlite3
 from pathlib import Path
 
 from rivretrieve import CanadaFetcher

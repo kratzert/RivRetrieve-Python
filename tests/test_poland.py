@@ -4,8 +4,6 @@ import pandas as pd
 from pandas.testing import assert_frame_equal
 import os
 from pathlib import Path
-import xarray as xr
-import shutil
 import requests  # Import requests
 
 from rivretrieve import PolandFetcher
@@ -103,8 +101,6 @@ class TestPolandFetcher(unittest.TestCase):
         # Mock requests to return local zip files
         mock_session = MagicMock()
         mock_requests_session.return_value = mock_session
-
-        test_zip_dir = self.test_data_dir / "poland_zip_files" / "2022"
 
         def mock_get_side_effect(url, *args, **kwargs):
             mock_response = MagicMock()

@@ -6,7 +6,6 @@ import re
 import tempfile
 import zipfile
 from datetime import datetime
-from io import StringIO
 from typing import List, Optional
 from pathlib import Path
 
@@ -67,7 +66,9 @@ class PolandFetcher(base.RiverDataFetcher):
                 logger.info(f"Found {len(zip_files)} zip files for year {year}")
 
                 for i, fname in enumerate(zip_files):
-                    logger.info(f"Downloading and processing {fname} ({i+1}/{len(zip_files)})")
+                    logger.info(
+                        f"Downloading and processing {fname} ({i + 1}/{len(zip_files)})"
+                    )
                     file_url = f"{year_url}{fname}"
                     resp = s.get(file_url)
                     resp.raise_for_status()
@@ -234,7 +235,7 @@ class PolandFetcher(base.RiverDataFetcher):
             )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-            logger.error(f"Error reading from cache: {e}")
+            logger.error("Error reading from cache")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     def _download_data(
@@ -251,7 +252,9 @@ class PolandFetcher(base.RiverDataFetcher):
 def _imgw_read(fpath: str) -> pd.DataFrame:
     """Helper function to read IMGW CSV files with various encodings and separators."""
     try:
-        data = pd.read_csv(fpath, header=None, sep=",", encoding="cp1250", low_memory=False)
+        data = pd.read_csv(
+            fpath, header=None, sep=",", encoding="cp1250", low_memory=False
+        )
     except Exception:
         try:
             data = pd.read_csv(fpath, header=None, sep=";", low_memory=False)
@@ -260,7 +263,9 @@ def _imgw_read(fpath: str) -> pd.DataFrame:
 
     if data.empty or data.shape[1] == 1:
         try:
-            data = pd.read_csv(fpath, header=None, sep=";", encoding="utf-8", low_memory=False)
+            data = pd.read_csv(
+                fpath, header=None, sep=";", encoding="utf-8", low_memory=False
+            )
         except Exception:
             try:
                 data = pd.read_csv(fpath, header=None, sep=";", low_memory=False)
@@ -269,7 +274,9 @@ def _imgw_read(fpath: str) -> pd.DataFrame:
 
     if data.empty or data.shape[1] == 1:
         try:
-            data = pd.read_csv(fpath, header=None, sep=",", encoding="cp1250", low_memory=False)
+            data = pd.read_csv(
+                fpath, header=None, sep=",", encoding="cp1250", low_memory=False
+            )
         except Exception:
             pass
 

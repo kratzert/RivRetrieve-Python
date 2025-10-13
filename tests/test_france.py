@@ -4,7 +4,6 @@ import pandas as pd
 from pandas.testing import assert_frame_equal
 import os
 import json
-import requests
 
 from rivretrieve import FranceFetcher
 from rivretrieve import constants

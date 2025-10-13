@@ -5,7 +5,6 @@ from pandas.testing import assert_frame_equal
 import os
 import json
 from pathlib import Path
-import requests
 
 from rivretrieve import UKFetcher
 from rivretrieve import constants
