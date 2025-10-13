@@ -7,7 +7,7 @@ from typing import Any, Dict, List, Optional
 import pandas as pd
 import requests
 
-from . import base, utils, constants
+from . import base, constants, utils
 
 logger = logging.getLogger(__name__)
 
@@ -35,9 +35,7 @@ class UKFetcher(base.RiverDataFetcher):
         else:
             raise ValueError(f"Unsupported variable: {variable}")
 
-    def _download_data(
-        self, gauge_id: str, variable: str, start_date: str, end_date: str
-    ) -> List[Dict[str, Any]]:
+    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> List[Dict[str, Any]]:
         """Downloads the raw data from the UK Environment Agency API."""
         notation = self._get_measure_notation(variable)
         site = gauge_id.split("/")[-1]
@@ -53,9 +51,7 @@ class UKFetcher(base.RiverDataFetcher):
                 None,
             )
             if ix is None:
-                raise ValueError(
-                    f"Site {gauge_id} does not have {variable} data ({notation})"
-                )
+                raise ValueError(f"Site {gauge_id} does not have {variable} data ({notation})")
             target_notation = measures[ix]["notation"]
         except requests.exceptions.RequestException as e:
             logger.error(f"Error fetching measures for site {gauge_id}: {e}")
@@ -82,12 +78,8 @@ class UKFetcher(base.RiverDataFetcher):
                 else:
                     # Prepare for the next chunk
                     last_datetime_str = items[-1]["dateTime"]
-                    last_date = datetime.fromisoformat(
-                        last_datetime_str.replace("Z", "+00:00")
-                    ).date()
-                    current_start_date = (last_date + timedelta(days=1)).strftime(
-                        "%Y-%m-%d"
-                    )
+                    last_date = datetime.fromisoformat(last_datetime_str.replace("Z", "+00:00")).date()
+                    current_start_date = (last_date + timedelta(days=1)).strftime("%Y-%m-%d")
                     if current_start_date > end_date:
                         break
 
@@ -100,9 +92,7 @@ class UKFetcher(base.RiverDataFetcher):
 
         return all_items
 
-    def _parse_data(
-        self, gauge_id: str, raw_data: List[Dict[str, Any]], variable: str
-    ) -> pd.DataFrame:
+    def _parse_data(self, gauge_id: str, raw_data: List[Dict[str, Any]], variable: str) -> pd.DataFrame:
         """Parses the raw JSON data into a pandas DataFrame."""
         if not raw_data:
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
@@ -116,9 +106,7 @@ class UKFetcher(base.RiverDataFetcher):
             # A full day has 24 * 4 = 96 readings. We accept days with at least 90 readings.
             min_readings = 90
             df_daily = (
-                df.groupby(constants.TIME_INDEX)
-                .agg(Value=("Value", "mean"), Count=("Value", "size"))
-                .reset_index()
+                df.groupby(constants.TIME_INDEX).agg(Value=("Value", "mean"), Count=("Value", "size")).reset_index()
             )
             df_daily = df_daily[df_daily["Count"] >= min_readings]
             df_daily = df_daily[[constants.TIME_INDEX, "Value"]]
@@ -136,9 +124,7 @@ class UKFetcher(base.RiverDataFetcher):
                 freq="D",
             )
             complete_ts = pd.DataFrame(date_range, columns=[constants.TIME_INDEX])
-            df_daily = pd.merge(
-                complete_ts, df_daily, on=constants.TIME_INDEX, how="left"
-            )
+            df_daily = pd.merge(complete_ts, df_daily, on=constants.TIME_INDEX, how="left")
 
         return df_daily
 
@@ -162,14 +148,9 @@ class UKFetcher(base.RiverDataFetcher):
             # Filter by exact start and end date after processing
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[
-                (df[constants.TIME_INDEX] >= start_date_dt)
-                & (df[constants.TIME_INDEX] <= end_date_dt)
-            ]
+            df = df[(df[constants.TIME_INDEX] >= start_date_dt) & (df[constants.TIME_INDEX] <= end_date_dt)]
             return df
 
         except Exception as e:
-            logger.error(
-                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
-            )
+            logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

@@ -6,7 +6,7 @@ from typing import Optional
 import pandas as pd
 from dataretrieval import nwis
 
-from . import base, utils, constants
+from . import base, constants, utils
 
 logger = logging.getLogger(__name__)
 
@@ -31,9 +31,7 @@ class USAFetcher(base.RiverDataFetcher):
         else:
             raise ValueError(f"Unsupported variable: {variable}")
 
-    def _download_data(
-        self, gauge_id: str, variable: str, start_date: str, end_date: str
-    ) -> pd.DataFrame:
+    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> pd.DataFrame:
         """Downloads data using the dataretrieval package."""
         param_code = self._get_param_code(variable)
         try:
@@ -45,14 +43,10 @@ class USAFetcher(base.RiverDataFetcher):
             )
             return df
         except Exception as e:
-            logger.error(
-                f"Error fetching NWIS data for site {gauge_id}, param {param_code}: {e}"
-            )
+            logger.error(f"Error fetching NWIS data for site {gauge_id}, param {param_code}: {e}")
             return pd.DataFrame()
 
-    def _parse_data(
-        self, gauge_id: str, raw_data: pd.DataFrame, variable: str
-    ) -> pd.DataFrame:
+    def _parse_data(self, gauge_id: str, raw_data: pd.DataFrame, variable: str) -> pd.DataFrame:
         """Parses the DataFrame from dataretrieval."""
 
         if raw_data.empty:
@@ -67,9 +61,7 @@ class USAFetcher(base.RiverDataFetcher):
                 break
 
         if value_col is None:
-            logger.warning(
-                f"Could not find value column for param {param_code} in data for site {gauge_id}"
-            )
+            logger.warning(f"Could not find value column for param {param_code} in data for site {gauge_id}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         df = raw_data[[value_col]].copy()
@@ -104,7 +96,5 @@ class USAFetcher(base.RiverDataFetcher):
             df = self._parse_data(gauge_id, raw_data, variable)
             return df
         except Exception as e:
-            logger.error(
-                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
-            )
+            logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

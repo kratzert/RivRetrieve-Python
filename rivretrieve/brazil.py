@@ -11,7 +11,7 @@ import requests
 from dateutil.relativedelta import relativedelta
 from dotenv import load_dotenv
 
-from . import base, utils, constants
+from . import base, constants, utils
 
 logger = logging.getLogger(__name__)
 
@@ -363,38 +363,6 @@ class BrazilFetcher(base.RiverDataFetcher):
 
         return all_data
 
-    def _parse_nrt_data(self, raw_data: List[Dict[str, Any]], variable: str) -> pd.DataFrame:
-        """Parses the raw JSON data."""
-        col_name = utils.get_column_name(variable)
-        if not raw_data:
-            return pd.DataFrame(columns=["Date", col_name])
-
-        try:
-            df = pd.DataFrame(raw_data)
-            if df.empty:
-                return pd.DataFrame(columns=["Date", col_name])
-
-            df["Date"] = pd.to_datetime(df["Data_Hora_Medicao"]).dt.date
-            df["Date"] = pd.to_datetime(df["Date"])
-
-            if variable == "discharge":
-                val_col = "Vazao_Adotada"
-                df[col_name] = pd.to_numeric(df[val_col], errors='coerce')
-            elif variable == "stage":
-                val_col = "Cota_Adotada"
-                # Convert cm to m
-                df[col_name] = pd.to_numeric(df[val_col], errors='coerce') / 100.0
-            else:
-                return pd.DataFrame(columns=["Date", col_name])
-
-            df = df[["Date", col_name]].dropna()
-            df = df.groupby("Date").mean().reset_index() # Ensure daily average
-            return df.sort_values(by="Date").reset_index(drop=True)
-
-        except Exception as e:
-            logger.error(f"Error parsing data for site {gauge_id}: {e}")
-            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
-
     def get_data(
         self,
         gauge_id: str,
@@ -417,13 +385,8 @@ class BrazilFetcher(base.RiverDataFetcher):
             df = self._parse_data(raw_data, variable)
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[
-                (df[constants.TIME_INDEX] >= start_date_dt)
-                & (df[constants.TIME_INDEX] <= end_date_dt)
-            ]
+            df = df[(df[constants.TIME_INDEX] >= start_date_dt) & (df[constants.TIME_INDEX] <= end_date_dt)]
             return df
         except Exception as e:
-            logger.error(
-                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
-            )
+            logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

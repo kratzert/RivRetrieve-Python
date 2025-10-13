@@ -2,8 +2,7 @@ import logging
 
 import matplotlib.pyplot as plt
 
-from rivretrieve import CanadaFetcher
-from rivretrieve import constants
+from rivretrieve import CanadaFetcher, constants
 
 logging.basicConfig(level=logging.INFO)
 
@@ -21,9 +20,7 @@ for gauge_id in gauge_ids:
     if not data.empty:
         print(f"Data for {gauge_id}:")
         print(data.head())
-        print(
-            f"Time series from {data[constants.TIME_INDEX].min()} to {data[constants.TIME_INDEX].max()}"
-        )
+        print(f"Time series from {data[constants.TIME_INDEX].min()} to {data[constants.TIME_INDEX].max()}")
         plt.plot(
             data[constants.TIME_INDEX],
             data[constants.DISCHARGE],

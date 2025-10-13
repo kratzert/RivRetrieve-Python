@@ -1,6 +1,6 @@
 """Setup script for the RivRetrieve package."""
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -29,5 +29,5 @@ setup(
         "Intended Audience :: Science/Research",
         "Topic :: Scientific/Engineering :: Hydrology",
     ],
-    python_requires=">=3.9",
+    python_requires=">=3.11",
 )

@@ -8,7 +8,7 @@ from typing import Any, Dict, Optional
 import pandas as pd
 import requests
 
-from . import base, utils, constants
+from . import base, constants, utils
 
 logger = logging.getLogger(__name__)
 
@@ -46,9 +46,7 @@ class AustraliaFetcher(base.RiverDataFetcher):
             logger.error(f"BoM API request failed for params {params}: {e}")
             raise
         except json.JSONDecodeError as e:
-            logger.error(
-                f"BoM API JSON decode failed for params {params}: {e}\nResponse: {response.text}"
-            )
+            logger.error(f"BoM API JSON decode failed for params {params}: {e}\nResponse: {response.text}")
             raise
 
     def _get_timeseries_id(self, gauge_id: str, variable: str) -> Optional[str]:
@@ -81,31 +79,19 @@ class AustraliaFetcher(base.RiverDataFetcher):
                 if not df.empty and "ts_id" in df.columns:
                     return df["ts_id"].iloc[0]
                 else:
-                    logger.warning(
-                        f"No ts_id found for site {gauge_id}, variable {variable}"
-                    )
+                    logger.warning(f"No ts_id found for site {gauge_id}, variable {variable}")
                     return None
-            elif (
-                isinstance(json_data, list)
-                and len(json_data) == 1
-                and json_data[0] == "No matches."
-            ):
-                logger.warning(
-                    f"No matches for site {gauge_id}, variable {variable} in getTimeseriesList"
-                )
+            elif isinstance(json_data, list) and len(json_data) == 1 and json_data[0] == "No matches.":
+                logger.warning(f"No matches for site {gauge_id}, variable {variable} in getTimeseriesList")
                 return None
             else:
-                logger.warning(
-                    f"Unexpected response from getTimeseriesList for site {gauge_id}: {json_data}"
-                )
+                logger.warning(f"Unexpected response from getTimeseriesList for site {gauge_id}: {json_data}")
                 return None
         except Exception as e:
             logger.error(f"Error getting timeseries ID for site {gauge_id}: {e}")
             return None
 
-    def _download_data(
-        self, gauge_id: str, variable: str, start_date: str, end_date: str
-    ) -> Optional[str]:
+    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> Optional[str]:
         """Downloads the raw CSV data."""
         ts_id = self._get_timeseries_id(gauge_id, variable)
         if not ts_id:
@@ -128,9 +114,7 @@ class AustraliaFetcher(base.RiverDataFetcher):
             logger.error(f"Error downloading data for ts_id {ts_id}: {e}")
             return None
 
-    def _parse_data(
-        self, gauge_id: str, raw_data: Optional[str], variable: str
-    ) -> pd.DataFrame:
+    def _parse_data(self, gauge_id: str, raw_data: Optional[str], variable: str) -> pd.DataFrame:
         """Parses the raw CSV data."""
         if not raw_data:
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
@@ -187,7 +171,5 @@ class AustraliaFetcher(base.RiverDataFetcher):
             df = self._parse_data(gauge_id, raw_data, variable)
             return df
         except Exception as e:
-            logger.error(
-                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
-            )
+            logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
