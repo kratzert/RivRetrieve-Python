@@ -1,0 +1,2 @@
+[tool.ruff.lint.per-file-ignores]
+"rivretrieve/__init__.py" = ["F401"]
