@@ -1,0 +1,424 @@
+{
+  "meta": {
+    "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified/readings?mineq-date=2024-01-01&maxeq-date=2024-01-31&_limit=2000000",
+    "publisher": "Environment Agency",
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "licenseName": "OGL 3",
+    "comment": "Hydrology API for sub-daily data",
+    "version": "2.0.0",
+    "hasFormat": [
+      "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified/readings.html?_limit=2000000&maxeq-date=2024-01-31&mineq-date=2024-01-01",
+      "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified/readings.ttl?_limit=2000000&maxeq-date=2024-01-31&mineq-date=2024-01-01",
+      "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified/readings.rdf?_limit=2000000&maxeq-date=2024-01-31&mineq-date=2024-01-01",
+      "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified/readings.json?_limit=2000000&maxeq-date=2024-01-31&mineq-date=2024-01-01",
+      "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified/readings.csv?_limit=2000000&maxeq-date=2024-01-31&mineq-date=2024-01-01",
+      "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified/readings.geojson?_limit=2000000&maxeq-date=2024-01-31&mineq-date=2024-01-01"
+    ],
+    "limit": 2000000
+  },
+  "items": [
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-01",
+      "dateTime": "2024-01-01T09:00:00",
+      "value": 72.777,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-02",
+      "dateTime": "2024-01-02T09:00:00",
+      "value": 99.138,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-03",
+      "dateTime": "2024-01-03T09:00:00",
+      "value": 68.02,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-04",
+      "dateTime": "2024-01-04T09:00:00",
+      "value": 49.082,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-05",
+      "dateTime": "2024-01-05T09:00:00",
+      "value": 38.935,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-06",
+      "dateTime": "2024-01-06T09:00:00",
+      "value": 24.031,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-07",
+      "dateTime": "2024-01-07T09:00:00",
+      "value": 18.515,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-08",
+      "dateTime": "2024-01-08T09:00:00",
+      "value": 14.996,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-09",
+      "dateTime": "2024-01-09T09:00:00",
+      "value": 12.531,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-10",
+      "dateTime": "2024-01-10T09:00:00",
+      "value": 10.902,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-11",
+      "dateTime": "2024-01-11T09:00:00",
+      "value": 9.369,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-12",
+      "dateTime": "2024-01-12T09:00:00",
+      "value": 8.354,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-13",
+      "dateTime": "2024-01-13T09:00:00",
+      "value": 7.561,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-14",
+      "dateTime": "2024-01-14T09:00:00",
+      "value": 6.86,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-15",
+      "dateTime": "2024-01-15T09:00:00",
+      "value": 6.203,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-16",
+      "dateTime": "2024-01-16T09:00:00",
+      "value": 5.665,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-17",
+      "dateTime": "2024-01-17T09:00:00",
+      "value": 5.292,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-18",
+      "dateTime": "2024-01-18T09:00:00",
+      "value": 4.438,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-19",
+      "dateTime": "2024-01-19T09:00:00",
+      "value": 4.002,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-20",
+      "dateTime": "2024-01-20T09:00:00",
+      "value": 5.651,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-21",
+      "dateTime": "2024-01-21T09:00:00",
+      "value": 29.9,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-22",
+      "dateTime": "2024-01-22T09:00:00",
+      "value": 22.715,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-23",
+      "dateTime": "2024-01-23T09:00:00",
+      "value": 17.421,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-24",
+      "dateTime": "2024-01-24T09:00:00",
+      "value": 13.062,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-25",
+      "dateTime": "2024-01-25T09:00:00",
+      "value": 15.861,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-26",
+      "dateTime": "2024-01-26T09:00:00",
+      "value": 16.366,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-27",
+      "dateTime": "2024-01-27T09:00:00",
+      "value": 11.684,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-28",
+      "dateTime": "2024-01-28T09:00:00",
+      "value": 10.551,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-29",
+      "dateTime": "2024-01-29T09:00:00",
+      "value": 9.56,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-30",
+      "dateTime": "2024-01-30T09:00:00",
+      "value": 8.143,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    },
+    {
+      "measure": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified"
+      },
+      "date": "2024-01-31",
+      "dateTime": "2024-01-31T09:00:00",
+      "value": 7.57,
+      "valid": "10000",
+      "invalid": "0",
+      "missing": "0",
+      "completeness": "Complete",
+      "quality": "Good"
+    }
+  ]
+}

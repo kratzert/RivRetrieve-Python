@@ -1,0 +1,254 @@
+{
+  "meta": {
+    "@id": "http://environment.data.gov.uk/hydrology/id/measures?station=3c5cba29-2321-4289-a1fd-c355e135f4cb",
+    "publisher": "Environment Agency",
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "licenseName": "OGL 3",
+    "comment": "Hydrology API for sub-daily data",
+    "version": "2.0.0",
+    "hasFormat": [
+      "http://environment.data.gov.uk/hydrology/id/measures.html?station=3c5cba29-2321-4289-a1fd-c355e135f4cb",
+      "http://environment.data.gov.uk/hydrology/id/measures.json?station=3c5cba29-2321-4289-a1fd-c355e135f4cb",
+      "http://environment.data.gov.uk/hydrology/id/measures.csv?station=3c5cba29-2321-4289-a1fd-c355e135f4cb",
+      "http://environment.data.gov.uk/hydrology/id/measures.geojson?station=3c5cba29-2321-4289-a1fd-c355e135f4cb",
+      "http://environment.data.gov.uk/hydrology/id/measures.ttl?station=3c5cba29-2321-4289-a1fd-c355e135f4cb",
+      "http://environment.data.gov.uk/hydrology/id/measures.rdf?station=3c5cba29-2321-4289-a1fd-c355e135f4cb"
+    ]
+  },
+  "items": [
+    {
+      "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-i-900-m3s-qualified",
+      "label": "15min Flow (m3/s) time series for Polson Bridge",
+      "parameter": "flow",
+      "parameterName": "Flow",
+      "notation": "3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-i-900-m3s-qualified",
+      "period": 900,
+      "periodName": "15min",
+      "hasTelemetry": true,
+      "valueType": "instantaneous",
+      "valueStatistic": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/instantaneous",
+        "label": "instantaneous"
+      },
+      "observationType": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/Qualified",
+        "label": "Qualified"
+      },
+      "observedProperty": {
+        "@id": "http://environment.data.gov.uk/reference/def/op/waterFlow",
+        "label": "Water Flow"
+      },
+      "station": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/stations/3c5cba29-2321-4289-a1fd-c355e135f4cb",
+        "label": "Polson Bridge",
+        "wiskiID": "SX38F080",
+        "stationReference": "47115",
+        "RLOIid": "3203"
+      },
+      "unit": {
+        "@id": "http://qudt.org/1.1/vocab/unit#CubicMeterPerSecond"
+      },
+      "unitName": "m3/s"
+    },
+    {
+      "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-min-86400-m3s-qualified",
+      "label": "Daily min Flow (m3/s) time series for Polson Bridge",
+      "parameter": "flow",
+      "parameterName": "Flow",
+      "notation": "3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-min-86400-m3s-qualified",
+      "period": 86400,
+      "periodName": "daily",
+      "valueType": "min",
+      "valueStatistic": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/minimum",
+        "label": "minimum"
+      },
+      "observationType": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/Qualified",
+        "label": "Qualified"
+      },
+      "observedProperty": {
+        "@id": "http://environment.data.gov.uk/reference/def/op/waterFlow",
+        "label": "Water Flow"
+      },
+      "station": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/stations/3c5cba29-2321-4289-a1fd-c355e135f4cb",
+        "label": "Polson Bridge",
+        "wiskiID": "SX38F080",
+        "stationReference": "47115",
+        "RLOIid": "3203"
+      },
+      "unit": {
+        "@id": "http://qudt.org/1.1/vocab/unit#CubicMeterPerSecond"
+      },
+      "unitName": "m3/s"
+    },
+    {
+      "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-max-86400-m3s-qualified",
+      "label": "Daily max Flow (m3/s) time series for Polson Bridge",
+      "parameter": "flow",
+      "parameterName": "Flow",
+      "notation": "3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-max-86400-m3s-qualified",
+      "period": 86400,
+      "periodName": "daily",
+      "valueType": "max",
+      "valueStatistic": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/maximum",
+        "label": "maximum"
+      },
+      "observationType": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/Qualified",
+        "label": "Qualified"
+      },
+      "observedProperty": {
+        "@id": "http://environment.data.gov.uk/reference/def/op/waterFlow",
+        "label": "Water Flow"
+      },
+      "station": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/stations/3c5cba29-2321-4289-a1fd-c355e135f4cb",
+        "label": "Polson Bridge",
+        "wiskiID": "SX38F080",
+        "stationReference": "47115",
+        "RLOIid": "3203"
+      },
+      "unit": {
+        "@id": "http://qudt.org/1.1/vocab/unit#CubicMeterPerSecond"
+      },
+      "unitName": "m3/s"
+    },
+    {
+      "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified",
+      "label": "Daily mean Flow (m3/s) time series for Polson Bridge",
+      "parameter": "flow",
+      "parameterName": "Flow",
+      "notation": "3c5cba29-2321-4289-a1fd-c355e135f4cb-flow-m-86400-m3s-qualified",
+      "period": 86400,
+      "periodName": "daily",
+      "valueType": "mean",
+      "valueStatistic": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/mean",
+        "label": "mean"
+      },
+      "observationType": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/Qualified",
+        "label": "Qualified"
+      },
+      "observedProperty": {
+        "@id": "http://environment.data.gov.uk/reference/def/op/waterFlow",
+        "label": "Water Flow"
+      },
+      "station": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/stations/3c5cba29-2321-4289-a1fd-c355e135f4cb",
+        "label": "Polson Bridge",
+        "wiskiID": "SX38F080",
+        "stationReference": "47115",
+        "RLOIid": "3203"
+      },
+      "unit": {
+        "@id": "http://qudt.org/1.1/vocab/unit#CubicMeterPerSecond"
+      },
+      "unitName": "m3/s"
+    },
+    {
+      "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-level-i-900-m-qualified",
+      "label": "15min Level (m) time series for Polson Bridge",
+      "parameter": "level",
+      "parameterName": "Level",
+      "notation": "3c5cba29-2321-4289-a1fd-c355e135f4cb-level-i-900-m-qualified",
+      "period": 900,
+      "periodName": "15min",
+      "hasTelemetry": true,
+      "valueType": "instantaneous",
+      "valueStatistic": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/instantaneous",
+        "label": "instantaneous"
+      },
+      "observationType": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/Qualified",
+        "label": "Qualified"
+      },
+      "observedProperty": {
+        "@id": "http://environment.data.gov.uk/reference/def/op/waterLevel",
+        "label": "Water level"
+      },
+      "timeseriesID": "B76127AA-E74D-412E-82CD-B3A75ABDC3F3",
+      "station": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/stations/3c5cba29-2321-4289-a1fd-c355e135f4cb",
+        "label": "Polson Bridge",
+        "wiskiID": "SX38F080",
+        "stationReference": "47115",
+        "RLOIid": "3203"
+      },
+      "unit": {
+        "@id": "http://qudt.org/1.1/vocab/unit#Meter"
+      },
+      "unitName": "m"
+    },
+    {
+      "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-level-max-86400-m-qualified",
+      "label": "Daily max Level (m) time series for Polson Bridge",
+      "parameter": "level",
+      "parameterName": "Level",
+      "notation": "3c5cba29-2321-4289-a1fd-c355e135f4cb-level-max-86400-m-qualified",
+      "period": 86400,
+      "periodName": "daily",
+      "valueType": "max",
+      "valueStatistic": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/maximum",
+        "label": "maximum"
+      },
+      "observationType": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/Qualified",
+        "label": "Qualified"
+      },
+      "observedProperty": {
+        "@id": "http://environment.data.gov.uk/reference/def/op/waterLevel",
+        "label": "Water level"
+      },
+      "station": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/stations/3c5cba29-2321-4289-a1fd-c355e135f4cb",
+        "label": "Polson Bridge",
+        "wiskiID": "SX38F080",
+        "stationReference": "47115",
+        "RLOIid": "3203"
+      },
+      "unit": {
+        "@id": "http://qudt.org/1.1/vocab/unit#Meter"
+      },
+      "unitName": "m"
+    },
+    {
+      "@id": "http://environment.data.gov.uk/hydrology/id/measures/3c5cba29-2321-4289-a1fd-c355e135f4cb-level-min-86400-m-qualified",
+      "label": "Daily min Level (m) time series for Polson Bridge",
+      "parameter": "level",
+      "parameterName": "Level",
+      "notation": "3c5cba29-2321-4289-a1fd-c355e135f4cb-level-min-86400-m-qualified",
+      "period": 86400,
+      "periodName": "daily",
+      "valueType": "min",
+      "valueStatistic": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/minimum",
+        "label": "minimum"
+      },
+      "observationType": {
+        "@id": "http://environment.data.gov.uk/reference/def/core/Qualified",
+        "label": "Qualified"
+      },
+      "observedProperty": {
+        "@id": "http://environment.data.gov.uk/reference/def/op/waterLevel",
+        "label": "Water level"
+      },
+      "station": {
+        "@id": "http://environment.data.gov.uk/hydrology/id/stations/3c5cba29-2321-4289-a1fd-c355e135f4cb",
+        "label": "Polson Bridge",
+        "wiskiID": "SX38F080",
+        "stationReference": "47115",
+        "RLOIid": "3203"
+      },
+      "unit": {
+        "@id": "http://qudt.org/1.1/vocab/unit#Meter"
+      },
+      "unitName": "m"
+    }
+  ]
+}

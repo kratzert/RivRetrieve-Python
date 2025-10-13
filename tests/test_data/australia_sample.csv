@@ -1,0 +1,15 @@
+#ts_id;283597010
+#station_name;SUNDAY @ TALLAROOK
+#station_latitude;-37.09895462
+#station_longitude;145.0561441
+#parametertype_name;Water Course Discharge
+#ts_name;DMQaQc.Merged.DailyMean.24HR
+#ts_unitname;cubic meter per second
+#ts_unitsymbol;cumec
+#station_no;405212
+#station_id;2871055
+#rows;10
+#Timestamp;Value;Quality Code;Interpolation Type
+2010-01-01T00:00:00.000+10:00;0.000;10;603
+2010-01-02T00:00:00.000+10:00;3.710;10;603
+2010-01-03T00:00:00.000+10:00;3.211;10;603
