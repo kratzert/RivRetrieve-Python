@@ -1,12 +1,12 @@
+import os
 import unittest
+from pathlib import Path
 from unittest.mock import patch
+
 import pandas as pd
 from pandas.testing import assert_frame_equal
-import os
-from pathlib import Path
 
-from rivretrieve import CanadaFetcher
-from rivretrieve import constants
+from rivretrieve import CanadaFetcher, constants
 
 
 class TestCanadaFetcher(unittest.TestCase):

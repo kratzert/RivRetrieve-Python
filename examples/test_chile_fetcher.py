@@ -2,8 +2,7 @@ import logging
 
 import matplotlib.pyplot as plt
 
-from rivretrieve import ChileFetcher
-from rivretrieve import constants
+from rivretrieve import ChileFetcher, constants
 
 logging.basicConfig(level=logging.INFO)
 

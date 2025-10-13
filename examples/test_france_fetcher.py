@@ -2,8 +2,7 @@ import logging
 
 import matplotlib.pyplot as plt
 
-from rivretrieve import FranceFetcher
-from rivretrieve import constants
+from rivretrieve import FranceFetcher, constants
 
 logging.basicConfig(level=logging.INFO)
 

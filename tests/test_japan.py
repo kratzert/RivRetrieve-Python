@@ -1,11 +1,11 @@
+import os
 import unittest
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock, patch
+
 import pandas as pd
 from pandas.testing import assert_frame_equal
-import os
 
-from rivretrieve import JapanFetcher
-from rivretrieve import constants
+from rivretrieve import JapanFetcher, constants
 
 
 class TestJapanFetcher(unittest.TestCase):

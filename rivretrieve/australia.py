@@ -8,7 +8,7 @@ from typing import Any, Dict, Optional
 import pandas as pd
 import requests
 
-from . import base, utils, constants
+from . import base, constants, utils
 
 logger = logging.getLogger(__name__)
 

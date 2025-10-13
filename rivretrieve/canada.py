@@ -14,7 +14,7 @@ from typing import Any, Optional
 import pandas as pd
 from bs4 import BeautifulSoup
 
-from . import base, utils, constants
+from . import base, constants, utils
 
 logger = logging.getLogger(__name__)
 

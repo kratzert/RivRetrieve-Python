@@ -1,13 +1,13 @@
+import json
+import os
 import unittest
-from unittest.mock import patch, MagicMock
+from pathlib import Path
+from unittest.mock import MagicMock, patch
+
 import pandas as pd
 from pandas.testing import assert_frame_equal
-import os
-import json
-from pathlib import Path
 
-from rivretrieve import UKFetcher
-from rivretrieve import constants
+from rivretrieve import UKFetcher, constants
 
 
 class TestUKFetcher(unittest.TestCase):

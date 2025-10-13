@@ -1,12 +1,12 @@
+import json
+import os
 import unittest
 from unittest.mock import patch
+
 import pandas as pd
 from pandas.testing import assert_frame_equal
-import os
-import json
 
-from rivretrieve import AustraliaFetcher
-from rivretrieve import constants
+from rivretrieve import AustraliaFetcher, constants
 
 
 class TestAustraliaFetcher(unittest.TestCase):

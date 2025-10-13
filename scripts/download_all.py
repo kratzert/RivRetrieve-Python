@@ -1,13 +1,13 @@
 """Downloads all available streamflow data from all sites in all countries."""
 
-import os
-import importlib
-import pkgutil
+import argparse
 import concurrent.futures
+import importlib
 import logging
+import os
+import pkgutil
 import random
 import sys
-import argparse
 
 # Add rivretrieve to path
 sys.path.append(os.path.join(os.path.dirname(__file__), "rivretrieve"))

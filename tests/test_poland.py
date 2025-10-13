@@ -1,17 +1,15 @@
-import unittest
-from unittest.mock import patch, MagicMock
-import pandas as pd
-from pandas.testing import assert_frame_equal
 import os
-from pathlib import Path
-import xarray as xr
-import shutil
-import requests  # Import requests
-import zipfile
 import tempfile
+import unittest
+import zipfile
+from pathlib import Path
+from unittest.mock import MagicMock, patch
 
-from rivretrieve import PolandFetcher
-from rivretrieve import constants
+import pandas as pd
+import requests
+from pandas.testing import assert_frame_equal
+
+from rivretrieve import PolandFetcher, constants
 
 
 class TestPolandFetcher(unittest.TestCase):
@@ -24,9 +22,9 @@ class TestPolandFetcher(unittest.TestCase):
             raise FileNotFoundError(f"Test zip file not found at {self.test_zip_file}.")
 
         self.temp_dir = tempfile.TemporaryDirectory()
-        with zipfile.ZipFile(self.test_zip_file, 'r') as zip_ref:
+        with zipfile.ZipFile(self.test_zip_file, "r") as zip_ref:
             zip_ref.extractall(self.temp_dir.name)
-        
+
         self.test_cache_file = Path(self.temp_dir.name) / "poland_test.zarr"
 
     def tearDown(self):

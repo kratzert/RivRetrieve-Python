@@ -6,8 +6,8 @@ import re
 import tempfile
 import zipfile
 from datetime import datetime
-from typing import List, Optional
 from pathlib import Path
+from typing import List, Optional
 
 import pandas as pd
 import requests

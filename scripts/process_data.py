@@ -1,10 +1,11 @@
 """Reads all downloaded CSV files, converts them to xarray Datasets, and concatenates them."""
 
-import os
 import glob
+import logging
+import os
+
 import pandas as pd
 import xarray as xr
-import logging
 from tqdm import tqdm
 
 from rivretrieve import constants

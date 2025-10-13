@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 
-from rivretrieve import UKFetcher
-from rivretrieve import constants
+from rivretrieve import UKFetcher, constants
 
 gauge_ids = [
     "http://environment.data.gov.uk/hydrology/id/stations/3c5cba29-2321-4289-a1fd-c355e135f4cb",

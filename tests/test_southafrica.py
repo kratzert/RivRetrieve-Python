@@ -1,10 +1,9 @@
-import unittest
-from unittest.mock import patch, MagicMock
 import os
+import unittest
 from pathlib import Path
+from unittest.mock import MagicMock, patch
 
-from rivretrieve import SouthAfricaFetcher
-from rivretrieve import constants
+from rivretrieve import SouthAfricaFetcher, constants
 
 
 class TestSouthAfricaFetcher(unittest.TestCase):

@@ -2,8 +2,7 @@ import logging
 
 import matplotlib.pyplot as plt
 
-from rivretrieve import JapanFetcher
-from rivretrieve import constants
+from rivretrieve import JapanFetcher, constants
 
 logging.basicConfig(level=logging.INFO)
 

@@ -1,12 +1,12 @@
+import os
 import unittest
-from unittest.mock import patch, MagicMock
+from pathlib import Path
+from unittest.mock import MagicMock, patch
+
 import pandas as pd
 from pandas.testing import assert_frame_equal
-import os
-from pathlib import Path
 
-from rivretrieve import SloveniaFetcher
-from rivretrieve import constants
+from rivretrieve import SloveniaFetcher, constants
 
 
 class TestSloveniaFetcher(unittest.TestCase):
