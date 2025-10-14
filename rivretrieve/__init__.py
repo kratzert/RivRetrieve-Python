@@ -11,6 +11,7 @@ from .poland import PolandFetcher
 from .slovenia import SloveniaFetcher
 from .southafrica import SouthAfricaFetcher
 from .uk import UKFetcher
+from .uk_nrfa import UKNRFAFetcher
 from .usa import USAFetcher
 
 __version__ = "0.1.0"
