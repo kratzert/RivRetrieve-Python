@@ -48,7 +48,6 @@ class TestUKNRFAFetcher(unittest.TestCase):
 
         # Check for renamed columns
         self.assertIn(constants.STATION_NAME, result_df.columns)
-        self.assertIn(constants.LOCATION, result_df.columns)
         self.assertIn(constants.AREA, result_df.columns)
         self.assertIn(constants.LATITUDE, result_df.columns)
         self.assertIn(constants.LONGITUDE, result_df.columns)
@@ -62,7 +61,6 @@ class TestUKNRFAFetcher(unittest.TestCase):
 
         station_1001 = result_df.loc["1001"]
         self.assertEqual(station_1001[constants.STATION_NAME], "Wick at Tarroul")
-        self.assertEqual(station_1001[constants.LOCATION], "Tarroul")
         self.assertEqual(station_1001[constants.AREA], 161.9)
         self.assertEqual(station_1001[constants.RIVER], "Wick")
         self.assertEqual(station_1001[constants.ALTITUDE], 78.8)

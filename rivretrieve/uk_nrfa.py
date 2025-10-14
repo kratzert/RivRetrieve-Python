@@ -19,7 +19,6 @@ class UKNRFAFetcher(base.RiverDataFetcher):
 
     METADATA_TRANSLATION_MAPPING = {
         "name": constants.STATION_NAME,
-        "location": constants.LOCATION,
         "catchment-area": constants.AREA,
         "latitude": constants.LATITUDE,
         "longitude": constants.LONGITUDE,
