@@ -1,0 +1,30 @@
+{
+  "count": 3,
+  "first": "https://example.com/page1",
+  "prev": null,
+  "next": null,
+  "api_version": "2.0.1",
+  "data": [
+    {
+      "code_site": "Y1220010",
+      "code_station": "Y1220010",
+      "grandeur_hydro_elab": "QmnJ",
+      "date_obs_elab": "2023-01-01",
+      "resultat_obs_elab": 15000.5
+    },
+    {
+      "code_site": "Y1220010",
+      "code_station": "Y1220010",
+      "grandeur_hydro_elab": "QmnJ",
+      "date_obs_elab": "2023-01-02",
+      "resultat_obs_elab": 16000.0
+    },
+    {
+      "code_site": "Y1220010",
+      "code_station": "Y1220010",
+      "grandeur_hydro_elab": "QmnJ",
+      "date_obs_elab": "2023-01-03",
+      "resultat_obs_elab": 15500.2
+    }
+  ]
+}

@@ -62,9 +62,7 @@ class RiverDataFetcher(abc.ABC):
         pass
 
     @abc.abstractmethod
-    def _download_data(
-        self, gauge_id: str, variable: str, start_date: str, end_date: str
-    ) -> any:
+    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> any:
         """Downloads the raw data from the source.
 
         Args:

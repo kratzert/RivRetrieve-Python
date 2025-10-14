@@ -1,10 +1,11 @@
 """Reads all downloaded CSV files, converts them to xarray Datasets, and concatenates them."""
 
-import os
 import glob
+import logging
+import os
+
 import pandas as pd
 import xarray as xr
-import logging
 from tqdm import tqdm
 
 from rivretrieve import constants
@@ -17,9 +18,7 @@ COMMON_END_DATE = "2025-10-06"
 DATE_RANGE = pd.date_range(start=COMMON_START_DATE, end=COMMON_END_DATE, freq="D")
 
 # Setup logging
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 
 def process_csv_to_xarray(file_path):
@@ -39,10 +38,7 @@ def process_csv_to_xarray(file_path):
 
         df = pd.read_csv(file_path)
 
-        if (
-            constants.TIME_INDEX not in df.columns
-            or constants.DISCHARGE not in df.columns
-        ):
+        if constants.TIME_INDEX not in df.columns or constants.DISCHARGE not in df.columns:
             logging.warning(
                 f"Skipping {file_path}: Missing '{constants.TIME_INDEX}' or '{constants.DISCHARGE}' column."
             )

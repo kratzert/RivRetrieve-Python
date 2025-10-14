@@ -8,5 +8,4 @@ downloaded_data/
 rivretrieve/data
 
 **/*.pyc
-**/*.sqlite3
 **/*.png

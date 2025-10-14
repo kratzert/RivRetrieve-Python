@@ -10,7 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 from dateutil.relativedelta import relativedelta
 
-from . import base, utils, constants
+from . import base, constants, utils
 
 logger = logging.getLogger(__name__)
 
@@ -84,18 +84,12 @@ class JapanFetcher(base.RiverDataFetcher):
                     df = pd.read_html(io.StringIO(str(table)), header=None)[0]
                     monthly_data.append(df)
                 else:
-                    logger.warning(
-                        f"No table found for site {gauge_id} for {current_dt.strftime('%Y-%m')}"
-                    )
+                    logger.warning(f"No table found for site {gauge_id} for {current_dt.strftime('%Y-%m')}")
 
             except requests.exceptions.RequestException as e:
-                logger.error(
-                    f"Error fetching data for site {gauge_id} for {current_dt.strftime('%Y-%m')}: {e}"
-                )
+                logger.error(f"Error fetching data for site {gauge_id} for {current_dt.strftime('%Y-%m')}: {e}")
             except Exception as e:
-                logger.error(
-                    f"Error processing data for site {gauge_id} for {current_dt.strftime('%Y-%m')}: {e}"
-                )
+                logger.error(f"Error processing data for site {gauge_id} for {current_dt.strftime('%Y-%m')}: {e}")
 
             current_dt += relativedelta(months=1)
 
@@ -124,9 +118,7 @@ class JapanFetcher(base.RiverDataFetcher):
             # Columns: Date, 0h, 1h, ..., 12h, ..., 23h
             # We need Date (index 0) and the value at 12h (index 12)
             if data_df.shape[1] < 13:
-                logger.warning(
-                    f"Unexpected table structure for site {gauge_id}, skipping month."
-                )
+                logger.warning(f"Unexpected table structure for site {gauge_id}, skipping month.")
                 continue
 
             data_df = data_df.iloc[:, [0, 12]]
@@ -167,21 +159,14 @@ class JapanFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
         try:
-            raw_data_list = self._download_data(
-                gauge_id, variable, start_date, end_date
-            )
+            raw_data_list = self._download_data(gauge_id, variable, start_date, end_date)
             df = self._parse_data(gauge_id, raw_data_list, variable)
 
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[
-                (df[constants.TIME_INDEX] >= start_date_dt)
-                & (df[constants.TIME_INDEX] <= end_date_dt)
-            ]
+            df = df[(df[constants.TIME_INDEX] >= start_date_dt) & (df[constants.TIME_INDEX] <= end_date_dt)]
             return df
 
         except Exception as e:
-            logger.error(
-                f"Failed to get data for site {gauge_id}, variable {variable}: {e}"
-            )
+            logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

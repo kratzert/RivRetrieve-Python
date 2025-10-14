@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 
-from rivretrieve import UKFetcher
-from rivretrieve import constants
+from rivretrieve import UKFetcher, constants
 
 gauge_ids = [
     "http://environment.data.gov.uk/hydrology/id/stations/3c5cba29-2321-4289-a1fd-c355e135f4cb",
@@ -15,9 +14,7 @@ plt.figure(figsize=(12, 6))
 fetcher = UKFetcher()
 for gauge_id in gauge_ids:
     print(f"Fetching data for {gauge_id}...")
-    data = fetcher.get_data(
-        gauge_id=gauge_id, variable=variable, start_date=start_date, end_date=end_date
-    )
+    data = fetcher.get_data(gauge_id=gauge_id, variable=variable, start_date=start_date, end_date=end_date)
     if not data.empty:
         print(f"Data for {gauge_id}:")
         print(data.head())
