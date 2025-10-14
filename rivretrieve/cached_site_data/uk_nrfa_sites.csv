@@ -1,0 +1,1602 @@
+gauge_id,gauge_name,river,longitude,latitude,area
+1001,Tarroul,Wick,-3.26706,58.4762,161.9
+2001,Kilphedir,Helmsdale,-3.70295,58.141,551.4
+2002,Bruachrobie,Brora,-3.87757,58.01056,434.4
+3001,Lairg,Shin,-4.40405,58.02222,494.6
+3002,Sgodachail,Carron,-4.54668,57.89321,241.1
+3003,Easter Turnaig,Oykel,-4.70086,57.96185,330.7
+3004,Rosehall,Cassley,-4.58615,57.9821,187.79
+3005,Inveran,Shin,-4.41038,57.94319,575.0
+3006,Loch Ailsh,Loch Ailsh,-4.85531,58.04828,44.34
+4001,Moy Bridge,Conon,-4.53997,57.55658,961.8
+4003,Alness,Alness,-4.25876,57.69601,201.0
+4004,Contin,Blackwater,-4.5846,57.5702,336.7
+4005,Glenmeanie,Meig,-4.86377,57.53261,120.5
+4006,Dosmucheran,Bran,-5.00577,57.59587,116.1
+4007,Garve,Blackwater,-4.68803,57.6167,289.0
+4008,Newhall Bridge,Newhall Burn,-4.17663,57.65782,41.0
+4009,Strathpeffer STW,Peffery,-4.52304,57.59298,17.3
+4010,Loch Beannacharain,Meig,-4.95928,57.5218,70.92
+4011,Corrievuic,Meig,-5.00188,57.5135,58.36
+5001,Erchless,Beauly,-4.62312,57.42749,849.5
+5002,Struy,Farrar,-4.6824,57.4257,311.3
+5003,Kerrow Wood,Glass,-4.73643,57.34938,481.8
+5004,Fasnakyle,Glass,-4.79927,57.31811,277.5
+6001,Ness Castle Farm,Ness,-4.26899,57.43886,1792.3
+6003,Invermoriston,Moriston,-4.62461,57.21538,391.0
+6006,Invermoriston,Allt Bhlaraidh,-4.68904,57.21311,27.5
+6007,Ness-side,Ness,-4.25985,57.45454,1839.1
+6008,Mill of Tore,Enrick,-4.57583,57.3339,105.9
+6009,Levishie,Moriston,-4.64783,57.22004,403.1
+6011,Ardachy Bridge,Tarff,-4.6782,57.12952,75.9
+6012,White Bridge,Enrick,-4.67308,57.3335,56.2
+6013,Dirriebught House,Mill Burn,-4.20715,57.47804,9.22
+7001,Shenachie,Findhorn,-3.95482,57.37717,415.6
+7002,Forres,Findhorn,-3.64408,57.60477,781.9
+7003,Sheriffmills,Lossie,-3.35193,57.64637,216.0
+7004,Firhall,Nairn,-3.87026,57.57173,313.0
+7005,Dunphail,Divie,-3.66179,57.51151,165.0
+7006,Torwinny,Lossie,-3.44684,57.52198,20.0
+7007,Monaughty,Black Burn,-3.41616,57.60558,44.0
+7008,Balnafoich,Nairn,-4.18825,57.38787,128.1
+7009,Wardend Bridge,Mosset Burn,-3.60834,57.58239,28.3
+7010,Brodie,Muckle Burn,-3.70888,57.59245,80.68
+7011,Pluscarden Abbey,Black Burn,-3.43317,57.59946,36.37
+7012,Ballachraggan,Lossie,-3.45157,57.52824,31.6
+8001,Aberlour,Spey,-3.20598,57.48022,2654.7
+8002,Kinrara,Spey,-3.85127,57.151,1011.7
+8003,Ruthven Bridge,Spey,-4.0485,57.07065,533.8
+8004,Delnashaugh,Avon,-3.35705,57.39985,542.8
+8005,Boat of Garten,Spey,-3.74703,57.25139,1267.8
+8006,Boat o Brig,Spey,-3.14039,57.55104,2861.2
+8007,Invertruim,Spey,-4.16449,57.04017,400.4
+8008,Tromie Bridge,Tromie,-3.99864,57.07172,130.3
+8009,Balnaan Bridge,Dulnain,-3.69912,57.30196,272.2
+8010,Grantown,Spey,-3.60767,57.32133,1748.8
+8011,Minmore,Livet,-3.32822,57.34451,104.0
+8013,Feshie Bridge,Feshie,-3.90108,57.1189,231.0
+8015,Auchindoun,Fiddich,-3.07628,57.44526,44.5
+8016,Auchriachan,Conglass Water,-3.36828,57.2553,40.8
+8017,Dailuaine,Burn of Carron,-3.27366,57.45775,15.2
+8018,Tomintoul,Avon,-3.39092,57.2407,185.0
+8021,Forest Lodge,Nethy,-3.62084,57.2244,38.8
+9001,Avochie,Deveron,-2.78238,57.50565,441.6
+9002,Muiresk,Deveron,-2.49353,57.53767,954.9
+9003,Grange,Isla,-2.84778,57.5428,176.1
+9004,Redcraig,Bogie,-2.80202,57.42476,179.0
+9005,Cabrach,Allt Deveron,-3.03457,57.34816,67.0
+9006,Cullen,Deskford Burn,-2.83323,57.68712,46.5
+9007,Inverkeithny,Forgue Burn,-2.62397,57.51134,88.3
+9008,Scotsmill,Burn of Boyne,-2.6597,57.67377,53.0
+9009,Turriff,Idoch Water,-2.46141,57.53371,95.0
+9010,Huntly,Deveron,-2.80756,57.45499,225.49
+10001,Ardlethen,Ythan,-2.1274,57.36861,448.1
+10002,Inverugie,Ugie,-1.83279,57.52669,325.0
+10003,Ellon,Ythan,-2.09002,57.36377,523.0
+11001,Parkhill,Don,-2.18759,57.21832,1273.0
+11002,Haughton,Don,-2.40496,57.27135,787.0
+11003,Bridge of Alford,Don,-2.71712,57.2423,499.0
+11004,Pitcaple,Urie,-2.46487,57.32352,198.0
+11005,Mill of Newe,Don,-3.04372,57.19497,187.0
+11006,Culfork,Don,-3.11016,57.18022,103.4
+12001,Woodend,Dee,-2.60357,57.05013,1370.0
+12002,Park,Dee,-2.33583,57.07542,1844.0
+12003,Polhollick,Dee,-3.08318,57.05515,690.0
+12004,Littlemill,Girnock Burn,-3.11829,57.04544,30.3
+12005,Invermuick,Muick,-3.04931,57.03952,110.0
+12006,Invergairn,Gairn,-3.06954,57.05993,150.0
+12007,Mar Lodge,Dee,-3.4862,56.98804,289.0
+12008,Heugh Head,Feugh,-2.51716,57.02525,229.0
+12009,Charr,Water of Dye,-2.6194,56.94085,41.7
+13001,Inverbervie,Bervie,-2.28612,56.85144,123.0
+13002,Luther Bridge,Luther Water,-2.55997,56.79369,138.0
+13003,Stannochy Bridge,South Esk,-2.68193,56.72239,487.0
+13004,Prosen Bridge,Prosen Water,-2.98876,56.7147,104.0
+13005,Kirkton Mill,Lunan Water,-2.56458,56.63545,124.0
+13007,Logie Mill,North Esk,-2.49337,56.76688,732.0
+13008,Brechin,South Esk,-2.6559,56.72692,488.0
+13009,Dalhouse Bridge,West Water,-2.67048,56.80217,127.2
+13010,Arbroath,Brothock Water,-2.58817,56.56723,50.0
+13012,Gella Bridge,South Esk,-3.02793,56.77536,130.64
+13017,Colliston,Colliston Burn,-2.63784,56.61001,8.4
+14001,Kemback,Eden,-2.94844,56.3309,307.4
+14002,Balmossie Mill,Dighty Water,-2.85167,56.48175,126.9
+14005,St Michaels,Motray Water,-2.90811,56.39037,60.0
+14006,Panbride,Monikie Burn,-2.69387,56.51502,16.0
+14007,Craigmill,Craigmill Burn,-2.69047,56.51242,29.0
+14009,Strathmiglo,Eden,-3.25308,56.27758,26.0
+14010,Kilmany,Motray Water,-2.99414,56.38297,33.0
+15001,Forter,Isla,-3.33163,56.76677,70.7
+15002,Newton,Newton Burn,-3.26004,56.72978,15.4
+15003,Caputh,Tay,-3.49294,56.5392,3210.0
+15004,Loch of Lintrathen,Inzion,-3.17706,56.68926,24.7
+15005,Loch of Lintrathen,Melgan,-3.18519,56.68829,40.9
+15006,Ballathie,Tay,-3.38696,56.51441,4587.1
+15007,Pitnacree,Tay,-3.7569,56.66007,1149.4
+15008,Cookston,Dean Water,-3.0763,56.61879,177.1
+15010,Wester Cardean,Isla,-3.15123,56.6059,366.5
+15011,Comrie Bridge,Lyon,-3.98086,56.61423,391.1
+15012,Pitlochry,Tummel,-3.72079,56.69657,1670.0
+15013,Almondbank,Almond,-3.5136,56.41528,174.8
+15014,Kindrogan,Ardle,-3.54493,56.74927,103.0
+15015,Newton Bridge,Almond,-3.79923,56.46115,84.0
+15016,Kenmore,Tay,-3.98506,56.59639,600.9
+15017,Ballinloan,Braan,-3.66198,56.54587,197.0
+15018,Moar,Lyon,-4.38775,56.57218,161.4
+15021,Mill Bank,Lunan Burn,-3.33368,56.54503,94.0
+15023,Hermitage,Braan,-3.6072,56.56098,210.0
+15024,Killin,Dochart,-4.33188,56.45816,239.0
+15025,Craighall,Ericht,-3.34718,56.60906,432.0
+15027,Loakmill,Garry Burn,-3.50409,56.48846,20.0
+15028,Luncarty,Ordie Burn,-3.47764,56.46394,54.0
+15029,Pitcrocknie,Alyth Burn,-3.21214,56.62199,32.0
+15030,Dean Bridge,Dean Water,-3.15307,56.59888,230.0
+15032,Jackstone,Ordie Burn,-3.51223,56.48608,20.0
+15034,Killiecrankie,Garry,-3.7991,56.75025,745.0
+15035,Kinloch Rannoch,Tummel,-4.18347,56.70105,647.0
+15038,Bridge of Gaur,Gaur,-4.45522,56.68019,247.0
+15039,Marble Lodge,Tilt,-3.81654,56.82242,165.0
+15041,Camusvrachan,Lyon,-4.2502,56.60039,237.0
+15046,Loakmill,Garry Burn,-3.50876,56.49161,22.25
+16001,Kinkell Bridge,Earn,-3.72699,56.33019,590.5
+16002,Aberuchill,Earn,-4.01915,56.37078,176.9
+16003,Cultybraggan,Ruchill Water,-4.00144,56.35973,99.5
+16004,Forteviot Bridge,Earn,-3.54836,56.3476,782.2
+16007,Aberuthven,Ruthven Water,-3.65869,56.31968,50.0
+17001,Headswood,Carron,-3.87546,56.015,122.3
+17002,Leven,Leven,-3.01856,56.19333,424.0
+17003,Bonnybridge,Bonny Water,-3.88699,56.00182,50.5
+17004,Balfour Mains,Ore,-3.08157,56.18473,162.0
+17005,Polmonthill,Avon,-3.682,55.99837,195.3
+17008,Kinross,South Queich,-3.42294,56.19854,33.6
+17012,Castlecary,Red Burn,-3.94405,55.97974,22.0
+17015,Lathro,North Queich,-3.42872,56.22132,23.1
+17016,Whinnyhall,Lochty Burn,-3.25743,56.17287,14.0
+17018,Damleys Cottage,Greens Burn,-3.36163,56.22129,10.5
+18001,Kinbuck,Allan Water,-3.94953,56.22556,161.0
+18002,Glenochil,Devon,-3.8393,56.14365,181.0
+18003,Bridge of Teith,Teith,-4.05557,56.18573,517.7
+18005,Bridge of Allan,Allan Water,-3.95637,56.15902,210.0
+18007,Fossoway Bridge,Devon,-3.5943,56.19852,69.5
+18008,Anie,Leny,-4.28541,56.25788,192.41
+18010,Gargunnock,Forth,-4.07057,56.13266,397.0
+18011,Craigforth,Forth,-3.97022,56.1361,1036.0
+18013,Fauld Mill,Black Devon,-3.74867,56.11141,56.2
+18014,Bannockburn,Bannock Burn,-3.91182,56.09528,23.7
+18015,Loch Venachar,Eas Gobhain,-4.25687,56.23426,202.0
+18016,Clashmore,Kelty Water,-4.47068,56.13878,2.7
+18017,Balquhidder,Monachyle Burn,-4.47093,56.37463,7.7
+18018,Balquhidder,Kirkton Burn,-4.37811,56.36656,6.85
+18019,Comer,Comer Burn,-4.60128,56.20275,0.9
+18020,Duchray,Loch Ard Burn,-4.46811,56.1565,0.85
+18021,Elrig,Loch Ard Burn,-4.46563,56.1568,1.45
+18022,Milton,Avon Dhu,-4.41258,56.18112,44.5
+18023,Upper Monachyle,Monachyle Burn,-4.464,56.39274,2.24
+19001,Craigiehall,Almond,-3.33853,55.96313,369.0
+19002,Almond Weir,Almond,-3.59356,55.86887,43.8
+19003,Breich Weir,Breich Water,-3.57762,55.85763,51.8
+19004,Dalmore Weir,North Esk,-3.19591,55.8419,81.6
+19005,Almondell,Almond,-3.46302,55.90182,229.0
+19006,Murrayfield,Water of Leith,-3.23779,55.94563,107.0
+19007,Musselburgh,Esk,-3.06091,55.93942,330.0
+19008,Prestonholm,South Esk,-3.07985,55.84936,112.0
+19009,Cobbinshaw,Bog Burn,-3.55667,55.81566,8.5
+19010,Liberton,Braid Burn,-3.16579,55.92458,16.2
+19011,Dalkeith Palace,North Esk,-3.06945,55.89667,137.0
+19012,Colinton,Water of Leith,-3.26214,55.90576,72.0
+19014,Newliston,Brox Burn,-3.42022,55.94296,34.1
+19017,Turnhouse,Gogar Burn,-3.34512,55.94529,38.8
+19020,Whitburn,Almond,-3.68294,55.87157,30.3
+19021,Cowbridge,South Esk,-3.05955,55.89857,156.0
+20001,East Linton,Tyne,-2.6572,55.9825,307.0
+20002,Luffness,West Peffer Burn,-2.82189,56.02022,26.2
+20003,Spilmersford,Tyne,-2.8715,55.91003,161.0
+20004,Lochhouses,East Peffer Burn,-2.62742,56.03292,31.1
+20005,Saltoun Hall,Birns Water,-2.87039,55.90846,93.0
+20006,Belton House,Biel Water,-2.57095,55.98303,51.8
+20007,Lennoxlove,Gifford Water,-2.7842,55.93585,64.0
+21001,Fruid,Fruid Water,-3.44417,55.4698,23.7
+21002,Hungry Snout,Whiteadder Water,-2.53998,55.8617,45.6
+21003,Peebles,Tweed,-3.18025,55.64801,694.0
+21005,Lyne Ford,Tweed,-3.26315,55.64475,373.0
+21006,Boleside,Tweed,-2.7977,55.59142,1500.0
+21007,Lindean,Ettrick Water,-2.81754,55.57469,499.0
+21008,Ormiston Mill,Teviot,-2.47336,55.54513,1110.0
+21009,Norham,Tweed,-2.16337,55.72269,4390.0
+21010,Dryburgh,Tweed,-2.65472,55.58069,2080.0
+21011,Philiphaugh,Yarrow Water,-2.89034,55.5397,231.0
+21012,Hawick,Teviot,-2.75646,55.43437,323.0
+21013,Galashiels,Gala Water,-2.82846,55.62716,207.0
+21014,Kingledores,Tweed,-3.41395,55.54241,139.0
+21015,Earlston,Leader Water,-2.69291,55.6408,239.0
+21016,Eyemouth Mill,Eye Water,-2.09448,55.86523,119.0
+21017,Brockhoperig,Ettrick Water,-3.21106,55.40628,37.5
+21018,Lyne Station,Lyne Water,-3.25765,55.64738,175.0
+21019,Cademuir,Manor Water,-3.24481,55.61929,61.6
+21020,Gordon Arms,Yarrow Water,-3.09561,55.51167,155.0
+21021,Sprouston,Tweed,-2.39482,55.61161,3330.0
+21022,Hutton Castle,Whiteadder Water,-2.1917,55.78828,503.0
+21023,Coldstream,Leet Water,-2.25612,55.65014,113.0
+21024,Jedburgh,Jed Water,-2.54606,55.4849,139.0
+21025,Ancrum,Ale Water,-2.58084,55.51228,174.0
+21026,Deephope,Tima Water,-3.14162,55.41198,31.0
+21027,Mouth Bridge,Blackadder Water,-2.27947,55.77027,159.0
+21028,Menzion Farm,Menzion Burn,-3.4388,55.49592,5.7
+21029,Glenbreck,Tweed,-3.48404,55.47831,34.0
+21030,Henderland,Megget Water,-3.21839,55.49564,56.2
+21031,Etal,Till,-2.12059,55.64954,648.0
+21032,Kirknewton,Glen,-2.13084,55.57285,198.9
+21034,Craig Douglas,Yarrow Water,-3.12652,55.50857,116.0
+21035,Heaton Mill,Till,-2.16057,55.67499,655.74
+21036,Abbey St Bathans,Whiteadder Water,-2.38745,55.8533,216.85
+22001,Morwick,Coquet,-1.63201,55.33357,569.8
+22002,Bygate,Coquet,-2.20759,55.3689,59.5
+22003,Shillmoor,Usway Burn,-2.18036,55.36331,21.4
+22004,Hawkhill,Aln,-1.66831,55.40958,205.0
+22006,Hartford Bridge,Blyth,-1.6207,55.11383,269.4
+22007,Mitford,Wansbeck,-1.7275,55.16612,287.3
+22008,Clennell,Alwin,-2.11982,55.35066,27.7
+22009,Rothbury,Coquet,-1.89591,55.30845,346.0
+23001,Bywell,Tyne,-1.9413,54.94994,2175.6
+23002,Eddys Bridge,Derwent,-1.93756,54.8519,118.0
+23003,Reaverhill,North Tyne,-2.14938,55.05348,1007.5
+23004,Haydon Bridge,South Tyne,-2.22563,54.97644,751.1
+23005,Tarset,North Tyne,-2.35244,55.169,284.9
+23006,Featherstone,South Tyne,-2.5133,54.94315,321.9
+23007,Rowlands Gill,Derwent,-1.73921,54.91727,242.1
+23008,Rede Bridge,Rede,-2.20804,55.14309,343.8
+23009,Alston,South Tyne,-2.44431,54.81281,118.5
+23010,Greenhaugh,Tarset Burn,-2.33256,55.1848,96.0
+23011,Kielder,Kielder Burn,-2.56081,55.24503,58.8
+23012,Wide Eals,East Allen,-2.31027,54.91926,88.0
+23013,Hindley Wrae,West Allen,-2.32793,54.91869,75.1
+23014,Kielder temporary,North Tyne,-2.58176,55.23432,27.0
+23015,Barrasford,North Tyne,-2.12047,55.04335,1043.8
+23016,Crag Hall,Ouse Burn,-1.60431,55.00186,55.0
+23017,Team Valley,Team,-1.61206,54.92032,61.9
+23018,Woolsington,Ouse Burn,-1.69813,55.02292,9.0
+23022,Uglydub,North Tyne,-2.45282,55.18161,241.5
+23033,Otterburn,Rede,-2.21544,55.2436,180.63
+24001,Sunderland Bridge,Wear,-1.58967,54.73389,657.8
+24002,Bishop Auckland,Gaunless,-1.6697,54.67092,93.0
+24003,Stanhope,Wear,-2.0269,54.74632,171.9
+24004,Bedburn,Bedburn Beck,-1.81851,54.68464,74.9
+24005,Burnhall,Browney,-1.59916,54.74249,178.5
+24006,Eastgate,Rookhope Burn,-2.0748,54.74669,36.5
+24007,Lanchester,Browney,-1.74472,54.81046,44.6
+24008,Witton Park,Wear,-1.73357,54.67288,455.0
+24009,Chester le Street,Wear,-1.56066,54.85503,1008.3
+24011,Burnhope Reservoir,Wear,-2.22549,54.75013,20.5
+25001,Darlington Broken Scar,Tees,-1.60106,54.51837,818.4
+25002,Dent Bank,Tees,-2.10795,54.6288,217.3
+25003,Moor House,Trout Beck,-2.37727,54.69606,11.4
+25004,Darlington South Park,Skerne,-1.56289,54.511,250.1
+25005,Leven Bridge,Leven,-1.31542,54.50203,196.3
+25006,Rutherford Bridge,Greta,-1.94961,54.50519,86.1
+25007,Croft,Clow Beck,-1.56645,54.48558,78.2
+25008,Barnard Castle,Tees,-1.92991,54.54501,509.2
+25009,Low Moor,Tees,-1.43897,54.48898,1264.0
+25011,Langdon,Langdon Beck,-2.23078,54.67308,13.0
+25012,Harwood,Harwood Beck,-2.23446,54.67309,25.1
+25018,Middleton in Teesdale,Tees,-2.08079,54.62029,242.1
+25019,Easby,Leven,-1.09939,54.47018,14.8
+25020,Preston le Skerne,Skerne,-1.54929,54.60835,147.0
+25021,Bradbury,Skerne,-1.50841,54.65055,70.1
+25022,Balderhead Reservoir,Balder,-2.10821,54.55899,20.4
+25023,Cow Green Reservoir,Tees,-2.28989,54.654,58.2
+25029,Foxton Bridge,Leven,-1.29856,54.47775,183.6
+25808,Moor House,Burnt Hill,-2.38627,54.69322,0.05
+25809,Moor House,Bog Hill,-2.35365,54.68883,0.05
+25810,Moor House,Sike Hill,-2.35524,54.69332,0.04
+26001,Wansford Bridge,West Beck,-0.37869,53.9891,192.0
+26003,Foston Mill,Foston Beck,-0.33401,53.9783,57.2
+26004,Bridlington,Gypsey Race,-0.2197,54.09049,253.8
+26005,Boynton,Gypsey Race,-0.2633,54.09315,240.0
+26006,Little Driffield,Elmswell Beck,-0.46196,54.00415,136.0
+26007,Withernwick,Catchwater,-0.22159,53.84575,15.5
+26008,North Cave,Mires Beck,-0.65111,53.77342,41.9
+26009,Snakeholme Lock,West Beck,-0.37475,53.98535,242.2
+26010,Snakeholme Lock,Driffield Canal,-0.37475,53.98535,24.66
+26011,Wholsea Grange,Market Weighton Canal,-0.71913,53.79903,43.3
+26012,Holme House Farm,Foulness,-0.81686,53.82592,70.2
+26013,Driffield,Driffield Trout Stream,-0.44801,53.99072,53.33
+26014,Driffield,Water Forlornes,-0.44043,54.01059,32.4
+26015,Wansford Bridge,Driffield Canal,-0.37825,53.98989,49.39
+26016,Kirby Grindalythe,Gypsey Race,-0.61922,54.09547,15.85
+26017,South Newbald,Ings Beck,-0.61988,53.81338,14.2
+27001,Hunsingore Weir,Nidd,-1.34898,53.97123,484.3
+27002,Wetherby Flint Mill,Wharfe,-1.35871,53.92023,758.9
+27003,Beal,Aire,-1.19766,53.72296,1932.1
+27004,Newlands,Calder,-1.44868,53.69614,899.0
+27005,Gouthwaite Reservoir,Nidd,-1.78557,54.11035,113.7
+27006,Sheffield Hadfields,Don,-1.41576,53.41396,373.0
+27007,Westwick,Ure,-1.45714,54.09809,914.6
+27009,Skelton,Ouse,-1.13448,53.99128,3315.0
+27010,Bransdale Weir,Hodge Beck,-1.03708,54.34131,18.9
+27011,Lindley Wood Reservoir,Washburn,-1.66705,53.93514,87.3
+27012,High Greenwood,Hebden Water,-2.04245,53.77443,36.0
+27013,More Hall Reservoir,Ewden Beck,-1.56623,53.45727,26.4
+27014,Little Habton,Rye,-0.86298,54.1843,679.0
+27015,Stamford Bridge,Derwent,-0.91609,53.9918,1634.3
+27016,Underbank Reservoir,Little Don,-1.62017,53.48891,38.6
+27017,Damflask Reservoir,Loxley,-1.5699,53.41138,43.5
+27018,Ryburn Reservoir,Ryburn,-1.96479,53.66511,10.7
+27019,Booth Wood Mill,Booth Dean Clough,-1.95156,53.6459,15.9
+27020,Scout Dike Resevoir,Scout Dike Stream,-1.64538,53.53842,15.2
+27021,Doncaster,Don,-1.14193,53.52934,1256.2
+27022,Rotherham Forge Island,Don,-1.35908,53.42998,826.0
+27023,Barnsley Weir,Dearne,-1.47353,53.56097,118.9
+27024,Richmond,Swale,-1.77598,54.40084,381.0
+27025,Woodhouse Mill,Rother,-1.35205,53.36685,352.2
+27026,Whittington,Rother,-1.41166,53.26576,165.0
+27027,Ilkley,Wharfe,-1.83063,53.92927,443.0
+27028,Armley,Aire,-1.57549,53.80173,691.5
+27029,Elland,Calder,-1.81317,53.69399,341.9
+27030,Adwick,Dearne,-1.28251,53.51272,310.8
+27031,Colne Bridge,Colne,-1.73822,53.67547,245.0
+27032,Hebden,Hebden Beck,-1.96358,54.07422,22.17
+27033,Scarborough,Sea Cut,-0.42311,54.30192,33.2
+27034,Kilgram Bridge,Ure,-1.70881,54.26921,510.2
+27035,Kildwick Bridge,Aire,-1.98465,53.90731,282.3
+27038,Gatehouses,Costa Beck,-0.81373,54.24244,7.8
+27040,Staveley,Doe Lea,-1.33742,53.26655,67.9
+27041,Buttercrambe,Derwent,-0.88562,54.01924,1586.0
+27042,Kirkby Mills,Dove,-0.91971,54.26062,59.2
+27043,Addingham,Wharfe,-1.86216,53.93972,427.0
+27044,Sandhills Bridge,Blackfoss Beck,-0.89778,53.91761,47.0
+27047,Low Houses,Snaizeholme Beck,-2.25791,54.28998,10.2
+27048,West Ayton,Derwent,-0.484,54.25103,127.0
+27049,Ness,Rye,-0.93697,54.20382,238.7
+27051,Burn Bridge,Crimple,-1.56884,53.96223,8.1
+27052,Sheepbridge,Whitting,-1.43713,53.2686,50.2
+27053,Birstwith,Nidd,-1.65019,54.03831,217.6
+27054,Cherry Farm,Hodge Beck,-1.00029,54.30376,37.1
+27055,Broadway Foot,Rye,-1.1413,54.28785,131.7
+27056,Ings Bridge,Pickering Beck,-0.78808,54.22718,68.6
+27057,Normanby,Seven,-0.87276,54.2298,121.6
+27058,Crook House Farm,Riccal,-0.9872,54.22056,57.6
+27059,Ripon Laver Weir,Laver,-1.53787,54.1335,87.5
+27060,Newton On Ouse,Kyle,-1.22298,54.03612,167.6
+27061,Longroyd Bridge,Colne,-1.7951,53.64133,72.3
+27062,Skip Bridge,Nidd,-1.26549,53.99851,516.0
+27063,Grimwith Reservoir,Dibb,-1.91321,54.07128,25.5
+27064,Walden Stubbs,Went,-1.16862,53.64041,83.7
+27065,Huddersfield Queens Mill,Holme,-1.78627,53.63811,97.4
+27066,Ashlowes,Blackburn Brook,-1.41049,53.41754,42.8
+27067,Highfield Road,Sheaf,-1.46406,53.37298,49.1
+27068,Ripponden,Ryburn,-1.94779,53.66691,33.0
+27069,Kirby Wiske,Wiske,-1.42471,54.25357,215.5
+27071,Crakehill,Swale,-1.35069,54.15412,1363.0
+27072,Keighley,Worth,-1.90464,53.86397,71.7
+27073,Snainton Ings,Brompton Beck,-0.56618,54.20237,12.9
+27074,Northorpe,Spen Beck,-1.66116,53.68518,46.3
+27075,Leeming,Bedale Beck,-1.5309,54.30693,160.3
+27076,Thornton Lock,Bielby Beck,-0.84417,53.89047,103.1
+27077,Shipley,Bradford Beck,-1.7717,53.83329,58.0
+27079,Methley,Calder,-1.38269,53.72607,930.0
+27080,Oulton Lemonroyd,Aire,-1.42267,53.7485,865.0
+27081,Oulton Farrer Lane,Oulton Beck,-1.4488,53.74802,25.1
+27082,Bat Bridge,Cundall Beck,-1.35968,54.14606,23.5
+27083,Huntington,Foss,-1.06768,53.98147,118.0
+27084,Crosshills,Eastburn Beck,-1.97051,53.90353,43.35
+27085,Dalton Bridge,Cod Beck,-1.35489,54.18348,209.34
+27086,Ripon Alma Weir,Skell,-1.51834,54.13342,119.5
+27087,Low Marishes,Derwent,-0.72517,54.18567,457.5
+27088,Mytholmroyd,Calder,-1.9839,53.73084,141.87
+27089,Tadcaster,Wharfe,-1.27561,53.89092,818.0
+27090,Catterick Bridge,Swale,-1.65321,54.38882,499.4
+27091,Blackstones,Crimple,-1.38969,53.97112,76.8
+27092,Briggswath,Esk,-0.65449,54.46211,325.4
+27093,Nunnington,Riccal,-0.96977,54.2159,40.23
+27094,Romanby Viewly Bridge,Wiske,-1.46195,54.32332,158.21
+27095,Pickering,Pickering Beck,-0.77897,54.24585,66.2
+27096,Netherside Hall,Wharfe,-2.02349,54.08065,215.18
+27097,Bingley,Aire,-1.84285,53.85125,464.78
+27098,Dewsbury,Calder,-1.63441,53.68882,697.0
+27099,Malton A64 Road Bridge,Derwent,-0.75835,54.14732,1360.1
+28001,Yorkshire Bridge,Derwent,-1.70379,53.36232,126.0
+28002,Hamstall Ridware,Blithe,-1.84003,52.77002,163.0
+28003,Water Orton,Tame,-1.75177,52.52076,408.0
+28005,Elford,Tame,-1.74548,52.69191,1475.0
+28006,Great Haywood,Trent,-2.01093,52.80536,325.0
+28007,Shardlow,Trent,-1.33597,52.86527,4400.0
+28008,Rocester Weir,Dove,-1.83414,52.95429,399.0
+28009,Colwick,Trent,-1.07846,52.95344,7486.0
+28011,Matlock Bath,Derwent,-1.55914,53.12375,690.0
+28012,Yoxall,Trent,-1.8057,52.75693,1229.0
+28014,Milford,Sow,-2.03792,52.79133,591.0
+28015,Mattersey,Idle,-0.9636,53.39801,529.0
+28016,Serlby Park,Ryton,-1.0374,53.40024,231.0
+28017,Cotham,Devon,-0.82745,53.0209,284.0
+28018,Marston on Dove,Dove,-1.64888,52.85653,883.2
+28019,Drakelow Park,Trent,-1.64697,52.78057,3072.0
+28020,Rocester,Churnet,-1.84801,52.94739,236.0
+28021,Draycott,Derwent,-1.34376,52.89075,1175.0
+28022,North Muskham,Trent,-0.79921,53.13614,8231.0
+28023,Ashford,Wye,-1.72811,53.22386,154.0
+28024,Syston Mill,Wreake,-1.09107,52.70632,413.8
+28025,Ratcliffe Culey,Sence,-1.52786,52.59335,169.4
+28026,Polesworth,Anker,-1.61319,52.62719,368.0
+28027,Sandiacre,Erewash,-1.28377,52.92312,182.2
+28028,Wanlip,Soar,-1.10926,52.69244,480.0
+28029,Kingston Hall,Kingston Brook,-1.25463,52.84447,57.0
+28030,Onebarrow,Black Brook,-1.31107,52.74952,8.4
+28031,Ilam,Manifold,-1.79289,53.05356,148.5
+28032,Church Warsop,Meden,-1.16542,53.20615,63.0
+28033,Hollinsclough,Dove,-1.90685,53.19851,8.0
+28035,Triumph Road Nottingham,Leen,-1.18334,52.94819,111.0
+28036,Twyford Bridge,Poulter,-0.95202,53.26963,128.2
+28037,Mytham Bridge,Derwent,-1.68385,53.33557,203.0
+28038,Hulme End,Manifold,-1.84302,53.13256,46.0
+28039,Calthorpe Park,Rea,-1.89737,52.46029,74.0
+28040,Stoke-On-Trent,Trent,-2.16289,53.01722,53.2
+28041,Waterhouses,Hamps,-1.87779,53.04864,35.13
+28043,Chatsworth,Derwent,-1.61124,53.21167,335.0
+28044,Cuckney,Poulter,-1.1455,53.23657,32.2
+28045,Bothamsall / Haughton,Meden/Maun,-0.98079,53.25145,262.6
+28046,Izaak Walton,Dove,-1.78198,53.05605,83.0
+28047,Blyth,Oldcotes Dyke,-1.07737,53.38123,85.2
+28048,Wingfield Park,Amber,-1.44126,53.06393,139.0
+28049,Worksop,Ryton,-1.1382,53.30924,77.0
+28050,Auckley,Torne,-1.02782,53.50372,135.53
+28052,Great Bridgeford,Sow,-2.17439,52.8402,163.0
+28053,Penkridge,Penk,-2.11707,52.72748,272.0
+28055,Duffield,Ecclesbourne,-1.52555,52.99814,50.4
+28056,Rothley,Rothley Brook,-1.14218,52.70374,94.0
+28058,Ashbourne,Henmore Brook,-1.74017,53.013,37.7
+28059,Mansfield STW,Maun,-1.18197,53.15502,28.8
+28060,Lowdham,Dover Beck,-1.02803,53.02487,69.0
+28061,Basford Bridge,Churnet,-2.02781,53.06497,139.0
+28066,Coleshill,Cole,-1.73387,52.48386,130.0
+28067,Church Wilne,Derwent,-1.3457,52.88051,1177.5
+28068,Pickering Wood,Lathkill,-1.64401,53.18558,89.7
+28070,Burbage,Burbage Brook,-1.61266,53.3199,9.1
+28072,Southwell,Greet,-0.93428,53.07791,46.2
+28074,Kegworth,Soar,-1.27177,52.83154,1292.0
+28079,Shallowford,Meece Brook,-2.18709,52.859,86.3
+28080,Lea Marston Lakes,Tame,-1.69475,52.54076,799.0
+28081,Bescot,Tame,-1.98078,52.55904,169.0
+28082,Littlethorpe,Soar,-1.20173,52.57101,183.9
+28083,Darlaston,Trent,-2.17143,52.9168,195.2
+28085,St Mary's Bridge,Derwent,-1.47499,52.92817,1054.0
+28086,South Wigston,Sence,-1.13365,52.57377,113.0
+28087,Perry Park,Tame,-1.91238,52.52483,196.1
+28091,Blyth,Ryton,-1.05227,53.37724,231.0
+28093,Pillings Lock,Soar,-1.16351,52.7572,1108.36
+28095,Hopwas Bridge,Tame,-1.73393,52.64397,1421.66
+28101,Sheepwash,Tame,-2.0398,52.52367,27.93
+28102,Whitacre,Blythe,-1.68886,52.51782,194.3
+28103,Carsington Outflow,Henmore Brook,-1.63912,53.04816,15.8
+28109,Walkmill,Sow,-2.30913,52.86492,10.9
+28110,Brocton,Oldacre Brook,-2.05881,52.77964,2.8
+28112,Quixhill,Churnet,-1.86057,52.97689,213.0
+28113,Pinxton,Erewash,-1.3277,53.08321,26.9
+28115,Mansfield the Dykes,Maun,-1.16424,53.16676,31.5
+28116,Whitewater Bridge,Maun,-1.00804,53.22651,157.0
+28117,Whatstandwell,Derwent,-1.50665,53.08723,755.0
+28118,Perlethorpe,Meden,-1.03214,53.23399,97.0
+29001,Brigsley,Waithe Beck,-0.11293,53.49619,108.3
+29002,Claythorpe Mill,Great Eau,0.12292,53.29184,77.4
+29003,Louth,Lud,0.00811,53.37105,55.2
+29004,Bishopbridge,Ancholme,-0.44889,53.40735,54.7
+29005,Bishopbridge,Rase,-0.44889,53.40735,66.6
+29009,Toft Newton,Ancholme,-0.4501,53.37402,27.2
+30001,Claypole Mill,Witham,-0.74616,53.02232,297.9
+30002,Langworth Bridge,Barlings Eau,-0.40282,53.27568,210.1
+30003,Fulsby Lock,Bain,-0.14689,53.13146,197.1
+30004,Partney Mill,Lymn,0.09633,53.18694,61.6
+30005,Saltersford Total,Witham,-0.62361,52.89097,126.1
+30006,Leasingham Mill,Slea,-0.3794,53.02211,48.4
+30011,Goulceby Bridge,Bain,-0.13207,53.29718,62.5
+30012,Cream Poke Farm,Stainfield Beck,-0.31293,53.25044,37.4
+30013,Heighington,Heighington Beck,-0.44351,53.21248,21.2
+30014,Pointon,Pointon Lode,-0.32588,52.86688,11.9
+30015,Stoke Rochford,Cringle Brook,-0.62826,52.85668,50.5
+30017,Colsterworth,Witham,-0.62347,52.81096,51.3
+30018,Honington,Honington Beck,-0.60814,52.97952,22.3
+30033,Brant Broughton,Brant,-0.61459,53.08028,65.8
+31001,Eye Brook Reservoir,Eye Brook,-0.74378,52.53809,60.1
+31002,Kates Br & King St Br,Glen,-0.36367,52.72018,341.9
+31004,Tallington Total,Welland,-0.38129,52.65614,717.4
+31005,Tixover,Welland,-0.56957,52.58574,417.0
+31006,Belmesthorpe,Gwash,-0.46667,52.67526,150.0
+31007,Barrowden,Welland,-0.6018,52.58873,411.6
+31008,Manthorpe,East Glen,-0.41999,52.73093,136.2
+31009,Shillingthorpe,West Glen,-0.41325,52.68804,173.0
+31010,Fosters Bridge,Chater,-0.58246,52.61646,68.9
+31011,Burton Coggles,West Glen,-0.53714,52.8235,31.6
+31013,Irnham,East Glen,-0.46066,52.83323,71.5
+31016,Empingham,North Brook,-0.58608,52.66919,36.5
+31021,Ashley,Welland,-0.79482,52.51587,250.7
+31022,Market Harborough,Jordan,-0.91127,52.47295,20.8
+31023,Easton Wood,West Glen,-0.56823,52.82145,4.4
+31024,Holywell,Holywell Brook,-0.48122,52.72049,22.3
+31025,Manton,Gwash South Arm,-0.70979,52.63635,24.5
+31026,Egleton,Egleton Brook,-0.7033,52.65588,2.5
+31028,Church Bridge,Gwash,-0.59557,52.66364,76.5
+32001,Orton,Nene,-0.28067,52.56005,1634.3
+32002,Fotheringhay,Willow Brook,-0.42864,52.52713,89.6
+32003,Old Mill Bridge,Harpers Brook,-0.55549,52.40773,74.3
+32004,Harrowden,Ise Brook,-0.68183,52.33198,194.0
+32006,Upton Total,Nene/Kislingbury,-0.94615,52.22621,223.0
+32007,St Andrews Total,Nene/Brampton,-0.9044,52.24534,232.8
+32008,Dodford,Nene/Kislingbury,-1.08245,52.24092,107.0
+32010,Wansford,Nene,-0.40656,52.58303,1530.0
+32012,Lady Bridge,Wootton Brook,-0.92436,52.20722,53.3
+32016,Corby South,Willow Brook South,-0.67495,52.48816,7.6
+32019,Kettering,Slade Brook,-0.72042,52.37781,58.3
+32020,Wansford,Wittering Brook,-0.39419,52.58241,46.9
+32029,Experimental Catchment,Flore,-1.04077,52.23789,7.0
+32031,Wootton Park,Wootton Brook,-0.93885,52.2131,73.85
+33001,Brownshill Staunch,Bedford Ouse,0.00875,52.33565,3030.0
+33002,Bedford,Bedford Ouse,-0.46218,52.13431,1460.0
+33003,Bottisham,Cam,0.20847,52.26875,803.0
+33004,Isleham,Lark,0.41985,52.35444,466.2
+33005,Thornborough Mill,Bedford Ouse,-0.93105,52.0114,388.5
+33006,Northwold Total,Wissey,0.60997,52.53779,274.5
+33007,Marham,Nar,0.54792,52.67807,153.3
+33009,Harrold Mill,Bedford Ouse,-0.61156,52.19823,1320.0
+33011,County Bridge Euston,Little Ouse,0.77941,52.38701,128.7
+33012,Meagre Farm,Kym,-0.3078,52.25424,137.5
+33013,Rectory Bridge,Sapiston,0.78342,52.37666,205.9
+33014,Temple,Lark,0.57839,52.32642,272.0
+33015,Willen,Ouzel,-0.71518,52.05856,277.1
+33016,Jesus Lock,Cam,0.12053,52.21307,761.5
+33018,Cappenham Bridge,Tove,-0.96206,52.13179,138.1
+33019,Melford Bridge,Thet,0.76219,52.4127,316.0
+33020,Brampton,Alconbury Brook,-0.22821,52.33061,201.5
+33021,Burnt Mill,Rhee,0.06734,52.15146,303.0
+33022,Blunham,Ivel,-0.31663,52.14457,541.3
+33023,Beck Bridge,Lea Brook,0.43826,52.33219,101.8
+33024,Dernford,Cam,0.14178,52.13461,198.0
+33025,West Newton Mill,Babingly,0.51279,52.80162,39.6
+33026,Offord,Bedford Ouse,-0.21779,52.28719,2570.0
+33027,Wimpole,Rhee,-0.05449,52.11892,119.1
+33028,Shefford,Flit,-0.33581,52.04043,119.6
+33029,Whitebridge,Stringside,0.531,52.57635,98.8
+33030,Clipstone,Clipstone Brook,-0.63424,51.92421,38.8
+33031,Broughton,Broughton Brook,-0.70566,52.05949,66.6
+33032,Heacham,Heacham,0.50453,52.90836,59.0
+33033,Arlesey,Hiz,-0.2669,52.0266,108.0
+33034,Abbey Heath,Little Ouse,0.72077,52.42591,688.5
+33035,Denver Complex,Ely Ouse,0.34207,52.58372,3430.0
+33037,Newport Pagnell Total,Bedford Ouse,-0.72194,52.08951,800.0
+33039,Roxton,Bedford Ouse,-0.3053,52.16723,1660.0
+33040,Ashwell,Rhee,-0.15479,52.04436,2.01
+33044,Bridgham,Thet,0.877,52.4324,277.8
+33045,Quidenham,Wittle,0.98242,52.45046,28.3
+33046,Redbridge,Thet,0.93886,52.49207,145.3
+33048,Stonebridge,Larling Brook,0.83755,52.48003,21.4
+33049,Buckenham Tofts,Stanford Water,0.70206,52.52456,43.5
+33050,Fordham,Snail,0.39225,52.30591,60.6
+33051,Chesterford,Cam,0.19427,52.06174,141.0
+33052,Swaffham Bulbeck,Swaffham Lode,0.27312,52.24232,36.4
+33053,Stapleford,Granta,0.14795,52.14187,114.0
+33054,Castle Rising,Babingley,0.49057,52.79877,47.7
+33055,Babraham,Granta,0.20492,52.13124,98.7
+33056,Lode,Quy Water,0.24059,52.24217,76.4
+33057,Leighton Buzzard,Ouzel,-0.66855,51.90769,119.0
+33058,Bletchley,Ouzel,-0.71585,51.98091,215.0
+33061,Fowlmere One,Shep,0.04543,52.0944,3.4
+33062,Fowlmere Two,Guilden Brook,0.04659,52.09063,3.4
+33063,Knettishall,Little Ouse,0.87155,52.39018,101.0
+33064,Whaddon,Whaddon Brook,-0.01726,52.10172,16.0
+33065,Hitchin,Hiz,-0.27685,51.94698,11.9
+33066,Linton,Granta,0.2925,52.09317,59.8
+33068,Gatley End,Cheney Water,-0.11076,52.05192,5.0
+33070,Fornham St Martin,Lark,0.7066,52.27214,110.2
+34001,Colney,Yare,1.22308,52.62793,231.8
+34002,Shotesham,Tas,1.28135,52.54684,146.5
+34003,Ingworth,Bure,1.25185,52.81946,164.7
+34004,Costessey Mill,Wensum,1.21797,52.66863,570.9
+34005,Costessey Park,Tud,1.20643,52.65577,73.2
+34006,Needham Mill,Waveney,1.27391,52.38287,370.0
+34007,Oakley Park,Dove,1.19228,52.34873,133.9
+34008,Honing Lock,Ant,1.45598,52.79055,49.3
+34010,Billingford Bridge,Waveney,1.18228,52.35933,149.4
+34011,Fakenham,Wensum,0.84744,52.82735,161.9
+34012,Burnham Overy,Burn,0.74032,52.95043,80.0
+34014,Swanton Morley Total,Wensum,0.99114,52.72565,397.8
+34018,Warham,Stiffkey,0.89164,52.93467,87.8
+34019,Horstead Mill,Bure,1.35555,52.72442,313.0
+35001,Constantine Weir,Gipping,1.14065,52.05348,310.8
+35002,Naunton Hall,Deben,1.39057,52.12966,163.1
+35003,Farnham,Alde,1.45135,52.18865,63.9
+35004,Beversham,Ore,1.45016,52.17219,54.9
+35008,Stowmarket,Gipping,1.00816,52.18132,128.9
+35010,Bramford,Gipping,1.10205,52.07626,298.0
+35013,Holton,Blyth,1.53066,52.33718,92.9
+35014,Newbourne,Mill River,1.30846,52.02991,27.1
+36001,Stratford St Mary,Stour,0.97112,51.96695,844.3
+36002,Glemsford,Glem,0.69294,52.09257,87.3
+36003,Polstead,Box,0.89091,52.00386,53.9
+36004,Long Melford,Chad Brook,0.72445,52.0803,47.4
+36005,Hadleigh,Brett,0.95082,52.04767,156.0
+36006,Langham,Stour,0.94037,51.9716,578.0
+36007,Bardfield Bridge,Belchamp Brook,0.69325,52.04699,58.6
+36008,Westmill,Stour,0.6656,52.08525,224.5
+36009,Cockfield,Brett,0.79473,52.13806,25.7
+36010,Broad Green,Bumpstead Brook,0.46197,52.04908,28.3
+36011,Sturmer,Stour Brook,0.47359,52.06927,34.5
+36012,Kedington,Stour,0.49165,52.07711,76.2
+36013,Higham,Brett,0.95784,51.97995,195.0
+36015,Lamarsh,Stour,0.76101,51.98787,480.7
+37001,Redbridge,Roding,0.04057,51.57624,303.3
+37002,Rushes Lock,Chelmer,0.59861,51.75116,533.9
+37003,Crabbs Bridge,Ter,0.58754,51.76695,77.8
+37004,Langford,Blackwater,0.65712,51.74978,337.0
+37005,Lexden,Colne,0.85104,51.89899,238.2
+37006,Beach's Mill,Can,0.4463,51.73771,228.4
+37007,Writtle,Wid,0.44096,51.72743,136.3
+37008,Springfield,Chelmer,0.47947,51.73666,190.3
+37009,Guithavon Valley,Brain,0.63462,51.80183,60.7
+37010,Appleford Bridge,Blackwater,0.67445,51.81054,247.3
+37011,Churchend,Chelmer,0.3653,51.88492,72.6
+37012,Poolstreet,Colne,0.57835,51.99786,65.1
+37013,Sandon Bridge,Sandon Brook,0.53984,51.72049,75.1
+37014,High Ongar,Roding,0.25917,51.71389,95.1
+37015,Chipping Ongar,Cripsey Brook,0.23958,51.70911,62.2
+37016,Copford Hall,Pant,0.42692,51.95528,62.5
+37017,Stisted,Blackwater,0.6039,51.88835,139.2
+37018,Gaynes Park,Ingrebourne,0.23664,51.55315,47.9
+37019,Bretons Farm,Beam,0.18396,51.54652,49.7
+37020,Felsted,Chelmer,0.42437,51.84783,132.1
+37021,Bounstead Bridge,Roman River,0.88041,51.84807,52.6
+37022,Thorpe le Soken,Holland Brook,1.16399,51.84622,54.9
+37023,Loughton,Roding,0.08158,51.64049,269.0
+37024,Earls Colne,Colne,0.69716,51.93564,154.2
+37025,Perces Bridge,Bourne Brook,0.64869,51.91664,32.1
+37026,Tenpenny Bridge,Tenpenny Brook,1.01732,51.84668,29.0
+37027,Ship House Bridge,Sixpenny Brook,0.98166,51.85332,5.1
+37028,Saltwater Bridge,Bentley Brook,1.0599,51.8325,12.1
+37029,Main Road Bridge,St Osyth Brook,1.09442,51.80178,8.0
+37031,Wickford,Crouch,0.52335,51.61216,71.8
+37033,Eastwood,Eastwood Brook,0.6803,51.56811,10.4
+37034,Stifford,Mar Dyke,0.29823,51.49986,90.7
+37038,Margaretting,Wid,0.41658,51.67407,98.6
+38001,Feildes Weir,Lee,0.01389,51.76415,1036.0
+38002,Mardock,Ash,0.0203,51.81482,78.7
+38003,Panshanger Park,Mimram,-0.14127,51.80342,133.9
+38004,Wadesmill,Rib,-0.02754,51.83905,136.5
+38005,Easneye,Ash,0.00017,51.80582,85.2
+38006,Herts Training School,Rib,-0.06429,51.82488,148.1
+38007,Elizabeth Way,Canons Brook,0.07364,51.77391,21.4
+38011,Fulling Mill,Mimram,-0.2213,51.83764,98.7
+38012,Bragbury Park,Stevenage Brook,-0.1495,51.87448,36.0
+38013,Luton Hoo,Upper Lee,-0.3784,51.85472,70.7
+38014,Edmonton,Salmon Brook,-0.06033,51.62611,20.5
+38015,Enfield,Intercepting Drain,-0.04408,51.62132,7.4
+38016,Mountfitchet,Stansted Springs,0.17945,51.90099,20.5
+38017,Whitwell,Mimram,-0.28129,51.8769,39.1
+38018,Water Hall,Upper Lee,-0.11753,51.77314,150.0
+38019,Montague Road,Salmon Brook,-0.04552,51.62134,33.9
+38020,Sewardstone Road,Cobbins Brook,0.00495,51.68148,38.4
+38021,Albany Park,Turkey Brook,-0.03509,51.66883,42.2
+38022,Edmonton Silver Street,Pymmes Brook,-0.06526,51.61573,42.6
+38023,Low Hall,Lee flood relief,-0.04364,51.5749,1243.0
+38024,Ordnance Road,Small River Lee,-0.01962,51.67189,41.5
+38025,Alcazar,Pymmes Brook,-0.066,51.61539,41.4
+38026,Sheering Hall,Pincey Brook,0.16687,51.79299,54.6
+38027,Glen Faba,Stort,0.01511,51.76483,280.2
+38028,Gypsy Lane,Stansted Brook,0.18632,51.89465,25.9
+38029,Griggs Bridge,Quin,0.02089,51.90425,50.4
+38030,Hartham,Beane,-0.07977,51.80124,175.1
+38031,Rye Bridge,Lee,0.00612,51.77001,758.3
+38032,Lea Bridge,Lee,-0.05103,51.56784,1364.0
+38033,Luton East Hyde,Upper Lee,-0.37611,51.85149,71.24
+39001,Kingston,Thames,-0.30771,51.41544,9948.0
+39002,Days Weir,Thames,-1.17947,51.63852,3444.7
+39003,South Wimbledon,Wandle,-0.18134,51.41976,176.1
+39004,Beddington Park,Wandle,-0.13899,51.37359,122.0
+39005,Wimbledon Common,Beverley Brook,-0.25195,51.43167,43.5
+39006,Newbridge,Windrush,-1.41984,51.71402,362.6
+39007,Swallowfield,Blackwater,-0.95124,51.37738,354.8
+39008,Eynsham,Thames,-1.35645,51.77524,1616.2
+39009,Bray Weir,Thames,-0.69159,51.50893,6915.3
+39010,Denham,Colne,-0.48391,51.56632,743.0
+39011,Tilford,Wey,-0.75023,51.18198,396.3
+39012,Kingston upon Thames,Hogsmill,-0.30214,51.40577,69.1
+39013,Berrygrove,Colne,-0.38024,51.67066,352.2
+39014,Hansteads,Ver,-0.33606,51.70467,132.0
+39015,Lodge Farm,Whitewater,-0.95001,51.26403,44.6
+39016,Theale,Kennet,-1.06695,51.43274,1033.4
+39017,Grendon Underwood,Ray,-1.01269,51.88445,18.8
+39018,Abingdon,Ock,-1.29866,51.66878,234.1
+39019,Shaw,Lambourn,-1.32514,51.41105,234.1
+39020,Bibury,Coln,-1.82543,51.75461,106.7
+39021,Enslow Mill,Cherwell,-1.30137,51.86134,551.7
+39022,Sheepbridge,Loddon,-0.96665,51.38183,164.5
+39023,Bourne End Hedsor,Wye,-0.70859,51.57187,137.3
+39024,Gatwick,Gatwick Stream,-0.16001,51.14658,31.1
+39025,Brimpton,Enborne,-1.18551,51.37917,147.6
+39026,Banbury,Cherwell,-1.33283,52.0661,204.6
+39027,Pangbourne,Pang,-1.08762,51.48462,170.9
+39028,Hungerford,Dun,-1.53938,51.41479,101.3
+39029,Shalford,Tilling Bourne,-0.56949,51.2209,59.0
+39030,Croxley Green,Gade,-0.437,51.64556,184.0
+39031,Welford,Lambourn,-1.40979,51.45509,176.0
+39032,East Shefford,Lambourn,-1.43994,51.46813,154.0
+39033,Bagnor,Winterbourne Stream,-1.35038,51.42247,49.2
+39034,Cassington Mill,Evenlode,-1.35169,51.78627,430.0
+39035,Cerney Wick,Churn,-1.89189,51.66536,124.3
+39036,Albury,Law Brook,-0.50473,51.21104,16.0
+39037,Marlborough,Kennet,-1.73241,51.41639,142.0
+39038,Shabbington,Thame,-1.03098,51.7442,443.0
+39039,High Wycombe,Wye,-0.76902,51.63547,67.7
+39040,West Mill Cricklade,Thames,-1.86553,51.64678,185.0
+39041,Shaw Ultrasonic,Lambourn,-1.32103,51.41179,234.1
+39042,Priory Mill Lechlade,Leach,-1.673,51.69218,76.9
+39043,Knighton,Kennet,-1.57699,51.43741,295.0
+39044,Bramshill House,Hart,-0.91738,51.32672,84.0
+39046,Sutton Courtenay,Thames,-1.25414,51.64803,3414.0
+39049,Colindeep Lane,Silk Stream,-0.24452,51.59121,29.0
+39051,Adderbury,Sor Brook,-1.3094,52.00781,106.4
+39052,Binfield,The Cut,-0.77358,51.43383,50.2
+39053,Horley,Mole,-0.18335,51.17464,89.9
+39054,Gatwick Airport,Mole,-0.19974,51.14366,31.8
+39055,North Hillingdon,Yeading Brook West,-0.43946,51.54991,17.6
+39056,Catford Hill,Ravensbourne,-0.02694,51.44167,120.4
+39057,Cranford Park,Crane,-0.41257,51.48876,61.7
+39058,Winsford Road,Pool River,-0.02735,51.43577,38.3
+39061,Letcombe Bassett,Letcombe Brook,-1.46059,51.56556,4.0
+39065,Ewelme,Ewelme Brook,-1.07372,51.61968,13.4
+39068,Dorking,Mole,-0.3112,51.23843,316.0
+39069,Kinnersley Manor,Mole,-0.1944,51.20116,142.0
+39071,Ewen,Thames,-1.99061,51.6746,63.7
+39072,Royal Windsor Park,Thames,-0.58942,51.48562,7046.0
+39073,Cirencester,Churn,-1.97226,51.72448,84.0
+39074,Sheepen Bridge,Ampney Brook,-1.84839,51.65407,74.4
+39075,Whetstone Bridge,Marston Meysey Brook,-1.81684,51.66706,25.0
+39076,Worsham,Windrush,-1.56438,51.79377,296.0
+39077,Marlborough Poulton Fm,Og,-1.7243,51.42722,59.2
+39078,Farnham,Wey (North),-0.80356,51.20945,191.12
+39079,Weybridge,Wey,-0.46633,51.37248,1008.0
+39081,Abingdon,Ock,-1.30522,51.66672,234.0
+39084,Brent Cross,Brent,-0.21756,51.57754,36.4
+39085,Wandle Park,Wandle,-0.18078,51.41759,176.1
+39086,Gatwick Link,Gatwick Stream,-0.16348,51.16028,33.6
+39087,Water Eaton,Ray,-1.82655,51.64036,84.1
+39088,Rickmansworth,Chess,-0.46126,51.64199,105.0
+39089,Bury Mill,Gade,-0.4754,51.75763,48.2
+39090,Inglesham,Cole,-1.70033,51.67094,140.0
+39091,Quarrendon Mill,Misbourne,-0.59192,51.65704,66.29
+39092,Hendon Lane Bridge,Dollis Brook,-0.21139,51.59132,25.1
+39093,Monks Park,Brent,-0.26784,51.55156,117.6
+39094,Marsh Farm,Crane,-0.33994,51.44861,81.0
+39095,Manor House Gardens,Quaggy,0.0062,51.45571,33.5
+39096,Wembley,Wealdstone Brook,-0.27949,51.5622,21.8
+39097,Buscot,Thames,-1.66874,51.6812,997.0
+39098,Uxbridge,Pinn,-0.47034,51.53233,33.3
+39099,Ampney St Peter,Ampney Brook,-1.88989,51.71066,45.3
+39100,Oaksey,Swill Brook,-2.00621,51.63298,53.3
+39101,Ramsbury,Aldbourne,-1.58555,51.44373,53.1
+39102,Denham Lodge,Misbourne,-0.48982,51.56907,94.8
+39103,Newbury,Kennet,-1.32339,51.40163,548.1
+39104,Esher,Mole,-0.37679,51.38237,469.6
+39105,Wheatley,Thame,-1.11521,51.74064,533.8
+39106,Leatherhead,Mole,-0.3361,51.29499,371.4
+39107,Ewell,Hogsmill,-0.25519,51.35577,33.66
+39108,Perrott's Brook,Churn,-1.97026,51.75008,59.0
+39109,Fossebridge,Coln,-1.88517,51.79972,82.0
+39110,Fairford,Coln,-1.78398,51.7094,130.0
+39111,Staines,Thames,-0.51259,51.43151,8120.0
+39112,Arabellas Lake,Letcombe Brook,-1.46372,51.564,3.1
+39113,Letcombe Regis,Manor Farm Brook,-1.4492,51.57154,1.4
+39114,Frilsham,Pang,-1.22767,51.45366,89.8
+39115,Bucklebury,Pang,-1.2016,51.43568,109.0
+39116,Sulham,Sulham Brook,-1.07713,51.46202,3.0
+39117,Hythe End,Colne Brook,-0.5353,51.44022,929.5
+39118,Alton,Wey,-0.97676,51.14966,44.6
+39119,Kings Pond (Alton),Wey,-0.96689,51.15043,45.9
+39120,Alton,Caker Stream,-0.95973,51.14015,88.1
+39121,Walton,Thames,-0.4214,51.3919,9291.5
+39122,Bramley,Cranleigh Waters,-0.57033,51.2069,109.5
+39123,Farnborough,Blackwater,-0.7383,51.295,35.5
+39125,Redbourn,Ver,-0.39308,51.7948,62.6
+39126,Redbourn,Red,-0.39662,51.79314,18.5
+39127,Little Missenden,Misbourne,-0.65029,51.67713,47.2
+39128,Addlestone,Bourne (South),-0.47806,51.37408,90.1
+39129,Farmoor,Thames,-1.36639,51.75755,1608.6
+39130,Reading,Thames,-0.96787,51.46102,4633.7
+39131,Costons Lane Greenford,Brent,-0.34488,51.52737,146.2
+39133,Carshalton Ponds,Wandle,-0.16282,51.36704,1.1
+39134,Bromley South,Ravensbourne,0.01931,51.40028,10.3
+39135,Chinbrook Meadows,Quaggy,0.02711,51.43151,14.5
+39137,Gutteridge Wood,Yeading West,-0.42019,51.54772,21.1
+39138,Twyford,Loddon,-0.88095,51.48481,690.03
+39140,Islip,Ray,-1.24235,51.81975,290.1
+39141,Guildford,Wey,-0.57802,51.23604,689.6
+39142,Bourton on the Water,Windrush,-1.76787,51.88675,65.5
+39143,Bourton on the Water,Dikler,-1.74,51.87485,90.7
+39144,Bodicote,Sor,-1.32683,52.0286,87.7
+39145,Western Avenue A40,Yeading Brook East,-0.39784,51.54879,9.62
+39146,Blewbury,Mill Brook,-1.23396,51.57471,2.0
+39147,Wendover,Wendover Springs,-0.74212,51.76664,9.5
+39148,Maidenhead,Thames,-0.70211,51.52415,6910.0
+39866,Taplow,Jubilee River,-0.69747,51.52923,6908.94
+40001,Weir Wood Reservoir,Medway,0.0081,51.09975,26.9
+40002,Darwell Reservoir,Darwell,0.45094,50.96539,9.6
+40003,Teston / East Farleigh,Medway,0.44696,51.25087,1256.1
+40004,Udiam,Rother,0.5243,50.99179,206.0
+40005,Stilebridge,Beult,0.51602,51.20207,277.1
+40006,Hadlow,Bourne,0.33521,51.22239,50.3
+40007,Chafford / Colliers Land Bridge,Medway,0.16846,51.14446,255.1
+40008,Wye,Great Stour,0.93029,51.1855,230.0
+40009,Stonebridge,Teise,0.45394,51.13315,136.2
+40010,Penshurst / Vexour Bridge,Eden,0.17308,51.17223,224.3
+40011,Horton,Great Stour,1.03051,51.2581,345.0
+40012,Hawley,Darent,0.23119,51.42434,191.4
+40013,Otford,Darent,0.18628,51.30453,100.5
+40014,Durlock,Wingham,1.26092,51.27195,37.7
+40015,Fairbrook Farm,White Drain,0.94659,51.3086,31.8
+40016,Crayford,Cray,0.17252,51.44985,119.7
+40017,Burwash,Dudwell,0.39037,50.99097,27.5
+40018,Lullingstone,Darent,0.19642,51.35699,118.4
+40020,Hendal Bridge,Eridge Stream,0.17257,51.10823,53.7
+40021,Hopemill,Hexden Channel,0.58467,51.03194,32.4
+40022,Chart Leacon,Great Stour,0.84693,51.1451,72.5
+40023,South Willesborough,East Stour,0.87866,51.13015,58.75
+40024,Bartley Mill,Bartley Mill St,0.33034,51.09709,25.1
+40025,Brede Pumping Station,Brede,0.57833,50.9307,45.7
+40027,Calcott,Sarre Penn,1.11842,51.31968,19.4
+40029,Lenside,Len,0.5259,51.27255,69.7
+40033,Crabble Mill,Dour,1.28721,51.1402,49.5
+40035,Aylesford,Old Mill Stream,0.89098,51.13496,17.96
+41001,Tilley Bridge,Nunningham Stream,0.36163,50.89145,16.9
+41002,Hammer Wood Bridge,Ash Bourne,0.39364,50.90222,18.4
+41003,Sherman Bridge,Cuckmere,0.17506,50.82568,134.7
+41004,Barcombe Mills,Ouse,0.03885,50.91492,395.7
+41005,Gold Bridge,Ouse,0.03411,50.97406,180.9
+41006,Isfield,Uck,0.07535,50.95203,87.8
+41009,Hardham,Rother,-0.52898,50.95168,345.8
+41010,Hatterell Bridge,Adur W Branch,-0.32325,50.96505,109.1
+41011,Iping Mill,Rother,-0.78693,50.99923,154.0
+41012,Sakeham,Adur E Branch,-0.26597,50.95741,93.3
+41013,Henley Bridge,Huggletts Stream,0.37596,50.8992,14.2
+41014,Pallingham,Arun,-0.50952,50.99624,379.0
+41015,Westbourne,Ems,-0.92862,50.86119,58.3
+41016,Cowbeech,Cuckmere,0.29075,50.91266,18.7
+41017,Crowhurst,Combe Haven,0.50675,50.86437,30.74
+41018,Tanyards,Kird,-0.51291,51.02031,66.8
+41019,Alfoldean,Arun,-0.40623,51.0868,139.0
+41020,Clappers Bridge,Bevern Stream,0.02414,50.92686,34.6
+41021,Old Ship,Clayhill Stream,0.059,50.91954,7.1
+41022,Halfway Bridge,Lod,-0.67448,50.99221,52.0
+41023,Graylingwell,Lavant,-0.76461,50.85103,87.2
+41024,Shell Brook,Shell Brook,-0.09746,51.04138,22.6
+41025,Drungewick,Loxwood Stream,-0.48863,51.06776,91.6
+41026,Holywell,Cockhaise Brook,-0.03886,51.01837,36.1
+41027,Princes Marsh,Rother,-0.89989,51.03747,37.2
+41028,Chess Bridge,Chess Stream,-0.26963,50.94203,24.0
+41029,Lealands,Bull,0.24022,50.89528,40.8
+41030,Ardingly,Ouse,-0.10027,51.03845,37.2
+41031,Fulking,Fulking Stream,-0.22776,50.8887,1.0
+41033,Cocking,Costers Brook,-0.74923,50.94991,2.7
+41034,Walderton,Ems,-0.88394,50.88775,41.5
+41035,Brookhurst,North,-0.38872,51.08094,53.93
+41037,Lewes,Winterbourne Stream,-0.00711,50.86873,17.3
+42001,North Fareham,Wallington,-1.16663,50.86367,111.0
+42003,Brockenhurst,Lymington,-1.55026,50.81596,98.9
+42004,Broadlands,Test,-1.4971,50.96808,1040.0
+42005,Broughton,Wallop Brook,-1.55726,51.09565,53.6
+42006,Mislingford,Meon,-1.16299,50.92346,72.8
+42007,Drove Lane Alresford,Alre,-1.18132,51.08991,57.0
+42008,Sewards Bridge,Cheriton Stream,-1.18239,51.08657,75.1
+42009,Borough Bridge,Candover Stream,-1.18933,51.08762,71.2
+42010,Highbridge & Allbrook Total,Itchen,-1.34417,50.98766,360.0
+42011,Frogmill,Hamble,-1.25743,50.93142,56.6
+42012,Fullerton,Anton,-1.45966,51.15108,185.0
+42014,Ower,Blackwater,-1.53417,50.95493,104.7
+42015,Weston Colley,Dever,-1.29222,51.15172,52.7
+42016,Easton,Itchen,-1.27161,51.08954,236.8
+42017,Havant,Hermitage Stream,-0.99174,50.85627,17.0
+42018,Stoneham Lane,Monks Brook,-1.37089,50.95492,43.3
+42019,Millbrook,Tanners Brook,-1.44833,50.91825,16.0
+42020,Romsey,Tadburn Lake,-1.48519,50.98925,19.0
+42023,Riverside Park,Itchen,-1.36851,50.9358,415.0
+42024,Chilbolton Total,Test,-1.45092,51.15248,453.0
+42025,Leigh Park,Lavant Stream,-0.97696,50.85983,54.5
+42026,Bossington,Wallop Brook,-1.52458,51.08032,61.1
+42027,Bransbury,Dever,-1.3984,51.17785,122.3
+42029,Timsbury,Test,-1.50022,51.00891,978.42
+42030,West Meon,Meon,-1.07678,51.01141,27.44
+43001,Ringwood,Avon,-1.79698,50.84794,1649.8
+43003,East Mills Total,Avon,-1.77559,50.92843,1477.8
+43004,Laverstock,Bourne,-1.7775,51.07256,163.6
+43005,Amesbury,Avon,-1.78527,51.17153,323.7
+43006,Wilton,Nadder,-1.86256,51.07639,220.6
+43007,Throop,Stour,-1.84209,50.7639,1073.0
+43008,South Newton,Wylye,-1.87814,51.10747,445.4
+43009,Hammoon,Stour,-2.25744,50.93139,523.1
+43010,Loverley Farm,Allen,-1.99158,50.87661,94.0
+43011,Bodenham,Ebble,-1.76603,51.03764,109.0
+43012,Norton Bavant,Wylye,-2.13218,51.18399,112.4
+43013,Somerford,Mude,-1.74107,50.73981,12.4
+43014,Upavon East,East Avon,-1.80987,51.3025,85.78
+43017,Upavon West,West Avon,-1.80985,51.30241,84.6
+43018,Walford Mill,Allen,-1.98966,50.80584,176.5
+43019,Colesbrook,Shreen Water,-2.27501,51.04913,29.1
+43021,Knapp Mill,Avon,-1.78015,50.74813,1706.0
+43022,Hurn Court,Moors River,-1.82236,50.77149,143.3
+43023,Nunton Bridge,Ebble,-1.7719,51.0364,106.6
+43024,Stockton Park,Wylye,-2.0369,51.15359,254.8
+43025,Moyles Court,Dockens Water,-1.77284,50.87399,17.15
+43026,Salisbury Bourne,Bourne,-1.77976,51.06274,
+43027,All Hallows,Allen,-1.96675,50.91588,36.16
+43028,Codford,Chitterne Brook,-2.04328,51.16059,69.7
+43029,Brixton Deverill,Wylye,-2.20693,51.14072,50.04
+44001,East Stoke Total,Frome,-2.18923,50.68105,414.4
+44002,Baggs Mill,Piddle,-2.12421,50.68807,183.1
+44003,Bridport,Asker,-2.75214,50.73199,49.1
+44004,Dorchester Total,Frome,-2.41425,50.71187,206.0
+44006,Sydling St Nicholas,Sydling Water,-2.52295,50.79523,12.4
+44008,Winterbourne Steepleton,South Winterbourne,-2.52559,50.70604,19.9
+44009,Broadwey,Wey,-2.47321,50.65371,7.0
+44011,Bridport East Bridge,Asker,-2.75214,50.73199,48.5
+44012,South House,Piddle,-2.41644,50.79061,21.5
+44013,Little Puddle,Piddle,-2.40046,50.76707,34.8
+44014,Briantspuddle,Piddle,-2.25334,50.73965,112.0
+44015,Hooke,Hooke,-2.65748,50.79798,11.8
+45001,Thorverton,Exe,-3.51131,50.80417,600.9
+45002,Stoodleigh,Exe,-3.50637,50.94992,421.7
+45003,Woodmill,Culm,-3.39235,50.84316,226.1
+45004,Whitford,Axe,-3.04742,50.75281,288.5
+45005,Dotton,Otter,-3.29434,50.68837,202.5
+45006,Enterwell,Quarme,-3.54556,51.10947,20.4
+45007,Trews Weir,Exe,-3.5277,50.71654,1191.3
+45008,Fenny Bridges,Otter,-3.2573,50.77995,104.2
+45009,Pixton,Exe,-3.51997,51.02311,159.7
+45010,Hartford,Haddeo,-3.49664,51.05435,50.0
+45011,Brushford,Barle,-3.53131,51.02181,128.0
+45012,Cowley,Creedy,-3.55963,50.75966,261.6
+45013,Fairmile,Tale,-3.29443,50.7664,34.4
+45816,Upton,Haddeo,-3.44486,51.05033,6.7
+45817,Upton,Unnamed Stream,-3.44475,51.05114,1.9
+45818,Bessom Bridge,Withiel Florey Stream,-3.45719,51.08399,9.92
+46002,Preston,Teign,-3.61692,50.5595,381.0
+46003,Austins Bridge,Dart,-3.76152,50.47904,247.6
+46005,Bellever,East Dart,-3.89816,50.58238,21.5
+46006,Ermington,Erme,-3.91125,50.36316,43.5
+46007,Dunnabridge,West Dart,-3.91625,50.55175,47.9
+46008,Loddiswell,Avon,-3.80083,50.31424,102.3
+46013,Bovey Parke,Bovey,-3.68286,50.5956,86.95
+46014,Chudleigh,Teign,-3.61594,50.59512,232.28
+47001,Gunnislake,Tamar,-4.22185,50.53127,916.9
+47002,Werrington,Tamar,-4.34645,50.67345,232.1
+47003,Lopwell,Tavy,-4.15012,50.46525,205.9
+47004,Pillaton Mill,Lynher,-4.29897,50.44025,135.5
+47005,Werrington Park,Ottery,-4.35371,50.6554,120.7
+47006,Lifton Park,Lyd,-4.27954,50.63561,222.9
+47007,Puslinch,Yealm,-4.00518,50.3426,54.9
+47008,Tinhay,Thrushel,-4.26755,50.64724,112.7
+47009,Tideford,Tiddy,-4.33117,50.41319,37.2
+47010,Crowford Bridge,Tamar,-4.42614,50.76622,76.7
+47011,Carn Wood,Plym,-4.08322,50.43176,79.2
+47013,Bastreet,Withey Brook,-4.48039,50.56085,16.2
+47014,Horrabridge,Walkham,-4.09835,50.50985,44.6
+47015,Ludbrook,Tavy,-4.14978,50.4935,197.3
+47016,Lumburn Bridge,Lumburn,-4.17499,50.53747,20.5
+47017,Combe Park Farm,Wolf,-4.23961,50.6864,31.1
+47018,Hayne Bridge,Thrushel,-4.24201,50.65805,57.6
+47019,Polson Bridge,Tamar,-4.33045,50.64014,470.3
+47020,Bealsmill,Inny,-4.31854,50.57032,105.0
+47021,Launceston Newport,Kensey,-4.36318,50.64169,33.43
+47022,Newnham Park,Tory Brook,-4.03947,50.40087,15.72
+47023,Tamarstone Bridge,Tamar,-4.43887,50.82364,49.07
+47024,Tavistock Abbey Bridge,Tavy,-4.14267,50.55063,95.63
+47025,Germansweek,Wolf,-4.20342,50.72676,11.31
+48001,Trekeivesteps,Fowey,-4.50086,50.50125,36.8
+48003,Tregony,Fal,-4.91844,50.26602,87.0
+48004,Trengoffe,Warleggan,-4.59532,50.47721,25.3
+48005,Truro,Kenwyn,-5.06056,50.2649,19.1
+48006,Helston County Bridge,Cober,-5.27984,50.09995,37.5
+48007,Ponsanooth,Kennal,-5.13671,50.19641,26.5
+48008,Molingey,St Austell,-4.80041,50.31146,29.9
+48009,Craigshill Wood,St Neot,-4.55967,50.4656,22.7
+48010,Trebrownbridge,Seaton,-4.39454,50.41044,39.1
+48011,Restormel,Fowey,-4.67947,50.43105,169.1
+48012,Trenowth,Fal,-4.89889,50.31916,65.07
+48013,Boscadjack,Cober,-5.25535,50.13113,26.82
+48801,Trenear,Cober,-5.25383,50.13451,26.53
+48803,Bissoe,Carnon,-5.12189,50.22954,33.62
+49001,Denby,Camel,-4.79567,50.47963,208.8
+49002,St Erth,Hayle,-5.43303,50.1568,47.6
+49003,De Lank,De Lank,-4.63778,50.55885,21.5
+49004,Gwills,Gannel,-5.05627,50.3931,41.0
+49005,Bolingey Cocks Bridge,Bolingey Stream,-5.13712,50.33351,16.08
+49006,Camelford,Camel,-4.67805,50.62376,12.86
+49007,Bodmin Dunmere,Camel,-4.75718,50.47418,138.85
+49008,Penberth,Penberth River,-5.63313,50.05007,14.09
+50001,Umberleigh,Taw,-3.98504,50.99547,826.2
+50002,Torrington,Torridge,-4.1373,50.94693,663.0
+50003,Sticklepath,Taw,-3.93746,50.72798,15.6
+50005,Vellake,West Okement,-4.04479,50.69463,13.3
+50006,Woodleigh,Mole,-3.90979,50.97313,327.5
+50007,Taw Bridge,Taw,-3.88637,50.84564,71.4
+50008,Gribbleford Bridge,Lew,-4.09034,50.79334,71.1
+50009,Norley Bridge,Lew,-4.12815,50.77933,20.2
+50010,Rockhay Bridge,Torridge,-4.12236,50.84299,257.8
+50011,Jacobstowe,Okement,-3.99958,50.79967,82.1
+50012,Veraby,Yeo,-3.74913,51.02616,53.7
+50013,Leehamford Bridge,Bray,-3.89227,51.14317,17.6
+50014,Collard Bridge,Yeo,-4.0077,51.10262,79.6
+51001,Swill Bridge,Doniford Stream,-3.30538,51.17773,75.8
+51002,West Luccombe,Horner Water,-3.57798,51.20099,20.8
+51003,Beggearn Huish,Washford,-3.37369,51.14645,36.3
+52001,Wookey,Axe,-2.67844,51.20949,18.2
+52002,Sutton Bingham Reservoir,Yeo,-2.63203,50.90257,30.3
+52003,Halsewater,Halsewater,-3.13274,51.021,87.8
+52004,Ashford Mill,Isle,-2.91197,50.96492,90.1
+52005,Bishops Hull,Tone,-3.13371,51.01907,202.0
+52006,Pen Mill,Yeo,-2.60875,50.94349,213.1
+52007,Chiselborough,Parrett,-2.76871,50.92686,74.8
+52008,Clatworthy Reservoir,Tone,-3.36548,51.0725,18.1
+52009,Fenny Castle,Sheppey,-2.71919,51.19166,59.6
+52010,Lovington,Brue,-2.5868,51.08365,135.2
+52011,Somerton,Cary,-2.71747,51.05863,82.4
+52014,Greenham,Tone,-3.31392,50.97453,57.2
+52015,Wraxall Bridge,Land Yeo,-2.74521,51.44071,23.3
+52016,Currypool Farm,Currypool Stream,-3.11413,51.13769,15.7
+52017,Iwood,Congresbury Yeo,-2.78888,51.36399,66.6
+52020,Gallica Bridge,Gallica Stream,-2.61126,50.88788,16.4
+52025,Milverton,Hillfarrance Brook,-3.26605,51.03557,27.8
+52026,Higher Alham,Alham,-2.46002,51.16707,5.12
+53001,Melksham,Avon,-2.14078,51.37589,665.6
+53002,Semington,Semington Brook,-2.13438,51.34389,157.7
+53003,Bath St James,Avon,-2.3592,51.38439,1595.0
+53004,Compton Dando,Chew,-2.50715,51.38046,129.5
+53005,Midford,Midford Brook,-2.34147,51.34877,147.4
+53006,Frenchay,Frome (Bristol),-2.52349,51.49259,148.9
+53007,Tellisford,Frome (Somerset),-2.28085,51.30662,261.6
+53008,Great Somerford,Avon,-2.05211,51.54867,303.0
+53009,Wellow,Wellow Brook,-2.37401,51.32046,72.6
+53013,Stanley,Marden,-2.06564,51.45568,99.2
+53017,Bitton,Boyd,-2.45961,51.4269,47.9
+53018,Bathford,Avon,-2.30998,51.40183,1552.0
+53019,Crabb Mill,Woodbridge Brook,-2.07524,51.57796,46.6
+53020,Rodbourne,Gauze Brook,-2.09183,51.55511,28.2
+53022,Bath ultrasonic,Avon,-2.37735,51.38435,1605.0
+53023,Fosseway,Sherston Avon,-2.15814,51.58203,89.7
+53024,Brokenborough,Tetbury Avon,-2.12493,51.60273,73.6
+53025,Vallis,Mells,-2.34896,51.24061,119.0
+53026,Frampton Cotterell,Frome (Bristol),-2.48105,51.53774,78.5
+53028,Middlehill,By Brook,-2.26875,51.41796,102.0
+53029,Trowbridge,Biss,-2.21037,51.31995,77.6
+54001,Bewdley,Severn,-2.32127,52.38303,4325.0
+54002,Evesham,Avon,-1.94293,52.092,2210.0
+54003,Vyrnwy Reservoir,Vyrnwy,-3.45542,52.75991,94.3
+54004,Stoneleigh,Sowe,-1.51462,52.35493,262.0
+54005,Montford,Severn,-2.87221,52.72457,2025.0
+54006,Kidderminster Callows Lane,Stour (Worcs),-2.25107,52.38923,324.0
+54007,Broom,Arrow,-1.87509,52.18041,319.0
+54008,Tenbury,Teme,-2.59155,52.31331,1134.4
+54010,Alscot Park,Stour (Warks),-1.69692,52.15368,319.0
+54011,Harford Hill,Salwarpe,-2.19392,52.25538,184.0
+54012,Walcot,Tern,-2.60559,52.70664,852.0
+54013,Cribynau,Clywedog,-3.55554,52.45721,57.0
+54014,Abermule,Severn,-3.23325,52.5534,580.0
+54015,Besford Bridge,Bow Brook,-2.10812,52.11454,156.0
+54016,Rodington,Roden,-2.60982,52.72361,259.0
+54017,Wedderburn Bridge,Leadon,-2.32609,51.90814,293.0
+54018,Hookagate,Rea Brook,-2.79171,52.67812,178.0
+54019,Stareton,Avon,-1.51284,52.34089,347.0
+54020,Yeaton,Perry,-2.83972,52.76778,180.8
+54022,Plynlimon flume,Severn,-3.68999,52.47065,8.7
+54023,Offenham,Badsey Brook,-1.90957,52.10258,95.8
+54024,Burcote,Worfe,-2.37606,52.5553,258.0
+54025,Rhos-y-pentref,Dulas,-3.54599,52.43029,52.7
+54026,Slate Mill,Chelt,-2.15898,51.93574,34.5
+54027,Ebley Mill,Frome,-2.2474,51.74009,198.0
+54028,Llanymynech,Vyrnwy,-3.10871,52.76918,778.0
+54029,Knightsford Bridge,Teme,-2.38929,52.19916,1480.0
+54032,Saxons Lode,Severn,-2.20047,52.04959,6850.0
+54034,Oak Cottage,Dowles Brook,-2.33789,52.38533,40.8
+54036,Hinton on the Green,Isbourne,-1.96687,52.06449,90.7
+54038,Llanyblodwel,Tanat,-3.1103,52.79432,229.0
+54040,Tibberton,Meese,-2.47482,52.78104,167.8
+54041,Eaton upon Tern,Tern,-2.5218,52.80466,192.0
+54043,Upton On Severn,Severn,-2.20122,52.05731,6850.0
+54044,Ternhill,Tern,-2.55346,52.87949,92.6
+54045,Perry Farm,Perry,-2.97174,52.86575,49.1
+54046,Cosford,Worfe,-2.3261,52.63933,54.9
+54047,Ruyton Bridge,Perry,-2.88681,52.79495,155.0
+54048,Wellesbourne,Dene,-1.60242,52.19785,102.0
+54049,Princes Drive Weir,Leam,-1.54905,52.28621,362.0
+54050,Eathorpe,Leam,-1.43146,52.3162,300.0
+54052,Ternhill,Bailey Brook,-2.55346,52.87958,34.4
+54053,Ludlow,Corve,-2.72116,52.37264,164.0
+54054,Onibury,Onny,-2.803,52.4061,235.0
+54057,Haw Bridge,Severn,-2.22706,51.94918,9895.0
+54058,Stoke Park,Stoke Park Brook,-2.52983,52.83034,14.3
+54059,Allford,Allford Brook,-2.51459,52.79714,10.2
+54060,Sandyford Bridge,Potford Brook,-2.54306,52.79603,25.0
+54061,Hodnet,Hodnet Brook,-2.5539,52.8554,5.1
+54062,Stoke on Tern,Stoke Brook,-2.54044,52.84827,13.7
+54063,Prestwood Hospital,Stour (Worcs),-2.19723,52.47312,89.9
+54065,Stanton,Roden,-2.64682,52.81268,210.0
+54066,Platt,Platt Brook,-2.55322,52.80236,15.7
+54067,Swindon,Smestow Brook,-2.20595,52.51275,81.3
+54069,Lower Hordley,Springs Brook,-2.91193,52.86128,10.4
+54070,Walford,War Brook,-2.84338,52.77279,22.5
+54080,Dolwen,Severn,-3.48852,52.4552,174.0
+54081,Bryntail,Clywedog,-3.60113,52.46832,49.0
+54083,Horton,Crow Brook,-2.47819,52.72358,16.7
+54084,Parkend,Cannop Brook,-2.55671,51.76469,31.5
+54085,Cannop Cross,Cannop Brook,-2.56843,51.80077,10.4
+54087,Childs Ercall,Allford Brook,-2.49536,52.80154,4.7
+54088,Berkeley Kennels,Little Avon,-2.46093,51.68652,134.0
+54089,Bredon,Avon,-2.11708,52.03349,2674.0
+54090,Tanllwyth Flume,Tanllwyth,-3.70585,52.47451,0.92
+54091,Hafren Flume,Severn,-3.70495,52.47522,3.58
+54092,Hore Flume,Hore,-3.70158,52.47107,3.17
+54094,Crudgington,Strine,-2.53409,52.75427,95.65
+54095,Buildwas,Severn,-2.52526,52.63618,3717.0
+54096,Wards Bridge,Hadley Brook,-2.19162,52.26626,53.43
+54097,Upper Hore flume,Hore,-3.72252,52.46783,1.62
+54098,Cambridge,Cam,-2.3623,51.73034,29.3
+54099,Coley Mill,Coley Brook,-2.32782,52.77057,37.3
+54100,Whitleyford Bridge,Lonco Brook,-2.37753,52.81168,33.6
+54102,Lilbourne,Avon,-1.17323,52.39514,108.9
+54106,Shipston,Stour (Warks),-1.62155,52.06242,185.2
+54107,Studley,Arrow,-1.88954,52.27409,92.9
+54110,Deerhurst,Severn,-2.19358,51.96924,9877.0
+54112,Kites Hardwick,Leam,-1.31565,52.31346,99.6
+54113,Southam,Itchen,-1.40799,52.26086,105.5
+54114,Warwick,Avon,-1.56293,52.285,1012.0
+54115,Wyre Piddle,Piddle Brook,-2.05606,52.12679,104.89
+54906,Kidderminster Gilt Edge,Stour (Worcs),-2.25269,52.38896,324.0
+54907,Broom,Arrow,-1.87564,52.18059,319.0
+55002,Belmont,Wye,-2.75233,52.04518,1895.9
+55003,Lugwardine,Lugg,-2.65968,52.06179,885.8
+55004,Abernant,Irfon,-3.62126,52.1013,72.8
+55005,Rhayader,Wye,-3.51325,52.29682,166.8
+55006,Caban Coch Reservoir,Elan,-3.57529,52.26813,184.0
+55007,Erwood,Wye,-3.35038,52.09101,1282.1
+55008,Cefn Brwyn,Wye,-3.72385,52.43854,10.5
+55009,Kentchurch,Monnow,-2.84623,51.92138,357.4
+55010,Pant Mawr,Wye,-3.70134,52.42826,27.2
+55011,Llandewi,Ithon,-3.31468,52.30535,111.4
+55012,Cilmery,Irfon,-3.47003,52.14601,244.2
+55013,Titley Mill,Arrow,-2.98481,52.22059,126.4
+55014,Byton,Lugg,-2.93312,52.27666,203.3
+55015,Tafolog,Honddu,-3.05405,51.95875,25.1
+55016,Disserth,Ithon,-3.42898,52.20961,358.0
+55017,Carreg-y-wen,Chwefru,-3.46644,52.16704,29.0
+55018,Yarkhill,Frome,-2.56349,52.08135,144.0
+55020,Cholstrey Mill,Pinsley Brook,-2.7897,52.23465,24.2
+55021,Butts Bridge,Lugg,-2.73038,52.22642,371.0
+55022,Mitchel Troy,Trothy,-2.72286,51.79746,142.0
+55023,Redbrook,Wye,-2.68627,51.79634,4010.0
+55025,Three Cocks,Llynfi,-3.21691,52.03048,132.0
+55026,Ddol Farm,Wye,-3.50328,52.2968,174.0
+55027,Sandford Bridge,Rudhall Brook,-2.52401,51.9288,13.2
+55028,Bishops Frome,Frome,-2.48847,52.13705,77.7
+55029,Grosmont,Monnow,-2.85041,51.91893,354.0
+55030,Dol-y-mynach,Claerwen,-3.59792,52.24535,95.3
+55031,Three Elms,Yazor Brook,-2.74366,52.06911,42.3
+55032,Caban Dam,Elan,-3.57214,52.26912,184.0
+55033,Gwy flume,Wye,-3.73172,52.45361,3.88
+55034,Cyff flume,Cyff,-3.73123,52.44296,3.07
+55035,Iago flume,Iago,-3.73017,52.4539,1.08
+55036,Marstow Mill,Garren,-2.64023,51.87092,91.0
+56001,Chainbridge,Usk,-2.94858,51.74519,911.7
+56002,Rhiwderin,Ebbw,-3.07157,51.59386,216.5
+56003,The Forge Brecon,Honddu,-3.38246,51.95766,62.1
+56004,Llandetty,Usk,-3.27011,51.87529,543.9
+56005,Ponthir,Lwyd,-2.96983,51.62669,98.1
+56006,Trallong,Usk,-3.53333,51.95441,183.8
+56007,Pont-Hen-Hafod,Senni,-3.55969,51.91738,19.9
+56011,Wattsville,Sirhowy,-3.14813,51.61401,76.1
+56012,Millbrook,Grwyne,-3.10402,51.85172,82.2
+56013,Pont-Ar-Yscir,Yscir,-3.4518,51.96316,62.8
+56014,Usk Reservoir,Usk,-3.68933,51.94778,17.0
+56015,Olway Inn,Olway Brook,-2.89175,51.70516,105.1
+56019,Aberbeeg,Ebbw,-3.14504,51.70635,71.7
+57001,Taf Fechan Reservoir,Taf Fechan,-3.36446,51.79602,33.7
+57002,Llwynon Reservoir,Taf Fawr,-3.43409,51.79039,43.0
+57003,Tongwynlais,Taff,-3.25315,51.5285,486.9
+57004,Abercynon,Cynon,-3.33209,51.65209,106.0
+57005,Pontypridd,Taff,-3.33076,51.59873,454.8
+57006,Trehafod,Rhondda,-3.36921,51.60935,100.5
+57007,Fiddlers Elbow,Taff,-3.3178,51.64777,194.5
+57008,Llanedeyrn,Rhymney,-3.11981,51.53265,178.7
+57009,St Fagans,Ely,-3.26727,51.48559,145.0
+57010,Lanelay,Ely,-3.39471,51.53476,39.4
+57014,Bargoed,Rhymney,-3.22211,51.67783,63.2
+57015,Merthyr Tydfil,Taff,-3.38764,51.75182,104.1
+57017,Tynewydd,Rhondda Fawr,-3.54515,51.67677,16.6
+58001,Bridgend,Ogmore,-3.58076,51.5032,158.0
+58002,Resolven,Neath,-3.71574,51.70148,190.9
+58003,Ewenny Priory,Ewenny,-3.5657,51.49031,62.9
+58004,Cwmafan,Afan,-3.74772,51.62258,81.5
+58005,Brynmenyn,Ogmore,-3.58248,51.54803,74.3
+58006,Pontneddfechan,Mellte,-3.57367,51.76178,65.8
+58007,Coytrahen,Llynfi,-3.60143,51.55724,50.2
+58008,Cilfrew,Dulais,-3.76862,51.69227,43.0
+58009,Keepers Lodge,Ewenny,-3.55718,51.49255,62.5
+58010,Esgair Carnau,Hepste,-3.49607,51.8091,11.0
+58011,Gigman Bridge,Thaw,-3.415,51.43541,49.2
+58012,Marcroft Weir,Afan,-3.77568,51.60418,87.8
+59001,Ynystanglws,Tawe,-3.90269,51.68152,227.7
+59002,Tir-y-dail,Loughor,-3.99774,51.7957,46.4
+59004,Gurnos,Twrch,-3.78028,51.76883,49.89
+60001,Ty Castell,Tywi,-4.19217,51.86171,1087.8
+60002,Felin Mynachdy,Cothi,-4.16803,51.88097,297.8
+60003,Clog-y-Fran,Taf,-4.55718,51.8151,217.3
+60004,Glasfryn Ford,Dewi Fawr,-4.48325,51.82977,36.67
+60005,Llandovery,Bran,-3.79099,51.99388,66.8
+60006,Glangwili,Gwili,-4.2815,51.87394,129.5
+60007,Dolau Hirion,Tywi,-3.80539,52.01077,231.8
+60008,Ystradffin,Tywi,-3.77476,52.11012,89.8
+60009,Felin-y-cwm,Sawdde,-3.8742,51.92274,77.5
+60010,Capel Dewi,Tywi,-4.20146,51.86314,1090.4
+60012,Ddol Las,Twrch,-3.97101,52.07778,20.7
+60013,Pont Ynys Brechfa,Cothi,-4.12994,51.9502,261.6
+60016,Manorafon,Tywi,-3.95272,51.89827,580.37
+61001,Prendergast Mill,Western Cleddau,-4.97005,51.82037,197.6
+61002,Canaston Bridge,Eastern Cleddau,-4.79737,51.80295,183.1
+61003,Cilrhedyn Bridge,Gwaun,-4.90613,51.97677,31.3
+61005,Treffgarne,Western Cleddau,-4.96694,51.87958,
+62001,Glanteifi,Teifi,-4.56174,52.04541,893.6
+62002,Llanfair,Teifi,-4.2857,52.04209,510.0
+62003,Pont Llanio,Teifi,-3.97311,52.19373,175.38
+63001,Pont Llolwyn,Ystwyth,-4.07238,52.37545,169.6
+63002,Llanbadarn Fawr,Rheidol,-4.05762,52.40334,182.1
+63003,Llanrhystud,Wyre,-4.14017,52.30681,40.6
+63004,Cwm Ystwyth,Ystwyth,-3.7767,52.34799,32.1
+64001,Dyfi Bridge,Dyfi,-3.85464,52.60087,471.3
+64002,Pont-y-Garth,Dysynni,-4.02436,52.63986,75.1
+64004,Cemmaes Road,Twymyn,-3.73699,52.62758,111.45
+64006,Dolybont,Leri,-4.01163,52.47326,47.2
+64010,Tyddyn Gwladys,Mawddach,-3.87835,52.82334,63.1
+64011,Llaw'r Cae,Cerist,-3.74963,52.73156,5.35
+65001,Beddgelert,Glaslyn,-4.10052,53.00878,68.6
+65004,Bontnewydd,Gwyrfai,-4.26673,53.11457,47.9
+65005,Pencaenewydd,Erch,-4.38203,52.93684,18.1
+65006,Peblic Mill,Seiont,-4.25196,53.13625,74.4
+65007,Garndolbenmaen,Dwyfor,-4.23672,52.96253,52.4
+65008,Nant Peris,Peris,-4.08,53.10064,11.96
+65014,Hafod Wydr,Colwyn,-4.12747,53.03006,6.58
+65015,Pont Y Cim,Llyfni,-4.32824,53.04563,48.14
+66001,Pont-y-Cambwll,Clwyd,-3.39475,53.22752,404.0
+66002,Pant yr Onen,Elwy,-3.46777,53.2216,220.0
+66004,Bodfari,Wheeler,-3.34224,53.23149,62.9
+66005,Ruthin Weir,Clwyd,-3.31369,53.12284,95.3
+66006,Pont-y-Gwyddel,Elwy,-3.57093,53.23263,194.0
+66011,Cwmlanerch,Conwy,-3.79206,53.10638,344.5
+66012,Pont Gethin,Lledr,-3.81321,53.06779,72.8
+66025,Pont Dafydd,Clwyd,-3.43455,53.2624,430.81
+67001,Bala,Dee,-3.57631,52.90845,261.6
+67003,Llyn Brenig outflow,Brenig,-3.53188,53.07263,20.2
+67005,Brynkinalt Weir,Ceiriog,-3.05017,52.92862,113.7
+67006,Druid,Alwen,-3.43016,52.98113,184.7
+67008,Pont-y-Capel,Alyn,-2.99378,53.07949,227.1
+67009,Rhydymwyn,Alyn,-3.19272,53.19174,77.8
+67010,Cynefail,Gelyn,-3.72485,52.96327,13.1
+67013,Plas Rhiwedog,Hirnant,-3.56842,52.90117,33.9
+67015,Manley Hall,Dee,-2.97189,52.96651,1013.18
+67017,Llyn Celyn outflow,Tryweryn,-3.6671,52.94513,59.9
+67018,New Inn,Dee,-3.67469,52.86284,53.9
+67023,Tattenhall,Golborne Brook,-2.77993,53.12737,17.7
+67025,Bowling Bank,Clywedog,-2.90233,53.0281,98.6
+67027,Ironbridge,Dee,-2.8719,53.13417,1674.1
+67028,Llandrillo,Ceidiog,-3.43706,52.9231,36.5
+67029,Pen-y-felin Fawr,Trystion,-3.39126,52.95399,12.3
+67033,Chester Suspension Bridge,Dee,-2.88412,53.18756,1816.8
+68001,Ashbrook,Weaver,-2.49253,53.16766,622.0
+68002,Picton,Gowy,-2.83644,53.23678,156.2
+68003,Rudheath,Dane,-2.49957,53.24218,407.1
+68004,Marshfield Bridge,Wistaston Brook,-2.4881,53.09301,92.7
+68005,Audlem,Weaver,-2.51898,52.98357,207.0
+68006,Hulme Walfield,Dane,-2.23336,53.1763,150.0
+68007,Lostock Gralam,Wincham Brook,-2.45586,53.2776,148.0
+68010,Ford Lane,Fender,-3.08274,53.38402,18.4
+68011,Gore Farm,Arley Brook,-2.45717,53.31533,36.5
+68015,Huxley,Gowy,-2.75429,53.15664,49.0
+68018,Congleton Park,Dane,-2.20937,53.16638,145.0
+68020,Bridge Trafford,Gowy,-2.828,53.23417,156.0
+68021,Acton Lane,Arrowe Brook,-3.12483,53.39522,17.87
+68044,Hug Bridge,Dane,-2.10479,53.16962,72.9
+69001,Irlam Weir,Mersey,-2.41152,53.43802,679.0
+69002,Adelphi Weir,Irwell,-2.26641,53.48525,559.4
+69003,Scotland Weir,Irk,-2.2408,53.48918,72.5
+69004,Bottoms Reservoir,Etherow,-1.96682,53.47063,78.2
+69005,Little Woolden Hall,Glaze Brook,-2.4757,53.4408,152.0
+69006,Dunham Massey,Bollin,-2.41238,53.38393,257.6
+69007,Ashton Weir,Mersey,-2.34409,53.43835,660.0
+69008,Stanneylands,Dean,-2.23239,53.34368,58.87
+69012,Wilmslow,Bollin,-2.22714,53.33012,72.5
+69013,Partington,Sinderland Brook,-2.41435,53.41021,44.8
+69015,Compstall,Etherow,-2.05802,53.41371,156.0
+69017,Marple Bridge,Goyt,-2.05607,53.40492,183.0
+69019,Eccles,Worsley Brook,-2.37409,53.4785,24.87
+69020,London Road,Medlock,-2.22921,53.47429,57.5
+69022,Irwell Vale,Irwell,-2.31748,53.67755,101.0
+69023,Blackford Bridge,Roch,-2.29302,53.56591,186.0
+69024,Farnworth Weir,Croal,-2.38884,53.55736,145.0
+69025,Manchester Racecourse,Irwell,-2.27178,53.49953,557.0
+69026,Kearsley,Irwell,-2.3723,53.54655,528.0
+69027,Portwood,Tame,-2.14143,53.42354,150.0
+69028,Brinksway,Mersey,-2.17492,53.40701,517.36
+69030,Causey Bridges,Sankey Brook,-2.62225,53.42509,154.0
+69032,Kirkby,Alt,-2.91818,53.47818,90.1
+69033,Sefton,Alt,-2.96611,53.5052,100.0
+69035,Bury Bridge,Irwell,-2.30788,53.5941,155.0
+69037,Westy,Mersey,-2.56033,53.39069,2030.0
+69039,New Viaduct Street,Medlock,-2.20792,53.48484,55.9
+69041,Broomstairs,Tame,-2.09595,53.45497,113.0
+69042,Naden Reservoir,Ding Brook,-2.22842,53.65342,2.2
+69043,Collyhurst Weir,Irk,-2.22982,53.4937,72.3
+69044,Bury Ground,Irwell,-2.30387,53.59872,139.9
+69045,Bollington Mill Total,Bollin,-2.40656,53.37964,256.7
+69046,Bradshaw Tennis Club,Bradshaw Brook,-2.40444,53.60587,36.87
+69047,Littleborough,Roch,-2.09205,53.64536,14.8
+69048,Uppermill,Tame,-2.00906,53.5427,40.6
+69803,Rochdale,Roch,-2.17982,53.61072,111.0
+70001,Rivington Reservoirs,Douglas,-2.55909,53.60236,39.4
+70002,Wanes Blades Bridge,Douglas,-2.79308,53.60707,198.0
+70003,Wigan,Douglas,-2.62605,53.54923,55.3
+70004,Croston Mill,Yarrow,-2.75977,53.65557,74.4
+70005,Littlewood Bridge,Lostock,-2.76296,53.67096,56.0
+71001,Samlesbury,Ribble,-2.62468,53.76842,1145.0
+71002,Stocks Reservoir,Hodder,-2.42946,53.98643,37.4
+71003,Croasdale Flume,Croasdale Beck,-2.44985,53.98661,10.4
+71004,Whalley Weir,Calder,-2.41273,53.82005,316.0
+71005,Bottoms Beck flume,Bottoms Beck,-2.39053,54.00389,10.6
+71006,Henthorn,Ribble,-2.42419,53.84802,456.0
+71008,Hodder Place,Hodder,-2.44939,53.85446,261.0
+71009,New Jumbles Rock,Ribble,-2.45354,53.83373,1053.0
+71010,Barden Lane,Pendle Water,-2.24945,53.81232,108.0
+71011,Arnford,Ribble,-2.24767,53.99605,204.0
+71013,Ewood,Darwen,-2.49062,53.73128,39.5
+71014,Blue Bridge,Darwen,-2.66177,53.74462,128.0
+71015,Footholme Flume,Dunsop,-2.53058,53.97092,25.0
+72002,St Michaels,Wyre,-2.81759,53.86362,275.0
+72003,Wray,Hindburn,-2.60575,54.10591,84.0
+72004,Caton,Lune,-2.72089,54.08162,983.0
+72005,Killington,Lune,-2.5824,54.30989,219.0
+72006,Kirkby Lonsdale,Lune,-2.59173,54.19415,507.1
+72007,upstream of A6,Brock,-2.74295,53.85885,32.0
+72008,Garstang,Wyre,-2.78062,53.89593,114.0
+72009,Wennington,Wenning,-2.58995,54.12515,142.0
+72011,Brigflatts,Rawthey,-2.55571,54.31433,200.0
+72014,Galgate,Conder,-2.79217,53.99177,28.5
+72015,Lunes Bridge,Lune,-2.59929,54.42006,141.5
+72016,Scorton Weir,Wyre,-2.7614,53.94359,88.8
+72017,Hornby,Wenning,-2.63543,54.10947,232.0
+72817,Hollowforth Hall,New Mill Brook,-2.75575,53.82151,31.9
+73002,Low Nibthwaite,Crake,-3.08518,54.28463,73.0
+73003,Burneside,Kent,-2.75956,54.353,73.6
+73005,Sedgwick,Kent,-2.75596,54.28005,209.0
+73006,Eel House Bridge,Cunsey Beck,-2.97114,54.33814,18.7
+73008,Beetham,Bela,-2.77411,54.21843,131.0
+73009,Sprint Mill,Sprint,-2.74816,54.35816,34.6
+73010,Newby Bridge,Leven,-2.97498,54.26811,247.0
+73011,Mint Bridge,Mint,-2.73353,54.34355,65.8
+73012,Victoria Bridge,Kent,-2.74424,54.33117,183.0
+73013,Miller Bridge House,Rothay,-2.97069,54.42927,64.0
+73014,Jeffy Knotts,Brathay,-2.9884,54.42204,57.4
+73015,High Keer Weir,Keer,-2.73133,54.14065,48.0
+73016,Calgarth,Trout Beck,-2.93148,54.39083,24.49
+73017,Bowston,Kent,-2.77196,54.36177,70.61
+74001,Duddon Hall,Duddon,-3.23795,54.29552,85.66
+74002,Galesyke,Irt,-3.33376,54.42247,44.2
+74003,Bleach Green,Ehen,-3.41702,54.52551,44.2
+74005,Braystones,Ehen,-3.52938,54.44017,125.5
+74006,Calder Hall,Calder,-3.48892,54.42666,44.8
+74007,Cropple How,Esk,-3.33904,54.368,70.2
+74008,Ulpha,Duddon,-3.21806,54.34187,47.9
+75001,Thirlmere Reservoir,St Johns Beck,-3.06372,54.56604,42.1
+75002,Camerton,Derwent,-3.49437,54.66035,663.0
+75003,Ouse Bridge,Derwent,-3.2441,54.67787,363.0
+75004,Southwaite Bridge,Cocker,-3.34814,54.64041,116.6
+75005,Portinscale,Derwent,-3.15956,54.60456,235.0
+75006,Braithwaite,Newlands Beck,-3.17728,54.6048,33.9
+75007,Threlkeld,Glenderamackin,-3.05041,54.61376,64.5
+75009,Low Briery,Greta,-3.10758,54.60803,145.6
+75010,Ullock,Marron,-3.43444,54.6005,27.7
+75016,Scalehill,Cocker,-3.31818,54.58088,64.0
+75017,Bullgill,Ellen,-3.40539,54.73242,96.0
+75018,Seaton Mill,Derwent,-3.52207,54.65055,665.8
+76001,Burnbanks,Haweswater Beck,-2.76251,54.53622,33.0
+76002,Warwick Bridge,Eden,-2.82804,54.9022,1366.7
+76003,Udford,Eamont,-2.65938,54.66733,396.2
+76004,Eamont Bridge,Lowther,-2.73755,54.64991,158.5
+76005,Temple Sowerby,Eden,-2.6144,54.64839,616.4
+76007,Sheepmount,Eden,-2.95286,54.9049,2286.5
+76008,Greenholme,Irthing,-2.80304,54.9147,334.6
+76009,Holm Hill,Caldew,-2.96905,54.81272,147.2
+76010,Harraby Green,Petteril,-2.91827,54.88178,160.0
+76011,Coalburn,Coal Burn,-2.4815,55.09348,1.5
+76014,Kirkby Stephen,Eden,-2.35188,54.48208,69.4
+76015,Pooley Bridge,Eamont,-2.81863,54.61705,145.0
+76017,Great Corby,Eden,-2.83051,54.88995,1373.0
+76019,Stockdalewath,Roe Beck,-2.95407,54.79631,62.99
+76020,Newbiggin Bridge,Petteril,-2.88059,54.85293,145.82
+76021,Great Musgrave Bridge,Eden,-2.3647,54.51273,223.1
+76022,Cummersdale,Caldew,-2.94432,54.86572,244.0
+76023,Dacre Bridge,Dacre Beck,-2.83785,54.62881,36.0
+77001,Netherby,Esk,-2.9552,55.03669,841.7
+77002,Canonbie,Esk,-2.94623,55.06626,495.0
+77003,Rowanburnfoot,Liddel Water,-2.9184,55.0744,319.0
+77004,Mossknowe,Kirtle Water,-3.11959,55.01281,72.0
+78001,St Mungos Manse,Annan,-3.37166,55.06623,730.3
+78003,Brydekirk,Annan,-3.26773,55.02165,925.0
+78004,Redhall,Kinnel Water,-3.45021,55.16743,76.1
+78005,Bridgemuir,Kinnel Water,-3.42823,55.14633,229.0
+78006,Woodfoot,Annan,-3.41903,55.29395,217.0
+79001,Afton Reservoir,Afton Water,-4.15898,55.31996,8.5
+79002,Friars Carse,Nith,-3.69075,55.14868,799.0
+79003,Hall Bridge,Nith,-4.07911,55.39298,155.0
+79004,Capenoch,Scar Water,-3.81704,55.22737,142.0
+79005,Fiddlers Ford,Cluden Water,-3.68057,55.0985,238.0
+79006,Drumlanrig,Nith,-3.79952,55.27462,471.0
+79007,Kirkblain Bridge,Lochar Water,-3.5237,55.01061,125.0
+80001,Dalbeattie,Urr,-3.84097,54.92988,199.0
+80002,Glenlochar,Dee,-3.97914,54.95554,809.0
+80003,Loch Dee,White Laggan Burn,-4.4012,55.07382,5.7
+80004,Loch Dee,Green Burn,-4.38189,55.08289,2.6
+80005,Loch Dee,Dargall Lane,-4.42845,55.07855,2.1
+80006,Loch Dee,Blackwater,-4.38605,55.0881,15.6
+81001,Penwhirn Reservoir,Penwhirn Burn,-4.92715,54.98391,18.2
+81002,Newton Stewart,Cree,-4.48053,54.95726,368.0
+81003,Airyhemming,Luce,-4.83972,54.90074,171.0
+81004,Low Malzie,Bladnoch,-4.52208,54.85902,334.0
+81005,Barsolus,Piltanton Burn,-4.95133,54.86585,34.2
+81006,Minnoch Bridge,Water of Minnoch,-4.5635,55.03887,141.0
+81007,Rusko,Water of Fleet,-4.19762,54.90579,77.0
+82001,Robstone,Girvan,-4.80772,55.25881,245.5
+82002,Auchendrane,Doon,-4.62705,55.40998,323.8
+82003,Balnowlart,Stinchar,-4.96832,55.10718,341.0
+83002,Dalry,Garnock,-4.71679,55.70198,88.8
+83003,Catrine,Ayr,-4.33659,55.50463,166.3
+83004,Langholm,Lugar Water,-4.36207,55.4668,181.0
+83005,Shewalton,Irvine,-4.62779,55.59709,380.7
+83006,Mainholm,Ayr,-4.59255,55.46104,574.0
+83007,Eglinton Castle,Lugton Water,-4.67766,55.64281,54.6
+83008,Dreghorn,Annick Water,-4.61938,55.61141,90.6
+83009,Kilwinning,Garnock,-4.69206,55.64564,183.8
+83010,Newmilns,Irvine,-4.33103,55.60611,72.8
+83011,Wellwood,Ayr,-4.12367,55.51096,60.0
+83012,Welltrees,Gass Water,-4.1726,55.49232,13.9
+83013,Glenfield,Irvine,-4.49356,55.60118,218.0
+84001,Killermont,Kelvin,-4.30762,55.90624,335.1
+84002,Muirshiel,Calder,-4.70189,55.8377,12.4
+84003,Hazelbank,Clyde,-3.85415,55.68736,1092.9
+84004,Sills of Clyde,Clyde,-3.70506,55.66312,741.8
+84005,Blairston,Clyde,-4.06831,55.79734,1704.2
+84006,Bridgend,Kelvin,-4.12901,55.94911,63.7
+84007,Forgewood,South Calder Water,-3.99364,55.80424,93.0
+84008,Redlees,Rotten Calder Water,-4.10898,55.81909,51.3
+84009,Kirkmuirhill,Nethan,-3.89367,55.66507,66.0
+84011,Craigend,Gryfe,-4.5348,55.8645,85.5
+84012,Hawkhead,White Cart Water,-4.39854,55.83607,234.9
+84013,Daldowie,Clyde,-4.12195,55.82999,1903.1
+84014,Fairholm,Avon Water,-3.98682,55.7442,265.5
+84015,Dryfield,Kelvin,-4.18222,55.93892,235.4
+84016,Condorrat,Luggie Water,-4.0196,55.92952,33.9
+84017,Milliken Park,Black Cart Water,-4.53779,55.82523,103.1
+84018,Tulliford Mill,Clyde,-3.75902,55.64374,932.6
+84019,Calderpark,North Calder Water,-4.10778,55.83755,129.8
+84020,Milton of Campsie,Glazert Water,-4.1537,55.95995,51.9
+84022,Maidencots,Duneaton,-3.69537,55.5158,110.3
+84023,Auchengeich,Bothlin Burn,-4.11414,55.91939,35.7
+84024,Hillend,North Calder Water,-3.87519,55.88932,19.9
+84025,Oxgang,Luggie Water,-4.13809,55.93541,87.7
+84026,Milngavie,Allander Water,-4.30906,55.93341,32.8
+84027,Calderbank,North Calder Water,-3.97365,55.84079,60.6
+84029,Candermill,Cander Water,-3.96691,55.70089,24.5
+84030,Overlee,White Cart Water,-4.26685,55.78988,106.4
+84031,Watstone,Watstone Burn,-3.96957,55.70024,5.0
+84032,Giffnock,Bagabout Burn,-4.30682,55.80783,4.92
+84033,MacQuisten Bridge,White Cart Water,-4.28646,55.82494,120.0
+84035,Waterside,Kittoch Water,-4.24066,55.77868,16.8
+84037,Happendon,Douglas Water,-3.8168,55.5802,97.0
+84040,Abington,Clyde,-3.69057,55.48692,251.8
+85001,Linnbrane,Leven,-4.57598,55.98877,784.3
+85002,Gaidrew,Endrick Water,-4.43451,56.0481,219.9
+85003,Glen Falloch,Falloch,-4.71764,56.33774,80.3
+85004,Luss,Luss Water,-4.64412,56.10034,35.3
+86001,Dalinlongart,Little Eachaig,-4.98002,55.99502,30.8
+86002,Eckford,Eachaig,-4.98663,56.01557,139.9
+88001,Dippen,Carradale,-5.49652,55.58275,58.5
+89002,Victoria Bridge,Linne nam Beathach,-4.81356,56.53983,50.5
+89003,Glen Orchy,Orchy,-4.85275,56.44658,251.2
+89004,Glen Strae,Strae,-5.0008,56.42522,36.2
+89005,Inverlochy,Lochy,-4.92367,56.40496,47.7
+89006,Barnaline Lodge,Avich,-5.27805,56.27474,32.1
+89007,Braevallich,Abhainn a' Bhealaich,-5.29625,56.2164,24.1
+89008,Eas Daimh,Eas Daimh,-4.85589,56.40772,4.5
+89009,Succoth,Eas a' Ghaill,-4.90751,56.39644,9.7
+90003,Claggan,Nevis,-5.08884,56.82151,69.2
+91002,Camisky,Lochy,-5.04652,56.87847,1252.0
+91802,Intake,Allt Leachdach,-4.85409,56.86164,6.5
+92001,Shielfoot,Shiel,-5.82089,56.76455,256.0
+92002,Polloch,Allt Coire nan Con,-5.61366,56.75845,8.05
+92003,Ariundle,Strontian,-5.55678,56.70722,25.17
+92004,Craigendarroch,Aline,-5.74944,56.56987,103.8
+93001,New Kelso,Carron,-5.43,57.42954,137.8
+93002,Killilan,Ling,-5.42484,57.31882,132.83
+94001,Poolewe,Ewe,-5.59908,57.76144,441.1
+94003,Faich Bhiorach,Kerry,-5.6607,57.69021,42.33
+95001,Little Assynt,Inver,-5.1526,58.17412,137.5
+95002,Inverbroom,Broom,-5.05824,57.81047,141.4
+95003,Langwell Lodge,Langwell,-5.10059,57.97482,30.9
+95004,Elphin,Abhainn a'Chnocain,-5.03101,58.05185,10.58
+95005,Laxford Bridge,Laxford,-4.99146,58.37222,112.97
+95006,Rhidorroch,Rhidorroch,-5.11716,57.91091,77.38
+96001,Halladale,Halladale,-3.90302,58.47881,204.6
+96002,Apigill,Naver,-4.20775,58.48007,477.0
+96003,Strathy Bridge,Strathy,-4.0026,58.55872,111.8
+96004,Allnabad,Strathmore,-4.64462,58.34718,105.0
+96005,Dionard,Dionard,-4.8212,58.49807,73.1
+96006,Borgie Bridge,Borgie,-4.28801,58.49562,138.75
+97002,Halkirk,Thurso,-3.493,58.5155,412.8
+101001,Alverstone Mill,Eastern Yar,-1.1849,50.66812,57.5
+101002,Shide,Medina,-1.28844,50.6905,29.8
+101003,Carisbrooke Mill,Lukely Brook,-1.30633,50.69516,16.2
+101004,Burnt House,Eastern Yar,-1.17675,50.66464,59.6
+101005,Budbridge,Eastern Yar,-1.25001,50.64895,22.5
+101006,Waightshale,Wroxall Stream,-1.24206,50.65115,15.8
+101007,Burnt House,Scotchells Brook,-1.17649,50.66356,9.2
+102001,Bodffordd,Cefni,-4.35659,53.26538,21.7
+105001,Skeabost,Snizort,-6.31124,57.45437,80.55
+106001,Creed Bridge,Creed,-6.42423,58.20454,43.4
+106002,Laxdale,Laxdale,-6.89359,57.86871,10.64
+106003,Mill Croft,Abhainn Roag,-7.36833,57.28866,13.81
+107001,Durkadale,Durkadale,-3.23217,59.10853,19.03
+108001,Weisdale Mill,Weisdale Burn,-1.2886,60.25933,12.6
+201002,Dudgeon Bridge,Fairywater,-7.37271,54.62884,158.4
+201005,Camowen Terrace,Camowen,-7.28785,54.60357,276.6
+201006,Campsie Bridge,Drumragh,-7.28997,54.59589,320.0
+201007,Burndennet,Burn Dennet,-7.42019,54.88932,148.3
+201008,Castlederg,Derg,-7.58948,54.70529,335.4
+201009,Crosh,Owenkillew,-7.35114,54.72642,440.1
+201010,Drumnabuoy House,Mourne,-7.45984,54.81035,1843.8
+202001,Ardnargle,Roe,-6.94673,55.06452,364.4
+202002,Drumahoe,Faughan,-7.27587,54.98123,273.1
+203010,Maydown Bridge,Blackwater,-6.73827,54.40946,970.2
+203011,Dromona,Main,-6.36523,54.91773,243.5
+203012,Ballinderry Bridge,Ballinderry,-6.56471,54.65813,430.2
+203017,Dynes Bridge,Upper Bann,-6.39486,54.39783,316.3
+203018,Antrim,Six-Mile Water,-6.22363,54.71503,277.6
+203019,Glenone Bridge,Claudy,-6.50079,54.87266,126.3
+203020,Moyola New Bridge,Moyola,-6.51548,54.75354,304.3
+203021,Curry's Bridge,Kellswater,-6.2816,54.80962,126.3
+203022,Derrymeen Bridge,Blackwater,-7.03778,54.42201,182.9
+203024,Gamble's Bridge,Cusher,-6.38868,54.36172,170.7
+203025,Martin's Bridge,Callan,-6.62695,54.41256,166.9
+203026,Glenavy,Glenavy,-6.22342,54.5877,44.6
+203027,Ballee,Braid,-6.29156,54.84925,177.2
+203028,Whitehill,Agivey,-6.61989,55.01386,100.5
+203029,Ballyclare,Six-Mile Water,-6.01006,54.74341,58.4
+203033,Bannfield,Upper Bann,-6.10816,54.24067,101.7
+203038,Rocky Mountain,Rocky,-6.09719,54.17247,7.7
+203039,Tullynewey,Clogh,-6.30278,54.93438,98.7
+203040,Movanagher,Lower Bann,-6.54714,54.97697,5209.8
+203042,Cidercourt Bridge,Crumlin,-6.24394,54.62416,55.3
+203043,Shanmoy,Oonawater,-6.79932,54.44367,94.1
+203046,Rathmore Bridge,Rathmore Burn,-6.14321,54.70234,22.5
+203049,Clady Bridge,Clady,-6.13873,54.68651,29.4
+203050,University of Ulster,Ballysally Blagh,-6.67203,55.14558,14.2
+203092,Dunminning,Main,-6.36178,54.93523,221.5
+203093,Shane's Viaduct,Main,-6.31425,54.74267,707.4
+203097,Moyallen,Upper Bann,-6.39203,54.3915,304.9
+204001,Seneirl Bridge,Bush,-6.52283,55.16444,299.2
+205004,Newforge,Lagan,-5.94704,54.55472,491.6
+205005,Ravernet,Ravernet,-6.04659,54.48403,73.5
+205008,Drumiller,Lagan,-6.09675,54.40601,84.6
+205010,Banoge,Lagan,-6.27065,54.42217,189.8
+205011,Kilmore Bridge,Annacloy,-5.77106,54.3853,186.6
+205015,Grandmere,Cotton,-5.63962,54.66125,19.2
+205020,Comber,Enler,-5.74545,54.55465,61.8
+205029,Feney,Lagan,-6.2392,54.46715,202.6
+205034,Control,Woodburn,-5.87304,54.73981,0.15
+205101,Eason's,Blackstaff,-5.96239,54.58242,13.15
+205105,Orangefield,Knock,-5.87962,54.58846,12.9
+206001,Mountmill Bridge,Clanrye,-6.33695,54.21668,120.3
+206002,Jerretspass,Jerretspass,-6.36758,54.23652,107.8
+206006,Recorder,Annalong,-5.93509,54.13925,13.8
+236005,Ballindarragh Bridge,Colebrooke,-7.49124,54.27093,313.6
+236007,Drumrainey Bridge,Sillees,-7.68602,54.3084,166.3
+236051,Ballycassidy,Ballinamallard,-7.64769,54.4059,159.4
