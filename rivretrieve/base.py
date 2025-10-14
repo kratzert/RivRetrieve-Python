@@ -44,6 +44,17 @@ class RiverDataFetcher(abc.ABC):
         """
         pass
 
+    def get_metadata(self) -> pd.DataFrame:
+        """Fetches site metadata for the given site.
+
+        Returns:
+            A pandas DataFrame indexed by gauge_id, containing site metadata.
+            Returns an empty DataFrame if metadata fetching is not supported for this fetcher.
+        """
+        # Default implementation returns an empty DataFrame.
+        # Subclasses should override this method if metadata is available.
+        return pd.DataFrame().set_index("gauge_id")
+
     @staticmethod
     @abc.abstractmethod
     def get_available_variables() -> tuple[str, ...]:
