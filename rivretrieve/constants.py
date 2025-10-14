@@ -8,6 +8,7 @@ TIME_INDEX = "time"
 DISCHARGE = "discharge"
 STAGE = "stage"
 WATER_TEMPERATURE = "water_temperature"
+CATCHMENT_PRECIPITATION = "catchment_precipitation"
 
 # Attributes
 ALTITUDE = "altitude"
@@ -18,3 +19,4 @@ LOCATION = "location"
 LONGITUDE = "longitude"
 RIVER = "river"
 SOURCE = "source"
+STATION_NAME = "station_name"

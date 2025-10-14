@@ -17,13 +17,24 @@ class UKNRFAFetcher(base.RiverDataFetcher):
     BASE_URL = "https://nrfaapps.ceh.ac.uk/nrfa/ws"
     GAUGE_ID_COL = "id"
 
+    METADATA_TRANSLATION_MAPPING = {
+        "name": constants.STATION_NAME,
+        "location": constants.LOCATION,
+        "catchment-area": constants.AREA,
+        "latitude": constants.LATITUDE,
+        "longitude": constants.LONGITUDE,
+        "river": constants.RIVER,
+        # Using the catchment median altitude.
+        "50-percentile-altitude": constants.ALTITUDE,
+    }
+
     @staticmethod
     def get_gauge_ids() -> pd.DataFrame:
         """Retrieves a DataFrame of available NRFA gauge IDs from the cached CSV."""
         return utils.load_sites_csv("uk_nrfa")
 
     def get_metadata(self) -> pd.DataFrame:
-        """Fetches site metadata from the NRFA API."""
+        """Fetches site metadata from the NRFA API and renames columns."""
         query_params = {"station": "*", "format": "json-object", "fields": "all"}
         try:
             s = utils.requests_retry_session()
@@ -31,9 +42,14 @@ class UKNRFAFetcher(base.RiverDataFetcher):
             response.raise_for_status()  # raises an error for non-200 responses
             data = response.json()
             df = pd.DataFrame(data["data"])
+
             # Rename id column to the standard GAUGE_ID
             df = df.rename(columns={UKNRFAFetcher.GAUGE_ID_COL: constants.GAUGE_ID})
             df[constants.GAUGE_ID] = df[constants.GAUGE_ID].astype(str)
+
+            # Apply translation mapping for renaming
+            df = df.rename(columns=self.METADATA_TRANSLATION_MAPPING)
+
             return df.set_index(constants.GAUGE_ID)
         except requests.exceptions.RequestException as e:
             logger.error(f"Error fetching NRFA catalogue: {e}")
@@ -45,12 +61,13 @@ class UKNRFAFetcher(base.RiverDataFetcher):
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
         # Based on common NRFA data types, can be expanded
-        return (constants.DISCHARGE,)
+        return (constants.DISCHARGE, constants.CATCHMENT_PRECIPITATION)
 
     def _get_nrfa_data_type(self, variable: str) -> str:
         if variable == constants.DISCHARGE:
             return "gdf"  # Mean daily flow
-        # TODO: Map other variables like STAGE if available
+        elif variable == constants.CATCHMENT_PRECIPITATION:
+            return "cdr"  # Catchment daily precipitation.
         else:
             raise ValueError(f"Unsupported variable: {variable} for NRFA")
 
