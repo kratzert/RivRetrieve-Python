@@ -10,5 +10,11 @@ STAGE = "stage"
 WATER_TEMPERATURE = "water_temperature"
 
 # Attributes
+ALTITUDE = "altitude"
+AREA = "area"
+COUNTRY = "country"
 LATITUDE = "latitude"
+LOCATION = "location"
 LONGITUDE = "longitude"
+RIVER = "river"
+SOURCE = "source"
