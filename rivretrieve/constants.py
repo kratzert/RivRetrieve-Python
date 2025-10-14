@@ -12,3 +12,6 @@ WATER_TEMPERATURE = "water_temperature"
 # Attributes
 LATITUDE = "latitude"
 LONGITUDE = "longitude"
+AREA = "area"
+LOCATION = "location"
+RIVER = "river"
