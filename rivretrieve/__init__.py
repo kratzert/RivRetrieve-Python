@@ -10,7 +10,7 @@ from .japan import JapanFetcher
 from .poland import PolandFetcher
 from .slovenia import SloveniaFetcher
 from .southafrica import SouthAfricaFetcher
-from .uk import UKFetcher
+from .uk_ea import UKEAFetcher
 from .uk_nrfa import UKNRFAFetcher
 from .usa import USAFetcher
 
