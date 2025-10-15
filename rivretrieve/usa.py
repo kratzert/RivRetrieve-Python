@@ -76,7 +76,7 @@ class USAFetcher(base.RiverDataFetcher):
             mult = 0.0283168466
         df[variable] = pd.to_numeric(df[value_col], errors="coerce") * mult
 
-        return df[[constants.TIME_INDEX, variable]].dropna()
+        return df[[constants.TIME_INDEX, variable]].dropna().set_index(constants.TIME_INDEX)
 
     def get_data(
         self,

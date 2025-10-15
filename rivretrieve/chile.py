@@ -104,7 +104,7 @@ class ChileFetcher(base.RiverDataFetcher):
                 df[[constants.TIME_INDEX, variable]]
                 .dropna()
                 .sort_values(by=constants.TIME_INDEX)
-                .reset_index(drop=True)
+                .set_index(constants.TIME_INDEX)
             )
         except Exception as e:
             logger.error(f"Error parsing data for site {gauge_id}: {e}")
@@ -135,7 +135,7 @@ class ChileFetcher(base.RiverDataFetcher):
             # Filter by date range
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[(df[constants.TIME_INDEX] >= start_date_dt) & (df[constants.TIME_INDEX] <= end_date_dt)]
+            df = df[(df.index >= start_date_dt) & (df.index <= end_date_dt)]
             return df
         except Exception as e:
             logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}")

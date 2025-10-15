@@ -38,7 +38,7 @@ class TestFranceFetcher(unittest.TestCase):
             constants.TIME_INDEX: pd.to_datetime(["2023-01-01", "2023-01-02", "2023-01-03"]),
             constants.DISCHARGE: [15.0005, 16.0000, 15.5002],  # Divided by 1000
         }
-        expected_df = pd.DataFrame(expected_data)
+        expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
         mock_get.assert_called_once()

@@ -141,9 +141,9 @@ class JapanFetcher(base.RiverDataFetcher):
 
         final_df = pd.concat(all_dfs, ignore_index=True)
         final_df = final_df.rename(columns={"Value": variable})
-        final_df = final_df.sort_values(by=constants.TIME_INDEX).reset_index(drop=True)
+        final_df = final_df.sort_values(by=constants.TIME_INDEX)
 
-        return final_df
+        return final_df.set_index(constants.TIME_INDEX)
 
     def get_data(
         self,
@@ -164,7 +164,7 @@ class JapanFetcher(base.RiverDataFetcher):
 
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[(df[constants.TIME_INDEX] >= start_date_dt) & (df[constants.TIME_INDEX] <= end_date_dt)]
+            df = df[(df.index >= start_date_dt) & (df.index <= end_date_dt)]
             return df
 
         except Exception as e:

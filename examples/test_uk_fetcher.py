@@ -19,7 +19,7 @@ for gauge_id in gauge_ids:
         print(f"Data for {gauge_id}:")
         print(data.head())
         plt.plot(
-            data[constants.TIME_INDEX],
+            data.index,
             data[constants.DISCHARGE],
             label=gauge_id.split("/")[-1],
         )

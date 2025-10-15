@@ -148,7 +148,7 @@ class AustraliaFetcher(base.RiverDataFetcher):
             df["Value"] = pd.to_numeric(df["Value"], errors="coerce")
             df = df.rename(columns={"Value": variable})
             df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX])
-            return df[[constants.TIME_INDEX, variable]].dropna()
+            return df[[constants.TIME_INDEX, variable]].dropna().set_index(constants.TIME_INDEX)
         except Exception as e:
             logger.error(f"Error parsing CSV data for site {gauge_id}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])

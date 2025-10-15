@@ -51,9 +51,9 @@ class TestUSAFetcher(unittest.TestCase):
             constants.TIME_INDEX: expected_dates,
             constants.DISCHARGE: expected_values,
         }
-        expected_df = pd.DataFrame(expected_data)
+        expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
-        assert_frame_equal(result_df.reset_index(drop=True), expected_df, check_dtype=False)
+        assert_frame_equal(result_df, expected_df, check_dtype=False)
         mock_get_dv.assert_called_once()
         mock_args, mock_kwargs = mock_get_dv.call_args
         self.assertEqual(mock_kwargs["sites"], gauge_id)

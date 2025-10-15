@@ -186,7 +186,7 @@ class CanadaFetcher(base.RiverDataFetcher):
                 df_long[[constants.TIME_INDEX, variable]]
                 .dropna()
                 .sort_values(by=constants.TIME_INDEX)
-                .reset_index(drop=True)
+                .set_index(constants.TIME_INDEX)
             )
 
         except Exception as e:

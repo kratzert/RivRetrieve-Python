@@ -61,9 +61,9 @@ class TestUKFetcher(unittest.TestCase):
             constants.TIME_INDEX: expected_dates,
             constants.DISCHARGE: expected_values,
         }
-        expected_df = pd.DataFrame(expected_data)
+        expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
-        assert_frame_equal(result_df.reset_index(drop=True), expected_df, check_dtype=False)
+        assert_frame_equal(result_df, expected_df, check_dtype=False)
         self.assertEqual(mock_session.get.call_count, 2)
 
 
