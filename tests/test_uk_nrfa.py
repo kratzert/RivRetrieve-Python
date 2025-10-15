@@ -99,9 +99,9 @@ class TestUKNRFAFetcher(unittest.TestCase):
 
         expected_dates = pd.to_datetime(["2022-01-01", "2022-01-02", "2022-01-03", "2022-01-04", "2022-01-05"])
         expected_data = {constants.TIME_INDEX: expected_dates, variable: expected_values}
-        expected_df = pd.DataFrame(expected_data)
+        expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
-        assert_frame_equal(result_df.reset_index(drop=True), expected_df, check_dtype=False)
+        assert_frame_equal(result_df, expected_df, check_dtype=False)
         mock_session.get.assert_called_once()
         _, mock_kwargs = mock_session.get.call_args
         params = mock_kwargs["params"]

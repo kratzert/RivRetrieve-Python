@@ -126,7 +126,7 @@ class UKFetcher(base.RiverDataFetcher):
             complete_ts = pd.DataFrame(date_range, columns=[constants.TIME_INDEX])
             df_daily = pd.merge(complete_ts, df_daily, on=constants.TIME_INDEX, how="left")
 
-        return df_daily
+        return df_daily.set_index(constants.TIME_INDEX)
 
     def get_data(
         self,
@@ -148,7 +148,7 @@ class UKFetcher(base.RiverDataFetcher):
             # Filter by exact start and end date after processing
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[(df[constants.TIME_INDEX] >= start_date_dt) & (df[constants.TIME_INDEX] <= end_date_dt)]
+            df = df[(df.index >= start_date_dt) & (df.index <= end_date_dt)]
             return df
 
         except Exception as e:

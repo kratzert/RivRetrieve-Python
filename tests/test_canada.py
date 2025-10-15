@@ -36,7 +36,7 @@ class TestCanadaFetcher(unittest.TestCase):
             ),
             constants.DISCHARGE: [1.1, 1.2, 1.3, 1.4, 1.5],
         }
-        expected_df = pd.DataFrame(expected_data)
+        expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
 
@@ -62,7 +62,7 @@ class TestCanadaFetcher(unittest.TestCase):
             ),
             constants.STAGE: [10.1, 10.2, 10.3, 10.4, 10.5],
         }
-        expected_df = pd.DataFrame(expected_data)
+        expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
 

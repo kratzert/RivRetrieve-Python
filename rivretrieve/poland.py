@@ -209,7 +209,7 @@ class PolandFetcher(base.RiverDataFetcher):
 
             data_array = ds[variable].sel(gauge_id=gauge_id, time=slice(start_date, end_date))
             df = data_array.to_pandas().dropna().reset_index().rename(columns={variable: variable})
-            return df[[constants.TIME_INDEX, variable]]
+            return df.set_index(constants.TIME_INDEX)[[variable]]
 
         except KeyError:
             logger.info(f"No data found for gauge {gauge_id} in the selected date range.")

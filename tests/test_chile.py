@@ -50,7 +50,7 @@ class TestChileFetcher(unittest.TestCase):
             constants.TIME_INDEX: pd.to_datetime(["2022-01-01", "2022-01-02", "2022-01-03"]),
             constants.DISCHARGE: [15.5, 16.0, 15.8],
         }
-        expected_df = pd.DataFrame(expected_data)
+        expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
         self.assertEqual(mock_get.call_count, 2)

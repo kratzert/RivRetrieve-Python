@@ -107,7 +107,7 @@ class FranceFetcher(base.RiverDataFetcher):
                 df[[constants.TIME_INDEX, variable]]
                 .dropna()
                 .sort_values(by=constants.TIME_INDEX)
-                .reset_index(drop=True)
+                .set_index(constants.TIME_INDEX)
             )
         except Exception as e:
             logger.error(f"Error parsing JSON data for site {gauge_id}: {e}")
