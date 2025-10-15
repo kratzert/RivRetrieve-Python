@@ -48,12 +48,16 @@ fetcher = UKEAFetcher()
 sites = UKEAFetcher.get_gauge_ids()
 print(sites.head())
 
-# Fetch data for a specific site
-site_id = "3c5cba29-2321-4289-a1fd-c355e135f4cb"  # Example site
+# Example site.
+gauge_id = "3c5cba29-2321-4289-a1fd-c355e135f4cb"
 
-discharge_data = fetcher.get_data(variable="discharge", start_date="2023-01-01", end_date="2023-01-31")
+# Fetch discharge data.
+discharge_data = fetcher.get_data(
+    gauge_id=gauge_id, variable="discharge", start_date="2023-01-01", end_date="2023-01-31"
+)
 print(discharge_data.head())
 
-stage_data = fetcher.get_data(variable="stage", start_date="2023-01-01", end_date="2023-01-31")
+# Fetch stage data.
+stage_data = fetcher.get_data(gauge_id=gauge_id, variable="stage", start_date="2023-01-01", end_date="2023-01-31")
 print(stage_data.head())
 ```
