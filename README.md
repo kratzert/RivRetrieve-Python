@@ -39,15 +39,17 @@ python3 -m venv .venv
 ## Example usage
 
 ```python
-from rivretrieve import UKFetcher
+from rivretrieve import UKEAFetcher
+
+# Create UK-EA specific fetcher object
+fetcher = UKEAFetcher()
 
 # Get available sites for the UK
-sites = UKFetcher.get_sites()
+sites = UKEAFetcher.get_gauge_ids()
 print(sites.head())
 
 # Fetch data for a specific site
-site_id = "http://environment.data.gov.uk/hydrology/id/stations/3c5cba29-2321-4289-a1fd-c355e135f4cb"  # Example site
-fetcher = UKFetcher(site_id=site_id)
+site_id = "3c5cba29-2321-4289-a1fd-c355e135f4cb"  # Example site
 
 discharge_data = fetcher.get_data(variable="discharge", start_date="2023-01-01", end_date="2023-01-31")
 print(discharge_data.head())
