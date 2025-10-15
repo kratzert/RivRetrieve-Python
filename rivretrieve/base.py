@@ -25,12 +25,14 @@ class RiverDataFetcher(abc.ABC):
 
         Args:
             gauge_id: The site-specific identifier for the gauge.
-            variable: The variable to fetch (e.g., 'stage' or 'discharge').
+            variable: The variable to fetch, should be one of the values from constants.py
+                (e.g., constants.DISCHARGE, constants.STAGE).
             start_date: Optional start date in 'YYYY-MM-DD' format.
             end_date: Optional end date in 'YYYY-MM-DD' format.
 
         Returns:
-            A pandas DataFrame with 'Date' and the variable column ('H' or 'Q').
+            A pandas DataFrame indexed by time (constants.TIME_INDEX) with a column
+            for the requested variable (e.g., constants.DISCHARGE).
         """
         pass
 

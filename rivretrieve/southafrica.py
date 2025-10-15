@@ -155,7 +155,7 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
                 daily_df = full_df[[constants.TIME_INDEX, "D_AVG_FR"]].rename(columns={"D_AVG_FR": "Value"})
 
             daily_df = daily_df.rename(columns={"Value": variable})
-            return daily_df.dropna().sort_values(by=constants.TIME_INDEX).reset_index(drop=True)
+            return daily_df.dropna().sort_values(by=constants.TIME_INDEX).set_index(constants.TIME_INDEX)
 
         except Exception as e:
             logger.error(f"Error parsing data for site {gauge_id}: {e}")
