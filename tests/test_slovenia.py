@@ -45,9 +45,9 @@ class TestSloveniaFetcher(unittest.TestCase):
             constants.TIME_INDEX: expected_dates,
             constants.DISCHARGE: expected_values,
         }
-        expected_df = pd.DataFrame(expected_data)
+        expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
-        assert_frame_equal(result_df.reset_index(drop=True), expected_df)
+        assert_frame_equal(result_df, expected_df)
         mock_session.get.assert_called_once()
         mock_args, mock_kwargs = mock_session.get.call_args
         self.assertIn("p_postaja=1020", mock_args[0])
@@ -81,9 +81,9 @@ class TestSloveniaFetcher(unittest.TestCase):
             constants.TIME_INDEX: expected_dates,
             constants.STAGE: expected_values,
         }
-        expected_df = pd.DataFrame(expected_data)
+        expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
-        assert_frame_equal(result_df.reset_index(drop=True), expected_df)
+        assert_frame_equal(result_df, expected_df)
 
 
 if __name__ == "__main__":

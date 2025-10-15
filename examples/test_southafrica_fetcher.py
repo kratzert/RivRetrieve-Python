@@ -20,9 +20,9 @@ for gauge_id in gauge_ids:
     if not data.empty:
         print(f"Data for {gauge_id}:")
         print(data.head())
-        print(f"Time series from {data[constants.TIME_INDEX].min()} to {data[constants.TIME_INDEX].max()}")
+        print(f"Time series from {data.index.min()} to {data.index.max()}")
         plt.plot(
-            data[constants.TIME_INDEX],
+            data.index,
             data[constants.DISCHARGE],
             label=gauge_id,
             marker=".",

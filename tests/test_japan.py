@@ -40,9 +40,9 @@ class TestJapanFetcher(unittest.TestCase):
             constants.TIME_INDEX: expected_dates,
             constants.DISCHARGE: expected_values,
         }
-        expected_df = pd.DataFrame(expected_data)
+        expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
-        assert_frame_equal(result_df.reset_index(drop=True), expected_df)
+        assert_frame_equal(result_df, expected_df)
         mock_get.assert_called_once()
         # Check that the params are correct
         mock_args, mock_kwargs = mock_get.call_args

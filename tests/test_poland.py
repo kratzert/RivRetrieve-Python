@@ -46,9 +46,9 @@ class TestPolandFetcher(unittest.TestCase):
                 constants.TIME_INDEX: expected_dates,
                 constants.DISCHARGE: expected_values,
             }
-            expected_df = pd.DataFrame(expected_data)
+            expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
-            assert_frame_equal(result_df.reset_index(drop=True), expected_df)
+            assert_frame_equal(result_df, expected_df)
             mock_create_cache.assert_not_called()  # Cache should not be recreated
 
     @patch("rivretrieve.poland.PolandFetcher._create_cache")  # Mock cache creation
@@ -67,9 +67,9 @@ class TestPolandFetcher(unittest.TestCase):
                 constants.TIME_INDEX: expected_dates,
                 constants.STAGE: expected_values,
             }
-            expected_df = pd.DataFrame(expected_data)
+            expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
-            assert_frame_equal(result_df.reset_index(drop=True), expected_df)
+            assert_frame_equal(result_df, expected_df)
             mock_create_cache.assert_not_called()
 
     @patch("rivretrieve.utils.requests_retry_session")
