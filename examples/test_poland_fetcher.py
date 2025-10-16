@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 gauge_ids = [
     "149180020",  # CHAŁUPKI on Odra
 ]
-variables = [constants.DISCHARGE, constants.STAGE, constants.WATER_TEMPERATURE]
+variables = [constants.DISCHARGE_DAILY_MEAN, constants.STAGE_DAILY_MEAN, constants.WATER_TEMPERATURE_DAILY_MEAN]
 # Fetch a period from Simon's example
 start_date = "1999-01-01"
 end_date = "2001-12-31"

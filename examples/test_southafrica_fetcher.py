@@ -9,21 +9,21 @@ logging.basicConfig(level=logging.INFO)
 gauge_ids = [
     "X3H023",
 ]
-variable = constants.DISCHARGE
+variable = constants.DISCHARGE_DAILY_MEAN
 
 plt.figure(figsize=(12, 6))
 
 fetcher = SouthAfricaFetcher()
 for gauge_id in gauge_ids:
     print(f"Fetching data for {gauge_id}...")
-    data = fetcher.get_data(gauge_id=gauge_id, variable=variable)
+    data = fetcher.get_data(gauge_id=gauge_id, variable=variable, start_date="2000-01-01", end_date="2005-12-31")
     if not data.empty:
         print(f"Data for {gauge_id}:")
         print(data.head())
         print(f"Time series from {data.index.min()} to {data.index.max()}")
         plt.plot(
             data.index,
-            data[constants.DISCHARGE],
+            data[constants.DISCHARGE_DAILY_MEAN],
             label=gauge_id,
             marker=".",
             linestyle="-",
@@ -33,7 +33,7 @@ for gauge_id in gauge_ids:
 
 if "data" in locals() and not data.empty:
     plt.xlabel(constants.TIME_INDEX)
-    plt.ylabel(f"{constants.DISCHARGE} (m3/s)")
+    plt.ylabel(f"{constants.DISCHARGE_DAILY_MEAN} (m3/s)")
     plt.title(f"South Africa River Discharge ({gauge_ids[0]} - Full Time Series)")
     plt.legend()
     plt.grid(True)

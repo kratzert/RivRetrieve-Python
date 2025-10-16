@@ -28,7 +28,7 @@ class TestFranceFetcher(unittest.TestCase):
         mock_get.return_value = mock_response
 
         gauge_id = "Y1220010"
-        variable = constants.DISCHARGE
+        variable = constants.DISCHARGE_DAILY_MEAN
         start_date = "2023-01-01"
         end_date = "2023-01-03"
 
@@ -36,7 +36,7 @@ class TestFranceFetcher(unittest.TestCase):
 
         expected_data = {
             constants.TIME_INDEX: pd.to_datetime(["2023-01-01", "2023-01-02", "2023-01-03"]),
-            constants.DISCHARGE: [15.0005, 16.0000, 15.5002],  # Divided by 1000
+            constants.DISCHARGE_DAILY_MEAN: [15.0005, 16.0000, 15.5002],  # Divided by 1000
         }
         expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 

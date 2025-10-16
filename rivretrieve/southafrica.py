@@ -27,7 +27,7 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return (constants.DISCHARGE, constants.STAGE)
+        return (constants.DISCHARGE_DAILY_MEAN, constants.DISCHARGE_INSTANT, constants.STAGE_INSTANT)
 
     def _construct_endpoint(
         self,
@@ -44,6 +44,16 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
         )
         return endpoint
 
+    def _get_variable_name(self, variable: str) -> str:
+        if variable == constants.DISCHARGE_DAILY_MEAN:
+            return "D_AVG_FR"
+        elif variable == constants.DISCHARGE_INSTANT:
+            return "COR_FLOW"
+        elif variable == constants.STAGE_INSTANT:
+            return "COR_LEVEL"
+        else:
+            raise ValueError(f"Unsupported variable: {variable}")
+
     def _download_data(
         self,
         gauge_id: str,
@@ -58,18 +68,18 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
         headers = {"User-Agent": "Mozilla/5.0"}
         data_list = []
 
-        if variable == constants.STAGE:
+        if variable in (constants.STAGE_INSTANT, constants.DISCHARGE_INSTANT):
             data_type = "Point"
             chunk_years = 1
             header = [
                 "DATE",
                 "TIME",
-                "COR_LEVEL",
+                "COR_LEVEL",  # Stage instant.
                 "COR_LEVEL_QUAL",
-                "COR_FLOW",
+                "COR_FLOW",  # Flow instant.
                 "COR_FLOW_QUAL",
             ]
-        elif variable == constants.DISCHARGE:  # discharge
+        elif variable == constants.DISCHARGE_DAILY_MEAN:  # discharge
             data_type = "Daily"
             chunk_years = 20
             header = ["DATE", "D_AVG_FR", "QUAL"]
@@ -139,23 +149,21 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         try:
-            full_df = pd.concat(raw_data_list, ignore_index=True)
-            if full_df.empty:
+            df = pd.concat(raw_data_list, ignore_index=True)
+            if df.empty:
                 return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-            full_df[constants.TIME_INDEX] = pd.to_datetime(full_df["DATE"], format="%Y%m%d", errors="coerce")
-            full_df = full_df.dropna(subset=[constants.TIME_INDEX])
+            df[constants.TIME_INDEX] = pd.to_datetime(df["DATE"], format="%Y%m%d", errors="coerce")
+            df = (
+                df.dropna(subset=[constants.TIME_INDEX])
+                .sort_values(by=constants.TIME_INDEX)
+                .set_index(constants.TIME_INDEX)
+            )
 
-            if variable == constants.STAGE:
-                full_df["COR_LEVEL"] = pd.to_numeric(full_df["COR_LEVEL"], errors="coerce")
-                # Average stage if multiple readings per day
-                daily_df = full_df.groupby(constants.TIME_INDEX).agg(Value=("COR_LEVEL", "mean")).reset_index()
-            else:  # discharge
-                full_df["D_AVG_FR"] = pd.to_numeric(full_df["D_AVG_FR"], errors="coerce")
-                daily_df = full_df[[constants.TIME_INDEX, "D_AVG_FR"]].rename(columns={"D_AVG_FR": "Value"})
+            column = self._get_variable_name(variable)
+            df[column] = pd.to_numeric(df[column], errors="coerce")
 
-            daily_df = daily_df.rename(columns={"Value": variable})
-            return daily_df.dropna().sort_values(by=constants.TIME_INDEX).set_index(constants.TIME_INDEX)
+            return df.rename(columns={column: variable})
 
         except Exception as e:
             logger.error(f"Error parsing data for site {gauge_id}: {e}")

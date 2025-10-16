@@ -23,7 +23,21 @@ class FranceFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return (constants.DISCHARGE, constants.STAGE)
+        return (constants.DISCHARGE_DAILY_MEAN, constants.STAGE_DAILY_MAX)
+
+    def _get_variable_code(self, variable: str) -> str:
+        if variable == constants.DISCHARGE_DAILY_MEAN:
+            return "QmnJ"
+        elif variable == constants.STAGE_DAILY_MAX:
+            return "HIXnJ"
+        else:
+            logger.warning(f"Unsupported variable: {variable}")
+
+    def _conversion_factor(self, variable: str) -> float:
+        if variable.startswith(constants.DISCHARGE):
+            return 1000  # l/s for flow rates (divide by 1000 to convert to m3/s).
+        elif variable.startswith(constants.STAGE):
+            return 1000  # mm for water heights (divide by 1000 to convert to meters);
 
     def _download_data(
         self,
@@ -33,14 +47,8 @@ class FranceFetcher(base.RiverDataFetcher):
         end_date: str,
     ) -> List[Dict[str, Any]]:
         """Downloads raw data from the Hubeau API."""
-        if variable == constants.DISCHARGE:
-            grandeur = "QmnJ"
-        elif variable == constants.STAGE:
-            grandeur = "HnJ"  # Assuming daily mean stage, though doc mentions HIXnJ
-            logger.warning("Using grandeur_hydro='HnJ' for stage, this might not be daily mean.")
-        else:
-            logger.warning(f"Unsupported variable: {variable}")
-            return []
+        grandeur = self._get_variable_code(variable)
+
         params = {
             "code_entite": gauge_id,
             "date_debut_obs": start_date,
@@ -92,7 +100,7 @@ class FranceFetcher(base.RiverDataFetcher):
             if df.empty:
                 return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-            grandeur_code = "QmnJ" if variable == constants.DISCHARGE else "HnJ"
+            grandeur_code = self._get_variable_code(variable)
             df = df[df["grandeur_hydro_elab"] == grandeur_code]
 
             if df.empty or "date_obs_elab" not in df.columns or "resultat_obs_elab" not in df.columns:
@@ -100,8 +108,7 @@ class FranceFetcher(base.RiverDataFetcher):
                 return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
             df[constants.TIME_INDEX] = pd.to_datetime(df["date_obs_elab"]).dt.date
-            # Convert L/s to m3/s
-            df[variable] = pd.to_numeric(df["resultat_obs_elab"], errors="coerce") / 1000.0
+            df[variable] = pd.to_numeric(df["resultat_obs_elab"], errors="coerce") / self._conversion_factor(variable)
             df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX])
             return (
                 df[[constants.TIME_INDEX, variable]]

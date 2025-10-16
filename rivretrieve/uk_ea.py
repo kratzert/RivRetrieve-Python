@@ -34,7 +34,7 @@ class UKEAFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return (constants.DISCHARGE, constants.STAGE)
+        return (constants.DISCHARGE_DAILY_MEAN, constants.STAGE_15MIN)
 
     def get_metadata(self) -> pd.DataFrame:
         """Fetches site metadata for all stations from the EA API.
@@ -66,9 +66,9 @@ class UKEAFetcher(base.RiverDataFetcher):
 
     def _get_measure_notation(self, variable: str) -> str:
         """Gets the notation for the given variable."""
-        if variable == constants.STAGE:
+        if variable == constants.STAGE_15MIN:
             return "level-i-900-m-qualified"
-        elif variable == constants.DISCHARGE:
+        elif variable == constants.DISCHARGE_DAILY_MEAN:
             return "flow-m-86400-m3s-qualified"
         else:
             raise ValueError(f"Unsupported variable: {variable}")
@@ -129,7 +129,7 @@ class UKEAFetcher(base.RiverDataFetcher):
 
         return all_items
 
-    def _parse_data(self, gauge_id: str, raw_data: List[Dict[str, Any]], variable: str) -> pd.DataFrame:
+    def _parse_data(self, raw_data: List[Dict[str, Any]], variable: str) -> pd.DataFrame:
         """Parses the raw JSON data into a pandas DataFrame."""
         if not raw_data:
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
@@ -138,32 +138,22 @@ class UKEAFetcher(base.RiverDataFetcher):
         df[constants.TIME_INDEX] = pd.to_datetime(df["dateTime"]).dt.date
         df["Value"] = pd.to_numeric(df["value"], errors="coerce")
 
-        if variable == constants.STAGE:
-            # UK stage data is 15-min, average to daily
-            # A full day has 24 * 4 = 96 readings. We accept days with at least 90 readings.
-            min_readings = 90
-            df_daily = (
-                df.groupby(constants.TIME_INDEX).agg(Value=("Value", "mean"), Count=("Value", "size")).reset_index()
-            )
-            df_daily = df_daily[df_daily["Count"] >= min_readings]
-            df_daily = df_daily[[constants.TIME_INDEX, "Value"]]
-        else:  # discharge is already daily
-            df_daily = df[[constants.TIME_INDEX, "Value"]]
+        df = df[[constants.TIME_INDEX, "Value"]]
 
-        df_daily = df_daily.rename(columns={"Value": variable})
-        df_daily[constants.TIME_INDEX] = pd.to_datetime(df_daily[constants.TIME_INDEX])
+        df = df.rename(columns={"Value": variable})
+        df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX])
 
         # Ensure complete time series within the data range
-        if not df_daily.empty:
+        if not df.empty:
             date_range = pd.date_range(
-                start=df_daily[constants.TIME_INDEX].min(),
-                end=df_daily[constants.TIME_INDEX].max(),
+                start=df[constants.TIME_INDEX].min(),
+                end=df[constants.TIME_INDEX].max(),
                 freq="D",
             )
             complete_ts = pd.DataFrame(date_range, columns=[constants.TIME_INDEX])
-            df_daily = pd.merge(complete_ts, df_daily, on=constants.TIME_INDEX, how="left")
+            df = pd.merge(complete_ts, df, on=constants.TIME_INDEX, how="left")
 
-        return df_daily.set_index(constants.TIME_INDEX)
+        return df.set_index(constants.TIME_INDEX)
 
     def get_data(
         self,
@@ -180,7 +170,7 @@ class UKEAFetcher(base.RiverDataFetcher):
 
         try:
             raw_data = self._download_data(gauge_id, variable, start_date, end_date)
-            df = self._parse_data(gauge_id, raw_data, variable)
+            df = self._parse_data(raw_data, variable)
 
             # Filter by exact start and end date after processing
             start_date_dt = pd.to_datetime(start_date)

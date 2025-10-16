@@ -33,7 +33,7 @@ class CanadaFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return (constants.DISCHARGE, constants.STAGE)
+        return (constants.DISCHARGE_DAILY_MEAN, constants.STAGE_DAILY_MEAN)
 
     def _find_latest_hydat_link(self) -> Optional[str]:
         s = utils.requests_retry_session()
@@ -130,8 +130,8 @@ class CanadaFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
         var_map = {
-            constants.DISCHARGE: {"table": "DLY_FLOWS", "prefix": "FLOW"},
-            constants.STAGE: {"table": "DLY_LEVELS", "prefix": "LEVEL"},
+            constants.DISCHARGE_DAILY_MEAN: {"table": "DLY_FLOWS", "prefix": "FLOW"},
+            constants.STAGE_DAILY_MEAN: {"table": "DLY_LEVELS", "prefix": "LEVEL"},
         }
 
         table = var_map[variable]["table"]

@@ -25,7 +25,7 @@ class SloveniaFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return (constants.DISCHARGE, constants.STAGE)
+        return (constants.DISCHARGE_DAILY_MEAN, constants.STAGE_DAILY_MEAN)
 
     def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> Optional[str]:
         """Downloads the raw CSV data from the ARSO API."""
@@ -63,14 +63,14 @@ class SloveniaFetcher(base.RiverDataFetcher):
             df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX], format="%d.%m.%Y", errors="coerce")
             df = df.dropna(subset=[constants.TIME_INDEX])
 
-            if variable == constants.STAGE:
+            if variable == constants.STAGE_DAILY_MEAN:
                 raw_col = "vodostaj (cm)"
                 if raw_col in df.columns:
                     df[variable] = pd.to_numeric(df[raw_col], errors="coerce") / 100.0  # cm to m
                 else:
                     logger.warning(f"Column {raw_col} not found for site {gauge_id}")
                     return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
-            elif variable == constants.DISCHARGE:
+            elif variable == constants.DISCHARGE_DAILY_MEAN:
                 raw_col = "pretok (m3/s)"
                 if raw_col in df.columns:
                     df[variable] = pd.to_numeric(df[raw_col], errors="coerce")

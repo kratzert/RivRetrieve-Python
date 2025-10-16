@@ -27,12 +27,12 @@ class JapanFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return (constants.DISCHARGE, constants.STAGE)
+        return (constants.DISCHARGE_DAILY_MEAN, constants.STAGE_DAILY_MEAN)
 
     def _get_kind(self, variable: str) -> int:
-        if variable == constants.STAGE:
+        if variable == constants.STAGE_DAILY_MEAN:
             return 2
-        elif variable == constants.DISCHARGE:
+        elif variable == constants.DISCHARGE_DAILY_MEAN:
             return 6
         else:
             raise ValueError(f"Unsupported variable: {variable}")

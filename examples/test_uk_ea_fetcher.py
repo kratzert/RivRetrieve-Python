@@ -7,7 +7,7 @@ gauge_ids = [
 ]
 start_date = "2024-01-01"
 end_date = "2024-01-31"
-variable = constants.DISCHARGE
+variable = constants.DISCHARGE_DAILY_MEAN
 
 plt.figure(figsize=(12, 6))
 
@@ -20,14 +20,14 @@ for gauge_id in gauge_ids:
         print(data.head())
         plt.plot(
             data.index,
-            data[constants.DISCHARGE],
+            data[constants.DISCHARGE_DAILY_MEAN],
             label=gauge_id.split("/")[-1],
         )
     else:
         print(f"No data found for {gauge_id}")
 
 plt.xlabel(constants.TIME_INDEX)
-plt.ylabel(f"{constants.DISCHARGE} (m3/s)")
+plt.ylabel(f"{constants.DISCHARGE_DAILY_MEAN} (m3/s)")
 plt.title("UK River Discharge - Full Time Series")
 plt.legend()
 plt.grid(True)

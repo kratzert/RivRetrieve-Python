@@ -24,7 +24,7 @@ class ChileFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return (constants.DISCHARGE,)
+        return (constants.DISCHARGE_DAILY_MEAN,)
 
     def _download_data(
         self,
@@ -33,9 +33,8 @@ class ChileFetcher(base.RiverDataFetcher):
         start_date: str,
         end_date: str,
     ) -> Optional[pd.DataFrame]:
-        """Downloads the raw CSV data by first finding the download link."""
-        if variable != constants.DISCHARGE:
-            logger.warning(f"ChileFetcher only supports variable='{constants.DISCHARGE}'")
+        if variable != constants.DISCHARGE_DAILY_MEAN:
+            logger.warning(f"ChileFetcher only supports variable='{constants.DISCHARGE_DAILY_MEAN}'")
             return None
 
         # This long URL was extracted from the R code
@@ -118,8 +117,8 @@ class ChileFetcher(base.RiverDataFetcher):
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
         """Fetches and parses Chilean river gauge data."""
-        if variable != constants.DISCHARGE:
-            logger.warning(f"ChileFetcher only supports variable='{constants.DISCHARGE}'")
+        if variable != constants.DISCHARGE_DAILY_MEAN:
+            logger.warning(f"ChileFetcher only supports variable='{constants.DISCHARGE_DAILY_MEAN}'")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         start_date = utils.format_start_date(start_date)

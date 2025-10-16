@@ -60,12 +60,12 @@ class UKNRFAFetcher(base.RiverDataFetcher):
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
         # Based on common NRFA data types, can be expanded
-        return (constants.DISCHARGE, constants.CATCHMENT_PRECIPITATION)
+        return (constants.DISCHARGE_DAILY_MEAN, constants.CATCHMENT_PRECIPITATION_DAILY_SUM)
 
     def _get_nrfa_data_type(self, variable: str) -> str:
-        if variable == constants.DISCHARGE:
+        if variable == constants.DISCHARGE_DAILY_MEAN:
             return "gdf"  # Mean daily flow
-        elif variable == constants.CATCHMENT_PRECIPITATION:
+        elif variable == constants.CATCHMENT_PRECIPITATION_DAILY_SUM:
             return "cdr"  # Catchment daily precipitation.
         else:
             raise ValueError(f"Unsupported variable: {variable} for NRFA")

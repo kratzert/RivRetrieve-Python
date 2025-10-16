@@ -31,7 +31,7 @@ class PolandFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return (constants.DISCHARGE, constants.STAGE, constants.WATER_TEMPERATURE)
+        return (constants.DISCHARGE_DAILY_MEAN, constants.STAGE_DAILY_MEAN, constants.WATER_TEMPERATURE_DAILY_MEAN)
 
     def _get_metadata_headers(self):
         """Fetches and cleans metadata headers."""
@@ -109,9 +109,9 @@ class PolandFetcher(base.RiverDataFetcher):
             full_df = full_df.rename(
                 columns={
                     "Kod stacji": constants.GAUGE_ID,
-                    "Przepływ [m3/s]": constants.DISCHARGE,
-                    "Stan wody [cm]": constants.STAGE,
-                    "Temperatura wody [st. C]": constants.WATER_TEMPERATURE,
+                    "Przepływ [m3/s]": constants.DISCHARGE_DAILY_MEAN,
+                    "Stan wody [cm]": constants.STAGE_DAILY_MEAN,
+                    "Temperatura wody [st. C]": constants.WATER_TEMPERATURE_DAILY_MEAN,
                 }
             )
 
@@ -130,16 +130,16 @@ class PolandFetcher(base.RiverDataFetcher):
 
             # Select and convert variables
             var_cols = [
-                constants.DISCHARGE,
-                constants.STAGE,
-                constants.WATER_TEMPERATURE,
+                constants.DISCHARGE_DAILY_MEAN,
+                constants.STAGE_DAILY_MEAN,
+                constants.WATER_TEMPERATURE_DAILY_MEAN,
             ]
             for var in var_cols:
                 if var in full_df.columns:
                     full_df[var] = pd.to_numeric(full_df[var], errors="coerce")
 
-            if constants.STAGE in full_df.columns:
-                full_df[constants.STAGE] = full_df[constants.STAGE] / 100.0  # cm to m
+            if constants.STAGE_DAILY_MEAN in full_df.columns:
+                full_df[constants.STAGE_DAILY_MEAN] = full_df[constants.STAGE_DAILY_MEAN] / 100.0  # cm to m
 
             # Clean placeholder values
             full_df.replace({9999: None, 99999.999: None, 99.9: None, 999: None}, inplace=True)

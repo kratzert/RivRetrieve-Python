@@ -68,13 +68,13 @@ class TestUKNRFAFetcher(unittest.TestCase):
     @parameterized.expand(
         [
             (
-                constants.DISCHARGE,
+                constants.DISCHARGE_DAILY_MEAN,
                 "gdf",
                 "uk_nrfa_1001_discharge_20220101.json",
                 [1.552, 1.461, 2.035, 7.232, 6.539],
             ),
             (
-                constants.CATCHMENT_PRECIPITATION,
+                constants.CATCHMENT_PRECIPITATION_DAILY_SUM,
                 "cdr",
                 "uk_nrfa_1001_precipitation_20220101.json",
                 [0.2, 1.7, 4.4, 9.1, 0.2],
