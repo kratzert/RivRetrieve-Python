@@ -5,6 +5,7 @@ import time
 from datetime import datetime, timedelta
 from typing import Optional, List, Dict, Any
 import os
+import urllib.parse
 
 import pandas as pd
 import requests
@@ -25,11 +26,11 @@ PASSWORD = os.environ.get("ANA_PASSWORD")
 class BrazilFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from Brazil's ANA Hidroweb API v2."""
 
-    BASE_URL = "https://www.ana.gov.br/hidrowebservice"
-    AUTH_URL = f"{BASE_URL}/EstacoesTelemetricas/OAUth/v1"
+    BASE_URL = "https://www.ana.gov.br/hidrowebservice/EstacoesTelemetricas"
+    AUTH_URL = f"{BASE_URL}/OAUth/v1"
 
-    def __init__(self, site_id: str, username: Optional[str] = None, password: Optional[str] = None):
-        super().__init__(site_id)
+    def __init__(self, username: Optional[str] = None, password: Optional[str] = None):
+        super().__init__()
         self.username = username or USERNAME
         self.password = password or PASSWORD
         self._token = None
@@ -42,6 +43,69 @@ class BrazilFetcher(base.RiverDataFetcher):
     def get_gauge_ids() -> pd.DataFrame:
         """Retrieves a DataFrame of available Brazilian gauge IDs."""
         return utils.load_sites_csv("brazil")
+
+    @staticmethod
+    def get_available_variables() -> tuple[str, ...]:
+        return (constants.DISCHARGE_DAILY_MEAN, constants.STAGE_DAILY_MEAN)
+
+    def get_metadata(self) -> pd.DataFrame:
+        """Fetches station metadata for all Brazilian states."""
+        if not self.username or not self.password:
+            logger.error("ANA Username or Password not provided.")
+            return pd.DataFrame().set_index(constants.GAUGE_ID)
+
+        token = self._get_token()
+        if not token:
+            logger.error("Cannot fetch metadata without a token.")
+            return pd.DataFrame().set_index(constants.GAUGE_ID)
+
+        states = [
+            "AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", 
+            "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", 
+            "SC", "SP", "SE", "TO"
+        ]
+        
+        metadata_url = f"{self.BASE_URL}/HidroInventarioEstacoes/v1"
+        all_stations = []
+        s = utils.requests_retry_session()
+        headers = {"Authorization": f"Bearer {token}"}
+
+        for state in states:
+            logger.info(f"Fetching metadata for state: {state}")
+            params = {"Unidade Federativa": state}
+            try:
+                response = s.get(metadata_url, params=params, headers=headers)
+                response.raise_for_status()
+                data = response.json()
+                if isinstance(data, list):
+                    all_stations.extend(data)
+                elif isinstance(data, dict) and data.get("status") == "OK" and data.get("items"):
+                    all_stations.extend(data["items"])
+                else:
+                    logger.warning(f"No stations found for state {state} or unexpected response: {data}")
+            except requests.exceptions.RequestException as e:
+                logger.error(f"Error fetching metadata for state {state}: {e}")
+            except Exception as e:
+                logger.error(f"Error processing metadata for state {state}: {e}")
+            time.sleep(0.1)
+
+        if not all_stations:
+            return pd.DataFrame().set_index(constants.GAUGE_ID)
+
+        df = pd.DataFrame(all_stations)
+
+        rename_map = {
+            "codigoestacao": constants.GAUGE_ID,
+            "Estacao_Nome": constants.STATION_NAME,
+            "Latitude": constants.LATITUDE,
+            "Longitude": constants.LONGITUDE,
+            "Altitude": constants.ALTITUDE,
+            "Area_Drenagem": constants.AREA,
+            "Bacia_Nome": constants.RIVER,
+        }
+        df = df.rename(columns=rename_map)
+        df[constants.GAUGE_ID] = df[constants.GAUGE_ID].astype(str)
+        return df.set_index(constants.GAUGE_ID)
 
     def _get_token(self) -> Optional[str]:
         """Gets and caches the authentication token."""
@@ -78,164 +142,50 @@ class BrazilFetcher(base.RiverDataFetcher):
             logger.error(f"Error processing token response: {e}")
             return None
 
-    def _get_station_metadata(self): 
-        token = self._get_token()
-        headers = {
-            'accept': '*/*',
-            "Authorization": f"Bearer {token}"
-        }
-        metadata_url = f"{self.BASE_URL}/EstacoesTelemetricas/HidroInventarioEstacoes/v1"
-        params = {
-            "Código da Estação": self.site_id
-        }
-        s = utils.requests_retry_session()
-        response = s.get(metadata_url, params=params, headers=headers)
-        response.raise_for_status()
-        metadata = pd.DataFrame(response.json()['items'])
-        return metadata
-
-    def _parse_data(self, raw_data: List[Dict[str, Any]], variable: str) -> pd.DataFrame:
-        df = pd.DataFrame(raw_data)
-        df.columns = df.columns.str.upper()
-        if variable == 'stage': 
-            prefix = 'COTA'
-            # Handle inconsistency in data returned by API
-            df = df.rename({'NIVELCONSISTENCIA': 'NIVEL_CONSISTENCIA'}, axis=1) 
-        elif variable == 'discharge':
-            prefix = 'VAZAO'
-
-        columns = [
-            "CODIGOESTACAO", "DATA_HORA_DADO",
-            "DATA_ULTIMA_ALTERACAO", "DIA_MAXIMA",
-            "DIA_MINIMA", "MAXIMA", "MINIMA",
-            "MEDIADIARIA", "MEDIA", "MEDIA_ANUAL",
-            "NIVEL_CONSISTENCIA"
-        ]
-        columns += [f"{prefix}_{i:02d}" for i in range(1, 32)]
-
-        # Select columns and convert time to datetime
-        if not all(c in df.columns for c in columns):
-            return None
-
-        df = df[columns]
-        df["DATA_HORA_DADO"] = pd.to_datetime(df["DATA_HORA_DADO"])
-
-        # The API returns the data values and the status. We separate these and join back together later. 
-        values = df.melt(
-            id_vars=['DATA_HORA_DADO', 'NIVEL_CONSISTENCIA'],
-            value_vars=[col for col in df.columns if col.startswith(prefix) and not col.endswith('_STATUS')],
-            var_name='DAY',
-            value_name=prefix
-        )
-        values['DAY'] = values['DAY'].str.extract(rf'{prefix}_(\d{{2}})')
-
-        status = df.melt(
-            id_vars=['DATA_HORA_DADO', 'NIVEL_CONSISTENCIA'],
-            value_vars=[col for col in df.columns if col.startswith(prefix) and col.endswith('_STATUS')],
-            var_name='DAY',
-            value_name=f'{prefix}_STATUS'
-        )
-
-        if status.shape[0] == values.shape[0]:
-            status['DAY'] = status['DAY'].str.extract(rf'{prefix}_(\d{{2}})_STATUS')
-            df = pd.merge(values, status, on=['DATA_HORA_DADO', 'NIVEL_CONSISTENCIA', 'DAY'])
-        else: 
-            df = values 
-            df[f'{prefix}_STATUS'] = pd.NA 
-
-        df['YEAR'] = pd.to_datetime(df['DATA_HORA_DADO']).dt.year
-        df['MONTH'] = pd.to_datetime(df['DATA_HORA_DADO']).dt.month
-        df['DAY'] = df['DAY'].astype(int)
-
-        # Create actual dates safely
-        df['DATA_HORA_DADO'] = pd.to_datetime(
-            df[['YEAR', 'MONTH', 'DAY']],
-            errors='coerce'  # Invalid days (e.g. Feb 30) become NaT
-        )
-        df = df.dropna(subset=['DATA_HORA_DADO']) # Drop invalid days
-        df = df[['DATA_HORA_DADO', 'NIVEL_CONSISTENCIA', f'{prefix}', f'{prefix}_STATUS']]
-        df['Date'] = df['DATA_HORA_DADO']
-
-        col_name = utils.get_column_name(variable)
-        if variable == "discharge":
-            df[col_name] = pd.to_numeric(df[prefix], errors='coerce')
-        elif variable == "stage":
-            # Convert cm to m
-            df[col_name] = pd.to_numeric(df[prefix], errors='coerce') / 100.0
-
-        return df[['Date', col_name]].sort_values(by="Date").reset_index(drop=True)
-
-    def _download_data(self, variable: str, start_date: str, end_date: str) -> List[Dict[str, Any]]: 
-        """Downloads daily data from the ANA API"""
+    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> List[Dict[str, Any]]:
+        """Downloads raw data in yearly chunks."""
         if not self.username or not self.password:
             return []
 
-        if end_date is None: # I.e. get the most recent
-            end_date = datetime.strftime(datetime.today(), "%Y-%m-%d")
-
-        if start_date is None: # Get the previous year of data
-            start_date = datetime.strptime(end_date, "%Y-%m-%d") - relativedelta(years=1)
-            start_date = datetime.strftime(start_date, "%Y-%m-%d")
-
-        # Convert to datetime
-        start_date = datetime.strptime(start_date, "%Y-%m-%d")
-        end_date = datetime.strptime(end_date, "%Y-%m-%d")
-
-        # Now we check whether the station has data for the requested variable
-        metadata = self._get_station_metadata()
-        metadata.columns = metadata.columns.str.upper()
-        has_discharge = bool(metadata['TIPO_ESTACAO_DESC_LIQUIDA'].iloc[0])
-        has_stage = bool(metadata['TIPO_ESTACAO_ESCALA'].iloc[0])
-        if (variable == 'discharge'): 
-            if not has_discharge: 
-                return []
-            else:
-                column_varname = 'DESC_LIQUIDA'
-        
-        if (variable == 'stage'):
-            if not has_stage: 
-                return []
-            else:
-                column_varname = 'ESCALA'
-
-        # Get the start and end dates of the record
-        record_start_date = pd.to_datetime(metadata[f'DATA_PERIODO_{column_varname}_INICIO'].iloc[0])
-        record_end_date = pd.to_datetime(metadata[f'DATA_PERIODO_{column_varname}_FIM'].iloc[0])
-        
-        if pd.isna(record_end_date):
-            record_end_date = datetime.today()
-
-        # Clip start and end dates to available record period
-        if start_date < record_start_date:
-            start_date = record_start_date
-        if end_date > record_end_date:
-            end_date = record_end_date
-
-        # If adjusted end date is now earlier than start date, nothing to return
-        if end_date < start_date:
+        if variable == constants.DISCHARGE_DAILY_MEAN:
+            data_url = f"{self.BASE_URL}/HidroSerieVazao/v1"
+        elif variable == constants.STAGE_DAILY_MEAN:
+            data_url = f"{self.BASE_URL}/HidroSerieCotas/v1"
+        else:
+            logger.error(f"Unsupported variable for daily download: {variable}")
             return []
-        
-        # Get the endpoint for the given variable. These services allow up to 
-        # one year of data to be retrieved
-        if variable == "discharge": 
-            endpoint = "EstacoesTelemetricas/HidroSerieVazao/v1" 
-        elif variable == "stage": 
-            endpoint = "EstacoesTelemetricas/HidroSerieCotas/v1"
-        elif variable == "precipitation":
-            endpoint = "EstacoesTelemetricas/HidroSerieChuva/v1"
-        data_url = f"{self.BASE_URL}/{endpoint}"
-        
+
+        all_data = []
+        start_dt = datetime.strptime(start_date, "%Y-%m-%d")
+        end_dt = datetime.strptime(end_date, "%Y-%m-%d")
         s = utils.requests_retry_session()
 
-        # Start at the end of the requested period and work backwards
-        current_date = end_date
-        all_data = []
-        while current_date >= start_date:
-            
+        current_year = start_dt.year
+        while current_year <= end_dt.year:
             token = self._get_token()
             if not token:
                 logger.error("Cannot download data without a token.")
                 break
+
+            year_start = datetime(current_year, 1, 1)
+            year_end = datetime(current_year, 12, 31)
+
+            req_start_date = max(start_dt, year_start)
+            req_end_date = min(end_dt, year_end)
+
+            if req_start_date > req_end_date:
+                current_year += 1
+                continue
+
+            # Manually build the URL to control encoding
+            base_data_url = f"{data_url}?"
+            params_list = [
+                f"C%C3%B3digo%20da%20Esta%C3%A7%C3%A3o={gauge_id}",
+                "Tipo%20Filtro%20Data=DATA_LEITURA",
+                f"Data%20Inicial%20(yyyy-MM-dd)={req_start_date.strftime('%Y-%m-%d')}",
+                f"Data%20Final%20(yyyy-MM-dd)={req_end_date.strftime('%Y-%m-%d')}"
+            ]
+            full_url = base_data_url + "&".join(params_list)
 
             headers = {
                 'accept': '*/*',
@@ -245,123 +195,81 @@ class BrazilFetcher(base.RiverDataFetcher):
             if chunk_start_date < start_date:
                 chunk_start_date = start_date
 
-            params = {
-                "Código da Estação": self.site_id,
-                "Tipo Filtro Data": "DATA_LEITURA",
-                "Data Inicial (yyyy-MM-dd)": chunk_start_date,
-                "Data Final (yyyy-MM-dd)": current_date
-            }
-            logger.info(f"Fetching Brazil data for site {self.site_id} from {chunk_start_date.strftime('%Y-%m-%d')} to {current_date.strftime('%Y-%m-%d')}")
+            logger.debug(f"Fetching {variable} for site {gauge_id} from {req_start_date.strftime('%Y-%m-%d')} to {req_end_date.strftime('%Y-%m-%d')}")
+            logger.debug(f"Request URL: {full_url}")
             try:
-                response = s.get(data_url, params=params, headers=headers)
+                response = s.get(full_url, headers=headers)
                 response.raise_for_status()
                 data = response.json()
-                if data.get("status") == "OK" and data.get("items"):
-                    all_data.extend(data["items"])
-                elif data.get("status") == "OK":
-                    logger.info(f"No items returned for {self.site_id} for period {chunk_start_date.strftime('%Y-%m-%d')} to {current_date.strftime('%Y-%m-%d')}")
+                if isinstance(data, list):
+                    all_data.extend(data)
+                elif isinstance(data, dict) and data.get("status") == "OK" and data.get("items"):
+                     all_data.extend(data["items"])
+                elif isinstance(data, dict) and data.get("status") == "OK":
+                    logger.info(f"No items returned for {gauge_id} for year {current_year}")
                 else:
-                    logger.warning(f"API returned non-OK status: {data}")
+                    logger.warning(f"API returned unexpected response: {data}")
 
             except requests.exceptions.RequestException as e:
-                logger.error(f"Error downloading data chunk for {self.site_id}: {e}")
+                logger.error(f"Error downloading data chunk for {gauge_id}: {e}")
             except Exception as e:
-                logger.error(f"Error processing data chunk for {self.site_id}: {e}")
+                logger.error(f"Error processing data chunk for {gauge_id}: {e}")
 
-            current_date = chunk_start_date - timedelta(days=1)
+            current_year += 1
             time.sleep(0.2) # Be nice to the API
 
         return all_data
 
-    def _download_nrt_data(self, variable: str, start_date: str, end_date: str) -> List[Dict[str, Any]]:
-        """Downloads raw data from telemetered stations in 30-day chunks."""
-        if not self.username or not self.password:
-            return []
+    def _parse_data(self, gauge_id: str, raw_data: List[Dict[str, Any]], variable: str) -> pd.DataFrame:
+        """Parses the raw JSON data from daily endpoints."""
+        if not raw_data:
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-        if end_date is None: # I.e. get the most recent
-            end_date = datetime.strftime(datetime.today(), "%Y-%m-%d")
+        all_dfs = []
+        try:
+            for month_data in raw_data:
+                if not isinstance(month_data, dict):
+                    logger.warning(f"Unexpected item format in raw_data: {month_data}")
+                    continue
 
-        if start_date is None: 
-            start_date = datetime.strptime(end_date, "%Y-%m-%d") - timedelta(days=30)
-            start_date = datetime.strftime(start_date, "%Y-%m-%d")
+                month_str = month_data.get("Data_Hora_Dado")
+                if not month_str:
+                    logger.warning(f"Missing 'Data_Hora_Dado' in month_data: {month_data}")
+                    continue
+                
+                year = int(month_str[:4])
+                month = int(month_str[5:7])
 
-        start_date = datetime.strptime(start_date, "%Y-%m-%d")
-        end_date = datetime.strptime(end_date, "%Y-%m-%d")
-
-        # Now we check whether the station has telemetry 
-        metadata = self._get_station_metadata()
-        metadata.columns = metadata.columns.str.upper()
-        has_telemetry = bool(metadata['TIPO_ESTACAO_TELEMETRICA'].iloc[0])
-        if not has_telemetry: 
-            return []
-
-        telemetry_start_date = pd.to_datetime(metadata['DATA_PERIODO_TELEMETRICA_INICIO'].iloc[0])
-        telemetry_end_date = pd.to_datetime(metadata['DATA_PERIODO_TELEMETRICA_FIM'].iloc[0])
-
-        if pd.isna(telemetry_end_date):
-            telemetry_end_date = datetime.today()
-
-        # Clip to available telemetry period
-        if start_date < telemetry_start_date:
-            start_date = telemetry_start_date
-        if end_date > telemetry_end_date:
-            end_date = telemetry_end_date
-
-        # If adjusted end is earlier than start, no overlap
-        if end_date < start_date:
-            return []
-
-        # Set up requests session
-        endpoint = "EstacoesTelemetricas/HidroinfoanaSerieTelemetricaAdotada/v1"
-        data_url = f"{self.BASE_URL}/{endpoint}" 
-
-        s = utils.requests_retry_session()
-
-        # This API returns data for timesteps *prior* to the given start date, so it makes sense to work back in time
-        current_date = end_date 
-        all_data = []
-        while current_date >= start_date:
-            token = self._get_token()
-            headers = {
-                'accept': '*/*',
-                "Authorization": f"Bearer {token}"
-            }
-            if not token:
-                logger.error("Cannot download data without a token.")
-                break
-
-            chunk_start_date = current_date - timedelta(days=30) + timedelta(days=1)
-            if chunk_start_date < start_date:
-                chunk_start_date = start_date
-
-            params = {
-                "Código da Estação": self.site_id,
-                "Tipo Filtro Data": "DATA_LEITURA",
-                "Data de Busca": current_date,
-                "Range Intervalo de busca": "DIAS_30",
-            }
-
-            logger.info(f"Fetching Brazil data for site {self.site_id} from {chunk_start_date.strftime('%Y-%m-%d')} to {current_date.strftime('%Y-%m-%d')}")
-            try:
-                response = s.get(data_url, params=params, headers=headers)
-                response.raise_for_status()
-                data = response.json()
-                if data.get("status") == "OK" and data.get("items"):
-                    all_data.extend(data["items"])
-                elif data.get("status") == "OK":
-                    logger.info(f"No items returned for {self.site_id} for period {chunk_start_date.strftime('%Y-%m-%d')} to {current_date.strftime('%Y-%m-%d')}")
+                if variable == constants.DISCHARGE_DAILY_MEAN:
+                    val_prefix = "Vazao_"
+                    unit_conversion = 1.0
+                elif variable == constants.STAGE_DAILY_MEAN:
+                    val_prefix = "Cota_"
+                    unit_conversion = 0.01  # cm to m
                 else:
-                    logger.warning(f"API returned non-OK status: {data}")
+                    return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-            except requests.exceptions.RequestException as e:
-                logger.error(f"Error downloading data chunk for {self.site_id}: {e}")
-            except Exception as e:
-                logger.error(f"Error processing data chunk for {self.site_id}: {e}")
+                day_values = {}
+                for day in range(1, 32):
+                    day_str = f"{day:02d}"
+                    val_col = f"{val_prefix}{day_str}"
+                    if val_col in month_data and month_data[val_col] is not None:
+                        try:
+                            date = datetime(year, month, day)
+                            day_values[date] = pd.to_numeric(month_data[val_col], errors='coerce') * unit_conversion
+                        except ValueError:
+                            # Handles invalid dates like Feb 30
+                            continue
+                
+                month_df = pd.DataFrame(list(day_values.items()), columns=[constants.TIME_INDEX, variable])
+                all_dfs.append(month_df)
 
-            current_date = chunk_start_date - timedelta(days=1)
-            time.sleep(0.2) # Be nice to the API
+            if not all_dfs:
+                return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-        return all_data
+            df = pd.concat(all_dfs, ignore_index=True)
+            df = df.dropna().sort_values(by=constants.TIME_INDEX).set_index(constants.TIME_INDEX)
+            return df
 
     def get_data(
         self,
@@ -385,7 +293,7 @@ class BrazilFetcher(base.RiverDataFetcher):
             df = self._parse_data(raw_data, variable)
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[(df[constants.TIME_INDEX] >= start_date_dt) & (df[constants.TIME_INDEX] <= end_date_dt)]
+            df = df[(df.index >= start_date_dt) & (df.index <= end_date_dt)]
             return df
         except Exception as e:
             logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}")
