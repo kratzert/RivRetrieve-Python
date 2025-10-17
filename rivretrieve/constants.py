@@ -22,8 +22,6 @@ _CATCHMENT_PRECIPITATION = "catchment-precipitation"
 
 # List of temporal resolutions.
 DAILY = "daily"
-_HOURLY = "60min"
-_15MIN = "15min"
 INSTANTANEOUS = "instantaneous"
 
 # List of temporal aggregrations.
@@ -38,14 +36,12 @@ _SUM = "sum"
 DISCHARGE_DAILY_MEAN = f"{DISCHARGE}_{DAILY}_{_MEAN}"
 DISCHARGE_DAILY_MAX = f"{DISCHARGE}_{DAILY}_{_MAX}"
 DISCHARGE_DAILY_MIN = f"{DISCHARGE}_{DAILY}_{_MIN}"
-DISCHARGE_15MIN = f"{DISCHARGE}_{_15MIN}"
 DISCHARGE_INSTANT = f"{DISCHARGE}_{INSTANTANEOUS}"
 
 # Stage.
 STAGE_DAILY_MEAN = f"{STAGE}_{DAILY}_{_MEAN}"
 STAGE_DAILY_MAX = f"{STAGE}_{DAILY}_{_MAX}"
 STAGE_DAILY_MIN = f"{STAGE}_{DAILY}_{_MIN}"
-STAGE_15MIN = f"{STAGE}_{_15MIN}"
 STAGE_INSTANT = f"{STAGE}_{INSTANTANEOUS}"
 
 # Water temperature.

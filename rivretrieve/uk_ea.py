@@ -34,7 +34,7 @@ class UKEAFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return (constants.DISCHARGE_DAILY_MEAN, constants.STAGE_15MIN)
+        return (constants.DISCHARGE_DAILY_MEAN, constants.STAGE_INSTANT)
 
     def get_metadata(self) -> pd.DataFrame:
         """Fetches site metadata for all stations from the EA API.
@@ -66,7 +66,7 @@ class UKEAFetcher(base.RiverDataFetcher):
 
     def _get_measure_notation(self, variable: str) -> str:
         """Gets the notation for the given variable."""
-        if variable == constants.STAGE_15MIN:
+        if variable == constants.STAGE_INSTANT:
             return "level-i-900-m-qualified"
         elif variable == constants.DISCHARGE_DAILY_MEAN:
             return "flow-m-86400-m3s-qualified"
