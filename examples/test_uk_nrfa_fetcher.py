@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 gauge_ids = [
     "1001",  # Sample gauge from issue #34
 ]
-variable = constants.DISCHARGE
+variable = constants.DISCHARGE_DAILY_MEAN
 start_date = "2022-01-01"
 end_date = "2022-01-31"
 
@@ -34,7 +34,7 @@ for gauge_id in gauge_ids:
         print(f"Time series from {data.index.min()} to {data.index.max()}")
         plt.plot(
             data.index,
-            data[constants.DISCHARGE],
+            data[constants.DISCHARGE_DAILY_MEAN],
             label=gauge_id,
             marker=".",
             linestyle="-",
@@ -44,7 +44,7 @@ for gauge_id in gauge_ids:
 
 if "data" in locals() and not data.empty:
     plt.xlabel(constants.TIME_INDEX)
-    plt.ylabel(f"{constants.DISCHARGE} (m3/s)")
+    plt.ylabel(f"{constants.DISCHARGE_DAILY_MEAN} (m3/s)")
     plt.title(f"UK NRFA River Discharge ({gauge_ids[0]} - {start_date} to {end_date})")
     plt.legend()
     plt.grid(True)

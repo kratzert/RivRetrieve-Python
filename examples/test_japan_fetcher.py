@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 gauge_ids = [
     "301011281104010",
 ]
-variable = constants.DISCHARGE
+variable = constants.DISCHARGE_DAILY_MEAN
 start_date = "2019-01-01"
 end_date = "2019-12-31"  # Fetching a few months to test
 
@@ -25,7 +25,7 @@ for gauge_id in gauge_ids:
         print(f"Time series from {data.index.min()} to {data.index.max()}")
         plt.plot(
             data.index,
-            data[constants.DISCHARGE],
+            data[constants.DISCHARGE_DAILY_MEAN],
             label=gauge_id,
             marker="o",
         )
@@ -33,7 +33,7 @@ for gauge_id in gauge_ids:
         print(f"No data found for {gauge_id}")
 
 plt.xlabel(constants.TIME_INDEX)
-plt.ylabel(f"{constants.DISCHARGE} (m3/s)")
+plt.ylabel(f"{constants.DISCHARGE_DAILY_MEAN} (m3/s)")
 plt.title("Japan River Discharge - Full Time Series")
 plt.legend()
 plt.grid(True)

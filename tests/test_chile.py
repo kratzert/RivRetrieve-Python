@@ -40,7 +40,7 @@ class TestChileFetcher(unittest.TestCase):
         mock_get.side_effect = get_side_effect
 
         gauge_id = "test_gauge"
-        variable = constants.DISCHARGE
+        variable = constants.DISCHARGE_DAILY_MEAN
         start_date = "2022-01-01"
         end_date = "2022-01-03"
 
@@ -48,7 +48,7 @@ class TestChileFetcher(unittest.TestCase):
 
         expected_data = {
             constants.TIME_INDEX: pd.to_datetime(["2022-01-01", "2022-01-02", "2022-01-03"]),
-            constants.DISCHARGE: [15.5, 16.0, 15.8],
+            constants.DISCHARGE_DAILY_MEAN: [15.5, 16.0, 15.8],
         }
         expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 

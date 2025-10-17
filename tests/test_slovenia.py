@@ -33,7 +33,7 @@ class TestSloveniaFetcher(unittest.TestCase):
         mock_session.get.return_value = mock_response
 
         gauge_id = "1020"
-        variable = constants.DISCHARGE
+        variable = constants.DISCHARGE_DAILY_MEAN
         start_date = "1980-01-01"
         end_date = "1980-01-05"
 
@@ -43,7 +43,7 @@ class TestSloveniaFetcher(unittest.TestCase):
         expected_values = [115.0, 119.0, 115.0, 108.0, 108.0]  # Values from sample file
         expected_data = {
             constants.TIME_INDEX: expected_dates,
-            constants.DISCHARGE: expected_values,
+            constants.DISCHARGE_DAILY_MEAN: expected_values,
         }
         expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
@@ -65,7 +65,7 @@ class TestSloveniaFetcher(unittest.TestCase):
         mock_session.get.return_value = mock_response
 
         gauge_id = "1020"
-        variable = constants.STAGE
+        variable = constants.STAGE_DAILY_MEAN
         start_date = "1980-01-01"
         end_date = "1980-01-03"
 
@@ -79,7 +79,7 @@ class TestSloveniaFetcher(unittest.TestCase):
         ]  # Values from sample file / 100
         expected_data = {
             constants.TIME_INDEX: expected_dates,
-            constants.STAGE: expected_values,
+            constants.STAGE_DAILY_MEAN: expected_values,
         }
         expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 

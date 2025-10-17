@@ -24,7 +24,7 @@ class TestCanadaFetcher(unittest.TestCase):
         mock_download.return_value = True  # Prevent download attempt
 
         gauge_id = "08GA031"
-        variable = constants.DISCHARGE
+        variable = constants.DISCHARGE_DAILY_MEAN
         start_date = "2010-01-01"
         end_date = "2010-01-05"
 
@@ -34,7 +34,7 @@ class TestCanadaFetcher(unittest.TestCase):
             constants.TIME_INDEX: pd.to_datetime(
                 ["2010-01-01", "2010-01-02", "2010-01-03", "2010-01-04", "2010-01-05"]
             ),
-            constants.DISCHARGE: [1.1, 1.2, 1.3, 1.4, 1.5],
+            constants.DISCHARGE_DAILY_MEAN: [1.1, 1.2, 1.3, 1.4, 1.5],
         }
         expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
@@ -50,7 +50,7 @@ class TestCanadaFetcher(unittest.TestCase):
         mock_download.return_value = True  # Prevent download attempt
 
         gauge_id = "08GA031"
-        variable = constants.STAGE
+        variable = constants.STAGE_DAILY_MEAN
         start_date = "2010-01-01"
         end_date = "2010-01-05"
 
@@ -60,7 +60,7 @@ class TestCanadaFetcher(unittest.TestCase):
             constants.TIME_INDEX: pd.to_datetime(
                 ["2010-01-01", "2010-01-02", "2010-01-03", "2010-01-04", "2010-01-05"]
             ),
-            constants.STAGE: [10.1, 10.2, 10.3, 10.4, 10.5],
+            constants.STAGE_DAILY_MEAN: [10.1, 10.2, 10.3, 10.4, 10.5],
         }
         expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
