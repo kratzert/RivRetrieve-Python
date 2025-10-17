@@ -191,9 +191,6 @@ class BrazilFetcher(base.RiverDataFetcher):
                 'accept': '*/*',
                 "Authorization": f"Bearer {token}"
             }
-            chunk_start_date = current_date - relativedelta(years=1) + timedelta(days=1)
-            if chunk_start_date < start_date:
-                chunk_start_date = start_date
 
             logger.debug(f"Fetching {variable} for site {gauge_id} from {req_start_date.strftime('%Y-%m-%d')} to {req_end_date.strftime('%Y-%m-%d')}")
             logger.debug(f"Request URL: {full_url}")
@@ -270,6 +267,9 @@ class BrazilFetcher(base.RiverDataFetcher):
             df = pd.concat(all_dfs, ignore_index=True)
             df = df.dropna().sort_values(by=constants.TIME_INDEX).set_index(constants.TIME_INDEX)
             return df
+        except Exception as e:
+            logger.error(f"Error parsing CSV data for site {gauge_id}: {e}")
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     def get_data(
         self,
@@ -289,8 +289,8 @@ class BrazilFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
         try:
-            raw_data = self._download_data(variable, start_date, end_date)
-            df = self._parse_data(raw_data, variable)
+            raw_data = self._download_data(gauge_id, variable, start_date, end_date)
+            df = self._parse_data(gauge_id, raw_data, variable)
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
             df = df[(df.index >= start_date_dt) & (df.index <= end_date_dt)]
