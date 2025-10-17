@@ -8,5 +8,7 @@ dataretrieval>=1.0.0
 openpyxl>=3.0.0
 xarray
 parameterized
+python-dotenv
+ruff
 tqdm
 zarr>=3.0.7

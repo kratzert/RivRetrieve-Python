@@ -1,23 +1,45 @@
 """Fetcher for Brazilian river gauge data from ANA Hidroweb."""
 
-import io
 import logging
-import re
-import zipfile
-from typing import Optional
+import os
+import time
+from datetime import datetime
+from typing import Any, Dict, List, Optional
 
 import pandas as pd
 import requests
+from dotenv import load_dotenv
 
 from . import base, constants, utils
 
 logger = logging.getLogger(__name__)
 
+# Load environment variables from .env file
+load_dotenv(dotenv_path=os.path.join((os.path.dirname(__file__)), ".env"))
+
+# Get credentials from environment variables
+USERNAME = os.environ.get("ANA_USERNAME")
+PASSWORD = os.environ.get("ANA_PASSWORD")
+
 
 class BrazilFetcher(base.RiverDataFetcher):
-    """Fetches river gauge data from Brazil's ANA Hidroweb."""
+    """Fetches river gauge data from Brazil's ANA Hidroweb API v2."""
 
-    BASE_URL = "https://www.snirh.gov.br/hidroweb/rest/api/documento/convencionais"
+    BASE_URL = "https://www.ana.gov.br/hidrowebservice/EstacoesTelemetricas"
+    AUTH_URL = f"{BASE_URL}/OAUth/v1"
+
+    def __init__(self, username: Optional[str] = None, password: Optional[str] = None):
+        super().__init__()
+        self.username = username or USERNAME
+        self.password = password or PASSWORD
+        self._token = None
+        self._token_expiry = 0
+
+        if not self.username or not self.password:
+            logger.error(
+                "ANA Username or Password not provided. Please set ANA_USERNAME and ANA_PASSWORD in ,"
+                "your .env file or pass them to the constructor."
+            )
 
     @staticmethod
     def get_gauge_ids() -> pd.DataFrame:
@@ -26,124 +48,249 @@ class BrazilFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return (constants.DISCHARGE, constants.STAGE)
+        return (constants.DISCHARGE_DAILY_MEAN, constants.STAGE_DAILY_MEAN)
 
-    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> Optional[pd.DataFrame]:
-        """Downloads and extracts the data file."""
-        params = {"tipo": 3, "documentos": gauge_id}
+    def get_metadata(self) -> pd.DataFrame:
+        """Fetches station metadata for all Brazilian states."""
+        if not self.username or not self.password:
+            logger.error("ANA Username or Password not provided.")
+            return pd.DataFrame().set_index(constants.GAUGE_ID)
+
+        token = self._get_token()
+        if not token:
+            logger.error("Cannot fetch metadata without a token.")
+            return pd.DataFrame().set_index(constants.GAUGE_ID)
+
+        states = [
+            "AC",
+            "AL",
+            "AM",
+            "AP",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO",
+        ]
+
+        metadata_url = f"{self.BASE_URL}/HidroInventarioEstacoes/v1"
+        all_stations = []
+        s = utils.requests_retry_session()
+        headers = {"Authorization": f"Bearer {token}"}
+
+        for state in states:
+            logger.info(f"Fetching metadata for state: {state}")
+            params = {"Unidade Federativa": state}
+            try:
+                response = s.get(metadata_url, params=params, headers=headers)
+                response.raise_for_status()
+                data = response.json()
+                if isinstance(data, list):
+                    all_stations.extend(data)
+                elif isinstance(data, dict) and data.get("status") == "OK" and data.get("items"):
+                    all_stations.extend(data["items"])
+                else:
+                    logger.warning(f"No stations found for state {state} or unexpected response: {data}")
+            except requests.exceptions.RequestException as e:
+                logger.error(f"Error fetching metadata for state {state}: {e}")
+            except Exception as e:
+                logger.error(f"Error processing metadata for state {state}: {e}")
+            time.sleep(0.1)
+
+        if not all_stations:
+            return pd.DataFrame().set_index(constants.GAUGE_ID)
+
+        df = pd.DataFrame(all_stations)
+
+        rename_map = {
+            "codigoestacao": constants.GAUGE_ID,
+            "Estacao_Nome": constants.STATION_NAME,
+            "Latitude": constants.LATITUDE,
+            "Longitude": constants.LONGITUDE,
+            "Altitude": constants.ALTITUDE,
+            "Area_Drenagem": constants.AREA,
+            "Bacia_Nome": constants.RIVER,
+        }
+        df = df.rename(columns=rename_map)
+        df[constants.GAUGE_ID] = df[constants.GAUGE_ID].astype(str)
+        return df.set_index(constants.GAUGE_ID)
+
+    def _get_token(self) -> Optional[str]:
+        """Gets and caches the authentication token."""
+        if not self.username or not self.password:
+            return None
+
+        if self._token and time.time() < self._token_expiry:
+            return self._token
+
+        logger.info("Fetching new authentication token for Brazil...")
+        headers = {"accept": "*/*", "Identificador": self.username, "Senha": self.password}
+        s = utils.requests_retry_session()
+        try:
+            response = s.get(self.AUTH_URL, headers=headers)
+            response.raise_for_status()
+            data = response.json()
+            if data.get("status") == "OK" and data.get("items", {}).get("sucesso"):
+                self._token = data["items"]["tokenautenticacao"]
+                # Set expiry to 14 minutes (840 seconds) to be safe
+                self._token_expiry = time.time() + 840
+                logger.info("Successfully obtained new token.")
+                return self._token
+            else:
+                logger.error(f"Authentication failed: {data}")
+                return None
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Error fetching token: {e}")
+            return None
+        except Exception as e:
+            logger.error(f"Error processing token response: {e}")
+            return None
+
+    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> List[Dict[str, Any]]:
+        """Downloads raw data in yearly chunks."""
+        if not self.username or not self.password:
+            return []
+
+        if variable == constants.DISCHARGE_DAILY_MEAN:
+            data_url = f"{self.BASE_URL}/HidroSerieVazao/v1"
+        elif variable == constants.STAGE_DAILY_MEAN:
+            data_url = f"{self.BASE_URL}/HidroSerieCotas/v1"
+        else:
+            logger.error(f"Unsupported variable for daily download: {variable}")
+            return []
+
+        all_data = []
+        start_dt = datetime.strptime(start_date, "%Y-%m-%d")
+        end_dt = datetime.strptime(end_date, "%Y-%m-%d")
         s = utils.requests_retry_session()
 
-        try:
-            response = s.get(self.BASE_URL, params=params, headers=utils.DEFAULT_HEADERS)
-            response.raise_for_status()
+        current_year = start_dt.year
+        while current_year <= end_dt.year:
+            token = self._get_token()
+            if not token:
+                logger.error("Cannot download data without a token.")
+                break
 
-            with zipfile.ZipFile(io.BytesIO(response.content)) as zf:
-                # Find the correct inner zip file (vazoes for discharge, cotas for stage)
-                inner_zip_name = None
-                pattern = f"^{gauge_id}/(vazoes|cotas)_{gauge_id}.zip$"
-                for name in zf.namelist():
-                    if re.match(pattern, name):
-                        if (variable == constants.DISCHARGE and "vazoes" in name) or (
-                            variable == constants.STAGE and "cotas" in name
-                        ):
-                            inner_zip_name = name
-                            break
+            year_start = datetime(current_year, 1, 1)
+            year_end = datetime(current_year, 12, 31)
 
-                if not inner_zip_name:
-                    logger.warning(f"Could not find inner zip for site {gauge_id}, variable {variable}")
-                    return None
+            req_start_date = max(start_dt, year_start)
+            req_end_date = min(end_dt, year_end)
 
-                with zf.open(inner_zip_name) as inner_zf_file:
-                    with zipfile.ZipFile(io.BytesIO(inner_zf_file.read())) as inner_zf:
-                        data_file_name = inner_zf.namelist()[0]
-                        with inner_zf.open(data_file_name) as data_file:
-                            # The files are ISO-8859-1 encoded
-                            raw_df = pd.read_csv(
-                                data_file,
-                                sep=";",
-                                decimal=",",
-                                skiprows=13,
-                                encoding="ISO-8859-1",
-                                engine="python",
-                            )
-                            return raw_df
+            if req_start_date > req_end_date:
+                current_year += 1
+                continue
 
-        except requests.exceptions.RequestException as e:
-            logger.error(f"Error downloading from Hidroweb for site {gauge_id}: {e}")
-            return None
-        except zipfile.BadZipFile:
-            logger.error(f"Bad zip file for site {gauge_id}")
-            return None
-        except Exception as e:
-            logger.error(f"Error processing file for site {gauge_id}: {e}")
-            return None
+            # Manually build the URL to control encoding
+            base_data_url = f"{data_url}?"
+            params_list = [
+                f"C%C3%B3digo%20da%20Esta%C3%A7%C3%A3o={gauge_id}",
+                "Tipo%20Filtro%20Data=DATA_LEITURA",
+                f"Data%20Inicial%20(yyyy-MM-dd)={req_start_date.strftime('%Y-%m-%d')}",
+                f"Data%20Final%20(yyyy-MM-dd)={req_end_date.strftime('%Y-%m-%d')}",
+            ]
+            full_url = base_data_url + "&".join(params_list)
 
-    def _parse_data(self, gauge_id: str, raw_df: Optional[pd.DataFrame], variable: str) -> pd.DataFrame:
-        """Parses the raw DataFrame."""
-        if raw_df is None or raw_df.empty:
+            headers = {"accept": "*/*", "Authorization": f"Bearer {token}"}
+
+            logger.debug(
+                f"Fetching {variable} for site {gauge_id} from {req_start_date.strftime('%Y-%m-%d')} to "
+                f" {req_end_date.strftime('%Y-%m-%d')}"
+            )
+            logger.debug(f"Request URL: {full_url}")
+            try:
+                response = s.get(full_url, headers=headers)
+                response.raise_for_status()
+                data = response.json()
+                if isinstance(data, list):
+                    all_data.extend(data)
+                elif isinstance(data, dict) and data.get("status") == "OK" and data.get("items"):
+                    all_data.extend(data["items"])
+                elif isinstance(data, dict) and data.get("status") == "OK":
+                    logger.info(f"No items returned for {gauge_id} for year {current_year}")
+                else:
+                    logger.warning(f"API returned unexpected response: {data}")
+
+            except requests.exceptions.RequestException as e:
+                logger.error(f"Error downloading data chunk for {gauge_id}: {e}")
+            except Exception as e:
+                logger.error(f"Error processing data chunk for {gauge_id}: {e}")
+
+            current_year += 1
+            time.sleep(0.2)  # Be nice to the API
+
+        return all_data
+
+    def _parse_data(self, gauge_id: str, raw_data: List[Dict[str, Any]], variable: str) -> pd.DataFrame:
+        """Parses the raw JSON data from daily endpoints."""
+        if not raw_data:
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
+        all_dfs = []
         try:
-            id_cols = ["EstacaoCodigo", "NivelConsistencia", "Data", "Hora"]
-            if variable == constants.DISCHARGE:
-                prefix = "Vazao"
-                id_cols.append("MetodoObtencaoVazoes")
-            else:  # stage
-                prefix = "Cota"
+            for month_data in raw_data:
+                if not isinstance(month_data, dict):
+                    logger.warning(f"Unexpected item format in raw_data: {month_data}")
+                    continue
 
-            # Select relevant columns
-            value_cols = [col for col in raw_df.columns if col.startswith(prefix)]
-            status_cols = [col for col in value_cols if col.endswith("Status")]
-            value_cols = [col for col in value_cols if not col.endswith("Status")]
+                month_str = month_data.get("Data_Hora_Dado")
+                if not month_str:
+                    logger.warning(f"Missing 'Data_Hora_Dado' in month_data: {month_data}")
+                    continue
 
-            df = raw_df[id_cols + value_cols + status_cols].copy()
+                year = int(month_str[:4])
+                month = int(month_str[5:7])
 
-            # Rename status columns for pivot
-            rename_map = {sc: sc.replace("Status", "_Status") for sc in status_cols}
-            df = df.rename(columns=rename_map)
+                if variable == constants.DISCHARGE_DAILY_MEAN:
+                    val_prefix = "Vazao_"
+                    unit_conversion = 1.0
+                elif variable == constants.STAGE_DAILY_MEAN:
+                    val_prefix = "Cota_"
+                    unit_conversion = 0.01  # cm to m
+                else:
+                    return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-            # Rename value columns for pivot
-            rename_map = {vc: f"{vc}_Value" for vc in value_cols}
-            df = df.rename(columns=rename_map)
+                day_values = {}
+                for day in range(1, 32):
+                    day_str = f"{day:02d}"
+                    val_col = f"{val_prefix}{day_str}"
+                    if val_col in month_data and month_data[val_col] is not None:
+                        try:
+                            date = datetime(year, month, day)
+                            day_values[date] = pd.to_numeric(month_data[val_col], errors="coerce") * unit_conversion
+                        except ValueError:
+                            # Handles invalid dates like Feb 30
+                            continue
 
-            # Pivot longer
-            df_long = pd.melt(df, id_vars=id_cols, var_name="day_type", value_name="Value")
-            df_long[["day", "Type"]] = df_long["day_type"].str.split("_", expand=True)
-            df_long["day"] = df_long["day"].str.replace(prefix, "").astype(int)
+                month_df = pd.DataFrame(list(day_values.items()), columns=[constants.TIME_INDEX, variable])
+                all_dfs.append(month_df)
 
-            # Separate Value and Status
-            df_values = df_long[df_long["Type"] == "Value"].copy()
-            df_status = df_long[df_long["Type"] == "Status"].copy()
-            df_status = df_status.rename(columns={"Value": "Status"})
+            if not all_dfs:
+                return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-            # Merge back Value and Status
-            id_cols_melt = id_cols + ["day"]
-            df_merged = pd.merge(
-                df_values[id_cols_melt + ["Value"]],
-                df_status[id_cols_melt + ["Status"]],
-                on=id_cols_melt,
-                how="left",
-            )
-
-            # Create Date column
-            df_merged["Data"] = pd.to_datetime(df_merged["Data"], format="%d/%m/%Y")
-            df_merged["year"] = df_merged["Data"].dt.year
-            df_merged["month"] = df_merged["Data"].dt.month
-
-            # Handle potential errors in make_date by coercing
-            date_df = df_merged[["year", "month", "day"]].copy()
-            df_merged[constants.TIME_INDEX] = pd.to_datetime(date_df, errors="coerce")
-            df_merged = df_merged.dropna(subset=[constants.TIME_INDEX])
-
-            df_merged["Value"] = pd.to_numeric(df_merged["Value"], errors="coerce")
-            if variable == constants.STAGE:  # cm to m
-                df_merged["Value"] = df_merged["Value"] / 100.0
-
-            df_final = df_merged[[constants.TIME_INDEX, "Value"]].rename(columns={"Value": variable})
-            return df_final.dropna().sort_values(by=constants.TIME_INDEX).reset_index(drop=True)
-
+            df = pd.concat(all_dfs, ignore_index=True)
+            df = df.dropna().sort_values(by=constants.TIME_INDEX).set_index(constants.TIME_INDEX)
+            return df
         except Exception as e:
-            logger.error(f"Error parsing data for site {gauge_id}: {e}")
+            logger.error(f"Error parsing CSV data for site {gauge_id}: {e}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
     def get_data(
@@ -154,6 +301,10 @@ class BrazilFetcher(base.RiverDataFetcher):
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
         """Fetches and parses Brazilian river gauge data."""
+        if not self.username or not self.password:
+            logger.error("ANA Username or Password not provided. Check your .env file or constructor arguments.")
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
+
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
         if variable not in self.get_available_variables():
@@ -162,11 +313,9 @@ class BrazilFetcher(base.RiverDataFetcher):
         try:
             raw_data = self._download_data(gauge_id, variable, start_date, end_date)
             df = self._parse_data(gauge_id, raw_data, variable)
-
-            # Filter by date range
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
-            df = df[(df[constants.TIME_INDEX] >= start_date_dt) & (df[constants.TIME_INDEX] <= end_date_dt)]
+            df = df[(df.index >= start_date_dt) & (df.index <= end_date_dt)]
             return df
         except Exception as e:
             logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}")

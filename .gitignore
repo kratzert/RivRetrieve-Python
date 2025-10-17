@@ -9,3 +9,4 @@ rivretrieve/data
 
 **/*.pyc
 **/*.png
+**/*.env
