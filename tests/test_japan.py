@@ -28,7 +28,7 @@ class TestJapanFetcher(unittest.TestCase):
         mock_get.return_value = mock_response
 
         gauge_id = "301011281104010"
-        variable = constants.DISCHARGE
+        variable = constants.DISCHARGE_DAILY_MEAN
         start_date = "2019-01-13"
         end_date = "2019-01-17"
 
@@ -38,7 +38,7 @@ class TestJapanFetcher(unittest.TestCase):
         expected_values = [2.09, 1.78, 1.78, 2.09, 1.78]
         expected_data = {
             constants.TIME_INDEX: expected_dates,
-            constants.DISCHARGE: expected_values,
+            constants.DISCHARGE_DAILY_MEAN: expected_values,
         }
         expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 

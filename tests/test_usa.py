@@ -32,7 +32,7 @@ class TestUSAFetcher(unittest.TestCase):
         )  # get_dv returns df and metadata
 
         gauge_id = "07374000"
-        variable = constants.DISCHARGE
+        variable = constants.DISCHARGE_DAILY_MEAN
         start_date = "2023-01-01"
         end_date = "2023-01-05"
 
@@ -49,7 +49,7 @@ class TestUSAFetcher(unittest.TestCase):
         ]
         expected_data = {
             constants.TIME_INDEX: expected_dates,
-            constants.DISCHARGE: expected_values,
+            constants.DISCHARGE_DAILY_MEAN: expected_values,
         }
         expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 

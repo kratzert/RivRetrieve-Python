@@ -21,26 +21,56 @@ class USAFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return (constants.DISCHARGE, constants.STAGE)
+        return (
+            constants.DISCHARGE_DAILY_MEAN,
+            constants.DISCHARGE_INSTANT,
+            constants.STAGE_DAILY_MEAN,
+            constants.STAGE_DAILY_MAX,
+            constants.STAGE_DAILY_MIN,
+            constants.STAGE_INSTANT,
+        )
 
     def _get_param_code(self, variable: str) -> str:
-        if variable == constants.STAGE:
+        if constants.STAGE in variable:
             return "00065"
-        elif variable == constants.DISCHARGE:
+        elif constants.DISCHARGE in variable:
             return "00060"
         else:
             raise ValueError(f"Unsupported variable: {variable}")
+
+    def _get_column_name(self, variable: str) -> str:
+        param_code = self._get_param_code(variable)
+        if variable == constants.STAGE_DAILY_MAX:
+            return f"{param_code}_Maximum"
+        elif variable == constants.STAGE_DAILY_MIN:
+            return f"{param_code}_Minimum"
+        elif variable == constants.STAGE_DAILY_MEAN:
+            return f"{param_code}_Mean"
+        elif variable == constants.DISCHARGE_DAILY_MEAN:
+            return f"{param_code}_Mean"
+        elif variable == constants.DISCHARGE_INSTANT:
+            return param_code
+        elif variable == constants.STAGE_INSTANT:
+            return param_code
 
     def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> pd.DataFrame:
         """Downloads data using the dataretrieval package."""
         param_code = self._get_param_code(variable)
         try:
-            df, meta = nwis.get_dv(
-                sites=gauge_id,
-                startDT=start_date,
-                endDT=end_date,
-                parameterCd=[param_code],
-            )
+            if constants.DAILY in variable:
+                df, meta = nwis.get_dv(
+                    sites=gauge_id,
+                    startDT=start_date,
+                    endDT=end_date,
+                    parameterCd=[param_code],
+                )
+            elif constants.INSTANTANEOUS in variable:
+                df, meta = nwis.get_iv(
+                    sites=gauge_id,
+                    startDT=start_date,
+                    endDT=end_date,
+                    parameterCd=[param_code],
+                )
             return df
         except Exception as e:
             logger.error(f"Error fetching NWIS data for site {gauge_id}, param {param_code}: {e}")
@@ -53,15 +83,11 @@ class USAFetcher(base.RiverDataFetcher):
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         param_code = self._get_param_code(variable)
-
-        value_col = None
-        for col in raw_data.columns:
-            if col.startswith(param_code) and ("_Mean" in col or "_00003" in col):
-                value_col = col
-                break
-
-        if value_col is None:
-            logger.warning(f"Could not find value column for param {param_code} in data for site {gauge_id}")
+        value_col = self._get_column_name(variable)
+        if value_col not in raw_data.columns:
+            logger.warning(
+                f"Could not find value column {value_col} for param {param_code} in data for site {gauge_id}"
+            )
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         df = raw_data[[value_col]].copy()
@@ -70,9 +96,9 @@ class USAFetcher(base.RiverDataFetcher):
         df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX].dt.date)
 
         # Unit conversion
-        if variable == constants.STAGE:  # Feet to meters
+        if variable.startswith(constants.STAGE):  # Feet to meters
             mult = 0.3048
-        elif variable == constants.DISCHARGE:  # cfs to m3/s
+        elif variable.startswith(constants.DISCHARGE):  # cfs to m3/s
             mult = 0.0283168466
         df[variable] = pd.to_numeric(df[value_col], errors="coerce") * mult
 

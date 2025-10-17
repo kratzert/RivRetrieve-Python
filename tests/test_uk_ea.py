@@ -49,7 +49,7 @@ class TestUKEAFetcher(unittest.TestCase):
         mock_session.get.side_effect = mock_get_side_effect
 
         gauge_id = "http://environment.data.gov.uk/hydrology/id/stations/3c5cba29-2321-4289-a1fd-c355e135f4cb"
-        variable = constants.DISCHARGE
+        variable = constants.DISCHARGE_DAILY_MEAN
         start_date = "2024-01-01"
         end_date = "2024-01-03"
 
@@ -59,7 +59,7 @@ class TestUKEAFetcher(unittest.TestCase):
         expected_values = [72.777, 99.138, 68.020]  # Values from sample file
         expected_data = {
             constants.TIME_INDEX: expected_dates,
-            constants.DISCHARGE: expected_values,
+            constants.DISCHARGE_DAILY_MEAN: expected_values,
         }
         expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 

@@ -25,7 +25,7 @@ class AustraliaFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return (constants.DISCHARGE, constants.STAGE)
+        return (constants.DISCHARGE_DAILY_MEAN, constants.STAGE_DAILY_MEAN)
 
     def _make_bom_request(self, params: Dict[str, Any]) -> Any:
         """Helper function to make requests to the BoM API."""
@@ -51,10 +51,10 @@ class AustraliaFetcher(base.RiverDataFetcher):
 
     def _get_timeseries_id(self, gauge_id: str, variable: str) -> Optional[str]:
         """Retrieves the timeseries ID for the given site and variable."""
-        if variable == constants.STAGE:
+        if variable == constants.STAGE_DAILY_MEAN:
             bom_variable = "Water Course Level"
             # ts_name = "H.Merged.DailyMean"
-        elif variable == constants.DISCHARGE:
+        elif variable == constants.DISCHARGE_DAILY_MEAN:
             bom_variable = "Water Course Discharge"
             # ts_name = "Q.Merged.DailyMean"
         else:

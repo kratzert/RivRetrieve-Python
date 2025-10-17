@@ -37,7 +37,7 @@ class TestAustraliaFetcher(unittest.TestCase):
         mock_make_bom_request.side_effect = bom_request_side_effect
 
         gauge_id = "405212"
-        variable = constants.DISCHARGE
+        variable = constants.DISCHARGE_DAILY_MEAN
         start_date = "2010-01-01"
         end_date = "2010-01-03"
 
@@ -45,7 +45,7 @@ class TestAustraliaFetcher(unittest.TestCase):
 
         expected_data = {
             constants.TIME_INDEX: pd.to_datetime(["2010-01-01", "2010-01-02", "2010-01-03"]),
-            constants.DISCHARGE: [0.000, 3.710, 3.211],
+            constants.DISCHARGE_DAILY_MEAN: [0.000, 3.710, 3.211],
         }
         expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 

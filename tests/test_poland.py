@@ -34,7 +34,7 @@ class TestPolandFetcher(unittest.TestCase):
     def test_get_data_discharge(self, mock_create_cache):
         with patch("rivretrieve.poland.PolandFetcher.CACHE_FILE", self.test_cache_file):
             gauge_id = "149180010"
-            variable = constants.DISCHARGE
+            variable = constants.DISCHARGE_DAILY_MEAN
             start_date = "2020-01-01"
             end_date = "2020-01-05"
 
@@ -44,7 +44,7 @@ class TestPolandFetcher(unittest.TestCase):
             expected_values = [45.9, 41.0, 39.3, 37.5, 38.1]
             expected_data = {
                 constants.TIME_INDEX: expected_dates,
-                constants.DISCHARGE: expected_values,
+                constants.DISCHARGE_DAILY_MEAN: expected_values,
             }
             expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
@@ -55,7 +55,7 @@ class TestPolandFetcher(unittest.TestCase):
     def test_get_data_stage(self, mock_create_cache):
         with patch("rivretrieve.poland.PolandFetcher.CACHE_FILE", self.test_cache_file):
             gauge_id = "149180010"
-            variable = constants.STAGE
+            variable = constants.STAGE_DAILY_MEAN
             start_date = "2020-01-03"
             end_date = "2020-01-07"
 
@@ -65,7 +65,7 @@ class TestPolandFetcher(unittest.TestCase):
             expected_values = [1.19, 1.16, 1.17, 1.12, 1.07]
             expected_data = {
                 constants.TIME_INDEX: expected_dates,
-                constants.STAGE: expected_values,
+                constants.STAGE_DAILY_MEAN: expected_values,
             }
             expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
@@ -128,9 +128,9 @@ class TestPolandFetcher(unittest.TestCase):
         self.assertGreater(len(parsed_df), 20000)  # Expect many rows from two months of data
         self.assertIn(constants.GAUGE_ID, parsed_df.columns)
         self.assertIn(constants.TIME_INDEX, parsed_df.columns)
-        self.assertIn(constants.DISCHARGE, parsed_df.columns)
-        self.assertIn(constants.STAGE, parsed_df.columns)
-        self.assertIn(constants.WATER_TEMPERATURE, parsed_df.columns)
+        self.assertIn(constants.DISCHARGE_DAILY_MEAN, parsed_df.columns)
+        self.assertIn(constants.STAGE_DAILY_MEAN, parsed_df.columns)
+        self.assertIn(constants.WATER_TEMPERATURE_DAILY_MEAN, parsed_df.columns)
 
         # Check date range
         self.assertEqual(parsed_df[constants.TIME_INDEX].min(), pd.to_datetime("2022-01-01"))
