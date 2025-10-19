@@ -18,9 +18,9 @@ class ChileFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from Chile's CR2 explorador."""
 
     @staticmethod
-    def get_gauge_ids() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Chilean gauge IDs."""
-        return utils.load_sites_csv("chile")
+    def get_cached_metadata() -> pd.DataFrame:
+        """Retrieves a DataFrame of available Chilean gauge IDs and metadata."""
+        return utils.load_cached_metadata_csv("chile")
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:

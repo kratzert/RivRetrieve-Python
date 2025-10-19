@@ -28,9 +28,9 @@ class UKNRFAFetcher(base.RiverDataFetcher):
     }
 
     @staticmethod
-    def get_gauge_ids() -> pd.DataFrame:
+    def get_cached_metadata() -> pd.DataFrame:
         """Retrieves a DataFrame of available NRFA gauge IDs from the cached CSV."""
-        return utils.load_sites_csv("uk_nrfa")
+        return utils.load_cached_metadata_csv("uk_nrfa")
 
     def get_metadata(self) -> pd.DataFrame:
         """Fetches site metadata from the NRFA API and renames columns."""

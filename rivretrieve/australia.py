@@ -19,9 +19,9 @@ class AustraliaFetcher(base.RiverDataFetcher):
     BOM_URL = "http://www.bom.gov.au/waterdata/services"
 
     @staticmethod
-    def get_gauge_ids() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Australian gauge IDs."""
-        return utils.load_sites_csv("australia")
+    def get_cached_metadata() -> pd.DataFrame:
+        """Retrieves a DataFrame of available Australian gauge IDs and metadata."""
+        return utils.load_cached_metadata_csv("australia")
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:

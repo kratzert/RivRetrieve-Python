@@ -28,9 +28,9 @@ class UKEAFetcher(base.RiverDataFetcher):
     }
 
     @staticmethod
-    def get_gauge_ids() -> pd.DataFrame:
-        """Retrieves a DataFrame of available UK gauge IDs."""
-        return utils.load_sites_csv("uk_ea")
+    def get_cached_metadata() -> pd.DataFrame:
+        """Retrieves a DataFrame of available UK gauge IDs and metadata."""
+        return utils.load_cached_metadata_csv("uk_ea")
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:

@@ -17,9 +17,9 @@ class FranceFetcher(base.RiverDataFetcher):
     BASE_URL = "https://hubeau.eaufrance.fr/api/v2/hydrometrie/obs_elab"
 
     @staticmethod
-    def get_gauge_ids() -> pd.DataFrame:
-        """Retrieves a DataFrame of available French gauge IDs."""
-        return utils.load_sites_csv("french")  # Note: CSV file name is french_sites.csv
+    def get_cached_metadata() -> pd.DataFrame:
+        """Retrieves a DataFrame of available French gauge IDs and metadata."""
+        return utils.load_cached_metadata_csv("french")  # Note: CSV file name is french_sites.csv
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:

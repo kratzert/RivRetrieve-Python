@@ -14,8 +14,6 @@ from . import constants
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_HEADERS = {"User-Agent": "Mozilla/5.0"}
-
 
 def format_start_date(start_date: Optional[str]) -> str:
     """Formats the start date, defaulting to 1900-01-01 if None."""
@@ -60,12 +58,13 @@ def requests_retry_session(
     return session
 
 
-def load_sites_csv(country_code: str) -> pd.DataFrame:
+def load_cached_metadata_csv(country_code: str) -> pd.DataFrame:
     """Loads site data from a CSV file in the data directory."""
     current_dir = os.path.dirname(__file__)
     file_path = os.path.join(current_dir, "cached_site_data", f"{country_code}_sites.csv")
     try:
-        return pd.read_csv(file_path, dtype={constants.GAUGE_ID: str})
+        df = pd.read_csv(file_path, dtype={constants.GAUGE_ID: str})
+        return df.set_index(constants.GAUGE_ID)
     except FileNotFoundError:
         logger.error(f"Site file not found: {file_path}")
         raise
