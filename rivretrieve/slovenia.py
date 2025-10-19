@@ -19,9 +19,9 @@ class SloveniaFetcher(base.RiverDataFetcher):
     BASE_URL = "https://vode.arso.gov.si/hidarhiv/pov_arhiv_tab.php"
 
     @staticmethod
-    def get_gauge_ids() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Slovenian gauge IDs."""
-        return utils.load_sites_csv("slovenia")
+    def get_cached_metadata() -> pd.DataFrame:
+        """Retrieves a DataFrame of available Slovenian gauge IDs and metadata."""
+        return utils.load_cached_metadata_csv("slovenia")
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:

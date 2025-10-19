@@ -21,9 +21,9 @@ class JapanFetcher(base.RiverDataFetcher):
     BASE_URL = "http://www1.river.go.jp/cgi-bin/DspWaterData.exe"
 
     @staticmethod
-    def get_gauge_ids() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Japanese gauge IDs."""
-        return utils.load_sites_csv("japan")
+    def get_cached_metadata() -> pd.DataFrame:
+        """Retrieves a DataFrame of available Japanese gauge IDs and metadata."""
+        return utils.load_cached_metadata_csv("japan")
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:

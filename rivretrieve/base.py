@@ -38,12 +38,8 @@ class RiverDataFetcher(abc.ABC):
 
     @staticmethod
     @abc.abstractmethod
-    def get_gauge_ids() -> pd.DataFrame:
-        """Retrieves a DataFrame of available gauge IDs.
-
-        Returns:
-            A pandas DataFrame containing gauge ID information.
-        """
+    def get_cached_metadata() -> pd.DataFrame:
+        """Retrieves a DataFrame of available gauge IDs and metadata from a cached file."""
         pass
 
     def get_metadata(self) -> pd.DataFrame:

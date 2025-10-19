@@ -42,9 +42,9 @@ class BrazilFetcher(base.RiverDataFetcher):
             )
 
     @staticmethod
-    def get_gauge_ids() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Brazilian gauge IDs."""
-        return utils.load_sites_csv("brazil")
+    def get_cached_metadata() -> pd.DataFrame:
+        """Retrieves a DataFrame of available Brazilian gauge IDs and metadata."""
+        return utils.load_cached_metadata_csv("brazil")
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:

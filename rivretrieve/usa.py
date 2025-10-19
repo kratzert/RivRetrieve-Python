@@ -15,9 +15,9 @@ class USAFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from USGS NWIS."""
 
     @staticmethod
-    def get_gauge_ids() -> pd.DataFrame:
-        """Retrieves a DataFrame of available USA gauge IDs."""
-        return utils.load_sites_csv("usa")
+    def get_cached_metadata() -> pd.DataFrame:
+        """Retrieves a DataFrame of available USA gauge IDs and metadata."""
+        return utils.load_cached_metadata_csv("usa")
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:

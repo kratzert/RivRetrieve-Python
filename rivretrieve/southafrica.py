@@ -21,9 +21,9 @@ class SouthAfricaFetcher(base.RiverDataFetcher):
     BASE_URL = "https://www.dws.gov.za/Hydrology/Verified/HyData.aspx"
 
     @staticmethod
-    def get_gauge_ids() -> pd.DataFrame:
-        """Retrieves a DataFrame of available South African gauge IDs."""
-        return utils.load_sites_csv("southAfrican")
+    def get_cached_metadata() -> pd.DataFrame:
+        """Retrieves a DataFrame of available South African gauge IDs and metadata."""
+        return utils.load_cached_metadata_csv("southAfrican")
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:

@@ -27,9 +27,9 @@ class CanadaFetcher(base.RiverDataFetcher):
     HYDAT_PATH = DATA_DIR / "Hydat.sqlite3"
 
     @staticmethod
-    def get_gauge_ids() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Canadian gauge IDs."""
-        return utils.load_sites_csv("canada")
+    def get_cached_metadata() -> pd.DataFrame:
+        """Retrieves a DataFrame of available Canadian gauge IDs and metadata."""
+        return utils.load_cached_metadata_csv("canada")
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
