@@ -27,13 +27,13 @@ class TestPortugalFetcher(unittest.TestCase):
 
         gauge_id = "19B/01H"
         variable = constants.STAGE_DAILY_MEAN
-        start_date = "2020-11-06"
-        end_date = "2020-11-10"
+        start_date = "2002-02-16"
+        end_date = "2002-02-19"
 
         result_df = self.fetcher.get_data(gauge_id, variable, start_date, end_date)
 
-        expected_dates = pd.to_datetime(["2020-11-06", "2020-11-07", "2020-11-08", "2020-11-09", "2020-11-10"])
-        expected_values = [0.53, 0.46, 0.48, 0.40, 0.33]
+        expected_dates = pd.to_datetime(["2002-02-16", "2002-02-17", "2002-02-18", "2002-02-19"])
+        expected_values = [0.36, 0.35, 0.37, 0.38]
         expected_df = pd.DataFrame(
             {constants.TIME_INDEX: expected_dates, constants.STAGE_DAILY_MEAN: expected_values}
         ).set_index(constants.TIME_INDEX)
