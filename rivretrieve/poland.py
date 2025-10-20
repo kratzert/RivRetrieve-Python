@@ -24,7 +24,9 @@ class PolandFetcher(base.RiverDataFetcher):
 
     BASE_URL = "https://danepubliczne.imgw.pl/data/dane_pomiarowo_obserwacyjne/dane_hydrologiczne/"
     CACHE_FILE = Path(os.path.dirname(__file__)) / "data" / "poland.zarr"
-    METADATA_URL = "https://danepubliczne.imgw.pl/data/dane_pomiarowo_obserwacyjne/dane_hydrologiczne/lista_stacji_hydro.csv"
+    METADATA_URL = (
+        "https://danepubliczne.imgw.pl/data/dane_pomiarowo_obserwacyjne/dane_hydrologiczne/lista_stacji_hydro.csv"
+    )
     METADATA_CSV = Path(os.path.dirname(__file__)) / "cached_site_data" / "poland_sites.csv"
 
     @staticmethod
@@ -45,7 +47,7 @@ class PolandFetcher(base.RiverDataFetcher):
                 constants.GAUGE_ID,
                 constants.STATION_NAME,
                 constants.RIVER,
-                "Kod Hydro"  # Seems to be an alternativ station id.
+                "Kod Hydro",  # Seems to be an alternativ station id.
             ]
             df.columns = col_names
 

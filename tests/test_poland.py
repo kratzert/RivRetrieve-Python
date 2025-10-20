@@ -136,7 +136,6 @@ class TestPolandFetcher(unittest.TestCase):
         self.assertEqual(parsed_df[constants.TIME_INDEX].min(), pd.to_datetime("2022-01-01"))
         self.assertEqual(parsed_df[constants.TIME_INDEX].max(), pd.to_datetime("2022-02-28"))
 
-
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_metadata(self, mock_requests_session):
         mock_session = MagicMock()
