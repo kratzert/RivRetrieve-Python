@@ -136,6 +136,31 @@ class TestPolandFetcher(unittest.TestCase):
         self.assertEqual(parsed_df[constants.TIME_INDEX].min(), pd.to_datetime("2022-01-01"))
         self.assertEqual(parsed_df[constants.TIME_INDEX].max(), pd.to_datetime("2022-02-28"))
 
+    @patch("rivretrieve.utils.requests_retry_session")
+    def test_get_metadata(self, mock_requests_session):
+        mock_session = MagicMock()
+        mock_requests_session.return_value = mock_session
+
+        with open(self.test_data_dir / "poland_metadata.csv", "rb") as f:
+            mock_content = f.read()
+
+        mock_response = MagicMock()
+        mock_response.content = mock_content
+        mock_response.raise_for_status = MagicMock()
+        mock_session.get.return_value = mock_response
+
+        metadata_df = self.fetcher.get_metadata()
+
+        expected_data = {
+            constants.GAUGE_ID: ["152140010", "153140020", "153140030"],
+            constants.STATION_NAME: ["BIELINEK", "WIDUCHOWA", "GRYFINO"],
+            constants.RIVER: ["Odra (1)", "Odra (1)", "Odra (1)"],
+            "Kod Hydro": ["00101", "00110", "00111"],
+        }
+        expected_df = pd.DataFrame(expected_data).set_index(constants.GAUGE_ID)
+
+        assert_frame_equal(metadata_df, expected_df)
+
 
 if __name__ == "__main__":
     unittest.main()

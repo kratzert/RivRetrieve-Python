@@ -1,5 +1,6 @@
 """Fetcher for Polish river gauge data from IMGW."""
 
+import io
 import logging
 import os
 import re
@@ -23,10 +24,48 @@ class PolandFetcher(base.RiverDataFetcher):
 
     BASE_URL = "https://danepubliczne.imgw.pl/data/dane_pomiarowo_obserwacyjne/dane_hydrologiczne/"
     CACHE_FILE = Path(os.path.dirname(__file__)) / "data" / "poland.zarr"
+    METADATA_URL = (
+        "https://danepubliczne.imgw.pl/data/dane_pomiarowo_obserwacyjne/dane_hydrologiczne/lista_stacji_hydro.csv"
+    )
+    METADATA_CSV = Path(os.path.dirname(__file__)) / "cached_site_data" / "poland_sites.csv"
+
+    @staticmethod
+    def get_metadata():
+        """Downloads the metadata CSV file and converts it into a pandas DataFrame."""
+        logger.info(f"Downloading metadata from {PolandFetcher.METADATA_URL}")
+        try:
+            r = utils.requests_retry_session().get(PolandFetcher.METADATA_URL)
+            r.raise_for_status()
+
+            # The file is encoded in cp1250
+            df = pd.read_csv(io.StringIO(r.content.decode("cp1250")), header=None, dtype=str)
+
+            logger.info("Successfully downloaded and read metadata.")
+
+            # Assign column names based on manual inspection of data on the https:// server
+            col_names = [
+                constants.GAUGE_ID,
+                constants.STATION_NAME,
+                constants.RIVER,
+                "Kod Hydro",  # Seems to be an alternativ station id.
+            ]
+            df.columns = col_names
+
+            # Strip potential whitespace from gauge IDs
+            df[constants.GAUGE_ID] = df[constants.GAUGE_ID].str.strip()
+
+            return df.set_index(constants.GAUGE_ID)
+
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Error downloading metadata: {e}")
+            raise
+        except Exception as e:
+            logger.error(f"Error processing or saving metadata: {e}")
+            raise
 
     @staticmethod
     def get_cached_metadata() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Polish gauge IDs and metadata."""
+        """Loads cache metadata."""
         return utils.load_cached_metadata_csv("poland")
 
     @staticmethod
