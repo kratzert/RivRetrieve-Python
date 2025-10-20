@@ -8,6 +8,7 @@ from .chile import ChileFetcher
 from .france import FranceFetcher
 from .japan import JapanFetcher
 from .poland import PolandFetcher
+from .portugal import PortugalFetcher
 from .slovenia import SloveniaFetcher
 from .southafrica import SouthAfricaFetcher
 from .uk_ea import UKEAFetcher
