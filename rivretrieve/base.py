@@ -51,7 +51,7 @@ class RiverDataFetcher(abc.ABC):
         """
         # Default implementation returns an empty DataFrame.
         # Subclasses should override this method if metadata is available.
-        return pd.DataFrame().set_index("gauge_id")
+        raise NotImplementedError
 
     @staticmethod
     @abc.abstractmethod
