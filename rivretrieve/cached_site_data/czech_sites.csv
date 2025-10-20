@@ -1,0 +1,827 @@
+gauge_id,station_name,river,latitude,longitude,area,altitude,source,country
+0-203-1-206200,Slapany,Odrava,50.0285906,12.3757759,266.89,,CHMI Open Data,Czech Republic
+0-203-1-206900,Leopoldovy Hamry,Libocký potok,50.2269687,12.4974146,55.68,,CHMI Open Data,Czech Republic
+0-203-1-210600,Mnichov,Pramenský potok,50.0492102,12.7951081,48.27,,CHMI Open Data,Czech Republic
+0-203-1-200500,Průhonice,Dobřejovický potok,49.9910038,14.560803,12.77,,CHMI Open Data,Czech Republic
+0-203-1-169000,Praha-Zbraslav,Vltava,49.9720788,14.3975646,17824.82,,CHMI Open Data,Czech Republic
+0-203-1-200700,Praha-Výtoň,Vltava,50.0681902,14.4146269,26903.2,,CHMI Open Data,Czech Republic
+0-203-1-201000,Praha-Libeň,Rokytka,50.1070372,14.4703113,121.26,,CHMI Open Data,Czech Republic
+0-203-1-198600,Srbsko,Berounka,49.9371117,14.1330758,8576.34,,CHMI Open Data,Czech Republic
+0-203-1-199600,Praha-Radotín,Radotínský potok,49.9835875,14.3606714,67.94,,CHMI Open Data,Czech Republic
+0-203-1-199200,Praha-Radotín,Berounka,49.9813144,14.3625641,8780.17,,CHMI Open Data,Czech Republic
+0-203-1-155600,Stříbrné Hory,Borovský potok,49.598698,15.7017433,72.19,,CHMI Open Data,Czech Republic
+0-203-1-330000,Alžbětín,Řezná,49.1252653,13.2140322,30.0,,CHMI Open Data,Czech Republic
+0-203-1-436500,Dyjákovice,Mlýnská strouha (Dyjskomlýnský náhon),48.7423496,16.3082064,154.7,,CHMI Open Data,Czech Republic
+0-203-1-206210,Slapany-lom,Odrava,50.0303315,12.3804002,267.31,,CHMI Open Data,Czech Republic
+0-203-1-140500,Hlupín,Březový potok,49.3281893,13.7719094,89.47,,CHMI Open Data,Czech Republic
+0-203-1-132200,Úraz,Chotovinský potok,49.5150077,14.702966,11.69,,CHMI Open Data,Czech Republic
+0-203-1-113200,Horní Stropnice,Stropnice,48.7622324,14.7396943,25.72,,CHMI Open Data,Czech Republic
+0-203-1-087000,Slaná,Oleška,50.5886506,15.3344837,169.14,,CHMI Open Data,Czech Republic
+0-203-1-016000,Jaroměř,Labe,50.3427582,15.9249555,1223.72,,CHMI Open Data,Czech Republic
+0-203-1-407000,Slušovice,Všeminka,49.2472776,17.8035932,21.14,,CHMI Open Data,Czech Republic
+0-203-1-218700,Postoloprty,Chomutovka,50.3648041,13.7038824,189.61,,CHMI Open Data,Czech Republic
+0-203-1-230000,Stráž pod Ralskem,Ještědský potok,50.7049049,14.8113823,48.98,,CHMI Open Data,Czech Republic
+0-203-1-032000,Sobkovice,Tichá Orlice,50.0506737,16.6069894,98.42,,CHMI Open Data,Czech Republic
+0-203-1-075500,Svídnice,Štítarský potok,50.266848,15.1808745,208.97,,CHMI Open Data,Czech Republic
+0-203-1-168300,Vrané nad Vltavou pod nádrží,Vltava,49.9389612,14.3741756,17784.64,,CHMI Open Data,Czech Republic
+0-203-1-057200,Rosice,Žejbro,49.9224429,15.9533961,81.51,,CHMI Open Data,Czech Republic
+0-203-1-405000,Třebětice,Rusava,49.3251687,17.51164,55.64,,CHMI Open Data,Czech Republic
+0-203-1-141400,Nový Dvůr,Spůlka,49.0872071,13.6567232,9.87,,CHMI Open Data,Czech Republic
+0-203-1-236000,Dolní Libchava,Šporka,50.6892603,14.511942,68.18,,CHMI Open Data,Czech Republic
+0-203-1-226700,Ústí nad Labem,Klíšský potok,50.6784765,14.015042,34.14,,CHMI Open Data,Czech Republic
+0-203-1-056000,Vrbatův Kostelec,Žejbro,49.8576405,15.9419317,48.35,,CHMI Open Data,Czech Republic
+0-203-1-290110,Místek,Hodoňovický náhon,49.6707003,18.3379555,4.84,,CHMI Open Data,Czech Republic
+0-203-1-087930,Kristiánov,Kamenice,50.809381,15.1843908,6.43,,CHMI Open Data,Czech Republic
+0-203-1-023200,Pouchov,Piletický potok,50.2332668,15.8560559,38.25,,CHMI Open Data,Czech Republic
+0-203-1-209100,Chaloupky,Rolava,50.3744842,12.6647947,19.67,,CHMI Open Data,Czech Republic
+0-203-1-429600,VD Landštejn,Pstruhovec,49.0186872,15.2450829,12.75,,CHMI Open Data,Czech Republic
+0-203-1-162520,Tukleky,Želivka,49.5507248,15.2162301,791.81,,CHMI Open Data,Czech Republic
+0-203-1-317000,Stráž nad Nisou,Černá Nisa,50.7916122,15.0501823,18.85,,CHMI Open Data,Czech Republic
+0-203-1-247900,Odry náhon,náhon z Odry,49.6640506,17.8316081,2.2,,CHMI Open Data,Czech Republic
+0-203-1-003100,Černý důl,Čistá,50.649369,15.7126675,6.51,,CHMI Open Data,Czech Republic
+0-203-1-093100,Sovenice,Jizera,50.5616534,14.9865989,1197.62,,CHMI Open Data,Czech Republic
+0-203-1-064000,Spačice,Doubrava,49.8172648,15.5955548,197.22,,CHMI Open Data,Czech Republic
+0-203-1-217500,Stránky,Blšanka,50.2920951,13.5737183,379.94,,CHMI Open Data,Czech Republic
+0-203-1-031000,Častolovice,Bělá,50.1288208,16.1847315,213.25,,CHMI Open Data,Czech Republic
+0-203-1-078500,Opolánky,Sánský kanál,50.1334581,15.2416613,0.62,,CHMI Open Data,Czech Republic
+0-203-1-455100,Sloup,Sloupský potok,49.4135245,16.7395836,50.3,,CHMI Open Data,Czech Republic
+0-203-1-101800,Tuřice-Předměřice,Jizera,50.2487023,14.7754191,2159.22,,CHMI Open Data,Czech Republic
+0-203-1-483100,Koryčany nad nádrží,Kyjovka,49.1074136,17.2222021,19.42,,CHMI Open Data,Czech Republic
+0-203-1-290120,Olešná rozdělovací objekt,Olešná,49.6744014,18.3235982,42.54,,CHMI Open Data,Czech Republic
+0-203-1-017700,Bezděkov,Židovka,50.4999299,16.2117549,32.5,,CHMI Open Data,Czech Republic
+0-203-1-162600,Senožaty,Martinický potok,49.5802875,15.2074629,113.36,,CHMI Open Data,Czech Republic
+0-203-1-394500,Soběsuky,Hloučela,49.4645895,16.994222,81.86,,CHMI Open Data,Czech Republic
+0-203-1-208600,Karlovy Vary-Dvory,Chodovský potok,50.2271032,12.8248319,91.12,,CHMI Open Data,Czech Republic
+0-203-1-092900,Březina,Žehrovka,50.5490338,15.0426812,90.28,,CHMI Open Data,Czech Republic
+0-203-1-153800,Hrachov,Brzina,49.6614311,14.3013548,133.06,,CHMI Open Data,Czech Republic
+0-203-1-228900,Jílové,Jílovský potok,50.7630269,14.1074437,43.13,,CHMI Open Data,Czech Republic
+0-203-1-204500,Želízy,Liběchovka,50.4220042,14.4605861,124.32,,CHMI Open Data,Czech Republic
+0-203-1-163100,Leský Mlýn,Sedlický potok,49.6604119,15.0870787,71.58,,CHMI Open Data,Czech Republic
+0-203-1-046000,Zámrsk,Loučná,49.9956654,16.1159786,514.18,,CHMI Open Data,Czech Republic
+0-203-1-290700,Vyšní Lhoty přivaděč,Přivaděč Morávka-Žermanice,49.6267363,18.4635576,0.0,,CHMI Open Data,Czech Republic
+0-203-1-161700,Kojčice,Želivka,49.4822243,15.2499257,273.22,,CHMI Open Data,Czech Republic
+0-203-1-017400,Velké Petrovice,Dunajka,50.5219686,16.2102098,23.87,,CHMI Open Data,Czech Republic
+0-203-1-414700,Luhačovice nad nádrží,Luhačovický potok,49.1268632,17.7948437,36.54,,CHMI Open Data,Czech Republic
+0-203-1-024000,Klášterec nad Orlicí,Divoká Orlice,50.1168926,16.5530668,153.58,,CHMI Open Data,Czech Republic
+0-203-1-004500,Dolní Olešnice,Kalenský potok,50.5174251,15.730332,62.08,,CHMI Open Data,Czech Republic
+0-203-1-014100,Slatina nad Úpou,Úpa,50.4486543,16.0515799,401.05,,CHMI Open Data,Czech Republic
+0-203-1-427500,Nová Říše nad nádrží,Řečice (Olšanský potok),49.1652974,15.549166,17.05,,CHMI Open Data,Czech Republic
+0-203-1-004000,Hostinné,Čistá,50.5417086,15.7261039,77.36,,CHMI Open Data,Czech Republic
+0-203-1-162700,Blažejovice,Blažejovický potok,49.6138905,15.2059715,27.45,,CHMI Open Data,Czech Republic
+0-203-1-188200,Kaceřov,Třemošná,49.8635539,13.5041228,241.96,,CHMI Open Data,Czech Republic
+0-203-1-182700,Slavíkovice,Poleňka,49.3897428,13.1546884,7.54,,CHMI Open Data,Czech Republic
+0-203-1-003000,Prosečné,Malé Labe,50.552152,15.694443,72.6,,CHMI Open Data,Czech Republic
+0-203-1-021000,Jaroměř,Metuje,50.34128,15.9258984,610.89,,CHMI Open Data,Czech Republic
+0-203-1-162300,Želiv-VD Trnávka,Trnava,49.527294,15.2159084,339.69,,CHMI Open Data,Czech Republic
+0-203-1-246600,Černý Potok,Černá voda,50.4895526,13.0782833,32.41,,CHMI Open Data,Czech Republic
+0-203-1-023000,Sendražice,Trotina,50.2968052,15.8169388,100.71,,CHMI Open Data,Czech Republic
+0-203-1-212600,Pila,Lomnický potok,50.1776245,12.9267179,60.06,,CHMI Open Data,Czech Republic
+0-203-1-368000,Holice svod,Hamerský náhon,49.5783255,17.2978714,1.48,,CHMI Open Data,Czech Republic
+0-203-1-039500,Častolovice,Náhon Alba,50.1275896,16.1824098,0.01,,CHMI Open Data,Czech Republic
+0-203-1-025500,Žamberk,Rokytenka,50.0979868,16.4649564,59.39,,CHMI Open Data,Czech Republic
+0-203-1-004300,Chotěvice,Pilníkovský potok,50.5208223,15.7642145,103.52,,CHMI Open Data,Czech Republic
+0-203-1-060500,Barchov,Podolský potok,49.9978272,15.6819743,41.4,,CHMI Open Data,Czech Republic
+0-203-1-105000,Košátky,Košátecký potok,50.3129572,14.66582,147.6,,CHMI Open Data,Czech Republic
+0-203-1-017800,Velký Dřevíč,Dřevíč,50.4913737,16.1832215,67.18,,CHMI Open Data,Czech Republic
+0-203-1-094000,Chocnějovice,Mohelka,50.575308,14.9638258,154.85,,CHMI Open Data,Czech Republic
+0-203-1-194000,Lány-Běleč,Lánský potok,50.0778731,13.9400616,14.2,,CHMI Open Data,Czech Republic
+0-203-1-245000,Hřensko,Labe,50.8804075,14.2376258,51261.77,,CHMI Open Data,Czech Republic
+0-203-1-195900,Obecnice,Obecnický potok,49.7175688,13.9180201,9.35,,CHMI Open Data,Czech Republic
+0-203-1-017500,Velké Petrovice,Ledhuje,50.5226637,16.2166544,19.52,,CHMI Open Data,Czech Republic
+0-203-1-097000,Velký Rečkov,Bělá,50.4975493,14.8935858,93.06,,CHMI Open Data,Czech Republic
+0-203-1-082700,Jizerka,Jizerka,50.8195194,15.3477518,10.38,,CHMI Open Data,Czech Republic
+0-203-1-176800,Plzeň-Skvrňany,Vejprnický potok,49.7441777,13.3473095,74.83,,CHMI Open Data,Czech Republic
+0-203-1-321610,Smědava II.,Smědá,50.8450779,15.273393,4.53,,CHMI Open Data,Czech Republic
+0-203-1-090000,Bohuňovsko-Jesenný,Kamenice,50.6546569,15.3257254,178.95,,CHMI Open Data,Czech Republic
+0-203-1-316500,Uhlířská,Černá Nisa,50.8242106,15.1469973,1.79,,CHMI Open Data,Czech Republic
+0-203-1-219500,Terezín,Ohře,50.5097331,14.1574097,5602.9,,CHMI Open Data,Czech Republic
+0-203-1-088000,Josefův Důl,Kamenice,50.7912289,15.2100519,25.71,,CHMI Open Data,Czech Republic
+0-203-1-207000,Libavské Údolí,Velká Libava,50.129166,12.5561401,68.12,,CHMI Open Data,Czech Republic
+0-203-1-100000,Mladá Boleslav,Klenice,50.4106788,14.9091785,169.14,,CHMI Open Data,Czech Republic
+0-203-1-239500,Děčín-Březiny,Ploučnice,50.7617379,14.2436475,1183.03,,CHMI Open Data,Czech Republic
+0-203-1-136000,Modrava-Antýgl,Hamerský potok,49.0590995,13.5180316,20.55,,CHMI Open Data,Czech Republic
+0-203-1-226800,Ústí nad Labem,Bílina,50.6566911,14.0351429,1002.57,,CHMI Open Data,Czech Republic
+0-203-1-166900,Poříčí nad Sázavou,Konopišťský potok,49.8353722,14.6771855,89.33,,CHMI Open Data,Czech Republic
+0-203-1-089500,Jezdecká,Černá Desná,50.8075921,15.293076,4.69,,CHMI Open Data,Czech Republic
+0-203-1-114700,Rechle,Malše,48.9033741,14.4954768,938.83,,CHMI Open Data,Czech Republic
+0-203-1-096000,Dolní Bukovina,Zábrdka,50.5365634,14.9373883,66.4,,CHMI Open Data,Czech Republic
+0-203-1-246500,Kryštofovy Hamry,Přísečnice,50.4934674,13.1318358,46.95,,CHMI Open Data,Czech Republic
+0-203-1-123500,Pilař-Majdaléna,Zlatá stoka,48.9484315,14.8783201,0.07,,CHMI Open Data,Czech Republic
+0-203-1-080000,Nymburk,Labe,50.1828464,15.0415424,9720.74,,CHMI Open Data,Czech Republic
+0-203-1-321620,Smědava I.,Bílá Smědá,50.8460384,15.2697976,3.66,,CHMI Open Data,Czech Republic
+0-203-1-187900,Klabava,Klabava,49.7504528,13.5460368,329.0,,CHMI Open Data,Czech Republic
+0-203-1-414000,Velehrad,Salaška,49.1027657,17.3934646,34.51,,CHMI Open Data,Czech Republic
+0-203-1-172900,Kladruby,Úhlavka,49.696323,12.9660678,266.68,,CHMI Open Data,Czech Republic
+0-203-1-191400,Podmokly,Zbirožský potok,49.9438265,13.7456041,151.26,,CHMI Open Data,Czech Republic
+0-203-1-233500,Brenná,Ploučnice,50.6519381,14.6279148,396.81,,CHMI Open Data,Czech Republic
+0-203-1-325000,Předlánce,Bulovský potok,50.9712698,15.0403581,39.71,,CHMI Open Data,Czech Republic
+0-203-1-116500,Lékařova Lhota,Bezdrevský potok,49.0762989,14.2628694,123.8,,CHMI Open Data,Czech Republic
+0-203-1-044000,Tržek,Desná,49.8825038,16.2595894,102.83,,CHMI Open Data,Czech Republic
+0-203-1-191200,Uhrovic mlýn,Javornice,49.9943741,13.6246587,87.12,,CHMI Open Data,Czech Republic
+0-203-1-178700,Havlovice,Zubřina,49.4315997,12.8930463,17.88,,CHMI Open Data,Czech Republic
+0-203-1-215100,Kadaň,Ohře,50.3692781,13.2794192,3478.64,,CHMI Open Data,Czech Republic
+0-203-1-233800,Cvikov,Boberský potok,50.774453,14.6387562,24.5,,CHMI Open Data,Czech Republic
+0-203-1-243000,Všemily,Chřibská Kamenice,50.8375869,14.3715397,61.76,,CHMI Open Data,Czech Republic
+0-203-1-193000,Lány-Městečko,Klíčava,50.0829515,13.9023311,55.48,,CHMI Open Data,Czech Republic
+0-203-1-180400,Hamry-V lipách,Úhlava,49.2257713,13.162975,39.1,,CHMI Open Data,Czech Republic
+0-203-1-351000,Šumperk náhon,Krenišovský náhon,49.9630025,16.9961709,0.3,,CHMI Open Data,Czech Republic
+0-203-1-350000,Šumperk tok,Desná,49.9636659,16.997086,247.15,,CHMI Open Data,Czech Republic
+0-203-1-437000,Trávní Dvůr,Dyje,48.7908914,16.4375418,3524.62,,CHMI Open Data,Czech Republic
+0-203-1-346000,Kouty nad Desnou,Desná,50.0999837,17.111383,43.25,,CHMI Open Data,Czech Republic
+0-203-1-191000,Liblín,Berounka,49.9193518,13.5459345,6455.15,,CHMI Open Data,Czech Republic
+0-203-1-126000,Oldřiš,Hamerský potok,49.1511881,15.1060718,209.06,,CHMI Open Data,Czech Republic
+0-203-1-422000,Strážnice,Velička,48.904379,17.3434442,172.8,,CHMI Open Data,Czech Republic
+0-203-1-035000,Ústí nad Orlicí,Třebovka,49.9538326,16.4148812,174.19,,CHMI Open Data,Czech Republic
+0-203-1-028800,Skuhrov,Bělá,50.2279373,16.2917051,52.85,,CHMI Open Data,Czech Republic
+0-203-1-453000,VD Letovice,Křetínka,49.5534383,16.558652,126.29,,CHMI Open Data,Czech Republic
+0-203-1-402000,Prusy,Moštěnka,49.4281617,17.5150139,230.0,,CHMI Open Data,Czech Republic
+0-203-1-200580,Praha-Petrovice,Botič,50.0307747,14.55701,87.44,,CHMI Open Data,Czech Republic
+0-203-1-360000,Hraničky,Třebůvka,49.7179637,16.7963281,425.93,,CHMI Open Data,Czech Republic
+0-203-1-194500,Zbečno,Berounka,50.0403004,13.9202376,7519.19,,CHMI Open Data,Czech Republic
+0-203-1-474000,Oslavany,Oslava,49.1159375,16.3436496,862.22,,CHMI Open Data,Czech Republic
+0-203-1-438000,VD Jevišovice,Jevišovka,48.9917035,15.9844397,139.95,,CHMI Open Data,Czech Republic
+0-203-1-178500,Tasnovice,Radbuza,49.5662177,12.8355408,172.36,,CHMI Open Data,Czech Republic
+0-203-1-113000,Římov,Malše,48.8631211,14.4971498,493.7,,CHMI Open Data,Czech Republic
+0-203-1-385000,Solanec,Hutiský potok,49.4229994,18.2202083,10.56,,CHMI Open Data,Czech Republic
+0-203-1-037000,Týniště nad Orlicí,Orlice,50.1485624,16.0669852,1556.4,,CHMI Open Data,Czech Republic
+0-203-1-112600,Pořešín,Malše,48.7825623,14.5184467,436.57,,CHMI Open Data,Czech Republic
+0-203-1-121000,Kosky-Hamr,Koštěnický potok,48.9512043,14.8842048,168.16,,CHMI Open Data,Czech Republic
+0-203-1-135000,Modrava,Vydra,49.0255076,13.4969018,89.75,,CHMI Open Data,Czech Republic
+0-203-1-183000,Štěnovice,Úhlava,49.6768049,13.4027498,892.79,,CHMI Open Data,Czech Republic
+0-203-1-198400,Loděnice,Loděnice,49.9931193,14.1607331,252.97,,CHMI Open Data,Czech Republic
+0-203-1-210900,Teplička,Teplá,50.1534111,12.845766,256.23,,CHMI Open Data,Czech Republic
+0-203-1-258100,Mnichov,Černá Opava,50.1507738,17.3729377,50.84,,CHMI Open Data,Czech Republic
+0-203-1-270000,Velká Štáhle,Moravice,49.9325301,17.3518441,168.69,,CHMI Open Data,Czech Republic
+0-203-1-303000,Věřňovice,Olše,49.9310031,18.4189955,1077.23,,CHMI Open Data,Czech Republic
+0-203-1-352000,Albrechtice,Moravská Sázava,49.9370842,16.6427527,35.77,,CHMI Open Data,Czech Republic
+0-203-1-364000,Šternberk,Sitka,49.7305682,17.2955886,65.16,,CHMI Open Data,Czech Republic
+0-203-1-386000,Rožnov pod Radhoštěm,Rožnovská Bečva,49.4585605,18.127375,160.28,,CHMI Open Data,Czech Republic
+0-203-1-397000,Polkovice,Romže,49.3998385,17.2536699,433.47,,CHMI Open Data,Czech Republic
+0-203-1-410000,VD Fryšták,Fryštácký potok,49.2623637,17.6930118,44.24,,CHMI Open Data,Czech Republic
+0-203-1-452000,Rozhraní,Svitava,49.6003942,16.5314032,227.56,,CHMI Open Data,Czech Republic
+0-203-1-462000,Židlochovice,Svratka,49.0363001,16.616052,3937.78,,CHMI Open Data,Czech Republic
+0-203-1-169500,VD Lučina,Mže,49.8058255,12.5835926,104.73,,CHMI Open Data,Czech Republic
+0-203-1-447000,Dolní Loučky,Bobrůvka,49.3569447,16.3595688,385.53,,CHMI Open Data,Czech Republic
+0-203-1-265000,Krnov,Opavice,50.097194,17.6944896,172.06,,CHMI Open Data,Czech Republic
+0-203-1-457000,Bílovice nad Svitavou,Svitava,49.245462,16.6750168,1120.18,,CHMI Open Data,Czech Republic
+0-203-1-459000,Brankovice,Litava,49.1534786,17.1350904,71.9,,CHMI Open Data,Czech Republic
+0-203-1-137000,Rejštejn,Otava,49.139431,13.5082978,333.5,,CHMI Open Data,Czech Republic
+0-203-1-406000,Slušovice,Dřevnice,49.2529652,17.8009602,66.21,,CHMI Open Data,Czech Republic
+0-203-1-272300,VD Slezská Harta,Moravice,49.8874207,17.5844932,465.71,,CHMI Open Data,Czech Republic
+0-203-1-171000,Planá,Hamerský potok,49.8619459,12.7184467,119.42,,CHMI Open Data,Czech Republic
+0-203-1-381000,VD Bystřička,Bystřice,49.4190096,18.0187786,64.01,,CHMI Open Data,Czech Republic
+0-203-1-470000,Dolní Bory,Oslava,49.4225286,15.985562,210.27,,CHMI Open Data,Czech Republic
+0-203-1-299000,Český Těšín,Olše,49.7179911,18.6283954,384.23,,CHMI Open Data,Czech Republic
+0-203-1-314000,Proseč nad Nisou,Lužická Nisa,50.7230068,15.1300532,53.7,,CHMI Open Data,Czech Republic
+0-203-1-316000,Liberec,Lužická Nisa,50.7680952,15.0519722,121.99,,CHMI Open Data,Czech Republic
+0-203-1-437600,Jevišovice nad nádrží,Jevišovka,48.9883651,15.9539788,127.1,,CHMI Open Data,Czech Republic
+0-203-1-161600,Radětín,Bělá,49.4544964,15.2365415,106.03,,CHMI Open Data,Czech Republic
+0-203-1-196700,Hředle,Stroupínský potok,49.9020731,13.9220275,99.82,,CHMI Open Data,Czech Republic
+0-203-1-152000,Dolní Ostrovec,Lomnice,49.4200324,14.1191875,391.13,,CHMI Open Data,Czech Republic
+0-203-1-153000,Varvažov,Skalice,49.4396935,14.1280699,369.1,,CHMI Open Data,Czech Republic
+0-203-1-252700,Velké Albrechtice,Bílovka,49.7459485,18.0692449,56.38,,CHMI Open Data,Czech Republic
+0-203-1-144000,Strakonice,Otava,49.2654468,13.9156649,1717.24,,CHMI Open Data,Czech Republic
+0-203-1-034500,Třebovice,Třebovka,49.8549948,16.4988828,84.02,,CHMI Open Data,Czech Republic
+0-203-1-282000,Morávka,Skalka,49.561936,18.5524475,18.75,,CHMI Open Data,Czech Republic
+0-203-1-401000,Otaslavice,Brodečka,49.3874898,17.0704489,76.01,,CHMI Open Data,Czech Republic
+0-203-1-200550,Průhonice,Botič,50.0014288,14.5558998,40.09,,CHMI Open Data,Czech Republic
+0-203-1-367000,Olomouc-Nové Sady,Morava,49.5771975,17.2609864,3323.43,,CHMI Open Data,Czech Republic
+0-203-1-020000,Krčín,Metuje,50.3517105,16.1299498,498.55,,CHMI Open Data,Czech Republic
+0-203-1-445000,VD Vír pod vyrovnávací nádrží,Svratka,49.542917,16.3376586,486.71,,CHMI Open Data,Czech Republic
+0-203-1-075000,Sány,Cidlina,50.1273552,15.2415518,1151.79,,CHMI Open Data,Czech Republic
+0-203-1-153900,Radíč,Mastník,49.715353,14.4148734,268.6,,CHMI Open Data,Czech Republic
+0-203-1-141000,Katovice,Otava,49.2704581,13.8303307,1133.17,,CHMI Open Data,Czech Republic
+0-203-1-104400,Kostelec nad Labem,Labe,50.2379456,14.5926054,13179.8,,CHMI Open Data,Czech Republic
+0-203-1-291000,VD Žermanice,Lučina,49.7339476,18.4445934,46.04,,CHMI Open Data,Czech Republic
+0-203-1-038000,Chábory,Dědina,50.269913,16.1947253,74.6,,CHMI Open Data,Czech Republic
+0-203-1-040000,Hradec Králové,Labe,50.2020498,15.8233628,4164.7,,CHMI Open Data,Czech Republic
+0-203-1-122000,Kazdovna,Lužnice,48.9948137,14.8422087,1117.77,,CHMI Open Data,Czech Republic
+0-203-1-141300,Sudslavice,Volyňka,49.0932882,13.7955581,79.77,,CHMI Open Data,Czech Republic
+0-203-1-174000,Stříbro,Mže,49.752246,13.0086101,1143.89,,CHMI Open Data,Czech Republic
+0-203-1-238000,Stružnice,Ploučnice,50.6914911,14.4666768,995.03,,CHMI Open Data,Czech Republic
+0-203-1-270100,Valšov,Moravice,49.9232783,17.451035,244.6,,CHMI Open Data,Czech Republic
+0-203-1-283000,Slavíč,Slavíč,49.583956,18.5540608,14.97,,CHMI Open Data,Czech Republic
+0-203-1-296000,Jablunkov,Olše,49.5767349,18.7684904,92.43,,CHMI Open Data,Czech Republic
+0-203-1-301000,Hradiště,Stonávka,49.7302025,18.4982618,61.98,,CHMI Open Data,Czech Republic
+0-203-1-301700,VD Těrlicko,Stonávka,49.7775923,18.5232858,83.84,,CHMI Open Data,Czech Republic
+0-203-1-309000,Vidnava,Vidnavka,50.3733604,17.1823892,151.88,,CHMI Open Data,Czech Republic
+0-203-1-342000,Staré Město pod Sněžníkem,Vrbenský potok,50.1635465,16.9457646,22.02,,CHMI Open Data,Czech Republic
+0-203-1-343000,Habartice,Krupá,50.1026885,16.9296466,109.33,,CHMI Open Data,Czech Republic
+0-203-1-363000,Uničov,Oskava,49.7717138,17.1296267,253.28,,CHMI Open Data,Czech Republic
+0-203-1-440000,Božice,Jevišovka,48.8398717,16.2847087,643.3,,CHMI Open Data,Czech Republic
+0-203-1-478000,Ivančice,Jihlava,49.083979,16.4117366,2679.7,,CHMI Open Data,Czech Republic
+0-203-1-396000,VD Plumlov,Hloučela,49.4694774,17.0400549,119.52,,CHMI Open Data,Czech Republic
+0-203-1-414500,VD Bojkovice,Kolelač,49.0494424,17.8437781,14.13,,CHMI Open Data,Czech Republic
+0-203-1-421800,Velká nad Veličkou,Velička,48.8776237,17.5189224,66.45,,CHMI Open Data,Czech Republic
+0-203-1-084500,Jablonec nad Jizerou,Jizera,50.6950287,15.4384112,181.52,,CHMI Open Data,Czech Republic
+0-203-1-163300,Nesměřice,Želivka,49.7263619,15.0846592,1178.45,,CHMI Open Data,Czech Republic
+0-203-1-222900,Bílina,Bílina,50.5540487,13.7730635,518.38,,CHMI Open Data,Czech Republic
+0-203-1-262090,Radim,Krasovka,50.0770456,17.5987128,33.0,,CHMI Open Data,Czech Republic
+0-203-1-266000,Opava,Opava,49.935045,17.9225179,927.87,,CHMI Open Data,Czech Republic
+0-203-1-028000,Kostelec nad Orlicí,Divoká Orlice,50.1204252,16.1953338,487.39,,CHMI Open Data,Czech Republic
+0-203-1-322000,Bílý Potok,Smědá,50.876218,15.2109293,26.2,,CHMI Open Data,Czech Republic
+0-203-1-148000,Husinec,Blanice,49.0399529,13.9942007,211.66,,CHMI Open Data,Czech Republic
+0-203-1-186500,Prádlo,Úslava,49.5010234,13.5622449,141.9,,CHMI Open Data,Czech Republic
+0-203-1-476000,Příštpo,Rokytná,49.0704005,15.9389862,262.12,,CHMI Open Data,Czech Republic
+0-203-1-409300,Vizovice,Lutoninka,49.2140645,17.8381743,66.11,,CHMI Open Data,Czech Republic
+0-203-1-351100,Šumperk,Desná,49.9637099,16.9970973,240.633,,CHMI Open Data,Czech Republic
+0-203-1-187500,Hrádek,Klabava,49.7141943,13.6622283,156.78,,CHMI Open Data,Czech Republic
+0-203-1-089000,Souš,Černá Desná,50.7888515,15.3173494,13.96,,CHMI Open Data,Czech Republic
+0-203-1-445050,Štěpánov nad Svratkou,Hodonínka,49.5000611,16.3427671,66.58,,CHMI Open Data,Czech Republic
+0-203-1-109000,Vyšší Brod,Vltava,48.6255036,14.3059113,991.62,,CHMI Open Data,Czech Republic
+0-203-1-034000,Dolní Libchavy,Tichá Orlice,49.9885678,16.3958938,303.81,,CHMI Open Data,Czech Republic
+0-203-1-187000,Plzeň-Koterov,Úslava,49.7138618,13.4244505,733.76,,CHMI Open Data,Czech Republic
+0-203-1-455000,VD Boskovice,Bělá,49.4939279,16.6984161,56.07,,CHMI Open Data,Czech Republic
+0-203-1-389500,Hranice,Velička,49.5499211,17.7333919,66.61,,CHMI Open Data,Czech Republic
+0-203-1-200590,Praha-Hostivař,Botič,50.043822,14.5285023,94.8,,CHMI Open Data,Czech Republic
+0-203-1-441500,Jimramov,Fryšávka,49.639183,16.2170926,66.12,,CHMI Open Data,Czech Republic
+0-203-1-052000,Svídnice,Chrudimka,49.8817349,15.810106,269.07,,CHMI Open Data,Czech Republic
+0-203-1-390000,Dluhonice,Bečva,49.4497102,17.4100807,1592.32,,CHMI Open Data,Czech Republic
+0-203-1-251100,Fulnek,Husí potok,49.7143159,17.9052889,59.19,,CHMI Open Data,Czech Republic
+0-203-1-252000,Bartošovice,Odra,49.6883806,18.0426899,913.11,,CHMI Open Data,Czech Republic
+0-203-1-017000,Maršov nad Metují,Metuje,50.5299704,16.189817,94.81,,CHMI Open Data,Czech Republic
+0-203-1-158000,Chlístov,Sázava,49.6185758,15.5272107,795.44,,CHMI Open Data,Czech Republic
+0-203-1-198000,Beroun,Berounka,49.9585833,14.0874159,8284.96,,CHMI Open Data,Czech Republic
+0-203-1-219000,Louny,Ohře,50.3576998,13.8036336,4910.8,,CHMI Open Data,Czech Republic
+0-203-1-221000,Ústí nad Labem,Labe,50.6539316,14.0416405,48493.02,,CHMI Open Data,Czech Republic
+0-203-1-293000,Ostrava,Ostravice,49.8469807,18.2938028,814.37,,CHMI Open Data,Czech Republic
+0-203-1-378100,Ústí,Senice,49.3055637,18.00254,134.67,,CHMI Open Data,Czech Republic
+0-203-1-071200,Roudnice,Bystřice,50.1803329,15.6267486,268.08,,CHMI Open Data,Czech Republic
+0-203-1-153910,Slapy nádrž,Vltava,49.8245742,14.4341742,12956.79,,CHMI Open Data,Czech Republic
+0-203-1-368800,Kokory,Olešnice (Kokorka),49.4969544,17.3747647,95.47,,CHMI Open Data,Czech Republic
+0-203-1-014800,Zlíč,Úpa,50.4104525,16.0561567,456.15,,CHMI Open Data,Czech Republic
+0-203-1-263000,Krnov,Opava,50.0886026,17.7083974,368.87,,CHMI Open Data,Czech Republic
+0-203-1-186900,Žákava,Bradava,49.6311197,13.532025,102.65,,CHMI Open Data,Czech Republic
+0-203-1-208200,Svatava,Svatava,50.1886121,12.6290419,289.21,,CHMI Open Data,Czech Republic
+0-203-1-231000,Stráž pod Ralskem,Ploučnice,50.6900543,14.7885498,118.26,,CHMI Open Data,Czech Republic
+0-203-1-232000,Pertoltice,Panenský potok,50.6702034,14.7203557,130.35,,CHMI Open Data,Czech Republic
+0-203-1-486000,Kyjov,Kyjovka,49.0105721,17.1212049,117.75,,CHMI Open Data,Czech Republic
+0-203-1-202300,Velvary,Bakovský potok,50.2837333,14.2366424,292.22,,CHMI Open Data,Czech Republic
+0-203-1-270200,Valšov,Kočovský potok,49.9248559,17.4508336,49.04,,CHMI Open Data,Czech Republic
+0-203-1-115100,České Budějovice,Vltava,48.9813206,14.4623112,2838.77,,CHMI Open Data,Czech Republic
+0-203-1-179900,Lhota,Radbuza,49.6888327,13.3258042,1180.96,,CHMI Open Data,Czech Republic
+0-203-1-058000,Úhřetice,Novohradka,49.9786735,15.8735784,462.52,,CHMI Open Data,Czech Republic
+0-203-1-014000,Horní Staré Město,Úpa,50.5949355,15.8773601,144.54,,CHMI Open Data,Czech Republic
+0-203-1-304500,Meziměstí,Stěnava,50.626459,16.2302356,65.2,,CHMI Open Data,Czech Republic
+0-203-1-214000,Karlovy Vary-Drahovice,Ohře,50.236781,12.8815593,2822.96,,CHMI Open Data,Czech Republic
+0-203-1-196400,Hořovice,Červený potok,49.8404135,13.9028408,70.79,,CHMI Open Data,Czech Republic
+0-203-1-255000,Rychaltice,Ondřejnice,49.6439743,18.217674,21.2,,CHMI Open Data,Czech Republic
+0-203-1-143000,Němětice,Volyňka,49.1973819,13.8854242,384.27,,CHMI Open Data,Czech Republic
+0-203-1-124000,Rodvínov,Nežárka,49.1716057,15.0563601,296.86,,CHMI Open Data,Czech Republic
+0-203-1-275300,Staré Hamry,Ostravice,49.458369,18.457172,73.24,,CHMI Open Data,Czech Republic
+0-203-1-431000,Jemnice,Želetavka,49.0211472,15.5672367,145.83,,CHMI Open Data,Czech Republic
+0-203-1-403000,Kroměříž,Morava,49.302303,17.3985784,7012.53,,CHMI Open Data,Czech Republic
+0-203-1-161900,Milotice,Jankovský potok,49.5001253,15.2793885,128.23,,CHMI Open Data,Czech Republic
+0-203-1-357000,Jaroměřice,Úsobrnský potok,49.6226871,16.7541823,40.94,,CHMI Open Data,Czech Republic
+0-203-1-196000,Čenkov,Litavka,49.7764907,14.0057412,157.91,,CHMI Open Data,Czech Republic
+0-203-1-306000,Otovice,Stěnava,50.5504798,16.4042854,213.68,,CHMI Open Data,Czech Republic
+0-203-1-307000,Žulová,Stříbrný potok,50.3055984,17.0926152,21.44,,CHMI Open Data,Czech Republic
+0-203-1-366000,Velká Bystřice,Bystřice,49.594331,17.3464506,230.86,,CHMI Open Data,Czech Republic
+0-203-1-477000,Moravský Krumlov,Rokytná,49.0510374,16.3056827,561.23,,CHMI Open Data,Czech Republic
+0-203-1-050000,Padrty,Chrudimka,49.8438396,15.6872458,224.9,,CHMI Open Data,Czech Republic
+0-203-1-200980,Praha-Kyjský rybník,Rokytka,50.0967524,14.5409662,115.72,,CHMI Open Data,Czech Republic
+0-203-1-293500,Rychvald,Stružka,49.8641058,18.3567644,51.35,,CHMI Open Data,Czech Republic
+0-203-1-176100,VD Hracholusky,Mže,49.7889966,13.1764919,1608.25,,CHMI Open Data,Czech Republic
+0-203-1-162200,Červená Řečice,Trnava,49.5259626,15.1736847,317.53,,CHMI Open Data,Czech Republic
+0-203-1-383000,Horní Bečva,Rožnovská Bečva,49.4224633,18.3115366,14.04,,CHMI Open Data,Czech Republic
+0-203-1-206500,VD Jesenice,Odrava,50.0900074,12.4748733,411.92,,CHMI Open Data,Czech Republic
+0-203-1-023500,Orlické Záhoří,Divoká Orlice,50.2738595,16.4804932,45.45,,CHMI Open Data,Czech Republic
+0-203-1-059000,Nemošice,Chrudimka,50.0164711,15.7899458,855.49,,CHMI Open Data,Czech Republic
+0-203-1-070000,Nový Bydžov,Cidlina,50.2380909,15.4997953,455.88,,CHMI Open Data,Czech Republic
+0-203-1-082000,Plaňany,Výrovka,50.0490037,15.0161372,264.35,,CHMI Open Data,Czech Republic
+0-203-1-112500,Ličov,Černá,48.7298874,14.5720554,126.44,,CHMI Open Data,Czech Republic
+0-203-1-123000,Frahelž,Lužnice,49.1187158,14.7377975,1539.06,,CHMI Open Data,Czech Republic
+0-203-1-150000,Heřmaň,Blanice,49.2460295,14.1320332,840.31,,CHMI Open Data,Czech Republic
+0-203-1-210100,Stará Role,Rolava,50.2485789,12.819917,125.91,,CHMI Open Data,Czech Republic
+0-203-1-261200,Karlovice,Opava,50.1079199,17.4280006,150.69,,CHMI Open Data,Czech Republic
+0-203-1-269000,Rýmařov,Podolský potok,49.9377641,17.26756,50.88,,CHMI Open Data,Czech Republic
+0-203-1-274000,Branka u Opavy,Moravice,49.8936304,17.8899236,715.02,,CHMI Open Data,Czech Republic
+0-203-1-321000,Varnsdorf,Mandava,50.906012,14.6281529,88.86,,CHMI Open Data,Czech Republic
+0-203-1-341000,Vlaské,Morava,50.0883028,16.9011062,96.5,,CHMI Open Data,Czech Republic
+0-203-1-362000,Dlouhá Loučka,Oslava,49.8148356,17.1726136,79.84,,CHMI Open Data,Czech Republic
+0-203-1-376000,Zděchov,Zděchovka,49.2646401,18.077919,4.06,,CHMI Open Data,Czech Republic
+0-203-1-412000,Zlín,Dřevnice,49.2309383,17.6723963,311.79,,CHMI Open Data,Czech Republic
+0-203-1-153400,VD Orlík,Vltava,49.6059435,14.1839153,12105.96,,CHMI Open Data,Czech Republic
+0-203-1-168200,VD Vrané,Vltava,49.9379823,14.372589,17784.64,,CHMI Open Data,Czech Republic
+0-203-1-469000,Třebíč-Ptáčov,Jihlava,49.2151541,15.9347696,962.99,,CHMI Open Data,Czech Republic
+0-203-1-186800,Ždírec,Úslava,49.5528253,13.5749554,374.58,,CHMI Open Data,Czech Republic
+0-203-1-249800,Nový Jičín,Jičínka,49.5983582,18.0176926,75.37,,CHMI Open Data,Czech Republic
+0-203-1-165800,Slověnice,Chotýšanka,49.7515269,14.888609,117.11,,CHMI Open Data,Czech Republic
+0-203-1-214500,Ostrov,Bystřice,50.3051334,12.9364663,127.35,,CHMI Open Data,Czech Republic
+0-203-1-025000,Nekoř,Divoká Orlice,50.0652953,16.5406373,182.39,,CHMI Open Data,Czech Republic
+0-203-1-043000,Litomyšl,Loučná,49.8739862,16.3073235,144.9,,CHMI Open Data,Czech Republic
+0-203-1-004200,Vestřev,Labe,50.5143585,15.7416403,299.72,,CHMI Open Data,Czech Republic
+0-203-1-487500,Brumov,Brumovka,49.0928484,18.021899,66.33,,CHMI Open Data,Czech Republic
+0-203-1-404000,Chomýž,Rusava,49.3624428,17.6513644,27.08,,CHMI Open Data,Czech Republic
+0-203-1-313000,Mikulovice,Bělá,50.2905366,17.2939442,222.69,,CHMI Open Data,Czech Republic
+0-203-1-298000,Jablunkov,Lomná,49.5765016,18.7606587,70.02,,CHMI Open Data,Czech Republic
+0-203-1-413000,Spytihněv,Morava,49.1331994,17.5011,7889.1,,CHMI Open Data,Czech Republic
+0-203-1-086000,Dolní Sytová,Jizera,50.6245045,15.4410008,322.13,,CHMI Open Data,Czech Republic
+0-203-1-216000,Žatec,Ohře,50.3348523,13.5403251,3943.59,,CHMI Open Data,Czech Republic
+0-203-1-360900,Loštice,Třebůvka,49.7394389,16.9275889,553.25,,CHMI Open Data,Czech Republic
+0-203-1-429700,Staré Město pod Landštejnem,Pstruhovec,48.987094,15.2487453,44.34,,CHMI Open Data,Czech Republic
+0-203-1-191800,Rakovník,Rakovnický potok,50.0893368,13.7555131,302.62,,CHMI Open Data,Czech Republic
+0-203-1-427600,VD Nová Říše,Řečice (Olšanský potok),49.1461894,15.5444568,23.61,,CHMI Open Data,Czech Republic
+0-203-1-188000,Nová Huť,Klabava,49.7823733,13.5089324,358.19,,CHMI Open Data,Czech Republic
+0-203-1-370500,VD Karolinka,Velká Stanovnice,49.3501343,18.2344543,23.15,,CHMI Open Data,Czech Republic
+0-203-1-446000,Skryje,Bobrůvka,49.3796152,16.3177903,222.0,,CHMI Open Data,Czech Republic
+0-203-1-304400,Zlaté Hory,Zlatý potok,50.2610393,17.3955247,22.74,,CHMI Open Data,Czech Republic
+0-203-1-155500,Stříbrné Hory,Borovský potok,49.5995926,15.7019141,71.42,,CHMI Open Data,Czech Republic
+0-203-1-156000,Mírovka,Šlapanka,49.5810371,15.6174314,252.88,,CHMI Open Data,Czech Republic
+0-203-1-049000,Přemilov,Chrudimka,49.8041711,15.6840832,204.27,,CHMI Open Data,Czech Republic
+0-203-1-220000,Litoměřice,Labe,50.5280343,14.1122035,48259.0,,CHMI Open Data,Czech Republic
+0-203-1-463000,Batelov,Jihlava,49.3138083,15.4062373,73.3,,CHMI Open Data,Czech Republic
+0-203-1-393000,Klopotovice,Blata,49.4481158,17.2588087,296.5,,CHMI Open Data,Czech Republic
+0-203-1-370000,Velké Karlovice,Vsetínská Bečva,49.3608303,18.2828808,68.4,,CHMI Open Data,Czech Republic
+0-203-1-114000,Pašinovice,Stropnice,48.877765,14.5258745,397.06,,CHMI Open Data,Czech Republic
+0-203-1-022000,Jaroměř-Josefov,Labe,50.3376383,15.9169454,1835.17,,CHMI Open Data,Czech Republic
+0-203-1-061000,Přelouč,Labe,50.0451408,15.5719241,6436.43,,CHMI Open Data,Czech Republic
+0-203-1-069000,Lázně Bělohrad,Javorka,50.4318883,15.5834721,38.34,,CHMI Open Data,Czech Republic
+0-203-1-083000,Janov-Harrachov,Mumlava,50.7646771,15.3972451,51.07,,CHMI Open Data,Czech Republic
+0-203-1-085000,Dolní Štěpanice,Jizerka,50.6379764,15.5171117,44.31,,CHMI Open Data,Czech Republic
+0-203-1-091000,Železný Brod,Jizera,50.639942,15.2744079,791.75,,CHMI Open Data,Czech Republic
+0-203-1-158500,Josefodol,Sázavka,49.6831401,15.419451,124.33,,CHMI Open Data,Czech Republic
+0-203-1-162500,Poříčí,Želivka,49.5368746,15.1996777,779.39,,CHMI Open Data,Czech Republic
+0-203-1-173000,Stříbro,Úhlavka,49.7372599,12.9945236,296.49,,CHMI Open Data,Czech Republic
+0-203-1-180900,VD Nýrsko,Úhlava,49.2639197,13.1439496,81.0,,CHMI Open Data,Czech Republic
+0-203-1-206000,VD Skalka,Ohře,50.0857635,12.385028,689.35,,CHMI Open Data,Czech Republic
+0-203-1-226000,Trmice,Bílina,50.6467648,14.0064123,851.6,,CHMI Open Data,Czech Republic
+0-203-1-274100,Jakartovice,Hvozdnice,49.9168447,17.6905227,30.57,,CHMI Open Data,Czech Republic
+0-203-1-200200,Praha-Krč,Kunratický potok,50.0350666,14.4442347,28.21,,CHMI Open Data,Czech Republic
+0-203-1-292300,Radvanice,Lučina,49.8210096,18.3184266,185.61,,CHMI Open Data,Czech Republic
+0-203-1-294000,Bohumín,Odra,49.9210744,18.3282505,4661.57,,CHMI Open Data,Czech Republic
+0-203-1-354000,Lupěné,Moravská Sázava,49.8670295,16.8387121,445.09,,CHMI Open Data,Czech Republic
+0-203-1-400000,Vyškov,Haná,49.2818342,16.9953348,105.24,,CHMI Open Data,Czech Republic
+0-203-1-441000,Borovnice,Svratka,49.6780208,16.1910697,127.93,,CHMI Open Data,Czech Republic
+0-203-1-098000,Bakov nad Jizerou,Jizera,50.4836822,14.927934,1646.89,,CHMI Open Data,Czech Republic
+0-203-1-435000,VD Znojmo,Dyje,48.853965,16.0428271,2496.93,,CHMI Open Data,Czech Republic
+0-203-1-466000,VD Hubenov,Maršovský potok,49.3920402,15.49228,19.74,,CHMI Open Data,Czech Republic
+0-203-1-484000,VD Koryčany,Kyjovka,49.1168265,17.1890512,27.54,,CHMI Open Data,Czech Republic
+0-203-1-405500,Kašava,Dřevnice,49.2887323,17.7814012,36.39,,CHMI Open Data,Czech Republic
+0-203-1-304300,Osoblaha,Osoblaha,50.2726246,17.7204946,200.11,,CHMI Open Data,Czech Republic
+0-203-1-178800,Domažlice,Zubřina,49.435718,12.9456777,32.0,,CHMI Open Data,Czech Republic
+0-203-1-201990,Praha-Jiviny,Litovický potok,50.08009,14.3028,38.3,,CHMI Open Data,Czech Republic
+0-203-1-210500,VD Podhora,Teplá,49.9637284,12.8162944,19.82,,CHMI Open Data,Czech Republic
+0-203-1-200900,Praha-Na Františku,Vltava,50.0932494,14.423356,26913.42,,CHMI Open Data,Czech Republic
+0-203-1-111000,Březí,Vltava,48.9174391,14.4310671,1820.66,,CHMI Open Data,Czech Republic
+0-203-1-244000,Hřensko,Kamenice,50.8738749,14.2511036,215.28,,CHMI Open Data,Czech Republic
+0-203-1-246700,Český Jiřetín,Flájský potok,50.707459,13.5427586,48.31,,CHMI Open Data,Czech Republic
+0-203-1-204000,Mělník,Labe,50.3523568,14.4694012,41820.23,,CHMI Open Data,Czech Republic
+0-203-1-165600,Louňovice pod Blaníkem,Blanice,49.6205843,14.8393459,211.57,,CHMI Open Data,Czech Republic
+0-203-1-472000,Baliny,Balinka,49.3387551,15.9603827,166.28,,CHMI Open Data,Czech Republic
+0-203-1-473000,Nesměř,Oslava,49.3195755,16.0255438,478.87,,CHMI Open Data,Czech Republic
+0-203-1-300100,Řeka,Ropičanka,49.6418705,18.5711956,12.46,,CHMI Open Data,Czech Republic
+0-203-1-066000,Žleby,Doubrava,49.8894754,15.477346,381.15,,CHMI Open Data,Czech Republic
+0-203-1-348000,Sobotín,Merta,50.0182081,17.0706464,66.0,,CHMI Open Data,Czech Republic
+0-203-1-155800,Havlíčkův Brod-Pohledští Dvořáci,Sázava,49.6090926,15.6141241,381.75,,CHMI Open Data,Czech Republic
+0-203-1-161400,Čakovice,Želivka,49.4600477,15.1742493,121.22,,CHMI Open Data,Czech Republic
+0-203-1-256000,Vřesina,Porubka,49.8289797,18.1265457,34.98,,CHMI Open Data,Czech Republic
+0-203-1-006000,Les Království,Labe,50.4551012,15.7717176,531.81,,CHMI Open Data,Czech Republic
+0-203-1-036000,Čermná nad Orlicí,Tichá Orlice,50.0779234,16.1352813,695.57,,CHMI Open Data,Czech Republic
+0-203-1-045000,Cerekvice nad Loučnou,Loučná,49.9006478,16.2123879,355.9,,CHMI Open Data,Czech Republic
+0-203-1-359000,Chornice,Jevíčka,49.6644372,16.7496521,179.26,,CHMI Open Data,Czech Republic
+0-203-1-356000,Mezihoří,Třebůvka,49.7051119,16.7418723,177.53,,CHMI Open Data,Czech Republic
+0-203-1-200480,Kocanda,Botič,49.9698039,14.5413433,10.98,,CHMI Open Data,Czech Republic
+0-203-1-200560,Kuří,Pitkovický potok,49.98737,14.6202624,16.79,,CHMI Open Data,Czech Republic
+0-203-1-465000,Dvorce,Jihlava,49.3822234,15.5029127,307.46,,CHMI Open Data,Czech Republic
+0-203-1-175000,Trpísty,Úterský potok,49.8282036,13.063786,297.18,,CHMI Open Data,Czech Republic
+0-203-1-154700,Polnička,Sázava,49.6060808,15.9189437,29.69,,CHMI Open Data,Czech Republic
+0-203-1-154600,Štěchovice,Kocába,49.8481438,14.4028905,308.54,,CHMI Open Data,Czech Republic
+0-203-1-344000,Jindřichov,Branná,50.0949912,16.9806575,90.25,,CHMI Open Data,Czech Republic
+0-203-1-206910,VD Horka,Libocký potok,50.1790376,12.487643,71.13,,CHMI Open Data,Czech Republic
+0-203-1-066500,Vrchlice,Vrchlice,49.926083,15.2277081,97.56,,CHMI Open Data,Czech Republic
+0-203-1-290800,Horní Domaslavice,Lučina,49.6939257,18.4620999,26.54,,CHMI Open Data,Czech Republic
+0-203-1-206300,Hrozňatov,Mohelnský potok,50.0255053,12.3897538,63.3,,CHMI Open Data,Czech Republic
+0-203-1-207920,Rotava,Skřiváň,50.3015512,12.5859513,28.32,,CHMI Open Data,Czech Republic
+0-203-1-065000,Pařížov,Doubrava,49.8289215,15.5678495,201.14,,CHMI Open Data,Czech Republic
+0-203-1-286600,Frýdek-Místek,Ostravice,49.6861777,18.3377802,480.6,,CHMI Open Data,Czech Republic
+0-203-1-290100,Palkovice,Olešná,49.6399898,18.3197129,19.86,,CHMI Open Data,Czech Republic
+0-203-1-218000,Třetí Mlýn,Chomutovka,50.4989301,13.3306745,44.95,,CHMI Open Data,Czech Republic
+0-203-1-159000,Světlá nad Sázavou,Sázava,49.6646916,15.4034376,1142.56,,CHMI Open Data,Czech Republic
+0-203-1-161000,Zruč nad Sázavou,Sázava,49.7408575,15.1011313,1421.6,,CHMI Open Data,Czech Republic
+0-203-1-277000,VD Šance,Ostravice,49.5143413,18.4135883,146.69,,CHMI Open Data,Czech Republic
+0-203-1-448000,Veverská Bítýška,Svratka,49.2774115,16.4396515,1479.97,,CHMI Open Data,Czech Republic
+0-203-1-480300,Velké Pavlovice,Trkmanka,48.9071157,16.8203011,304.62,,CHMI Open Data,Czech Republic
+0-203-1-200990,Praha-Vysočany,Rokytka,50.1080853,14.4988561,120.46,,CHMI Open Data,Czech Republic
+0-203-1-442000,Dalečín,Svratka,49.595102,16.2450951,367.16,,CHMI Open Data,Czech Republic
+0-203-1-232200,Mimoň,Ploučnice,50.6580373,14.7270673,269.64,,CHMI Open Data,Czech Republic
+0-203-1-388000,Kelč,Juhyně,49.4724413,17.8281675,86.19,,CHMI Open Data,Czech Republic
+0-203-1-139000,Kolinec,Ostružná,49.2956355,13.4353865,91.5,,CHMI Open Data,Czech Republic
+0-203-1-131000,Klenovice,Lužnice,49.2808832,14.7006926,3158.87,,CHMI Open Data,Czech Republic
+0-203-1-001000,Špindlerův Mlýn,Labe,50.7231395,15.5981084,53.1,,CHMI Open Data,Czech Republic
+0-203-1-002000,Labská,Labe,50.7102495,15.5850878,61.32,,CHMI Open Data,Czech Republic
+0-203-1-018000,Hronov,Metuje,50.4831742,16.1808633,248.6,,CHMI Open Data,Czech Republic
+0-203-1-030000,Rychnov nad Kněžnou,Kněžná,50.1544066,16.2757167,75.35,,CHMI Open Data,Czech Republic
+0-203-1-063000,Bílek,Doubrava,49.7034362,15.7339008,63.92,,CHMI Open Data,Czech Republic
+0-203-1-092000,Pelešany,Libuňka,50.571139,15.1707785,98.41,,CHMI Open Data,Czech Republic
+0-203-1-132500,Rataje,Smutná,49.3501738,14.4498111,218.5,,CHMI Open Data,Czech Republic
+0-203-1-141700,Bohumilice,Spůlka,49.0996792,13.8025351,104.8,,CHMI Open Data,Czech Republic
+0-203-1-182200,Sobětice,Mochtínský potok,49.3690183,13.3161143,35.23,,CHMI Open Data,Czech Republic
+0-203-1-189000,Čichořice,Střela,50.096392,13.2700377,393.16,,CHMI Open Data,Czech Republic
+0-203-1-239000,Benešov nad Ploučnicí,Ploučnice,50.7394308,14.3103894,1156.48,,CHMI Open Data,Czech Republic
+0-203-1-247100,Budišov nad Budišovkou,Budišovka,49.793318,17.6309901,25.64,,CHMI Open Data,Czech Republic
+0-203-1-247800,Odry,Odra,49.6645987,17.8324519,410.97,,CHMI Open Data,Czech Republic
+0-203-1-301900,Dětmarovice,Olše,49.8834135,18.4866752,667.01,,CHMI Open Data,Czech Republic
+0-203-1-311000,Jeseník,Bělá,50.2270409,17.2082158,118.07,,CHMI Open Data,Czech Republic
+0-203-1-319000,Chrastava,Jeřice,50.8169504,14.9647383,71.47,,CHMI Open Data,Czech Republic
+0-203-1-387000,Valašské Meziříčí,Rožnovská Bečva,49.4729866,17.9774915,252.12,,CHMI Open Data,Czech Republic
+0-203-1-154440,Dobříš,Trnovský potok,49.7954789,14.1565474,12.72,,CHMI Open Data,Czech Republic
+0-203-1-415000,VD Luhačovice,Luhačovický potok,49.1206127,17.7726417,44.74,,CHMI Open Data,Czech Republic
+0-203-1-434000,Vranov-Hamry,Dyje,48.8946782,15.8190913,2225.16,,CHMI Open Data,Czech Republic
+0-203-1-167200,Nespeky,Sázava,49.8596095,14.6499499,4038.66,,CHMI Open Data,Czech Republic
+0-203-1-268200,Malá Morávka,Bělokamenný potok,50.0254894,17.3131297,17.79,,CHMI Open Data,Czech Republic
+0-203-1-323000,Frýdlant,Smědá,50.9203912,15.07738,132.3,,CHMI Open Data,Czech Republic
+0-203-1-323100,Frýdlant-Fugnerova,Řasnice,50.9274286,15.090787,30.39,,CHMI Open Data,Czech Republic
+0-203-1-324000,Višňová,Smědá,50.9498579,15.0303845,187.28,,CHMI Open Data,Czech Republic
+0-203-1-109500,Zátoň,Vltava,48.7268304,14.3368457,1298.55,,CHMI Open Data,Czech Republic
+0-203-1-154900,Žďár nad Sázavou,Sázava,49.5612975,15.9312135,100.94,,CHMI Open Data,Czech Republic
+0-203-1-207600,Kraslice,Svatava,50.31633,12.5185826,116.75,,CHMI Open Data,Czech Republic
+0-203-1-487000,Popov,Vlára,49.0773258,17.9708766,169.08,,CHMI Open Data,Czech Republic
+0-203-1-119000,Pilař,Lužnice,48.9497127,14.8804979,935.75,,CHMI Open Data,Czech Republic
+0-203-1-127000,Lásenice,Nežárka,49.0739927,14.9651984,684.5,,CHMI Open Data,Czech Republic
+0-203-1-380000,Bystřička nad nádrží,Bystřice,49.4182221,18.0447133,57.4,,CHMI Open Data,Czech Republic
+0-203-1-468000,Brtnice,Brtnice,49.3003947,15.6782146,97.24,,CHMI Open Data,Czech Republic
+0-203-1-039000,Mitrov,Dědina,50.2107137,16.0215541,291.16,,CHMI Open Data,Czech Republic
+0-203-1-047000,Dašice,Loučná,50.0368355,15.9068182,623.57,,CHMI Open Data,Czech Republic
+0-203-1-071000,Rohoznice,Bystřice,50.4012173,15.6859903,43.31,,CHMI Open Data,Czech Republic
+0-203-1-107000,Chlum,Teplá Vltava,48.8621432,13.8973771,346.97,,CHMI Open Data,Czech Republic
+0-203-1-151000,Písek,Otava,49.3165385,14.1433984,2913.12,,CHMI Open Data,Czech Republic
+0-203-1-165000,Kácov,Sázava,49.7854539,15.0248521,2814.52,,CHMI Open Data,Czech Republic
+0-203-1-172000,Třebel,Kosový potok,49.8266607,12.8389127,216.01,,CHMI Open Data,Czech Republic
+0-203-1-190000,Plasy,Střela,49.9334517,13.3904184,774.28,,CHMI Open Data,Czech Republic
+0-203-1-212000,VD Březová,Teplá,50.1948944,12.8599553,272.18,,CHMI Open Data,Czech Republic
+0-203-1-275000,Děhylov,Opava,49.8794024,18.1765605,2036.34,,CHMI Open Data,Czech Republic
+0-203-1-308000,Velká Kraš,Černý potok,50.3604067,17.1634242,62.47,,CHMI Open Data,Czech Republic
+0-203-1-353000,Hoštejn,Březná,49.8776173,16.7617594,129.85,,CHMI Open Data,Czech Republic
+0-203-1-379000,Vsetín,Vsetínská Bečva,49.3424905,17.985752,505.53,,CHMI Open Data,Czech Republic
+0-203-1-432000,Vysočany,Želetavka,48.9597687,15.6831875,368.34,,CHMI Open Data,Czech Republic
+0-203-1-439000,Výrovice,Jevišovka,48.9289327,16.1113051,382.62,,CHMI Open Data,Czech Republic
+0-203-1-449000,Brno-Poříčí,Svratka,49.1859207,16.5914926,1637.18,,CHMI Open Data,Czech Republic
+0-203-1-081000,Doubravčany,Výrovka,49.9612943,15.0064165,116.39,,CHMI Open Data,Czech Republic
+0-203-1-397500,Opatovice nad nádrží,Malá Haná,49.3210897,16.9022106,30.83,,CHMI Open Data,Czech Republic
+0-203-1-469500,VD Mohelno,Jihlava,49.103101,16.1828515,1155.2,,CHMI Open Data,Czech Republic
+0-203-1-197300,Beroun,Litavka,49.9561947,14.0672997,624.95,,CHMI Open Data,Czech Republic
+0-203-1-136500,Stodůlky,Křemelná,49.1176039,13.4276003,133.91,,CHMI Open Data,Czech Republic
+0-203-1-320800,Rumburk,Mandava,50.945619,14.5751123,41.98,,CHMI Open Data,Czech Republic
+0-203-1-207700,Šindelová,Rotava,50.3169693,12.5981956,15.11,,CHMI Open Data,Czech Republic
+0-203-1-200300,Praha-Hlubočepy,Dalejský potok,50.0415157,14.3903957,31.98,,CHMI Open Data,Czech Republic
+0-203-1-112000,Kaplice,Malše,48.7395274,14.4980605,257.72,,CHMI Open Data,Czech Republic
+0-203-1-147000,Podedvorský Mlýn,Blanice,49.0363261,13.9529502,202.09,,CHMI Open Data,Czech Republic
+0-203-1-207300,Citice,Ohře,50.1725751,12.6202461,1723.34,,CHMI Open Data,Czech Republic
+0-203-1-234000,Zákupy,Svitavka,50.6865047,14.645236,118.31,,CHMI Open Data,Czech Republic
+0-203-1-394000,Stražisko,Romže,49.5344926,16.954574,54.86,,CHMI Open Data,Czech Republic
+0-203-1-115000,Roudné,Malše,48.9350937,14.4900687,958.96,,CHMI Open Data,Czech Republic
+0-203-1-166200,Radonice,Blanice,49.7889263,14.9329332,542.27,,CHMI Open Data,Czech Republic
+0-203-1-179000,Staňkov,Radbuza,49.5526949,13.0711379,702.29,,CHMI Open Data,Czech Republic
+0-203-1-180100,VD České Údolí,Radbuza,49.7175943,13.3611131,1264.67,,CHMI Open Data,Czech Republic
+0-203-1-345000,Raškov,Morava,50.0409636,16.9113794,349.82,,CHMI Open Data,Czech Republic
+0-203-1-421500,Strážnice,Morava,48.9330292,17.2974638,9145.07,,CHMI Open Data,Czech Republic
+0-203-1-429000,Janov,Moravská Dyje,48.9930546,15.4348172,517.69,,CHMI Open Data,Czech Republic
+0-203-1-091950,Sedmihorky,Libuňka,50.558117,15.1955137,91.7,,CHMI Open Data,Czech Republic
+0-203-1-254000,Petřvald,Lubina,49.7126668,18.1540622,166.71,,CHMI Open Data,Czech Republic
+0-203-1-108000,Černý Kříž,Studená Vltava,48.8633409,13.8655576,103.06,,CHMI Open Data,Czech Republic
+0-203-1-145000,Blanický Mlýn,Blanice,48.9571937,13.9413962,85.57,,CHMI Open Data,Czech Republic
+0-203-1-188900,VD Žlutice,Střela,50.0849834,13.126746,215.21,,CHMI Open Data,Czech Republic
+0-203-1-279000,Čeladná,Čeladenka,49.512488,18.3373167,30.9,,CHMI Open Data,Czech Republic
+0-203-1-430000,Podhradí nad Dyjí,Dyje,48.903297,15.6913609,1751.54,,CHMI Open Data,Czech Republic
+0-203-1-281000,Morávka,Morávka,49.5606576,18.5502313,22.02,,CHMI Open Data,Czech Republic
+0-203-1-055500,Luže,Novohradka,49.8869148,16.0262558,152.26,,CHMI Open Data,Czech Republic
+0-203-1-454000,Letovice,Svitava,49.5320553,16.5806663,423.96,,CHMI Open Data,Czech Republic
+0-203-1-389000,Teplice nad Bečvou,Bečva,49.5300421,17.7458814,1275.54,,CHMI Open Data,Czech Republic
+0-203-1-326000,Předlánce,Smědá,50.9781799,15.0347994,245.02,,CHMI Open Data,Czech Republic
+0-203-1-162000,Želiv-VD Vřesník,Želivka,49.5284672,15.2417077,431.21,,CHMI Open Data,Czech Republic
+0-203-1-240000,Děčín,Labe,50.7821579,14.2096165,50973.64,,CHMI Open Data,Czech Republic
+0-203-1-241000,Srbská Kamenice,Kamenice,50.814043,14.3515063,97.76,,CHMI Open Data,Czech Republic
+0-203-1-155000,Sázava,Sázava,49.5551553,15.8492538,132.76,,CHMI Open Data,Czech Republic
+0-203-1-068000,Jičín,Cidlina,50.43377,15.3523634,39.06,,CHMI Open Data,Czech Republic
+0-203-1-355000,Moravičany,Morava,49.7558167,16.9754854,1559.11,,CHMI Open Data,Czech Republic
+0-203-1-426000,Lanžhot,Morava,48.6871825,16.9883414,9726.22,,CHMI Open Data,Czech Republic
+0-203-1-077000,Vestec,Mrlina,50.2397568,15.1456463,458.22,,CHMI Open Data,Czech Republic
+0-203-1-387500,Rajnochovice,Juhyně,49.4001128,17.8153445,20.34,,CHMI Open Data,Czech Republic
+0-203-1-200100,Praha-Chuchle,Vltava,50.027491,14.3967373,26728.73,,CHMI Open Data,Czech Republic
+0-203-1-129000,Hamr,Nežárka,49.1576685,14.7589203,983.6,,CHMI Open Data,Czech Republic
+0-203-1-013000,Horní Maršov,Úpa,50.6604694,15.8204707,81.83,,CHMI Open Data,Czech Republic
+0-203-1-048000,Hamry,Chrudimka,49.7382743,15.9165568,57.11,,CHMI Open Data,Czech Republic
+0-203-1-106000,Lenora,Teplá Vltava,48.9278041,13.7948561,176.18,,CHMI Open Data,Czech Republic
+0-203-1-133000,Bechyně,Lužnice,49.2883966,14.4709655,4062.89,,CHMI Open Data,Czech Republic
+0-203-1-182000,Klatovy,Úhlava,49.4034133,13.2628796,344.54,,CHMI Open Data,Czech Republic
+0-203-1-235000,Česká Lípa,Ploučnice,50.6829051,14.5368925,623.0,,CHMI Open Data,Czech Republic
+0-203-1-257000,Svinov,Odra,49.8197645,18.2168255,1614.72,,CHMI Open Data,Czech Republic
+0-203-1-273000,VD Kružberk,Moravice,49.8244702,17.6667139,567.39,,CHMI Open Data,Czech Republic
+0-203-1-284000,VD Morávka,Morávka,49.5860996,18.5297818,64.14,,CHMI Open Data,Czech Republic
+0-203-1-285000,Raškovice,Mohelnice,49.6013303,18.4742562,35.22,,CHMI Open Data,Czech Republic
+0-203-1-285900,Vyšní Lhoty,Morávka,49.6267363,18.4635576,129.1,,CHMI Open Data,Czech Republic
+0-203-1-312000,Lipová-lázně,Staříč,50.2280933,17.1436555,33.32,,CHMI Open Data,Czech Republic
+0-203-1-320000,Hrádek nad Nisou,Lužická Nisa,50.8545107,14.8233482,354.87,,CHMI Open Data,Czech Republic
+0-203-1-398000,VD Opatovice,Malá Haná,49.3002019,16.9580571,47.19,,CHMI Open Data,Czech Republic
+0-203-1-418000,Uherský Brod,Olšava,49.0161236,17.6437475,400.87,,CHMI Open Data,Czech Republic
+0-203-1-461000,Rychmanov,Litava,49.1037903,16.7632102,497.08,,CHMI Open Data,Czech Republic
+0-203-1-200600,Praha-Nusle,Botič,50.0665445,14.4297834,110.49,,CHMI Open Data,Czech Republic
+0-203-1-480500,Ladná,Dyje,48.8040396,16.8543602,12285.42,,CHMI Open Data,Czech Republic
+0-203-1-205020,Vědlice,Úštěcký potok,50.5266889,14.3448577,85.38,,CHMI Open Data,Czech Republic
+0-203-1-215500,Stranná,Ohře,50.3683378,13.445646,3623.0,,CHMI Open Data,Czech Republic
+0-203-1-027000,Slatina nad Zdobnicí,Zdobnice,50.1363209,16.3795104,84.13,,CHMI Open Data,Czech Republic
+0-203-1-042000,Němčice,Labe,50.0945145,15.806681,4297.02,,CHMI Open Data,Czech Republic
+0-203-1-110200,Český Krumlov,Polečnice (Kájovský potok),48.8130841,14.3128377,197.7,,CHMI Open Data,Czech Republic
+0-203-1-138000,Sušice,Otava,49.2365979,13.5249178,533.25,,CHMI Open Data,Czech Republic
+0-203-1-148500,Hracholusky,Zlatý potok,49.0562047,14.078798,72.71,,CHMI Open Data,Czech Republic
+0-203-1-203000,Vraňany,Vltava,50.3131814,14.3626326,28065.58,,CHMI Open Data,Czech Republic
+0-203-1-271100,Mezina,Černý potok,49.9562028,17.4903457,92.16,,CHMI Open Data,Czech Republic
+0-203-1-186000,Plzeň-Bílá Hora,Berounka,49.7665067,13.4009389,4017.71,,CHMI Open Data,Czech Republic
+0-203-1-128000,Mláka,Nová řeka,49.0669899,14.8723834,66.0,,CHMI Open Data,Czech Republic
+0-203-1-382000,Jarcová,Vsetínská Bečva,49.4443515,17.9700753,723.8,,CHMI Open Data,Czech Republic
+0-203-1-471000,VD Mostiště,Oslava,49.3927262,16.0125167,222.53,,CHMI Open Data,Czech Republic
+0-203-1-479500,VD Nové Mlýny,Dyje,48.8581171,16.7243473,11873.22,,CHMI Open Data,Czech Republic
+0-203-1-456000,Skalní Mlýn,Punkva,49.3695416,16.7197932,153.2,,CHMI Open Data,Czech Republic
+0-203-1-455210,Holštejn,Marianínský potok,49.4030444,16.7796451,8.3,,CHMI Open Data,Czech Republic
+0-203-1-290900,Žermanice,Lučina,49.7326474,18.4454586,45.5,,CHMI Open Data,Czech Republic
+0-203-1-481000,Břeclav-město,Dyje,48.7578119,16.8854613,12351.84,,CHMI Open Data,Czech Republic
+0-203-1-051000,Mezisvětí,Chrudimka,49.8536499,15.7546206,253.04,,CHMI Open Data,Czech Republic
+0-203-1-203100,Hořín,Vltava,50.3410762,14.4683166,0.0,,CHMI Open Data,Czech Republic
+0-203-1-053000,Slatiňany,Chrudimka,49.9257689,15.8144388,304.52,,CHMI Open Data,Czech Republic
+0-203-1-149000,Protivín,Blanice,49.1982891,14.2187815,707.67,,CHMI Open Data,Czech Republic
+0-203-1-363200,Žerotín-Strukov,Teplička,49.7283006,17.1788155,49.26,,CHMI Open Data,Czech Republic
+0-203-1-165900,Libež,Chotýšanka,49.7589654,14.9145973,124.84,,CHMI Open Data,Czech Republic
+0-203-1-425100,Hodonín,Morava,48.8425308,17.1427554,9756.33,,CHMI Open Data,Czech Republic
+0-203-1-260000,Ludvíkov,Bílá Opava,50.1066348,17.3418877,23.85,,CHMI Open Data,Czech Republic
+0-203-1-198800,Karlík,Karlický potok,49.9391404,14.2600424,18.45,,CHMI Open Data,Czech Republic
+0-203-1-372000,Kychová,Adamovský potok,49.2781017,18.1622216,0.32,,CHMI Open Data,Czech Republic
+0-203-1-000400,Labský důl,Labe,50.7603462,15.5518438,4.41,,CHMI Open Data,Czech Republic
+0-203-1-237000,Karba,Robečský potok,50.7038493,14.8073123,264.39,,CHMI Open Data,Czech Republic
+0-203-1-026000,Litice nad Orlicí,Divoká Orlice,50.0864839,16.3566061,305.13,,CHMI Open Data,Czech Republic
+0-203-1-192000,Křivoklát,Berounka,50.0188145,13.8906297,7422.74,,CHMI Open Data,Czech Republic
+0-203-1-273100,Anina Dolina-Vítkov,Moravice,49.8017582,17.7790234,622.27,,CHMI Open Data,Czech Republic
+0-203-1-015000,Česká Skalice,Úpa,50.3969378,16.0470668,458.18,,CHMI Open Data,Czech Republic
+0-203-1-262100,Radim,Krasovka,50.0745146,17.598993,33.55,,CHMI Open Data,Czech Republic
+0-203-1-276100,Staré Hamry,Řečice,49.510769,18.4547549,20.79,,CHMI Open Data,Czech Republic
+0-203-1-448500,Bystrc,Vrbovec,49.2192297,16.5297341,15.07,,CHMI Open Data,Czech Republic
+0-203-1-012000,Lví Důl,Jelení potok,50.713524,15.7780693,7.38,,CHMI Open Data,Czech Republic
+0-203-1-153100,Zvíkov,Otava,49.439454,14.1914206,3839.15,,CHMI Open Data,Czech Republic
+0-203-1-301720,Karviná,Stonávka,49.8489202,18.5147202,131.16,,CHMI Open Data,Czech Republic
+0-203-1-384000,Prostřední Bečva,Rožnovská Bečva,49.4342036,18.250099,58.85,,CHMI Open Data,Czech Republic
+0-203-1-441400,Kadov,Fryšávka,49.6343495,16.0784965,21.04,,CHMI Open Data,Czech Republic
+0-203-1-258050,Mnichov,Slučí potok,50.1807162,17.3506417,3.98,,CHMI Open Data,Czech Republic
+0-203-1-166100,Radonice II,Blanice,49.7806202,14.9365941,538.85,,CHMI Open Data,Czech Republic
+0-203-1-110210,Český Krumlov,Vltava,48.8151446,14.3181653,1540.14,,CHMI Open Data,Czech Republic
+0-203-1-302000,Dolní Marklovice,Petrůvka,49.8921305,18.5666808,126.61,,CHMI Open Data,Czech Republic
+0-203-1-361000,Loštice,Třebůvka,49.7443533,16.9307884,573.07,,CHMI Open Data,Czech Republic
+0-203-1-467000,Jiřín,Jiřínský potok,49.4211873,15.4809379,14.88,,CHMI Open Data,Czech Republic
+0-203-1-479900,Brumovice,Haraska,48.9694642,16.8941401,47.05,,CHMI Open Data,Czech Republic
+0-203-1-033000,Machovice,Tichá Orlice,50.0067722,16.5429581,191.92,,CHMI Open Data,Czech Republic
+0-203-1-199500,Praha-Radotín,Radotínský potok,49.9920729,14.3467431,65.31,,CHMI Open Data,Czech Republic
+0-203-1-448900,Brno-Pisárky,Svratka,49.1932911,16.5679117,1628.57,,CHMI Open Data,Czech Republic
+0-203-1-301920,Dětmarovice,Karvinský potok,49.8841027,18.4866592,22.93,,CHMI Open Data,Czech Republic
+0-203-1-341500,Stříbrnice,Stříbrnický potok,50.179001,16.9007751,5.12,,CHMI Open Data,Czech Republic
+0-203-1-345500,Dlouhé Stráně pod nádrží,Desná,50.0911074,17.1789279,20.15,,CHMI Open Data,Czech Republic
+0-203-1-102000,Tuřice,Jizera,50.2442932,14.7735443,2160.0,,CHMI Open Data,Czech Republic
+0-203-1-196300,Chaloupky,Červený potok,49.7977945,13.8716317,23.53,,CHMI Open Data,Czech Republic
+0-203-1-265600,Opava,Plšťský potok,49.9513725,17.9009084,40.85,,CHMI Open Data,Czech Republic
+0-203-1-435500,Tasovice,Stará Dyje,48.8129993,16.1674336,0.0,,CHMI Open Data,Czech Republic
+0-203-1-248320,Bělotín,Luha,49.5832588,17.7931398,32.6,,CHMI Open Data,Czech Republic
+0-203-1-154500,Mokrá Vrata,Voznický potok,49.8075606,14.2552549,36.66,,CHMI Open Data,Czech Republic
+0-203-1-301710,Albrechtice,Stonávka,49.780106,18.5282416,85.14,,CHMI Open Data,Czech Republic
+0-203-1-168100,Davle,Vltava,49.8896517,14.401851,17660.3,,CHMI Open Data,Czech Republic
+0-203-1-213000,VD Stanovice,Lomnický potok,50.1870115,12.8631788,96.56,,CHMI Open Data,Czech Republic
+0-203-1-302800,Laziska,Olše,49.9246022,18.4432405,1071.32,,CHMI Open Data,Czech Republic
+0-203-1-458000,Želešice,Bobrava,49.1142499,16.5823811,180.98,,CHMI Open Data,Czech Republic
+0-203-1-440200,Jevišovka,Dyje,48.8299262,16.4749665,4372.88,,CHMI Open Data,Czech Republic
+0-203-1-167300,Pikovice,Sázava,49.8783197,14.4272457,4345.29,,CHMI Open Data,Czech Republic
+0-203-1-363210,Hnojice,Řičí potok,49.7154205,17.2181506,51.91,,CHMI Open Data,Czech Republic
+0-203-1-281100,Morávka,Skalka,49.5583786,18.5659463,17.71,,CHMI Open Data,Czech Republic
+0-203-1-275200,Přívoz-Ostrava,Odra,49.8628882,18.2568853,3714.78,,CHMI Open Data,Czech Republic
+0-203-1-163000,Dolní Kralovice,Želivka,49.6740904,15.15588,1055.82,,CHMI Open Data,Czech Republic
+0-203-1-258060,Mnichov,Sokolí potok,50.1687657,17.3569264,3.99,,CHMI Open Data,Czech Republic
+0-203-1-177000,Plzeň,Mže,49.7504585,13.3766392,1821.8,,CHMI Open Data,Czech Republic
+0-203-1-020050,Velká Jesenice,Rozkoš,50.3622905,16.0620954,43.18,,CHMI Open Data,Czech Republic
+0-203-1-450500,Hradec nad Svitavou,Svitava,49.7244061,16.4824793,55.14,,CHMI Open Data,Czech Republic
+0-203-1-011000,Horní Malá Úpa,Smrčí potok,50.7277323,15.7949478,5.56,,CHMI Open Data,Czech Republic
+0-203-1-409000,Vizovice,Bratřejovka,49.2142656,17.8668583,21.63,,CHMI Open Data,Czech Republic
+0-203-1-147900,Husinec nádrž,Blanice,49.0383019,13.9932847,212.54,,CHMI Open Data,Czech Republic
+0-203-1-187200,Plzeň-Doubravka,Berounka,49.7649614,13.4193474,4798.99,,CHMI Open Data,Czech Republic
+0-203-1-005000,Debrné,Labe,50.4954881,15.7332721,476.54,,CHMI Open Data,Czech Republic
+0-203-1-079000,Nové Mlýny-Pátek,Sánský kanál,50.1545081,15.1777729,3.86,,CHMI Open Data,Czech Republic
+0-203-1-279100,Baška,Baštice,49.6464193,18.3811105,12.4,,CHMI Open Data,Czech Republic
+0-203-1-202010,Klecany,Vltava,50.1700614,14.4027767,27272.03,,CHMI Open Data,Czech Republic
+0-203-1-259000,Železná,Střední Opava,50.1255934,17.3629508,54.16,,CHMI Open Data,Czech Republic
+0-203-1-200000,Praha-Modřany,Vltava,50.0030918,14.4028492,26698.35,,CHMI Open Data,Czech Republic
+0-203-1-369000,Brodek,Olešnice (Kokorka),49.4903657,17.3262703,106.35,,CHMI Open Data,Czech Republic
+0-203-1-292100,Šumbark-Havířov,Sušanka,49.7889537,18.4144921,31.2,,CHMI Open Data,Czech Republic
+0-203-1-266320,Karlov I.-Malá Morávka,Kotelný potok,50.0243422,17.2548731,6.86,,CHMI Open Data,Czech Republic
+0-203-1-447300,Lomnička,Besének,49.3678957,16.4283888,51.61,,CHMI Open Data,Czech Republic
+0-203-1-082900,Krakonošova snídaně,Mumlava,50.7655489,15.5051025,4.04,,CHMI Open Data,Czech Republic
+0-203-1-305000,Jetřichov,Stěnava,50.6220429,16.2670339,94.59,,CHMI Open Data,Czech Republic
+0-203-1-204040,Kokořínský Důl,Pšovka,50.4269944,14.5772699,47.36,,CHMI Open Data,Czech Republic
+0-203-1-395000,Plumlov nad nádrží,Hloučela,49.463395,17.0181249,101.84,,CHMI Open Data,Czech Republic
+0-203-1-153510,Kamýk nad Vltavou,Vltava,49.6471715,14.2493629,12225.81,,CHMI Open Data,Czech Republic
+0-203-1-097100,Malá Bělá,Bělá,50.4851411,14.9272991,158.1,,CHMI Open Data,Czech Republic
+0-203-1-423000,Petrov,Radějovka,48.8805078,17.2749239,40.87,,CHMI Open Data,Czech Republic
+0-203-1-196900,Litohlavy,Suchomastský potok,49.927665,14.0478595,25.87,,CHMI Open Data,Czech Republic
+0-203-1-203050,Zelčín,Vltava,50.318405,14.4410847,28098.09,,CHMI Open Data,Czech Republic
+0-203-1-198500,Hostim,Loděnice,49.9603584,14.1295053,270.83,,CHMI Open Data,Czech Republic
+0-203-1-092800,Žďár u Svijan,Žehrovka,50.5465402,15.0708505,85.21,,CHMI Open Data,Czech Republic
+0-203-1-361800,Břevenec,Dražůvka,49.8576388,17.1557862,9.0,,CHMI Open Data,Czech Republic
+0-203-1-455090,Sloup-Vlčí skála,Luha,49.438996,16.7595111,20.14,,CHMI Open Data,Czech Republic
+0-203-1-016100,Javor,Metuje,50.5646764,16.1788803,78.53,,CHMI Open Data,Czech Republic
+0-203-1-301100,Horní Těrlicko,Stonávka,49.727457,18.5057996,74.27,,CHMI Open Data,Czech Republic
+0-203-1-397400,Opatovice nad nádrží,Rakovec,49.3261388,16.8956039,6.63,,CHMI Open Data,Czech Republic
+0-203-1-436000,Krhovice,Stará Dyje,48.8046999,16.1706972,0.0,,CHMI Open Data,Czech Republic
+0-203-1-463800,Boršov,Jedlovský potok,49.4046154,15.4437214,16.08,,CHMI Open Data,Czech Republic
+0-203-1-174900,Šipín,Úterský potok,49.8598388,13.0345964,174.0,,CHMI Open Data,Czech Republic
+0-203-1-443000,Vír pod nádrží,Svratka,49.5615464,16.3081015,411.13,,CHMI Open Data,Czech Republic
+0-203-1-089100,Dolní Polubný,Černá Desná,50.7667027,15.3197788,16.35,,CHMI Open Data,Czech Republic
+0-203-1-301600,Těrlicko pod nádrží,Stonávka,49.7741319,18.5177217,83.65,,CHMI Open Data,Czech Republic
+0-203-1-265300,Branice,Opava,50.0511959,17.769762,603.16,,CHMI Open Data,Czech Republic
+0-203-1-082300,Lysá nad Labem,Labe,50.1804159,14.8361333,10576.03,,CHMI Open Data,Czech Republic
+0-203-1-250000,Šenov u Nového Jičína,Jičínka,49.6127356,17.9973226,94.54,,CHMI Open Data,Czech Republic
+0-203-1-067800,Kbelnice,Cidlina,50.4522996,15.3601489,29.2,,CHMI Open Data,Czech Republic
+0-203-1-098100,Trenčín,Kněžmostka,50.4701455,14.941912,70.74,,CHMI Open Data,Czech Republic
+0-203-1-479700,Dražůvky,Trkmanka,49.0324716,17.0209934,53.58,,CHMI Open Data,Czech Republic
+0-203-1-265500,Opava,Velká,49.9496006,17.8763814,39.57,,CHMI Open Data,Czech Republic
+0-203-1-347000,Andělské Žleby,Hučivá Desná,50.1050463,17.1081549,19.36,,CHMI Open Data,Czech Republic
+0-203-1-360200,Javoříčko 10,Javoříčka,49.6725119,16.9232961,7.31,,CHMI Open Data,Czech Republic
+0-203-1-456108,Jedovnice,Jedovnický potok,49.3350064,16.7471807,27.61,,CHMI Open Data,Czech Republic
+0-203-1-092100,Vysoké Kolo-Vyskeř,Žehrovka,50.5288586,15.1382148,56.82,,CHMI Open Data,Czech Republic
+0-203-1-413800,Uherské Hradiště,Morava,49.0733294,17.4585007,8113.16,,CHMI Open Data,Czech Republic
+0-203-1-373000,Kychová,Lukašický potok,49.2771446,18.1624251,0.73,,CHMI Open Data,Czech Republic
+0-203-1-095000,Podhora-Mohelnice nad Jizerou,Malá Mohelka,50.5723116,14.9598223,19.28,,CHMI Open Data,Czech Republic
+0-203-1-117000,Hluboká nad Vltavou,Vltava,49.0601615,14.4436562,3390.78,,CHMI Open Data,Czech Republic
+0-203-1-272500,Dvorce,Lobník,49.8231347,17.622605,38.4,,CHMI Open Data,Czech Republic
+0-203-1-294200,Chalupki,Odra,49.9218702,18.3278769,4661.58,,CHMI Open Data,Czech Republic
+0-203-1-180000,Plzeň-Litice,Radbuza,49.7015574,13.3497681,1188.18,,CHMI Open Data,Czech Republic
+0-203-1-262000,Nové Heřminovy,Opava,50.0343574,17.564862,282.56,,CHMI Open Data,Czech Republic
+0-203-1-205000,Roudnice nad Labem,Labe,50.4275187,14.2610584,42316.08,,CHMI Open Data,Czech Republic
+0-203-1-292000,Bludovice,Lučina,49.7480693,18.4348886,72.3,,CHMI Open Data,Czech Republic
+0-203-1-029000,Kvasiny,Bělá,50.2196827,16.2816788,53.92,,CHMI Open Data,Czech Republic
+0-203-1-229000,Děčín,Jílovský potok,50.7735941,14.1953689,74.57,,CHMI Open Data,Czech Republic
+0-203-1-167240,Kožlí,Janovický potok,49.7722198,14.620783,87.72,,CHMI Open Data,Czech Republic
+0-203-1-349000,Rapotín,Desná,49.9979136,17.0199863,216.95,,CHMI Open Data,Czech Republic
+0-203-1-207200,Citice,Ohře,50.1610686,12.6155493,1721.38,,CHMI Open Data,Czech Republic
+0-203-1-386300,Střítež,Rožnovská Bečva,49.4644976,18.0565234,200.76,,CHMI Open Data,Czech Republic
+0-203-1-479800,Krumvíř,Spálený potok,48.982627,16.9200865,98.76,,CHMI Open Data,Czech Republic
+0-203-1-154400,Štěchovice pod nádrží,Vltava,49.8462782,14.4207507,12990.04,,CHMI Open Data,Czech Republic
+0-203-1-161100,Zruč nad Sázavou,Ostrovský potok,49.7440893,15.1060087,77.7,,CHMI Open Data,Czech Republic
+0-203-1-301910,Dětmarovice,Olše,49.8848233,18.4873339,683.44,,CHMI Open Data,Czech Republic
+0-203-1-199000,Dobřichovice,Berounka,49.9279594,14.2810803,8722.18,,CHMI Open Data,Czech Republic
+0-203-1-378000,Lužná,Senice,49.2413862,18.0182153,82.17,,CHMI Open Data,Czech Republic
+0-203-1-360300,Javoříčko 12,Špraněk,49.6802203,16.9089245,34.75,,CHMI Open Data,Czech Republic
+0-203-1-414200,Bojkovice nad nádrží,Vasilsko,49.0578207,17.8466538,2.92,,CHMI Open Data,Czech Republic
+0-203-1-227000,Neštěmice,Labe,50.6661282,14.1012181,49649.14,,CHMI Open Data,Czech Republic
+0-203-1-264000,Město Albrechtice,Opavice,50.1633012,17.5723413,84.89,,CHMI Open Data,Czech Republic
+0-203-1-405100,Kašava-sv. Kateřina,Dřevnice,49.2988546,17.7876858,22.01,,CHMI Open Data,Czech Republic
+0-203-1-456510,Jedovnice-pila,Jedovnický potok,49.3333217,16.739878,28.21,,CHMI Open Data,Czech Republic
+0-203-1-304440,Prudnik,Prudník,50.3194282,17.5886509,148.85,,CHMI Open Data,Czech Republic
+0-203-1-104000,Brandýs nad Labem,Labe,50.1890508,14.6676299,13109.66,,CHMI Open Data,Czech Republic
+0-203-1-024100,Pastviny nádrž,Divoká Orlice,50.0750902,16.5601777,179.12,,CHMI Open Data,Czech Republic
+0-203-1-249000,Bernartice nad Odrou,Odra,49.6206605,17.9398617,560.93,,CHMI Open Data,Czech Republic
+0-203-1-464000,Jedlov,Jedlovský potok,49.3979947,15.4607388,20.86,,CHMI Open Data,Czech Republic
+0-203-1-153200,Zvíkov (pod ústím Otavy),Vltava,49.442077,14.195181,11985.49,,CHMI Open Data,Czech Republic
+0-203-1-060800,Valy,Labe,50.0333454,15.6185037,6399.86,,CHMI Open Data,Czech Republic
+0-203-1-286500,Frýdek-Místek most,Ostravice,49.679268,18.3471696,468.88,,CHMI Open Data,Czech Republic
+0-203-1-377000,Ústí,Vsetínská Bečva,49.3108721,18.0059153,293.1,,CHMI Open Data,Czech Republic
+0-203-1-313100,Glucholazy,Bělá,50.3162268,17.3802541,,,CHMI Open Data,Czech Republic
+0-203-1-263100,Heřmanovice,Opavice,50.1753978,17.4216252,15.08,,CHMI Open Data,Czech Republic
+0-203-1-482000,Břeclav-železniční most,Dyje,48.7486259,16.8881653,12352.43,,CHMI Open Data,Czech Republic
+0-203-1-301930,Závada-Petrovice u Karviné,Olše,49.8941113,18.4895136,705.15,,CHMI Open Data,Czech Republic
+0-203-1-099900,Mladá Boleslav-Rožátov,Jizera,50.4242016,14.8986347,1775.54,,CHMI Open Data,Czech Republic
+0-203-1-282100,Morávka,Morávka,49.5660316,18.5493659,41.9,,CHMI Open Data,Czech Republic
+0-203-1-017600,Bezděkov,Metuje,50.5067577,16.2139519,143.24,,CHMI Open Data,Czech Republic
+0-203-1-354100,Lesnice,Loučka,49.8831811,16.9409598,38.17,,CHMI Open Data,Czech Republic
+0-203-1-390100,Rokytnice,Bečva,49.4548327,17.3810605,1598.79,,CHMI Open Data,Czech Republic
+0-203-1-361100,Robinson,Rachava,49.703493,16.9940617,12.5,,CHMI Open Data,Czech Republic
+0-203-1-105500,Obříství-jez,Labe,50.3017045,14.4824828,13611.376,,CHMI Open Data,Czech Republic
+0-203-1-142000,Lčovice,Volyňka,49.1096887,13.8623728,242.45,,CHMI Open Data,Czech Republic
+0-203-1-275100,Mariánské Hory-Ostrava,Odra,49.8484474,18.2330963,3710.5,,CHMI Open Data,Czech Republic
+0-203-1-294300,Hať,Bečva,49.9437692,18.258254,18.25,,CHMI Open Data,Czech Republic
+0-203-1-024200,Pastviny pod nádrží,Divoká Orlice,50.0670195,16.5509016,181.06,,CHMI Open Data,Czech Republic
+0-203-1-134000,Týn nad Vltavou,Vltava,49.2308472,14.3861977,7825.08,,CHMI Open Data,Czech Republic
+0-203-1-146000,Horní Záblatí,Blanice,49.003343,13.933401,138.67,,CHMI Open Data,Czech Republic
+0-203-1-364500,Štarnov,Grygava,49.6719737,17.2680738,28.02,,CHMI Open Data,Czech Republic
+0-203-1-084000,Vilémov,Jizera,50.729215,15.4209723,146.44,,CHMI Open Data,Czech Republic
+0-203-1-456400,Býčí Skála I.,Křtinský potok,49.3051757,16.6941221,26.6,,CHMI Open Data,Czech Republic
+0-203-1-294500,Istebna,Olše,49.5718778,18.8925998,34.86,,CHMI Open Data,Czech Republic
+0-203-1-429500,Landštejn nad nádrží,Pstruhovec,49.0339799,15.2506348,6.2,,CHMI Open Data,Czech Republic
+0-203-1-163310,Soutice,Želivka,49.7309198,15.0550972,1186.37,,CHMI Open Data,Czech Republic
+0-203-1-210700,Bečov,Teplá,50.0936189,12.8416144,228.48,,CHMI Open Data,Czech Republic
+0-203-1-009000,Obří důl,Úpa,50.7114678,15.7246737,8.95,,CHMI Open Data,Czech Republic
+0-203-1-245300,Hřensko,Labe,50.8839672,14.2365,51262.24,,CHMI Open Data,Czech Republic
+0-203-1-267000,Karlov,Moravice,50.0234755,17.2802805,20.72,,CHMI Open Data,Czech Republic
+0-203-1-397200,Hamiltony,Velká Haná,49.310733,16.9680936,47.68,,CHMI Open Data,Czech Republic
+0-203-1-402900,Kroměříž-JV,Morava,49.3031162,17.399065,7012.53,,CHMI Open Data,Czech Republic
+0-203-1-060000,Pardubice,Labe,50.0429238,15.7720855,6020.47,,CHMI Open Data,Czech Republic
+0-203-1-161500,Pelhřimov,Bělá,49.4337963,15.225649,97.99,,CHMI Open Data,Czech Republic
+0-203-1-414100,Bojkovice nad nádrží,Kolelač,49.0545318,17.8564503,9.75,,CHMI Open Data,Czech Republic
+0-203-1-307200,Žulová-lávka,Stříbrný potok,50.3055454,17.0927463,21.54,,CHMI Open Data,Czech Republic
+0-203-1-437500,Grešlové Mýto,Jevišovka,48.9836507,15.8826785,112.7,,CHMI Open Data,Czech Republic
+0-203-1-225500,Proboštov,Bystřice,50.663436,13.8212757,23.4,,CHMI Open Data,Czech Republic
+0-203-1-202020,Libčice,Vltava,50.2100423,14.3559482,27320.99,,CHMI Open Data,Czech Republic
+0-203-1-297000,Dolní Lomná,Lomná,49.5499364,18.7182231,50.17,,CHMI Open Data,Czech Republic
+0-203-1-304410,Jarnoltowek,Zlatý potok,50.2859232,17.4280873,40.77,,CHMI Open Data,Czech Republic
+0-203-1-482500,Pohansko,Dyje,48.7280891,16.87987,12540.71,,CHMI Open Data,Czech Republic
+0-203-1-284200,Krásná,Mohelnice,49.5657692,18.4789297,18.55,,CHMI Open Data,Czech Republic
+0-203-1-300000,Řeka,Ropičanka,49.6314695,18.5738563,8.93,,CHMI Open Data,Czech Republic
+0-203-1-465100,Hubenov nad nádrží,Maršovský potok,49.4046176,15.472413,15.64,,CHMI Open Data,Czech Republic
+0-203-1-057000,Rosice,Žejbro,49.9143163,15.9475391,78.4,,CHMI Open Data,Czech Republic
+0-203-1-358000,Jevíčko,Malonínský potok,49.6267543,16.6706012,32.94,,CHMI Open Data,Czech Republic
+0-203-1-375000,Zděchov,Rovenský potok,49.2638851,18.077298,1.88,,CHMI Open Data,Czech Republic
+0-203-1-159310,VÚV-CH7 (levostranný přítok),Žebrákovský potok,49.7005465,15.3735359,0.46,,CHMI Open Data,Czech Republic
+0-203-1-180500,Hamry,Úhlava,49.237923,13.1580841,44.82,,CHMI Open Data,Czech Republic
+0-203-1-087960,Blatný rybník,Blatný potok,50.8082685,15.1708197,4.73,,CHMI Open Data,Czech Republic
+0-203-1-445100,Rožná,Nedvědička,49.4756675,16.2437005,57.27,,CHMI Open Data,Czech Republic
+0-203-1-253100,Petřvald,Lubina,49.708381,18.148651,164.79,,CHMI Open Data,Czech Republic
+0-203-1-067000,Kutná Hora,Vrchlice,49.9338812,15.2583439,102.67,,CHMI Open Data,Czech Republic
+0-203-1-300500,Cieszyn tok,Olše,49.746129,18.6298291,449.17,,CHMI Open Data,Czech Republic
+0-203-1-154630,Štěchovice přístav,Vltava,49.8527242,14.4031661,13305.84,,CHMI Open Data,Czech Republic
+0-203-1-196800,Králův Dvůr most,Litavka,49.9436451,14.0400435,566.74,,CHMI Open Data,Czech Republic
+0-203-1-019000,Náchod,Metuje,50.4048658,16.157745,401.08,,CHMI Open Data,Czech Republic
+0-203-1-433000,VD Vranov,Dyje,48.9040123,15.8215366,2212.96,,CHMI Open Data,Czech Republic
+0-203-1-408000,Slušovice pod Všeminkou,Dřevnice,49.245278,17.7984876,88.94,,CHMI Open Data,Czech Republic
+0-203-1-455095,Sloup,Žďárná,49.426964,16.7397019,12.19,,CHMI Open Data,Czech Republic
+0-203-1-223000,Chotějovice,Bílina,50.5764586,13.7998826,538.49,,CHMI Open Data,Czech Republic
+0-203-1-274600,Dolní Benešov,Mlýnská strouha,49.9235421,18.0646498,1.25,,CHMI Open Data,Czech Republic
+0-203-1-265320,Brumovice,Hořina,50.0194301,17.7731879,31.52,,CHMI Open Data,Czech Republic
+0-203-1-159320,VÚV-CH3,Žebrákovský potok,49.7031067,15.3818775,4.38,,CHMI Open Data,Czech Republic
+0-203-1-486500,Osvětimany,Hruškovice,49.0592231,17.2467979,9.57,,CHMI Open Data,Czech Republic
+0-203-1-266330,Karlov-Malá Morávka,Volárka,50.0253197,17.2565387,4.2,,CHMI Open Data,Czech Republic
+0-203-1-365000,Domašov nad Bystřicí,Bystřice,49.7339838,17.4424568,97.05,,CHMI Open Data,Czech Republic
+0-203-1-153500,Orlík pod nádrží,Vltava,49.607563,14.1807632,12105.96,,CHMI Open Data,Czech Republic
+0-203-1-202500,Chržín,Bakovský potok,50.2967236,14.2659376,403.61,,CHMI Open Data,Czech Republic
+0-203-1-470100,Dolní Bory-Olší,Oslava,49.4047494,16.0042776,215.71,,CHMI Open Data,Czech Republic
+0-203-1-461500,Ochoz,Říčka (Zlatý potok),49.2421126,16.7330411,46.8,,CHMI Open Data,Czech Republic
+0-203-1-268000,Malá Morávka,Bělokamenný potok,50.0347188,17.3098346,16.18,,CHMI Open Data,Czech Republic
+0-203-1-292200,Radvanice-Ostrava,Lučina,49.8166506,18.3311186,186.5,,CHMI Open Data,Czech Republic
+0-203-1-007000,Kuks,Labe,50.4004867,15.8915758,649.49,,CHMI Open Data,Czech Republic
+0-203-1-386100,Střítež nad Bečvou,Maretka,49.4546642,18.071995,12.07,,CHMI Open Data,Czech Republic
+0-203-1-247200,Spálov,Odra,49.7198565,17.7312058,315.47,,CHMI Open Data,Czech Republic
+0-203-1-303100,Jindřichov,Osoblaha,50.2522628,17.5321748,21.34,,CHMI Open Data,Czech Republic
+0-203-1-444000,Domanín,Bystřice,49.5428555,16.2051542,21.3,,CHMI Open Data,Czech Republic
+0-203-1-457500,Modřice,Svratka,49.1415885,16.6279964,0.0,,CHMI Open Data,Czech Republic
+0-203-1-452400,Prostřední Poříčí-Dolní Poříčí,Křetínka,49.5773264,16.4852117,98.54,,CHMI Open Data,Czech Republic
+0-203-1-005900,Les Království nádrž,Labe,50.4581355,15.7679942,530.57,,CHMI Open Data,Czech Republic
+0-203-1-246100,Kryštofovy Hamry,Přísečnice,50.4911535,13.1316874,46.53,,CHMI Open Data,Czech Republic
+0-203-1-272000,Leskovec nad Moravicí,Moravice,49.8925716,17.5788512,463.23,,CHMI Open Data,Czech Republic
+0-203-1-455200,Holštejn,Bílá voda,49.4032862,16.7794088,57.13,,CHMI Open Data,Czech Republic
+0-203-1-419000,Kunovice,Olšava,49.0465543,17.46208,516.0,,CHMI Open Data,Czech Republic
+0-203-1-294100,Bohumín-odběr Povodí Odry,Odra,49.9210744,18.3282505,4662.33,,CHMI Open Data,Czech Republic
+0-203-1-278000,Podolanky-Čeladná,Čeladenka,49.4737975,18.3441588,11.34,,CHMI Open Data,Czech Republic
+0-203-1-159400,VÚV-CH11,Žebrákovský potok,49.6976063,15.3827445,7.68,,CHMI Open Data,Czech Republic
+0-203-1-371000,Kychová,Tisový potok,49.2765885,18.1673217,0.68,,CHMI Open Data,Czech Republic
+0-203-1-374000,Kychová,Kychová,49.277331,18.1616565,4.16,,CHMI Open Data,Czech Republic
+0-203-1-002500,Kamenný Mlýn,Malé Labe,50.6573267,15.6278219,11.8,,CHMI Open Data,Czech Republic
+0-203-1-066200,Chedrbí,Klejnárka,49.8723276,15.3376329,63.99,,CHMI Open Data,Czech Republic
+0-203-1-486600,Osvětimany,Klimentský potok,49.0584007,17.2470838,7.64,,CHMI Open Data,Czech Republic
+0-203-1-261300,Karlovice,Opava,50.1091572,17.4381773,168.0,,CHMI Open Data,Czech Republic
+0-203-1-301950,Zebrzydowice,Petrůvka,49.8800974,18.6133064,113.78,,CHMI Open Data,Czech Republic
+0-203-1-451000,Moravská Chrastová,Svitava,49.6206627,16.5247721,0.0,,CHMI Open Data,Czech Republic
+0-203-1-265310,Brumovice,Čižina,50.0197085,17.7738672,70.87,,CHMI Open Data,Czech Republic
+0-203-1-196600,Hředle,Stroupínský potok,49.9036567,13.9060131,90.41,,CHMI Open Data,Czech Republic
+0-203-1-170000,Tachov,Mže,49.7981538,12.6209766,130.27,,CHMI Open Data,Czech Republic
+0-203-1-197000,Králův Dvůr,Litavka,49.9478744,14.0468,619.5,,CHMI Open Data,Czech Republic
+0-203-1-452500,Prostřední Poříčí,Křetínka,49.5703953,16.4980395,102.79,,CHMI Open Data,Czech Republic
+0-203-1-480000,Bořetice,Trkmanka,48.9175898,16.8540095,285.75,,CHMI Open Data,Czech Republic
+0-203-1-201100,Praha-Troja,Vltava,50.11146,14.4265363,27117.5,,CHMI Open Data,Czech Republic
+0-203-1-204200,Dolní Beřkovice-jez,Labe,50.399743,14.4480825,42060.785,,CHMI Open Data,Czech Republic
+0-203-1-295000,Bukovec,Olše,49.5608051,18.8392699,55.92,,CHMI Open Data,Czech Republic
+0-203-1-151200,Topělec,Otava,49.3567612,14.1510169,2969.18,,CHMI Open Data,Czech Republic
+0-203-1-049100,Seč nádrž,Chrudimka,49.8364507,15.6528495,216.53,,CHMI Open Data,Czech Republic
+0-203-1-280000,Morávka,Morávka,49.5323979,18.5502899,11.19,,CHMI Open Data,Czech Republic
+0-203-1-008000,Modrý důl,Modrý potok,50.7127178,15.7110069,2.68,,CHMI Open Data,Czech Republic
+0-203-1-296100,Horní Lomná,Lomná,49.5360727,18.6421805,19.17,,CHMI Open Data,Czech Republic
+0-203-1-304000,Bohušov,Osoblaha,50.2438255,17.7134013,137.8,,CHMI Open Data,Czech Republic
+0-203-1-217000,Holedeč,Blšanka,50.2774752,13.5621117,373.38,,CHMI Open Data,Czech Republic
+0-203-1-178000,Bělá nad Radbuzou,Radbuza,49.589969,12.7200699,81.27,,CHMI Open Data,Czech Republic
+0-203-1-456300,Josefov vývěr,Křtinský potok,49.304444,16.6973888,26.45,,CHMI Open Data,Czech Republic
+0-203-1-479000,Dolní Věstonice,Dyje,48.8879913,16.6511344,11741.62,,CHMI Open Data,Czech Republic
+0-203-1-282200,Slavíč,Slavíč,49.5786469,18.5921377,8.48,,CHMI Open Data,Czech Republic
+0-203-1-271000,Bruntál,Černý potok,49.9795444,17.4656583,79.35,,CHMI Open Data,Czech Republic
+0-203-1-240200,Prostřední Žleb,Labe,50.8430542,14.2191489,51010.22,,CHMI Open Data,Czech Republic
+0-203-1-258070,Mnichov,Suchý potok,50.1531479,17.3591283,2.05,,CHMI Open Data,Czech Republic
+0-203-1-211000,Cihelny,Teplá,50.1699,12.8453204,262.96,,CHMI Open Data,Czech Republic
+0-203-1-200800,Praha-Staroměstské mlýny,Vltava,50.0853189,14.4129993,26955.39,,CHMI Open Data,Czech Republic
+0-203-1-167000,Poříčí nad Sázavou,Sázava,49.8402494,14.6742214,4002.71,,CHMI Open Data,Czech Republic
+0-203-1-307900,Velká Kraš,Černý potok,50.3521622,17.170046,58.7,,CHMI Open Data,Czech Republic
+0-203-1-456600,Josefov,Křtinský potok,49.3063363,16.6795687,65.95,,CHMI Open Data,Czech Republic
+0-203-1-153920,Slapy pod nádrží,Vltava,49.8238232,14.4351215,12956.79,,CHMI Open Data,Czech Republic
+0-203-1-295100,Písek,Olše,49.5581919,18.8173734,60.87,,CHMI Open Data,Czech Republic
+0-203-1-181000,Nýrsko,Úhlava,49.2896359,13.1391136,101.63,,CHMI Open Data,Czech Republic
+0-203-1-108100,Lipno,Vltava,48.633512,14.2373726,949.282,,CHMI Open Data,Czech Republic
+0-203-1-290200,Žabeň,Olešná,49.7063411,18.3025548,55.5,,CHMI Open Data,Czech Republic
+0-203-1-303030,Bojanów,Psina,50.030544,18.1542332,519.8,,CHMI Open Data,Czech Republic
+0-203-1-202000,Praha-Ruzyně,Litovický potok,50.0807555,14.3071524,39.01,,CHMI Open Data,Czech Republic
+0-203-1-073000,Libněves-Dobšice,Cidlina,50.1373733,15.2670408,1140.63,,CHMI Open Data,Czech Republic
+0-203-1-185000,Plzeň-Pražský most,Radbuza,49.7460144,13.3844707,2178.74,,CHMI Open Data,Czech Republic
+0-203-1-361200,Mladeč,Rachavka,49.7053414,17.0190636,14.0,,CHMI Open Data,Czech Republic
+0-203-1-416000,Řetechov-Pradlisko,Ludkovický potok,49.1444626,17.7338378,8.46,,CHMI Open Data,Czech Republic
+0-203-1-485000,Koryčany-obec,Kyjovka,49.1133782,17.1631244,35.96,,CHMI Open Data,Czech Republic
+0-203-1-413500,Babice,Vrbka,49.1294922,17.4820848,26.27,,CHMI Open Data,Czech Republic
+0-203-1-202030,Miřejovice,Vltava,50.2801535,14.3151128,27611.42,,CHMI Open Data,Czech Republic
+0-203-1-208000,Svatava,Svatava,50.1932978,12.6214832,274.9,,CHMI Open Data,Czech Republic
+0-203-1-304450,Raclawice,Osoblaha,50.3153937,17.7890899,,,CHMI Open Data,Czech Republic
+0-203-1-154300,Štěchovice nádrž,Vltava,49.8458181,14.4216082,12982.29,,CHMI Open Data,Czech Republic
+0-203-1-477500,Ivančice-Nové Bránice,Jihlava,49.0824741,16.410781,2681.21,,CHMI Open Data,Czech Republic
+0-203-1-412050,Zlín svod,Dřevnice - svod,49.2246145,17.7078435,0.0,,CHMI Open Data,Czech Republic
+0-203-1-428000,Dačice,Moravská Dyje,49.0780752,15.438806,308.92,,CHMI Open Data,Czech Republic
+0-203-1-468100,Brtnice-Nábřeží,Brtnička,49.3040094,15.678372,98.57,,CHMI Open Data,Czech Republic
+0-203-1-391000,Senice,Blata,49.6232865,17.08585,20.39,,CHMI Open Data,Czech Republic
+0-203-1-456100,Křtiny,Křtinský potok,49.2951635,16.737499,16.91,,CHMI Open Data,Czech Republic
+0-203-1-456520,Josefov-Býčí skála,Jedovnický potok,49.3082355,16.6915136,38.31,,CHMI Open Data,Czech Republic
+0-203-1-055000,Předhradí,Krounka,49.8342595,16.0435118,65.1,,CHMI Open Data,Czech Republic
