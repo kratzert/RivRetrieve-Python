@@ -1,5 +1,6 @@
 """Fetcher for Polish river gauge data from IMGW."""
 
+import io
 import logging
 import os
 import re
@@ -8,7 +9,6 @@ import zipfile
 from datetime import datetime
 from pathlib import Path
 from typing import List, Optional
-import io
 
 import pandas as pd
 import requests
@@ -48,10 +48,10 @@ class PolandFetcher(base.RiverDataFetcher):
                 "Kod Hydro"  # Seems to be an alternativ station id.
             ]
             df.columns = col_names
-            
+
             # Strip potential whitespace from gauge IDs
             df[constants.GAUGE_ID] = df[constants.GAUGE_ID].str.strip()
-            
+
             return df.set_index(constants.GAUGE_ID)
 
         except requests.exceptions.RequestException as e:
