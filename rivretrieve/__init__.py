@@ -5,6 +5,7 @@ from .base import RiverDataFetcher
 from .brazil import BrazilFetcher
 from .canada import CanadaFetcher
 from .chile import ChileFetcher
+from .czech import CzechFetcher
 from .france import FranceFetcher
 from .japan import JapanFetcher
 from .poland import PolandFetcher
