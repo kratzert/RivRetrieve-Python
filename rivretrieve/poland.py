@@ -29,7 +29,7 @@ class PolandFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_metadata():
-        """Downloads the metadata CSV file, reads it into a pandas DataFrame, and saves it to CSV."""
+        """Downloads the metadata CSV file and converts it into a pandas DataFrame."""
         logger.info(f"Downloading metadata from {PolandFetcher.METADATA_URL}")
         try:
             r = utils.requests_retry_session().get(PolandFetcher.METADATA_URL)
@@ -63,15 +63,7 @@ class PolandFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_cached_metadata() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Polish gauge IDs and metadata."""
-        if not PolandFetcher.METADATA_CSV.exists():
-            logger.info("Metadata cache not found, downloading...")
-            PolandFetcher.download_and_cache_metadata()
-
-        if not PolandFetcher.METADATA_CSV.exists():
-            logger.error("Metadata cache not found after download attempt.")
-            return pd.DataFrame()
-
+        """Loads cache metadata."""
         return utils.load_cached_metadata_csv("poland")
 
     @staticmethod
