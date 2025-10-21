@@ -19,3 +19,4 @@ select = [
 [tool.ruff.lint.per-file-ignores]
 "rivretrieve/__init__.py" = ["F401"]
 "rivretrieve/chile.py" = ["E501"]  # The url is too long but can't be splitted.
+"docs/conf.py" = ["E402"]  # rivretrieve can't be imported before path is added.

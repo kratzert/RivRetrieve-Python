@@ -21,18 +21,30 @@ class RiverDataFetcher(abc.ABC):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-        """Fetches the time series data for the given variable and date range.
+        """Fetches and parses time series data for a specific gauge and variable.
+
+        This method retrieves the requested data from the provider's API or data source,
+        parses it, and returns it in a standardized pandas DataFrame format.
 
         Args:
             gauge_id: The site-specific identifier for the gauge.
-            variable: The variable to fetch, should be one of the values from constants.py
-                (e.g., constants.DISCHARGE, constants.STAGE).
-            start_date: Optional start date in 'YYYY-MM-DD' format.
-            end_date: Optional end date in 'YYYY-MM-DD' format.
+            variable: The variable to fetch. Must be one of the strings listed
+                in the fetcher's ``get_available_variables()`` output.
+                These are typically defined in ``rivretrieve.constants``.
+            start_date: Optional start date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched from the earliest available date.
+            end_date: Optional end date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched up to the latest available date.
 
         Returns:
-            A pandas DataFrame indexed by time (constants.TIME_INDEX) with a column
-            for the requested variable (e.g., constants.DISCHARGE).
+            pd.DataFrame: A pandas DataFrame indexed by datetime objects (``constants.TIME_INDEX``)
+            with a single column named after the requested ``variable``. The DataFrame
+            will be empty if no data is found for the given parameters.
+
+        Raises:
+            ValueError: If the requested ``variable`` is not supported by this fetcher.
+            requests.exceptions.RequestException: If a network error occurs during data download.
+            Exception: For other unexpected errors during data fetching or parsing.
         """
         pass
 
@@ -43,15 +55,20 @@ class RiverDataFetcher(abc.ABC):
         pass
 
     def get_metadata(self) -> pd.DataFrame:
-        """Fetches site metadata for the given site.
+        """Fetches site metadata from the data provider.
+
+        .. warning:: This method is not implemented for all fetchers.
+                     Check the specific fetcher's documentation.
 
         Returns:
-            A pandas DataFrame indexed by gauge_id, containing site metadata.
-            Returns an empty DataFrame if metadata fetching is not supported for this fetcher.
+            pd.DataFrame: A DataFrame indexed by gauge_id, containing site metadata.
+
+        Raises:
+            NotImplementedError: If the method is not implemented for the specific fetcher.
         """
-        # Default implementation returns an empty DataFrame.
-        # Subclasses should override this method if metadata is available.
-        raise NotImplementedError
+        # Default implementation raises NotImplementedError.
+        # Subclasses should override this method if live metadata fetching is available.
+        raise NotImplementedError(f"{self.__class__.__name__} does not support fetching live metadata.")
 
     @staticmethod
     @abc.abstractmethod

@@ -14,13 +14,27 @@ logger = logging.getLogger(__name__)
 
 
 class AustraliaFetcher(base.RiverDataFetcher):
-    """Fetches river gauge data from Australia's BoM."""
+    """Fetches river gauge data from Australia's Bureau of Meteorology (BoM).
+
+    Data Source: Bureau of Meteorology Water Data Online (http://www.bom.gov.au/waterdata/)
+
+    Supported Variables:
+        - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
+        - ``constants.STAGE_DAILY_MEAN`` (m)
+    """
 
     BOM_URL = "http://www.bom.gov.au/waterdata/services"
 
     @staticmethod
     def get_cached_metadata() -> pd.DataFrame:
-        """Retrieves a DataFrame of available Australian gauge IDs and metadata."""
+        """Retrieves a DataFrame of available Australian gauge IDs and metadata.
+
+        This method loads the metadata from a cached CSV file located in
+        the ``rivretrieve/cached_site_data/`` directory.
+
+        Returns:
+            pd.DataFrame: A DataFrame indexed by gauge_id, containing site metadata.
+        """
         return utils.load_cached_metadata_csv("australia")
 
     @staticmethod
@@ -160,7 +174,31 @@ class AustraliaFetcher(base.RiverDataFetcher):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-        """Fetches and parses Australian river gauge data."""
+        """Fetches and parses time series data for a specific gauge and variable.
+
+        This method retrieves the requested data from the provider's API or data source,
+        parses it, and returns it in a standardized pandas DataFrame format.
+
+        Args:
+            gauge_id: The site-specific identifier for the gauge.
+            variable: The variable to fetch. Must be one of the strings listed
+                in the fetcher's ``get_available_variables()`` output.
+                These are typically defined in ``rivretrieve.constants``.
+            start_date: Optional start date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched from the earliest available date.
+            end_date: Optional end date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched up to the latest available date.
+
+        Returns:
+            pd.DataFrame: A pandas DataFrame indexed by datetime objects (``constants.TIME_INDEX``)
+            with a single column named after the requested ``variable``. The DataFrame
+            will be empty if no data is found for the given parameters.
+
+        Raises:
+            ValueError: If the requested ``variable`` is not supported by this fetcher.
+            requests.exceptions.RequestException: If a network error occurs during data download.
+            Exception: For other unexpected errors during data fetching or parsing.
+        """
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
         if variable not in self.get_available_variables():
