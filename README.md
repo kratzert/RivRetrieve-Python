@@ -7,6 +7,8 @@ A Python package for facilitating and unifying access to global streamflow data.
 
 Welcome to RivRetrieve-Python! We're actively developing this library to make global streamflow data more accessible. As an early-stage project, it's not yet stable, and we appreciate your understanding as things evolve. Contributions and feedback are welcome! Please check out the active development under [Issues](https://github.com/kratzert/RivRetrieve-Python/issues) or start posting under [Discussions](https://github.com/kratzert/RivRetrieve-Python/discussions).
 
+- Documentation: [rivretrieve-python.readthedocs.io](https://rivretrieve-python.readthedocs.io/en/latest/) (Work in Progress)
+
 ## Background
 
 This package originated as a Python translation of the [RivRetrieve R package](https://github.com/Ryan-Riggs/RivRetrieve). The initial translation was performed by Gemini, with a few manual adjustments for API changes.
