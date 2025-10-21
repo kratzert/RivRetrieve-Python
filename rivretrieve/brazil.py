@@ -305,7 +305,8 @@ class BrazilFetcher(base.RiverDataFetcher):
                             continue
 
                 month_df = pd.DataFrame(list(day_values.items()), columns=[constants.TIME_INDEX, variable])
-                all_dfs.append(month_df)
+                if not month_df.empty:
+                    all_dfs.append(month_df)
 
             if not all_dfs:
                 return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
@@ -361,6 +362,10 @@ class BrazilFetcher(base.RiverDataFetcher):
         try:
             raw_data = self._download_data(gauge_id, variable, start_date, end_date)
             df = self._parse_data(gauge_id, raw_data, variable)
+
+            if df.empty:
+                return df
+
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
             df = df[(df.index >= start_date_dt) & (df.index <= end_date_dt)]

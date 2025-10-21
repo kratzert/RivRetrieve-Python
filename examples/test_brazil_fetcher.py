@@ -7,11 +7,11 @@ from rivretrieve import BrazilFetcher, constants
 logging.basicConfig(level=logging.INFO)
 
 gauge_ids = [
-    "15400000",
+    "14515000",
 ]
-variable = constants.STAGE_DAILY_MEAN
-start_date = "2023-01-01"
-end_date = "2024-12-31"
+variable = constants.DISCHARGE_DAILY_MEAN
+start_date = "1980-01-01"
+end_date = None
 
 plt.figure(figsize=(12, 6))
 
