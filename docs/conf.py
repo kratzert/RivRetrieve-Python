@@ -36,7 +36,6 @@ autodoc_default_options = {
 }
 
 
-
 from rivretrieve import constants
 
 
