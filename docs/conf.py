@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 
 sys.path.insert(0, os.path.abspath("../"))
@@ -34,7 +35,8 @@ autodoc_default_options = {
     "show-inheritance": True,
 }
 
-import re
+
+
 from rivretrieve import constants
 
 
