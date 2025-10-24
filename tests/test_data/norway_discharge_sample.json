@@ -1,0 +1,47 @@
+{
+    "currentLink": "https://hydapi.nve.no/api/v1/Observations?StationId=100.1.0&Parameter=1001&ResolutionTime=1440&ReferenceTime=2024-01-01%2F2024-01-05",
+    "apiVersion": "1.0",
+    "license": "https://data.norge.no/nlod/en",
+    "createdAt": "2025-10-24T13:38:36.7720575Z",
+    "queryTime": "00:00:00.0067017",
+    "itemCount": 1,
+    "data": [
+        {
+            "stationId": "100.1.0",
+            "stationName": "Valld\u00f8la v/Alstad",
+            "parameter": 1001,
+            "parameterName": "Vannf\u00f8ring",
+            "parameterNameEng": "Discharge",
+            "serieVersionNo": 1,
+            "method": "Mean",
+            "unit": "m\u00b3/s",
+            "observationCount": 4,
+            "observations": [
+                {
+                    "time": "2024-01-01T11:00:00Z",
+                    "value": 2.291431,
+                    "correction": 0,
+                    "quality": 3
+                },
+                {
+                    "time": "2024-01-02T11:00:00Z",
+                    "value": 1.937256,
+                    "correction": 0,
+                    "quality": 3
+                },
+                {
+                    "time": "2024-01-03T11:00:00Z",
+                    "value": 1.772134,
+                    "correction": 2,
+                    "quality": 3
+                },
+                {
+                    "time": "2024-01-04T11:00:00Z",
+                    "value": 1.675695,
+                    "correction": 2,
+                    "quality": 3
+                }
+            ]
+        }
+    ]
+}
