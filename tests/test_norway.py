@@ -1,4 +1,5 @@
 import json
+import os
 import unittest
 from unittest.mock import patch
 
@@ -27,25 +28,13 @@ class TestNorwayFetcher(unittest.TestCase):
 
         if "Stations" in args[0]:
             if "Active=0" in args[0]:
-                with open(
-                    "/usr/local/google/home/kratzert/Projects/RivRetrieve/RivRetrieve-Python/tests/test_data/norway_metadata_active_0.json",
-                    "r",
-                ) as f:
-                    data = json.load(f)
+                data = _load_sample_json("norway_metadata_active_0.json")
                 return MockResponse({"data": [data]}, 200)
             elif "Active=1" in args[0]:
-                with open(
-                    "/usr/local/google/home/kratzert/Projects/RivRetrieve/RivRetrieve-Python/tests/test_data/norway_metadata_active_1.json",
-                    "r",
-                ) as f:
-                    data = json.load(f)
+                data = _load_sample_json("norway_metadata_active_1.json")
                 return MockResponse({"data": [data]}, 200)
         elif "Observations" in args[0]:
-            with open(
-                "/usr/local/google/home/kratzert/Projects/RivRetrieve/RivRetrieve-Python/tests/test_data/norway_discharge_sample.json",
-                "r",
-            ) as f:
-                data = json.load(f)
+            data = _load_sample_json("norway_discharge_sample.json")
             return MockResponse(data, 200)
 
         return MockResponse(None, 404)
@@ -266,6 +255,12 @@ class TestNorwayFetcher(unittest.TestCase):
 
         result_df = self.fetcher.get_data(gauge_id, variable, start_date, end_date)
         pd.testing.assert_frame_equal(result_df, expected_df, check_dtype=False)
+
+
+def _load_sample_json(filename):
+    test_data_dir = os.path.join(os.path.dirname(__file__), "test_data")
+    with open(os.path.join(test_data_dir, filename), "r") as f:
+        return json.load(f)
 
 
 if __name__ == "__main__":
