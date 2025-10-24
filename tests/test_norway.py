@@ -139,6 +139,12 @@ class TestNorwayFetcher(unittest.TestCase):
             "culH50": [None, 80.2505],
             "utmEast_Z33": [311128, 298887],
             "utmNorth_Z33": [6568077, 6559841],
+            constants.STAGE_DAILY_MEAN: [True, True],
+            constants.STAGE_INSTANT: [False, True],
+            constants.DISCHARGE_DAILY_MEAN: [False, False],
+            constants.DISCHARGE_INSTANT: [False, False],
+            constants.WATER_TEMPERATURE_DAILY_MEAN: [False, False],
+            constants.WATER_TEMPERATURE_INSTANT: [False, False],
             "seriesList": [
                 [
                     {

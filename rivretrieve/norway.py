@@ -101,7 +101,6 @@ _NUMERIC_METADATA_COLUMNS = [
 
 
 class NorwayFetcher(base.RiverDataFetcher):
-
     """Fetches river gauge data from the Norwegian Water Resources and Energy Directorate (NVE).
 
     Data Source: NVE HydAPI (https://hydapi.nve.no/)
@@ -119,21 +118,28 @@ class NorwayFetcher(base.RiverDataFetcher):
         - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
         - ``constants.STAGE_DAILY_MEAN`` (m)
         - ``constants.WATER_TEMPERATURE_DAILY_MEAN`` (°C)
+        - ``constants.DISCHARGE_INSTANT`` (m³/s)
+        - ``constants.STAGE_INSTANT`` (m)
+        - ``constants.WATER_TEMPERATURE_INSTANTANEOUS`` (°C)
     """
 
     BASE_URL = "https://hydapi.nve.no/api/v1/"
     PARAMETERS = {
-        constants.STAGE_DAILY_MEAN: 1000,
-        constants.DISCHARGE_DAILY_MEAN: 1001,
-        constants.WATER_TEMPERATURE_DAILY_MEAN: 1003,
+        constants.STAGE_DAILY_MEAN: {"id": 1000, "resolution": 1440},
+        constants.DISCHARGE_DAILY_MEAN: {"id": 1001, "resolution": 1440},
+        constants.WATER_TEMPERATURE_DAILY_MEAN: {"id": 1003, "resolution": 1440},
+        constants.STAGE_INSTANT: {"id": 1000, "resolution": 60},
+        constants.DISCHARGE_INSTANT: {"id": 1001, "resolution": 60},
+        constants.WATER_TEMPERATURE_INSTANT: {"id": 1003, "resolution": 60},
     }
-    TIME_RESOLUTION_MINUTES = 1440  # Daily
 
     def __init__(self, api_key: Optional[str] = None):
         super().__init__()
         self.api_key = api_key or API_KEY
         if not self.api_key:
-            logger.error("NVE API Key not provided. Please set NVE_API_KEY in your .env file or pass it to the constructor.")
+            logger.error(
+                "NVE API Key not provided. Please set NVE_API_KEY in your .env file or pass it to the constructor."
+            )
         self.headers = {"Accept": "application/json", "X-API-Key": self.api_key}
 
     @staticmethod
@@ -171,6 +177,30 @@ class NorwayFetcher(base.RiverDataFetcher):
         except Exception as e:
             logger.error(f"Error processing station metadata (Active={active_flag}): {e}")
             return pd.DataFrame()
+
+    def _parse_series_list(self, series_list: Optional[List[Dict[str, Any]]]) -> Dict[str, bool]:
+        """Parses the seriesList to determine available variables and resolutions."""
+        available = {var: False for var in self.PARAMETERS}
+        if not series_list or not isinstance(series_list, list):
+            return available
+
+        for series in series_list:
+            if not isinstance(series, dict):
+                continue
+            param_id = series.get("parameter")
+            resolutions = series.get("resolutionList", [])
+            if not isinstance(resolutions, list):
+                continue
+
+            for res_info in resolutions:
+                if not isinstance(res_info, dict):
+                    continue
+                res_time = res_info.get("resTime")
+
+                for var_name, var_params in self.PARAMETERS.items():
+                    if var_params["id"] == param_id and var_params["resolution"] == res_time:
+                        available[var_name] = True
+        return available
 
     def get_metadata(self) -> pd.DataFrame:
         """Download and process metadata for all Norwegian hydrometric stations."""
@@ -216,9 +246,20 @@ class NorwayFetcher(base.RiverDataFetcher):
             if col in metadata.columns:
                 metadata[col] = pd.to_numeric(metadata[col], errors="coerce")
 
+        # Parse seriesList to add variable availability columns
+        availability_cols = list(self.PARAMETERS.keys())
+        for col in availability_cols:
+            metadata[col] = False
+
+        if "seriesList" in metadata.columns:
+            for index, row in metadata.iterrows():
+                available_vars = self._parse_series_list(row["seriesList"])
+                for var, is_available in available_vars.items():
+                    metadata.loc[index, var] = is_available
+
         return metadata
 
-    def _get_parameter_id(self, variable: str) -> int:
+    def _get_api_params(self, variable: str) -> Dict[str, int]:
         if variable in self.PARAMETERS:
             return self.PARAMETERS[variable]
         else:
@@ -230,12 +271,12 @@ class NorwayFetcher(base.RiverDataFetcher):
             logger.error("NVE API Key not available.")
             return []
 
-        parameter_id = self._get_parameter_id(variable)
+        api_params = self._get_api_params(variable)
 
         params = {
             "StationId": gauge_id,
-            "Parameter": parameter_id,
-            "ResolutionTime": self.TIME_RESOLUTION_MINUTES,
+            "Parameter": api_params["id"],
+            "ResolutionTime": api_params["resolution"],
             "ReferenceTime": f"{start_date}/{end_date}",
         }
         s = utils.requests_retry_session()
@@ -250,7 +291,7 @@ class NorwayFetcher(base.RiverDataFetcher):
                     obs_list.append({**meta, **obs})
             return obs_list
         except requests.exceptions.RequestException as e:
-            logger.error(f"NVE API request failed for station {gauge_id}, parameter {parameter_id}: {e}")
+            logger.error(f"NVE API request failed for station {gauge_id}, parameter {api_params['id']}: {e}")
             return []
         except Exception as e:
             logger.error(f"Error processing NVE API response for station {gauge_id}: {e}")
@@ -267,8 +308,12 @@ class NorwayFetcher(base.RiverDataFetcher):
                 return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
             df = df.rename(columns={"time": constants.TIME_INDEX, "value": variable})
-            df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX], utc=True).dt.date
-            df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX])
+            df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX], utc=True)
+            # Only convert to date if it's a daily variable
+            if self._get_api_params(variable)["resolution"] == 1440:
+                df[constants.TIME_INDEX] = df[constants.TIME_INDEX].dt.date
+                df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX])
+
             df[variable] = pd.to_numeric(df[variable], errors="coerce")
 
             # Unit conversion: NVE API seems to provide data in standard units (m3/s, m, degC)
