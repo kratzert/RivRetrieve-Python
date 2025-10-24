@@ -89,10 +89,19 @@ class NorwayFetcher(base.RiverDataFetcher):
             return pd.DataFrame(columns=[constants.GAUGE_ID]).set_index(constants.GAUGE_ID)
 
         # Combine active and inactive stations
-        metadata = pd.concat(
-            [self._get_station_metadata(0), self._get_station_metadata(1)],
-            ignore_index=True,
-        )
+        df_active = self._get_station_metadata(1)
+        df_inactive = self._get_station_metadata(0)
+
+        metadata_dfs = []
+        if not df_active.empty:
+            metadata_dfs.append(df_active)
+        if not df_inactive.empty:
+            metadata_dfs.append(df_inactive)
+
+        if not metadata_dfs:
+            return pd.DataFrame(columns=[constants.GAUGE_ID]).set_index(constants.GAUGE_ID)
+
+        metadata = pd.concat(metadata_dfs, ignore_index=True)
         if metadata.empty:
             return pd.DataFrame(columns=[constants.GAUGE_ID]).set_index(constants.GAUGE_ID)
 
@@ -104,7 +113,7 @@ class NorwayFetcher(base.RiverDataFetcher):
             "latitude": constants.LATITUDE,
             "longitude": constants.LONGITUDE,
             "masl": constants.ALTITUDE,
-            "catchmentArea": constants.AREA,
+            "drainageBasinArea": constants.AREA,
             "riverName": constants.RIVER,
         }
         metadata = metadata.rename(columns=rename_map)
@@ -112,6 +121,90 @@ class NorwayFetcher(base.RiverDataFetcher):
         # NVE stationId is a string, e.g., "12.210.0"
         metadata[constants.GAUGE_ID] = metadata[constants.GAUGE_ID].astype(str)
         metadata = metadata.set_index(constants.GAUGE_ID)
+
+        numeric_cols = [
+            constants.LATITUDE,
+            constants.LONGITUDE,
+            constants.ALTITUDE,
+            constants.AREA,
+            "drainageBasinAreaNorway",
+            "gradient1085",
+            "gradientRiver",
+            "heightMinimum",
+            "heightHypso10",
+            "heightHypso20",
+            "heightHypso30",
+            "heightHypso40",
+            "heightHypso50",
+            "heightHypso60",
+            "heightHypso70",
+            "heightHypso80",
+            "heightHypso90",
+            "heightMaximum",
+            "lengthKmBasin",
+            "lengthKmRiver",
+            "percentAgricul",
+            "percentBog",
+            "percentEffBog",
+            "percentEffLake",
+            "percentForest",
+            "percentGlacier",
+            "percentLake",
+            "percentMountain",
+            "percentUrban",
+            "annualRunoff",
+            "specificDischarge",
+            "regulationArea",
+            "areaReservoirs",
+            "volumeReservoirs",
+            "regulationPartReservoirs",
+            "transferAreaIn",
+            "transferAreaOut",
+            "reservoirAreaIn",
+            "reservoirAreaOut",
+            "reservoirVolumeIn",
+            "reservoirVolumeOut",
+            "remainingArea",
+            "numberReservoirs",
+            "firstYearRegulation",
+            "qNumberOfYears",
+            "qStartYear",
+            "qEndYear",
+            "hm",
+            "h5",
+            "h10",
+            "h20",
+            "h50",
+            "qm",
+            "q5",
+            "q10",
+            "q20",
+            "q50",
+            "culHm",
+            "culH5",
+            "culH10",
+            "culH20",
+            "culH50",
+            "culQm",
+            "culQ5",
+            "culQ10",
+            "culQ20",
+            "culQ50",
+            "utmEast_Z33",
+            "utmNorth_Z33",
+            "utmEastGravi",
+            "utmZoneGravi",
+            "utmNorthGravi",
+            "utmEastInlet",
+            "utmNorthInlet",
+            "utmEastOutlet",
+            "utmNorthOutlet",
+            "utmZoneInlet",
+            "utmZoneOutlet"
+        ]
+        for col in numeric_cols:
+            if col in metadata.columns:
+                metadata[col] = pd.to_numeric(metadata[col], errors="coerce")
 
         return metadata
 
