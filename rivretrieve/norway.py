@@ -101,11 +101,19 @@ _NUMERIC_METADATA_COLUMNS = [
 
 
 class NorwayFetcher(base.RiverDataFetcher):
+
     """Fetches river gauge data from the Norwegian Water Resources and Energy Directorate (NVE).
 
     Data Source: NVE HydAPI (https://hydapi.nve.no/)
-    Requires an API key, which can be set in a ``.env`` file
-    in the ``rivretrieve`` directory. Key in ``.env``: ``NVE_API_KEY``
+    Requires an API key. This can be provided directly to the constructor via the ``api_key``
+    argument, or by setting the ``NVE_API_KEY`` environment variable in a ``.env`` file
+    located in the ``rivretrieve`` directory. If an ``api_key`` is passed to the
+    constructor, it takes precedence over the environment variable.
+
+    Args:
+        api_key (Optional[str]): The API key for the NVE HydAPI. If None,
+            the fetcher will attempt to load it from the ``NVE_API_KEY``
+            environment variable.
 
     Supported Variables:
         - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
@@ -114,7 +122,6 @@ class NorwayFetcher(base.RiverDataFetcher):
     """
 
     BASE_URL = "https://hydapi.nve.no/api/v1/"
-    HEADERS = {"Accept": "application/json", "X-API-Key": API_KEY}
     PARAMETERS = {
         constants.STAGE_DAILY_MEAN: 1000,
         constants.DISCHARGE_DAILY_MEAN: 1001,
@@ -122,10 +129,12 @@ class NorwayFetcher(base.RiverDataFetcher):
     }
     TIME_RESOLUTION_MINUTES = 1440  # Daily
 
-    def __init__(self):
+    def __init__(self, api_key: Optional[str] = None):
         super().__init__()
-        if not API_KEY:
-            logger.error("NVE API Key not provided. Please set NVE_API_KEY in your .env file.")
+        self.api_key = api_key or API_KEY
+        if not self.api_key:
+            logger.error("NVE API Key not provided. Please set NVE_API_KEY in your .env file or pass it to the constructor.")
+        self.headers = {"Accept": "application/json", "X-API-Key": self.api_key}
 
     @staticmethod
     def get_cached_metadata() -> pd.DataFrame:
@@ -145,14 +154,14 @@ class NorwayFetcher(base.RiverDataFetcher):
 
     def _get_station_metadata(self, active_flag: int) -> pd.DataFrame:
         """Retrieve metadata for active/inactive hydrometric stations."""
-        if not API_KEY:
+        if not self.api_key:
             logger.error("NVE API Key not available.")
             return pd.DataFrame()
 
         url = f"{self.BASE_URL}Stations?Active={active_flag}"
         s = utils.requests_retry_session()
         try:
-            response = s.get(url, headers=self.HEADERS)
+            response = s.get(url, headers=self.headers)
             response.raise_for_status()
             data = response.json()["data"]
             return pd.DataFrame(data)
@@ -165,7 +174,7 @@ class NorwayFetcher(base.RiverDataFetcher):
 
     def get_metadata(self) -> pd.DataFrame:
         """Download and process metadata for all Norwegian hydrometric stations."""
-        if not API_KEY:
+        if not self.api_key:
             logger.error("NVE API Key not set.")
             return pd.DataFrame(columns=[constants.GAUGE_ID]).set_index(constants.GAUGE_ID)
 
@@ -217,7 +226,7 @@ class NorwayFetcher(base.RiverDataFetcher):
 
     def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> List[Dict[str, Any]]:
         """Downloads raw data from the NVE API."""
-        if not API_KEY:
+        if not self.api_key:
             logger.error("NVE API Key not available.")
             return []
 
@@ -231,7 +240,7 @@ class NorwayFetcher(base.RiverDataFetcher):
         }
         s = utils.requests_retry_session()
         try:
-            response = s.get(f"{self.BASE_URL}Observations", headers=self.HEADERS, params=params)
+            response = s.get(f"{self.BASE_URL}Observations", headers=self.headers, params=params)
             response.raise_for_status()
             data = response.json().get("data", [])
             obs_list = []
@@ -294,7 +303,7 @@ class NorwayFetcher(base.RiverDataFetcher):
             pd.DataFrame: A pandas DataFrame indexed by datetime objects (``constants.TIME_INDEX``)
             with a single column named after the requested ``variable``.
         """
-        if not API_KEY:
+        if not self.api_key:
             logger.error("NVE API Key not set.")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 

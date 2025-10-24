@@ -10,8 +10,7 @@ from rivretrieve import NorwayFetcher, constants
 
 class TestNorwayFetcher(unittest.TestCase):
     def setUp(self):
-        self.fetcher = NorwayFetcher()
-        self.base_path = "usr/local/google/home/kratzert/Projects/RivRetrieve/RivRetrieve-Python/tests/test_data"
+        self.fetcher = NorwayFetcher(api_key="test_key")
 
     def mocked_requests_get(*args, **kwargs):
         class MockResponse:
