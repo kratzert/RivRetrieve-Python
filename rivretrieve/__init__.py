@@ -12,6 +12,7 @@ from .poland import PolandFetcher
 from .portugal import PortugalFetcher
 from .slovenia import SloveniaFetcher
 from .southafrica import SouthAfricaFetcher
+from .spain import SpainFetcher
 from .uk_ea import UKEAFetcher
 from .uk_nrfa import UKNRFAFetcher
 from .usa import USAFetcher
