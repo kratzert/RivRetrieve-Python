@@ -23,9 +23,7 @@ JAPAN_START_DATE = "1980-01-01"
 JAPAN_END_DATE = "2024-12-31"
 
 # Setup logging
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-)
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 
 def get_fetcher_classes():
@@ -43,9 +41,7 @@ def get_fetcher_classes():
                         and attribute is not rivretrieve.base.RiverDataFetcher
                     ):
                         fetchers[module_name] = attribute
-                        logging.info(
-                            f"Found fetcher: {attribute_name} in {module_name}"
-                        )
+                        logging.info(f"Found fetcher: {attribute_name} in {module_name}")
                 except TypeError:
                     continue
     return fetchers
@@ -57,23 +53,17 @@ def download_gauge_data(country, fetcher_instance, gauge_id, variable, start_dat
     os.makedirs(output_dir, exist_ok=True)
 
     # Sanitize gauge_id to be used as a filename
-    sanitized_gauge_id = "".join(
-        c if c.isalnum() or c in ["-", "_"] else "_" for c in gauge_id
-    )
+    sanitized_gauge_id = "".join(c if c.isalnum() or c in ["-", "_"] else "_" for c in gauge_id)
     output_file = os.path.join(output_dir, f"{sanitized_gauge_id}_{variable}.csv")
 
     if os.path.exists(output_file):
         logging.info(f"Skipping {country} - {gauge_id} - {variable} (already downloaded)")
         return f"SKIPPED: {country} - {gauge_id} - {variable}"
 
-    logging.info(
-        f"Processing {country} - {gauge_id} - {variable} with dates {start_date} to {end_date}"
-    )
+    logging.info(f"Processing {country} - {gauge_id} - {variable} with dates {start_date} to {end_date}")
     try:
         if variable not in fetcher_instance.get_available_variables():
-            logging.warning(
-                f"Variable {variable} not supported by {country} fetcher, skipping gauge {gauge_id}"
-            )
+            logging.warning(f"Variable {variable} not supported by {country} fetcher, skipping gauge {gauge_id}")
             return f"UNSUPPORTED VARIABLE: {country} - {gauge_id} - {variable}"
 
         data = fetcher_instance.get_data(
@@ -85,18 +75,14 @@ def download_gauge_data(country, fetcher_instance, gauge_id, variable, start_dat
 
         if data is not None and not data.empty:
             data.to_csv(output_file)
-            logging.info(
-                f"Successfully downloaded and saved {country} - {gauge_id} - {variable}"
-            )
+            logging.info(f"Successfully downloaded and saved {country} - {gauge_id} - {variable}")
             return f"SUCCESS: {country} - {gauge_id} - {variable}"
         else:
             logging.info(f"No data returned for {country} - {gauge_id} - {variable}")
             return f"NO DATA: {country} - {gauge_id} - {variable}"
 
     except Exception as e:
-        logging.error(
-            f"Error downloading {country} - {gauge_id} - {variable}: {e}", exc_info=False
-        )
+        logging.error(f"Error downloading {country} - {gauge_id} - {variable}: {e}", exc_info=False)
         return f"FAILED: {country} - {gauge_id} - {variable} - {e}"
 
 
@@ -120,15 +106,9 @@ def main():
         default=VARIABLE,
         help=f"Variable to download (e.g., {constants.DISCHARGE_DAILY_MEAN}).",
     )
-    parser.add_argument(
-        "--start_date", type=str, default=START_DATE, help="Start date in YYYY-MM-DD."
-    )
-    parser.add_argument(
-        "--end_date", type=str, default=END_DATE, help="End date in YYYY-MM-DD."
-    )
-    parser.add_argument(
-        "--n_workers", type=int, default=N_WORKERS, help="Number of worker threads."
-    )
+    parser.add_argument("--start_date", type=str, default=START_DATE, help="Start date in YYYY-MM-DD.")
+    parser.add_argument("--end_date", type=str, default=END_DATE, help="End date in YYYY-MM-DD.")
+    parser.add_argument("--n_workers", type=int, default=N_WORKERS, help="Number of worker threads.")
     args = parser.parse_args()
 
     selected_fetchers = args.fetchers
@@ -182,9 +162,7 @@ def main():
             logging.error(f"Error getting sites for {country}: {e}")
 
     random.shuffle(tasks)
-    logging.info(
-        f"Found {len(tasks)} total sites to process for fetchers: {list(fetcher_instances.keys())}."
-    )
+    logging.info(f"Found {len(tasks)} total sites to process for fetchers: {list(fetcher_instances.keys())}.")
 
     if not tasks:
         logging.info("No tasks to process. Exiting.")
