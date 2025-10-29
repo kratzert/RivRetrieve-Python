@@ -23,12 +23,18 @@ class GermanyBerlinFetcher(base.RiverDataFetcher):
         - constants.STAGE_DAILY_MEAN (m)
         - constants.DISCHARGE_DAILY_MEAN (m³/s)
         - constants.WATER_TEMPERATURE_DAILY_MEAN (°C)
+        - constants.STAGE_INSTANT (m)
+        - constants.DISCHARGE_INSTANT (m³/s)
+
+    Frequency handling:
+        - Daily mean variables: sreihe=tw
+        - Instantaneous variables: sreihe=ew
     """
 
     METADATA_URL = "https://wasserportal.berlin.de/start.php?anzeige=tabelle_ow&messanzeige=ms_all"
     BASE_URL = (
         "https://wasserportal.berlin.de/station.php"
-        "?anzeige=d&station={id}&thema={thema}&sreihe=tw&smode=c&sdatum={start_date}"
+        "?anzeige=d&station={id}&thema={thema}&sreihe={frequency}&smode=c&sdatum={start_date}"
     )
 
     @staticmethod
@@ -90,13 +96,17 @@ class GermanyBerlinFetcher(base.RiverDataFetcher):
         except Exception as e:
             logger.error(f"Failed to fetch metadata: {e}")
             return pd.DataFrame(columns=keep_cols).set_index(constants.GAUGE_ID)
+    
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
         return (
             constants.STAGE_DAILY_MEAN,
             constants.DISCHARGE_DAILY_MEAN,
             constants.WATER_TEMPERATURE_DAILY_MEAN,
+            constants.STAGE_INSTANT,
+            constants.DISCHARGE_INSTANT
         )
+
     def _download_data(
         self,
         gauge_id: str,
@@ -106,16 +116,24 @@ class GermanyBerlinFetcher(base.RiverDataFetcher):
     ) -> pd.DataFrame:
         """Downloads CSV data for a gauge and variable."""
         thema_map = {
-            constants.STAGE_DAILY_MEAN: "ows",        # Wasserstand (cm)
-            constants.DISCHARGE_DAILY_MEAN: "odf",    # Durchfluss (m³/s)
-            constants.WATER_TEMPERATURE_DAILY_MEAN: "owt",  # Wassertemperatur (°C)
+            # Daily
+            constants.STAGE_DAILY_MEAN: ("ows", "tw"),             # Wasserstand (cm)
+            constants.DISCHARGE_DAILY_MEAN: ("odf", "tw"),         # Durchfluss (m³/s)
+            constants.WATER_TEMPERATURE_DAILY_MEAN: ("owt", "tw"), # Wassertemperatur (°C)
+
+            # Instantaneous
+            constants.STAGE_INSTANT: ("ows", "ew"),
+            constants.DISCHARGE_INSTANT: ("odf", "ew"),
+
         }
 
         if variable not in thema_map:
             raise ValueError(f"Unsupported variable: {variable}")
-
+        
+        thema, frequency = thema_map[variable]
         start_date_fmt = pd.to_datetime(start_date).strftime("%d.%m.%Y")
-        url = self.BASE_URL.format(id=gauge_id, thema=thema_map[variable], start_date=start_date_fmt)
+        url = self.BASE_URL.format(id=gauge_id, thema=thema, frequency=frequency, start_date=start_date_fmt)
+
 
         logger.info(f"Fetching {variable} for {gauge_id} from {url}")
         r = requests.get(url, timeout=20)
@@ -132,6 +150,7 @@ class GermanyBerlinFetcher(base.RiverDataFetcher):
         except Exception as e:
             logger.error(f"Error parsing CSV for {gauge_id}: {e}")
             return pd.DataFrame()
+    
     def _parse_data(self, gauge_id: str, raw_data: pd.DataFrame, variable: str) -> pd.DataFrame:
         """Parses Wasserportal CSV to standardized DataFrame."""
         if raw_data.empty:
@@ -154,6 +173,7 @@ class GermanyBerlinFetcher(base.RiverDataFetcher):
             .set_index(constants.TIME_INDEX)
         )
         return df
+    
     def get_data(
         self,
         gauge_id: str,
