@@ -53,4 +53,4 @@ plt.tight_layout()
 plot_path = "berlin_fetcher_plot.png"
 plt.savefig(plot_path)
 
-print(fetcher.get_metadata())
+#print(fetcher.get_metadata())
