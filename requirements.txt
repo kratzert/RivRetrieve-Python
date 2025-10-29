@@ -15,3 +15,4 @@ zarr>=3.0.7
 sphinx>=8.0.0
 sphinx-rtd-theme>=3.0.0
 myst-parser>=4.0.0
+pyproj>=3.7.1
