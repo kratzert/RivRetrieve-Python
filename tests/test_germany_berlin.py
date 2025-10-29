@@ -1,7 +1,8 @@
 import logging
+
 import matplotlib.pyplot as plt
-from rivretrieve import constants
-from rivretrieve import GermanyBerlinFetcher
+
+from rivretrieve import GermanyBerlinFetcher, constants
 
 logging.basicConfig(level=logging.INFO)
 
@@ -53,4 +54,4 @@ plt.tight_layout()
 plot_path = "berlin_fetcher_plot.png"
 plt.savefig(plot_path)
 
-#print(fetcher.get_metadata())
+# print(fetcher.get_metadata())
