@@ -17,5 +17,6 @@ from .spain import SpainFetcher
 from .uk_ea import UKEAFetcher
 from .uk_nrfa import UKNRFAFetcher
 from .usa import USAFetcher
+from .germany_berlin import GermanyBerlinFetcher
 
 __version__ = "0.1.0"
