@@ -12,7 +12,6 @@ rivretrieve/data
 **/*.png
 **/*.env
 
-local_tests/
 .ipynb_checkpoints/
 __pycache__/
 .DS_Store
