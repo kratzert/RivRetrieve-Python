@@ -11,3 +11,5 @@ rivretrieve/data
 **/*.pyc
 **/*.png
 **/*.env
+
+local_tests/
