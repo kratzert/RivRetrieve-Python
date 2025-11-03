@@ -118,9 +118,15 @@ class NorwayFetcher(base.RiverDataFetcher):
         - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
         - ``constants.STAGE_DAILY_MEAN`` (m)
         - ``constants.WATER_TEMPERATURE_DAILY_MEAN`` (°C)
+        - ``constants.DISCHARGE_HOURLY_MEAN`` (m³/s)
+        - ``constants.STAGE_HOURLY_MEAN`` (m)
+        - ``constants.WATER_TEMPERATURE_HOURLY_MEAN`` (°C)
         - ``constants.DISCHARGE_INSTANT`` (m³/s)
         - ``constants.STAGE_INSTANT`` (m)
-        - ``constants.WATER_TEMPERATURE_INSTANTANEOUS`` (°C)
+        - ``constants.WATER_TEMPERATURE_INSTANT`` (°C)
+
+    Terms of use:
+        - For API, see https://hydapi.nve.no/UserDocumentation/#termsofuse
     """
 
     BASE_URL = "https://hydapi.nve.no/api/v1/"
@@ -128,9 +134,13 @@ class NorwayFetcher(base.RiverDataFetcher):
         constants.STAGE_DAILY_MEAN: {"id": 1000, "resolution": 1440},
         constants.DISCHARGE_DAILY_MEAN: {"id": 1001, "resolution": 1440},
         constants.WATER_TEMPERATURE_DAILY_MEAN: {"id": 1003, "resolution": 1440},
-        constants.STAGE_INSTANT: {"id": 1000, "resolution": 60},
-        constants.DISCHARGE_INSTANT: {"id": 1001, "resolution": 60},
-        constants.WATER_TEMPERATURE_INSTANT: {"id": 1003, "resolution": 60},
+        constants.STAGE_HOURLY_MEAN: {"id": 1000, "resolution": 60},
+        constants.DISCHARGE_HOURLY_MEAN: {"id": 1001, "resolution": 60},
+        constants.WATER_TEMPERATURE_HOURLY_MEAN: {"id": 1003, "resolution": 60},
+        constants.STAGE_INSTANT: {"id": 1000, "resolution": 0},
+        constants.DISCHARGE_INSTANT: {"id": 1001, "resolution": 0},
+        constants.WATER_TEMPERATURE_INSTANT: {"id": 1003, "resolution": 0},
+
     }
 
     def __init__(self, api_key: Optional[str] = None):

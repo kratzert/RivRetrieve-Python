@@ -140,10 +140,13 @@ class TestNorwayFetcher(unittest.TestCase):
             "utmEast_Z33": [311128, 298887],
             "utmNorth_Z33": [6568077, 6559841],
             constants.STAGE_DAILY_MEAN: [True, True],
-            constants.STAGE_INSTANT: [False, True],
+            constants.STAGE_HOURLY_MEAN: [False, True],
+            constants.STAGE_INSTANT: [True, True],
             constants.DISCHARGE_DAILY_MEAN: [False, False],
+            constants.DISCHARGE_HOURLY_MEAN: [False, False],
             constants.DISCHARGE_INSTANT: [False, False],
             constants.WATER_TEMPERATURE_DAILY_MEAN: [False, False],
+            constants.WATER_TEMPERATURE_HOURLY_MEAN: [False, False],
             constants.WATER_TEMPERATURE_INSTANT: [False, False],
             "seriesList": [
                 [

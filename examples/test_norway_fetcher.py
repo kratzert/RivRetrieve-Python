@@ -8,12 +8,12 @@ logging.basicConfig(level=logging.INFO)
 
 # Replace with a valid Norwegian gauge ID, e.g., "12.210.0"
 gauge_ids = [
-    "100.1.0",
+    "1.200.0",
 ]
 variables = [
-    constants.DISCHARGE_DAILY_MEAN,
-    constants.STAGE_DAILY_MEAN,
-    constants.WATER_TEMPERATURE_DAILY_MEAN,
+    constants.DISCHARGE_INSTANT,
+    constants.STAGE_INSTANT,
+    constants.WATER_TEMPERATURE_INSTANT,
 ]
 
 fetcher = NorwayFetcher()
@@ -24,7 +24,7 @@ for variable in variables:
     for gauge_id in gauge_ids:
         print(f"Fetching {variable} for {gauge_id}...")
         # Fetching last 5 years for testing
-        data = fetcher.get_data(gauge_id=gauge_id, variable=variable)
+        data = fetcher.get_data(gauge_id=gauge_id, variable=variable, start_date="2020-01-01", end_date="2021-12-31")
         if not data.empty:
             print(f"Data for {gauge_id} ({variable}):")
             print(data.head())
