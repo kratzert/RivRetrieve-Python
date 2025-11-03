@@ -140,7 +140,6 @@ class NorwayFetcher(base.RiverDataFetcher):
         constants.STAGE_INSTANT: {"id": 1000, "resolution": 0},
         constants.DISCHARGE_INSTANT: {"id": 1001, "resolution": 0},
         constants.WATER_TEMPERATURE_INSTANT: {"id": 1003, "resolution": 0},
-
     }
 
     def __init__(self, api_key: Optional[str] = None):
