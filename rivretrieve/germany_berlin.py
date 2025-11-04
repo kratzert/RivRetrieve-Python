@@ -4,6 +4,7 @@ import logging
 from io import StringIO
 from typing import Optional
 
+import numpy as np
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
@@ -27,9 +28,11 @@ class GermanyBerlinFetcher(base.RiverDataFetcher):
         - constants.STAGE_INSTANT (m)
         - constants.DISCHARGE_INSTANT (m³/s)
 
-    Frequency handling:
-        - Daily mean variables: sreihe=tw
-        - Instantaneous variables: sreihe=ew
+    Data description and API:
+        - see https://wasserportal.berlin.de/download/
+
+    Terms of use:
+        - see https://daten.berlin.de/impressum
     """
 
     METADATA_URL = "https://wasserportal.berlin.de/start.php?anzeige=tabelle_ow&messanzeige=ms_all"
@@ -44,8 +47,13 @@ class GermanyBerlinFetcher(base.RiverDataFetcher):
         return utils.load_cached_metadata_csv("germany_berlin")
 
     def get_metadata(self) -> pd.DataFrame:
-        """Downloads and parses site metadata from Wasserportal Berlin."""
+        """Downloads and parses site metadata from Wasserportal Berlin.
+
+        Keeps all original columns, but renames and standardizes key fields.
+        Converts UTM33N (EPSG:32633) → WGS84 (EPSG:4326) coordinates.
+        """
         try:
+            logger.info(f"Fetching Berlin metadata from {self.METADATA_URL}")
             resp = requests.get(self.METADATA_URL, timeout=20)
             resp.raise_for_status()
 
@@ -64,22 +72,30 @@ class GermanyBerlinFetcher(base.RiverDataFetcher):
                 "Rechts- wert": "utm_easting",
                 "Hoch- wert": "utm_northing",
             }
-
             df = df.rename(columns=rename_map)
-            df = df.dropna(subset=["utm_easting", "utm_northing", constants.GAUGE_ID])
 
-            # Convert coordinates from UTM33N to WGS84
-            transformer = Transformer.from_crs("EPSG:32633", "EPSG:4326", always_xy=True)
-            df[constants.LONGITUDE], df[constants.LATITUDE] = transformer.transform(
-                df["utm_easting"].values, df["utm_northing"].values
-            )
+            # Convert numeric UTM coordinates
+            if "utm_easting" in df.columns and "utm_northing" in df.columns:
+                df["utm_easting"] = pd.to_numeric(df["utm_easting"], errors="coerce")
+                df["utm_northing"] = pd.to_numeric(df["utm_northing"], errors="coerce")
 
-            df[constants.ALTITUDE] = None
-            df[constants.AREA] = None
-            df[constants.COUNTRY] = "Germany"
-            df[constants.SOURCE] = "Wasserportal Berlin"
+                # Drop invalid coordinates
+                df = df.dropna(subset=["utm_easting", "utm_northing"])
 
-            keep_cols = [
+                # Fix scaling (some values are 10× larger)
+                mask_large = df["utm_easting"] > 1_000_000
+                df.loc[mask_large, "utm_easting"] = df.loc[mask_large, "utm_easting"] / 10
+
+                transformer = Transformer.from_crs("EPSG:32633", "EPSG:4326", always_xy=True)
+                lon, lat = transformer.transform(df["utm_easting"].values, df["utm_northing"].values)
+                df[constants.LONGITUDE] = lon
+                df[constants.LATITUDE] = lat
+            else:
+                df[constants.LONGITUDE] = np.nan
+                df[constants.LATITUDE] = np.nan
+
+            # Add standardized metadata fields if missing
+            for col in [
                 constants.GAUGE_ID,
                 constants.STATION_NAME,
                 constants.RIVER,
@@ -89,14 +105,29 @@ class GermanyBerlinFetcher(base.RiverDataFetcher):
                 constants.AREA,
                 constants.COUNTRY,
                 constants.SOURCE,
-            ]
+            ]:
+                if col not in df.columns:
+                    df[col] = np.nan
 
-            df = df[keep_cols].drop_duplicates(subset=[constants.GAUGE_ID])
-            return df.set_index(constants.GAUGE_ID)
+            df[constants.ALTITUDE] = None
+            df[constants.AREA] = None
+            df[constants.COUNTRY] = "Germany"
+            df[constants.SOURCE] = "Wasserportal Berlin"
+
+            # Clean and type-correct
+            df[constants.GAUGE_ID] = df[constants.GAUGE_ID].astype(str).str.strip()
+            df[constants.LATITUDE] = pd.to_numeric(df[constants.LATITUDE], errors="coerce")
+            df[constants.LONGITUDE] = pd.to_numeric(df[constants.LONGITUDE], errors="coerce")
+
+            # Drop duplicates
+            df = df.drop_duplicates(subset=[constants.GAUGE_ID])
+
+            logger.info(f"Fetched {len(df)} Berlin gauge metadata records.")
+            return df.reset_index(drop=True)
 
         except Exception as e:
             logger.error(f"Failed to fetch metadata: {e}")
-            return pd.DataFrame(columns=keep_cols).set_index(constants.GAUGE_ID)
+            return pd.DataFrame()
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
@@ -118,9 +149,9 @@ class GermanyBerlinFetcher(base.RiverDataFetcher):
         """Downloads CSV data for a gauge and variable."""
         thema_map = {
             # Daily
-            constants.STAGE_DAILY_MEAN: ("ows", "tw"),  # Wasserstand (cm)
-            constants.DISCHARGE_DAILY_MEAN: ("odf", "tw"),  # Durchfluss (m³/s)
-            constants.WATER_TEMPERATURE_DAILY_MEAN: ("owt", "tw"),  # Wassertemperatur (°C)
+            constants.STAGE_DAILY_MEAN: ("ows", "tw"),
+            constants.DISCHARGE_DAILY_MEAN: ("odf", "tw"),
+            constants.WATER_TEMPERATURE_DAILY_MEAN: ("owt", "tw"),
             # Instantaneous
             constants.STAGE_INSTANT: ("ows", "ew"),
             constants.DISCHARGE_INSTANT: ("odf", "ew"),
@@ -164,7 +195,7 @@ class GermanyBerlinFetcher(base.RiverDataFetcher):
         raw_data[variable] = pd.to_numeric(raw_data[val_col], errors="coerce")
 
         if variable == constants.STAGE_DAILY_MEAN:
-            raw_data[variable] = raw_data[variable] / 100.0  # cm to m
+            raw_data[variable] = raw_data[variable] / 100.0  # cm → m
 
         df = (
             raw_data[[constants.TIME_INDEX, variable]]
