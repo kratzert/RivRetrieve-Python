@@ -1,43 +1,41 @@
-import logging
+import argparse
 
 import matplotlib.pyplot as plt
 
-from rivretrieve import JapanFetcher, constants
+from rivretrieve import constants
+from rivretrieve.japan import JapanFetcher
 
-logging.basicConfig(level=logging.INFO)
 
-gauge_ids = [
-    "301011281104010",
-]
-variable = constants.DISCHARGE_DAILY_MEAN
-start_date = "2019-01-01"
-end_date = "2019-12-31"  # Fetching a few months to test
+def main():
+    parser = argparse.ArgumentParser(description="Test JapanFetcher")
+    parser.add_argument("--gauge_id", type=str, default="301011281104010", help="Gauge ID to test")
+    parser.add_argument("--variable", type=str, default=constants.DISCHARGE_DAILY_MEAN, help="Variable to fetch")
+    parser.add_argument("--start_date", type=str, default="2004-01-01", help="Start date YYYY-MM-DD")
+    parser.add_argument("--end_date", type=str, default="2004-12-31", help="End date YYYY-MM-DD")
+    args = parser.parse_args()
 
-plt.figure(figsize=(12, 6))
+    fetcher = JapanFetcher()
+    print(f"Fetching data for {args.gauge_id} from {args.start_date} to {args.end_date} for {args.variable}...")
 
-fetcher = JapanFetcher()
-for gauge_id in gauge_ids:
-    print(f"Fetching data for {gauge_id} from {start_date} to {end_date}...")
-    data = fetcher.get_data(gauge_id=gauge_id, variable=variable, start_date=start_date, end_date=end_date)
-    if not data.empty:
-        print(f"Data for {gauge_id}:")
-        print(data.head())
-        print(f"Time series from {data.index.min()} to {data.index.max()}")
-        plt.plot(
-            data.index,
-            data[constants.DISCHARGE_DAILY_MEAN],
-            label=gauge_id,
-            marker="o",
-        )
+    df = fetcher.get_data(
+        gauge_id=args.gauge_id, variable=args.variable, start_date=args.start_date, end_date=args.end_date
+    )
+
+    if not df.empty:
+        print(f"Data for {args.gauge_id}:")
+        print(df.head())
+        print(f"Time series from {df.index.min()} to {df.index.max()}")
+        df.plot(y=args.variable)
+        plt.title(f"{args.gauge_id} - {args.variable}")
+        plt.xlabel("Time")
+        plt.ylabel(args.variable)
+        plt.legend()
+        plot_filename = f"japan_{args.variable}_plot.png"
+        plt.savefig(plot_filename)
+        print(f"Plot saved to {plot_filename}")
     else:
-        print(f"No data found for {gauge_id}")
+        print(f"No data found for {args.gauge_id}")
 
-plt.xlabel(constants.TIME_INDEX)
-plt.ylabel(f"{constants.DISCHARGE_DAILY_MEAN} (m3/s)")
-plt.title("Japan River Discharge - Full Time Series")
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plot_path = "japan_discharge_plot.png"
-plt.savefig(plot_path)
-print(f"Plot saved to {plot_path}")
+
+if __name__ == "__main__":
+    main()
