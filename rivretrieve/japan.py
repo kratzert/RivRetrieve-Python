@@ -1,11 +1,11 @@
 "Fetcher for Japanese river gauge data."
 
+import calendar
 import io
 import logging
 import re
-import calendar
 from datetime import datetime, timedelta
-from typing import List, Optional, Dict, Any
+from typing import List, Optional
 
 import pandas as pd
 import requests
@@ -23,6 +23,7 @@ VARIABLE_KIND_MAP = {
     constants.DISCHARGE_HOURLY_MEAN: 6,
     constants.DISCHARGE_DAILY_MEAN: 7,
 }
+
 
 class JapanFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from Japan's Ministry of Land, Infrastructure, Transport and Tourism (MLIT).
@@ -79,10 +80,7 @@ class JapanFetcher(base.RiverDataFetcher):
         end_dt = datetime.strptime(end_date, "%Y-%m-%d")
 
         dat_contents = []
-        headers = {
-            "User-Agent": "Mozilla/5.0",
-            "Referer": self.BASE_URL
-        }
+        headers = {"User-Agent": "Mozilla/5.0", "Referer": self.BASE_URL}
 
         if kind_to_try in [2, 6]:  # Monthly requests for hourly data
             current_dt = start_dt.replace(day=1)
@@ -93,20 +91,26 @@ class JapanFetcher(base.RiverDataFetcher):
                 last_day = calendar.monthrange(year, month)[1]
                 month_start_str = f"{year}{month_str}01"
                 month_end_str = f"{year}{month_str}{last_day}"
-                
-                params = {"KIND": kind_to_try, "ID": gauge_id, "BGNDATE": month_start_str, "ENDDATE": month_end_str, "KAWABOU": "NO"}
+
+                params = {
+                    "KIND": kind_to_try,
+                    "ID": gauge_id,
+                    "BGNDATE": month_start_str,
+                    "ENDDATE": month_end_str,
+                    "KAWABOU": "NO",
+                }
                 try:
                     logger.debug(f"Fetching DspWaterData page for {gauge_id} {year}-{month_str} KIND {kind_to_try}")
                     response = s.get(self.DSP_URL, params=params, headers=headers)
                     response.raise_for_status()
                     response.encoding = "EUC-JP"
-                    soup = BeautifulSoup(response.text, 'html.parser')
+                    soup = BeautifulSoup(response.text, "html.parser")
                     link_tag = soup.find(re.compile("a", re.IGNORECASE), href=re.compile(r"/dat/dload/download/"))
                     if link_tag:
                         dat_url = f"{self.BASE_URL}{link_tag['href']}"
                         dat_response = s.get(dat_url, headers=headers)
                         dat_response.raise_for_status()
-                        dat_contents.append(dat_response.content.decode('shift_jis', errors='replace'))
+                        dat_contents.append(dat_response.content.decode("shift_jis", errors="replace"))
                         logger.info(f"Successfully downloaded {link_tag['href'].split('/')[-1]}")
                     else:
                         logger.warning(f"No .dat link found for {gauge_id} {year}-{month_str} KIND {kind_to_try}")
@@ -117,19 +121,25 @@ class JapanFetcher(base.RiverDataFetcher):
             for year in range(start_dt.year, end_dt.year + 1):
                 year_start_str = f"{year}0131"
                 year_end_str = f"{year}1231"
-                params = {"KIND": kind_to_try, "ID": gauge_id, "BGNDATE": year_start_str, "ENDDATE": year_end_str, "KAWABOU": "NO"}
+                params = {
+                    "KIND": kind_to_try,
+                    "ID": gauge_id,
+                    "BGNDATE": year_start_str,
+                    "ENDDATE": year_end_str,
+                    "KAWABOU": "NO",
+                }
                 try:
                     logger.debug(f"Fetching DspWaterData page for {gauge_id} {year} KIND {kind_to_try}")
                     response = s.get(self.DSP_URL, params=params, headers=headers)
                     response.raise_for_status()
                     response.encoding = "EUC-JP"
-                    soup = BeautifulSoup(response.text, 'html.parser')
+                    soup = BeautifulSoup(response.text, "html.parser")
                     link_tag = soup.find(re.compile("a", re.IGNORECASE), href=re.compile(r"/dat/dload/download/"))
                     if link_tag:
                         dat_url = f"{self.BASE_URL}{link_tag['href']}"
                         dat_response = s.get(dat_url, headers=headers)
                         dat_response.raise_for_status()
-                        dat_contents.append(dat_response.content.decode('shift_jis', errors='replace'))
+                        dat_contents.append(dat_response.content.decode("shift_jis", errors="replace"))
                         logger.info(f"Successfully downloaded {link_tag['href'].split('/')[-1]}")
                     else:
                         logger.warning(f"No .dat link found for {gauge_id} {year} KIND {kind_to_try}")
@@ -152,46 +162,57 @@ class JapanFetcher(base.RiverDataFetcher):
 
         for dat_content in raw_data_list:
             try:
-                lines = dat_content.strip().split('\r\n')
-                data_lines = [line for line in lines if not line.startswith('#') and line.strip()]
-                
+                lines = dat_content.strip().splitlines()
+                data_lines = [line for line in lines if not line.startswith("#") and line.strip()]
+
                 if not data_lines:
                     continue
 
-                header_line = next((line for line in lines if line.startswith(',')), None)
+                header_line = next((line for line in lines if line.startswith(",")), None)
                 if header_line:
-                    data_lines = data_lines[1:]
+                    try:
+                        header_index = lines.index(header_line)
+                        data_lines = lines[header_index + 1 :]
+                        data_lines = [line for line in data_lines if not line.startswith("#") and line.strip()]
+                    except ValueError:
+                        pass
                 if not data_lines:
                     continue
 
-                csv_io = io.StringIO('\n'.join(data_lines))
+                csv_io = io.StringIO("\n".join(data_lines))
 
                 if kind in [2, 6]:  # Hourly data format
                     col_names = [constants.TIME_INDEX]
                     for i in range(1, 25):
                         col_names.append(f"{i}時")
                         col_names.append(f"{i}時フラグ")
-                    
-                    df = pd.read_csv(csv_io, header=None, names=col_names, na_values=["-9999.00"], dtype={constants.TIME_INDEX: str})
-                    df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX], format="%Y/%m/%d", errors="coerce")
+
+                    df = pd.read_csv(
+                        csv_io, header=None, names=col_names, na_values=["-9999.00"], dtype={constants.TIME_INDEX: str}
+                    )
+                    df[constants.TIME_INDEX] = pd.to_datetime(
+                        df[constants.TIME_INDEX], format="%Y/%m/%d", errors="coerce"
+                    )
                     df = df.dropna(subset=[constants.TIME_INDEX])
 
                     value_cols = [f"{i}時" for i in range(1, 25)]
-                    df_long = df.melt(id_vars=[constants.TIME_INDEX], value_vars=value_cols, var_name='Hour', value_name='Value')
-                    df_long['Hour'] = df_long['Hour'].str.replace('時', '').astype(int)
-                    df_long['Value'] = pd.to_numeric(df_long['Value'], errors='coerce')
-                    df_long = df_long.dropna(subset=['Value'])
+                    df_long = df.melt(
+                        id_vars=[constants.TIME_INDEX], value_vars=value_cols, var_name="Hour", value_name="Value"
+                    )
+                    df_long["Hour"] = df_long["Hour"].str.replace("時", "").astype(int)
+                    df_long["Value"] = pd.to_numeric(df_long["Value"], errors="coerce")
+                    df_long = df_long.dropna(subset=["Value"])
 
                     df_long[constants.TIME_INDEX] = df_long.apply(
-                        lambda row: row[constants.TIME_INDEX] + timedelta(hours=row['Hour'] - 1), axis=1
+                        lambda row: row[constants.TIME_INDEX] + timedelta(hours=row["Hour"] - 1), axis=1
                     )
-                    parsed_df = df_long[[constants.TIME_INDEX, 'Value']].rename(columns={'Value': variable})
+                    parsed_df = df_long[[constants.TIME_INDEX, "Value"]].rename(columns={"Value": variable})
                     all_dfs.append(parsed_df)
 
                 elif kind in [3, 7]:  # Daily data format
                     year = None
                     for line in lines:
-                        if line.endswith("年"):
+                        if "年" in line:
                             year_match = re.search(r"(\d{4})年", line)
                             if year_match:
                                 year = int(year_match.group(1))
@@ -204,8 +225,10 @@ class JapanFetcher(base.RiverDataFetcher):
                     for i in range(1, 32):
                         col_names.append(f"{i}日")
                         col_names.append(f"{i}日フラグ")
-                    
-                    df = pd.read_csv(csv_io, header=None, names=col_names, na_values=["　", "-9999.00"], encoding='utf-8')
+
+                    df = pd.read_csv(
+                        csv_io, header=None, names=col_names, na_values=["　", "-9999.00"], encoding="utf-8"
+                    )
 
                     month_map = {f"{i}月": i for i in range(1, 13)}
                     df["Month"] = df["月"].map(month_map)
@@ -213,13 +236,15 @@ class JapanFetcher(base.RiverDataFetcher):
                     df["Year"] = year
 
                     value_cols = [f"{i}日" for i in range(1, 32)]
-                    df_long = df.melt(id_vars=["Year", "Month"], value_vars=value_cols, var_name='Day', value_name='Value')
-                    df_long['Day'] = df_long['Day'].str.replace('日', '').astype(int)
-                    df_long['Value'] = pd.to_numeric(df_long['Value'], errors='coerce')
-                    df_long = df_long.dropna(subset=['Value'])
+                    df_long = df.melt(
+                        id_vars=["Year", "Month"], value_vars=value_cols, var_name="Day", value_name="Value"
+                    )
+                    df_long["Day"] = df_long["Day"].str.replace("日", "").astype(int)
+                    df_long["Value"] = pd.to_numeric(df_long["Value"], errors="coerce")
+                    df_long = df_long.dropna(subset=["Value"])
 
-                    df_long[constants.TIME_INDEX] = pd.to_datetime(df_long[['Year', 'Month', 'Day']], errors='coerce')
-                    parsed_df = df_long[[constants.TIME_INDEX, 'Value']].rename(columns={'Value': variable})
+                    df_long[constants.TIME_INDEX] = pd.to_datetime(df_long[["Year", "Month", "Day"]], errors="coerce")
+                    parsed_df = df_long[[constants.TIME_INDEX, "Value"]].rename(columns={"Value": variable})
                     parsed_df = parsed_df.dropna(subset=[constants.TIME_INDEX])
                     all_dfs.append(parsed_df)
                 else:
@@ -255,12 +280,12 @@ class JapanFetcher(base.RiverDataFetcher):
             raw_data_list = self._download_data(gauge_id, variable, start_date, end_date)
             if not raw_data_list:
                 return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
-                
+
             df = self._parse_data(gauge_id, raw_data_list, variable)
 
             if not df.empty:
                 start_date_dt = pd.to_datetime(start_date)
-                end_date_dt = pd.to_datetime(end_date) + timedelta(days=1) # Include end date
+                end_date_dt = pd.to_datetime(end_date) + timedelta(days=1)  # Include end date
                 df = df[(df.index >= start_date_dt) & (df.index < end_date_dt)]
             return df
 
@@ -276,10 +301,7 @@ class JapanFetcher(base.RiverDataFetcher):
 
         all_station_data = []
         s = utils.requests_retry_session()
-        headers = {
-            "User-Agent": "Mozilla/5.0",
-            "Referer": self.BASE_URL
-        }
+        headers = {"User-Agent": "Mozilla/5.0", "Referer": self.BASE_URL}
 
         for gauge_id in gauge_ids:
             logger.info(f"Fetching metadata for station: {gauge_id}")
@@ -288,38 +310,46 @@ class JapanFetcher(base.RiverDataFetcher):
                 response = s.get(site_info_url, headers=headers)
                 response.raise_for_status()
                 response.encoding = "EUC-JP"
-                soup = BeautifulSoup(response.text, 'html.parser')
+                soup = BeautifulSoup(response.text, "html.parser")
 
                 station_data = {constants.GAUGE_ID: gauge_id}
 
-                info_table = soup.find('table', {'align': 'CENTER', 'width': '600'})
+                info_table = soup.find("table", {"align": "CENTER", "width": "600"})
                 if info_table:
-                    for row in info_table.find_all('tr'):
-                        cells = row.find_all('td')
+                    for row in info_table.find_all("tr"):
+                        cells = row.find_all("td")
                         if len(cells) == 2:
                             key = cells[0].text.strip()
                             value = cells[1].text.strip()
-                            if key == '観測所名':
+                            if key == "観測所名":
                                 station_data[constants.STATION_NAME] = value
-                            elif key == '所在地':
-                                station_data['location'] = value
-                            elif key == '水系名':
+                            elif key == "所在地":
+                                station_data["location"] = value
+                            elif key == "水系名":
                                 station_data[constants.RIVER] = value
-                            elif key == '河川名':
-                                station_data['river_name_jp'] = value
-                            elif key == '緯度経度':
+                            elif key == "河川名":
+                                station_data["river_name_jp"] = value
+                            elif key == "緯度経度":
                                 try:
-                                    lat_match = re.search(r'N(\d+)度(\d+)分(\d+)秒', value)
-                                    lon_match = re.search(r'E(\d+)度(\d+)分(\d+)秒', value)
+                                    lat_match = re.search(r"N(\d+)度(\d+)分(\d+)秒", value)
+                                    lon_match = re.search(r"E(\d+)度(\d+)分(\d+)秒", value)
                                     if lat_match:
-                                        lat = float(lat_match.group(1)) + float(lat_match.group(2))/60 + float(lat_match.group(3))/3600
+                                        lat = (
+                                            float(lat_match.group(1))
+                                            + float(lat_match.group(2)) / 60
+                                            + float(lat_match.group(3)) / 3600
+                                        )
                                         station_data[constants.LATITUDE] = lat
                                     if lon_match:
-                                        lon = float(lon_match.group(1)) + float(lon_match.group(2))/60 + float(lon_match.group(3))/3600
+                                        lon = (
+                                            float(lon_match.group(1))
+                                            + float(lon_match.group(2)) / 60
+                                            + float(lon_match.group(3)) / 3600
+                                        )
                                         station_data[constants.LONGITUDE] = lon
                                 except Exception as e:
                                     logger.warning(f"Could not parse lat/lon for {gauge_id}: {value} - {e}")
-                
+
                 # Fetch available kinds for the station
                 kind_map = {}
                 # Commenting out the SiteInfo fetch for KINDs due to 403 errors
@@ -331,13 +361,13 @@ class JapanFetcher(base.RiverDataFetcher):
                 #     # ... parsing logic ...
                 # except Exception as e:
                 #     logger.error(f"Error fetching/parsing SiteInfo for {gauge_id} for KINDS: {e}")
-                station_data['available_kinds'] = kind_map
+                station_data["available_kinds"] = kind_map
                 all_station_data.append(station_data)
 
             except requests.exceptions.RequestException as e:
-                 if e.response and e.response.status_code == 403:
+                if e.response and e.response.status_code == 403:
                     logger.error(f"Access forbidden for SiteInfo {gauge_id}: {e}")
-                 else:
+                else:
                     logger.error(f"Error fetching SiteInfo for {gauge_id}: {e}")
             except Exception as e:
                 logger.error(f"Error parsing SiteInfo for {gauge_id}: {e}", exc_info=True)
