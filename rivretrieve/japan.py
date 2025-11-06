@@ -7,6 +7,7 @@ import re
 from datetime import datetime, timedelta
 from typing import List, Optional
 
+import numpy as np
 import pandas as pd
 from bs4 import BeautifulSoup
 from dateutil.relativedelta import relativedelta
@@ -191,7 +192,7 @@ class JapanFetcher(base.RiverDataFetcher):
                         col_names.append(f"{i}時フラグ")
 
                     df = pd.read_csv(
-                        csv_io, header=None, names=col_names, na_values=["-9999.00"], dtype={constants.TIME_INDEX: str}
+                        csv_io, header=None, names=col_names, na_values=["-9999.99"], dtype={constants.TIME_INDEX: str}
                     )
                     df[constants.TIME_INDEX] = pd.to_datetime(
                         df[constants.TIME_INDEX], format="%Y/%m/%d", errors="coerce"
@@ -204,6 +205,10 @@ class JapanFetcher(base.RiverDataFetcher):
                     )
                     df_long["Hour"] = df_long["Hour"].str.replace("時", "").astype(int)
                     df_long["Value"] = pd.to_numeric(df_long["Value"], errors="coerce")
+
+                    # Different values are used to encode NaN. All seem to be -9999.XX
+                    df_long.loc[df_long["Value"] <= -9999, "Value"] = np.nan
+
                     df_long = df_long.dropna(subset=["Value"])
 
                     df_long[constants.TIME_INDEX] = df_long.apply(
@@ -230,7 +235,7 @@ class JapanFetcher(base.RiverDataFetcher):
                         col_names.append(f"{i}日フラグ")
 
                     df = pd.read_csv(
-                        csv_io, header=None, names=col_names, na_values=["　", "-9999.00"], encoding="utf-8"
+                        csv_io, header=None, names=col_names, na_values=["　", "-9999.99"], encoding="utf-8"
                     )
 
                     month_map = {f"{i}月": i for i in range(1, 13)}
@@ -244,6 +249,9 @@ class JapanFetcher(base.RiverDataFetcher):
                     )
                     df_long["Day"] = df_long["Day"].str.replace("日", "").astype(int)
                     df_long["Value"] = pd.to_numeric(df_long["Value"], errors="coerce")
+
+                    # Different values are used to encode NaN. All seem to be -9999.XX
+                    df_long.loc[df_long["Value"] <= -9999, "Value"] = np.nan
                     df_long = df_long.dropna(subset=["Value"])
 
                     df_long[constants.TIME_INDEX] = pd.to_datetime(df_long[["Year", "Month", "Day"]], errors="coerce")
