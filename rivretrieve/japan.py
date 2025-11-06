@@ -8,7 +8,6 @@ from datetime import datetime, timedelta
 from typing import List, Optional
 
 import pandas as pd
-import requests
 from bs4 import BeautifulSoup
 from dateutil.relativedelta import relativedelta
 
