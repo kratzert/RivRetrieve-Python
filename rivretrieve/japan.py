@@ -50,6 +50,10 @@ class JapanFetcher(base.RiverDataFetcher):
         """Retrieves a DataFrame of available Japanese gauge IDs and metadata."""
         return utils.load_cached_metadata_csv("japan")
 
+    def get_metadata(self) -> pd.DataFrame:
+        """Fetches metadata from MLIT Water Information System."""
+        raise NotImplementedError("Currently, downloading metadata is not suppoted for this fetcher.")
+
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
         return (
@@ -292,88 +296,3 @@ class JapanFetcher(base.RiverDataFetcher):
         except Exception as e:
             logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}", exc_info=True)
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
-
-    def get_metadata(self, gauge_ids: Optional[List[str]] = None) -> pd.DataFrame:
-        """Fetches metadata for given gauge IDs from the MLIT Water Information System."""
-        if gauge_ids is None:
-            cached_meta = self.get_cached_metadata()
-            gauge_ids = cached_meta.index.tolist()
-
-        all_station_data = []
-        s = utils.requests_retry_session()
-        headers = {"User-Agent": "Mozilla/5.0", "Referer": self.BASE_URL}
-
-        for gauge_id in gauge_ids:
-            logger.info(f"Fetching metadata for station: {gauge_id}")
-            site_info_url = f"{self.SITE_INFO_URL}?ID={gauge_id}"
-            try:
-                response = s.get(site_info_url, headers=headers)
-                response.raise_for_status()
-                response.encoding = "EUC-JP"
-                soup = BeautifulSoup(response.text, "html.parser")
-
-                station_data = {constants.GAUGE_ID: gauge_id}
-
-                info_table = soup.find("table", {"align": "CENTER", "width": "600"})
-                if info_table:
-                    for row in info_table.find_all("tr"):
-                        cells = row.find_all("td")
-                        if len(cells) == 2:
-                            key = cells[0].text.strip()
-                            value = cells[1].text.strip()
-                            if key == "観測所名":
-                                station_data[constants.STATION_NAME] = value
-                            elif key == "所在地":
-                                station_data["location"] = value
-                            elif key == "水系名":
-                                station_data[constants.RIVER] = value
-                            elif key == "河川名":
-                                station_data["river_name_jp"] = value
-                            elif key == "緯度経度":
-                                try:
-                                    lat_match = re.search(r"N(\d+)度(\d+)分(\d+)秒", value)
-                                    lon_match = re.search(r"E(\d+)度(\d+)分(\d+)秒", value)
-                                    if lat_match:
-                                        lat = (
-                                            float(lat_match.group(1))
-                                            + float(lat_match.group(2)) / 60
-                                            + float(lat_match.group(3)) / 3600
-                                        )
-                                        station_data[constants.LATITUDE] = lat
-                                    if lon_match:
-                                        lon = (
-                                            float(lon_match.group(1))
-                                            + float(lon_match.group(2)) / 60
-                                            + float(lon_match.group(3)) / 3600
-                                        )
-                                        station_data[constants.LONGITUDE] = lon
-                                except Exception as e:
-                                    logger.warning(f"Could not parse lat/lon for {gauge_id}: {value} - {e}")
-
-                # Fetch available kinds for the station
-                kind_map = {}
-                # Commenting out the SiteInfo fetch for KINDs due to 403 errors
-                # try:
-                #     # This part is still blocked by 403, so kind_map will be empty
-                #     pass # s_kinds = utils.requests_retry_session()
-                #     # response = s_kinds.get(site_info_url, headers=headers)
-                #     # response.raise_for_status()
-                #     # ... parsing logic ...
-                # except Exception as e:
-                #     logger.error(f"Error fetching/parsing SiteInfo for {gauge_id} for KINDS: {e}")
-                station_data["available_kinds"] = kind_map
-                all_station_data.append(station_data)
-
-            except requests.exceptions.RequestException as e:
-                if e.response and e.response.status_code == 403:
-                    logger.error(f"Access forbidden for SiteInfo {gauge_id}: {e}")
-                else:
-                    logger.error(f"Error fetching SiteInfo for {gauge_id}: {e}")
-            except Exception as e:
-                logger.error(f"Error parsing SiteInfo for {gauge_id}: {e}", exc_info=True)
-
-        df = pd.DataFrame(all_station_data)
-        if not df.empty:
-            return df.set_index(constants.GAUGE_ID)
-        else:
-            return pd.DataFrame(columns=[constants.GAUGE_ID]).set_index(constants.GAUGE_ID)
