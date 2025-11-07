@@ -7,6 +7,7 @@ from .canada import CanadaFetcher
 from .chile import ChileFetcher
 from .czech import CzechFetcher
 from .france import FranceFetcher
+from .germany_berlin import GermanyBerlinFetcher
 from .japan import JapanFetcher
 from .norway import NorwayFetcher
 from .poland import PolandFetcher

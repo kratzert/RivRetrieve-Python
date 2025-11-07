@@ -1,0 +1,190 @@
+,gauge_id,station_name,Betreiber,Ausprägung,river,Fluss- kilometer,Mess- stellen- status,utm_easting,utm_northing,Projektion,longitude,latitude,altitude,area,country,source
+0,601,MPS Berlin-Spandauer-Schifffahrtskanal,Land Berlin,Online-Messstelle,Berlin-Spandauer-Schifffahrtskanal,9.08,Inaktiv,387758.0,5822226.0,UTM 33N,13.345031882377214,52.5385419101084,,,Germany,Wasserportal Berlin
+1,151,MPS Caprivibrücke,Land Berlin,Online-Messstelle,Spree,8.75,Inaktiv,385517.0,5820267.0,UTM 33N,13.31267956829901,52.520471396402655,,,Germany,Wasserportal Berlin
+2,153,MPS Charlottenburg,Land Berlin,Online-Messstelle,Spree,7.3,Inaktiv,384466.0,5820897.0,UTM 33N,13.296977705942494,52.525910895143,,,Germany,Wasserportal Berlin
+3,139,MPS Fischerinsel,Land Berlin,Online-Messstelle,Spree,,Aktiv,392156.0,5819389.0,UTM 33N,13.410771807981627,52.5139353323911,,,Germany,Wasserportal Berlin
+4,509,MPS Landwehrkanal,Land Berlin,Online-Messstelle,Landwehrkanal,5.47,Inaktiv,390253.0,5817774.0,UTM 33N,13.383273276412172,52.49904215744411,,,Germany,Wasserportal Berlin
+5,504,MPS Neuköllner Schifffahrtskanal,Land Berlin,Online-Messstelle,Neuköllner Schifffahrtskanal,0.73,Inaktiv,394375.0,5816094.0,UTM 33N,13.444504205637452,52.48475808326941,,,Germany,Wasserportal Berlin
+6,414,MPS Teltowkanal,Land Berlin,Online-Messstelle,Teltowkanal,19.05,Inaktiv,386482.0,5811802.0,UTM 33N,13.329779903329893,52.44460347444096,,,Germany,Wasserportal Berlin
+7,141,MS Mühlendammschleuse,Land Berlin,Messstation,Spree,17.71,Inaktiv,392010.0,5819459.0,UTM 33N,13.40859846932377,52.514535496586284,,,Germany,Wasserportal Berlin
+8,111,MS Rahnsdorf,Land Berlin,Messstation,Müggelspree,8.51,Aktiv,410862.0,5809645.0,UTM 33N,13.688948833932097,52.429737667508626,,,Germany,Wasserportal Berlin
+9,211,MS Schmöckwitz,Land Berlin,Messstation,Dahme,0.29,Aktiv,408335.0,5803524.0,UTM 33N,13.653468624670632,52.374305174002494,,,Germany,Wasserportal Berlin
+10,161,MS Sophienwerder,Land Berlin,Messstation,Spree,0.64,Aktiv,379020.0,5822169.0,UTM 33N,13.216279395444875,52.536158859681365,,,Germany,Wasserportal Berlin
+11,421,MS Teltow-Werft,Land Berlin,Messstation,Teltowkanal,11.47,Aktiv,381035.0,5807602.0,UTM 33N,13.251171023302001,52.40570315761897,,,Germany,Wasserportal Berlin
+12,602,Berlin-Spandauer Schifffahrtskanal - Föhrer Brücke,Land Berlin,Probenahme,Berlin-Spandauer Schifffahrtskanal,,,387733.0,5822262.0,UTM 33N,13.3446512627685,52.538860266822404,,,Germany,Wasserportal Berlin
+13,230,Dahme - Lange Brücke,Land Berlin,Probenahme,Dahme,33.18,,402951.0,5811489.0,UTM 33N,13.572094918462623,52.44496361645425,,,Germany,Wasserportal Berlin
+14,215,Dahme - Schmöckwitzer Brücke,Land Berlin,Probenahme,Dahme,0.2,,408365.0,5803618.0,UTM 33N,13.653883492273295,52.37515505566553,,,Germany,Wasserportal Berlin
+15,228,Dahme - uh. Teltowkanal,Land Berlin,Probenahme,Dahme,,,403118.0,5809921.0,UTM 33N,13.575005975100643,52.43090084503257,,,Germany,Wasserportal Berlin
+16,105,Dämeritzsee - Seemitte,Land Berlin,Probenahme,Dämeritzsee,44.9,,413588.0,5808661.0,UTM 33N,13.72928662130574,52.42133103633522,,,Germany,Wasserportal Berlin
+17,102,Gosener Graben - Gosener Landstr.,Land Berlin,Probenahme,Gosener Graben,,,412107.0,5806469.0,UTM 33N,13.708089927187821,52.401393242537566,,,Germany,Wasserportal Berlin
+18,115,Großer Müggelsee - Seemitte,Land Berlin,Probenahme,Großer Müggelsee,38.6,,407919.0,5810525.0,UTM 33N,13.645433285131174,52.43715917560908,,,Germany,Wasserportal Berlin
+19,350,Großer Wannsee - Höhe Strandbad,Land Berlin,Probenahme,Großer Wannsee,2.5,,375928.0,5811448.0,UTM 33N,13.174709598749411,52.4391283101172,,,Germany,Wasserportal Berlin
+20,330,Havel - Grunewaldturm,Land Berlin,Probenahme,Havel,7.0,,376911.0,5815779.0,UTM 33N,13.187565361855885,52.478267882842296,,,Germany,Wasserportal Berlin
+21,345,Havel - Krughorn,Land Berlin,Probenahme,Havel,16.03,,370973.0,5809944.0,UTM 33N,13.102437202738546,52.42446712150731,,,Germany,Wasserportal Berlin
+22,340,Havel - oh. Kälberwerder,Land Berlin,Probenahme,Havel,12.25,,373888.0,5811942.0,UTM 33N,13.144528478209095,52.443100301628405,,,Germany,Wasserportal Berlin
+23,325,Havel - Pichelsdorfer Gemünd,Land Berlin,Probenahme,Havel,356.0,,377892.0,5818907.0,UTM 33N,13.20085535476205,52.50659572512249,,,Germany,Wasserportal Berlin
+24,606,Hohenzollernkanal - Mäckeritzbrücke,Land Berlin,Probenahme,Berlin-Spandauer Schifffahrtskanal (Hohenz.kanal),,,382725.0,5823508.0,UTM 33N,13.270405187477518,52.54900150038055,,,Germany,Wasserportal Berlin
+25,605,Hohenzollernkanal - oh. Schleuse Plötzensee,Land Berlin,Probenahme,Berlin-Spandauer Schifffahrtskanal (Hohenz.kanal),7.25,,386187.0,5822962.0,UTM 33N,13.321626484370755,52.54482976847309,,,Germany,Wasserportal Berlin
+26,355,Kleiner Wannsee - Seemitte,Land Berlin,Probenahme,Kleiner Wannsee,3.15,,375163.0,5809033.0,UTM 33N,13.164363500936416,52.41725369906285,,,Germany,Wasserportal Berlin
+27,316,Kuhlake - oh. Kuhlaketeich,Land Berlin,Probenahme,Kuhlake,,,377493.0,5825482.0,UTM 33N,13.19255444937512,52.56558698184094,,,Germany,Wasserportal Berlin
+28,741,Laake - Freischützstr.,Land Berlin,Probenahme,Laake,0.2,,394980.0,5829252.0,UTM 33N,13.449247615655533,52.603123680010036,,,Germany,Wasserportal Berlin
+29,515,Landwehrkanal - Dovebrücke,Land Berlin,Probenahme,Landwehrkanal mit Flutgraben,0.18,,385991.0,5820120.0,UTM 33N,13.31971281002276,52.5192497789638,,,Germany,Wasserportal Berlin
+30,510,Landwehrkanal - uh. Möckernbrücke,Land Berlin,Probenahme,Landwehrkanal mit Flutgraben,5.17,,389959.0,5817816.0,UTM 33N,13.378930241388227,52.49936035437166,,,Germany,Wasserportal Berlin
+31,225,Langer See - Bammelecke,Land Berlin,Probenahme,Dahme,39.75,,406370.0,5807310.0,UTM 33N,13.623554002099732,52.40800053175398,,,Germany,Wasserportal Berlin
+32,740,Lietzengraben - Hobrechtsfelder Str.,Land Berlin,Probenahme,Lietzengraben,,,395988.0,5832108.0,UTM 33N,13.463227503006705,52.628983820419464,,,Germany,Wasserportal Berlin
+33,742,Malchower Fließgraben - Parkstr.,Land Berlin,Probenahme,Fließgraben,0.1,,395534.0,5827782.0,UTM 33N,13.457888915320014,52.59001990271718,,,Germany,Wasserportal Berlin
+34,110,Müggelspree - Fähre Rahnsdorf,Land Berlin,Probenahme,Müggelspree,41.5,,410874.0,5809657.0,UTM 33N,13.689122080752968,52.42984747918032,,,Germany,Wasserportal Berlin
+35,714,Neue Wuhle - Landsberger Allee,Land Berlin,Probenahme,Neue Wuhle,,,404161.0,5823094.0,UTM 33N,13.5865507955903,52.54947671104025,,,Germany,Wasserportal Berlin
+36,710,Neuenhagener Mühlenfließ (Erpe) - Hirschgartenstr.,Land Berlin,Probenahme,Neuenhagener Mühlenfließ (Erpe),0.7,,404689.0,5812583.0,UTM 33N,13.597345754719825,52.45510193407086,,,Germany,Wasserportal Berlin
+37,505,Neuköllner Schifffahrtskanal - Lohmühlenbrücke,Land Berlin,Probenahme,Neuköllner Schifffahrtskanal,0.1,,394046.0,5816613.0,UTM 33N,13.439496012285725,52.489358487556316,,,Germany,Wasserportal Berlin
+38,815,Nordgraben - Bollesteg,Land Berlin,Probenahme,Nordgraben,1.35,,384639.0,5828589.0,UTM 33N,13.296851000245491,52.595068871612064,,,Germany,Wasserportal Berlin
+39,315,Oberhavel - Höhe Freibad Schäferstraße,Land Berlin,Probenahme,Havel,2.1,,379186.0,5823955.0,UTM 33N,13.218075624896958,52.55224429991016,,,Germany,Wasserportal Berlin
+40,305,Oberhavel - Konradshöhe,Land Berlin,Probenahme,Havel,6.39,,379224.0,5827846.0,UTM 33N,13.217218077619421,52.5872162228763,,,Germany,Wasserportal Berlin
+41,320,Oberhavel - Schleuse Spandau,Land Berlin,Probenahme,Havel,0.8,,378513.0,5822856.0,UTM 33N,13.208556850338267,52.542219212012014,,,Germany,Wasserportal Berlin
+42,723,Panke - Bernau,Land Berlin,Probenahme,Panke,,,402453.0,5835574.0,UTM 33N,13.557688996945656,52.66133345127328,,,Germany,Wasserportal Berlin
+43,725,Panke - Buch,Land Berlin,Probenahme,Panke,16.7,,398025.0,5832623.0,UTM 33N,13.493153626504286,52.63399854700741,,,Germany,Wasserportal Berlin
+44,728,Panke - Bürgerpark,Land Berlin,Probenahme,Panke,4.4,,390886.0,5825518.0,UTM 33N,13.390050396186892,52.56876135269737,,,Germany,Wasserportal Berlin
+45,730,Panke - Nordhafen Vorbecken,Land Berlin,Probenahme,Panke,0.1,,389284.0,5822008.0,UTM 33N,13.367594887428343,52.53689521934516,,,Germany,Wasserportal Berlin
+46,729,Panke - uh. Schönwalder Straße,Land Berlin,Probenahme,Panke,,,389679.0,5822524.0,UTM 33N,13.373244810274748,52.541612408993004,,,Germany,Wasserportal Berlin
+47,135,Rummelsburger See - Seemitte,Land Berlin,Probenahme,Spree,23.0,,396645.0,5817308.0,UTM 33N,13.477543814169213,52.49610302856875,,,Germany,Wasserportal Berlin
+48,220,Seddinsee - Seddinwall,Land Berlin,Probenahme,Dahme,1.58,,410704.0,5805195.0,UTM 33N,13.687813249724982,52.38971542385768,,,Germany,Wasserportal Berlin
+49,150,Spree - oh. Mdg. Landwehrkanal,Land Berlin,Probenahme,Spree,9.21,,385894.0,5820380.0,UTM 33N,13.318194630261319,52.52156591291803,,,Germany,Wasserportal Berlin
+50,125,Spree - Dammbrücke,Land Berlin,Probenahme,Spree,0.05,,403196.0,5811888.0,UTM 33N,13.575582760218417,52.44859308428473,,,Germany,Wasserportal Berlin
+51,130,Spree - Fähre Baumschulenweg,Land Berlin,Probenahme,Spree,26.02,,397833.0,5814724.0,UTM 33N,13.495829377381607,52.47310414760903,,,Germany,Wasserportal Berlin
+52,140,Spree - Jannowitzbrücke,Land Berlin,Probenahme,Spree,18.39,,392684.0,5819396.0,UTM 33N,13.41854711841163,52.51410244595832,,,Germany,Wasserportal Berlin
+53,160,Spree - Sophienwerder,Land Berlin,Probenahme,Spree,0.67,,379052.0,5822201.0,UTM 33N,13.216739299517505,52.536453511347275,,,Germany,Wasserportal Berlin
+54,120,Spree - Spreetunnel,Land Berlin,Probenahme,Müggelspree,3.45,,406137.0,5811353.0,UTM 33N,13.61899448485992,52.444297857533726,,,Germany,Wasserportal Berlin
+55,807,Tegeler Fließ - Lübars,Land Berlin,Probenahme,Tegeler Fließ,,,388355.0,5831574.0,UTM 33N,13.350679852325836,52.62266900724732,,,Germany,Wasserportal Berlin
+56,803,Tegeler Fließ - Mühlenbeck,Land Berlin,Probenahme,Tegeler Fließ,,,390688.0,5836172.0,UTM 33N,13.383606996633285,52.664463154870404,,,Germany,Wasserportal Berlin
+57,805,Tegeler Fließ - Schildow,Land Berlin,Probenahme,Tegeler Fließ,10.0,,390338.0,5832893.0,UTM 33N,13.379523748648799,52.63492618904339,,,Germany,Wasserportal Berlin
+58,311,Tegeler See - Seemitte,Land Berlin,Probenahme,Tegeler See,,,382466.0,5827123.0,UTM 33N,13.265305831468362,52.5814299363261,,,Germany,Wasserportal Berlin
+59,410,Teltowkanal - Buschkrugbrücke,Land Berlin,Probenahme,Teltowkanal,27.64,,394474.0,5813252.0,UTM 33N,13.446861157999468,52.45923638975578,,,Germany,Wasserportal Berlin
+60,420,Teltowkanal - Eugen-Kleine-Brücke,Land Berlin,Probenahme,Teltowkanal,15.65,,384572.0,5809070.0,UTM 33N,13.302634561673477,52.419652671255875,,,Germany,Wasserportal Berlin
+61,430,Teltowkanal - Nathanbrücke,Land Berlin,Probenahme,Teltowkanal,3.72,,373743.0,5807049.0,UTM 33N,13.144243820168835,52.39910033527567,,,Germany,Wasserportal Berlin
+62,407,Teltowkanal - oh. Britzer Kreuz,Land Berlin,Probenahme,Teltowkanal,,,395374.0,5812657.0,UTM 33N,13.460288766609734,52.45406226991071,,,Germany,Wasserportal Berlin
+63,415,Teltowkanal - uh. Hafen Steglitz,Land Berlin,Probenahme,Teltowkanal,18.6,,386120.0,5811564.0,UTM 33N,13.324537335150513,52.442389384323675,,,Germany,Wasserportal Berlin
+64,610,Westhafenkanal - Mörschbrücke,Land Berlin,Probenahme,Westhafenkanal,0.23,,384359.0,5821664.0,UTM 33N,13.295134287057083,52.5327805849882,,,Germany,Wasserportal Berlin
+65,719,Wuhle - Am Bahndamm,Land Berlin,Probenahme,Wuhle,,,403271.0,5813053.0,UTM 33N,13.576348303219698,52.459076788829044,,,Germany,Wasserportal Berlin
+66,718,Wuhle - Cecilienstr.,Land Berlin,Probenahme,Wuhle,,,403606.0,5820451.0,UTM 33N,13.579135469361265,52.52562511020677,,,Germany,Wasserportal Berlin
+67,715,Wuhle - Landsberger Allee,Land Berlin,Probenahme,Wuhle,12.6,,404127.0,5823088.0,UTM 33N,13.586051257449382,52.549416800056086,,,Germany,Wasserportal Berlin
+68,5865900,Allee der Kosmonauten,Land Berlin,Wasserstand,M.-H.-Grenzgr.,4.1,Aktiv,399364.0,5820530.0,UTM 33N,13.516606021098575,52.5255681143133,,,Germany,Wasserportal Berlin
+69,5827103,Allendestraße,Land Berlin,Wasserstand,Müggelspree,35.0,Aktiv,404735.0,5811918.0,UTM 33N,13.598212309802335,52.449133222890204,,,Germany,Wasserportal Berlin
+70,5870400,Alsenbrücke,Land Berlin,Wasserstand,Griebnitzkanal,1.46,Aktiv,373751.0,5808343.0,UTM 33N,13.143873246451307,52.410729569816276,,,Germany,Wasserportal Berlin
+71,5865300,Am Bahndamm,Land Berlin,Wasserstand | Durchfluss,Wuhle,0.85,Inaktiv,403271.0,5813053.0,UTM 33N,13.576348303219698,52.459076788829044,,,Germany,Wasserportal Berlin
+72,5819900,Am Freibad,Land Berlin,Wasserstand,Tegeler Fließ,6.9,Aktiv,386939.0,5831193.0,UTM 33N,13.329901386598582,52.618952271085774,,,Germany,Wasserportal Berlin
+73,5864801,Am Kienberg,Land Berlin,Wasserstand | Durchfluss,Hellersdorfer Graben,0.26,Aktiv,404189.0,5821307.0,UTM 33N,13.5874792955232,52.53342116681907,,,Germany,Wasserportal Berlin
+74,5861101,Am Reitweg,Land Berlin,Wasserstand,Neuenhagener Mühlenfließ,3.5,Aktiv,406469.0,5814072.0,UTM 33N,13.623115503356978,52.46879223781281,,,Germany,Wasserportal Berlin
+75,5800107,Am Wolfsschluchtkanal,Land Berlin,Wasserstand,Krumme Lanke,,Aktiv,379735.0,5812272.0,UTM 33N,13.230390218772037,52.447383703008676,,,Germany,Wasserportal Berlin
+76,5800317,Biesdorfer Baggersee,Land Berlin,Wasserstand,Biesdorfer Baggersee,,Aktiv,401403.0,5817806.0,UTM 33N,13.547458273125633,52.501459559685266,,,Germany,Wasserportal Berlin
+77,5867003,Blankenfelde,Land Berlin,Wasserstand,Blankenfelder Graben,,Aktiv,393196.0,5832769.0,UTM 33N,13.4217788749985,52.634381811063626,,,Germany,Wasserportal Berlin
+78,5867401,Bürgerpark,Land Berlin,Wasserstand | Durchfluss,Panke,4.27,Aktiv,390875.0,5825499.0,UTM 33N,13.389894418414174,52.56858840217028,,,Germany,Wasserportal Berlin
+79,5800301,Dianasee,Land Berlin,Wasserstand,Dianasee,,Aktiv,382185.0,5816419.0,UTM 33N,13.264956978392057,52.4851829071037,,,Germany,Wasserportal Berlin
+80,5800302,Dreipfuhl,Land Berlin,Wasserstand,Dreipfuhl,,Aktiv,382549.0,5812143.0,UTM 33N,13.271820806163767,52.44683660845675,,,Germany,Wasserportal Berlin
+81,5863000,Eisenacher Straße,Land Berlin,Wasserstand,Wuhle,,Aktiv,403774.0,5822032.0,UTM 33N,13.581153010624497,52.53986386119387,,,Germany,Wasserportal Berlin
+82,5867900,Eisenbahnbrücke,Land Berlin,Wasserstand | Durchfluss,Nordgraben,1.3,Aktiv,384096.0,5828501.0,UTM 33N,13.288869036193697,52.594162578015,,,Germany,Wasserportal Berlin
+83,5867601,Eisstadion,Land Berlin,Wasserstand | Durchfluss,Panke,,Inbetriebnahme,389447.0,5822141.0,UTM 33N,13.369952838684402,52.53812353327911,,,Germany,Wasserportal Berlin
+84,5827101,Fähre Rahnsdorf,Land Berlin,Wasserstand | Durchfluss,Müggelspree,8.51,Aktiv,410862.0,5809624.0,UTM 33N,13.688954435126497,52.42954892067506,,,Germany,Wasserportal Berlin
+85,5800320,Fennpfuhl,Land Berlin,Wasserstand,Fennpfuhl,,Aktiv,396567.0,5821190.0,UTM 33N,13.47518790908833,52.53097573040079,,,Germany,Wasserportal Berlin
+86,5800313,Fennsee,Land Berlin,Wasserstand,Fennsee,,Aktiv,385206.0,5816180.0,UTM 33N,13.309507807069318,52.48367909115503,,,Germany,Wasserportal Berlin
+87,5860900,Fichtenau,Land Berlin,Wasserstand,Fredersdorfer Mühlenfließ,,Aktiv,411499.0,5812826.0,UTM 33N,13.697472159904434,52.45843183505956,,,Germany,Wasserportal Berlin
+88,5867101,Flaischlenstraße,Land Berlin,Wasserstand,Laake,,Aktiv,394980.0,5829252.0,UTM 33N,13.449247615655533,52.603123680010036,,,Germany,Wasserportal Berlin
+89,5800303,Flughafensee,Land Berlin,Wasserstand,Flughafensee,,Aktiv,384285.0,5825826.0,UTM 33N,13.292592473971224,52.57016511125771,,,Germany,Wasserportal Berlin
+90,5826702,Gosener Landstraße,Land Berlin,Wasserstand,Gosener Graben,1.0,Aktiv,412108.0,5806462.0,UTM 33N,13.70810645971691,52.401330486742935,,,Germany,Wasserportal Berlin
+91,5800305,Groß Glienicker See,Land Berlin,Wasserstand,Groß Glienicker See,,Aktiv,371780.0,5813789.0,UTM 33N,13.112822354713373,52.45920580788257,,,Germany,Wasserportal Berlin
+92,5800304,Grunewaldsee,Land Berlin,Wasserstand,Fenngraben,,Aktiv,381621.0,5814378.0,UTM 33N,13.257380100115657,52.466720282181306,,,Germany,Wasserportal Berlin
+93,5800306,Halensee,Land Berlin,Wasserstand,Halensee,,Aktiv,383269.0,5817559.0,UTM 33N,13.28051343463924,52.49566009554765,,,Germany,Wasserportal Berlin
+94,5861000,Hegemeisterweg,Land Berlin,Wasserstand,Fredersdorfer Mühlenfließ,1.8,Aktiv,411059.0,5811857.0,UTM 33N,13.691256473008101,52.44965107041228,,,Germany,Wasserportal Berlin
+95,5867300,Heinersdorf,Land Berlin,Wasserstand,Panke,7.8,Aktiv,393646.0,5827139.0,UTM 33N,13.430236349631148,52.5838753674577,,,Germany,Wasserportal Berlin
+96,5864700,Hellersdorf,Land Berlin,Wasserstand,Wuhle,,Aktiv,403809.0,5822038.0,UTM 33N,13.581667173540094,52.53992396876863,,,Germany,Wasserportal Berlin
+97,5865000,Honsfelder Brücke,Land Berlin,Wasserstand,Wuhle,5.8,Aktiv,402849.0,5817338.0,UTM 33N,13.56889023132151,52.49751298733422,,,Germany,Wasserportal Berlin
+98,5865200,Hoppendorfer Straße,Land Berlin,Wasserstand | Durchfluss,Wuhle,2.9,Aktiv,402687.0,5814550.0,UTM 33N,13.567319111877987,52.472427233017505,,,Germany,Wasserportal Berlin
+99,5800308,Hundekehlesee,Land Berlin,Wasserstand,Hundekehlesee,,Aktiv,381653.0,5816331.0,UTM 33N,13.257157490113968,52.484277011470915,,,Germany,Wasserportal Berlin
+100,5800321,Jungfernheideteich,Land Berlin,Wasserstand,Jungfernheideteich,,Aktiv,383309.0,5822806.0,UTM 33N,13.279260685632142,52.54281877201386,,,Germany,Wasserportal Berlin
+101,5867100,Krontaler Straße,Land Berlin,Wasserstand,Panke,11.4,Aktiv,395182.0,5830198.0,UTM 33N,13.451929399233704,52.61166414632163,,,Germany,Wasserportal Berlin
+102,5869700,Krummendammbrücke,Land Berlin,Wasserstand,Neuenhagener Mühlenfließ,6.6,Aktiv,407985.0,5816091.0,UTM 33N,13.64486846635424,52.487196031716856,,,Germany,Wasserportal Berlin
+103,5867500,Kühnemannstraße,Land Berlin,Wasserstand,Panke,3.98,Aktiv,390705.0,5825267.0,UTM 33N,13.387463688402134,52.566469401791885,,,Germany,Wasserportal Berlin
+104,5870100,Lichterfelde,Land Berlin,Wasserstand | Durchfluss,Teltowkanal,15.69,Aktiv,384611.0,5809105.0,UTM 33N,13.303195705349887,52.41997542332192,,,Germany,Wasserportal Berlin
+105,5800309,Lietzensee,Land Berlin,Wasserstand,Lietzensee,,Aktiv,384120.0,5818971.0,UTM 33N,13.292551211812848,52.50853005721561,,,Germany,Wasserportal Berlin
+106,5819901,Lübars,Land Berlin,Wasserstand,Tegeler Fließ,7.5,Aktiv,388343.0,5831583.0,UTM 33N,13.350499616321033,52.62274741618788,,,Germany,Wasserportal Berlin
+107,5800318,Malchower See,Land Berlin,Wasserstand,Malchower See,,Aktiv,397347.0,5825823.0,UTM 33N,13.485248989335403,52.57275991104238,,,Germany,Wasserportal Berlin
+108,5826701,Neue Fahlenbergbrücke,Land Berlin,Wasserstand | Durchfluss,Gosener Kanal,1.0,Aktiv,411803.0,5806597.0,UTM 33N,13.703589046319113,52.40249480525023,,,Germany,Wasserportal Berlin
+109,5866403,Nonnengraben,Land Berlin,Wasserstand,Nonnengraben,,Inbetriebnahme,383113.0,5823427.0,UTM 33N,13.276153194724321,52.548357072983364,,,Germany,Wasserportal Berlin
+110,5800315,Obersee,Land Berlin,Wasserstand,Obersee,,Aktiv,397390.0,5823169.0,UTM 33N,13.486704418757226,52.54891663381064,,,Germany,Wasserportal Berlin
+111,5800316,Orankesee,Land Berlin,Wasserstand,Orankesee,,Aktiv,396984.0,5823212.0,UTM 33N,13.480705654404975,52.54922639839071,,,Germany,Wasserportal Berlin
+112,5867700,Pasewalker Brücke,Land Berlin,Wasserstand,Nordgraben,11.6,Aktiv,393759.0,5828194.0,UTM 33N,13.431565002572178,52.59337841321356,,,Germany,Wasserportal Berlin
+113,5803500,Pfaueninsel,Land Berlin,Wasserstand,Havel,14.65,Aktiv,372451.0,5810552.0,UTM 33N,13.12392899299197,52.43027701363646,,,Germany,Wasserportal Berlin
+114,5800312,Plötzensee,Land Berlin,Wasserstand,Plötzensee,,Aktiv,386803.0,5822711.0,UTM 33N,13.330791874043333,52.542702616340016,,,Germany,Wasserportal Berlin
+115,5867000,Röntgental,Land Berlin,Wasserstand,Panke,17.8,Aktiv,399954.0,5834025.0,UTM 33N,13.521222369986967,52.64695730685339,,,Germany,Wasserportal Berlin
+116,5800106,Schäfersee,Land Berlin,Wasserstand,Schäfersee,,Aktiv,388932.0,5824968.0,UTM 33N,13.361416582985191,52.56342340968733,,,Germany,Wasserportal Berlin
+117,5866700,Schleuse Neukölln OP,Land Berlin,Wasserstand,Neuk. Schifffahrtskanal,3.25,Aktiv,394961.0,5814002.0,UTM 33N,13.453789836428243,52.46607049770047,,,Germany,Wasserportal Berlin
+118,5866800,Schleuse Neukölln UP,Land Berlin,Wasserstand,Neuk. Schifffahrtskanal,3.1,Aktiv,395006.0,5814077.0,UTM 33N,13.45442837700539,52.46675317519603,,,Germany,Wasserportal Berlin
+119,5862811,Schmöckwitz US,Land Berlin,Wasserstand | Durchfluss,Zeuthener See,11.2,Aktiv,408302.0,5803462.0,UTM 33N,13.653000966262638,52.37374240150804,,,Germany,Wasserportal Berlin
+120,5867600,Schönwalder Str.,Land Berlin,Wasserstand,Panke,0.9,Aktiv,389686.0,5822625.0,UTM 33N,13.373314425986347,52.5425214637779,,,Germany,Wasserportal Berlin
+121,5827700,Sophienwerder,Land Berlin,Wasserstand | Durchfluss,Spree,0.6,Aktiv,379020.0,5822170.0,UTM 33N,13.216279031189275,52.536167845458465,,,Germany,Wasserportal Berlin
+122,5820000,St.-Joseph-Steg,Land Berlin,Wasserstand,Tegeler Fließ,1.2,Inaktiv,384115.0,5829237.0,UTM 33N,13.288891671407894,52.60078034872643,,,Germany,Wasserportal Berlin
+123,5815911,Tegelort,Land Berlin,Wasserstand,Havel,4.95,Aktiv,379625.0,5826300.0,UTM 33N,13.223695944336834,52.57341319538272,,,Germany,Wasserportal Berlin
+124,5803200,Tiefwerder,Land Berlin,Wasserstand | Durchfluss,Havel,1.48,Aktiv,378225.0,5820889.0,UTM 33N,13.205033354539884,52.52447996475944,,,Germany,Wasserportal Berlin
+125,5867301,Venturigerinne,Land Berlin,Wasserstand,Malchower Fließgraben,,Aktiv,394444.0,5827635.0,UTM 33N,13.44185180801633,52.58848829311184,,,Germany,Wasserportal Berlin
+126,5867201,Verteiler OP,Land Berlin,Wasserstand,Panke,8.7,Aktiv,394046.0,5827952.0,UTM 33N,13.435877720408696,52.59125965383717,,,Germany,Wasserportal Berlin
+127,5867202,Verteiler UP,Land Berlin,Wasserstand,Panke,8.7,Aktiv,394040.0,5827935.0,UTM 33N,13.4357946239416,52.591105710389705,,,Germany,Wasserportal Berlin
+128,5800310,Waldsee Zehlendorf,Land Berlin,Wasserstand,Waldsee Zehlendorf,,Aktiv,380007.0,5811576.0,UTM 33N,13.234640530076504,52.44118924224458,,,Germany,Wasserportal Berlin
+129,5800314,Weißer See,Land Berlin,Wasserstand,Weißer See,,Aktiv,395803.0,5823634.0,UTM 33N,13.463162364580391,52.552794102257096,,,Germany,Wasserportal Berlin
+130,5861200,Wiesengrund,Land Berlin,Wasserstand | Durchfluss,Neuenhagener Mühlenfließ,3.0,Aktiv,406343.0,5813565.0,UTM 33N,13.62140361197023,52.464213904972105,,,Germany,Wasserportal Berlin
+131,5867001,Wiltbergstraße,Land Berlin,Wasserstand,Panke,15.5,Aktiv,398145.0,5832797.0,UTM 33N,13.49487248167082,52.63558479785455,,,Germany,Wasserportal Berlin
+132,5864800,Wuhletal,Land Berlin,Wasserstand | Durchfluss,Wuhle,8.04,Aktiv,403189.0,5818965.0,UTM 33N,13.573423610280786,52.51219593905644,,,Germany,Wasserportal Berlin
+133,5866301,Zoo,Land Berlin,Wasserstand | Durchfluss,Landwehrkanal,1.9,Aktiv,387248.0,5819111.0,UTM 33N,13.338572323633175,52.51044402168134,,,Germany,Wasserportal Berlin
+134,SP_0150,Beeskow,Land Brandenburg,Online-Messstelle,Spree,,,449035.0,5780363.0,GK4,14.254762367929047,52.17139202623474,,,Germany,Wasserportal Berlin
+135,TK_0025,Kleinmachnow,Land Brandenburg,Messstation,Teltowkanal,6.7,,376616.0,5806910.0,GK4,13.186499864808267,52.39850646782639,,,Germany,Wasserportal Berlin
+136,SP_0130,Leibsch,Land Brandenburg,Online-Messstelle,Spree,,,423205.0,5770375.0,GK4,13.879382013083578,52.078619353370236,,,Germany,Wasserportal Berlin
+137,SP_0050,Neuhausen,Land Brandenburg,Online-Messstelle,Spree,,,458642.0,5724014.0,GK4,14.402000768044463,51.66558512240773,,,Germany,Wasserportal Berlin
+138,HV_0110,Potsdam,Land Brandenburg,Messstation,Havel,26.5,,368906.0,5807350.0,GK4,13.073073402113843,52.40066783859406,,,Germany,Wasserportal Berlin
+139,SP_0020,Spremberg,Land Brandenburg,Online-Messstelle,Spree,,,457573.0,5711095.0,GK4,14.388108452602529,51.54935007040231,,,Germany,Wasserportal Berlin
+140,5825500,"Beeskow, Spreeschleuse UP",Land Brandenburg,Wasserstand,Spree,,,465434.8,5784437.0,GK4,14.494141015293406,52.20928962877706,,,Germany,Wasserportal Berlin
+141,5821000,"Cottbus, Sandower Brücke",Land Brandenburg,Wasserstand,Spree,,,466176.6,5739074.0,GK4,14.509475817553533,51.80149427958191,,,Germany,Wasserportal Berlin
+142,5827000,Hohenbinde,Land Brandenburg,Wasserstand,Spree,,,462020.0,5807955.0,GK4,14.441513170706456,52.42049285418683,,,Germany,Wasserportal Berlin
+143,5824700,"Leibsch, Spreewehr UP",Land Brandenburg,Wasserstand,Spree,,,462877.6,5774042.0,GK4,14.457855167819075,52.11566906123621,,,Germany,Wasserportal Berlin
+144,5823800,"Lübben, Zusammenfluss",Land Brandenburg,Wasserstand,Spree,,,463065.3,5760146.0,GK4,14.462098662725548,51.990749933674024,,,Germany,Wasserportal Berlin
+145,5862201,Prierow 2,Land Brandenburg,Wasserstand,Dahme,,,461129.7,5761415.0,GK4,14.433766940232788,52.00202680891868,,,Germany,Wasserportal Berlin
+146,5802600,Sachsenhausen,Land Brandenburg,Wasserstand,Havel,,,458397.6,5849672.0,GK4,14.383001589565012,52.795244711781024,,,Germany,Wasserportal Berlin
+147,5820900,Spremberg,Land Brandenburg,Wasserstand,Spree,,,466438.2,5718499.0,GK4,14.515250919546636,51.61651852220435,,,Germany,Wasserportal Berlin
+148,582740,Berlin-Charlottenburg OP,WSV,Wasserstand,Spree-Oder-Wasserstrasse,6.44,,383846.0,5821514.0,UTM 33N,13.287627369836903,52.53132352068788,,,Germany,Wasserportal Berlin
+149,582750,Berlin-Charlottenburg UP,WSV,Wasserstand,Spree-Oder-Wasserstrasse,6.24,,383683.0,5821469.0,UTM 33N,13.285241305571782,52.530884366382956,,,Germany,Wasserportal Berlin
+150,586290,Berlin-Köpenick,WSV,Wasserstand,Spree-Oder-Wasserstrasse,35.02,,403041.62,5809763.77,UTM 33N,13.57392853074815,52.42947419800437,,,Germany,Wasserportal Berlin
+151,582720,Berlin-Mühlendamm OP,WSV,Wasserstand,Spree-Oder-Wasserstrasse,17.9,,392226.0,5819459.0,UTM 33N,13.411780236482855,52.51457824698453,,,Germany,Wasserportal Berlin
+152,582730,Berlin-Mühlendamm UP,WSV,Wasserstand,Spree-Oder-Wasserstrasse,17.7,,392030.0,5819488.0,UTM 33N,13.408883661297105,52.51480007286848,,,Germany,Wasserportal Berlin
+153,586600,Berlin-Oberschleuse OP,WSV,Wasserstand,Landwehrkanal,10.62,,394761.0,5817580.0,UTM 33N,13.449716769104914,52.4981872178536,,,Germany,Wasserportal Berlin
+154,586610,Berlin-Oberschleuse UP,WSV,Wasserstand,Landwehrkanal,10.51,,394702.0,5817517.0,UTM 33N,13.44886791109867,52.497609655594964,,,Germany,Wasserportal Berlin
+155,586640,Berlin-Ploetzensee OP,WSV,Wasserstand,Berlin-Spandauer-Schifffahrtskanal,7.41,,386284.0,5822844.0,UTM 33N,13.323096675403129,52.54378965521543,,,Germany,Wasserportal Berlin
+156,586650,Berlin-Ploetzensee UP,WSV,Wasserstand,Berlin-Spandauer-Schifffahrtskanal,7.5,,386357.0,5822745.0,UTM 33N,13.324206552002128,52.54291525404372,,,Germany,Wasserportal Berlin
+157,586810,Berlin-Schmoeckwitz,WSV,Wasserstand,Dahme-Wasserstrasse,0.28,,408332.0,5804126.0,UTM 33N,13.653259953454945,52.379715384946955,,,Germany,Wasserportal Berlin
+158,580300,Berlin-Spandau OP,WSV,Wasserstand,Havel-Oder-Wasserstrasse,0.76,,378532.0,5822749.0,UTM 33N,13.208876020191965,52.541261977117735,,,Germany,Wasserportal Berlin
+159,586620,Berlin-Unterschleuse OP,WSV,Wasserstand,Landwehrkanal,1.71,,387105.0,5819219.0,UTM 33N,13.336429492549138,52.51138495700633,,,Germany,Wasserportal Berlin
+160,586630,Berlin-Unterschleuse UP,WSV,Wasserstand,Landwehrkanal,1.61,,387035.0,5819247.0,UTM 33N,13.335388966912006,52.511622074803284,,,Germany,Wasserportal Berlin
+161,5811000,Bolt OP,Land Mecklenburg-Vorpommern,Wasserstand,Bolter Kanal,,,351992.0,5915844.0,UTM 33N,12.775284430842266,53.37095491565058,,,Germany,Wasserportal Berlin
+162,581591,Borgsdorf,WSV,Wasserstand,Havel-Oder-Wasserstrasse,20.3,,381834.26,5840390.6,UTM 33N,13.251237000723112,52.70051299694442,,,Germany,Wasserportal Berlin
+163,580090,Bredereiche UP,WSV,Wasserstand,Obere Havel-Wasserstrasse,47.63,,382354.0,5888710.49,UTM 33N,13.241418461571563,53.1347977799795,,,Germany,Wasserportal Berlin
+164,690050,Eisenhuettenstadt Schl. OP,WSV,Wasserstand,Spree-Oder-Wasserstrasse,127.18,,476194.36,5775795.4,UTM 33N,14.65220881308471,52.132166946670125,,,Germany,Wasserportal Berlin
+165,603020,Eisenhuettenstadt Schl. UP,WSV,Wasserstand,Spree-Oder-Wasserstrasse,127.55,,476473.24,5775790.4,UTM 33N,14.65628340803471,52.13213393821872,,,Germany,Wasserportal Berlin
+166,582640,Fuerstenwalde OP,WSV,Wasserstand,Spree-Oder-Wasserstrasse,74.75,,436419.0,5800842.54,UTM 33N,14.066449792710582,52.354180691940115,,,Germany,Wasserportal Berlin
+167,582650,Fuerstenwalde UP,WSV,Wasserstand,Spree-Oder-Wasserstrasse,74.65,,436342.95,5800832.42,UTM 33N,14.06533524238669,52.35408089531817,,,Germany,Wasserportal Berlin
+168,582660,Grosse Tränke Wehr OP,WSV,Wasserstand,Müggelspree,45.03,,431708.64,5802441.17,UTM 33N,13.996974021869345,52.36798427193274,,,Germany,Wasserportal Berlin
+169,582670,Grosse Tränke Wehr UP,WSV,Wasserstand,Müggelspree,44.91,,431702.84,5802514.54,UTM 33N,13.996873908192915,52.36864307303431,,,Germany,Wasserportal Berlin
+170,585940,Kersdorf OP,WSV,Wasserstand,Spree-Oder-Wasserstrasse,89.86,,448127.75,5795277.51,UTM 33N,14.239208054458901,52.30538597710996,,,Germany,Wasserportal Berlin
+171,585950,Kersdorf UP,WSV,Wasserstand,Spree-Oder-Wasserstrasse,89.66,,448179.69,5795237.14,UTM 33N,14.239975981861678,52.30502796672647,,,Germany,Wasserportal Berlin
+172,580430,Ketzin,WSV,Wasserstand,Untere Havel-Wasserstrasse,34.05,,354329.88,5814736.8,UTM 33N,12.855756449554812,52.46334598763812,,,Germany,Wasserportal Berlin
+173,587020,Kleinmachnow OP,WSV,Wasserstand,Teltowkanal,8.42,,378292.38,5806605.27,UTM 33N,13.211236960053856,52.396143485033164,,,Germany,Wasserportal Berlin
+174,587030,Kleinmachnow UP,WSV,Wasserstand,Teltowkanal,8.28,,378021.53,5806612.42,UTM 33N,13.207255728172603,52.3961474495638,,,Germany,Wasserportal Berlin
+175,581540,Liebenwalde OP,WSV,Wasserstand,Malzer Kanal,45.33,,391993.63,5856895.54,UTM 33N,13.396077084056758,52.8509525444343,,,Germany,Wasserportal Berlin
+176,581550,Liebenwalde UP,WSV,Wasserstand,Malzer Kanal,43.26,,391990.63,5856823.63,UTM 33N,13.396056376115116,52.85030574998422,,,Germany,Wasserportal Berlin
+177,581000,Mirow OP,WSV,Wasserstand,Müritz-Havel-Wasserstrasse,23.09,,353318.24,5904847.51,UTM 33N,12.800290737927105,53.272550904610235,,,Germany,Wasserportal Berlin
+178,586270,Neue Mühle Schleuse OP,WSV,Wasserstand,Dahme-Wasserstrasse,9.56,,408058.98,5794908.13,UTM 33N,13.651772464349655,52.296819922793965,,,Germany,Wasserportal Berlin
+179,586280,Neue Mühle Schleuse UP,WSV,Wasserstand,Dahme-Wasserstrasse,9.4,,407915.44,5794983.85,UTM 33N,13.649647517986365,52.29747645210265,,,Germany,Wasserportal Berlin
+180,585850,Neuhaus OP,WSV,Wasserstand,Neuhauser Speisekanal,2.7,,451575.17,5791495.68,UTM 33N,14.290309282651087,52.271702809249646,,,Germany,Wasserportal Berlin
+181,585860,Neuhaus UP,WSV,Wasserstand,Neuhauser Speisekanal,2.77,,451573.33,5790836.32,UTM 33N,14.290376970966786,52.26577509564052,,,Germany,Wasserportal Berlin
+182,580412,Potsdam,WSV,Wasserstand,Potsdamer Havel,26.63,,368894.48,5807346.31,UTM 33N,13.072905620755106,52.4006319237174,,,Germany,Wasserportal Berlin
+183,587050,Schönwalde OP,WSV,Wasserstand,Havelkanal,8.68,,370590.26,5830364.9,UTM 33N,13.088864452755615,52.60786221769383,,,Germany,Wasserportal Berlin
+184,5960300,Waren,WSV,Wasserstand,Müritz-Elde-Wasserstrasse,151.98,,345790.79,5932010.08,UTM 33N,12.674235770943005,53.51437571258874,,,Germany,Wasserportal Berlin
+185,585920,Wernsdorf OP,WSV,Wasserstand,Spree-Oder-Wasserstrasse,47.74,,412260.05,5803104.4,UTM 33N,13.711220040522965,52.37117647810272,,,Germany,Wasserportal Berlin
+186,5859300,Wernsdorf UP,WSV,Wasserstand,Spree-Oder-Wasserstrasse,47.46,,412014.22,5803270.05,UTM 33N,13.707566665244054,52.372625933150985,,,Germany,Wasserportal Berlin
+187,586040,Woltersdorf OP,WSV,Wasserstand,Rüdersdorfer Gewässer,3.89,,416038.87,5811017.42,UTM 33N,13.764726043884853,52.44289278722093,,,Germany,Wasserportal Berlin
+188,586050,Woltersdorf UP,WSV,Wasserstand,Rüdersdorfer Gewässer,3.71,,416026.42,5810992.89,UTM 33N,13.764549088588545,52.44267039396011,,,Germany,Wasserportal Berlin
