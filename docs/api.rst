@@ -14,6 +14,7 @@ API Reference
    fetchers/chile
    fetchers/czech
    fetchers/france
+   fetchers/germany_berlin
    fetchers/japan
    fetchers/norway
    fetchers/poland
