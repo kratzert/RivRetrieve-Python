@@ -8,9 +8,13 @@ with open("README.md", "r", encoding="utf-8") as fh:
 with open("requirements.txt", "r", encoding="utf-8") as f:
     requirements = f.read().splitlines()
 
+about = {}
+with open("rivretrieve/__about__.py", "r") as fp:
+    exec(fp.read(), about)
+
 setup(
     name="rivretrieve",
-    version="0.1.0",
+    version=about["__version__"],
     author="RivRetrieve Python Contributors",
     author_email="f.kratzert@gmail.com",  # Replace with a valid email
     description="A Python package for retrieving global river gauge data.",
