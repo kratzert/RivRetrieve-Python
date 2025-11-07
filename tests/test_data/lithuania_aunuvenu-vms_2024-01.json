@@ -1,0 +1,168 @@
+{
+    "station": {
+        "code": "aunuvenu-vms",
+        "name": "Aunuvėnų VMS",
+        "waterBody": "Aunuva",
+        "coordinates": {
+            "latitude": 55.850369,
+            "longitude": 22.765429
+        }
+    },
+    "observations": [
+        {
+            "observationDateUtc": "2024-01-01",
+            "waterLevel": 245,
+            "waterDischarge": 1.96
+        },
+        {
+            "observationDateUtc": "2024-01-02",
+            "waterLevel": 225,
+            "waterDischarge": 1.62
+        },
+        {
+            "observationDateUtc": "2024-01-03",
+            "waterLevel": 206,
+            "waterDischarge": 1.32
+        },
+        {
+            "observationDateUtc": "2024-01-04",
+            "waterLevel": 179,
+            "waterDischarge": 0.93
+        },
+        {
+            "observationDateUtc": "2024-01-05",
+            "waterLevel": 157,
+            "waterDischarge": 0.69
+        },
+        {
+            "observationDateUtc": "2024-01-06",
+            "waterLevel": 142,
+            "waterDischarge": 0.54
+        },
+        {
+            "observationDateUtc": "2024-01-07",
+            "waterLevel": 128,
+            "waterDischarge": 0.4
+        },
+        {
+            "observationDateUtc": "2024-01-08",
+            "waterLevel": 119,
+            "waterDischarge": 0.32
+        },
+        {
+            "observationDateUtc": "2024-01-09",
+            "waterLevel": 116,
+            "waterDischarge": 0.3
+        },
+        {
+            "observationDateUtc": "2024-01-10",
+            "waterLevel": 118,
+            "waterDischarge": 0.32
+        },
+        {
+            "observationDateUtc": "2024-01-11",
+            "waterLevel": 119,
+            "waterDischarge": 0.32
+        },
+        {
+            "observationDateUtc": "2024-01-12",
+            "waterLevel": 115,
+            "waterDischarge": 0.29
+        },
+        {
+            "observationDateUtc": "2024-01-13",
+            "waterLevel": 110,
+            "waterDischarge": 0.25
+        },
+        {
+            "observationDateUtc": "2024-01-14",
+            "waterLevel": 112,
+            "waterDischarge": 0.27
+        },
+        {
+            "observationDateUtc": "2024-01-15",
+            "waterLevel": 117,
+            "waterDischarge": 0.31
+        },
+        {
+            "observationDateUtc": "2024-01-16",
+            "waterLevel": 113,
+            "waterDischarge": 0.26
+        },
+        {
+            "observationDateUtc": "2024-01-17",
+            "waterLevel": 111,
+            "waterDischarge": 0.25
+        },
+        {
+            "observationDateUtc": "2024-01-18",
+            "waterLevel": 108,
+            "waterDischarge": 0.22
+        },
+        {
+            "observationDateUtc": "2024-01-19",
+            "waterLevel": 107,
+            "waterDischarge": 0.21
+        },
+        {
+            "observationDateUtc": "2024-01-20",
+            "waterLevel": 108,
+            "waterDischarge": 0.21
+        },
+        {
+            "observationDateUtc": "2024-01-21",
+            "waterLevel": 107,
+            "waterDischarge": 0.21
+        },
+        {
+            "observationDateUtc": "2024-01-22",
+            "waterLevel": 107,
+            "waterDischarge": 0.21
+        },
+        {
+            "observationDateUtc": "2024-01-23",
+            "waterLevel": 146,
+            "waterDischarge": 0.64
+        },
+        {
+            "observationDateUtc": "2024-01-24",
+            "waterLevel": 250,
+            "waterDischarge": 2.17
+        },
+        {
+            "observationDateUtc": "2024-01-25",
+            "waterLevel": 264,
+            "waterDischarge": 2.51
+        },
+        {
+            "observationDateUtc": "2024-01-26",
+            "waterLevel": 245,
+            "waterDischarge": 2.07
+        },
+        {
+            "observationDateUtc": "2024-01-27",
+            "waterLevel": 220,
+            "waterDischarge": 1.57
+        },
+        {
+            "observationDateUtc": "2024-01-28",
+            "waterLevel": 196,
+            "waterDischarge": 1.15
+        },
+        {
+            "observationDateUtc": "2024-01-29",
+            "waterLevel": 185,
+            "waterDischarge": 1
+        },
+        {
+            "observationDateUtc": "2024-01-30",
+            "waterLevel": 176,
+            "waterDischarge": 0.91
+        },
+        {
+            "observationDateUtc": "2024-01-31",
+            "waterLevel": 172,
+            "waterDischarge": 0.88
+        }
+    ]
+}

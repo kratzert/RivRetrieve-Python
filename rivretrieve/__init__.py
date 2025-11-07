@@ -9,6 +9,7 @@ from .czech import CzechFetcher
 from .france import FranceFetcher
 from .germany_berlin import GermanyBerlinFetcher
 from .japan import JapanFetcher
+from .lithuania import LithuaniaFetcher
 from .norway import NorwayFetcher
 from .poland import PolandFetcher
 from .portugal import PortugalFetcher
