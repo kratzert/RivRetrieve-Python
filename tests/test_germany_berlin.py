@@ -1,57 +1,47 @@
-import logging
+import os
+import unittest
+from unittest.mock import MagicMock, patch
 
-import matplotlib.pyplot as plt
+import pandas as pd
+from pandas.testing import assert_frame_equal
 
 from rivretrieve import GermanyBerlinFetcher, constants
 
-logging.basicConfig(level=logging.INFO)
 
-# Berlin gauge IDs (example: 5867601 = Tegeler See)
-gauge_ids = ["5867601"]
+class TestGermanyBerlinFetcher(unittest.TestCase):
+    def setUp(self):
+        self.fetcher = GermanyBerlinFetcher()
+        self.test_data_dir = os.path.join(os.path.dirname(__file__), "test_data")
 
-# Variable to test — choose from available constants
-variable = constants.DISCHARGE_DAILY_MEAN  # water level (m)
+    def load_sample_data(self, filename):
+        with open(os.path.join(self.test_data_dir, filename), "r", encoding="utf-8") as f:
+            return f.read()
 
-# Period to fetch
-start_date = "2023-10-01"
-end_date = "2024-03-31"
+    @patch("requests.get")
+    def test_get_data_discharge(self, mock_get):
+        sample_csv = self.load_sample_data("germany_berlin_discharge_sample.csv")
 
-plt.figure(figsize=(12, 6))
+        mock_response = MagicMock()
+        mock_response.text = sample_csv
+        mock_response.raise_for_status = MagicMock()
+        mock_get.return_value = mock_response
 
-fetcher = GermanyBerlinFetcher()
+        gauge_id = "5867601"
+        variable = constants.DISCHARGE_DAILY_MEAN
+        start_date = "2024-01-01"
+        end_date = "2024-01-03"
 
-for gauge_id in gauge_ids:
-    print(f"Fetching data for {gauge_id} from {start_date} to {end_date}...")
+        result_df = self.fetcher.get_data(gauge_id, variable, start_date, end_date)
 
-    data = fetcher.get_data(
-        gauge_id=gauge_id,
-        variable=variable,
-        start_date=start_date,
-        end_date=end_date,
-    )
+        expected_data = {
+            constants.TIME_INDEX: pd.to_datetime(["2024-01-01", "2024-01-02", "2024-01-03"]),
+            constants.DISCHARGE_DAILY_MEAN: [1.75, 1.75, 2.08],
+        }
+        expected_df = pd.DataFrame(expected_data).set_index(constants.TIME_INDEX)
 
-    if not data.empty:
-        print(f"\nData retrieved for gauge {gauge_id}")
-        print(data.head())
-        print(f"Time series from {data.index.min()} to {data.index.max()}")
+        assert_frame_equal(result_df, expected_df)
+        mock_get.assert_called_once()
 
-        plt.plot(
-            data.index,
-            data[variable],
-            label=gauge_id,
-            marker="o",
-        )
-    else:
-        print(f"\nNo data found for {gauge_id}")
 
-plt.xlabel(constants.TIME_INDEX)
-plt.ylabel(f"{variable} ({'m³/s' if variable == constants.DISCHARGE_DAILY_MEAN else 'm'})")
-plt.title(f"Berlin ({gauge_ids[0]}) — {variable} time series")
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-
-plot_path = "berlin_fetcher_plot.png"
-plt.savefig(plot_path)
-
-# print(fetcher.get_metadata())
+if __name__ == "__main__":
+    unittest.main()
