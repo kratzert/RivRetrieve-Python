@@ -17,7 +17,7 @@ class SouthKoreaFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from South Korea's WAMIS Open API.
 
     Data Source:
-        - Han River Flood Control Office (WAMIS Open API, http://www.wamis.go.kr) 
+        - Han River Flood Control Office (WAMIS Open API, http://www.wamis.go.kr)
 
     Supported Variables:
         - constants.DISCHARGE_DAILY_MEAN (m³/s)
