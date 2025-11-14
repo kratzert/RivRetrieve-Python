@@ -1,5 +1,6 @@
 """RivRetrieve: A Python package for retrieving global river gauge data."""
 
+from .argentina import ArgentinaFetcher
 from .australia import AustraliaFetcher
 from .base import RiverDataFetcher
 from .brazil import BrazilFetcher
