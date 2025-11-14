@@ -20,9 +20,9 @@ class SouthKoreaFetcher(base.RiverDataFetcher):
         - Han River Flood Control Office (WAMIS Open API, http://www.wamis.go.kr)
 
     Supported Variables:
-        - constants.DISCHARGE_DAILY_MEAN (m³/s)
-        - constants.STAGE_DAILY_MEAN (m)
-        - constants.STAGE_HOURLY_MEAN (m)
+        - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
+        - ``constants.STAGE_DAILY_MEAN`` (m)
+        - ``constants.STAGE_HOURLY_MEAN`` (m)
 
     Data and API description:
         - see WAMIS Open API: http://wamis.go.kr:8080/wamisweb/flw/w15.do
