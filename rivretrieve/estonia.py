@@ -23,15 +23,15 @@ class EstoniaFetcher(base.RiverDataFetcher):
         - Estonian Geoportal WISKI hydrology database (WFS) (https://inspire.geoportaal.ee/geoserver/EF_hydrojaamad/wfs)
 
     Supported variables:
-        - constants.DISCHARGE_DAILY_MEAN (m³/s)
-        - constants.DISCHARGE_DAILY_MAX (m³/s)
-        - constants.DISCHARGE_DAILY_MIN (m³/s)
-        - constants.STAGE_DAILY_MEAN (m)
-        - constants.STAGE_DAILY_MAX (m)
-        - constants.STAGE_DAILY_MIN (m)
-        - constants.WATER_TEMPERATURE_DAILY_MEAN (°C)
-        - constants.WATER_TEMPERATURE_DAILY_MAX (°C)
-        - constants.WATER_TEMPERATURE_DAILY_MIN (°C)
+        - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
+        - ``constants.DISCHARGE_DAILY_MAX`` (m³/s)
+        - ``constants.DISCHARGE_DAILY_MIN`` (m³/s)
+        - ``constants.STAGE_DAILY_MEAN`` (m)
+        - ``constants.STAGE_DAILY_MAX`` (m)
+        - ``constants.STAGE_DAILY_MIN`` (m)
+        - ``constants.WATER_TEMPERATURE_DAILY_MEAN`` (°C)
+        - ``constants.WATER_TEMPERATURE_DAILY_MAX`` (°C)
+        - ``constants.WATER_TEMPERATURE_DAILY_MIN`` (°C)
 
     API description:
         https://estmodel.envir.ee/stations
