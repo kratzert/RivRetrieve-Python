@@ -13,6 +13,7 @@ API Reference
    fetchers/canada
    fetchers/chile
    fetchers/czech
+   fetchers/estonia
    fetchers/france
    fetchers/germany_berlin
    fetchers/japan
