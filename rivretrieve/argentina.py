@@ -20,17 +20,17 @@ class ArgentinaFetcher(base.RiverDataFetcher):
             https://alerta.ina.gob.ar/pub/gui
 
         Supported variables:
-            - constants.STAGE_INSTANT (m)
-            - constants.STAGE_DAILY_MEAN (m)
-            - constants.STAGE_HOURLY_MEAN (m)
-            - constants.DISCHARGE_INSTANT (m³/s)
-            - constants.DISCHARGE_DAILY_MEAN (m³/s)
-            - constants.DISCHARGE_DAILY_MAX (m³/s)
-            - constants.DISCHARGE_DAILY_MIN (m³/s)
-            - constants.DISCHARGE_HOURLY_MEAN (m³/s)
-            - constants.WATER_TEMPERATURE_INSTANT (°C)
-            - constants.WATER_TEMPERATURE_DAILY_MEAN (°C)
-            - constants.WATER_TEMPERATURE_HOURLY_MEAN (°C)
+            - ``constants.STAGE_INSTANT`` (m)
+            - ``constants.STAGE_DAILY_MEAN`` (m)
+            - ``constants.STAGE_HOURLY_MEAN`` (m)
+            - ``constants.DISCHARGE_INSTANT`` (m³/s)
+            - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
+            - ``constants.DISCHARGE_DAILY_MAX`` (m³/s)
+            - ``constants.DISCHARGE_DAILY_MIN`` (m³/s)
+            - ``constants.DISCHARGE_HOURLY_MEAN`` (m³/s)
+            - ``constants.WATER_TEMPERATURE_INSTANT`` (°C)
+            - ``constants.WATER_TEMPERATURE_DAILY_MEAN`` (°C)
+            - ``constants.WATER_TEMPERATURE_HOURLY_MEAN`` (°C)
 
         API description:
             https://alerta.ina.gob.ar/pub/gui/apibase
