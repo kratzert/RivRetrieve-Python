@@ -1,0 +1,1296 @@
+gauge_id,station_name,distrito,pais,tipo,tipo_nombre,propietario,id_externo,url,var,tabla_id,nombre_red,redes_id,abrev,longitude,latitude,cero_ign,automatica,river,real,nivel_de_alerta,nivel_de_evacuacion,nivel_de_aguas_bajas,station_type
+1,Ruta Provincial nº 39,Entre Rios,Argentina,H,Hidrológica,,3030,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,Gualeguaychu,-58.5548888888889,-32.4451666666667,,False,GUALEGUAYCHU,True,,,,H
+2,Rosario del Tala,Entre Rios,Argentina,H,Hidrológica,,3004,http://www.hidraulica.gob.ar/gualeguay_nivhidr.php,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,TALA,-59.0768055555556,-32.3085,,False,GUALEGUAY,True,7.0,8.3,,H
+3,Paso Alonso,Entre Rios,Argentina,H,Hidrológica,,3025,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.2703333333333,-33.1006111111111,,False,GUALEGUAY,True,,,,H
+4,Villaguay,Entre Rios,Argentina,H,Hidrológica,,3026,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.126,-31.8016111111111,,False,GUALEGUAY,True,,,,H
+5,Paso Medina,Entre Rios,Argentina,H,Hidrológica,,3003,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,FELIC,-59.5512222222222,-30.9236944444444,,False,FELICIANO,True,,,,H
+6,Puerto Ruiz,ENTRERIOS,Argentina,H,Hidrológica,,,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.365098,-33.222327,,False,GUALEGUAY,True,,,,H
+7,Puente Jáuregui,BUENOSAIRES,Argentina,H,Hidrológica,,,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.178504,-34.589146,,False,LUJAN,True,,,,H
+8,Andresito,MISIONES,Argentina,H,Hidrológica,PNA,10,,H,alturas_prefe,escalas Prefectura Nacional,10,ANDRE,-53.9833333333333,-25.5833333333333,,False,IGUAZU,True,10.5,13.5,0.16,H
+9,Puerto Iguazú,MISIONES,Argentina,H,Hidrológica,PNA,20,,H,alturas_prefe,escalas Prefectura Nacional,10,,-54.5666666666667,-25.5833333333333,,False,PARANAMED,True,25.0,28.0,9.4,H
+10,Libertad,MISIONES,Argentina,H,Hidrológica,PNA,30,,H,alturas_prefe,escalas Prefectura Nacional,10,,-54.621134,-25.916679,,False,PARANAMED,True,29.0,31.0,9.4,H
+11,El Dorado,MISIONES,Argentina,H,Hidrológica,PNA,40,,H,alturas_prefe,escalas Prefectura Nacional,10,,-54.7,-26.3833333333333,,False,PARANAMED,True,23.0,25.0,7.5,H
+12,Libertador,MISIONES,Argentina,H,Hidrológica,PNA,50,,H,alturas_prefe,escalas Prefectura Nacional,10,,-55.0333333333333,-26.8,,False,PARANAMED,True,14.5,15.5,5.17,H
+13,Santa Ana,MISIONES,Argentina,H,Hidrológica,PNA,70,,H,alturas_prefe,escalas Prefectura Nacional,10,,-55.588412,-27.33509,,False,PARANAMED,True,9.3,9.8,7.36,H
+14,Posadas,MISIONES,Argentina,H,Hidrológica,PNA,80,,H,alturas_prefe,escalas Prefectura Nacional,10,,-55.8833333333333,-27.3666666666667,,False,PARANAMED,True,11.0,12.0,9.8,H
+15,Ituzaingó,CORRIENTES,Argentina,H,Hidrológica,PNA,90,,H,alturas_prefe,escalas Prefectura Nacional,10,ITUZA,-56.7,-27.5833333333333,,False,PARANAMED,True,3.5,4.0,0.81,H
+16,Itá Ibaté,CORRIENTES,Argentina,H,Hidrológica,PNA,100,,H,alturas_prefe,escalas Prefectura Nacional,10,ITAIBATE,-57.33326783,-27.42336098,52.42,False,PARANAMED,True,7.0,7.5,1.34,H
+17,Itatí,CORRIENTES,Argentina,H,Hidrológica,PNA,110,,H,alturas_prefe,escalas Prefectura Nacional,10,ITATI,-58.24407387,-27.26677773,45.66,False,PARANAMED,True,6.8,7.5,2.7,H
+18,Paso de la Patria,CORRIENTES,Argentina,H,Hidrológica,PNA,120,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.5833333333333,-27.3333333333333,,False,PARANAMED,True,6.5,7.0,2.2,H
+19,Corrientes,CORRIENTES,Argentina,H,Hidrológica,PNA,130,,H,alturas_prefe,escalas Prefectura Nacional,10,CORR,-58.8388696,-27.46364349,42.39,False,PARANAMED,True,6.5,7.0,1.83,H
+20,Barranqueras,CHACO,Argentina,H,Hidrológica,PNA,140,,H,alturas_prefe,escalas Prefectura Nacional,10,BARRANC,-58.9333333333333,-27.4833333333333,,False,BARRANQUERAS,True,6.0,6.5,1.93,H
+21,Empedrado,CORRIENTES,Argentina,H,Hidrológica,PNA,150,,H,alturas_prefe,escalas Prefectura Nacional,10,EMPE,-58.81852419,-27.95412346,39.68,False,PARANAINF,True,6.5,6.7,2.8,H
+22,Bella Vista,CORRIENTES,Argentina,H,Hidrológica,PNA,160,,H,alturas_prefe,escalas Prefectura Nacional,10,BVIS,-59.05931723,-28.51840072,34.74,False,PARANAINF,True,6.0,6.4,3.0,H
+23,Goya,CORRIENTES,Argentina,H,Hidrológica,PNA,170,,H,alturas_prefe,escalas Prefectura Nacional,10,GOYA,-59.27303952,-29.14376844,29.67,False,PARANAINF,True,5.2,5.7,2.23,H
+24,Reconquista,SANTAFE,Argentina,H,Hidrológica,PNA,180,,H,alturas_prefe,escalas Prefectura Nacional,10,RECO,-59.58115833,-29.23756092,27.68,False,SANJAVIER,True,5.1,5.3,2.18,H
+25,Esquina,CORRIENTES,Argentina,H,Hidrológica,PNA,190,,H,alturas_prefe,escalas Prefectura Nacional,10,ESQU,-59.53663483,-30.01924089,22.03,False,PARANAINF,True,5.0,5.4,2.2,H
+26,La Paz,ENTRERIOS,Argentina,H,Hidrológica,PNA,200,,H,alturas_prefe,escalas Prefectura Nacional,10,LAPA,-59.6381167,-30.73419972,16.46,False,PARANAINF,True,5.8,6.15,2.38,H
+27,Santa Elena,ENTRERIOS,Argentina,H,Hidrológica,PNA,210,,H,alturas_prefe,escalas Prefectura Nacional,10,,-59.7833333333333,-30.95,,False,PARANAINF,True,6.9,7.25,2.54,H
+28,Hernandarias,ENTRERIOS,Argentina,H,Hidrológica,PNA,220,,H,alturas_prefe,escalas Prefectura Nacional,10,HERNANDA,-59.99193936,-31.22650904,13.46,False,PARANAINF,True,5.5,6.0,2.18,H
+29,Paraná,ENTRERIOS,Argentina,H,Hidrológica,PNA,230,,H,alturas_prefe,escalas Prefectura Nacional,10,PARAN,-60.5225697750899,-31.7182378629681,9.432,False,PARANAINF,True,4.7,5.0,1.61,H
+30,Santa Fe,SANTAFE,Argentina,H,Hidrológica,PNA,240,,H,alturas_prefe,escalas Prefectura Nacional,10,SAFE,-60.7002319185745,-31.6514772196376,8.378,False,PARANAINF,True,5.3,5.7,2.0,H
+31,Diamante,ENTRERIOS,Argentina,H,Hidrológica,PNA,250,,H,alturas_prefe,escalas Prefectura Nacional,10,DIAM,-60.6432219715378,-32.0715615377843,6.747,False,PARANAINF,True,5.3,5.5,2.4,H
+32,Victoria,ENTRERIOS,Argentina,H,Hidrológica,PNA,260,,H,alturas_prefe,escalas Prefectura Nacional,10,,-60.2195849446607,-32.6558456373673,1.536,False,VICTORIA,True,4.6,5.9,2.48,H
+33,San Lorenzo (San Martín),SANTAFE,Argentina,H,Hidrológica,PNA,270,,H,alturas_prefe,escalas Prefectura Nacional,10,SANLOR,-60.7256705696322,-32.7336256031375,3.309,False,PARANAINF,True,5.2,5.7,1.78,H
+34,Rosario,SANTAFE,Argentina,H,Hidrológica,PNA,280,,H,alturas_prefe,escalas Prefectura Nacional,10,ROSA,-60.6308206029857,-32.9432699442268,2.923,False,PARANAINF,True,5.0,5.25,1.64,H
+35,Villa Constitución,SANTAFE,Argentina,H,Hidrológica,PNA,290,,H,alturas_prefe,escalas Prefectura Nacional,10,VCON,-60.3091044341421,-33.2354221667103,1.981,False,PARANAINF,True,4.0,4.5,1.3,H
+36,San Nicolás,BUENOSAIRES,Argentina,H,Hidrológica,PNA,300,,H,alturas_prefe,escalas Prefectura Nacional,10,SNICO,-60.1895279977149,-33.3420008188866,1.91,False,PARANAINF,True,4.2,5.0,1.35,H
+37,Ramallo,BUENOSAIRES,Argentina,H,Hidrológica,PNA,310,,H,alturas_prefe,escalas Prefectura Nacional,10,,-59.9957013181522,-33.4780656197056,1.642,False,PARANAINF,True,3.5,4.0,1.1,H
+38,San Pedro,BUENOSAIRES,Argentina,H,Hidrológica,PNA,320,,H,alturas_prefe,escalas Prefectura Nacional,10,SPEDRO,-59.6497183332918,-33.6745267329027,0.714,False,PARANAINF,True,3.4,3.6,0.84,H
+39,Baradero,BUENOSAIRES,Argentina,H,Hidrológica,PNA,330,,H,alturas_prefe,escalas Prefectura Nacional,10,,-59.4955962110789,-33.8006916108445,0.641,False,BARADERO,True,2.7,3.1,0.7,H
+40,Zárate,BUENOSAIRES,Argentina,H,Hidrológica,PNA,340,,H,alturas_prefe,escalas Prefectura Nacional,10,,-59.0108657589595,-34.0987818311696,0.243,False,PARANADELASPALMAS,True,2.0,2.2,0.25,H
+41,Campana,BUENOSAIRES,Argentina,H,Hidrológica,PNA,350,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.9581750062675,-34.1555854281116,0.418,False,PARANADELASPALMAS,True,2.2,2.45,,H
+42,Escobar,BUENOSAIRES,Argentina,H,Hidrológica,PNA,360,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.7333333333,-34.3,,False,PARANADELASPALMAS,True,3.0,3.5,0.2,H
+43,Villa Paranacito,ENTRERIOS,Argentina,H,Hidrológica,PNA,765,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.65,-33.7,,False,LATINTA,True,2.3,2.6,1.1,H
+44,Canal Nuevo,ENTRERIOS,Argentina,H,Hidrológica,PNA,380,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.6604197120006,-33.8627031166646,0.39,False,CANALGAFOTRE,True,2.85,3.0,1.0,H
+45,Ibicuy,ENTRERIOS,Argentina,H,Hidrológica,PNA,400,,H,alturas_prefe,escalas Prefectura Nacional,10,IBIC,-59.1800594404244,-33.7619777376355,0.456,False,PARANAIBICUY,True,2.0,2.3,0.4,H
+46,Puerto Ruiz,ENTRERIOS,Argentina,H,Hidrológica,PNA,390,,H,alturas_prefe,escalas Prefectura Nacional,10,RUIZ,-59.3666666667,-33.2166666667,0.898,False,GUALEGUAY,True,4.5,5.0,0.8,H
+47,Martín García,BUENOSAIRES,Argentina,H,Hidrológica,PNA,410,,H,alturas_prefe,escalas Prefectura Nacional,10,MART,-58.2530455191105,-34.1902896924007,0.35,False,RIODELAPLATA,True,2.5,5.0,0.2,H
+48,Guazucito,BUENOSAIRES,Argentina,H,Hidrológica,PNA,405,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.4,-34.0166666667,0.447,False,PARANAGUAZU,True,2.2,2.4,0.3,H
+49,Tigre,BUENOSAIRES,Argentina,H,Hidrológica,PNA,430,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.5779747237367,-34.4159316389634,-0.099,False,LUJAN,True,3.3,3.8,0.3,H
+50,Dique Luján,BUENOSAIRES,Argentina,H,Hidrológica,PNA,440,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.686115,-34.351576,-0.074,False,LUJAN,True,2.3,2.8,0.3,H
+51,Chaná Miní,BUENOSAIRES,Argentina,H,Hidrológica,PNA,450,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.4833333333,-34.2,-0.286,False,CHANA,True,3.2,3.8,1.0,H
+52,San Fernando,BUENOSAIRES,Argentina,H,Hidrológica,PNA,460,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.55,-34.4333333333,-0.53,False,LUJAN,True,3.0,3.5,0.33,H
+53,San Isidro,BUENOSAIRES,Argentina,H,Hidrológica,PNA,470,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.507163,-34.457166,,False,RIODELAPLATA,True,3.0,3.5,0.3,H
+54,Olivos,BUENOSAIRES,Argentina,H,Hidrológica,PNA,480,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.475863,-34.506666,,False,RIODELAPLATA,True,3.0,3.8,0.2,H
+55,Puerto Pilcomayo,FORMOSA,Argentina,H,Hidrológica,PNA,490,,H,alturas_prefe,escalas Prefectura Nacional,10,PILC,-57.65,-25.3666666666667,,False,PARAGUAY,True,5.35,6.0,1.4,H
+56,Bouvier,FORMOSA,Argentina,H,Hidrológica,PNA,500,,H,alturas_prefe,escalas Prefectura Nacional,10,,-57.568182,-25.451947,,False,PARAGUAY,True,6.0,6.4,0.0,H
+57,Puerto Formosa,FORMOSA,Argentina,H,Hidrológica,PNA,510,,H,alturas_prefe,escalas Prefectura Nacional,10,FORMOSA,-58.1833333333333,-26.1833333333333,,False,PARAGUAY,True,7.8,8.3,1.6,H
+58,Bermejo,FORMOSA,Argentina,H,Hidrológica,,10000,,H,alturas_prefe,escalas Prefectura Nacional,10,BERMEJO,-58.506205,-26.92629,,False,PARAGUAY,True,6.5,7.0,,H
+59,Isla del Cerrito,CHACO,Argentina,H,Hidrológica,,,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.6166666666667,-27.3166666666667,,False,PARAGUAY,True,,,2.5995,H
+60,Pepirí Miní,MISIONES,Argentina,H,Hidrológica,,1048,,H,alturas_prefe,escalas Prefectura Nacional,10,,-53.933149,-27.153744,,False,URUGUAY,True,,,,H
+61,El Soberbio,MISIONES,Argentina,H,Hidrológica,,531,,H,alturas_prefe,escalas Prefectura Nacional,10,SOBER,-54.2,-27.3,,False,URUGUAY,True,,,,H
+62,Alicia,MISIONES,Argentina,H,Hidrológica,,,,H,alturas_prefe,escalas Prefectura Nacional,10,,-54.3553,-27.4375,,False,URUGUAY,True,,,,H
+63,Alba Posse,MISIONES,Argentina,H,Hidrológica,,1002,,H,alturas_prefe,escalas Prefectura Nacional,10,,-54.678494,-27.572,,False,URUGUAY,True,,,,H
+64,Panambí,MISIONES,Argentina,H,Hidrológica,,1050,,H,alturas_prefe,escalas Prefectura Nacional,10,,-54.91305,-27.730627,,False,URUGUAY,True,,,,H
+65,San Javier,MISIONES,Argentina,H,Hidrológica,PNA,540,,H,alturas_prefe,escalas Prefectura Nacional,10,SJAVI,-55.1333333333333,-27.8833333333333,,False,URUGUAY,True,8.0,10.0,0.82,H
+66,Puerto Concepción,MISIONES,Argentina,H,Hidrológica,PNA,550,,H,alturas_prefe,escalas Prefectura Nacional,10,,-55.581369,-28.119193,,False,URUGUAY,True,15.5,16.5,0.904,H
+67,Garruchos,CORRIENTES,Argentina,H,Hidrológica,PNA,560,,H,alturas_prefe,escalas Prefectura Nacional,10,,-55.65,-28.1833333333333,,False,URUGUAY,True,12.0,14.0,0.03,H
+68,Santo Tomé,CORRIENTES,Argentina,H,Hidrológica,PNA,570,,H,alturas_prefe,escalas Prefectura Nacional,10,TOME,-56.0333333333333,-28.55,,False,URUGUAY,True,11.5,12.5,1.32,H
+69,Alvear,CORRIENTES,Argentina,H,Hidrológica,PNA,580,,H,alturas_prefe,escalas Prefectura Nacional,10,,-56.55,-29.1,,False,URUGUAY,True,9.5,11.0,0.89,H
+70,La Cruz,CORRIENTES,Argentina,H,Hidrológica,PNA,590,,H,alturas_prefe,escalas Prefectura Nacional,10,,-56.633977,-29.18062,,False,URUGUAY,True,9.5,11.5,0.26,H
+71,Yapeyú,CORRIENTES,Argentina,H,Hidrológica,PNA,600,,H,alturas_prefe,escalas Prefectura Nacional,10,,-56.810674,-29.470031,,False,URUGUAY,True,9.5,10.5,0.0,H
+72,Paso de los Libres,CORRIENTES,Argentina,H,Hidrológica,PNA,610,,H,alturas_prefe,escalas Prefectura Nacional,10,,-57.0833333333333,-29.7166666666667,,False,URUGUAY,True,7.5,8.5,0.9,H
+73,Bompland,CORRIENTES,Argentina,H,Hidrológica,PNA,620,,H,alturas_prefe,escalas Prefectura Nacional,10,,-57.332887,-29.872652,,False,URUGUAY,True,7.9,10.8,0.0,H
+74,Monte Caseros,CORRIENTES,Argentina,H,Hidrológica,PNA,630,,H,alturas_prefe,escalas Prefectura Nacional,10,,-57.6333333333333,-30.25,,False,URUGUAY,True,7.5,8.5,0.8,H
+75,Mocoretá,CORRIENTES,Argentina,H,Hidrológica,PNA,640,,H,alturas_prefe,escalas Prefectura Nacional,10,,-57.81776,-30.715682,,False,URUGUAY,True,10.3,12.0,5.24,H
+76,Federación,ENTRERIOS,Argentina,H,Hidrológica,PNA,650,,H,alturas_prefe,escalas Prefectura Nacional,10,,-57.914682,-30.993221,,False,URUGUAY,True,,,31.25,H
+77,Salto Grande Arriba,ENTRERIOS,Argentina,H,Hidrológica,PNA,670,,H,alturas_prefe,escalas Prefectura Nacional,10,SGRANDE,-57.936945,-31.27547,,False,URUGUAY,True,35.5,36.0,33.0,H
+78,Salto Grande Abajo,ENTRERIOS,Argentina,H,Hidrológica,PNA,680,,H,alturas_prefe,escalas Prefectura Nacional,10,SGRANDE,-57.936945,-31.27547,,False,URUGUAY,True,17.3,17.8,5.6,H
+79,Concordia,ENTRERIOS,Argentina,H,Hidrológica,PNA,700,,H,alturas_prefe,escalas Prefectura Nacional,10,null,-58.0166666666667,-31.4,1.29,False,URUGUAY,True,11.0,12.5,0.88,H
+80,Colón,ENTRERIOS,Argentina,H,Hidrológica,PNA,710,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.1166666666667,-32.2333333333333,-0.26,False,URUGUAY,True,7.1,7.9,0.9,H
+81,Concepción del Uruguay,ENTRERIOS,Argentina,H,Hidrológica,PNA,720,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.2333333333333,-32.4833333333333,-0.37,False,URUGUAY,True,5.3,6.3,0.8,H
+82,Campichuelo,ENTRERIOS,Argentina,H,Hidrológica,PNA,730,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.1834,-32.70101,,False,URUGUAY,True,5.3,6.3,0.0,H
+83,Puerto Gualeguaychú,ENTRERIOS,Argentina,H,Hidrológica,,2001,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.5,-33.0166666666667,,False,GUALEGUAYCHU,True,,,0.5,H
+84,Boca Gualeguaychú,ENTRERIOS,Argentina,H,Hidrológica,PNA,750,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.4166666666667,-33.0666666666667,-0.43,False,URUGUAY,True,2.9,3.1,,H
+85,Buenos Aires,BUENOSAIRES,Argentina,H,Hidrológica,PNA,770,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.399288,-34.56108,-0.559,False,RIODELAPLATA,True,3.3,3.9,0.21,H
+86,La Plata,BUENOSAIRES,Argentina,H,Hidrológica,PNA,780,,H,alturas_prefe,escalas Prefectura Nacional,10,,-57.873546,-34.824196,,False,RIODELAPLATA,True,2.5,2.8,0.3,H
+87,Yacyretá afluente,CORRIENTES,Argentina,H,Hidrológica,,17998,,H,alturas_prefe,escalas Prefectura Nacional,10,YACY,-56.727244,-27.482557,,False,PARANAMED,True,,,,H
+88,Yacyretá efluente,CORRIENTES,Argentina,H,Hidrológica,,17999,,H,alturas_prefe,escalas Prefectura Nacional,10,,-56.727244,-27.482557,,False,PARANAMED,True,,,,H
+89,Aporte Salto Grande,ENTRERIOS,Argentina,H,Hidrológica,,,,H,alturas_prefe,escalas Prefectura Nacional,10,,-57.938011,-31.273969,,False,URUGUAY,True,,,,H
+90,Erogado Salto Grande,ENTRERIOS,Argentina,H,Hidrológica,,,,H,alturas_prefe,escalas Prefectura Nacional,10,,-57.938011,-31.273969,,False,URUGUAY,True,,,,H
+93,Confluencia,BRASIL,Argentina,H,Hidrológica,Itaipu,65999020,,H,alturas_prefe,escalas Prefectura Nacional,10,CONFLU,-54.593363,-25.592701,,False,PARANAMED,True,,,,H
+97,Brazo Largo,ENTRERIOS,Argentina,H,Hidrológica,null,null,,H,alturas_prefe,escalas Prefectura Nacional,10,null,-58.9,-33.8833333333,0.717,False,PARANAGUAZU,True,,,,H
+99,Gualeguaychú,ENTRERIOS,Argentina,H,Hidrológica,PNA,740,,H,alturas_prefe,escalas Prefectura Nacional,10,,-58.5041666666667,-33.0144444444444,,False,URUGUAY,True,3.5,3.8,0.72,H
+102,Ruta Nacional nº 130,Entre Rios,Argentina,H,Hidrológica,RHN-SSRH,3031,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.4904722222222,-32.1046111111111,,False,GUALEGUAYCHU,True,,,,H
+103,Recreo - Ruta Provincial nº 70,Santa Fe,Argentina,H,Hidrológica,RHN-SSRH,3216,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,SALADO,-60.7805555555556,-31.4912222222222,11.09,False,SALADOSANTAFE,True,4.7,,,H
+105,Tostado,Santa Fe,Argentina,H,Hidrológica,RHN-SSRH,3343,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,TOSTADO,-61.7439444444444,-29.2751666666667,65.98,False,SALADOSANTAFE,True,4.0,,,H
+107,Santa Lucía,Corrientes,Argentina,H,Hidrológica,RHN-SSRH,3836,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,STALUCIA,-59.0982222222222,-28.9911111111111,,False,SANTALUCIA,True,,,,H
+108,San Roque,Corrientes,Argentina,H,Hidrológica,RHN-SSRH,3835,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.7214166666667,-28.5711388888889,,False,SANTALUCIA,True,,,,H
+109,Paso Lucero,Corrientes,Argentina,H,Hidrológica,RHN-SSRH,3803,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.5593888888889,-28.9943611111111,,False,CORRIENTE,True,,,,H
+110,Segui,ENTRERIOS,Argentina,H,Hidrológica,RHN-SSRH,210,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.1263888888889,-31.95,,False,LASCONCHAS,True,,,,H
+111,Límite con Entre Ríos – Ruta Provincial nº 28,Entre Rios,Argentina,H,Hidrológica,RHN-SSRH,3898,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.7846388888889,-30.2166388888889,,False,GUAYQUIRARO,True,,,,H
+112,Nogoyá Ruta Provincial nº 11,Entre Rios,Argentina,H,Hidrológica,RHN-SSRH,3037,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,Nogoyá,-59.864625,-32.841975,,False,NOGOYA,True,,,,H
+114,Ruta Provincial nº 41,BUENOSAIRES,Argentina,H,Hidrológica,RHN-SSRH,4064,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,Salado,-58.5365277778,-35.7246666667,,False,SALADOBONAERENSE,True,,,,H
+116,Ruta Nacional Nº 12,Entre Rios,Argentina,H,Hidrológica,RHN-SSRH,3038,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.7638611111111,-32.3946388888889,88.545,False,NOGOYA,True,,,,H
+118,Pueblo Andino,Santa Fe,Argentina,H,Hidrológica,RHN-SSRH,3223,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,Carcarañá,-60.8659444444444,-32.6733333333333,,False,CARCARAÑA,True,,,,H
+119,Paso Juncué,ENTRERIOS,Argentina,H,Hidrológica,RHN-SSRH,3808,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,PASOJUNCUE,-59.2586944444444,-30.3616388888889,,False,GUAYQUIRARO,True,,,,H
+120,Paso Telégrafo,ENTRERIOS,Argentina,H,Hidrológica,RHN-SSRH,3880,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,Guayquiraró,-59.5129722222222,-30.34375,,False,GUAYQUIRARO,True,,,,H
+121,Los Laureles,Corrientes,Argentina,H,Hidrológica,RHN-SSRH,3821,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,Corriente,-59.2171666666667,-29.7571111111111,,False,CORRIENTE,True,,,,H
+122,Ruta Nacional nº 168,Santa Fe,Argentina,H,Hidrológica,RHN-SSRH,3249,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.6020555555556,-31.6611388888889,,False,COLASTINE,True,,,,H
+123,Autopista,Santa Fe,Argentina,H,Hidrológica,RHN-SSRH,3247,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,Colastiné,-60.990275,-32.0178611111111,,False,COLASTINE,True,,,,H
+124,Autopista,SANTAFE,Argentina,H,Hidrológica,RHN-SSRH,3321,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,Saladillo,-60.6635555555556,-33.0272222222222,,False,SALADILLO,True,,,,H
+125,Ruta Provincial nº62,SANTAFE,Argentina,H,Hidrológica,RHN-SSRH,3213,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,Saladillo,-60.4043888888889,-31.1507777777778,,False,SALADILLO,True,,,,H
+126,Villa Ocampo (Ruta Prov. Nº 32),Santa Fe,Argentina,H,Hidrológica,RHN-SSRH,3231,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,Los Amores,-59.3879444444444,-28.4912222222222,39.75,False,LOSAMORES,True,,,,H
+127,Moussy,Santa Fe,Argentina,H,Hidrológica,RHN-SSRH,3207,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,El Rey,-59.7526111111111,-28.9979166666667,,False,ELREY,True,,,,H
+128,Fortín Olmos,Santa Fe,Argentina,H,Hidrológica,RHN-SSRH,3206,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.4971666666667,-29.0655,,False,GOLONDRINA,True,,,,H
+129,Resistencia,CHACO,Argentina,H,Hidrológica,RHN-SSRH,2446,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,Negro,-59.0,-27.4397222222222,,False,NEGRO,True,,,,H
+130,Paso Ledesma,Corrientes,Argentina,H,Hidrológica,RHN-SSRH,3804,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-57.6745111111111,-29.8458,,False,MIRIÑAY,True,,,,H
+131,Puerto Maní,MISIONES,Argentina,H,Hidrológica,PNA,60,,H,alturas_prefe,escalas Prefectura Nacional,10,,-55.5221666666667,-27.1063611111111,,False,PARANAMED,True,9.5,10.0,0.0,H
+133,La Emilia,Santa Fe,Argentina,H,Hidrológica,RHN-SSRH,3260,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.3346777777778,-33.3989194444444,,False,DELMEDIO,True,,,,H
+134,Ruta Nacional nº 12,CORRIENTES,Argentina,H,Hidrológica,RHN-SSRH,3840,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,rn12,-58.8086111111111,-28.1141666666667,,False,SANLORENZO,True,,,,H
+135,Autopista,Santa Fe,Argentina,H,Hidrológica,RHN-SSRH,3265,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.9411111111111,-32.3929722222222,,False,ELMONJE,True,,,,H
+136,Ruta Nacional nº 11,Santa Fe,Argentina,H,Hidrológica,RHN-SSRH,3300,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.7856666666667,-29.2786666666667,,False,MALABRIGO,True,,,,H
+139,Ruta Provincial nº 18,Santa Fe,Argentina,H,Hidrológica,RHN-SSRH,3317,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.6820277777778,-33.02925,,False,SALADILLO,True,,,,H
+140,Cnel. Bogado,Santa Fe,Argentina,H,Hidrológica,RHN-SSRH,3318,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.576775,-33.3600611111111,,False,PAVON,True,,,,H
+143,Bell Ville,CORDOBA,Argentina,H,Hidrológica,RHN-SSRH,4223,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-62.68333,-32.61667,,False,TERCERO,True,,,,H
+146,Roque Perez,BUENOSAIRES,Argentina,H,Hidrológica,FdX,,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.280502,-35.372613,,False,SALADOBONAERENSE,True,,,,H
+147,Cachi,SALTA,Argentina,H,Hidrológica,RHN-SSRH,646,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-66.156666,-25.123332,,False,CALCHAQUI,True,,,,H
+148,Seminario Diocesano de Azul,BUENOSAIRES,Argentina,H,Hidrológica,RHN-SSRH,4069,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,azul,-59.893888,-36.831082,,False,AZUL,True,,,,H
+149,Canal Seoane,BUENOSAIRES,Argentina,H,Hidrológica,INA,,,H,ina_delta,red INA Delta y AMBA,32,seoane,-58.638166667,-34.166861111,-1.047,True,Canal Seoane,True,,,,H
+151,Atucha,BUENOSAIRES,Argentina,H,Hidrológica,ATUCHA,null,,H,ina_delta,red INA Delta y AMBA,32,null,-59.205288,-33.963072,-0.556,False,PARANADELASPALMAS,True,,,,H
+170,Ruta Provincial Nº 044,Chubut,Argentina,H,Hidrológica,RHN-SSRH,2282,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.4061388888889,-43.6683333333333,,False,Poncho Moro,True,,,,H
+174,San Justo - Ruta Provincial nº 2,Chubut,Argentina,H,Hidrológica,FICH,20,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.624247,-30.744031,26.85,False,SALADOSANTAFE,True,9.0,,,H
+175,Emilia - Ruta Provincial nº 62,Santa Fe,Argentina,H,Hidrológica,FICH,30,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.841003,-31.042868,22.84,False,Salado Santafesino,True,4.5,,,H
+304,San Javier,MISIONES,Argentina,H,Hidrológica,ANA,,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,SANJAVIE,-55.13,-27.88,,False,URUGUAY,True,,,,H
+319,La Sirena,Corrientes,Argentina,H,Hidrológica,,13811,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,LASIRENA,-56.5421666666667,-28.4166666666667,,False,AGUAPEY,True,,,,H
+1091,Gral. Alvear,BUENOSAIRES,Argentina,H,Hidrológica,null,4062,,H,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,LasFlores,-60.019236111,-35.987583333,,True,Arroyo Las Flores,True,,,,H
+1094,RP38,Santa Fe,Argentina,H,Hidrológica,FICH,,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.337943,-29.867045,,False,Salado Santafesino,True,3.5,,,H
+1257,Arroyo Borches,Buenos Aires,Argentina,H,Hidrológica,INA,7,http://cloud.fdx-ingenieria.com.ar:8000/api,H,ina_delta,red INA Delta y AMBA,32,BORCHES,-58.4426647718186,-34.0752137139779,0.682,True,Arroyo Borches,True,,,,H
+1678,Paso Duarte - RP 22,Entre Ríos,Argentina,H,Hidrológica,snih:1,3023,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.7711666666667,-31.1051388888889,86.57,True,Gualeguay,True,,,,H
+1679,Santo Tomé,SANTAFE,Argentina,H,Hidrológica,FICH,50,http://fich.unl.edu.ar/cim/alturas-rio-salado-historico/50,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,STOME_SALADO,-60.752233,-31.667601,,False,SALADOSANTAFE,,4.7,,,H
+1680,Cululú - RP50-s,SANTAFE,Argentina,H,Hidrológica,FICH,70,http://fich.unl.edu.ar/cim/alturas-rio-salado-historico/70,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,CULULU,-60.887765,-31.254531,,False,SALADOSANTAFE,,4.0,,,H
+1695,General Belgrano,,Argentina,H,Hidrológica,,,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.5365277777778,-35.7246666666667,,False,Salado_bonaerense,,,,,H
+1696,Arroyo Martínez (Villa Paranacito),ENTRERIOS,Argentina,H,Hidrológica,INA,24,,,ina_delta,red INA Delta y AMBA,32,martinez,-58.5811476,-33.6580427638889,0.0,False,Arroyo Martínez,,,,,H
+1698,Arroyo Carapachay,BUENOSAIRES,Argentina,H,Hidrológica,,6,http://cloud.fdx-ingenieria.com.ar:8000/api,,ina_delta,red INA Delta y AMBA,32,carapachay,-58.633833,-34.356202,-1.459,False,Arroyo Carapachay,True,,,,H
+1699,Nueva Palmira,Colonia,URUGUAY,H,Hidrológica,CARU,380,http://190.0.152.194:8080/alturas/web/app.php/user/estacion/22/380,,alturas_varios,Otras redes hidrológicas,17,,-58.422029,-33.878478,0.0275,True,Uruguay,True,,,,H
+1700,Boca Gualeguaychú CARU,ENTERRIOS,Argentina,H,Hidrológica,CARU,,http://190.0.152.194:8080/alturas/web/app.php/user/estacion/21/001,,alturas_varios,Otras redes hidrológicas,17,GCHU_CARU,-58.4166666666667,-33.0666666666667,,True,Uruguay,True,,,,H
+1701,Gualeguaychú FdX,ENTRERIOS,Argentina,H,Hidrológica,Municipalidad de Gualeguaychú,22,http://cloud.fdx-ingenieria.com.ar:8000,,ina_delta,red INA Delta y AMBA,32,GCHUFXD,-58.4166666666667,-33.0666666666667,-0.43,True,Uruguay,,,,,H
+1702,Braga,,Argentina,H,Hidrológica,,1DC74ermdETe5PizUDbYcbCMKs7s-lCle,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-58.4844017028809,-34.3363990783691,-0.337,True,,True,,,,H
+1703,San Clemente,,Argentina,H,Hidrológica,,16yAeJ-xoPPWWLxMD7i-jTRpNbpGusbjF,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-56.7153015136719,-36.3544006347656,,True,,True,,,,H
+1704,Punta Indio,,Argentina,H,Hidrológica,,1_WVcXm6LAtNJY0P6WbxysriW4kzCTuQn,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-55.9880981445312,-35.0780982971191,,True,,True,,,,H
+1705,Brasileira,,Argentina,H,Hidrológica,,1_TeeGyL9BuDMBn-0OVeIW2fOd_N1yM0j,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-56.6105995178223,-35.1744003295898,,True,,True,,,,H
+1706,Oyarvide,,Argentina,H,Hidrológica,,1UI5qZLbn0_u82Sq0rqDXknoQubMVySdV,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-57.13330078125,-35.0999984741211,,True,,True,,,,H
+1707,Magadalena,,Argentina,H,Hidrológica,,1274e1FDaDCCTZ4KEZCe9m5XW7NBM2hhD,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-57.4617004394531,-34.9300003051758,,True,,True,,,,H
+1708,La Plata,,Argentina,H,Hidrológica,,1yNkFlMaoiUeSQeLuedX2447uUishVMN-,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-57.8800010681152,-34.8339004516602,,True,,True,,,,H
+1709,Buenos Aires,,Argentina,H,Hidrológica,,1ykBteSzwyVP5zU96_aFefSvllWVJYOTc,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-58.3516998291016,-34.6305999755859,-0.559,True,,True,,,,H
+1710,Desembocadura,,Argentina,H,Hidrológica,,1q9bESdv72kQMSXWFBiYRgcLKdvtQabln,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-58.4702987670898,-33.997200012207,0.327,True,,True,,,,H
+1711,Las Rosas,,Argentina,H,Hidrológica,,1sGTk1WwCOUCI0YZHYfHG2e8RIJYVVYGE,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-58.8894004821777,-34.1836013793945,0.03,True,,True,,,,H
+1712,Carabelitas,,Argentina,H,Hidrológica,,1g-LZ0XPOJ616PgCpeFtjH63dPkW-j6IC,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-58.7689018249512,-33.9491996765137,0.209,True,,True,,,,H
+1713,Zárate,,Argentina,H,Hidrológica,,1F_axPb-jFCLoAyesGtGh82CYYPY-VSvF,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-59.0139007568359,-34.0918998718262,0.388,True,,True,,,,H
+1714,Baradero,,Argentina,H,Hidrológica,,1eyk6-xeW3XYM83-OAoF0ltyALC26f9eG,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-59.2578010559082,-33.9366989135742,1.156,True,,True,,,,H
+1715,Brazo Largo,,Argentina,H,Hidrológica,,1a0VtfxrtI_VSBT-IH7EdxBI02xp0W2Uu,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-58.9166984558105,-33.8880996704102,0.717,True,,True,,,,H
+1716,Ibicuy,,Argentina,H,Hidrológica,,1BfzSmDKRTzrAzFG6cMjH6foqOQ_lJN-5,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-59.1786003112793,-33.755298614502,1.147,True,,True,,,,H
+1717,Bifurcación,,Argentina,H,Hidrológica,,13lyG4lox5-nVdxzbutifuWm1PEaOAA01,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-59.2907981872559,-33.7224998474121,1.37,True,,True,,,,H
+1718,San Pedro,,Argentina,H,Hidrológica,,1o2mi8L-9B1LSXWGXibGlCogfVv5s9O_I,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-59.6411018371582,-33.6852989196777,0.899,True,,True,,,,H
+1719,Ramallo,,Argentina,H,Hidrológica,,15XIQY1F0c7whGQftshK-InoYkcL102XV,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-59.997501373291,-33.4766998291016,1.507,True,,True,,,,H
+1720,San Nicolas,,Argentina,H,Hidrológica,,1QpO20ND-a2ieAJpGwTocabgDvs1x47jv,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-60.2181015014648,-33.323600769043,1.958,True,,True,,,,H
+1721,Villa Constitución,,Argentina,H,Hidrológica,,1dcn8feomIDGVvEFh7s4O7bbkfKXMB4sz,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-60.3213996887207,-33.2263984680176,2.128,True,,True,,,,H
+1722,Rosario,,Argentina,H,Hidrológica,,1Tz7Bmzih9cm_JlVcEvcAYZHaWqUULbA0,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-60.6183013916016,-32.9730987548828,3.032,True,,True,,,,H
+1723,San Martín,,Argentina,H,Hidrológica,,1cl_z7UhnqRBdhIyBNQ-XWZkhfP7GfYzy,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-60.7249984741211,-32.7071990966797,3.625,True,,True,,,,H
+1724,Paraná,,Argentina,H,Hidrológica,,18T4arj_TEGMi3lXUnJoPaxveD7aTtnJJ,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-60.5155982971191,-31.7208003997803,9.565,True,,True,,,,H
+1725,Diamante,,Argentina,H,Hidrológica,,1vzMMisDXKGKHvShoPJ009lNi1R6uaT5w,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-60.6439018249512,-32.0560989379883,6.763,True,,True,,,,H
+1726,Santa Fé,,Argentina,H,Hidrológica,,1QgFvYPu8JdMxVmTML18Nm0WeWMDg7lDs,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-60.703498840332,-31.6513004302979,8.396,True,,True,,,,H
+1727,Hernandarias,,Argentina,H,Hidrológica,,1fgdcN2OVIyB5H0vq4J4c_B9rOY0Z7ty0,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-59.9926986694336,-31.2299995422363,,True,,True,,,,H
+1728,Santa Elena,,Argentina,H,Hidrológica,,1GelkN5hXl-irQxnlXHnl4jSKNueeaZZD,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-59.8147010803223,-30.9685001373291,,True,,True,,,,H
+1729,La Paz,,Argentina,H,Hidrológica,,1r6qv38jFw-F7bSRemh0Agov__bMaYTt9,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-59.6391983032227,-30.7325992584229,,True,,True,,,,H
+1730,Esquina,,Argentina,H,Hidrológica,,19lKUoij9-PkhcqJ2A1pauko02mvbnY9o,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-59.5368995666504,-30.0167007446289,,True,,True,,,,H
+1731,Reconquista,,Argentina,H,Hidrológica,,1qni7YWseR833aK5w1N6xVv3kcqByfQna,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-59.5794982910156,-29.2353000640869,,True,,True,,,,H
+1732,Goya,,Argentina,H,Hidrológica,,1-lWVEuaC9m2PbMIBzlp25Du85Lzdhkpd,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-59.2727012634277,-29.1431999206543,,True,,True,,,,H
+1733,Bella Vista,,Argentina,H,Hidrológica,,1TCOWJ-NwYgDyOVJWQpi0renElmJCGY2c,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-59.048900604248,-28.503999710083,,True,,True,,,,H
+1734,Empedrado,,Argentina,H,Hidrológica,,1aXqFaHQjF1rz08L5dBHEnJ0Mpq4PB3cq,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-58.8203010559082,-27.9589004516602,,True,,True,,,,H
+1735,Barranqueras,,Argentina,H,Hidrológica,,1eIFOKQ0LNrXpaPm29Gn91Cl2Z4vZ-EmD,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-58.923900604248,-27.4885005950928,,True,,True,,,,H
+1736,Corrientes,,Argentina,H,Hidrológica,,1mvviWcKXPjl4jiI0CV1S1hjtO_HZnVLT,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-58.8333015441895,-27.4598999023438,,True,,True,,,,H
+1737,Paso de la Patria,,Argentina,H,Hidrológica,,1SZyv22Xfhzg5qdTc1xgTpdEtgKXT1rwF,,,estaciones_pvnymm,Estaciones mareográficas - PVNyMM,22,,-58.5824012756348,-27.3222999572754,,True,,True,,,,H
+1739,Atalaya,,Argentina,H,Hidrológica,Servicio de Hidrografía Naval,ATAL,,,estaciones_shn,Mareógrafos SHN,23,,-57.536111,-35.015278,,True,Río de la Plata,False,,,,H
+1740,Pilote Norden,,Argentina,H,Hidrológica,CARP,NORDEN,,,estaciones_shn,Mareógrafos SHN,23,,-57.927417,-34.62625,,True,Río de la Plata,False,,,,H
+1741,Santa Teresita,,Argentina,H,Hidrológica,SHN,TERESITA,,,estaciones_shn,Mareógrafos SHN,23,,-56.686111,-36.541944,,True,Mar Argentino,True,,,,H
+1742,Mar del Plata,,Argentina,H,Hidrológica,SHN,MDQ,,,estaciones_shn,Mareógrafos SHN,23,,-57.531111,-38.035556,,True,Mar Argentino,True,,,,H
+1743,Arroyo Las Piedras - Rep. del Líbano,BUENOSAIRES,Argentina,H,Hidrológica,INA,3,,,ina_delta,red INA Delta y AMBA,32,LASPIEDRAS,-58.3096056,-34.7383417,,True,Cuenca Sarandí-Santo Domingo,True,,,,H
+1744,Arroyo San Francisco,BUENOSAIRES,Argentina,H,Hidrológica,INA,5,,,ina_delta,red INA Delta y AMBA,32,SANFRAN,-58.3200389,-34.7277556,,True,Cuenca Sarandí-Santo Domingo,False,,,,H
+1746,Arroyo Águila Negra,BUENOSAIRES,Argentina,H,Hidrológica,Arauco,,https://docs.google.com/spreadsheets/d/1JxDdF7YINijghOvCmQUxAO3N6BXl8kbG9dwGA_mJA00/export?format=xlsx,,alturas_varios,Otras redes hidrológicas,17,AGUILANEGRA,-58.95525,-33.964052,,False,Delta del Paraná,True,,,,H
+1747,Pasaje Talavera c/ Canal Irigoyen,BUENOSAIRES,Argentina,H,Hidrológica,Arauco,,https://docs.google.com/spreadsheets/d/1JxDdF7YINijghOvCmQUxAO3N6BXl8kbG9dwGA_mJA00/export?format=xlsx,,alturas_varios,Otras redes hidrológicas,17,TALAVERA,-58.965237,-33.923719,,False,Delta del Paraná,True,,,,H
+1753,Coronel Bogardo,Santa Fe,Argentina,H,Hidrológica,Red Hidrologica Nacional,,http://bdhi.hidricosargentina.gob.ar/MuestraDatos.aspx?Estacion=13318,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.576775,-33.3600611111111,,False,Pavon,,,,,H
+1754,RP 18,Santa Fe,Argentina,H,Hidrológica,Red Hidrologica Nacional,,http://bdhi.hidricosargentina.gob.ar/MuestraDatos.aspx?Estacion=13317,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.6820277777778,-33.02925,,False,Saladillo,,,,,H
+1755,Zona Rural,Santa Fe,Argentina,H,Hidrológica,Red Hidrologica Nacional,,http://bdhi.hidricosargentina.gob.ar/MuestraDatos.aspx?Estacion=13266,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.9087777777778,-32.384,,False,El Monje,,,,,H
+1756,Autopista,Santa Fe,Argentina,H,Hidrológica,Red Hidrologica Nacional,,http://bdhi.hidricosargentina.gob.ar/MuestraDatos.aspx?Estacion=13265,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.9278896903586,-32.3909258677795,,False,El Monje,,,,,H
+1757,Autopista,Santa Fe,Argentina,H,Hidrológica,Red Hidrologica Nacional,,http://bdhi.hidricosargentina.gob.ar/MuestraDatos.aspx?Estacion=13247,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.9903785216159,-32.0179685305325,,False,Arroyo Colastiné,,,,,H
+1758,San Javier (Santa Fe),SANTAFE,Argentina,H,Hidrológica,RHN-SSRH,20001,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,SANJAVIERSFE,-59.9234444444444,-30.5803888888889,,False,San Javier,True,,,,H
+1831,BarcaGrande,,Argentina,H,Hidrológica,,FD1,,,puntos_FDelta,puntos del frente del Delta del Paraná/Uruguay,25,,-58.3756,-34.1624,0.0,False,Río de la Plata,False,,,,H
+1832,Bravo,,Argentina,H,Hidrológica,,FD2,,,puntos_FDelta,puntos del frente del Delta del Paraná/Uruguay,25,,-58.4588,-33.8976,0.0,False,Río de la Plata,False,,,,H
+1833,CanaldelEste,,Argentina,H,Hidrológica,,FD3,,,puntos_FDelta,puntos del frente del Delta del Paraná/Uruguay,25,,-58.4975,-34.3764,0.0,False,Río de la Plata,False,,,,H
+1834,Correntoso,,Argentina,H,Hidrológica,,FD4,,,puntos_FDelta,puntos del frente del Delta del Paraná/Uruguay,25,,-58.3678,-34.1111,0.0,False,Río de la Plata,False,,,,H
+1835,Guazu,,Argentina,H,Hidrológica,,FD5,,,puntos_FDelta,puntos del frente del Delta del Paraná/Uruguay,25,,-58.421,-34.0047,0.0,False,Río de la Plata,False,,,,H
+1836,Gutierrez,,Argentina,H,Hidrológica,,FD6,,,puntos_FDelta,puntos del frente del Delta del Paraná/Uruguay,25,,-58.4715,-33.8245,0.0,False,Río de la Plata,False,,,,H
+1837,LaBarquita,,Argentina,H,Hidrológica,,FD7,,,puntos_FDelta,puntos del frente del Delta del Paraná/Uruguay,25,,-58.3838,-34.2114,0.0,False,Río de la Plata,False,,,,H
+1838,Lujan,,Argentina,H,Hidrológica,,FD8,,,puntos_FDelta,puntos del frente del Delta del Paraná/Uruguay,25,,-58.5257,-34.4434,0.0,False,Río de la Plata,False,,,,H
+1839,Mini,,Argentina,H,Hidrológica,,FD9,,,puntos_FDelta,puntos del frente del Delta del Paraná/Uruguay,25,,-58.404,-34.2289,0.0,False,Río de la Plata,False,,,,H
+1840,Palmas,,Argentina,H,Hidrológica,,FD10,,,puntos_FDelta,puntos del frente del Delta del Paraná/Uruguay,25,,-58.4556,-34.3814,0.0,False,Río de la Plata,False,,,,H
+1841,SanAntonio,,Argentina,H,Hidrológica,,FD11,,,puntos_FDelta,puntos del frente del Delta del Paraná/Uruguay,25,,-58.5091,-34.4193,0.0,False,Río de la Plata,False,,,,H
+1842,Sauce,,Argentina,H,Hidrológica,,FD12,,,puntos_FDelta,puntos del frente del Delta del Paraná/Uruguay,25,,-58.4282,-33.9453,0.0,False,Río de la Plata,False,,,,H
+1843,Uruguay,,Argentina,H,Hidrológica,,FD13,,,puntos_FDelta,puntos del frente del Delta del Paraná/Uruguay,25,,-58.4268,-33.9017,0.0,False,Río de la Plata,False,,,,H
+1877,Paraná Miní,,Argentina,H,Hidrológica,,28,,,ina_delta,red INA Delta y AMBA,32,,-58.501874,-34.185121,,True,Paraná Miní,True,,,,H
+1878,Santa Cruz - Charles Fuhr,Santa Cruz,Argentina,H,Hidrológica,SSRH,2802,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.9078055555556,-50.2521111111111,,False,Santa Cruz,True,,,,H
+1879,LAGO VIEDMA - LAGO VIEDMA,Santa Cruz,Argentina,H,Hidrológica,SSRH,2829,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-72.8693055555556,-49.3943333333333,,False,Lago Viedma,True,,,,H
+1880,LAGO SAN MARTIN - BRAZO CHACABUCO,Santa Cruz,Argentina,H,Hidrológica,SSRH,2831,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-72.4856388888889,-49.1239444444444,,False,Lago San Martin,True,,,,H
+1881,Lago Rico - Parque Nac. Los Glaciares,Santa Cruz,Argentina,H,Hidrológica,SSRH,2816,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-72.7478333333333,-50.4261111111111,,False,Lago Rico,True,,,,H
+1882,Deseado - Ruta Provincial Nº47,Santa Cruz,Argentina,H,Hidrológica,SSRH,2835,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-66.5928444444444,-47.8289916666667,,False,Deseado,True,,,,H
+1883,Oro - Camino a Ñires,Santa Cruz,Argentina,H,Hidrológica,SSRH,2834,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.9429277777778,-47.4203722222222,,False,Oro,True,,,,H
+1884,Deseado-Ruta Provincial Nº 039,Santa Cruz,Argentina,H,Hidrológica,SSRH,2824,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-69.5937666666667,-46.726525,,False,Deseado,True,,,,H
+1885,LAGO ARGENTINO - CALAFATE,Santa Cruz,Argentina,H,Hidrológica,SSRH,2817,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-72.261,-50.32,,False,Lago Argentino,True,,,,H
+1886,LAGO PUEYRREDON - LAGO PUEYRREDON,Santa Cruz,Argentina,H,Hidrológica,SSRH,2833,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.9675833333333,-47.3759166666667,,False,Lago Pueyrredón,True,,,,H
+1887,LAGO THAR - EA SANTA ANGELICA,Santa Cruz,Argentina,H,Hidrológica,SSRH,2830,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.9960833333333,-49.2693055555556,,False,Lago Thar,True,,,,H
+1888,Gallegos - Puente Blanco,Santa Cruz,Argentina,H,Hidrológica,SSRH,2818,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5975277777778,-51.8948055555556,,False,Gallegos,True,,,,H
+1889,MITRE - RUTA PROVINCIAL Nº 011,Santa Cruz,Argentina,H,Hidrológica,SSRH,2822,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-72.7324722222222,-50.3999444444444,,False,Mitre,True,,,,H
+1890,Chico - Ruta Nacional Nº 3,Santa Cruz,Argentina,H,Hidrológica,SSRH,2836,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-68.6391277777778,-49.7789972222222,,False,Chico,True,,,,H
+1891,Gallegos - Toma de Agua SP,Santa Cruz,Argentina,H,Hidrológica,SSRH,2838,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-69.6554388888889,-51.6883444444444,,False,Gallegos,True,,,,H
+1892,CENTINELA - RUTA PROVINCIAL Nº 070,Santa Cruz,Argentina,H,Hidrológica,SSRH,2815,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-72.5059444444444,-50.3519722222222,,False,Centinela,True,,,,H
+1893,Chico - Gregores,Santa Cruz,Argentina,H,Hidrológica,SSRH,2837,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-70.32075,-48.7520083333333,,False,Chico,True,,,,H
+1894,LAGO POSADAS - LAGO POSADAS,Santa Cruz,Argentina,H,Hidrológica,SSRH,2832,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.8718888888889,-47.51125,,False,Lago Posadas,True,,,,H
+1895,CARRERAS - FRONTERA,Santa Cruz,Argentina,H,Hidrológica,SSRH,2821,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-72.2844444444444,-48.2063888888889,,False,Carreras,True,,,,H
+1896,LA LEONA - LA LEONA,Santa Cruz,Argentina,H,Hidrológica,SSRH,2801,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-72.0640277777778,-49.7971944444444,,False,La Leona,True,,,,H
+1897,Vizcachas - Cerro Palique,Santa Cruz,Argentina,H,Hidrológica,SSRH,2828,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-72.1065722222222,-50.99605,,False,Vizcachas,True,,,,H
+1898,De las Vueltas - Parque Nac. los Glaciares,Santa Cruz,Argentina,H,Hidrológica,SSRH,2820,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-72.8607222222222,-49.3432777777778,,False,De las Vueltas,True,,,,H
+1899,Los Antiguos - Ruta Provincial Nº 043,Santa Cruz,Argentina,H,Hidrológica,SSRH,2825,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.6396138888889,-46.554075,,False,Los Antiguos,True,,,,H
+1900,LAGO BUENOS AIRES - LOS ANTIGUOS,Santa Cruz,Argentina,H,Hidrológica,SSRH,2826,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.6096944444444,-46.5387777777778,,False,Lago Buenos Aires,True,,,,H
+1901,SHEHUEN-CHALIA - RUTA NACIONAL Nº 040,Santa Cruz,Argentina,H,Hidrológica,SSRH,2827,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.3869722222222,-49.5956111111111,,False,Shehuen-Chalia,True,,,,H
+1902,Penitentes - Rincón de los Morros,Santa Cruz,Argentina,H,Hidrológica,SSRH,2819,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.49475,-51.9215555555555,,False,Penitentes,True,,,,H
+1903,MANSO - CONFLUENCIA,Rio Negro,Argentina,H,Hidrológica,SSRH,1814,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.6836666666667,-41.5868333333333,,False,Manso,True,,,,H
+1904,Foyel - Ruta Nacional Nº 258,Rio Negro,Argentina,H,Hidrológica,SSRH,1816,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.4414166666667,-41.7132777777778,,False,Foyel,True,,,,H
+1905,LAGO ESCONDIDO - EL FOYEL,Rio Negro,Argentina,H,Hidrológica,SSRH,1830,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.6172222222222,-41.6997222222222,,False,Lago Escondido,True,,,,H
+1906,MANSO - MANSO INFERIOR,Rio Negro,Argentina,H,Hidrológica,SSRH,1822,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.7804166666667,-41.556,,False,Manso,True,,,,H
+1907,Azul - El Azul,Rio Negro,Argentina,H,Hidrológica,SSRH,4,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5392111111111,-41.9526805555556,,False,Quemquentreu ,True,,,,H
+1908,QUEMQUEMTREU - ESCUELA Nº 139,Rio Negro,Argentina,H,Hidrológica,SSRH,1811,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5022222222222,-41.89825,,False,Quemquentreu ,True,,,,H
+1909,FOYEL - CONFLUENCIA CON EL MANSO,Rio Negro,Argentina,H,Hidrológica,SSRH,1815,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.7153888888889,-41.6008055555556,,False,Foyel,True,,,,H
+1910,Manso - Lago Steffen,Rio Negro,Argentina,H,Hidrológica,SSRH,1805,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5364027777778,-41.5159361111111,,False,Manso,True,,,,H
+1911,Villegas - Ruta Nacional Nº 258,Rio Negro,Argentina,H,Hidrológica,SSRH,1813,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.4999444444445,-41.5800833333333,,False,Villegas,True,,,,H
+1912,AZUL - PUESTO 1,Rio Negro,Argentina,H,Hidrológica,SSRH,1897,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5659722222222,-41.9588333333333,,False,Azul,True,,,,H
+1913,RAQUEL - EL AZUL,Rio Negro,Argentina,H,Hidrológica,SSRH,1870,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5580555555556,-41.9258333333333,,False,Raquel,True,,,,H
+1914,EL TERNERO - CUESTA DEL TERNERO,Rio Negro,Argentina,H,Hidrológica,SSRH,1896,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.3819166666667,-41.9532222222222,,False,El Ternero,True,,,,H
+1915,Escondido - El Foyel,Rio Negro,Argentina,H,Hidrológica,SSRH,1831,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5652777777778,-41.6797777777778,,False,Escondido,True,,,,H
+1916,MANSO - POBLADOR TURRA,Rio Negro,Argentina,H,Hidrológica,SSRH,1833,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5208888888889,-41.5935277777778,,False,Manso,True,,,,H
+1917,Paraguay - Isla del Cerrito,Chaco,Argentina,H,Hidrológica,SSRH,2406,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.6096333333333,-27.2890194444444,,False,Paraguay,True,,,,H
+1918,POTRERO-RUTA PROVINCIAL Nº 001,Santa Fe,Argentina,H,Hidrológica,SSRH,3320,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.4624166666667,-31.5123333333333,,False,Potrero,True,,,,H
+1922,Los Amores - Ruta Nacional Nº 011,Santa Fe,Argentina,H,Hidrológica,SSRH,3232,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.3558055555556,-28.5559444444444,,False,Los Amores,True,,,,H
+1923,LEYES - RUTA PROVINCIAL Nº 001,Santa Fe,Argentina,H,Hidrológica,SSRH,3225,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.4251111111111,-31.4948055555556,,False,Leyes,True,,,,H
+1924,Saladillo Amargo - Vera Mujica (RP 281),Santa Fe,Argentina,H,Hidrológica,SSRH,3200,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.4116388888889,-30.8419444444444,15.82,False,Saladillo Amargo,True,,,,H
+1927,San Javier - Romang,Santa Fe,Argentina,H,Hidrológica,SSRH,3331,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.7397222222222,-29.5051111111111,,False,San Javier,True,,,,H
+1928,MALABRIGO - RUTA PROVINCIAL Nº 088 S,Santa Fe,Argentina,H,Hidrológica,SSRH,3224,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.7778888888889,-29.3649722222222,,False,Malabrigo,True,,,,H
+1929,El Toba - Margarita,Santa Fe,Argentina,H,Hidrológica,SSRH,3202,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.0075833333333,-29.7300555555556,,False,El Toba,True,,,,H
+1930,Laguna la Picasa - Canal Regulador N° 7,Santa Fe,Argentina,H,Hidrológica,SSRH,3347,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-62.5418166666667,-34.3486861111111,,False,Laguna La Picasa,True,,,,H
+1931,El Rey - Ruta Nacional Nº 011,Santa Fe,Argentina,H,Hidrológica,SSRH,3270,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.6546944444444,-29.1333333333333,,False,El Rey,True,,,,H
+1932,Coronda - Batallón 601,Santa Fe,Argentina,H,Hidrológica,SSRH,3252,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.7459722222222,-31.6940555555556,,False,Coronda,True,,,,H
+1933,Tapenagá - Florencia,Santa Fe,Argentina,H,Hidrológica,SSRH,3340,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.2250277777778,-28.029,,False,Tapenagá,True,,,,H
+1935,SAN JAVIER - CAYASTÁ,Santa Fe,Argentina,H,Hidrológica,SSRH,3226,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.1568611111111,-31.1981944444444,,False,San Javier,True,,,,H
+1939,San Javier - Helvecia,Santa Fe,Argentina,H,Hidrológica,SSRH,3204,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.0835277777778,-31.1041666666667,,False,San Javier,True,,,,H
+1940,Saladillo Dulce - La Noria (RP 281),Santa Fe,Argentina,H,Hidrológica,SSRH,3218,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.2821944444444,-30.8548333333333,,True,Saladillo Dulce,True,,,,H
+1941,CORONDA - PUERTO GABOTO,Santa Fe,Argentina,H,Hidrológica,SSRH,3254,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.8136388888889,-32.4299444444444,,False,Coronda,True,,,,H
+1942,Paraná - Timbúes,Santa Fe,Argentina,H,Hidrológica,SSRH,3316,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.7305555555556,-32.6583333333333,,False,Paraná,True,,,,H
+1943,Laguna La Picasa - RN33,Santa Fe,Argentina,H,Hidrológica,SSRH,3345,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-62.8114583333333,-34.3268111111111,,False,Laguna La Picasa,True,,,,H
+1945,Canal Línea Paraná - Rp Nº 3,Santa Fe,Argentina,H,Hidrológica,SSRH,3306,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.9758055555556,-28.1103888888889,,False,Canal lí­nea Paraná,True,,,,H
+1947,SAN JAVIER - SANTA ROSA,Santa Fe,Argentina,H,Hidrológica,SSRH,3229,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.3294444444444,-31.4176111111111,,False,San Javier,True,,,,H
+1948,EL MONJE - ZONA RURAL,Santa Fe,Argentina,H,Hidrológica,SSRH,3266,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.9087777777778,-32.384,,False,El Monje,True,,,,H
+1951,San Javier - Saladero Cabal,Santa Fe,Argentina,H,Hidrológica,SSRH,3228,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.0343888888889,-30.8805833333333,,False,San Javier,True,,,,H
+1952,SANTA RITA - RUTA PROVINCIAL Nº 001,Santa Fe,Argentina,H,Hidrológica,SSRH,3334,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.4409166666667,-31.4945,,False,Santa Rita,True,,,,H
+1953,Salado - Agua Abajo Azud Colonia Dora,Santiago del Estero,Argentina,H,Hidrológica,SSRH,818,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-62.8868472222222,-28.5583833333333,,False,Salado,True,,,,H
+1954,Salado - Suncho Corral,Santiago del Estero,Argentina,H,Hidrológica,SSRH,804,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-63.4397944444444,-27.940175,,False,Salado,True,,,,H
+1955,Salado - Ruta Provincial Nº 092,Santiago del Estero,Argentina,H,Hidrológica,SSRH,811,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-62.8814027777778,-28.5034166666667,,False,Salado,True,,,,H
+1956,Dulce - Dique los Quiroga,Santiago del Estero,Argentina,H,Hidrológica,SSRH,820,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.3626138888889,-27.651,,False,Dulce,True,,,,H
+1957,Salado - El Arenal,Santiago del Estero,Argentina,H,Hidrológica,SSRH,803,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-63.7244055555556,-26.3742194444444,,False,Salado,True,,,,H
+1958,Canal de Dios - Canal de Dios,Santiago del Estero,Argentina,H,Hidrológica,SSRH,815,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-63.9480583333333,-25.6107777777778,,False,Canal de Dios,True,,,,H
+1959,Dulce - Tuhama,Santiago del Estero,Argentina,H,Hidrológica,SSRH,817,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.0979166666667,-28.0147222222222,,False,Dulce,True,,,,H
+1960,Carcaraña - Cruz Alta,Cordoba,Argentina,H,Hidrológica,SSRH,4204,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-61.787425,-33.0056194444444,,False,Carcaraña,True,,,,H
+1961,EL DURAZNO - LA FLORIDA,Cordoba,Argentina,H,Hidrológica,SSRH,4306,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.7833333333333,-32.2333333333333,,False,El durazno,True,,,,H
+1962,GRANDE - UME PAY,Cordoba,Argentina,H,Hidrológica,SSRH,4209,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.7333333333333,-32.2166666666667,,False,Grande,True,,,,H
+1963,Miraflores - Sayate,Jujuy,Argentina,H,Hidrológica,SSRH,35,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-65.8494444444444,-22.9008333333333,,False,Miraflores,True,,,,H
+1964,San Francisco - Caimancito,Jujuy,Argentina,H,Hidrológica,SSRH,16,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.5395833333333,-23.7120555555556,,False,San Francisco,True,,,,H
+1965,Iruya - San José,Salta,Argentina,H,Hidrológica,SSRH,655,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.7036388888889,-22.8655,,False,Iruya,True,,,,H
+1966,Bermejo - Aguas Blancas,Salta,Argentina,H,Hidrológica,SSRH,604,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.3646055555556,-22.7249,,False,Bermejo,True,,,,H
+1967,JURAMENTO - EL TUNAL,Salta,Argentina,H,Hidrológica,SSRH,626,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.4769444444444,-25.2266666666667,,False,Juramento,True,,,,H
+1968,Canal Macapillo - Macapillo,Salta,Argentina,H,Hidrológica,SSRH,699,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-63.9761555555556,-25.4134805555556,,False,Canal Macapillo,True,,,,H
+1969,BERMEJO - POZO SARMIENTO,Salta,Argentina,H,Hidrológica,SSRH,693,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.2,-23.2166666666667,,False,Bermejo,True,,,,H
+1970,Bermejo - Balapuca,Salta,Argentina,H,Hidrológica,SSRH,605,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.4635555555556,-22.4924722222222,,False,Bermejo,True,,,,H
+1971,Bermejo - Alarache,Salta,Argentina,H,Hidrológica,SSRH,607,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.58675,-22.2492777777778,,False,Bermejo,True,,,,H
+1972,Canal Liag - El Quebrachal,Salta,Argentina,H,Hidrológica,SSRH,696,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.0224027777778,-25.3606888888889,,False,Canal Liag,True,,,,H
+1973,PESCADO - CUATRO CEDROS,Salta,Argentina,H,Hidrológica,SSRH,629,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.4833333333333,-22.8,,False,Pescado,True,,,,H
+1974,Arenales - El Encon,Salta,Argentina,H,Hidrológica,SSRH,701,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-65.59325,-24.8423055555556,,False,Arenales,True,,,,H
+1975,Canal Finca Agropecuaria - Finca Agropecuaria,Salta,Argentina,H,Hidrológica,SSRH,684,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.1060111111111,-25.1608111111111,,False,Canal Finca Agropecuaria,True,,,,H
+1976,TARIJA - SAN TELMO,Salta,Argentina,H,Hidrológica,SSRH,637,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.24,-22.5711111111111,,False,Tarija,True,,,,H
+1978,Pilcomayo - La Paz,Salta,Argentina,H,Hidrológica,SSRH,631,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-62.5234722222222,-22.3775,,False,Pilcomayo,True,,,,H
+1979,De las Conchas - La Punilla,Salta,Argentina,H,Hidrológica,SSRH,611,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-65.8231138888889,-26.0119194444444,,False,De las Conchas,True,,,,H
+1980,JURAMENTO - EL QUEBRACHAL,Salta,Argentina,H,Hidrológica,SSRH,695,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.0455555555556,-25.3438888888889,,False,Juramento,True,,,,H
+1981,Senguerr - Facundo,Chubut,Argentina,H,Hidrológica,SSRH,2319,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-69.9477694444444,-45.3192777777778,,False,Senguerr,True,,,,H
+1982,Lago Fontana - Gendarmeria,Chubut,Argentina,H,Hidrológica,SSRH,2316,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.39475,-44.9800555555556,,False,Lago Fontana,True,,,,H
+1983,CHUBUT - EL MAITÉN,Chubut,Argentina,H,Hidrológica,SSRH,2206,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.1699444444445,-42.0997222222222,,False,Chubut,True,,,,H
+1984,Chubut - Ameghino,Chubut,Argentina,H,Hidrológica,SSRH,2281,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-66.4748611111111,-43.6982666666667,,False,Chubut,True,,,,H
+1985,CHUBUT - TRELEW,Chubut,Argentina,H,Hidrológica,SSRH,2317,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-65.2734305555555,-43.2760194444444,,False,Chubut,True,,,,H
+1986,CHUBUT - GUALJAINA,Chubut,Argentina,H,Hidrológica,SSRH,2301,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-70.3844444444445,-42.6097222222222,,False,Chubut,True,,,,H
+1987,GUALJAINA - GUALJAINA,Chubut,Argentina,H,Hidrológica,SSRH,2211,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-70.4387777777778,-42.6534444444444,,False,Gualjaina,True,,,,H
+1988,Senguerr - La Paulina-Aserradero,Chubut,Argentina,H,Hidrológica,SSRH,2270,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.1681083333333,-45.0016083333333,,False,Senguerr,True,,,,H
+1989,ARRAYANES - LAGO VERDE,Chubut,Argentina,H,Hidrológica,SSRH,2221,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.7416666666667,-42.7441666666667,,False,Arrayanes,True,,,,H
+1990,SITUACIÓN - ESCUELA Nº 90,Chubut,Argentina,H,Hidrológica,SSRH,2217,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5547222222222,-43.1325,,False,Situación,True,,,,H
+1991,CARRILEUFÚ - CHOLILA,Chubut,Argentina,H,Hidrológica,SSRH,2204,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5411111111111,-42.4955555555556,,False,Carrileufú,True,,,,H
+1992,LAGO VINTER - VINTER,Chubut,Argentina,H,Hidrológica,SSRH,2299,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.4284444444445,-43.9195,,False,Lago Vinter,True,,,,H
+1993,FONTANA - ESTANCIA AMANCAY,Chubut,Argentina,H,Hidrológica,SSRH,2218,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5586111111111,-42.9913888888889,,False,Fontana,True,,,,H
+1994,MENENDEZ - PUERTO CHUCAO,Chubut,Argentina,H,Hidrológica,SSRH,2229,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.7580555555556,-42.7308333333333,,False,Menendez,True,,,,H
+1995,NAHUEL PAN - BOQUETE NAHUEL PAN,Chubut,Argentina,H,Hidrológica,SSRH,2233,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.2541944444445,-43.0838888888889,,False,Nahuel Pan,True,,,,H
+1996,LAGO PUELO - LAGO PUELO,Chubut,Argentina,H,Hidrológica,SSRH,2231,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.6161111111111,-42.0983333333333,,False,Puelo,True,,,,H
+1997,HUEMUL - CORCOVADO,Chubut,Argentina,H,Hidrológica,SSRH,2279,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.4738888888889,-43.5366666666667,,False,Huemul,True,,,,H
+1998,CARRENLEUFÚ - PUENTE DE HIERRO,Chubut,Argentina,H,Hidrológica,SSRH,2288,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.4861388888889,-43.5441111111111,,False,Carrenleufú,True,,,,H
+1999,LEPÁ - GUALJAINA,Chubut,Argentina,H,Hidrológica,SSRH,2228,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-70.5477833333333,-42.7323888888889,,False,Lepá,True,,,,H
+2000,AZUL - PUESTO 2,Chubut,Argentina,H,Hidrológica,SSRH,2314,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.6211111111111,-42.0897222222222,,False,Azul,True,,,,H
+2001,LAGO ROSARIO - LAGO ROSARIO,Chubut,Argentina,H,Hidrológica,SSRH,2234,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.3615555555556,-43.2356111111111,,False,Lago Rosario,True,,,,H
+2002,FUTALEUFÚ - PUESTO RIOS,Chubut,Argentina,H,Hidrológica,SSRH,2220,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.6236944444444,-43.1747777777778,,False,Futaleufú,True,,,,H
+2003,PUELO - HITO FRONTERIZO,Chubut,Argentina,H,Hidrológica,SSRH,2315,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.7247222222222,-42.1055555555556,,False,Puelo,True,,,,H
+2004,NANTY FALL - RUTA A CHILE,Chubut,Argentina,H,Hidrológica,SSRH,2213,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5142777777778,-43.1655555555556,,False,Nanty Fall,True,,,,H
+2005,EPUYÉN - MUELLE,Chubut,Argentina,H,Hidrológica,SSRH,2222,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.4275,-42.2088888888889,,False,Epuyén,True,,,,H
+2006,FUTALEUFÚ - EMBALSE,Chubut,Argentina,H,Hidrológica,SSRH,2259,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.6541944444445,-43.1094444444444,,False,Futaleufú,True,,,,H
+2007,CARRENLEUFÚ - PONCHO MORO,Chubut,Argentina,H,Hidrológica,SSRH,2293,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.2339444444444,-43.7219444444444,,False,Carrenleufú,True,,,,H
+2008,LAGO MUSTERS - EL FORTÍN,Chubut,Argentina,H,Hidrológica,SSRH,2275,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-69.2716666666667,-45.5766666666667,,False,Lago Musters,True,,,,H
+2009,SENGUERR - PUENTE CAMINO BUEN PASTO,Chubut,Argentina,H,Hidrológica,SSRH,2264,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-69.0627777777778,-45.5638888888889,,False,Senguerr,True,,,,H
+2010,MAYO - PASO RIO MAYO,Chubut,Argentina,H,Hidrológica,SSRH,2212,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-70.2536166666667,-45.6815888888889,,False,RÃ­o Mayo,True,,,,H
+2011,Chubut - Paso del Sapo,Chubut,Argentina,H,Hidrológica,SSRH,2318,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-69.5948055555556,-42.7408055555556,,False,Chubut,True,,,,H
+2012,Chubut - Los Altares,Chubut,Argentina,H,Hidrológica,SSRH,2207,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-68.3993916666667,-43.8883805555556,,False,Chubut,True,,,,H
+2013,Carrenleufú - Jaramillo,Chubut,Argentina,H,Hidrológica,SSRH,2296,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.2339444444444,-43.8423888888889,,False,Carrenleufú,True,,,,H
+2014,CARRENLEUFÚ - LAGO VINTER,Chubut,Argentina,H,Hidrológica,SSRH,2203,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.4188888888889,-43.8995277777778,,False,Carrenleufú,True,,,,H
+2015,Pico - Frontera,Chubut,Argentina,H,Hidrológica,SSRH,2320,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.6599444444444,-44.2403611111111,,False,Río Pico,True,,,,H
+2016,ESQUEL - ESTANCIA EL PRINCIPIO,Chubut,Argentina,H,Hidrológica,SSRH,2209,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.3844444444445,-42.9582027777778,,False,Esquel,True,,,,H
+2017,BAGGLITS - RUTA A CHILE,Chubut,Argentina,H,Hidrológica,SSRH,2239,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5678055555556,-43.1989444444444,,False,BAGGLITS ,True,,,,H
+2018,CARRENLEUFÚ - CARRENLEUFÚ,Chubut,Argentina,H,Hidrológica,SSRH,2201,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5997416666667,-43.7083888888889,,False,Carrenleufú,True,,,,H
+2019,FUTALAUFQUEN - PUERTO BUSTILLO,Chubut,Argentina,H,Hidrológica,SSRH,2286,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.6216666666667,-42.8766666666667,,False,Futalaufquen,True,,,,H
+2020,Senguerr-Los Molinos,Chubut,Argentina,H,Hidrológica,SSRH,2297,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-69.4748944444444,-45.9861,,False,Senguerr,True,,,,H
+2021,COHIHUES - PARQUE NAC. LOS ALERCES,Chubut,Argentina,H,Hidrológica,SSRH,2230,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5788888888889,-42.9719444444444,,False,Cohihues,True,,,,H
+2022,EPUYÉN - LA ANGOSTURA,Chubut,Argentina,H,Hidrológica,SSRH,2208,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.4,-42.1888888888889,,False,Epuyén,True,,,,H
+2023,CARRENLEUFÚ - LA ELENA,Chubut,Argentina,H,Hidrológica,SSRH,2202,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.3008611111111,-43.6838888888889,,False,Carrenleufú,True,,,,H
+2024,Chubut - Valle Inferior,Chubut,Argentina,H,Hidrológica,SSRH,2295,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-65.4985333333333,-43.2930916666667,,False,Chubut,True,,,,H
+2025,Piray Miní - Valle Hermoso,Misiones,Argentina,H,Hidrológica,SSRH,3407,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-54.4982222222222,-26.355,,False,Piray Miní,True,,,,H
+2026,Piray Guazú - Pinar Ciba,Misiones,Argentina,H,Hidrológica,SSRH,3403,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-54.4538333333333,-26.512,,False,Piray Guazú,True,,,,H
+2027,Paraná - Puerto Rico,Misiones,Argentina,H,Hidrológica,SSRH,3457,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-55.0240833333333,-26.7917222222222,,False,Paraná,True,,,,H
+2028,Paraná - Puerto Maní,Misiones,Argentina,H,Hidrológica,SSRH,3406,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-55.5221666666667,-27.1063611111111,,False,Paraná,True,,,,H
+2029,Uruguay - El Soberbio,Misiones,Argentina,H,Hidrológica,SSRH,3442,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-54.1935833333333,-27.2985833333333,,False,Uruguay,True,,,,H
+2030,Iguazú - Puerto Iguazú,Misiones,Argentina,H,Hidrológica,SSRH,3446,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-54.5798611111111,-25.59325,,False,Iguazú,True,,,,H
+2031,Yabebiry - Colonia Mártires,Misiones,Argentina,H,Hidrológica,SSRH,3404,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-55.3349722222222,-27.4011944444444,,False,Yabebiry,True,,,,H
+2032,Piray Guazú - Puente Viejo- RN 12,Misiones,Argentina,H,Hidrológica,SSRH,3424,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-54.5888333333333,-26.4860833333333,,False,Piray Guazú,True,,,,H
+2033,Uruguay - Puerto Concepción,Misiones,Argentina,H,Hidrológica,SSRH,3427,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-55.581,-28.1187777777778,,False,Uruguay,True,,,,H
+2034,Paraná - Itá Cajón,Misiones,Argentina,H,Hidrológica,SSRH,3452,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-54.5928611111111,-25.6041111111111,,False,Paraná,True,,,,H
+2035,Iguazú - Puerto Andresito,Misiones,Argentina,H,Hidrológica,SSRH,3448,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-53.995,-25.5905555555556,,False,Iguazú,True,,,,H
+2036,Paraná - Puerto Libertad,Misiones,Argentina,H,Hidrológica,SSRH,3401,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-54.62075,-25.9165833333333,,False,Paraná,True,,,,H
+2037,Uruguay - San Javier,Misiones,Argentina,H,Hidrológica,SSRH,3449,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-55.13025,-27.8690833333333,,False,Uruguay,True,,,,H
+2038,Paranay - El Alcazar,Misiones,Argentina,H,Hidrológica,SSRH,3414,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-54.7563333333333,-26.75075,,False,Paranay,True,,,,H
+2039,Uruguay - Pepirí Miní­,Misiones,Argentina,H,Hidrológica,SSRH,3443,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-53.9329166666667,-27.1535555555556,,False,Uruguay,True,,,,H
+2040,Iguazú - Perfil Tipo,Misiones,Argentina,H,Hidrológica,SSRH,3440,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-54.4214444444444,-25.6766666666667,,False,Iguazú,True,,,,H
+2041,Paraguay - Puerto Formosa,Formosa,Argentina,H,Hidrológica,SSRH,2608,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.1620277777778,-26.1831944444444,,False,Paraguay,True,,,,H
+2042,Pilagá - Rn Nº 11,Formosa,Argentina,H,Hidrológica,SSRH,2609,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.1631666666667,-25.9846944444444,,False,Pilagá,True,,,,H
+2043,Paraguay - La Herradura,Formosa,Argentina,H,Hidrológica,SSRH,2607,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.2296555555556,-26.5366055555556,,False,Paraguay,True,,,,H
+2044,Bermejo - Puerto Velaz,Formosa,Argentina,H,Hidrológica,SSRH,2610,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.6339444444444,-26.6604444444444,,False,Bermejo,True,,,,H
+2045,Pilcomayo - Puesto Jerez,Formosa,Argentina,H,Hidrológica,SSRH,2622,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-62.2133888888889,-22.7281111111111,,False,Pilcomayo,True,,,,H
+2047,Pilcomayo - Puerto Pilcomayo,Formosa,Argentina,H,Hidrológica,SSRH,2606,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-57.6503055555556,-25.372,,False,Pilcomayo,True,,,,H
+2049,Paraná - Tunel Subfluvial,Entre Rios,Argentina,H,Hidrológica,SSRH,3050,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.5175277777778,-31.7198611111111,,False,Paraná,True,,,,H
+2050,Gualeguaychú - RN N° 136,Entre Rios,Argentina,H,Hidrológica,SSRH,3062,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.5043888888889,-32.9796666666667,,False,Gualeguaychú,True,,,,H
+2054,Arroyo Feliciano - Rp Nº 2-Paso Correa,Entre Rios,Argentina,H,Hidrológica,SSRH,3064,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.7074722222222,-30.3931666666667,,False,Arroyo Feliciano,True,,,,H
+2055,Aº Estacas - Ex RP 50,Entre Rios,Argentina,H,Hidrológica,SSRH,3065,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.4706388888889,-30.7666944444444,,False,Arroyo Estacas,True,,,,H
+2056,GUALEGUAYCHÚ - RUTA NACIONAL Nº 014,Entre Rios,Argentina,H,Hidrológica,SSRH,3028,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.4981388888889,-32.7672777777778,,False,Gualeguaychú,True,,,,H
+2058,Feliciano - Paso Quebracho,Entre Rios,Argentina,H,Hidrológica,SSRH,3019,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.6614166666667,-30.9915833333333,,False,Feliciano,True,,,,H
+2061,PARANA - CHAPETON,Entre Rios,Argentina,H,Hidrológica,SSRH,3005,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.2833333333333,-31.57425,,False,Paraná,True,,,,H
+2062,DEL DOLL - RUTA PROVINCIAL Nº 011,Entre Rios,Argentina,H,Hidrológica,SSRH,3015,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.4265277777778,-32.3058333333333,,False,Del Doll,True,,,,H
+2063,Yuquerí Grande - Concordia,Entre Rios,Argentina,H,Hidrológica,SSRH,3061,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.0940833333333,-31.3557611111111,,False,Yuquerí Grande,True,,,,H
+2065,Uruguay  - Concepción,Entre Rios,Argentina,H,Hidrológica,SSRH,3058,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.2207777777778,-32.4776944444444,,False,Uruguay,True,,,,H
+2067,Uruguay - Garruchos,Corrientes,Argentina,H,Hidrológica,SSRH,3857,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-55.6434722222222,-28.1755555555556,,False,Uruguay,True,,,,H
+2068,Mocoretá - Rnnº 014,Corrientes,Argentina,H,Hidrológica,SSRH,3845,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-57.9831666666667,-30.6279444444444,,False,Mocoretá,True,,,,H
+2070,Aguapey - Caa Caraí,Corrientes,Argentina,H,Hidrológica,SSRH,3858,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,null,-56.258444444,-27.824527778,,False,Aguapey,True,,,,H
+2071,Uruguay - Paso de los Libres,Corrientes,Argentina,H,Hidrológica,SSRH,3802,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-57.084,-29.7193611111111,,False,Uruguay,True,,,,H
+2072,Batel - Paso Cerrito,Corrientes,Argentina,H,Hidrológica,SSRH,3849,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.7883333333333,-29.0311111111111,,False,Batel,True,,,,H
+2073,Mocoretá - Rnnº 127,Corrientes,Argentina,H,Hidrológica,SSRH,3844,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.0580555555556,-30.1077222222222,,False,Mocoretá,True,,,,H
+2075,Miriñay - Paso Mesa,Corrientes,Argentina,H,Hidrológica,SSRH,3819,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-57.2355277777778,-28.9178333333333,,False,Miriñay,True,,,,H
+2076,Laguna Galarza - Colonia Galarza,Corrientes,Argentina,H,Hidrológica,SSRH,3825,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-56.6855555555556,-28.0961111111111,,False,Laguna Galarza,True,,,,H
+2077,Sistema Iberá - Estancia Palo Pirú,Corrientes,Argentina,H,Hidrológica,SSRH,3828,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-57.6351666666667,-28.2525555555556,,False,Sistema Iberá,True,,,,H
+2078,Chimiray - Colonia Liebig,Corrientes,Argentina,H,Hidrológica,SSRH,3846,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-55.8174444444444,-27.9121388888889,,False,Chimiray,True,,,,H
+2082,Paraná - Itatí,Corrientes,Argentina,H,Hidrológica,SSRH,3862,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.2443055555556,-27.26625,,False,Paraná,True,,,,H
+2084,Batel - Rnnº 123,Corrientes,Argentina,H,Hidrológica,SSRH,3842,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.6749444444444,-28.8997222222222,,False,Batel,True,,,,H
+2085,Paraná - Corrientes,Corrientes,Argentina,H,Hidrológica,SSRH,3805,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.8333333333333,-27.4597222222222,,False,Paraná,True,,,,H
+2088,Riachuelo - Rp Nº 5,Corrientes,Argentina,H,Hidrológica,SSRH,3841,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.56975,-27.5104722222222,,False,Riachuelo,True,,,,H
+2089,Paraná - Empedrado,Corrientes,Argentina,H,Hidrológica,SSRH,3885,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.8199444444444,-27.9588055555556,,False,Paraná,True,,,,H
+2090,Guayquiraró- La Grela,Corrientes,Argentina,H,Hidrológica,SSRH,3878,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.3004333333333,-30.346475,,False,Guayquiraró,True,,,,H
+2091,Corriente - Estancia Santa Irene - Perugorria,Corrientes,Argentina,H,Hidrológica,SSRH,2,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.7961138888889,-29.2736166666667,,False,Corriente,True,,,,H
+2092,Barrancas - Paso la Llana,Corrientes,Argentina,H,Hidrológica,SSRH,3810,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.3243333333333,-30.2173333333333,,False,Barrancas,True,,,,H
+2093,Uruguay - Santo Tomé,Corrientes,Argentina,H,Hidrológica,SSRH,3860,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-56.0292222222222,-28.5454388888889,,False,Uruguay,True,,,,H
+2094,Empedrado - Rp Nº 6,Corrientes,Argentina,H,Hidrológica,SSRH,3839,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.505,-27.8011111111111,,False,Empedrado,True,,,,H
+2095,Miriñay - San Roquito,Corrientes,Argentina,H,Hidrológica,SSRH,3832,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-57.5651666666667,-29.2968333333333,,False,Miriñay,True,,,,H
+2096,Nansen - Estancia Entre Rios,,Argentina,H,Hidrológica,SSRH,2814,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-72.2197222222222,-48.2552777777778,,False,Nansen,True,,,,H
+2097,LAGO PUELO - OFICINA TÉCNICA,,Argentina,H,Hidrológica,SSRH,1894,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5230555555556,-41.9836111111111,,False,Río Negro,True,,,,H
+2098,Negro-Obra de Control Agua Abajo,,Argentina,H,Hidrológica,SSRH,2403,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.8987111111111,-27.4567027777778,,False,Negro,True,,,,H
+2099,Riacho Palometa - Puente Ruta Provincial Nº 13,,Argentina,H,Hidrológica,SSRH,2402,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.3938611111111,-27.5581666666667,,False,Riacho Palometa,True,,,,H
+2100,Salado - Rn Nº 11,,Argentina,H,Hidrológica,SSRH,2408,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.1309166666667,-27.5412777777778,,False,Salado,True,,,,H
+2101,Paraguay - Puerto Bermejo,,Argentina,H,Hidrológica,SSRH,2401,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-58.5070277777778,-26.9258888888889,,False,Paraguay,True,,,,H
+2102,Iruya - San Antonio,,Argentina,H,Hidrológica,SSRH,674,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-64.9711666666667,-22.8255555555556,,False,Iruya,True,,,,H
+2103,Mojotoro - Guemes,,Argentina,H,Hidrológica,SSRH,687,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-65.0436388888889,-24.6875277777778,,False,Mojotoro,True,,,,H
+2104,Poncho Moro - Nacimiento,,Argentina,H,Hidrológica,SSRH,2285,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.4150277777778,-43.6877777777778,,False,Carrenleufú,True,,,,H
+2105,Senguerr - Sarmiento-Aeroclub,,Argentina,H,Hidrológica,SSRH,2269,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-69.074875,-45.5811333333333,,False,Senguerr,True,,,,H
+2106,Jardí­n Arrayanes - Valle Chico,,Argentina,H,Hidrológica,SSRH,2273,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.265,-42.9263888888889,,False,Jardí­n Arrayanes,True,,,,H
+2107,FUTALEUFÚ - PUENTE TUBERÍA,,Argentina,H,Hidrológica,SSRH,2284,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.6277777777778,-43.13,,False,Futaleufú,True,,,,H
+2108,CARRENLEUFÚ - PUESTO BLANCO,,Argentina,H,Hidrológica,SSRH,2280,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.5833333333333,-43.5333333333333,,False,Carrenleufú,True,,,,H
+2109,LAGO SITUACIÓN - HUEMUL,,Argentina,H,Hidrológica,SSRH,2289,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-71.8327777777778,-43.0433333333333,,False,Situación,True,,,,H
+2230,Arroyo San Juan - MeteoVARELA,Buenos Aires,Argentina,H,Hidrológica,INA,25,http://cloud.fdx-ingenieria.com.ar:8000/api,,ina_delta,red INA Delta y AMBA,32,sanjuan,-58.2301426802177,-34.8074531496048,,True,Arroyo San Juan,False,,,,H
+2231,Nuevo Berlín,,Uruguay,H,Hidrológica,CARU,39,http://190.0.152.194:8080/alturas/web/app.php/user/estacion/39/0,,alturas_varios,Otras redes hidrológicas,17,NVOBERLIN,-58.061997,-32.979836,,True,Uruguay,True,,,,H
+2232,Paysandú,,Uruguay,H,Hidrológica,CARU,19,http://190.0.152.194:8080/alturas/web/app.php/user/estacion/19/0,,alturas_varios,Otras redes hidrológicas,17,PAYSANDU,-58.102575,-32.313646,0.04,True,Uruguay,True,,,,H
+2233,Concepción del Uruguay - CARU,,Argentina,H,Hidrológica,CARU,20,http://190.0.152.194:8080/alturas/web/app.php/user/estacion/20/0,,alturas_varios,Otras redes hidrológicas,17,CONCURUG,-58.221219,-32.477173,-0.37,True,Uruguay,True,,,,H
+2235,Fray Bentos - CARU,Río Negro,Uruguay,H,Hidrológica,CARU,37,http://190.0.152.194:8080/alturas/web/app.php/user/estacion/37/0,,alturas_varios,Otras redes hidrológicas,17,FBENTOS,-58.314443,-33.112132,-0.14,True,Uruguay,True,,,,H
+2868,Campichuelo,ENTRERIOS,Argentina,H,Hidrológica,CARU,30,,,alturas_varios,Otras redes hidrológicas,17,CAMPI,-58.1834,-32.70101,,True,URUGUAY,True,,,,H
+5430,Federación Embalse,,Argentina,H,Hidrológica,PNA,660,,,alturas_prefe,escalas Prefectura Nacional,10,,-57.899273,-30.994853,,False,Uruguay,True,,,,H
+5873,Arroyo Las Piedras - Gob. Monteverde,BUENOSAIRES,Argentina,H,Hidrológica,INA,29,,,ina_delta,red INA Delta y AMBA,32,LASPIEDRAS2,-58.298648,-34.783421,,True,Cuenca Sarandí-Santo Domingo,True,,,,H
+5874,Arroyo San Francisco - Dr. Torre,,Argentina,H,Hidrológica,,8,,,ina_delta,red INA Delta y AMBA,32,,-58.3234008,-34.7650541,,True,Cuenca Sarandí-Santo Domingo,True,,,,H
+5876,Carabelas,,Argentina,H,Hidrológica,,30,,,ina_delta,red INA Delta y AMBA,32,,-58.835841,-34.05977,,True,Carabelas,True,,,,H
+5884,La Picada - RN 12,Entre Ríos,Argentina,H,Hidrológica,SSRH,3063,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.3076111111111,-31.7288333333333,78.339,False,A° Las Conchas,True,,,,H
+5910,SANTA FE - LA GUARDIA,Santa Fe,Argentina,H,Hidrológica,snih:1,3339,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-60.6779722222222,-31.6301388888889,8.28,True,SISTEMA SETÚBAL,True,,,,H
+6831,Arroyo Toro,BUENOSAIRES,ARGENTINA,H,Hidrológica,INA-INTA,52,,,ina_delta,red INA Delta y AMBA,32,toro,-58.596012,-34.322529,-0.266,True,Arroyo Toro,True,,,,H
+6949,Finky,,,H,Hidrológica,,telemetria_13,,,prevenir,prevenir,37,,-58.397766,-34.786209,18.34,True,,True,,,,H
+6950,LP_Libano,,,H,Hidrológica,,telemetria_12,,,prevenir,prevenir,37,,-58.30934,-34.738069,5.25,True,Arroyo Las Piedras,True,,,,H
+6951,SF_Montevideo,,,H,Hidrológica,,telemetria_9,,,prevenir,prevenir,37,,-58.319435,-34.728604,5.05,True,Arroyo San Francisco,True,,,,H
+6952,SD_Olmos,,,H,Hidrológica,,telemetria_11,,,prevenir,prevenir,37,,-58.323275,-34.687629,,True,Canal Santo Domingo,True,,,,H
+1015,Libertad,,Argentina,A,Combinada,Salto Grande,A5000F4A,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.85945,-30.014261,,True,,True,,,,A
+1016,Puerto Concordia,null,Argentina,A,Combinada,Salto Grande,A50012EE,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,null,-58.002561,-31.404212,1.29,True,null,True,,,,A
+1017,Yapeyú,,Argentina,A,Combinada,Salto Grande,A5001C3C,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.81167,-29.470444,,True,,True,,,,A
+1018,Salto Grande,,Uruguay,A,Combinada,Salto Grande,A5002774,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.916594,-31.272706,,True,,True,,,,A
+1019,Alvear,,Argentina,A,Combinada,Salto Grande,A50029A6,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.555522,-29.112957,,True,,True,,,,A
+1020,Paso de la Cruz,,Uruguay,A,Combinada,Salto Grande,A5003402,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.291694,-30.289,,True,,True,,,,A
+1021,Paso de los Libres,,Argentina,A,Combinada,Salto Grande,A5004292,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.082856,-29.721745,,True,,True,,,,A
+1022,Federación,,Argentina,A,Combinada,Salto Grande,A5004C40,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.913847,-30.992189,,True,,True,,,,A
+1023,Catalán,,Uruguay,A,Combinada,Salto Grande,A50051E4,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.214658,-30.751196,,True,,True,,,,A
+1024,El Trompo,,Argentina,A,Combinada,Salto Grande,A5005F36,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-58.247317,-30.971026,,True,,True,,,,A
+1025,Cerro Amarillo,,Uruguay,A,Combinada,Salto Grande,A500647E,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.657495,-30.62427,,True,,True,,,,A
+1026,Catalan Grande,null,Uruguay,A,Combinada,Salto Grande,A5006AAC,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,null,-56.326,-30.638,,True,null,True,,,,A
+1027,Paso Campamento,,Uruguay,A,Combinada,Salto Grande,A5007708,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.786308,-30.787214,,True,,True,,,,A
+1028,Cuareim Rio,,Uruguay,A,Combinada,Salto Grande,A50079DA,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.230152,-30.58639,,True,,True,,,,A
+1029,Roncador,,Uruguay,A,Combinada,Salto Grande,A500878C,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.310079,-30.558252,,True,,True,,,,A
+1030,Paso del León,,Uruguay,A,Combinada,Salto Grande,A50094FA,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.074737,-30.205281,,True,,True,,,,A
+1031,Cuaró,,Uruguay,A,Combinada,Salto Grande,A500A160,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.905948,-30.613837,,True,,True,,,,A
+1032,Bernabé Rivera,,Uruguay,A,Combinada,Salto Grande,A500B216,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.972142,-30.299302,,True,,True,,,,A
+1033,Meneses,,Uruguay,A,Combinada,Salto Grande,A500C486,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.411658,-30.865546,,True,,True,,,,A
+1034,Paso del Remanso,,Uruguay,A,Combinada,Salto Grande,A500D7F0,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.66754,-30.223953,,True,,True,,,,A
+1035,Garruchos,,Argentina,A,Combinada,Salto Grande,A500E26A,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-55.642269,-28.177515,,True,,True,,,,A
+1036,Santo Tomé,,Argentina,A,Combinada,Salto Grande,A500F11C,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.028995,-28.545073,,True,,True,,,,A
+1037,San Javier,,Argentina,A,Combinada,Salto Grande,A5010362,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-55.129216,-27.869343,,True,,True,,,,A
+1038,El Soberbio,,Argentina,A,Combinada,Salto Grande,A5011014,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-54.193437,-27.298582,,True,,True,,,,A
+1039,Pepirí Miní,,Argentina,A,Combinada,Salto Grande,A50136F8,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-53.933283,-27.153304,,True,,True,,,,A
+1040,Colonia Lavalleja,,Uruguay,A,Combinada,Salto Grande,A5014068,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.021887,-31.09242,,True,,True,,,,A
+1041,Sequeira,,Uruguay,A,Combinada,Salto Grande,A501531E,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.879045,-31.004877,,True,,True,,,,A
+1042,Arerunguá,,Uruguay,A,Combinada,Salto Grande,A5016684,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.618974,-31.663054,,True,,True,,,,A
+1043,Quintana,,Uruguay,A,Combinada,Salto Grande,A50175F2,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.392531,-31.350331,,True,,True,,,,A
+1044,Valentín,,Uruguay,A,Combinada,Salto Grande,A5018576,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.13005,-31.27515,,True,,True,,,,A
+1045,Puntas de Valentín,,Uruguay,A,Combinada,Salto Grande,A5019600,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.120524,-31.493837,,True,,True,,,,A
+1046,Paso Potrero,,Uruguay,A,Combinada,Salto Grande,A501A39A,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.84021,-31.444635,,True,,True,,,,A
+1047,Cerro Chato,,Uruguay,A,Combinada,Salto Grande,A501B0EC,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.629005,-31.337833,,True,,True,,,,A
+1048,Guaviyú de Arapey,,Uruguay,A,Combinada,Salto Grande,A501C67C,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.635879,-31.037601,,True,,True,,,,A
+1049,Sarandí de Arapey,,Uruguay,A,Combinada,Salto Grande,A501D50A,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.215761,-30.988557,,True,,True,,,,A
+1050,Arapey Grande,,Uruguay,A,Combinada,Salto Grande,A50B0230,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.485838,-30.9982,,True,,True,,,,A
+1051,Espinillar,,Uruguay,A,Combinada,Salto Grande,A50B1146,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.880716,-30.971187,,True,,True,,,,A
+1052,Arapey Chico,,Uruguay,A,Combinada,Salto Grande,A50B24DC,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.4559,-30.9499,,True,,True,,,,A
+1053,Javier de Viana,,Uruguay,A,Combinada,Salto Grande,A50B37AA,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.787211,-30.432802,,True,,True,,,,A
+1054,Paso Farías ,,Uruguay,A,Combinada,Salto Grande,A50B413A,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.124992,-30.476397,,True,,True,,,,A
+1055,Baltasar Brum,,Uruguay,A,Combinada,Salto Grande,A50B524C,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.325281,-30.719082,,True,,True,,,,A
+1056,Diego Lamas,,Uruguay,A,Combinada,Salto Grande,A50B67D6,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.055016,-30.755734,,True,,True,,,,A
+1057,Tomás Gomensoro,,Uruguay,A,Combinada,Salto Grande,A50B74A0,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.440628,-30.431886,,True,,True,,,,A
+1058,Colonia Palma,,Uruguay,A,Combinada,Salto Grande,A50B8424,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.680318,-30.580333,,True,,True,,,,A
+1059,Belén,,Uruguay,A,Combinada,Salto Grande,A50B9752,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.78309,-30.787252,,True,,True,,,,A
+1060,Cuchilla de Salto,,Uruguay,A,Combinada,Salto Grande,A50BA2C8,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.421509,-31.444407,,True,,True,,,,A
+1061,Itapebí,,Uruguay,A,Combinada,Salto Grande,A50BB1BE,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.703535,-31.286127,,True,,True,,,,A
+1062,Miriñay Medio,,Argentina,A,Combinada,Salto Grande,A50BC72E,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.705043,-29.357037,,True,,True,,,,A
+1063,Miriñay Río,,Argentina,A,Combinada,Salto Grande,A50BD458,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.674446,-29.845637,,True,,True,,,,A
+1064,Solari,,Argentina,A,Combinada,Salto Grande,A50BE1C2,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-58.193534,-29.377358,,True,,True,,,,A
+1065,Baibene,,Argentina,A,Combinada,Salto Grande,A50BF2B4,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-58.165178,-29.6036,,True,,True,,,,A
+1066,Curuzú Cuatiá,,Argentina,A,Combinada,Salto Grande,A50C0004,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-58.070281,-29.787069,,True,,True,,,,A
+1067,Cazadores Correntinos,,Argentina,A,Combinada,Salto Grande,A50C1372,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-58.295964,-29.98349,,True,,True,,,,A
+1068,Los Conquistadores,,Argentina,A,Combinada,Salto Grande,A50C26E8,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-58.468999,-30.590296,,True,,True,,,,A
+1069,Chajarí,,Uruguay,A,Combinada,Salto Grande,A50C359E,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-58.141889,-30.776241,,True,,True,,,,A
+1070,San Jaime,,Argentina,A,Combinada,Salto Grande,A50C430E,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-58.317145,-30.337372,,True,,True,,,,A
+1071,Mocoretá Medio,,Argentina,A,Combinada,Salto Grande,A50C5078,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.966907,-30.214445,,True,,True,,,,A
+1072,Artigas,,Uruguay,A,Combinada,Salto Grande,A50C65E2,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-56.456119,-30.392535,,True,,True,,,,A
+1073,Mocoretá Lago,,Argentina,A,Combinada,Salto Grande,A50C8610,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.820722,-30.690307,,True,,True,,,,A
+1074,Monte Caseros,,Argentina,A,Combinada,Salto Grande,A50C9566,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.622519,-30.249296,,True,,True,,,,A
+1075,Pujol,,Argentina,A,Combinada,Salto Grande,A50CA0FC,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.880984,-30.390258,,True,,True,,,,A
+1076,Arapey Grande Ruta 4,,Uruguay,A,Combinada,Salto Grande,A50CB38A,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.097101,-31.231098,,True,,True,,,,A
+1077,Mocoretá Río,,Argentina,A,Combinada,Salto Grande,A50CC51A,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.982836,-30.626772,,True,,True,,,,A
+1078,Bonpland,,Argentina,A,Combinada,Salto Grande,A50CD66C,https://www.saltogrande.org/ws.php,,estaciones_salto_grande,red hidrometeorológica represa Salto Grande,15,,-57.429814,-29.819517,,True,,True,,,,A
+1766,Puerto Lavalle,Formosa,Argentina,A,Combinada,COREBE,EV159RH27,http://www.corebe.org.ar/seedclima/index.php?action=showStationReport&meteo_station=159,,alturas_varios,Otras redes hidrológicas,17,,-60.13,-25.65,,True,Bermejo,,,,,A
+2046,El Colorado,Formosa,Argentina,A,Combinada,SSRH,2602,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-59.3624166666667,-26.3342777777778,67.105,True,Bermejo,True,,,,A
+2111,Río Salado – RP51 (Achupallas),,Argentina,A,Combinada,RHN,1,,,sat2,RHN - SAT,27,,-60.1088888888889,-35.0880555555556,,True,,True,,,,A
+2112,Gualeguaychú - RN Nº 14,,Argentina,A,Combinada,RHN,2,,,sat2,RHN - SAT,27,,-58.4983333333333,-32.7680555555556,,True,,True,,,,A
+2113,Aº Colastiné - Autopista - A01,,Argentina,A,Combinada,RHN,3,,,sat2,RHN - SAT,27,,-60.9902777777778,-32.0177777777778,,True,,True,,,,A
+2114,Aº Del Medio en La Emilia,,Argentina,A,Combinada,RHN,4,,,sat2,RHN - SAT,27,,-60.3347222222222,-33.3988888888889,,True,,True,,,,A
+2115,Paraná - Corrientes,,Argentina,A,Combinada,RHN,5,,,sat2,RHN - SAT,27,,-58.8333333333333,-27.4597222222222,,True,,True,6.5,7.0,3.0,A
+2116,Paraguay - Pto. Formosa,,Argentina,A,Combinada,RHN,6,,,sat2,RHN - SAT,27,,-58.1619444444444,-26.1830555555556,,True,,True,8.01,8.51,3.41,A
+2117,Río Salto - Salto,,Argentina,A,Combinada,RHN,7,,,sat2,RHN - SAT,27,,-60.2591666666667,-34.2861111111111,,True,,True,,,,A
+2118,Río Primero (Suquía) Camino Se,,Argentina,A,Combinada,RHN,8,,,sat2,RHN - SAT,27,,-62.9961111111111,-30.9641666666667,,True,,True,,,,A
+2119,Segundo (Plujunta) - RP Nº 17,,Argentina,A,Combinada,RHN,9,,,sat2,RHN - SAT,27,,-62.7883333333333,-31.0105555555556,,True,,True,,,,A
+2120,Laguna Mar Chiquita - Miramar,,Argentina,A,Combinada,RHN,10,,,sat2,RHN - SAT,27,,-62.6777777777778,-30.9119444444444,,True,,True,,,,A
+2121,Aº El Monje - Autopista A01,,Argentina,A,Combinada,RHN,12,,,sat2,RHN - SAT,27,,-60.9408333333333,-32.3922222222222,,True,,True,,,,A
+2122,Atuel - Paso Maroma,,Argentina,A,Combinada,RHN,13,,,sat2,RHN - SAT,27,,-66.9952777777778,-36.8425,,True,,True,,,,A
+2123,Atuel - Algarrobo del Águila,,Argentina,A,Combinada,RHN,14,,,sat2,RHN - SAT,27,,-67.1402777777778,-36.3977777777778,,True,,True,,,,A
+2124,Río Santa Cruz en Comte Piedra,,Argentina,A,Combinada,RHN,15,,,sat2,RHN - SAT,27,,-68.9269444444444,-49.9986111111111,,True,,True,,,,A
+2125,Futaleufú - Puesto Ríos,,Argentina,A,Combinada,RHN,16,,,sat2,RHN - SAT,27,,-71.6236111111111,-43.1747222222222,,True,,True,,,,A
+2126,Río Chubut en Valle Inferior,,Argentina,A,Combinada,RHN,17,,,sat2,RHN - SAT,27,,-65.4986111111111,-43.2930555555556,,True,,True,,,,A
+2127,Salado - Santa Isabel,,Argentina,A,Combinada,RHN,19,,,sat2,RHN - SAT,27,,-66.8291666666667,-36.2911111111111,,True,,True,,,,A
+2128,Lujan - Lujan,,Argentina,A,Combinada,RHN,20,,,sat2,RHN - SAT,27,,-59.1783333333333,-34.5894444444444,,True,,True,5.06,,,A
+2129,Arrecifes - Arrecifes,,Argentina,A,Combinada,RHN,21,,,sat2,RHN - SAT,27,,-60.0072222222222,-34.0866666666667,,True,,True,,,,A
+2130,Atuel - El Sosneado,,Argentina,A,Combinada,RHN,22,,,sat2,RHN - SAT,27,,-69.6041666666667,-35.0833333333333,,True,,True,,,,A
+2131,Paraná - Itatí,,Argentina,A,Combinada,RHN,23,,,sat2,RHN - SAT,27,,-58.2444444444444,-27.2663888888889,,True,,True,6.84,7.54,2.74,A
+2132,Río Paraná - Goya,,Argentina,A,Combinada,RHN,25,,,sat2,RHN - SAT,27,,-59.3283333333333,-29.165,,True,,True,5.2,5.7,2.6,A
+2133,Paraguay - Pto. Pilcomayo,,Argentina,A,Combinada,RHN,26,,,sat2,RHN - SAT,27,,-57.6502777777778,-25.3719444444444,,True,,True,7.11,7.76,4.16,A
+2134,Río Juramento - El Tunal,,Argentina,A,Combinada,RHN,27,,,sat2,RHN - SAT,27,,-64.3902777777778,-25.2497222222222,,True,,True,,,,A
+2135,De los Patos - La Plateada,,Argentina,A,Combinada,RHN,29,,,sat2,RHN - SAT,27,,-69.6605555555556,-31.8552777777778,,True,,True,,,,A
+2136,Salado - Cañada Ancha,,Argentina,A,Combinada,RHN,30,,,sat2,RHN - SAT,27,,-69.7672222222222,-35.1975,,True,,True,,,,A
+2137,Poti Malal - Gendarmería,,Argentina,A,Combinada,RHN,31,,,sat2,RHN - SAT,27,,-69.9502777777778,-35.8711111111111,,True,,True,,,,A
+2138,Río Grande en La Gotera,,Argentina,A,Combinada,RHN,32,,,sat2,RHN - SAT,27,,-69.8919444444444,-35.8716666666667,,True,,True,,,,A
+2139,Coronda - Coronda,,Argentina,A,Combinada,RHN,33,,,sat2,RHN - SAT,27,,-60.9138888888889,-31.9741666666667,,True,,True,,,,A
+2140,Rio Quinto - Justo Daract,,Argentina,A,Combinada,RHN,35,,,sat2,RHN - SAT,27,,-65.1522222222222,-33.92,,True,,True,,,,A
+2141,Percey - Ruta a Futalaufquen,,Argentina,A,Combinada,RHN,36,,,sat2,RHN - SAT,27,,-71.4555555555556,-43.0211111111111,,True,,True,,,,A
+2142,HUA HUM - San Martin,,Argentina,A,Combinada,RHN,37,,,sat2,RHN - SAT,27,,-71.6619444444444,-40.1197222222222,,True,,True,,,,A
+2143,Senguer - LOS MOLINOS,,Argentina,A,Combinada,RHN,38,,,sat2,RHN - SAT,27,,-69.475,-45.9861111111111,,True,,True,,,,A
+2144,Quemquemtreu - Escuela,,Argentina,A,Combinada,RHN,39,,,sat2,RHN - SAT,27,,-71.5025,-41.8986111111111,,True,,True,,,,A
+2145,Carrenleufú - Carrenleufú,,Argentina,A,Combinada,RHN,40,,,sat2,RHN - SAT,27,,-71.6002777777778,-43.5280555555556,,True,,True,,,,A
+2146,Gallegos - Pte. Blanco,,Argentina,A,Combinada,RHN,41,,,sat2,RHN - SAT,27,,-71.5975,-51.8947222222222,,True,,True,,,,A
+2147,Penitente - Rincón de los Morr,,Argentina,A,Combinada,RHN,42,,,sat2,RHN - SAT,27,,-71.4947222222222,-51.9216666666667,,True,,True,,,,A
+2148,Gallegos - Toma SP,,Argentina,A,Combinada,RHN,43,,,sat2,RHN - SAT,27,,-69.6555555555556,-51.6883333333333,,True,,True,,,,A
+2149,Iguazú - Perfil Tipo,,Argentina,A,Combinada,RHN,44,,,sat2,RHN - SAT,27,,-54.4213888888889,-25.6766666666667,,True,,True,,,,A
+2150,Miriñay - Paso Ledesma,,Argentina,A,Combinada,RHN,45,,,sat2,RHN - SAT,27,,-57.675,-29.8458333333333,,True,,True,,,,A
+2151,Quequen Grande - Necochea,,Argentina,A,Combinada,RHN,46,,,sat2,RHN - SAT,27,,-58.7588888888889,-38.4625,,True,,True,,,,A
+2152,RIO CHUBUT EN TRELEW,,Argentina,A,Combinada,RHN,49,,,sat2,RHN - SAT,27,,-65.2733333333333,-43.2761111111111,,True,,True,,,,A
+2153,Lago Argentino - Calafate,,Argentina,A,Combinada,RHN,50,,,sat2,RHN - SAT,27,,-72.2611111111111,-50.32,,True,,True,,,,A
+2154,Bermejo - Pozo Sarmiento,,Argentina,A,Combinada,RHN,53,,,sat2,RHN - SAT,27,,-64.1969444444445,-23.1405555555556,,True,,True,,,,A
+2155,Neuquén - Chos Malal,,Argentina,A,Combinada,RHN,55,,,sat2,RHN - SAT,27,,-70.27,-37.3755555555556,,True,,True,,,,A
+2156,Laguna Iberá - Carlos Pellegri,,Argentina,A,Combinada,RHN,390,,,sat2,RHN - SAT,27,,-57.1869444444444,-28.5380555555556,,True,,True,,,,A
+2157,Río Chubut en los Altares,,Argentina,A,Combinada,RHN,57,,,sat2,RHN - SAT,27,,-68.3983333333333,-43.8886111111111,,True,,True,,,,A
+2158,Aº Feliciano - Paso Medina,,Argentina,A,Combinada,RHN,58,,,sat2,RHN - SAT,27,,-59.5511111111111,-30.9236111111111,,True,,True,,,,A
+2159,Manso - Confluencia,,Argentina,A,Combinada,RHN,61,,,sat2,RHN - SAT,27,,-71.6836111111111,-41.5869444444444,,True,,True,,,,A
+2160,Colorado - Pichi Mahuida,,Argentina,A,Combinada,RHN,62,,,sat2,RHN - SAT,27,,-64.9813888888889,-38.8216666666667,,True,,True,,,,A
+2161,Mayo - Paso Mayo,,Argentina,A,Combinada,RHN,63,,,sat2,RHN - SAT,27,,-70.2522222222222,-45.6836111111111,,True,,True,,,,A
+2162,Carrenleufú - La Elena,,Argentina,A,Combinada,RHN,64,,,sat2,RHN - SAT,27,,-71.3044444444444,-43.7,,True,,True,,,,A
+2163,La Paulina - Aserradero,,Argentina,A,Combinada,RHN,65,,,sat2,RHN - SAT,27,,-71.1680555555556,-45.0016666666667,,True,,True,,,,A
+2164,La Leona,,Argentina,A,Combinada,RHN,66,,,sat2,RHN - SAT,27,,-72.0641666666667,-49.7972222222222,,True,,True,,,,A
+2165,Charles Fhur,,Argentina,A,Combinada,RHN,67,,,sat2,RHN - SAT,27,,-71.9077777777778,-50.2522222222222,,True,,True,,,,A
+2166,Los Sosa - RP30 km19,,Argentina,A,Combinada,RHN,68,,,sat2,RHN - SAT,27,,-65.6361111111111,-27.1008333333333,,True,,True,,,,A
+2167,Lules - Potrero de las Tablas,,Argentina,A,Combinada,RHN,70,,,sat2,RHN - SAT,27,,-65.4316666666667,-26.8519444444444,,True,,True,,,,A
+2168,Guayquiraró - Pblo Libertador,,Argentina,A,Combinada,RHN,71,,,sat2,RHN - SAT,27,,-59.385,-30.2211111111111,,True,,True,,,,A
+2169,Atuel - El Nihuil,,Argentina,A,Combinada,RHN,72,,,sat2,RHN - SAT,27,,-68.6777777777778,-35.0333333333333,,True,,True,,,,A
+2170,Atuel - Villa Atuel,,Argentina,A,Combinada,RHN,73,,,sat2,RHN - SAT,27,,-67.9227777777778,-34.8225,,True,,True,,,,A
+2171,Senguerr - Sarmiento Aero,,Argentina,A,Combinada,RHN,74,,,sat2,RHN - SAT,27,,-69.075,-45.5811111111111,,True,,True,,,,A
+2172,Desaguadero - Arco de Desaguad,,Argentina,A,Combinada,RHN,75,,,sat2,RHN - SAT,27,,-67.1516666666667,-33.4041666666667,,True,,True,,,,A
+2173,Faro Recalada - Monte Hermoso,,Argentina,A,Combinada,RHN,76,,,sat2,RHN - SAT,27,,-61.2597222222222,-38.9905555555556,,True,,True,,,,A
+2174,Faro Negro,,Argentina,A,Combinada,RHN,78,,,sat2,RHN - SAT,27,,-62.8394444444444,-41.0577777777778,,True,,True,,,,A
+2175,Canal Macapillo,,Argentina,A,Combinada,RHN,79,,,sat2,RHN - SAT,27,,-63.9761111111111,-25.4136111111111,,True,,True,,,,A
+2176,Canal de Dios\t,,Argentina,A,Combinada,RHN,80,,,sat2,RHN - SAT,27,,-63.9480555555556,-25.6108333333333,,True,,True,,,,A
+2177,Canal Liag - Quebrachal,,Argentina,A,Combinada,RHN,83,,,sat2,RHN - SAT,27,,-64.045,-25.3452777777778,,True,,True,,,,A
+2178,Iguazú - Puerto Andresito,,Argentina,A,Combinada,RHN,84,,,sat2,RHN - SAT,27,,-53.995,-25.5905555555556,,True,,True,,,,A
+2179,Carrenleufú - Poncho Moro,,Argentina,A,Combinada,RHN,85,,,sat2,RHN - SAT,27,,-71.4016666666667,-43.6716666666667,,True,,True,,,,A
+2180,Desaguadero - Canalejas,,Argentina,A,Combinada,RHN,86,,,sat2,RHN - SAT,27,,-66.4963888888889,-35.1686111111111,,True,,True,,,,A
+2181,Chubut - Ameghino,,Argentina,A,Combinada,RHN,87,,,sat2,RHN - SAT,27,,-66.475,-43.6983333333333,,True,,True,,,,A
+2182,PN - El Chalten,,Argentina,A,Combinada,RHN,88,,,sat2,RHN - SAT,27,,-72.8838888888889,-49.3377777777778,,True,,True,,,,A
+2183,Mendoza - Guido,,Argentina,A,Combinada,RHN,89,,,sat2,RHN - SAT,27,,-69.2377777777778,-32.9152777777778,,True,,True,,,,A
+2184,Azul - El Azul,,Argentina,A,Combinada,RHN,90,,,sat2,RHN - SAT,27,,-71.5605555555556,-41.9425,,True,,True,,,,A
+2185,Dulce - Paso de la Cina,,Argentina,A,Combinada,RHN,91,,,sat2,RHN - SAT,27,,-62.8061111111111,-29.795,,True,,True,,,,A
+2186,Bermejo - Balapuca,,Argentina,A,Combinada,RHN,147,,,sat2,RHN - SAT,27,,-64.4694444444444,-22.4919444444444,,True,,True,,,,A
+2187,Grande Tarija - El Cajón,,Argentina,A,Combinada,RHN,148,,,sat2,RHN - SAT,27,,-64.1263888888889,-22.3266666666667,,True,,True,,,,A
+2188,Bermejo - El Colorado,,Argentina,A,Combinada,RHN,149,,,sat2,RHN - SAT,27,,-59.3625,-26.3341666666667,,True,,True,,,,A
+2189,Bermejo - Embarcacion,,Argentina,A,Combinada,RHN,150,,,sat2,RHN - SAT,27,,-64.1380555555556,-23.2480555555556,,True,,True,,,,A
+2190,Bermejo - Finca Jujeños,,Argentina,A,Combinada,RHN,151,,,sat2,RHN - SAT,27,,-64.2047222222222,-23.1352777777778,,True,,True,,,,A
+2191,Bermejo - Puente Internacion,,Argentina,A,Combinada,RHN,152,,,sat2,RHN - SAT,27,,-64.3694444444444,-22.7263888888889,,True,,True,,,,A
+2192,San Francisco - Puente RP 1,,Argentina,A,Combinada,RHN,153,,,sat2,RHN - SAT,27,,-64.5369444444444,-23.7108333333333,,True,,True,,,,A
+2193,Bermejo - Puerto Lavalle,,Argentina,A,Combinada,RHN,154,,,sat2,RHN - SAT,27,,-60.1280555555556,-25.6511111111111,,True,,True,,,,A
+2194,Bermejo - Puerto Velaz,,Argentina,A,Combinada,RHN,155,,,sat2,RHN - SAT,27,,-58.6338888888889,-26.6605555555556,,True,,True,,,,A
+2195,Bermejo - Sauzalito,,Argentina,A,Combinada,RHN,156,,,sat2,RHN - SAT,27,,-61.6563888888889,-24.4333333333333,,True,,True,,,,A
+2196,Abaucán - Tinogasta,,Argentina,A,Combinada,RHN,157,,,sat2,RHN - SAT,27,,-67.6269444444444,-27.9930555555556,,True,,True,,,,A
+2197,Salado - Pinto,,Argentina,A,Combinada,RHN,158,,,sat2,RHN - SAT,27,,-62.5761111111111,-29.1058333333333,,True,,True,,,,A
+2198,Aº Batel - Paso Cerrito,,Argentina,A,Combinada,RHN,159,,,sat2,RHN - SAT,27,,-58.7883333333333,-29.0311111111111,,True,,True,,,,A
+2199,Corrientes - Los Laureles,,Argentina,A,Combinada,RHN,162,,,sat2,RHN - SAT,27,,-59.2172222222222,-29.7572222222222,,True,,True,,,,A
+2200,Tunuyan - Valle de Uco,,Argentina,A,Combinada,RHN,163,,,sat2,RHN - SAT,27,,-69.2725,-33.7763888888889,,True,,True,,,,A
+2201,A° El Soberbio - Pje La Lechuz,,Argentina,A,Combinada,RHN,164,,,sat2,RHN - SAT,27,,-54.2355555555556,-27.2572222222222,,True,,True,,,,A
+2202,Cuarto - RN Nº 8,,Argentina,A,Combinada,RHN,166,,,sat2,RHN - SAT,27,,-64.26,-33.1605555555556,,True,,True,,,,A
+2203,Gualeguay - Rosario del Tala,,Argentina,A,Combinada,RHN,167,,,sat2,RHN - SAT,27,,-59.0769444444445,-32.3086111111111,,True,,True,7.0,8.3,,A
+2204,Carcarañá - Pueblo Andino,,Argentina,A,Combinada,RHN,168,,,sat2,RHN - SAT,27,,-60.8658333333333,-32.6733333333333,,True,,True,,,,A
+2205,Gualeguay - Villaguay,,Argentina,A,Combinada,RHN,169,,,sat2,RHN - SAT,27,,-59.1261111111111,-31.8016666666667,,True,,True,,,,A
+2206,Río Areco - Puente Quemado,,Argentina,A,Combinada,RHN,173,,,sat2,RHN - SAT,27,,-59.7027777777778,-34.2880555555556,,True,,True,,,,A
+2207,Seminario Diocesano de Azul,,Argentina,A,Combinada,RHN,174,,,sat2,RHN - SAT,27,,-59.8938888888889,-36.8311111111111,,True,,True,,,,A
+2208,PN - Los Glaciares,,Argentina,A,Combinada,RHN,175,,,sat2,RHN - SAT,27,,-72.7477777777778,-50.4261111111111,,True,,True,,,,A
+2209,Colorado - Buta Ranquil,,Argentina,A,Combinada,RHN,176,,,sat2,RHN - SAT,27,,-69.7466666666667,-37.0761111111111,,True,,True,,,,A
+2210,Neuquen - Paso de Indios,,Argentina,A,Combinada,RHN,177,,,sat2,RHN - SAT,27,,-69.4022222222222,-38.5302777777778,,True,,True,,,,A
+2211,Salado - RP Nº50,,Argentina,A,Combinada,RHN,178,,,sat2,RHN - SAT,27,,-61.3513888888889,-34.3225,,True,,True,,,,A
+2212,Compuerta Alternativa Norte AD,,Argentina,A,Combinada,RHN,179,,,sat2,RHN - SAT,27,,-62.1211111111111,-34.2419444444444,,True,,True,,,,A
+2213,Canal Regulador N°4 - La Pantanosa,,Argentina,A,Combinada,RHN,180,,,sat2,RHN - SAT,27,,-61.6386111111111,-34.2580555555556,,True,,True,,,,A
+2214,Río Areco - Carmen de Areco,,Argentina,A,Combinada,RHN,181,,,sat2,RHN - SAT,27,,-59.8166666666667,-34.3519444444444,,True,,True,,,,A
+2215,Río Areco - San Antonio de Are,,Argentina,A,Combinada,RHN,182,,,sat2,RHN - SAT,27,,-59.4994444444444,-34.2405555555556,,True,,True,,,,A
+2216,Olivia - Olivia,,Argentina,A,Combinada,RHN,183,,,sat2,RHN - SAT,27,,-68.2255555555556,-54.7975,,True,,True,,,,A
+2217,Laguna La Picasa - RN33,,Argentina,A,Combinada,RHN,184,,,sat2,RHN - SAT,27,,-62.8113888888889,-34.3269444444445,,True,,True,,,,A
+2218,Cruz Alta,,Argentina,A,Combinada,RHN,185,,,sat2,RHN - SAT,27,,-61.7875,-33.0063888888889,,True,,True,,,,A
+2219,Intersección Canales A22,,Argentina,A,Combinada,RHN,186,,,sat2,RHN - SAT,27,,-62.4133333333333,-34.4494444444444,,True,,True,,,,A
+2220,Atuel - Carmensa,,Argentina,A,Combinada,RHN,187,,,sat2,RHN - SAT,27,,-67.7269444444444,-35.1844444444444,,True,,True,,,,A
+2221,Atuel - Puesto Ugalde,,Argentina,A,Combinada,RHN,188,,,sat2,RHN - SAT,27,,-67.1852777777778,-35.9994444444444,,True,,True,,,,A
+2222,Canal de Dios - Salado,,Argentina,A,Combinada,RHN,189,,,sat2,RHN - SAT,27,,-63.9488888888889,-25.6105555555556,,True,,True,,,,A
+2223,Salado - Suncho Corral,,Argentina,A,Combinada,RHN,190,,,sat2,RHN - SAT,27,,-63.4397222222222,-27.9402777777778,,True,,True,,,,A
+2224,Salado - Añatuya RP Nº92,,Argentina,A,Combinada,RHN,191,,,sat2,RHN - SAT,27,,-62.8813888888889,-28.5033333333333,,True,,True,,,,A
+2225,Senguerr -Pte Camino B. Pastor,,Argentina,A,Combinada,RHN,192,,,sat2,RHN - SAT,27,,-69.0672222222222,-45.5644444444444,,True,,True,,,,A
+2226,Faro Punta Delgada,,Argentina,A,Combinada,RHN,193,,,sat2,RHN - SAT,27,,-63.6333333333333,-42.7666666666667,,True,,True,,,,A
+2227,Salado - RN Nº02,,Argentina,A,Combinada,RHN,194,,,sat2,RHN - SAT,27,,-57.8519444444444,-35.9622222222222,,True,,True,,,,A
+2228,De las Vueltas,,Argentina,A,Combinada,RHN,224,,,sat2,RHN - SAT,27,,-72.8608333333333,-49.3433333333333,,True,,True,,,,A
+2229,Chubut - El Maitén,,Argentina,A,Combinada,RHN,240,,,sat2,RHN - SAT,27,,-71.17,-42.0997222222222,,True,,True,,,,A
+2355,Senguerr - Nacimiento,,Argentina,A,Combinada,RHN,259,,,sat2,RHN - SAT,27,,-71.3419444444444,-44.9583333333333,,True,,True,,,,A
+2356,Río Paraná Túnel,,Argentina,A,Combinada,RHN,260,,,sat2,RHN - SAT,27,,-60.5175,-31.7197222222222,,True,,True,4.7,5.0,2.3,A
+2357,Sistema Setúbal - Santa Fe - L,,Argentina,A,Combinada,RHN,261,,,sat2,RHN - SAT,27,,-60.6777777777778,-31.6302777777778,,True,,True,,,,A
+2593,Arenales - La Maroma,,Argentina,A,Combinada,RHN,285,,,sat2,RHN - SAT,27,,-65.42,-25.1538888888889,,True,,True,,,,A
+2605,Río Cuarto - La Carlota RN8,,Argentina,A,Combinada,RHN,665,,,sat2,RHN - SAT,27,,-63.2561111111111,-33.4127777777778,,True,,True,,,,A
+2606,Gualjaina - Gualjaina,,Argentina,A,Combinada,RHN,298,,,sat2,RHN - SAT,27,,-70.4355555555556,-42.6513888888889,,True,,True,,,,A
+2607,Atuel - Loma Negra,,Argentina,A,Combinada,RHN,299,,,sat2,RHN - SAT,27,,-69.2497222222222,-35.2641666666667,,True,,True,,,,A
+2608,Diamante - La Jaula,,Argentina,A,Combinada,RHN,300,,,sat2,RHN - SAT,27,,-69.3163888888889,-34.6686111111111,,True,,True,,,,A
+2609,Diamante - La Jaula MET,,Argentina,A,Combinada,RHN,301,,,sat2,RHN - SAT,27,,-69.3186111111111,-34.6658333333333,,True,,True,,,,A
+2610,Río Carrileufú - Cholila,,Argentina,A,Combinada,RHN,302,,,sat2,RHN - SAT,27,,-71.5411111111111,-42.4955555555556,,True,,True,,,,A
+2671,Canal Finca Agropecuaria,,Argentina,A,Combinada,RHN,363,,,sat2,RHN - SAT,27,,-64.1058333333333,-25.1608333333333,,True,,True,,,,A
+2672,Juramento - Finca Agropecuari,,Argentina,A,Combinada,RHN,364,,,sat2,RHN - SAT,27,,-64.1061111111111,-25.1613888888889,,True,,True,,,,A
+2673,Colastiné - RN N° 168,,Argentina,A,Combinada,RHN,365,,,sat2,RHN - SAT,27,,-60.6019444444444,-31.6611111111111,,True,,True,,,,A
+2697,Prueba - GSM,,Argentina,A,Combinada,RHN,18,,,sat2,RHN - SAT,27,,-59.0,-34.0,,True,,True,,,,A
+2706,ZEstacion de prueba 9003,,Argentina,A,Combinada,RHN,28,,,sat2,RHN - SAT,27,,-58.3772222222222,-34.6130555555556,,True,,True,,,,A
+2731,Aguapey - La Sirena,,Argentina,A,Combinada,RHN,59,,,sat2,RHN - SAT,27,,-56.5422222222222,-28.4166666666667,,True,,True,,,,A
+2732,Atuel - La Angostura,,Argentina,A,Combinada,RHN,60,,,sat2,RHN - SAT,27,,-68.8747222222222,-35.0986111111111,,True,,True,,,,A
+2741,Iruya - Tuc Tuca,,Argentina,A,Combinada,RHN,69,,,sat2,RHN - SAT,27,,-65.2675,-22.4044444444444,,True,,True,,,,A
+2749,Diamante - El Tigre,,Argentina,A,Combinada,RHN,77,,,sat2,RHN - SAT,27,,-68.595,-34.6613888888889,,True,,True,,,,A
+2762,Puelo - Hito fronterizo,,Argentina,A,Combinada,RHN,92,,,sat2,RHN - SAT,27,,-71.7247222222222,-42.1055555555556,,True,,True,,,,A
+2776,PN Trinidad - Condorito ,,Argentina,A,Combinada,RHN,160,,,sat2,RHN - SAT,27,,-64.8527777777778,-31.6911111111111,,True,,True,,,,A
+2806,Lago Muster - Fortín,,Argentina,A,Combinada,RHN,196,,,sat2,RHN - SAT,27,,-69.2588888888889,-45.4797222222222,,True,,True,,,,A
+2807,Salado - El Arenal,,Argentina,A,Combinada,RHN,197,,,sat2,RHN - SAT,27,,-63.7244444444444,-26.3741666666667,,True,,True,,,,A
+2808,Malargue - La Barda,,Argentina,A,Combinada,RHN,198,,,sat2,RHN - SAT,27,,-69.6825,-35.5527777777778,,True,,True,,,,A
+2809,Quinto - RP Nº26,,Argentina,A,Combinada,RHN,199,,,sat2,RHN - SAT,27,,-63.645,-34.7627777777778,,True,,True,,,,A
+2810,Río Juramento El Quebrachal,,Argentina,A,Combinada,RHN,200,,,sat2,RHN - SAT,27,,-64.0461111111111,-25.3441666666667,,True,,True,,,,A
+2811,Río Neuquén - Dique Ballester,,Argentina,A,Combinada,RHN,203,,,sat2,RHN - SAT,27,,-68.1705555555556,-38.7247222222222,,True,,True,,,,A
+2812,Lago Viedma - Lago Viedma,,Argentina,A,Combinada,RHN,204,,,sat2,RHN - SAT,27,,-72.8694444444444,-49.3944444444444,,True,,True,,,,A
+2813,Miriñay - Paso Mesa,,Argentina,A,Combinada,RHN,205,,,sat2,RHN - SAT,27,,-57.2363888888889,-28.9166666666667,,True,,True,,,,A
+2814,Río Metan - Desembocadura,,Argentina,A,Combinada,RHN,206,,,sat2,RHN - SAT,27,,-64.5922222222222,-25.3933333333333,,True,,True,,,,A
+2815,Bermejo - Aguas Blancas MET,,Argentina,A,Combinada,RHN,207,,,sat2,RHN - SAT,27,,-64.3647222222222,-22.725,,True,,True,,,,A
+2816,Río Guanasacate - Colonia San ,,Argentina,A,Combinada,RHN,209,,,sat2,RHN - SAT,27,,-64.3483333333333,-30.8797222222222,,True,,True,,,,A
+2817,Carrenleufú - Cholila MET,,Argentina,A,Combinada,RHN,210,,,sat2,RHN - SAT,27,,-71.4275,-42.5111111111111,,True,,True,,,,A
+2818,Faro Cabo Virgenes,,Argentina,A,Combinada,RHN,211,,,sat2,RHN - SAT,27,,-68.3558333333333,-52.3330555555556,,True,,True,,,,A
+2819,PN Copo  - El Aibal ,,Argentina,A,Combinada,RHN,212,,,sat2,RHN - SAT,27,,-61.7138888888889,-25.9227777777778,,True,,True,,,,A
+2820,PN - Centro Operativo Santa Ro,,Argentina,A,Combinada,RHN,214,,,sat2,RHN - SAT,27,,-65.8719444444444,-27.2852777777778,,True,,True,,,,A
+2821,Río Salado RP Nº 51 - Achupall,,Argentina,A,Combinada,RHN,215,,,sat2,RHN - SAT,27,,-60.1088888888889,-35.0880555555556,,True,,True,,,,A
+2822,Pilcomayo - El Raúl,,Argentina,A,Combinada,RHN,218,,,sat2,RHN - SAT,27,,-62.2163888888889,-22.65,,True,,True,,,,A
+2823,Juramento - Cabra Corral,,Argentina,A,Combinada,RHN,220,,,sat2,RHN - SAT,27,,-65.2372222222222,-25.2677777777778,,True,,True,,,,A
+2824,Valenzuela - Valle Noble,,Argentina,A,Combinada,RHN,221,,,sat2,RHN - SAT,27,,-70.3111111111111,-35.3241666666667,,True,,True,,,,A
+2825,Santa Lucia - Santa Lucia,,Argentina,A,Combinada,RHN,222,,,sat2,RHN - SAT,27,,-59.0905555555556,-28.9877777777778,,True,,True,,,,A
+2826,Pilcomayo - Puesto Jerez,,Argentina,A,Combinada,RHN,223,,,sat2,RHN - SAT,27,,-62.2133333333333,-22.7280555555556,,True,,True,,,,A
+2828,Río Salado RN Nº 11,,Argentina,A,Combinada,RHN,225,,,sat2,RHN - SAT,27,,-59.1308333333333,-27.5413888888889,,True,,True,,,,A
+2829,San Javier - San Javier,,Argentina,A,Combinada,RHN,226,,,sat2,RHN - SAT,27,,-59.9233333333333,-30.5802777777778,,True,,True,,,,A
+2830,Paraná Guazú - Brazo Largo,Entre Ríos,Argentina,A,Combinada,RHN,227,,,sat2,RHN - SAT,27,BLARGOAUT,-58.9,-33.8830555555556,0.717,True,Paraná Guazú,True,,,,A
+2831,Senguerr - Facundo,,Argentina,A,Combinada,RHN,229,,,sat2,RHN - SAT,27,,-69.9477777777778,-45.3191666666667,,True,,True,,,,A
+2832,Corriente - Paso Lucero,,Argentina,A,Combinada,RHN,231,,,sat2,RHN - SAT,27,,-58.5583333333333,-28.995,,True,,True,,,,A
+2833,Aº Leyes - RP Nº 1,,Argentina,A,Combinada,RHN,232,,,sat2,RHN - SAT,27,,-60.425,-31.4947222222222,,True,,True,,,,A
+2834,Lago Epuyen - Muelle,,Argentina,A,Combinada,RHN,234,,,sat2,RHN - SAT,27,,-71.4227777777778,-42.2083333333333,,True,,True,,,,A
+2835,Río Tercero - Villa María,,Argentina,A,Combinada,RHN,235,,,sat2,RHN - SAT,27,,-63.2447222222222,-32.4219444444444,,True,,True,,,,A
+2836,Aº Barrancas - Paso La Llana,,Argentina,A,Combinada,RHN,842,,,sat2,RHN - SAT,27,,-59.3244444444444,-30.2172222222222,,True,,True,,,,A
+2837,Nogoya - RN Nº12,,Argentina,A,Combinada,RHN,238,,,sat2,RHN - SAT,27,,-59.7638888888889,-32.3947222222222,,True,,True,,,,A
+2838,Aº Saladillo - RN Nº205,,Argentina,A,Combinada,RHN,239,,,sat2,RHN - SAT,27,,-59.5747222222222,-35.4594444444445,,True,,True,,,,A
+2840,Río Cuarto - La Carlota,,Argentina,A,Combinada,RHN,245,,,sat2,RHN - SAT,27,,-63.3091666666667,-33.4155555555556,,True,,True,,,,A
+2841,Río Negro - Laguna Blanca,,Argentina,A,Combinada,RHN,246,,,sat2,RHN - SAT,27,,-59.1961111111111,-27.2633333333333,,True,,True,,,,A
+2842,Lago Posadas - Posadas,,Argentina,A,Combinada,RHN,249,,,sat2,RHN - SAT,27,,-71.8719444444444,-47.5113888888889,,True,,True,,,,A
+2843,Mitre - Ruta Prov. Nº11,,Argentina,A,Combinada,RHN,251,,,sat2,RHN - SAT,27,,-72.7338888888889,-50.3997222222222,,True,,True,,,,A
+2844,Lago Pueyrredón - Pueyrredón,,Argentina,A,Combinada,RHN,252,,,sat2,RHN - SAT,27,,-71.9680555555556,-47.3758333333333,,True,,True,,,,A
+2845,Lago San Martín - Brazo Chacab,,Argentina,A,Combinada,RHN,253,,,sat2,RHN - SAT,27,,-72.4855555555555,-49.1238888888889,,True,,True,,,,A
+2846,Pilcomayo - Misión La Paz,,Argentina,A,Combinada,RHN,254,,,sat2,RHN - SAT,27,,-62.5236111111111,-22.3775,,True,,True,,,,A
+2847,PN Pilcomayo - Piquete del 8,,Argentina,A,Combinada,RHN,255,,,sat2,RHN - SAT,27,,-58.1752777777778,-25.1233333333333,,True,,True,,,,A
+2848,Neuquén - Paso de Indios MET,,Argentina,A,Combinada,RHN,256,,,sat2,RHN - SAT,27,,-69.4122222222222,-38.5316666666667,,True,,True,,,,A
+2849,PN Lihué Calel - El Once,,Argentina,A,Combinada,RHN,258,,,sat2,RHN - SAT,27,,-65.635,-37.885,,True,,True,,,,A
+2853,Gualeguay - Paso Alonso,,Argentina,A,Combinada,RHN,262,,,sat2,RHN - SAT,27,,-59.2702777777778,-33.1005555555556,,True,,True,,,,A
+2854,Aº Riachuelo - RP Nº5,,Argentina,A,Combinada,RHN,264,,,sat2,RHN - SAT,27,,-58.5697222222222,-27.5105555555556,,True,,True,,,,A
+2855,Salado - RP Nº 41,,Argentina,A,Combinada,RHN,265,,,sat2,RHN - SAT,27,,-58.5363888888889,-35.7263888888889,,True,,True,,,,A
+2856,San Fransisco Caimancito,,Argentina,A,Combinada,RHN,272,,,sat2,RHN - SAT,27,,-64.5397222222222,-23.7119444444444,,True,,True,,,,A
+2857,Paraná - Chapetón,,Argentina,A,Combinada,RHN,277,,,sat2,RHN - SAT,27,,-60.2947222222222,-31.6105555555556,,True,,True,,,,A
+5888,Sauzalito,Chaco,Argentina,A,Combinada,snih:21,2409,,,alturas_bdhi,Red Hidrológica Nacional - SSRH,5,,-61.6563305555556,-24.4332722222222,89.03,True,Bermejo,True,,,,A
+5893,Paraná - Rosario,Santa Fe,Argentina,A,Combinada,RHN,386,,,sat2,RHN - SAT,27,ROSA,-60.6255555555556,-32.9513888888889,2.923,True,Paraná,True,5.0,5.25,1.64,A
+5894,Riacho Victoria - Victoria,Entre Ríos,Argentina,A,Combinada,RHN,387,,,sat2,RHN - SAT,27,VICT,-60.1652777777778,-32.6316666666667,1.536,True,Riacho Victoria,True,4.6,5.9,2.6,A
+5900,Paraná - Diamante,Entre Ríos,Argentina,A,Combinada,RHN,421,,,sat2,RHN - SAT,27,DIAM,-60.645,-32.0577777777778,6.747,True,Paraná,True,5.3,5.5,2.4,A
+5901,Paraná - Túnel subfluvial,Entre Ríos,Argentina,A,Combinada,RHN,418,,,sat2,RHN - SAT,27,PARA,-60.5175,-31.72,9.432,True,Paraná,True,4.7,5.0,1.61,A
+5904,PN Ciervo de los Pantanos,Buenos Aires,Argentina,A,Combinada,RHN,274,,,sat2,RHN - SAT,27,PNCPAN,-58.8988888888889,-34.2255555555556,,True,null,True,,,,A
+5905,Paraná - Villa Constitución,Santa Fe,Argentina,A,Combinada,RHN,377,,,sat2,RHN - SAT,27,VCON,-60.32,-33.2272222222222,1.981,True,Paraná,True,4.0,4.5,1.9,A
+5907,Paraná Las Palmas - Zárate,Buenos Aires,Argentina,A,Combinada,RHN,313,,,sat2,RHN - SAT,27,ZARA,-59.0088888888889,-34.1019444444444,0.243,True,Paraná de las Palmas,True,2.0,2.2,0.3,A
+5912,Paraná - Timbúes,,Argentina,A,Combinada,RHN,508,,,sat2,RHN - SAT,27,,-60.7261111111111,-32.7197222222222,,True,,True,,,,A
+6163,INTA Delta,BUENOSAIRES,ARGENTINA,A,Combinada,INA-INTA,92,,,ina_delta,red INA Delta y AMBA,32,intadelta,-58.8643,-34.17675,-0.656,True,Paraná de las Palmas,True,,,,A
+6263,Primero (Suquía) Camino Secund,,Argentina,A,Combinada,RHN,165,,,sat2,RHN - SAT,27,,-62.9961111111111,-30.9641666666667,,True,,True,,,,A
+6268,ZPrueba_Fabrica_11126,,Argentina,A,Combinada,RHN,170,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6301,Chubut - Valle Inferior,,Argentina,A,Combinada,RHN,208,,,sat2,RHN - SAT,27,,-65.5052777777778,-43.2908333333333,,True,,True,,,,A
+6354,Paraná - La Paz,,Argentina,A,Combinada,RHN,373,,,sat2,RHN - SAT,27,,-59.6386111111111,-30.7325,,True,,True,,,,A
+6355,Carrenleufú - Frontera,,Argentina,A,Combinada,RHN,374,,,sat2,RHN - SAT,27,,-71.7288888888889,-43.5608333333333,,True,,True,,,,A
+6356,Aº Malabrigo - RN Nº11,,Argentina,A,Combinada,RHN,375,,,sat2,RHN - SAT,27,,-59.7863888888889,-29.2788888888889,,True,,True,,,,A
+6357,Carcarañá - Cruz Alta,,Argentina,A,Combinada,RHN,376,,,sat2,RHN - SAT,27,,-61.7875,-33.0063888888889,,True,,True,,,,A
+6359,Salado - Puente Carretero,,Argentina,A,Combinada,RHN,378,,,sat2,RHN - SAT,27,,-60.9572222222222,-34.6113888888889,,True,,True,,,,A
+6360,Saladillo - Dique Aforador,,Argentina,A,Combinada,RHN,379,,,sat2,RHN - SAT,27,,-62.3322222222222,-32.9316666666667,,True,,True,,,,A
+6361,Tercero - Piedras Moras,,Argentina,A,Combinada,RHN,380,,,sat2,RHN - SAT,27,,-64.2327777777778,-32.1694444444444,,True,,True,,,,A
+6362,Neuquén - Neuquén,,Argentina,A,Combinada,RHN,381,,,sat2,RHN - SAT,27,,-68.0227777777778,-38.9497222222222,,True,,True,,,,A
+6363,Cuarto - Puente de Olmos,,Argentina,A,Combinada,RHN,382,,,sat2,RHN - SAT,27,,-63.1294444444444,-33.4555555555556,,True,,True,,,,A
+6364,ZPrueba_Cañuelas_12180,,Argentina,A,Combinada,RHN,383,,,sat2,RHN - SAT,27,,-59.0,-35.0,,True,,True,,,,A
+6365,Mojotoro - Güemes,,Argentina,A,Combinada,RHN,384,,,sat2,RHN - SAT,27,,-65.0288888888889,-24.7316666666667,,True,,True,,,,A
+6366,Aº Las Flores - Gral. Alvear,,Argentina,A,Combinada,RHN,385,,,sat2,RHN - SAT,27,,-60.0194444444444,-35.9875,,True,,True,,,,A
+6374,Dulce - Dique Los Quiroga,,Argentina,A,Combinada,RHN,393,,,sat2,RHN - SAT,27,,-64.3616666666667,-27.6511111111111,,True,,True,,,,A
+6375,Salado - Canal de Dios,,Argentina,A,Combinada,RHN,394,,,sat2,RHN - SAT,27,,-63.9486111111111,-25.6105555555556,,True,,True,,,,A
+6376,Chubut - Gualjaina,,Argentina,A,Combinada,RHN,395,,,sat2,RHN - SAT,27,,-70.3844444444445,-42.6097222222222,,True,,True,,,,A
+6377,NIV - Puntas Amarillas,,Argentina,A,Combinada,RHN,396,,,sat2,RHN - SAT,27,,-69.5144444444445,-34.2305555555556,,True,,True,,,,A
+6378,NIV- Túnel internacional,,Argentina,A,Combinada,RHN,397,,,sat2,RHN - SAT,27,,-70.0575,-32.8130555555556,,True,,True,,,,A
+6379,NIV - La Hoya,,Argentina,A,Combinada,RHN,398,,,sat2,RHN - SAT,27,,-71.2536111111111,-42.8325,,True,,True,,,,A
+6380,Aº De las Chañaritas,,Argentina,A,Combinada,RHN,399,,,sat2,RHN - SAT,27,,-59.5894444444444,-34.2797222222222,,True,,True,,,,A
+6381,ZPrueba_Cañuelas_12193,,Argentina,A,Combinada,RHN,400,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6382,Chico - Las Loicas,,Argentina,A,Combinada,RHN,401,,,sat2,RHN - SAT,27,,-70.1419444444444,-35.7925,,True,,True,,,,A
+6383,De Las Cañitas - La Tapa,,Argentina,A,Combinada,RHN,402,,,sat2,RHN - SAT,27,,-64.7672222222222,-32.855,,True,,True,,,,A
+6384,Chubut-Alto Chubut(Nacimiento),,Argentina,A,Combinada,RHN,403,,,sat2,RHN - SAT,27,,-71.1083333333333,-41.8341666666667,,True,,True,,,,A
+6385,Chico - Cerro Mesa,,Argentina,A,Combinada,RHN,404,,,sat2,RHN - SAT,27,,-70.4825,-41.7063888888889,,True,,True,,,,A
+6386,Chubut - Cerro Condor,,Argentina,A,Combinada,RHN,405,,,sat2,RHN - SAT,27,,-69.1605555555556,-43.4244444444444,,True,,True,,,,A
+6387,Tupungato - Punta de Vacas LIM,,Argentina,A,Combinada,RHN,406,,,sat2,RHN - SAT,27,,-69.7683333333333,-32.8808333333333,,True,,True,,,,A
+6388,Grande - La Gotera,,Argentina,A,Combinada,RHN,407,,,sat2,RHN - SAT,27,,-69.8919444444444,-35.8716666666667,,True,,True,,,,A
+6389,Las Tapias - Las Tapias,,Argentina,A,Combinada,RHN,408,,,sat2,RHN - SAT,27,,-64.7763888888889,-32.8036111111111,,True,,True,,,,A
+6390,Ñorquinco - Ñorquinco,,Argentina,A,Combinada,RHN,409,,,sat2,RHN - SAT,27,,-70.8913888888889,-41.8419444444444,,True,,True,,,,A
+6391,Laguna La Margarita,,Argentina,A,Combinada,RHN,410,,,sat2,RHN - SAT,27,,-63.7230555555556,-34.6533333333333,,True,,True,,,,A
+6392,ZPrueba_INA_12947,,Argentina,A,Combinada,RHN,411,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6393,Aº Las Flores - Gral. Alvear,,Argentina,A,Combinada,RHN,412,,,sat2,RHN - SAT,27,,-60.0194444444444,-35.9875,,True,,True,,,,A
+6394,Colorado - Pedro Luro,,Argentina,A,Combinada,RHN,413,,,sat2,RHN - SAT,27,,-62.6755555555556,-39.5247222222222,,True,,True,,,,A
+6395,Paraná - Vuelta de Obligado,,Argentina,A,Combinada,RHN,414,,,sat2,RHN - SAT,27,,-59.8130555555556,-33.5941666666667,,True,,True,,,,A
+6396,Cuarto - La Carlota LIM,,Argentina,A,Combinada,RHN,415,,,sat2,RHN - SAT,27,,-63.2941666666667,-33.4075,,True,,True,,,,A
+6397,Aº Pergamino - Pergamino,,Argentina,A,Combinada,RHN,416,,,sat2,RHN - SAT,27,,-60.5702777777778,-33.9041666666667,,True,,True,,,,A
+6398,Salado - Colonia Dora,,Argentina,A,Combinada,RHN,417,,,sat2,RHN - SAT,27,,-62.8902777777778,-28.5597222222222,,True,,True,,,,A
+6400,Paraná - Bella Vista,,Argentina,A,Combinada,RHN,419,,,sat2,RHN - SAT,27,,-59.0497222222222,-28.5052777777778,,True,,True,,,,A
+6401,Aº Del Medio - Motomel,,Argentina,A,Combinada,RHN,420,,,sat2,RHN - SAT,27,,-60.3230555555556,-33.3505555555556,,True,,True,,,,A
+6403,Uruguay - Corralito,,Argentina,A,Combinada,RHN,422,,,sat2,RHN - SAT,27,,-58.0847222222222,-31.4847222222222,1.29,True,,True,,,,A
+6404,Aº Aguapey - San Carlos,null,Argentina,A,Combinada,RHN,423,,,sat2,RHN - SAT,27,null,-55.8916666666667,-27.7475,,True,null,True,,,,A
+6405,Uruguay - Concep. del Uruguay,,Argentina,A,Combinada,RHN,424,,,sat2,RHN - SAT,27,,-58.2208333333333,-32.4775,,True,,True,,,,A
+6406,Grande - La Estrechura,,Argentina,A,Combinada,RHN,425,,,sat2,RHN - SAT,27,,-70.2886111111111,-35.3194444444444,,True,,True,,,,A
+6407,ZPrueba_Cañuelas_11153,,Argentina,A,Combinada,RHN,426,,,sat2,RHN - SAT,27,,-58.2536111111111,-34.8872222222222,,True,,True,,,,A
+6408,NIV Jáchal - Cerro Negro,,Argentina,A,Combinada,RHN,427,,,sat2,RHN - SAT,27,,-69.5580555555556,-29.8905555555556,,True,,True,,,,A
+6409,NIV Carrenleufú - Lago Guacho,,Argentina,A,Combinada,RHN,428,,,sat2,RHN - SAT,27,,-71.4055555555556,-43.8288888888889,,True,,True,,,,A
+6410,NIV Atuel - Laguna Atuel,,Argentina,A,Combinada,RHN,429,,,sat2,RHN - SAT,27,,-70.0458333333333,-34.5111111111111,,True,,True,,,,A
+6411,NIV Grande - Paso Pehuenche,,Argentina,A,Combinada,RHN,430,,,sat2,RHN - SAT,27,,-70.3941666666667,-35.98,,True,,True,,,,A
+6412,NIV Grande - Valle Hermoso,,Argentina,A,Combinada,RHN,431,,,sat2,RHN - SAT,27,,-70.2016666666667,-35.1422222222222,,True,,True,,,,A
+6413,NIV Diamante - Laguna Diamante,,Argentina,A,Combinada,RHN,432,,,sat2,RHN - SAT,27,,-69.6980555555556,-34.1988888888889,,True,,True,,,,A
+6414,NIV Mendoza - Toscas,,Argentina,A,Combinada,RHN,433,,,sat2,RHN - SAT,27,,-69.8886111111111,-33.1641666666667,,True,,True,,,,A
+6415,NIV Aº de Las Leñas - Las Leña,,Argentina,A,Combinada,RHN,434,,,sat2,RHN - SAT,27,,-70.0916666666667,-35.1394444444444,,True,,True,,,,A
+6416,NIV - Alto Chubut,,Argentina,A,Combinada,RHN,435,,,sat2,RHN - SAT,27,,-71.1141666666667,-41.6730555555555,,True,,True,,,,A
+6417,ZPrueba_INA_10586,,Argentina,A,Combinada,RHN,436,,,sat2,RHN - SAT,27,,-58.5083333333333,-34.8833333333333,,True,,True,,,,A
+6418,Arroyo Potrol - La Pampa,,Argentina,A,Combinada,RHN,437,,,sat2,RHN - SAT,27,,-67.0725,-37.1438888888889,,True,,True,,,,A
+6419,PruebaSinDatos,,Argentina,A,Combinada,RHN,438,,,sat2,RHN - SAT,27,,-1.01694444444444,-1.01694444444444,,True,,True,,,,A
+6420,Lago Buenos Aires-Los Antiguos,,Argentina,A,Combinada,RHN,439,,,sat2,RHN - SAT,27,,-71.6094444444444,-46.5391666666667,,True,,True,,,,A
+6421,Atuel - Paso de Loro,,Argentina,A,Combinada,RHN,440,,,sat2,RHN - SAT,27,,-67.4261111111111,-35.6361111111111,,True,,True,,,,A
+6422,Mocoretá - RN Nº 127,,Argentina,A,Combinada,RHN,441,,,sat2,RHN - SAT,27,,-58.0588888888889,-30.1083333333333,,True,,True,,,,A
+6423,Aº Del Doll - RN 11,,Argentina,A,Combinada,RHN,442,,,sat2,RHN - SAT,27,,-60.4261111111111,-32.3058333333333,,True,,True,,,,A
+6424,Cuarto - Tincunaco,,Argentina,A,Combinada,RHN,443,,,sat2,RHN - SAT,27,,-64.7161111111111,-32.9033333333333,,True,,True,,,,A
+6425,Miriñay - Paso Ledesma,,Argentina,A,Combinada,RHN,444,,,sat2,RHN - SAT,27,,-57.675,-29.8458333333333,,True,,True,,,,A
+6426,Sauce Grande - RN Nº3,,Argentina,A,Combinada,RHN,445,,,sat2,RHN - SAT,27,,-61.6969444444444,-38.7608333333333,,True,,True,,,,A
+6427,Aº De los Huesos - RN 226,,Argentina,A,Combinada,RHN,446,,,sat2,RHN - SAT,27,,-59.5388888888889,-37.0811111111111,,True,,True,,,,A
+6428,Salado -A.Ab. Azud Cruz Bajada,,Argentina,A,Combinada,RHN,447,,,sat2,RHN - SAT,27,,-63.8916666666667,-25.7166666666667,,True,,True,,,,A
+6429,Blanco - Calingasta - RP 142,,Argentina,A,Combinada,RHN,448,,,sat2,RHN - SAT,27,,-69.4138888888889,-31.3319444444444,,True,,True,,,,A
+6430,Colorado - Paso Alsina,,Argentina,A,Combinada,RHN,449,,,sat2,RHN - SAT,27,,-63.2375,-39.3669444444444,,True,,True,,,,A
+6431,PN  - Copo  - El Aibal ,,Argentina,A,Combinada,RHN,450,,,sat2,RHN - SAT,27,,-61.7138888888889,-25.9227777777778,,True,,True,,,,A
+6432,Negro - Laguna Blanca,,Argentina,A,Combinada,RHN,451,,,sat2,RHN - SAT,27,,-59.1961111111111,-27.2633333333333,,True,,True,,,,A
+6433,ZPrueba_INA_11679,,Argentina,A,Combinada,RHN,452,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6434,ZPrueba_INA_10ma_11150,,Argentina,A,Combinada,RHN,453,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6435,Piray Guazú - R. Nac. 12 Vieja,,Argentina,A,Combinada,RHN,454,,,sat2,RHN - SAT,27,,-54.5883333333333,-26.4858333333333,,True,,True,,,,A
+6436,Iruya - Colanzulí,,Argentina,A,Combinada,RHN,455,,,sat2,RHN - SAT,27,,-65.2144444444445,-22.8716666666667,,True,,True,,,,A
+6437,Manso - Los Alerces,,Argentina,A,Combinada,RHN,456,,,sat2,RHN - SAT,27,,-71.7466666666667,-41.3783333333333,,True,,True,,,,A
+6438,Faro - punta Delgada,,Argentina,A,Combinada,RHN,457,,,sat2,RHN - SAT,27,,-63.6383333333333,-42.7658333333333,,True,,True,,,,A
+6439,Piray Mini - Valle Hermoso,,Argentina,A,Combinada,RHN,458,,,sat2,RHN - SAT,27,,-54.4983333333333,-26.355,,True,,True,,,,A
+6440,ZPrueba_INA_10ma_13275,,Argentina,A,Combinada,RHN,459,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6441,Quinto - Dique Villa Mercedes,,Argentina,A,Combinada,RHN,460,,,sat2,RHN - SAT,27,,-65.5336111111111,-33.6538888888889,,True,,True,,,,A
+6442,Sta. Cruz-Cmte Piedrabuena MET,,Argentina,A,Combinada,RHN,461,,,sat2,RHN - SAT,27,,-68.9269444444444,-49.9986111111111,,True,,True,,,,A
+6443,Santa Rosa - Meteorológica,,Argentina,A,Combinada,RHN,462,,,sat2,RHN - SAT,27,,-64.3219444444444,-36.6213888888889,,True,,True,,,,A
+6444,Trapiche - Hosteria El Trapich,,Argentina,A,Combinada,RHN,463,,,sat2,RHN - SAT,27,,-66.0633333333333,-33.1058333333333,,True,,True,,,,A
+6445,Quinto - Justo Daract,,Argentina,A,Combinada,RHN,464,,,sat2,RHN - SAT,27,,-65.1516666666667,-33.9186111111111,,True,,True,,,,A
+6446,De Las Barrancas-A.Corral RP23,,Argentina,A,Combinada,RHN,465,,,sat2,RHN - SAT,27,,-64.7202777777778,-32.6894444444444,,True,,True,,,,A
+6447,Dulce - La Escuela - Río Hondo,,Argentina,A,Combinada,RHN,466,,,sat2,RHN - SAT,27,,-64.8558333333333,-27.5033333333333,,True,,True,,,,A
+6448,Aº El Quebrachal - RP Nº 33,,Argentina,A,Combinada,RHN,467,,,sat2,RHN - SAT,27,,-65.3980555555556,-33.5838888888889,,True,,True,,,,A
+6449,Paraguay - Isla del Cerrito,,Argentina,A,Combinada,RHN,468,,,sat2,RHN - SAT,27,,-58.61,-27.2891666666667,,True,,True,,,,A
+6450,Nuevo - Ruta Nac. Nº 8,,Argentina,A,Combinada,RHN,469,,,sat2,RHN - SAT,27,,-65.3636111111111,-33.6366666666667,,True,,True,,,,A
+6451,Laguna La Picasa - CR Nº7,,Argentina,A,Combinada,RHN,470,,,sat2,RHN - SAT,27,,-62.5419444444444,-34.3486111111111,,True,,True,,,,A
+6452,Chico - Cerro Mesa,,Argentina,A,Combinada,RHN,471,,,sat2,RHN - SAT,27,,-70.4825,-41.7063888888889,,True,,True,,,,A
+6453,ZPrueba_Cañuelas_10459,,Argentina,A,Combinada,RHN,472,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6454,Negro-Obra de Ctrl. Agua Abajo,,Argentina,A,Combinada,RHN,473,,,sat2,RHN - SAT,27,,-58.8988888888889,-27.4563888888889,,True,,True,,,,A
+6455,ZPrueba_Cañuelas_11132,,Argentina,A,Combinada,RHN,474,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6456,Dulce - Villa San Martín,,Argentina,A,Combinada,RHN,475,,,sat2,RHN - SAT,27,,-64.0066666666667,-28.3291666666667,,True,,True,,,,A
+6457,Embalse Cruz Bajada,,Argentina,A,Combinada,RHN,476,,,sat2,RHN - SAT,27,,-63.8916666666667,-25.7158333333333,,True,,True,,,,A
+6458,Paraná - Puerto Libertad,,Argentina,A,Combinada,RHN,477,,,sat2,RHN - SAT,27,,-54.6205555555556,-25.9166666666667,,True,,True,,,,A
+6459,Canal de Dios - Cruz Bajada,,Argentina,A,Combinada,RHN,478,,,sat2,RHN - SAT,27,,-63.8905555555556,-25.7163888888889,,True,,True,,,,A
+6460,Gastona - Atahona RN Nº157,,Argentina,A,Combinada,RHN,479,,,sat2,RHN - SAT,27,,-65.2713888888889,-27.4325,,True,,True,,,,A
+6461,Aº Las Garzas - RN Nº 11,,Argentina,A,Combinada,RHN,480,,,sat2,RHN - SAT,27,,-59.4738888888889,-28.7766666666667,,True,,True,,,,A
+6462,Colorado - Puesto Hernández,,Argentina,A,Combinada,RHN,481,,,sat2,RHN - SAT,27,,-67.0430555555556,-38.4136111111111,,True,,True,,,,A
+6463,Ledesma -Fraile Pintado-RN 34 ,,Argentina,A,Combinada,RHN,482,,,sat2,RHN - SAT,27,,-64.8080555555556,-23.9094444444444,,True,,True,,,,A
+6464,San Pedro - Ledesma - RN 34,,Argentina,A,Combinada,RHN,483,,,sat2,RHN - SAT,27,,-64.8986111111111,-24.2644444444444,,True,,True,,,,A
+6465,San Juan - Dique de la Rosa,,Argentina,A,Combinada,RHN,484,,,sat2,RHN - SAT,27,,-68.6425,-31.5025,,True,,True,,,,A
+6466,Vinchina - Los Palacios -RN 40,,Argentina,A,Combinada,RHN,485,,,sat2,RHN - SAT,27,,-68.2411111111111,-29.3488888888889,,True,,True,,,,A
+6467,ZPrueba_INA_11ra_13280,,Argentina,A,Combinada,RHN,486,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6468,Negro - Isla Jordan,,Argentina,A,Combinada,RHN,487,,,sat2,RHN - SAT,27,,-67.9730555555556,-38.995,,True,,True,,,,A
+6469,Vipos - Toma Obras Sanitarias,,Argentina,A,Combinada,RHN,488,,,sat2,RHN - SAT,27,,-65.3163888888889,-26.4775,,True,,True,,,,A
+6470,Niv - Valenzuela - El Azufre,,Argentina,A,Combinada,RHN,489,,,sat2,RHN - SAT,27,,-70.4744444444444,-35.2622222222222,,True,,True,,,,A
+6471,NIV- Las Lagrimas-Las Lagrimas,,Argentina,A,Combinada,RHN,490,,,sat2,RHN - SAT,27,,-70.2241666666667,-34.7702777777778,,True,,True,,,,A
+6472,Quinto -Av Circunvalación,,Argentina,A,Combinada,RHN,491,,,sat2,RHN - SAT,27,,-65.3769444444444,-33.7391666666667,,True,,True,,,,A
+6473,NIV - Lago La Plata,,Argentina,A,Combinada,RHN,492,,,sat2,RHN - SAT,27,,-71.7877777777778,-44.9225,,True,,True,,,,A
+6474,Lago Muster - Fortín,,Argentina,A,Combinada,RHN,493,,,sat2,RHN - SAT,27,,-69.2763888888889,-45.5802777777778,,True,,True,,,,A
+6475,NIV - Cerro Piltriquitron,,Argentina,A,Combinada,RHN,494,,,sat2,RHN - SAT,27,,-71.4697222222222,-41.9688888888889,,True,,True,,,,A
+6476,NIV - Cerro Carreras ,,Argentina,A,Combinada,RHN,495,,,sat2,RHN - SAT,27,,-71.2177777777778,-41.5519444444444,,True,,True,,,,A
+6477,NIV-C. Trona.-Otto Meiling MET,,Argentina,A,Combinada,RHN,496,,,sat2,RHN - SAT,27,,-71.7880555555556,-41.1911111111111,,True,,True,,,,A
+6478,Turbio - Turbio Viejo,,Argentina,A,Combinada,RHN,497,,,sat2,RHN - SAT,27,,-72.0783333333333,-51.6808333333333,,True,,True,,,,A
+6479,El Tala - El Brete,,Argentina,A,Combinada,RHN,498,,,sat2,RHN - SAT,27,,-65.3411111111111,-26.0658333333333,,True,,True,,,,A
+6480,Canal - Jume Esquina,,Argentina,A,Combinada,RHN,499,,,sat2,RHN - SAT,27,,-63.9333333333333,-27.6966666666667,,True,,True,,,,A
+6481,Grande - Ruta Provincia Nº 9,,Argentina,A,Combinada,RHN,500,,,sat2,RHN - SAT,27,,-66.1055555555556,-32.9019444444444,,True,,True,,,,A
+6482,Desaguadero - Navia,,Argentina,A,Combinada,RHN,501,,,sat2,RHN - SAT,27,,-66.5886111111111,-34.7741666666667,,True,,True,,,,A
+6483,Desaguadero - Salto de la Tosc,,Argentina,A,Combinada,RHN,502,,,sat2,RHN - SAT,27,,-66.71,-34.0869444444444,,True,,True,,,,A
+6484,ZPrueba_Fabrica_10605,,Argentina,A,Combinada,RHN,503,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6485,ZPrueba_Cañuelas_11141,,Argentina,A,Combinada,RHN,504,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6487,ZPrueba_Fabrica_12236,,Argentina,A,Combinada,RHN,506,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6488,ZPrueba_Fabrica_11682,,Argentina,A,Combinada,RHN,507,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6490,Arrayanes - Lago Verde,,Argentina,A,Combinada,RHN,509,,,sat2,RHN - SAT,27,,-71.7430555555556,-42.7436111111111,,True,,True,,,,A
+6491,ZPrueba_Cañuelas_10484,,Argentina,A,Combinada,RHN,510,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6492,Uspallata - Uspallata,,Argentina,A,Combinada,RHN,511,,,sat2,RHN - SAT,27,,-69.34,-32.5944444444444,,True,,True,,,,A
+6493,ZPrueba_Cañuelas_5458,,Argentina,A,Combinada,RHN,512,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6494,ZPrueba_INA_13881,,Argentina,A,Combinada,RHN,513,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6495,ZPrueba_INA_13882,,Argentina,A,Combinada,RHN,514,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6496,ZPrueba_INA_13879,,Argentina,A,Combinada,RHN,515,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6497,ZPrueba_INA_13888,,Argentina,A,Combinada,RHN,516,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6498,Urueña -7 de Abril - RN34,,Argentina,A,Combinada,RHN,517,,,sat2,RHN - SAT,27,,-64.5119444444444,-26.2188888888889,,True,,True,,,,A
+6499,ZPrueba_INA_13894,,Argentina,A,Combinada,RHN,518,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6500,ZPrueba_INA_13895,,Argentina,A,Combinada,RHN,519,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6501,ZPrueba_INA_13896,,Argentina,A,Combinada,RHN,520,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6502,ZPrueba_INA_13897,,Argentina,A,Combinada,RHN,521,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6503,ZPrueba_INA_13898,,Argentina,A,Combinada,RHN,522,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6504,Seco - RN Nº 157,,Argentina,A,Combinada,RHN,523,,,sat2,RHN - SAT,27,,-65.3175,-27.3361111111111,,True,,True,,,,A
+6505,Chico - RN Nº157 Monteagudo,,Argentina,A,Combinada,RHN,524,,,sat2,RHN - SAT,27,,-65.2663888888889,-27.5211111111111,,True,,True,,,,A
+6506,Salí - Alta Gracia,,Argentina,A,Combinada,RHN,525,,,sat2,RHN - SAT,27,,-65.1619444444444,-26.7191666666667,,True,,True,,,,A
+6507,Neuquén - Chos Malal -RN40,,Argentina,A,Combinada,RHN,526,,,sat2,RHN - SAT,27,,-70.2291666666667,-37.4063888888889,,True,,True,,,,A
+6508,Paraná - Puerto Rico,,Argentina,A,Combinada,RHN,527,,,sat2,RHN - SAT,27,,-55.025,-26.7916666666667,,True,,True,,,,A
+6509,El Rey - Moussy,,Argentina,A,Combinada,RHN,528,,,sat2,RHN - SAT,27,,-59.7530555555556,-28.9977777777778,,True,,True,,,,A
+6510,ZPrueba_Humedad de Suelo_13877,,Argentina,A,Combinada,RHN,529,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6511,Paraguay - Las Palmas,,Argentina,A,Combinada,RHN,530,,,sat2,RHN - SAT,27,,-58.6427777777778,-27.1180555555556,,True,,True,,,,A
+6512,INA - Ezeiza,null,Argentina,A,Combinada,RHN,531,,,sat2,RHN - SAT,27,null,-58.5202777777778,-34.7972222222222,,True,null,True,,,,A
+6513,Aº Calbuco - S.M. de Los Andes,,Argentina,A,Combinada,RHN,532,,,sat2,RHN - SAT,27,,-71.3266666666667,-40.1469444444444,,True,,True,,,,A
+6514,Limay - Balsa Las Perlas,,Argentina,A,Combinada,RHN,533,,,sat2,RHN - SAT,27,,-68.14,-38.9825,,True,,True,,,,A
+6515,Uruguay - Paso de los Libres,,Argentina,A,Combinada,RHN,534,,,sat2,RHN - SAT,27,,-57.0847222222222,-29.7238888888889,,True,,True,,,,A
+6516,Vizcachas - Cerro Palique,,Argentina,A,Combinada,RHN,535,,,sat2,RHN - SAT,27,,-72.1063888888889,-50.9961111111111,,True,,True,,,,A
+6517,Laguna Salitral - Salitral,,Argentina,A,Combinada,RHN,536,,,sat2,RHN - SAT,27,,-66.8258333333333,-37.4669444444444,,True,,True,,,,A
+6518,Atuel - La Puntilla,,Argentina,A,Combinada,RHN,537,,,sat2,RHN - SAT,27,,-67.1866666666667,-36.2413888888889,,True,,True,,,,A
+6519,Aº Trabunco -S.M. de Los Andes,,Argentina,A,Combinada,RHN,538,,,sat2,RHN - SAT,27,,-71.3347222222222,-40.1530555555556,,True,,True,,,,A
+6520,Aº Yaboti - San Pedro,,Argentina,A,Combinada,RHN,539,,,sat2,RHN - SAT,27,,-54.0897222222222,-26.6352777777778,,True,,True,,,,A
+6521,Lago Puelo - Oficina tècnica,,Argentina,A,Combinada,RHN,540,,,sat2,RHN - SAT,27,,-71.5236111111111,-41.9830555555556,,True,,True,,,,A
+6522,Pepirí Guazú-Pte.Int.P.Rosales,,Argentina,A,Combinada,RHN,541,,,sat2,RHN - SAT,27,,-53.7347222222222,-26.6133333333333,,True,,True,,,,A
+6523,Laguna El Uncal - AM20,,Argentina,A,Combinada,RHN,542,,,sat2,RHN - SAT,27,,-67.1,-36.6852777777778,,True,,True,,,,A
+6524,ZPrueba_Evarsa_10485,,Argentina,A,Combinada,RHN,543,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6525,ZPrueba_Evarsa_11139,,Argentina,A,Combinada,RHN,544,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.5,,True,,True,,,,A
+6526,Jesus Maria - MET,,Argentina,A,Combinada,RHN,545,,,sat2,RHN - SAT,27,,-64.1394444444445,-30.9769444444444,,True,,True,,,,A
+6527,General Acha - La Pampa,,Argentina,A,Combinada,RHN,546,,,sat2,RHN - SAT,27,,-64.5919444444444,-37.3647222222222,,True,,True,,,,A
+6528,Desaguadero - El Encón,,Argentina,A,Combinada,RHN,547,,,sat2,RHN - SAT,27,,-67.8069444444444,-32.2247222222222,,True,,True,,,,A
+6529,L. Lacar - S.M. de Los Andes,,Argentina,A,Combinada,RHN,548,,,sat2,RHN - SAT,27,,-71.3586111111111,-40.1616666666667,,True,,True,,,,A
+6530,Agrio - Bajada del Agrio,,Argentina,A,Combinada,RHN,549,,,sat2,RHN - SAT,27,,-70.0325,-38.3658333333333,,True,,True,,,,A
+6531,ZPrueba_INA_19na_10242,,Argentina,A,Combinada,RHN,550,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6532,Manso - Los Alerces HID,,Argentina,A,Combinada,RHN,551,,,sat2,RHN - SAT,27,,-71.7458333333333,-41.3736111111111,,True,,True,,,,A
+6533,Gallegos Chico - Bella Vista,,Argentina,A,Combinada,RHN,552,,,sat2,RHN - SAT,27,,-70.5616666666667,-51.865,,True,,True,,,,A
+6534,San Juan - Km 101 LIM,,Argentina,A,Combinada,RHN,553,,,sat2,RHN - SAT,27,,-69.1775,-31.2522222222222,,True,,True,,,,A
+6535,Chico - Ruta Nac. Nº 3,,Argentina,A,Combinada,RHN,554,,,sat2,RHN - SAT,27,,-68.6405555555556,-49.7769444444444,,True,,True,,,,A
+6536,Iruya - Poscaya,,Argentina,A,Combinada,RHN,555,,,sat2,RHN - SAT,27,,-65.0805555555555,-22.4547222222222,,True,,True,,,,A
+6537,Iruya - San Antonio,,Argentina,A,Combinada,RHN,556,,,sat2,RHN - SAT,27,,-64.9708333333333,-22.8258333333333,,True,,True,,,,A
+6538,Iruya - Las Higueras,,Argentina,A,Combinada,RHN,557,,,sat2,RHN - SAT,27,,-65.0972222222222,-22.7541666666667,,True,,True,,,,A
+6539,Ventisquero Negro - Lago Manso,,Argentina,A,Combinada,RHN,558,,,sat2,RHN - SAT,27,,-71.8333333333333,-41.2016666666667,,True,,True,,,,A
+6540,Salado - Icaño,,Argentina,A,Combinada,RHN,559,,,sat2,RHN - SAT,27,,-62.7786111111111,-28.6152777777778,,True,,True,,,,A
+6541,Guanasacate - Col. San Jorge,,Argentina,A,Combinada,RHN,560,,,sat2,RHN - SAT,27,,-64.3483333333333,-30.8797222222222,,True,,True,,,,A
+6542,Puesto Cam. San Jaime - RN127,,Argentina,A,Combinada,RHN,561,,,sat2,RHN - SAT,27,,-58.2511111111111,-30.2827777777778,,True,,True,,,,A
+6543,*Pepirí Guazú-Pte.Int.P.Rosale,,Argentina,A,Combinada,RHN,562,,,sat2,RHN - SAT,27,,-53.7347222222222,-26.6133333333333,,True,,True,,,,A
+6544,Areco - Carmen de Areco,,Argentina,A,Combinada,RHN,563,,,sat2,RHN - SAT,27,,-59.8169444444444,-34.3519444444444,,True,,True,,,,A
+6545,Los Sauces II - MET,,Argentina,A,Combinada,RHN,564,,,sat2,RHN - SAT,27,,-67.1244444444444,-28.3094444444444,,True,,True,,,,A
+6546,Las Lomitas,,Argentina,A,Combinada,RHN,565,,,sat2,RHN - SAT,27,,-60.5827777777778,-24.7119444444444,,True,,True,,,,A
+6547,ZPrueba_Evarsa_11135,,Argentina,A,Combinada,RHN,566,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6548,Bermejo - Aguas Blancas LIM,,Argentina,A,Combinada,RHN,567,,,sat2,RHN - SAT,27,,-64.3691666666667,-22.7263888888889,,True,,True,,,,A
+6549,Juramento - El Tunal,,Argentina,A,Combinada,RHN,568,,,sat2,RHN - SAT,27,,-64.3902777777778,-25.2497222222222,,True,,True,,,,A
+6550,ZPrueba_INA_20ma_14152,,Argentina,A,Combinada,RHN,569,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6551,Uruguay - Monte Caseros,,Argentina,A,Combinada,RHN,570,,,sat2,RHN - SAT,27,,-57.6216666666667,-30.2516666666667,,True,,True,,,,A
+6552,Acaragua - Campo Grande,null,Argentina,A,Combinada,RHN,571,,,sat2,RHN - SAT,27,null,-54.9725,-27.2158333333333,,True,null,True,,,,A
+6553,Bañado La Estrella - RP Nº28,,Argentina,A,Combinada,RHN,572,,,sat2,RHN - SAT,27,,-60.3341666666667,-24.4086111111111,,True,,True,,,,A
+6554,ZPrueba_INA_20ma_14426,,Argentina,A,Combinada,RHN,573,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6555,Santa Maria - Pie de Medano,,Argentina,A,Combinada,RHN,574,,,sat2,RHN - SAT,27,,-66.2175,-26.9955555555556,,True,,True,,,,A
+6556,Pilcomayo - Tigra Norte,,Argentina,A,Combinada,RHN,575,,,sat2,RHN - SAT,27,,-61.9638888888889,-23.1397222222222,,True,,True,,,,A
+6557,ZPrueba_INA_21ra_GSM_13873,,Argentina,A,Combinada,RHN,576,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6558,ZPrueba_Humedad de Suelo_13869,,Argentina,A,Combinada,RHN,577,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6559,ZPrueba_INA_21ra_GSM_13883,,Argentina,A,Combinada,RHN,578,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6560,ZPrueba_INA_21ra_GSM_13888,,Argentina,A,Combinada,RHN,579,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6561,ZPrueba_INA_21ra_GSM_13870,,Argentina,A,Combinada,RHN,580,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6562,ZPrueba_Humedad de Suelo_13874,,Argentina,A,Combinada,RHN,581,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6563,ZPrueba_INA_21ra_GSM_13884,,Argentina,A,Combinada,RHN,582,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6564,ZPrueba_INA_21ra_GSM_13879,,Argentina,A,Combinada,RHN,583,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6565,ZPrueba_Humedad de Suelo_13882,,Argentina,A,Combinada,RHN,584,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6566,ZPrueba_INA_21ra_GSM_13894,,Argentina,A,Combinada,RHN,585,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6567,CIRHBAS - MET EL GUANAGAN RP13,,Argentina,A,Combinada,RHN,586,,,sat2,RHN - SAT,27,,-60.9019444444444,-28.7297222222222,,True,,True,,,,A
+6568,ZPrueba_Humedad de Suelo_13881,,Argentina,A,Combinada,RHN,587,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6569,Paraná - Goya,,Argentina,A,Combinada,RHN,588,,,sat2,RHN - SAT,27,,-59.3283333333333,-29.165,,True,,True,,,,A
+6570,Chubut - Trelew,,Argentina,A,Combinada,RHN,589,,,sat2,RHN - SAT,27,,-65.2733333333333,-43.2761111111111,,True,,True,,,,A
+6571,ZPrueba_INA_21ra_GSM_13886,,Argentina,A,Combinada,RHN,590,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6572,Aº El Quebrachal - RP Nº 33,,Argentina,A,Combinada,RHN,591,,,sat2,RHN - SAT,27,,-65.3980555555556,-33.5838888888889,,True,,True,,,,A
+6573,San Antonio Oeste - ET 132 KV,,Argentina,A,Combinada,RHN,592,,,sat2,RHN - SAT,27,,-65.03,-40.7566666666667,,True,,True,,,,A
+6574,Sierra Grande - Aeródromo,,Argentina,A,Combinada,RHN,593,,,sat2,RHN - SAT,27,,-65.3433333333333,-41.5916666666667,,True,,True,,,,A
+6575,Chimiray - Colonia Liebig,,Argentina,A,Combinada,RHN,594,,,sat2,RHN - SAT,27,,-55.8177777777778,-27.9122222222222,,True,,True,,,,A
+6576,Laguna Yema,,Argentina,A,Combinada,RHN,595,,,sat2,RHN - SAT,27,,-61.2419444444444,-24.2563888888889,,True,,True,,,,A
+6577,Las Conchas - Coropampa,,Argentina,A,Combinada,RHN,596,,,sat2,RHN - SAT,27,,-65.5238888888889,-25.5091666666667,,True,,True,,,,A
+6578,Uruguay - El Soberbio,,Argentina,A,Combinada,RHN,682,,,sat2,RHN - SAT,27,,-54.1955555555556,-27.2922222222222,,True,,True,,,,A
+6579,Yabebiry - Colonia Martires,,Argentina,A,Combinada,RHN,598,,,sat2,RHN - SAT,27,,-55.335,-27.4011111111111,,True,,True,,,,A
+6580,ZPrueba_INA_22da_14505,,Argentina,A,Combinada,RHN,599,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6581,Azul - Puesto 2,,Argentina,A,Combinada,RHN,600,,,sat2,RHN - SAT,27,,-71.6063888888889,-42.0405555555556,,True,,True,,,,A
+6582,Senguerr - Los Molinos,,Argentina,A,Combinada,RHN,601,,,sat2,RHN - SAT,27,,-69.475,-45.9861111111111,,True,,True,,,,A
+6583,Lago Mascardi - Central Frey,,Argentina,A,Combinada,RHN,602,,,sat2,RHN - SAT,27,,-71.5633333333333,-41.3572222222222,,True,,True,,,,A
+6584,ZPrueba_INA_22da_14497,,Argentina,A,Combinada,RHN,603,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6585,ZPrueba_INA_22da_14498,,Argentina,A,Combinada,RHN,604,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6586,Metán - Desembocadura,,Argentina,A,Combinada,RHN,605,,,sat2,RHN - SAT,27,,-64.5922222222222,-25.3933333333333,,True,,True,,,,A
+6587,Uruguay - Santo Tomé,,Argentina,A,Combinada,RHN,743,,,sat2,RHN - SAT,27,,-56.0288888888889,-28.545,,True,,True,,,,A
+6588,Uruguay-S.Javier-P.de la Barca,,Argentina,A,Combinada,RHN,608,,,sat2,RHN - SAT,27,,-55.1358333333333,-27.8938888888889,,True,,True,,,,A
+6590,ZPrueba_Evarsa,,Argentina,A,Combinada,RHN,609,,,sat2,RHN - SAT,27,,-58.0,-35.0,,True,,True,,,,A
+6591,Lago Vinter - Vinter,,Argentina,A,Combinada,RHN,610,,,sat2,RHN - SAT,27,,-71.4283333333333,-43.9194444444444,,True,,True,,,,A
+6592,A° Saltito - El Saltito,,Argentina,A,Combinada,RHN,843,,,sat2,RHN - SAT,27,,-54.5766666666667,-27.4405555555556,,True,,True,,,,A
+6593,Negro - Primera Angostura,,Argentina,A,Combinada,RHN,612,,,sat2,RHN - SAT,27,,-63.7897222222222,-40.4555555555556,,True,,True,,,,A
+6595,Lag. La Picasa-Inter. Can. A22,,Argentina,A,Combinada,RHN,614,,,sat2,RHN - SAT,27,,-62.4133333333333,-34.4494444444444,,True,,True,,,,A
+6596,ZPrueba_INA_23ra_14512,,Argentina,A,Combinada,RHN,615,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6597,Arenales - El Encon,,Argentina,A,Combinada,RHN,616,,,sat2,RHN - SAT,27,,-65.5933333333333,-24.8422222222222,,True,,True,,,,A
+6598,ZPrueba_INA_23ra_14514,,Argentina,A,Combinada,RHN,617,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6599,Aº Los Amores - Escuela 1256,,Argentina,A,Combinada,RHN,618,,,sat2,RHN - SAT,27,,-59.7155555555556,-28.2275,,True,,True,,,,A
+6602,Iruya - El Molino,,Argentina,A,Combinada,RHN,621,,,sat2,RHN - SAT,27,,-65.1502777777778,-22.5988888888889,,True,,True,,,,A
+6603,Pavas - Las Mesadas,,Argentina,A,Combinada,RHN,622,,,sat2,RHN - SAT,27,,-65.9288888888889,-27.2141666666667,,True,,True,,,,A
+6604,Areco - Puente Quemado,,Argentina,A,Combinada,RHN,623,,,sat2,RHN - SAT,27,,-59.7027777777778,-34.2880555555556,,True,,True,,,,A
+6605,ZPrueba_INA_23ra_14521,,Argentina,A,Combinada,RHN,624,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6606,*ZPrueba_INA_23ra_14522,,Argentina,A,Combinada,RHN,625,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6607,ZPrueba_INA_23ra_15222,,Argentina,A,Combinada,RHN,626,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6608,Chubut - Los Altares,,Argentina,A,Combinada,RHN,627,,,sat2,RHN - SAT,27,,-68.3983333333333,-43.8886111111111,,True,,True,,,,A
+6609,La Picasa - Obra Reg Nº1,,Argentina,A,Combinada,RHN,628,,,sat2,RHN - SAT,27,,-63.3816666666667,-34.2619444444444,,True,,True,,,,A
+6610,Escondido - El Foyel,,Argentina,A,Combinada,RHN,629,,,sat2,RHN - SAT,27,,-71.5652777777778,-41.6797222222222,,True,,True,,,,A
+6611,Chico - Las Violetas,,Argentina,A,Combinada,RHN,630,,,sat2,RHN - SAT,27,,-67.935,-53.6738888888889,,True,,True,,,,A
+6612,Niv. Cerro Polleras,,Argentina,A,Combinada,RHN,631,,,sat2,RHN - SAT,27,,-69.8519444444444,-33.1475,,True,,True,,,,A
+6613,NIV - Picos de Barroso,,Argentina,A,Combinada,RHN,632,,,sat2,RHN - SAT,27,,-69.9483333333333,-34.3075,,True,,True,,,,A
+6614,Cullén - Cullén 2,,Argentina,A,Combinada,RHN,633,,,sat2,RHN - SAT,27,,-68.4511111111111,-52.8902777777778,,True,,True,,,,A
+6615,Uruguay - Garruchos,,Argentina,A,Combinada,RHN,634,,,sat2,RHN - SAT,27,,-55.6422222222222,-28.1772222222222,,True,,True,,,,A
+6616,Dique Belén - Aguas Abajo,,Argentina,A,Combinada,RHN,635,,,sat2,RHN - SAT,27,,-67.0163888888889,-27.6155555555556,,True,,True,,,,A
+6617,Aº Yabotí  Guazú,,Argentina,A,Combinada,RHN,636,,,sat2,RHN - SAT,27,,-53.8938888888889,-27.0694444444444,,True,,True,,,,A
+6618,Yabebiry - Colonia Martires,,Argentina,A,Combinada,RHN,637,,,sat2,RHN - SAT,27,,-55.335,-27.4011111111111,,True,,True,,,,A
+6619,ZPrueba_INA_24ta_14536,,Argentina,A,Combinada,RHN,638,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6620,L. Menéndez-Cisne Pto. Sagrado,,Argentina,A,Combinada,RHN,639,,,sat2,RHN - SAT,27,,-71.8880555555556,-42.6177777777778,,True,,True,,,,A
+6621,Uruguay - Paso de los Libres,,Argentina,A,Combinada,RHN,640,,,sat2,RHN - SAT,27,,-57.0830555555556,-29.7219444444444,,True,,True,,,,A
+6622,Quinto - R.N. 35,,Argentina,A,Combinada,RHN,641,,,sat2,RHN - SAT,27,,-64.3861111111111,-34.2163888888889,,True,,True,,,,A
+6623,Quinto - Canal Devoto RP 4,,Argentina,A,Combinada,RHN,642,,,sat2,RHN - SAT,27,,-63.4491666666667,-33.9330555555556,,True,,True,,,,A
+6624,Aº El Aji - RN Nº35 y RN Nº7,,Argentina,A,Combinada,RHN,643,,,sat2,RHN - SAT,27,,-64.3963888888889,-33.9311111111111,,True,,True,,,,A
+6625,Chico - Chico 2,,Argentina,A,Combinada,RHN,644,,,sat2,RHN - SAT,27,,-68.3769444444444,-53.5480555555556,,True,,True,,,,A
+6626,Guayquiraró - RN 12 - A°Curupí,,Argentina,A,Combinada,RHN,645,,,sat2,RHN - SAT,27,,-59.5147222222222,-30.3511111111111,,True,,True,,,,A
+6627,Compuerta Alternativa Norte AD,,Argentina,A,Combinada,RHN,646,,,sat2,RHN - SAT,27,,-62.1211111111111,-34.2419444444444,,True,,True,,,,A
+6628,Colorado - Villa de Mazán,,Argentina,A,Combinada,RHN,647,,,sat2,RHN - SAT,27,,-66.5491666666667,-28.6491666666667,,True,,True,,,,A
+6629,ZPrueba_INA_25ta_15185,,Argentina,A,Combinada,RHN,648,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6630,ZPrueba_INA_25ta_15186,,Argentina,A,Combinada,RHN,649,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6631,Dique Sotomayor - Aguas abajo,,Argentina,A,Combinada,RHN,650,,,sat2,RHN - SAT,27,,-65.2877777777778,-28.5911111111111,,True,,True,,,,A
+6633,Salado - RN Nº 11,,Argentina,A,Combinada,RHN,652,,,sat2,RHN - SAT,27,,-59.1308333333333,-27.5413888888889,,True,,True,,,,A
+6634,ZPrueba_INA_25ta_15190,,Argentina,A,Combinada,RHN,653,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6635,Nuevo - Ruta Nac. Nº 8,,Argentina,A,Combinada,RHN,654,,,sat2,RHN - SAT,27,,-65.3636111111111,-33.6366666666667,,True,,True,,,,A
+6636,ZPrueba_INA_25ta_15192,,Argentina,A,Combinada,RHN,655,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6637,Bermejo - Azud los Colorados,,Argentina,A,Combinada,RHN,656,,,sat2,RHN - SAT,27,,-68.2525,-29.2580555555556,,True,,True,,,,A
+6638,Dique Belén - Embalse,,Argentina,A,Combinada,RHN,657,,,sat2,RHN - SAT,27,,-67.0163888888889,-27.615,,True,,True,,,,A
+6639,Afluente Río Grande       ,,Argentina,A,Combinada,RHN,658,,,sat2,RHN - SAT,27,,-68.5313888888889,-53.8416666666667,,True,,True,,,,A
+6640,Ñorquinco - Ñorquinco,,Argentina,A,Combinada,RHN,659,,,sat2,RHN - SAT,27,,-70.8913888888889,-41.8419444444444,,True,,True,,,,A
+6641,ZPrueba_INA_25ta_15176,,Argentina,A,Combinada,RHN,660,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6642,Niv-LagoDelDesierto-El Crestón,,Argentina,A,Combinada,RHN,661,,,sat2,RHN - SAT,27,,-72.915,-49.08,,True,,True,,,,A
+6643,Gob. Costa - Chubut MET-FRE,,Argentina,A,Combinada,RHN,662,,,sat2,RHN - SAT,27,,-70.6458333333333,-44.0344444444444,,True,,True,,,,A
+6644,ZPrueba_INA_25ta_15179,,Argentina,A,Combinada,RHN,663,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6645,Esc. Prov. 355 - Piedra Larga,,Argentina,A,Combinada,RHN,664,,,sat2,RHN - SAT,27,,-67.1977777777778,-27.6022222222222,,True,,True,,,,A
+6647,ZPrueba_INA_26ta_15196,,Argentina,A,Combinada,RHN,666,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6648,Cullén - Cullén 1,,Argentina,A,Combinada,RHN,667,,,sat2,RHN - SAT,27,,-68.5669444444444,-52.8527777777778,,True,,True,,,,A
+6649,Lago Puelo - Lago Puelo,,Argentina,A,Combinada,RHN,668,,,sat2,RHN - SAT,27,,-71.6194444444444,-42.0972222222222,,True,,True,,,,A
+6650,Salí - RP Nº323,,Argentina,A,Combinada,RHN,669,,,sat2,RHN - SAT,27,,-65.3155555555555,-27.1333333333333,,True,,True,,,,A
+6651,Dulce - Tuhama,,Argentina,A,Combinada,RHN,670,,,sat2,RHN - SAT,27,,-64.0980555555555,-28.0144444444444,,True,,True,,,,A
+6652,Lipeo - Puente Colgante,,Argentina,A,Combinada,RHN,671,,,sat2,RHN - SAT,27,,-64.7372222222222,-22.4311111111111,,True,,True,,,,A
+6653,Grande - Gde. -Ecia. San Julio,,Argentina,A,Combinada,RHN,672,,,sat2,RHN - SAT,27,,-68.5294444444444,-53.9019444444444,,True,,True,,,,A
+6654,Carreras - Frontera,,Argentina,A,Combinada,RHN,673,,,sat2,RHN - SAT,27,,-72.2838888888889,-48.2061111111111,,True,,True,,,,A
+6655,Aº Azul - Seminario Diocesano,,Argentina,A,Combinada,RHN,674,,,sat2,RHN - SAT,27,,-59.8938888888889,-36.8311111111111,,True,,True,,,,A
+6656,Chico - Cerro Mesa,,Argentina,A,Combinada,RHN,675,,,sat2,RHN - SAT,27,,-70.4825,-41.7063888888889,,True,,True,,,,A
+6657,Vinchina - Vinchina,,Argentina,A,Combinada,RHN,676,,,sat2,RHN - SAT,27,,-68.2205555555556,-28.7436111111111,,True,,True,,,,A
+6658,Paraguay - Puerto Dalmacia,,Argentina,A,Combinada,RHN,677,,,sat2,RHN - SAT,27,,-57.8730555555556,-25.875,,True,,True,,,,A
+6659,Riacho Salado - Tatané - RN 11,,Argentina,A,Combinada,RHN,678,,,sat2,RHN - SAT,27,,-58.3591666666667,-26.4077777777778,,True,,True,,,,A
+6660,Pilcomayo - Villa Gral. Güemes,,Argentina,A,Combinada,RHN,679,,,sat2,RHN - SAT,27,,-59.4997222222222,-24.7469444444444,,True,,True,,,,A
+6661,Abaucán - Limite con La Rioja,,Argentina,A,Combinada,RHN,680,,,sat2,RHN - SAT,27,,-67.0208333333333,-28.2613888888889,,True,,True,,,,A
+6664,Aº Mocoretá - RN Nº 14,,Argentina,A,Combinada,RHN,683,,,sat2,RHN - SAT,27,,-57.9827777777778,-30.6275,,True,,True,,,,A
+6665,San Antonio - San Antonio,,Argentina,A,Combinada,RHN,684,,,sat2,RHN - SAT,27,,-53.7311111111111,-26.0566666666667,,True,,True,,,,A
+6666,ZPrueba_INA_26ta_15215 ,,Argentina,A,Combinada,RHN,685,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6667,Vizcachas - Limite con Chile,,Argentina,A,Combinada,RHN,686,,,sat2,RHN - SAT,27,,-72.3111111111111,-51.0297222222222,,True,,True,,,,A
+6668,ZPrueba_INA_27ma_15227,,Argentina,A,Combinada,RHN,687,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6669,San Javier - Cayastá,,Argentina,A,Combinada,RHN,688,,,sat2,RHN - SAT,27,,-60.1530555555556,-31.1933333333333,,True,,True,,,,A
+6670,ZPrueba_INA_27ma_15229,,Argentina,A,Combinada,RHN,689,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6671,Vizcachas - Nacimiento,,Argentina,A,Combinada,RHN,690,,,sat2,RHN - SAT,27,,-71.965,-50.87,,True,,True,,,,A
+6672,Ona - Ona - RP B,,Argentina,A,Combinada,RHN,691,,,sat2,RHN - SAT,27,,-68.1177777777778,-53.9288888888889,,True,,True,,,,A
+6673,ZPrueba_INA_27ma_15232,,Argentina,A,Combinada,RHN,692,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6674,ZPrueba_INA_27ma_15233,,Argentina,A,Combinada,RHN,693,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6675,ZPrueba_INA_27ma_15234,,Argentina,A,Combinada,RHN,694,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6676,PN Trinidad - Condorito ,,Argentina,A,Combinada,RHN,695,,,sat2,RHN - SAT,27,,-64.8527777777778,-31.6911111111111,,True,,True,,,,A
+6677,ZPrueba_INA_27ma_15236,,Argentina,A,Combinada,RHN,696,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6678,Bermejo - Alarache,,Argentina,A,Combinada,RHN,697,,,sat2,RHN - SAT,27,,-64.6527777777778,-22.1902777777778,,True,,True,,,,A
+6679,ZPrueba_INA_27ma_15238,,Argentina,A,Combinada,RHN,698,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6680,ZPrueba_INA_27ma_15239,,Argentina,A,Combinada,RHN,699,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6681,Rio Hondo - HID - Sitio 2,,Argentina,A,Combinada,RHN,700,,,sat2,RHN - SAT,27,,-67.1658333333333,-27.6669444444444,,True,,True,,,,A
+6682,ZPrueba_INA_27ma_15241,,Argentina,A,Combinada,RHN,701,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6683,ZPrueba_INA_27ma_15242,,Argentina,A,Combinada,RHN,702,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6684,Piedra Larga - HID - Sitio 1,,Argentina,A,Combinada,RHN,703,,,sat2,RHN - SAT,27,,-67.1947222222222,-27.6125,,True,,True,,,,A
+6685,Sis. Setúbal-Sta. Fé-La Guard.,,Argentina,A,Combinada,RHN,704,,,sat2,RHN - SAT,27,,-60.6777777777778,-31.6302777777778,,True,,True,,,,A
+6686,ZPrueba_INA_27ma_15245,,Argentina,A,Combinada,RHN,705,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6687,ZPrueba_INA_28va_16047,,Argentina,A,Combinada,RHN,706,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6688,ZPrueba_INA_28va_16048,,Argentina,A,Combinada,RHN,707,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6689,ZPrueba_INA_28va_16049,,Argentina,A,Combinada,RHN,708,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6690,ZPrueba_INA_28va_16050,,Argentina,A,Combinada,RHN,709,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6691,Jáchal - Pachimoco,,Argentina,A,Combinada,RHN,710,,,sat2,RHN - SAT,27,,-68.9477777777778,-30.2230555555556,,True,,True,,,,A
+6693,ZPrueba_INA_28va_16053,,Argentina,A,Combinada,RHN,712,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6695,ZPrueba_INA_29na_Orbcomm_15246,,Argentina,A,Combinada,RHN,714,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6696,ZPrueba_INA_29na_Orbcomm_15247,,Argentina,A,Combinada,RHN,715,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6697,ZPrueba_INA_29na_Orbcomm_16038,,Argentina,A,Combinada,RHN,716,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6698,Salado RP Nº 51 - Achupallas,,Argentina,A,Combinada,RHN,717,,,sat2,RHN - SAT,27,,-60.1088888888889,-35.0880555555556,,True,,True,,,,A
+6699,ZPrueba_INA_29na_Orbcomm_16041,,Argentina,A,Combinada,RHN,718,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6700,ZPrueba_INA_29na_Orbcomm_16042,,Argentina,A,Combinada,RHN,719,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6701,Santa Rosa - Meteorológica,,Argentina,A,Combinada,RHN,720,,,sat2,RHN - SAT,27,,-64.3219444444444,-36.6213888888889,,True,,True,,,,A
+6702,Cuarto - La Carlota,,Argentina,A,Combinada,RHN,721,,,sat2,RHN - SAT,27,,-63.3086111111111,-33.4155555555556,,True,,True,,,,A
+6703,ZPrueba_INA_28va_GSM_16045,,Argentina,A,Combinada,RHN,722,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6704,ZPrueba_INA_28va_GSM_16046,,Argentina,A,Combinada,RHN,723,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6705,ZPrueba_INA_28va_16052,,Argentina,A,Combinada,RHN,725,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6706,Los Antiguos - Los Antiguos,,Argentina,A,Combinada,RHN,726,,,sat2,RHN - SAT,27,,-71.6397222222222,-46.5541666666667,,True,,True,,,,A
+6707,Juramento - El Quebrachal,,Argentina,A,Combinada,RHN,727,,,sat2,RHN - SAT,27,,-64.0461111111111,-25.3441666666667,,True,,True,,,,A
+6708,Salto Chico - Concordia,,Argentina,A,Combinada,RHN,728,,,sat2,RHN - SAT,27,,-57.9902777777778,-31.3147222222222,,True,,True,,,,A
+6709,Esc. Mariano Moreno Nº232,,Argentina,A,Combinada,RHN,729,,,sat2,RHN - SAT,27,,-65.0913888888889,-23.8619444444444,,True,,True,,,,A
+6711,PN - Calilegua - La Mesada,,Argentina,A,Combinada,RHN,731,,,sat2,RHN - SAT,27,,-64.8669444444444,-23.8663888888889,,True,,True,,,,A
+6713,Salto Chico - Gualeguaychú,,Argentina,A,Combinada,RHN,733,,,sat2,RHN - SAT,27,,-58.3491666666667,-32.9841666666667,,True,,True,,,,A
+6714,San José del Boquerón,,Argentina,A,Combinada,RHN,734,,,sat2,RHN - SAT,27,,-63.7044444444444,-26.1144444444444,,True,,True,,,,A
+6715,Carrileufú - Cholila MET,,Argentina,A,Combinada,RHN,735,,,sat2,RHN - SAT,27,,-71.4419444444444,-42.4611111111111,,True,,True,,,,A
+6717,ZPrueba_INA_12175,,Argentina,A,Combinada,RHN,737,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6718,Lago Fagnano – Puerto Tolhuin ,,Argentina,A,Combinada,RHN,738,,,sat2,RHN - SAT,27,,-67.2327777777778,-54.5269444444444,,True,,True,,,,A
+6719,Grande - Planta Potabilizadora,,Argentina,A,Combinada,RHN,739,,,sat2,RHN - SAT,27,,-67.8422222222222,-53.8297222222222,,True,,True,,,,A
+6721,Colorado - Pata Mora,,Argentina,A,Combinada,RHN,741,,,sat2,RHN - SAT,27,,-69.1138888888889,-37.2083333333333,,True,,True,,,,A
+6722,Laguna Melincué - RP Nº 90,,Argentina,A,Combinada,RHN,742,,,sat2,RHN - SAT,27,,-61.4722222222222,-33.6680555555556,,True,,True,,,,A
+6724,Zprueba_INA_31ra_16395,,Argentina,A,Combinada,RHN,744,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6725,La Picasa - Obra Reg Nº5,,Argentina,A,Combinada,RHN,745,,,sat2,RHN - SAT,27,,-62.8591666666667,-34.3044444444444,,True,,True,,,,A
+6726,Bella Vista -  Radman,,Argentina,A,Combinada,RHN,746,,,sat2,RHN - SAT,27,,-68.5947222222222,-53.9983333333333,,True,,True,,,,A
+6727,Zprueba_INA_31ra_16398,,Argentina,A,Combinada,RHN,747,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6728,Zprueba_INA_31ra_16399,,Argentina,A,Combinada,RHN,748,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6729,Zprueba_INA_31ra_16400,,Argentina,A,Combinada,RHN,749,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6730,Coronda - Puerto Gaboto,,Argentina,A,Combinada,RHN,750,,,sat2,RHN - SAT,27,,-60.8158333333333,-32.4275,,True,,True,,,,A
+6731,Zprueba_INA_31ra_16402,,Argentina,A,Combinada,RHN,751,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6732,Sauce Chico - RN Nº35-Nva Roma,,Argentina,A,Combinada,RHN,752,,,sat2,RHN - SAT,27,,-62.6458333333333,-38.4975,,True,,True,,,,A
+6733,Zprueba_INA_31ra_16404,,Argentina,A,Combinada,RHN,753,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6734,Zprueba_INA_31ra_16405,,Argentina,A,Combinada,RHN,754,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6735,Miriñay - San Roquito,,Argentina,A,Combinada,RHN,755,,,sat2,RHN - SAT,27,,-57.5655555555556,-29.2969444444444,,True,,True,,,,A
+6736,Zprueba_INA_31ra_16407,,Argentina,A,Combinada,RHN,756,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6737,Zprueba_INA_31ra_16408,,Argentina,A,Combinada,RHN,757,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6738,Miraflores - Sayate,,Argentina,A,Combinada,RHN,758,,,sat2,RHN - SAT,27,,-65.8494444444444,-22.9008333333333,,True,,True,,,,A
+6739,Mayo - Paso Río Mayo - HID,,Argentina,A,Combinada,RHN,759,,,sat2,RHN - SAT,27,,-70.2480555555556,-45.6836111111111,,True,,True,,,,A
+6740,Carrileufú - Cholila,,Argentina,A,Combinada,RHN,760,,,sat2,RHN - SAT,27,,-71.5411111111111,-42.4955555555556,,True,,True,,,,A
+6741,Chico - Gregores,,Argentina,A,Combinada,RHN,761,,,sat2,RHN - SAT,27,,-70.3216666666667,-48.7522222222222,,True,,True,,,,A
+6742,Dique Sotomayor - Embalse,,Argentina,A,Combinada,RHN,762,,,sat2,RHN - SAT,27,,-65.2883333333333,-28.59,,True,,True,,,,A
+6743,Durazno - Chilecito,,Argentina,A,Combinada,RHN,763,,,sat2,RHN - SAT,27,,-67.49,-29.1511111111111,,True,,True,,,,A
+6744,Del Campo - Cabo San Miguel,,Argentina,A,Combinada,RHN,764,,,sat2,RHN - SAT,27,,-65.9977777777778,-27.4333333333333,,True,,True,,,,A
+6745,Guanasacate - Jesús Maria,,Argentina,A,Combinada,RHN,765,,,sat2,RHN - SAT,27,,-64.0911111111111,-30.9702777777778,,True,,True,,,,A
+6746,Canal San Antonio- RP Nº66,,Argentina,A,Combinada,RHN,766,,,sat2,RHN - SAT,27,,-62.1688888888889,-31.9905555555556,,True,,True,,,,A
+6747,Areco - San Antonio de Areco,,Argentina,A,Combinada,RHN,767,,,sat2,RHN - SAT,27,,-59.4994444444444,-34.2405555555556,,True,,True,,,,A
+6748,Lag. La Picasa - Escollera FFC,,Argentina,A,Combinada,RHN,768,,,sat2,RHN - SAT,27,,-62.3247222222222,-34.3372222222222,,True,,True,,,,A
+6749,Sierra Grande - Aeródromo,,Argentina,A,Combinada,RHN,769,,,sat2,RHN - SAT,27,,-65.3433333333333,-41.5916666666667,,True,,True,,,,A
+6750,Quinto - Malvin Reich,,Argentina,A,Combinada,RHN,770,,,sat2,RHN - SAT,27,,-65.8830555555555,-33.4383333333333,,True,,True,,,,A
+6751,ZPrueba_Evarsa_10616,,Argentina,A,Combinada,RHN,771,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6752,ZPrueba_Evarsa_12189,,Argentina,A,Combinada,RHN,772,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6753,ZPrueba_INA_33ra_16814,,Argentina,A,Combinada,RHN,773,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6754,ZPrueba_INA_33ra_16815,,Argentina,A,Combinada,RHN,774,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6755,ZPrueba_INA_33ra_16816,,Argentina,A,Combinada,RHN,775,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6756,ZPrueba_INA_33ra_16817,,Argentina,A,Combinada,RHN,776,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6757,ZPrueba_INA_33ra_16818,,Argentina,A,Combinada,RHN,777,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6758,ZPrueba_INA_33ra_16819,,Argentina,A,Combinada,RHN,778,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6759,ZPrueba_INA_33ra_16820,,Argentina,A,Combinada,RHN,779,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6760,ZPrueba_INA_33ra_16821,,Argentina,A,Combinada,RHN,780,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6761,ZPrueba_INA_33ra_17119,,Argentina,A,Combinada,RHN,781,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6762,ZPrueba_INA_33ra_17120,,Argentina,A,Combinada,RHN,782,,,sat2,RHN - SAT,27,,-58.3333333333333,-34.3333333333333,,True,,True,,,,A
+6763,Del Valle - Huaycama,,Argentina,A,Combinada,RHN,783,,,sat2,RHN - SAT,27,,-65.7980555555555,-28.1202777777778,,True,,True,,,,A
+6832,Palmas,BUENOSAIRES,ARGENTINA,A,Combinada,INA-INTA,54,,,ina_delta,red INA Delta y AMBA,32,palmas,-58.543689,-34.304489,-0.55,True,Paraná de las Palmas,True,,,,A
+7161,Piray Guazú - Pinar Ciba,,Argentina,A,Combinada,RHN,331,,,sat2,RHN - SAT,27,,-54.4536111111111,-26.5119444444444,,True,,True,,,,A
+7162,Aº El Rey - RN Nº11,,Argentina,A,Combinada,RHN,290,,,sat2,RHN - SAT,27,,-59.6547222222222,-29.1333333333333,,True,,True,,,,A
+7163,Laguna Maria Cristina,,Argentina,A,Combinada,RHN,681,,,sat2,RHN - SAT,27,,-58.9208333333333,-27.4788888888889,,True,,True,,,,A
+7164,Canal Soberanía - Obra Control,,Argentina,A,Combinada,RHN,312,,,sat2,RHN - SAT,27,,-58.9427777777778,-27.5272222222222,,True,,True,,,,A
+7165,Batel -RN Nº123,,Argentina,A,Combinada,RHN,613,,,sat2,RHN - SAT,27,,-58.6747222222222,-28.8994444444444,,True,,True,,,,A
+7166,Santa Lucia - San Roque,,Argentina,A,Combinada,RHN,651,,,sat2,RHN - SAT,27,,-58.7177777777778,-28.57,,True,,True,,,,A
+7167,San Javier - Romang,,Argentina,A,Combinada,RHN,306,,,sat2,RHN - SAT,27,,-59.74,-29.505,,True,,True,,,,A
+7168,San Javier - Alejandra,,Argentina,A,Combinada,RHN,740,,,sat2,RHN - SAT,27,,-59.8169444444444,-29.9122222222222,,True,,True,,,,A
+7184,CIRHBAS - LIM  Aº TAPENAGA - ESTANCIA TAPENAGA,,Argentina,A,Combinada,RHN,913,,,sat2,RHN - SAT,27,,-59.6588888888889,-27.5672222222222,,True,,True,,,,A
+7185,CIRHBAS - LIM  LAGUNA EL BONETE - ARROYO GOLONDRIN,,Argentina,A,Combinada,RHN,932,,,sat2,RHN - SAT,27,,-60.5469444444444,-29.3880555555556,,True,,True,,,,A
+7186,CIRHBAS - LIM  RUTA PROVINCIAL 40-CANAL HIDROVIAL ,,Argentina,A,Combinada,RHN,934,,,sat2,RHN - SAT,27,,-60.8397222222222,-29.1247222222222,,True,,True,,,,A
+7187,CIRHBAS - LIM Aº RETOBADO - CRESPO,,Argentina,A,Combinada,RHN,931,,,sat2,RHN - SAT,27,,-60.6288888888889,-30.3375,,True,,True,,,,A
+7188,CIRHBAS - LIM BAJO CHOROTIS-RN 95,,Argentina,A,Combinada,RHN,939,,,sat2,RHN - SAT,27,,-61.3519444444444,-28.0886111111111,,True,,True,,,,A
+7189,CIRHBAS - LIM CANAL INTERLAGOS-CANAL INTERLAGOS,,Argentina,A,Combinada,RHN,935,,,sat2,RHN - SAT,27,,-60.5691666666667,-28.9947222222222,,True,,True,,,,A
+7190,CIRHBAS - LIM CANAL LINEA PARANA TRAMO IV,,Argentina,A,Combinada,RHN,941,,,sat2,RHN - SAT,27,,-60.7155555555556,-27.9977777777778,,True,,True,,,,A
+7191,CIRHBAS - LIM LAGUNAS SALADAS- RP 77,,Argentina,A,Combinada,RHN,937,,,sat2,RHN - SAT,27,,-61.1952777777778,-28.2908333333333,,True,,True,,,,A
+7192,CIRHBAS - LIM LIMITE CHACO STA FE - CANAL LINEA PA,,Argentina,A,Combinada,RHN,940,,,sat2,RHN - SAT,27,,-60.1161111111111,-28.0011111111111,,True,,True,,,,A
+7193,CIRHBAS - LIM LOS AMORES - CAN,,Argentina,A,Combinada,RHN,920,,,sat2,RHN - SAT,27,,-59.9755555555556,-28.1102777777778,,True,,True,,,,A
+7194,CIRHBAS - LIM MOJON DE FIERRO-CANAL INTERPROVINCIA,,Argentina,A,Combinada,RHN,933,,,sat2,RHN - SAT,27,,-61.9016666666667,-29.1316666666667,,True,,True,,,,A
+7195,CIRHBAS - LIM RUTA PROVINCIAL 13-CANAL EL BARRIDO,,Argentina,A,Combinada,RHN,936,,,sat2,RHN - SAT,27,,-60.9477777777778,-28.8813888888889,,True,,True,,,,A
+7196,CIRHBAS - LIM VILLA GUILLERMINA-ARROYO LOS AMORES,,Argentina,A,Combinada,RHN,938,,,sat2,RHN - SAT,27,,-59.4216666666667,-28.2744444444444,,True,,True,,,,A
+7197,CIRHBAS - MET CHARADAI,,Argentina,A,Combinada,RHN,865,,,sat2,RHN - SAT,27,,-59.8580555555556,-27.6511111111111,,True,,True,,,,A
+7198,CIRHBAS - MET EL COLORADO,,Argentina,A,Combinada,RHN,899,,,sat2,RHN - SAT,27,,-62.1777777777778,-27.9152777777778,,True,,True,,,,A
+7199,CIRHBAS - MET INTIYACO,,Argentina,A,Combinada,RHN,924,,,sat2,RHN - SAT,27,,-60.0683333333333,-28.6816666666667,,True,,True,,,,A
+7200,CIRHBAS - MET LAS GAMAS,,Argentina,A,Combinada,RHN,809,,,sat2,RHN - SAT,27,,-60.3794444444444,-29.425,,True,,True,,,,A
+7201,CIRHBAS - MET LINEA PARANA,,Argentina,A,Combinada,RHN,921,,,sat2,RHN - SAT,27,,-60.6463888888889,-28.0086111111111,,True,,True,,,,A
+7202,CIRHBAS - MET SACHAYOJ,,Argentina,A,Combinada,RHN,900,,,sat2,RHN - SAT,27,,-62.0580555555556,-27.0111111111111,,True,,True,,,,A
+7203,CIRHBAS - MET VILLA MINETTI,,Argentina,A,Combinada,RHN,789,,,sat2,RHN - SAT,27,,-61.6047222222222,-28.6219444444444,,True,,True,,,,A
+7204,CIRHBAS - PF EL AGUARA,,Argentina,A,Combinada,RHN,916,,,sat2,RHN - SAT,27,,-60.0758333333333,-27.0722222222222,,True,,True,,,,A
+7205,CIRHBAS - PF EL CABURE,,Argentina,A,Combinada,RHN,914,,,sat2,RHN - SAT,27,,-60.9980555555556,-27.4780555555556,,True,,True,,,,A
+7206,CIRHBAS - PF KM 468,,Argentina,A,Combinada,RHN,943,,,sat2,RHN - SAT,27,,-61.4630555555556,-28.0869444444444,,True,,True,,,,A
+7207,CIRHBAS - PF LAS GAMAS (LA IND,,Argentina,A,Combinada,RHN,905,,,sat2,RHN - SAT,27,,-61.9780555555556,-28.6461111111111,,True,,True,,,,A
+7208,CIRHBAS - PF LAS PIEDRITAS,,Argentina,A,Combinada,RHN,918,,,sat2,RHN - SAT,27,,-61.5672222222222,-26.8241666666667,,True,,True,,,,A
+7209,CIRHBAS - PF LOTE 48 (LA MONTENEGRINA),,Argentina,A,Combinada,RHN,798,,,sat2,RHN - SAT,27,,-60.6766666666667,-26.9119444444444,,True,,True,,,,A
+7210,CIRHBAS - PF MEDRANO,,Argentina,A,Combinada,RHN,942,,,sat2,RHN - SAT,27,,-61.4947222222222,-28.4488888888889,,True,,True,,,,A
+7211,CIRHBAS - PF PALMAR NORTE,,Argentina,A,Combinada,RHN,915,,,sat2,RHN - SAT,27,,-61.4686111111111,-27.1652777777778,,True,,True,,,,A
+7212,CIRHBAS - PF PAMPA HERMOSA,,Argentina,A,Combinada,RHN,790,,,sat2,RHN - SAT,27,,-61.3302777777778,-26.6369444444444,,True,,True,,,,A
+7213,CIRHBAS - PF TRES MOJONES,,Argentina,A,Combinada,RHN,906,,,sat2,RHN - SAT,27,,-62.0844444444444,-28.0283333333333,,True,,True,,,,A
+7214,CIRHBAS - PLU A DENOMINAR 10,,Argentina,A,Combinada,RHN,903,,,sat2,RHN - SAT,27,,-61.7138888888889,-26.9075,,True,,True,,,,A
+7215,CIRHBAS - PLU CUATRO BOCAS,,Argentina,A,Combinada,RHN,904,,,sat2,RHN - SAT,27,,-61.8583333333333,-28.8644444444444,,True,,True,,,,A
+7216,CIRHBAS - PLU EL 38 NORTE,,Argentina,A,Combinada,RHN,908,,,sat2,RHN - SAT,27,,-59.6066666666667,-27.7794444444444,,True,,True,,,,A
+7217,CIRHBAS - PLU EL 38 SUR,,Argentina,A,Combinada,RHN,929,,,sat2,RHN - SAT,27,,-60.5416666666667,-29.4861111111111,,True,,True,,,,A
+7218,CIRHBAS - PLU EL DESCANSO,,Argentina,A,Combinada,RHN,926,,,sat2,RHN - SAT,27,,-61.3041666666667,-28.8472222222222,,True,,True,,,,A
+7219,CIRHBAS - PLU EL TRIANGULO /ESTANCIA LA PRIMERA,,Argentina,A,Combinada,RHN,927,,,sat2,RHN - SAT,27,,-61.4319444444444,-29.2058333333333,,True,,True,,,,A
+7220,CIRHBAS - PLU ESTABLECIMIENTO AGROPECUARIO,,Argentina,A,Combinada,RHN,930,,,sat2,RHN - SAT,27,,-60.8363888888889,-28.5836111111111,,True,,True,,,,A
+7221,CIRHBAS - PLU LA HORQUETA,,Argentina,A,Combinada,RHN,911,,,sat2,RHN - SAT,27,,-60.2316666666667,-27.8,,True,,True,,,,A
+7222,CIRHBAS - PLU LOS GANSOS,,Argentina,A,Combinada,RHN,910,,,sat2,RHN - SAT,27,,-60.7113888888889,-27.8338888888889,,True,,True,,,,A
+7223,CIRHBAS - PLU LOTE 53,,Argentina,A,Combinada,RHN,901,,,sat2,RHN - SAT,27,,-62.0836111111111,-28.2730555555556,,True,,True,,,,A
+7224,CIRHBAS - PLU NOGUES,,Argentina,A,Combinada,RHN,928,,,sat2,RHN - SAT,27,,-59.6966666666667,-28.0377777777778,,True,,True,,,,A
+7225,CIRHBAS - PLU PAMPA SANDI,,Argentina,A,Combinada,RHN,912,,,sat2,RHN - SAT,27,,-61.3663888888889,-26.9275,,True,,True,,,,A
+7226,CIRHBAS - PLU POZO LAS PIEDRAS,,Argentina,A,Combinada,RHN,909,,,sat2,RHN - SAT,27,,-61.6869444444444,-27.1663888888889,,True,,True,,,,A
+7227,CIRHBAS - PLU SACHAYOJ,,Argentina,A,Combinada,RHN,902,,,sat2,RHN - SAT,27,,-61.8188888888889,-26.6805555555556,,True,,True,,,,A
+7228,Pampa del Indio,,Argentina,A,Combinada,RHN,869,,,sat2,RHN - SAT,27,,-60.05,-25.9333333333333,,True,,True,,,,A
+7229,Salado Bs As -Lag. Salada Gde.,,Argentina,A,Combinada,RHN,855,,,sat2,RHN - SAT,27,,-57.2061111111111,-36.6741666666667,,True,,True,,,,A
+7230,Aguapey - Caá Caraí,,Argentina,A,Combinada,RHN,352,,,sat2,RHN - SAT,27,,-56.2583333333333,-27.8244444444444,,True,,True,,,,A
+7231,Anizacate - Santa Ana,,Argentina,A,Combinada,RHN,330,,,sat2,RHN - SAT,27,,-64.5375,-31.6908333333333,,True,,True,,,,A
+7232,Aº Cululú - Grutly,,Argentina,A,Combinada,RHN,355,,,sat2,RHN - SAT,27,,-60.9788888888889,-31.2933333333333,,True,,True,,,,A
+7233,Aº Esquel - Ea El Principio,,Argentina,A,Combinada,RHN,248,,,sat2,RHN - SAT,27,,-71.3844444444445,-42.9583333333333,,True,,True,,,,A
+7234,Aº Feliciano - Paso Correa RP2,,Argentina,A,Combinada,RHN,344,,,sat2,RHN - SAT,27,,-58.7075,-30.3930555555556,,True,,True,,,,A
+7235,Aº Golondrina - Fortín Olmos,,Argentina,A,Combinada,RHN,320,,,sat2,RHN - SAT,27,,-60.4969444444444,-29.0655555555556,,True,,True,,,,A
+7236,Aº Los Amores - RN Nº11,,Argentina,A,Combinada,RHN,323,,,sat2,RHN - SAT,27,,-59.3558333333333,-28.5558333333333,,True,,True,,,,A
+7237,Aº Medrano Reser. - Tecnópolis,,Argentina,A,Combinada,RHN,348,,,sat2,RHN - SAT,27,,-58.5077777777778,-34.5611111111111,,True,,True,,,,A
+7238,Aº Pavón - Cnel. Bogado,,Argentina,A,Combinada,RHN,311,,,sat2,RHN - SAT,27,,-60.5766666666667,-33.36,,True,,True,,,,A
+7239,Aº Pilagá - RN Nº11,,Argentina,A,Combinada,RHN,336,,,sat2,RHN - SAT,27,,-58.1625,-25.9844444444444,,True,,True,,,,A
+7240,Aº Saladillo Amargo - RP Nº 81,,Argentina,A,Combinada,RHN,316,,,sat2,RHN - SAT,27,,-60.4127777777778,-30.8402777777778,,True,,True,,,,A
+7241,Aº Saladillo Dulce - RP Nº 81,,Argentina,A,Combinada,RHN,318,,,sat2,RHN - SAT,27,,-60.2822222222222,-30.8547222222222,,True,,True,,,,A
+7242,Aº Tapalqué - Av de los Trabaj,,Argentina,A,Combinada,RHN,354,,,sat2,RHN - SAT,27,,-60.3108333333333,-36.8791666666667,,True,,True,,,,A
+7243,Aº Vallimanca - RN 226,,Argentina,A,Combinada,RHN,357,,,sat2,RHN - SAT,27,,-60.9555555555556,-36.3711111111111,,True,,True,,,,A
+7244,Atuel - Las Malvinas,,Argentina,A,Combinada,RHN,283,,,sat2,RHN - SAT,27,,-68.2483333333333,-34.9452777777778,,True,,True,,,,A
+7245,Azul - Puesto 1,,Argentina,A,Combinada,RHN,325,,,sat2,RHN - SAT,27,,-71.5661111111111,-41.9588888888889,,True,,True,,,,A
+7246,Barrancas - Barrancas,,Argentina,A,Combinada,RHN,785,,,sat2,RHN - SAT,27,,-69.8730555555556,-36.8136111111111,,True,,True,,,,A
+7247,Bermejo - Balapuca MET,,Argentina,A,Combinada,RHN,257,,,sat2,RHN - SAT,27,,-64.4636111111111,-22.4925,,True,,True,,,,A
+7248,Bermejo - P. Sarmiento,,Argentina,A,Combinada,RHN,279,,,sat2,RHN - SAT,27,,-64.1947222222222,-23.1438888888889,,True,,True,,,,A
+7249,Bermejo - Santa Victoria Oeste,,Argentina,A,Combinada,RHN,329,,,sat2,RHN - SAT,27,,-64.9613888888889,-22.2486111111111,,True,,True,,,,A
+7250,Blanco - Angualasto,,Argentina,A,Combinada,RHN,370,,,sat2,RHN - SAT,27,,-69.17,-30.0505555555556,,True,,True,,,,A
+7251,Calchaquí - Cachi,,Argentina,A,Combinada,RHN,308,,,sat2,RHN - SAT,27,,-66.1588888888889,-25.1205555555556,,True,,True,,,,A
+7252,Canal 9 - Autovia 2,,Argentina,A,Combinada,RHN,309,,,sat2,RHN - SAT,27,,-57.7038888888889,-36.2811111111111,,True,,True,,,,A
+7253,Canal San Antonio- RP Nº2,,Argentina,A,Combinada,RHN,345,,,sat2,RHN - SAT,27,,-61.9569444444444,-32.4230555555555,,True,,True,,,,A
+7254,Carrenleufú - Jaramillo,,Argentina,A,Combinada,RHN,392,,,sat2,RHN - SAT,27,,-71.2494444444444,-43.8416666666667,,True,,True,,,,A
+7255,Carrenleufú - Puente de Hierro,,Argentina,A,Combinada,RHN,360,,,sat2,RHN - SAT,27,,-71.4872222222222,-43.5436111111111,,True,,True,,,,A
+7256,Centro Regional Litoral - INA,,Argentina,A,Combinada,RHN,898,,,sat2,RHN - SAT,27,,-60.6747222222222,-31.6158333333333,,True,,True,,,,A
+7257,Chico - Ameghino,,Argentina,A,Combinada,RHN,366,,,sat2,RHN - SAT,27,,-66.9116666666667,-44.4769444444444,,True,,True,,,,A
+7258,Chubut - Las Plumas,,Argentina,A,Combinada,RHN,314,,,sat2,RHN - SAT,27,,-67.2866666666667,-43.7233333333333,,True,,True,,,,A
+7259,Chubut - Paso del Sapo,,Argentina,A,Combinada,RHN,333,,,sat2,RHN - SAT,27,,-69.5947222222222,-42.7408333333333,,True,,True,,,,A
+7260,Diamante - Monte Comán,,Argentina,A,Combinada,RHN,266,,,sat2,RHN - SAT,27,,-67.865,-34.5705555555556,,True,,True,,,,A
+7261,Dique Paso de Las Carretas,,Argentina,A,Combinada,RHN,339,,,sat2,RHN - SAT,27,,-65.8669444444444,-33.3336111111111,,True,,True,,,,A
+7262,Dulce – Los Quiroga Aa,,Argentina,A,Combinada,RHN,303,,,sat2,RHN - SAT,27,,-64.3586111111111,-27.6580555555556,,True,,True,,,,A
+7263,Dulce - Paso de Oscares,,Argentina,A,Combinada,RHN,372,,,sat2,RHN - SAT,27,,-63.2069444444444,-29.2533333333333,,True,,True,,,,A
+7264,Dulce III – Los Quiroga,,Argentina,A,Combinada,RHN,307,,,sat2,RHN - SAT,27,,-64.4075,-27.6058333333333,,True,,True,,,,A
+7265,Durazno - La Florida,,Argentina,A,Combinada,RHN,825,,,sat2,RHN - SAT,27,,-64.7658333333333,-32.2158333333333,,True,,True,,,,A
+7266,Empedrado-Ruta Provincial Nº6,,Argentina,A,Combinada,RHN,794,,,sat2,RHN - SAT,27,,-58.5052777777778,-27.8013888888889,,True,,True,,,,A
+7267,Epuyén - La Angostura,,Argentina,A,Combinada,RHN,326,,,sat2,RHN - SAT,27,,-71.4,-42.1888888888889,,True,,True,,,,A
+7268,Esc Agr Nº3 Cnel.M.E.Arias-MET,,Argentina,A,Combinada,RHN,866,,,sat2,RHN - SAT,27,,-65.34,-23.1969444444444,,True,,True,,,,A
+7269,Foyel - RN 258,,Argentina,A,Combinada,RHN,291,,,sat2,RHN - SAT,27,,-71.4413888888889,-41.7133333333333,,True,,True,,,,A
+7270,Grande - Ume Pay,,Argentina,A,Combinada,RHN,337,,,sat2,RHN - SAT,27,,-64.7513888888889,-32.2183333333333,,True,,True,,,,A
+7271,Grande de Tarija - San Telmo,,Argentina,A,Combinada,RHN,368,,,sat2,RHN - SAT,27,,-64.245,-22.5677777777778,,True,,True,,,,A
+7272,Gualeguay - Paso Duarte RP22,,Argentina,A,Combinada,RHN,361,,,sat2,RHN - SAT,27,,-58.7713888888889,-31.105,,True,,True,,,,A
+7273,Gualeguaychú - RN Nº 130,,Argentina,A,Combinada,RHN,334,,,sat2,RHN - SAT,27,,-58.4905555555556,-32.1047222222222,,True,,True,,,,A
+7274,Gualeguaychú - RN Nº 39,,Argentina,A,Combinada,RHN,324,,,sat2,RHN - SAT,27,,-58.5547222222222,-32.445,,True,,True,,,,A
+7275,Guayquiraró - La Grela,,Argentina,A,Combinada,RHN,328,,,sat2,RHN - SAT,27,,-59.3005555555556,-30.3463888888889,,True,,True,,,,A
+7276,Hielo - Confluencia,,Argentina,A,Combinada,RHN,289,,,sat2,RHN - SAT,27,,-71.6091666666667,-43.5166666666667,,True,,True,,,,A
+7277,Iguazú - Pto. Iguazú,,Argentina,A,Combinada,RHN,349,,,sat2,RHN - SAT,27,,-54.58,-25.5933333333333,,True,,True,,,,A
+7278,Iruya - Iruya,,Argentina,A,Combinada,RHN,342,,,sat2,RHN - SAT,27,,-65.2158333333333,-22.7955555555556,,True,,True,,,,A
+7279,Iruya - San José,,Argentina,A,Combinada,RHN,367,,,sat2,RHN - SAT,27,,-64.7052777777778,-22.8641666666667,,True,,True,,,,A
+7280,Jaya - Piedra Grande,,Argentina,A,Combinada,RHN,371,,,sat2,RHN - SAT,27,,-65.8066666666667,-27.3127777777778,,True,,True,,,,A
+7281,Lag. La Picasa-Aguas AbajoRN33,,Argentina,A,Combinada,RHN,242,,,sat2,RHN - SAT,27,,-62.7386111111111,-34.3619444444444,,True,,True,,,,A
+7282,Lago Gutierrez - Bariloche,,Argentina,A,Combinada,RHN,310,,,sat2,RHN - SAT,27,,-71.4147222222222,-41.1644444444444,,True,,True,,,,A
+7283,Laguna Melincué - Melincué,,Argentina,A,Combinada,RHN,304,,,sat2,RHN - SAT,27,,-61.4552777777778,-33.6508333333333,,True,,True,,,,A
+7284,Las Cañas - Clavillo MET,,Argentina,A,Combinada,RHN,276,,,sat2,RHN - SAT,27,,-65.9797222222222,-27.3994444444444,,True,,True,,,,A
+7285,Las Cañas - Potrero del Clavil,,Argentina,A,Combinada,RHN,340,,,sat2,RHN - SAT,27,,-65.9747222222222,-27.4,,True,,True,,,,A
+7286,Las Conchas - La Punilla RP44,,Argentina,A,Combinada,RHN,353,,,sat2,RHN - SAT,27,,-65.8230555555556,-26.0119444444444,,True,,True,,,,A
+7287,Manso - Inferior,,Argentina,A,Combinada,RHN,338,,,sat2,RHN - SAT,27,,-71.7138888888889,-41.5561111111111,,True,,True,,,,A
+7288,Manso - Los Moscos,,Argentina,A,Combinada,RHN,287,,,sat2,RHN - SAT,27,,-71.6413888888889,-41.3533333333333,,True,,True,,,,A
+7289,Manso - Steffen,,Argentina,A,Combinada,RHN,213,,,sat2,RHN - SAT,27,,-71.5361111111111,-41.5158333333333,,True,,True,,,,A
+7290,Manso Superior - Pampa Linda,,Argentina,A,Combinada,RHN,358,,,sat2,RHN - SAT,27,,-71.7713888888889,-41.2316666666667,,True,,True,,,,A
+7291,Marapa - RN Nº 157 Lamadrid,,Argentina,A,Combinada,RHN,341,,,sat2,RHN - SAT,27,,-65.2447222222222,-27.6572222222222,,True,,True,,,,A
+7292,Met - FICH - UNL Santa Fe,,Argentina,A,Combinada,RHN,880,,,sat2,RHN - SAT,27,,-60.6680555555556,-31.6402777777778,,True,,True,,,,A
+7293,Negro - Isla Jordán,,Argentina,A,Combinada,RHN,247,,,sat2,RHN - SAT,27,,-67.9733333333333,-38.9961111111111,,True,,True,,,,A
+7294,Negro - Paso Cordova,,Argentina,A,Combinada,RHN,230,,,sat2,RHN - SAT,27,,-67.6230555555556,-39.1125,,True,,True,,,,A
+7295,Negro - Philipon,,Argentina,A,Combinada,RHN,322,,,sat2,RHN - SAT,27,,-59.2613888888889,-27.1741666666667,,True,,True,,,,A
+7296,Negro - San Fernando,,Argentina,A,Combinada,RHN,267,,,sat2,RHN - SAT,27,,-58.9822222222222,-27.4355555555556,,True,,True,,,,A
+7297,Neuquén - Dique Ballester,,Argentina,A,Combinada,RHN,343,,,sat2,RHN - SAT,27,,-68.1705555555556,-38.7247222222222,,True,,True,,,,A
+7298,NIV - Cerro Zeballos,,Argentina,A,Combinada,RHN,787,,,sat2,RHN - SAT,27,,-71.8011111111111,-47.0408333333333,,True,,True,,,,A
+7299,NIV - Laguna La Negra,,Argentina,A,Combinada,RHN,356,,,sat2,RHN - SAT,27,,-70.4055555555556,-36.2044444444444,,True,,True,,,,A
+7300,NIV- Paso de Agua Negra,,Argentina,A,Combinada,RHN,388,,,sat2,RHN - SAT,27,,-69.8016666666667,-30.1891666666667,,True,,True,,,,A
+7301,Nogoya - RP Nº 11,,Argentina,A,Combinada,RHN,315,,,sat2,RHN - SAT,27,,-59.8647222222222,-32.8419444444444,,True,,True,,,,A
+7302,Paraná - HID Chapetón,,Argentina,A,Combinada,RHN,319,,,sat2,RHN - SAT,27,,-60.2833333333333,-31.5741666666667,,True,,True,,,,A
+7303,Paraná - Ita Cajón,,Argentina,A,Combinada,RHN,359,,,sat2,RHN - SAT,27,,-54.5941666666667,-25.6047222222222,,True,,True,,,,A
+7304,Paranay - El Alcázar,,Argentina,A,Combinada,RHN,241,,,sat2,RHN - SAT,27,,-54.7558333333333,-26.7508333333333,,True,,True,,,,A
+7305,Pescado - Cuatro Cedros,,Argentina,A,Combinada,RHN,278,,,sat2,RHN - SAT,27,,-64.5158333333333,-22.8294444444444,,True,,True,,,,A
+7306,Pico - Frontera,,Argentina,A,Combinada,RHN,389,,,sat2,RHN - SAT,27,,-71.66,-44.2402777777778,,True,,True,,,,A
+7307,PN - El Nogalar de Los Toldos,,Argentina,A,Combinada,RHN,292,,,sat2,RHN - SAT,27,,-64.7030555555556,-22.2797222222222,,True,,True,,,,A
+7308,PN - Est. 1 El Impenetrable,,Argentina,A,Combinada,RHN,295,,,sat2,RHN - SAT,27,,-61.0441666666667,-25.0527777777778,,True,,True,,,,A
+7309,PN El Palmar de Colón,,Argentina,A,Combinada,RHN,271,,,sat2,RHN - SAT,27,,-58.2591666666667,-31.8638888888889,,True,,True,,,,A
+7310,PN Lanín - Lago Lacar,,Argentina,A,Combinada,RHN,282,,,sat2,RHN - SAT,27,,-71.6275,-40.1675,,True,,True,,,,A
+7311,RMA02_LUJ - Luján,,Argentina,A,Combinada,RHN,100,,,sat2,RHN - SAT,27,,-59.0625,-34.5880555555556,,True,,True,,,,A
+7312,RMA02_QUI - Quilmes,,Argentina,A,Combinada,RHN,102,,,sat2,RHN - SAT,27,,-58.2416666666667,-34.7058333333333,,True,,True,,,,A
+7313,RMA02_SAG - San Andres de Gile,,Argentina,A,Combinada,RHN,101,,,sat2,RHN - SAT,27,,-59.4494444444444,-34.4208333333333,,True,,True,,,,A
+7314,RMA02_ZAR - Zárate,,Argentina,A,Combinada,RHN,99,,,sat2,RHN - SAT,27,,-59.0236111111111,-34.085,,True,,True,,,,A
+7315,RMA03_IBA - Ibarreta,,Argentina,A,Combinada,RHN,105,,,sat2,RHN - SAT,27,,-59.8694444444444,-25.2041666666667,,True,,True,,,,A
+7316,RMA03_PIR - Pirané,,Argentina,A,Combinada,RHN,106,,,sat2,RHN - SAT,27,,-59.1172222222222,-25.7558333333333,,True,,True,,,,A
+7317,RMA03_PTL - Puente Lavalle,,Argentina,A,Combinada,RHN,104,,,sat2,RHN - SAT,27,,-60.14,-25.6763888888889,,True,,True,,,,A
+7318,RMA03_PZL - Posta Zalazar,,Argentina,A,Combinada,RHN,107,,,sat2,RHN - SAT,27,,-60.1972222222222,-24.2119444444444,,True,,True,,,,A
+7319,RMA04_CBN - Colonia Benitez,,Argentina,A,Combinada,RHN,109,,,sat2,RHN - SAT,27,,-58.9525,-27.3238888888889,,True,,True,,,,A
+7320,RMA04_COL - Cote Lai,,Argentina,A,Combinada,RHN,111,,,sat2,RHN - SAT,27,,-59.5763888888889,-27.5327777777778,,True,,True,,,,A
+7321,RMA04_LAE - La Escondida,,Argentina,A,Combinada,RHN,112,,,sat2,RHN - SAT,27,,-59.4727777777778,-27.1333333333333,,True,,True,,,,A
+7322,RMA04_PCH - Parque Nacional Chaco,,Argentina,A,Combinada,RHN,110,,,sat2,RHN - SAT,27,,-59.6066666666667,-26.8069444444444,,True,,True,,,,A
+7323,RMA04_PMB - Parque Nacional Mburucuyá,,Argentina,A,Combinada,RHN,113,,,sat2,RHN - SAT,27,,-58.1016666666667,-28.0427777777778,,True,,True,,,,A
+7324,RMA05_ELD - Eldorado,,Argentina,A,Combinada,RHN,116,,,sat2,RHN - SAT,27,,-54.5761111111111,-26.3933333333333,,True,,True,,,,A
+7325,RMA05_SAN - San Antonio,,Argentina,A,Combinada,RHN,114,,,sat2,RHN - SAT,27,,-53.7683333333333,-26.0494444444444,,True,,True,,,,A
+7326,RMA05_SVI - San Vicente,,Argentina,A,Combinada,RHN,117,,,sat2,RHN - SAT,27,,-54.4227777777778,-26.9208333333333,,True,,True,,,,A
+7327,RMA05_URU - Paisaje Protegido ,,Argentina,A,Combinada,RHN,115,,,sat2,RHN - SAT,27,,-54.5513888888889,-25.8738888888889,,True,,True,,,,A
+7328,RMA06_CVI - Coronel Vidal,,Argentina,A,Combinada,RHN,118,,,sat2,RHN - SAT,27,,-57.72,-37.4391666666667,,True,,True,,,,A
+7329,RMA06_LDP - Laguna de los Padres,,Argentina,A,Combinada,RHN,119,,,sat2,RHN - SAT,27,,-57.7236111111111,-37.9311111111111,,True,,True,,,,A
+7330,RMA06_NCO - Necochea,,Argentina,A,Combinada,RHN,121,,,sat2,RHN - SAT,27,,-58.8116666666667,-38.4866666666667,,True,,True,,,,A
+7331,RMA06_PMG - Punta Mogotes,,Argentina,A,Combinada,RHN,120,,,sat2,RHN - SAT,27,,-57.5538888888889,-38.0752777777778,,True,,True,,,,A
+7332,RMA07_CDP - Casa de Piedra,,Argentina,A,Combinada,RHN,93,,,sat2,RHN - SAT,27,,-67.1516666666667,-38.1563888888889,,True,,True,,,,A
+7333,RMA07_ECH - El Chocon,,Argentina,A,Combinada,RHN,123,,,sat2,RHN - SAT,27,,-68.7683333333333,-39.2638888888889,,True,,True,,,,A
+7334,RMA07_GRO - General Roca,,Argentina,A,Combinada,RHN,126,,,sat2,RHN - SAT,27,,-67.5288888888889,-39.0377777777778,,True,,True,,,,A
+7335,RMA07_MME - Mari Menuco,,Argentina,A,Combinada,RHN,122,,,sat2,RHN - SAT,27,,-68.455,-38.6563888888889,,True,,True,,,,A
+7336,RMA07_PHU - Plaza Huincul,,Argentina,A,Combinada,RHN,124,,,sat2,RHN - SAT,27,,-69.1816666666667,-38.9383333333333,,True,,True,,,,A
+7337,RMA07_RSA - Rincón de los Sauces,,Argentina,A,Combinada,RHN,125,,,sat2,RHN - SAT,27,,-68.9027777777778,-37.3863888888889,,True,,True,,,,A
+7338,RMA08_BPL - Bonpland,,Argentina,A,Combinada,RHN,128,,,sat2,RHN - SAT,27,,-57.4297222222222,-29.8186111111111,,True,,True,,,,A
+7339,RMA08_BVI - Bella Vista,,Argentina,A,Combinada,RHN,129,,,sat2,RHN - SAT,27,,-59.0275,-28.5138888888889,,True,,True,,,,A
+7340,RMA08_CC - Curuzú Cuatiá,,Argentina,A,Combinada,RHN,127,,,sat2,RHN - SAT,27,,-58.0419444444444,-29.8091666666667,,True,,True,,,,A
+7341,RMA08_PIB - Parque Nacional Ib,,Argentina,A,Combinada,RHN,130,,,sat2,RHN - SAT,27,,-57.4363888888889,-28.1280555555556,,True,,True,,,,A
+7342,RMA09_CKR- Cerro Krund,,Argentina,A,Combinada,RHN,135,,,sat2,RHN - SAT,27,,-67.9838888888889,-54.7088888888889,,True,,True,,,,A
+7343,RMA09_RAD - Radman,,Argentina,A,Combinada,RHN,131,,,sat2,RHN - SAT,27,,-68.5955555555555,-54.0002777777778,,True,,True,,,,A
+7344,RMA09_SSE - San Sebastian,,Argentina,A,Combinada,RHN,132,,,sat2,RHN - SAT,27,,-68.4588888888889,-53.3008333333333,,True,,True,,,,A
+7345,RMA09_TOL - Tolhuin,,Argentina,A,Combinada,RHN,133,,,sat2,RHN - SAT,27,,-67.1875,-54.5133333333333,,True,,True,,,,A
+7346,RMA09_USH - Ushuaia,,Argentina,A,Combinada,RHN,134,,,sat2,RHN - SAT,27,,-68.2444444444444,-54.7969444444444,,True,,True,,,,A
+7347,RMA1_BAL - Bosque Alegre,,Argentina,A,Combinada,RHN,94,,,sat2,RHN - SAT,27,,-64.5502777777778,-31.5975,,True,,True,,,,A
+7348,RMA1_FDC - Falda del Carmen,,Argentina,A,Combinada,RHN,96,,,sat2,RHN - SAT,27,,-64.4655555555556,-31.5213888888889,,True,,True,,,,A
+7349,RMA1_MIR - Miramar,,Argentina,A,Combinada,RHN,98,,,sat2,RHN - SAT,27,,-62.6847222222222,-30.9219444444444,,True,,True,,,,A
+7350,RMA1_PIL - Pilar,,Argentina,A,Combinada,RHN,95,,,sat2,RHN - SAT,27,,-63.8816666666667,-31.6677777777778,,True,,True,,,,A
+7351,RMA1_VMA - Villa María,,Argentina,A,Combinada,RHN,97,,,sat2,RHN - SAT,27,,-63.23,-32.3272222222222,,True,,True,,,,A
+7352,RMA10_CP - Coronel Pringles,,Argentina,A,Combinada,RHN,137,,,sat2,RHN - SAT,27,,-61.33,-38.0044444444444,,True,,True,,,,A
+7353,RMA10_JA - Jacinto Arauz,,Argentina,A,Combinada,RHN,139,,,sat2,RHN - SAT,27,,-63.3869444444444,-38.0752777777778,,True,,True,,,,A
+7354,RMA10_PA - Punta Alta,,Argentina,A,Combinada,RHN,136,,,sat2,RHN - SAT,27,,-61.91,-38.965,,True,,True,,,,A
+7355,RMA10_PG - Pigüe,,Argentina,A,Combinada,RHN,138,,,sat2,RHN - SAT,27,,-62.3863888888889,-37.6083333333333,,True,,True,,,,A
+7356,RMA10_PL - Pedro Luro,,Argentina,A,Combinada,RHN,140,,,sat2,RHN - SAT,27,,-62.6786111111111,-39.4591666666667,,True,,True,,,,A
+7357,RMA11_CO - Concepción,,Argentina,A,Combinada,RHN,143,,,sat2,RHN - SAT,27,,-65.6172222222222,-27.3438888888889,,True,,True,,,,A
+7358,RMA11_LM - Lamadrid,,Argentina,A,Combinada,RHN,145,,,sat2,RHN - SAT,27,,-65.1102777777778,-28.1944444444444,,True,,True,,,,A
+7359,RMA11_LV - Lavalle,,Argentina,A,Combinada,RHN,141,,,sat2,RHN - SAT,27,,-65.2430555555556,-27.6583333333333,,True,,True,,,,A
+7360,RMA11_PH - Pozo Hondo,,Argentina,A,Combinada,RHN,144,,,sat2,RHN - SAT,27,,-64.4902777777778,-27.1625,,True,,True,,,,A
+7361,RMA11_SA - Sierra Ancasti,,Argentina,A,Combinada,RHN,146,,,sat2,RHN - SAT,27,,-65.6083333333333,-28.4986111111111,,True,,True,,,,A
+7362,RMA11_TC - U.N. Tucumán - RMA1,,Argentina,A,Combinada,RHN,142,,,sat2,RHN - SAT,27,,-65.2272222222222,-26.8436111111111,,True,,True,,,,A
+7363,RMA3_IJU - Ingeniero Juarez,,Argentina,A,Combinada,RHN,108,,,sat2,RHN - SAT,27,,-61.8408333333333,-23.9025,,True,,True,,,,A
+7364,RMET-Bragado (Aeródromo)-Bs.As,,Argentina,A,Combinada,RHN,968,,,sat2,RHN - SAT,27,,-60.4816666666667,-35.1413888888889,,True,,True,,,,A
+7365,RMET-Can. Pomona RN251-R.Negro,,Argentina,A,Combinada,RHN,950,,,sat2,RHN - SAT,27,,-64.6105555555555,-40.4319444444444,,True,,True,,,,A
+7366,RMET-Corral Quemado Dpto.Belen,,Argentina,A,Combinada,RHN,966,,,sat2,RHN - SAT,27,,-66.9383333333333,-27.1819444444444,,True,,True,,,,A
+7367,RMET-Daraoux(est.Ferrov.)-BsAs,,Argentina,A,Combinada,RHN,969,,,sat2,RHN - SAT,27,,-61.4883333333333,-36.8816666666667,,True,,True,,,,A
+7368,RMET-Gral Cabrera-Cordoba,,Argentina,A,Combinada,RHN,955,,,sat2,RHN - SAT,27,,-64.0872222222222,-34.7766666666667,,True,,True,,,,A
+7369,RMET-Lucas Gonzalez-E. Rios,,Argentina,A,Combinada,RHN,945,,,sat2,RHN - SAT,27,,-59.5202777777778,-32.3683333333333,,True,,True,,,,A
+7370,RMET-Pomona RN250-R. Negro,,Argentina,A,Combinada,RHN,953,,,sat2,RHN - SAT,27,,-65.2008333333333,-39.9422222222222,,True,,True,,,,A
+7371,RMET-Pozo Salado-R. Negro,,Argentina,A,Combinada,RHN,951,,,sat2,RHN - SAT,27,,-64.165,-41.0116666666667,,True,,True,,,,A
+7372,RMET-S. Agustín-La Cabral-S.Fé,,Argentina,A,Combinada,RHN,980,,,sat2,RHN - SAT,27,,-61.1816666666667,-30.1863888888889,,True,,True,,,,A
+7373,RMET-S. J. de Feliciano-E.Rios,,Argentina,A,Combinada,RHN,946,,,sat2,RHN - SAT,27,,-58.7544444444444,-30.3758333333333,,True,,True,,,,A
+7374,RMET-San Cristóbal-Santa Fé,,Argentina,A,Combinada,RHN,972,,,sat2,RHN - SAT,27,,-61.6188888888889,-30.2938888888889,,True,,True,,,,A
+7375,RMET-San Pedro Capayán-Esc.283,,Argentina,A,Combinada,RHN,965,,,sat2,RHN - SAT,27,,-66.1247222222222,-28.7441666666667,,True,,True,,,,A
+7376,RMET-Tapalque-Bs.As.,,Argentina,A,Combinada,RHN,962,,,sat2,RHN - SAT,27,,-60.0163888888889,-36.3505555555556,,True,,True,,,,A
+7377,RMET-Ticino-Cordoba,,Argentina,A,Combinada,RHN,956,,,sat2,RHN - SAT,27,,-63.4161111111111,-32.7036111111111,,True,,True,,,,A
+7378,Salí - Simoca,,Argentina,A,Combinada,RHN,233,,,sat2,RHN - SAT,27,,-65.2277777777778,-27.3186111111111,,True,,True,,,,A
+7379,Salto - Salto,,Argentina,A,Combinada,RHN,864,,,sat2,RHN - SAT,27,,-60.2591666666667,-34.2861111111111,,True,,True,,,,A
+7380,San Juan Km 101 - MET,,Argentina,A,Combinada,RHN,268,,,sat2,RHN - SAT,27,,-69.1783333333333,-31.2530555555556,,True,,True,,,,A
+7381,Santa Catalina - Catalina 630,,Argentina,A,Combinada,RHN,243,,,sat2,RHN - SAT,27,,-64.3536111111111,-33.2844444444444,,True,,True,,,,A
+7382,Santa Catalina - Colonia Hogar,,Argentina,A,Combinada,RHN,293,,,sat2,RHN - SAT,27,,-64.2738888888889,-30.8491666666667,,True,,True,,,,A
+7383,Santa Sabina MET,,Argentina,A,Combinada,RHN,280,,,sat2,RHN - SAT,27,,-64.3086111111111,-30.8558333333333,,True,,True,,,,A
+7384,Segundo - Despeñaderos RN Nº 3,,Argentina,A,Combinada,RHN,263,,,sat2,RHN - SAT,27,,-64.3088888888889,-31.8033333333333,,True,,True,,,,A
+7385,Tecka - Estancia Niedo,,Argentina,A,Combinada,RHN,335,,,sat2,RHN - SAT,27,,-70.8797222222222,-43.3497222222222,,True,,True,,,,A
+7386,Tercero - Villa María,,Argentina,A,Combinada,RHN,819,,,sat2,RHN - SAT,27,,-63.2447222222222,-32.4219444444444,,True,,True,,,,A
+7387,Ternero - Cuesta del Ternero,,Argentina,A,Combinada,RHN,369,,,sat2,RHN - SAT,27,,-71.3752777777778,-41.9505555555556,,True,,True,,,,A
+7388,Tunuyán - Las Catitas,,Argentina,A,Combinada,RHN,296,,,sat2,RHN - SAT,27,,-68.0613888888889,-33.3072222222222,,True,,True,,,,A
+7389,Tunuyán - Yaucha,,Argentina,A,Combinada,RHN,275,,,sat2,RHN - SAT,27,,-69.1741666666667,-34.165,,True,,True,,,,A
+7390,Tupungato - Punta de Vacas MET,,Argentina,A,Combinada,RHN,286,,,sat2,RHN - SAT,27,,-69.7611111111111,-32.8569444444444,,True,,True,,,,A
+7391,Utis - RP Nº 13,,Argentina,A,Combinada,RHN,250,,,sat2,RHN - SAT,27,,-63.1269444444444,-29.2425,,True,,True,,,,A
+7392,Vacas - Punta de Vacas  ,,Argentina,A,Combinada,RHN,362,,,sat2,RHN - SAT,27,,-69.7625,-32.8469444444444,,True,,True,,,,A
