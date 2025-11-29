@@ -1,14 +1,12 @@
 """Fetcher for Austrian river gauge data from eHYD."""
 
-import io
 import logging
 import os
 import re
 import tempfile
 import zipfile
-from datetime import datetime
 from pathlib import Path
-from typing import List, Optional
+from typing import Optional
 
 import pandas as pd
 import requests
@@ -38,7 +36,7 @@ class AustriaFetcher(base.RiverDataFetcher):
     Terms of use:
         - see impressum at: https://ehyd.gv.at/
     """
-    
+
     BULK_URL = "https://ehyd.gv.at/eHYD/AreaSelection/download?cat=owf&reg=10"
     CACHE_FILE = Path(os.path.dirname(__file__)) / "data" / "austria.zarr"
     METADATA_CSV = Path(os.path.dirname(__file__)) / "cached_site_data" / "austria_sites.csv"
@@ -139,7 +137,7 @@ class AustriaFetcher(base.RiverDataFetcher):
     def _parse_bulk_file(self, file_path: Path, variable: str) -> pd.DataFrame:
         text = file_path.read_text(encoding="latin1")
         lines = text.splitlines()
-        data_start = next((i for i, l in enumerate(lines) if l.strip().startswith("Werte")), None)
+        data_start = next((i for i, line in enumerate(lines) if line.strip().startswith("Werte")), None)
         if data_start is None:
             return pd.DataFrame()
         cleaned = []
@@ -172,10 +170,7 @@ class AustriaFetcher(base.RiverDataFetcher):
         full_df = full_df.rename(columns={"time": constants.TIME_INDEX})
 
         # Pivot to ensure each (gauge_id, time) is unique, with variables as columns
-        full_df = full_df.pivot_table(
-            index=[constants.GAUGE_ID, constants.TIME_INDEX],
-            aggfunc="first"
-        ).sort_index()
+        full_df = full_df.pivot_table(index=[constants.GAUGE_ID, constants.TIME_INDEX], aggfunc="first").sort_index()
 
         # Convert to xarray Dataset
         ds = full_df.to_xarray()
@@ -183,7 +178,6 @@ class AustriaFetcher(base.RiverDataFetcher):
         # Save to cache
         self.CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
         ds.to_zarr(self.CACHE_FILE, mode="w")
-
 
     def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> Optional[pd.DataFrame]:
         variable = self.VARIABLE_API_MAP[variable].lower().strip()
@@ -221,7 +215,7 @@ class AustriaFetcher(base.RiverDataFetcher):
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
         text = response.text
         lines = text.splitlines()
-        data_start = next((i for i, l in enumerate(lines) if l.strip().startswith("Werte")), None)
+        data_start = next((i for i, line in enumerate(lines) if line.strip().startswith("Werte")), None)
         if data_start is None:
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
         cleaned = []
@@ -263,7 +257,7 @@ class AustriaFetcher(base.RiverDataFetcher):
 
         if variable not in self.get_available_variables():
             raise ValueError(f"Unsupported variable: {variable}")
-        
+
         if str(gauge_id).lower() == "all":
             if not self.CACHE_FILE.exists():
                 logger.info("Austria cache not found — downloading full eHYD dataset...")
@@ -315,5 +309,3 @@ class AustriaFetcher(base.RiverDataFetcher):
 
         df = df.reset_index()[[constants.TIME_INDEX, variable]].set_index(constants.TIME_INDEX)
         return df
-
-
