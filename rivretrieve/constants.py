@@ -24,7 +24,7 @@ _CATCHMENT_PRECIPITATION = "catchment-precipitation"
 DAILY = "daily"
 HOURLY = "hourly"
 INSTANTANEOUS = "instantaneous"
-MONTHLY = "monhtly"
+MONTHLY = "monthly"
 
 # List of temporal aggregrations.
 _MEAN = "mean"
