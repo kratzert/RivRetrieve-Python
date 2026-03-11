@@ -135,7 +135,9 @@ class BosniaHerzegovinaFetcher(base.RiverDataFetcher):
 
         return df.reset_index(drop=True).set_index(constants.GAUGE_ID)
 
-    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> tuple[Optional[bytes], Optional[int]]:
+    def _download_data(
+        self, gauge_id: str, variable: str, start_date: str, end_date: str
+    ) -> tuple[Optional[bytes], Optional[int]]:
         """Downloads raw Excel bytes from the endpoint download URLs."""
         del start_date, end_date
 
@@ -144,8 +146,7 @@ class BosniaHerzegovinaFetcher(base.RiverDataFetcher):
 
         for group in self.STATION_GROUPS:
             url = (
-                f"https://vodostaji.voda.ba/data/internet/stations/{group}/"
-                f"{gauge_id}/{config['code']}/{config['file']}"
+                f"https://vodostaji.voda.ba/data/internet/stations/{group}/{gauge_id}/{config['code']}/{config['file']}"
             )
             try:
                 response = session.get(url, timeout=20)
@@ -156,7 +157,9 @@ class BosniaHerzegovinaFetcher(base.RiverDataFetcher):
 
         return None, None
 
-    def _parse_data(self, gauge_id: str, raw_data: tuple[Optional[bytes], Optional[int]], variable: str) -> pd.DataFrame:
+    def _parse_data(
+        self, gauge_id: str, raw_data: tuple[Optional[bytes], Optional[int]], variable: str
+    ) -> pd.DataFrame:
         """Parses the Excel bytes into the standard RivRetrieve data frame layout."""
         content, station_group = raw_data
         if not content:
