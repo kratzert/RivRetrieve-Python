@@ -119,11 +119,15 @@ class DenmarkFetcher(base.RiverDataFetcher):
             - (5 + 3 * t1 + 10 * c1 - 4 * c1**2 - 9 * e_prime_sq) * d**4 / 24
             + (61 + 90 * t1 + 298 * c1 + 45 * t1**2 - 252 * e_prime_sq - 3 * c1**2) * d**6 / 720
         )
-        lon = lon0 + (
-            d
-            - (1 + 2 * t1 + c1) * d**3 / 6
-            + (5 - 2 * c1 + 28 * t1 - 3 * c1**2 + 8 * e_prime_sq + 24 * t1**2) * d**5 / 120
-        ) / cos_fp
+        lon = (
+            lon0
+            + (
+                d
+                - (1 + 2 * t1 + c1) * d**3 / 6
+                + (5 - 2 * c1 + 28 * t1 - 3 * c1**2 + 8 * e_prime_sq + 24 * t1**2) * d**5 / 120
+            )
+            / cos_fp
+        )
 
         return math.degrees(lat), math.degrees(lon)
 
@@ -302,13 +306,7 @@ class DenmarkFetcher(base.RiverDataFetcher):
             df[variable] = df[variable] * 0.01  # cm -> m
 
         if not instantaneous:
-            df = (
-                df.set_index(constants.TIME_INDEX)[[variable]]
-                .resample("1D")
-                .mean()
-                .dropna(how="all")
-                .reset_index()
-            )
+            df = df.set_index(constants.TIME_INDEX)[[variable]].resample("1D").mean().dropna(how="all").reset_index()
 
         return df.dropna(subset=[variable]).set_index(constants.TIME_INDEX)
 
@@ -332,6 +330,10 @@ class DenmarkFetcher(base.RiverDataFetcher):
 
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
+            if constants.INSTANTANEOUS in variable or constants.HOURLY in variable:
+                end_date_dt = end_date_dt + pd.Timedelta(days=1)
+                return df[(df.index >= start_date_dt) & (df.index < end_date_dt)]
+
             return df[(df.index >= start_date_dt) & (df.index <= end_date_dt)]
         except Exception as e:
             logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}")
