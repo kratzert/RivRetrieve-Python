@@ -165,9 +165,7 @@ class TestArgentinaFetcher(unittest.TestCase):
             ]
         )
         mock_download_data.return_value = (
-            "1990-01-01,1990-01-02,15.0\n"
-            "1990-01-02,1990-01-03,15.5\n"
-            "1990-01-03,1990-01-04,16.0\n"
+            "1990-01-01,1990-01-02,15.0\n1990-01-02,1990-01-03,15.5\n1990-01-03,1990-01-04,16.0\n"
         )
 
         result = self.fetcher.get_data(
