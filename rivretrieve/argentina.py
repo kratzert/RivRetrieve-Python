@@ -1,7 +1,9 @@
 """Fetcher for Argentina river data from INA Alerta."""
 
+import io
 import logging
-from typing import Optional
+from datetime import timedelta
+from typing import Any, Optional
 
 import numpy as np
 import pandas as pd
@@ -13,182 +15,221 @@ logger = logging.getLogger(__name__)
 
 
 class ArgentinaFetcher(base.RiverDataFetcher):
-    """Fetches river gauge data from the Argentine national hydrological system.
+    """Fetches river gauge data from INA Alerta.
 
-        Data source:
-            Portal de datos del Sistema de Información Hidrológica de la Cuenca del Plata – DSIyAH INA
-            https://alerta.ina.gob.ar/pub/gui
+    Data Source: INA Alerta 5 (https://alerta.ina.gob.ar/pub/gui)
 
-        Supported variables:
-            - ``constants.STAGE_INSTANT`` (m)
-            - ``constants.STAGE_DAILY_MEAN`` (m)
-            - ``constants.STAGE_HOURLY_MEAN`` (m)
-            - ``constants.DISCHARGE_INSTANT`` (m³/s)
-            - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
-            - ``constants.DISCHARGE_DAILY_MAX`` (m³/s)
-            - ``constants.DISCHARGE_DAILY_MIN`` (m³/s)
-            - ``constants.DISCHARGE_HOURLY_MEAN`` (m³/s)
-            - ``constants.WATER_TEMPERATURE_INSTANT`` (°C)
-            - ``constants.WATER_TEMPERATURE_DAILY_MEAN`` (°C)
-            - ``constants.WATER_TEMPERATURE_HOURLY_MEAN`` (°C)
-
-        API description:
-            https://alerta.ina.gob.ar/pub/gui/apibase
-
-        Metadata endpoints:
-            - https://alerta.ina.gob.ar/pub/datos/estaciones&&type=H&format=json
-            - https://alerta.ina.gob.ar/pub/datos/estaciones&&type=A&format=json
-
-        Terms of use:
-            Data provided openly by DSIyAH INA. Check provider website for applicable conditions.
+    Supported Variables:
+        - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
     """
 
-    METADATA_URL_TEMPLATE = (
-        "https://alerta.ina.gob.ar/pub/datos/estaciones&&type={stype}&format=json"
-    )
+    BASE_URL = "https://alerta.ina.gob.ar/a5"
 
-    DATA_URL = "https://alerta.ina.gob.ar/pub/datos/datos"
-
-    # Variables map
-    VAR_ID_MAP = {
-        constants.DISCHARGE_INSTANT: 4,
-        constants.DISCHARGE_DAILY_MEAN: 40,
-        constants.DISCHARGE_DAILY_MAX: 68,
-        constants.DISCHARGE_DAILY_MIN: 69,
-        constants.DISCHARGE_HOURLY_MEAN: 87,
-
-        constants.STAGE_INSTANT: 2,
-        constants.STAGE_DAILY_MEAN: 39,
-        constants.STAGE_HOURLY_MEAN: 85,
-
-        constants.WATER_TEMPERATURE_INSTANT: 73,
-        constants.WATER_TEMPERATURE_DAILY_MEAN: 73,
-        constants.WATER_TEMPERATURE_HOURLY_MEAN: 73,
+    VARIABLE_CONFIG = {
+        constants.DISCHARGE_DAILY_MEAN: {
+            "var_id": 40,
+            "general_category": "Hydrology",
+        }
     }
 
-    SUPPORTED_VARIABLES = tuple(VAR_ID_MAP.keys())
+    @staticmethod
+    def _safe_numeric(value: Any) -> float:
+        value = pd.to_numeric(value, errors="coerce")
+        return np.nan if pd.isna(value) else float(value)
 
-    #  Cached metadata
+    @classmethod
+    def _standardize_metadata_frame(cls, df: pd.DataFrame) -> pd.DataFrame:
+        if df.empty:
+            return pd.DataFrame().set_index(constants.GAUGE_ID)
+
+        rename_map = {
+            "sitecode": constants.GAUGE_ID,
+            "nombre": constants.STATION_NAME,
+            "rio": constants.RIVER,
+            "lat": constants.LATITUDE,
+            "lon": constants.LONGITUDE,
+            "pais": constants.COUNTRY,
+        }
+        df = df.rename(columns=rename_map).copy()
+
+        required_columns = [
+            constants.GAUGE_ID,
+            constants.STATION_NAME,
+            constants.RIVER,
+            constants.LATITUDE,
+            constants.LONGITUDE,
+            constants.COUNTRY,
+            constants.SOURCE,
+            constants.ALTITUDE,
+            constants.AREA,
+        ]
+        for column in required_columns:
+            if column not in df.columns:
+                df[column] = np.nan
+
+        df[constants.GAUGE_ID] = df[constants.GAUGE_ID].astype(str)
+        df[constants.LATITUDE] = pd.to_numeric(df[constants.LATITUDE], errors="coerce")
+        df[constants.LONGITUDE] = pd.to_numeric(df[constants.LONGITUDE], errors="coerce")
+        df[constants.ALTITUDE] = pd.to_numeric(df[constants.ALTITUDE], errors="coerce")
+        df[constants.AREA] = pd.to_numeric(df[constants.AREA], errors="coerce")
+        df[constants.COUNTRY] = "Argentina"
+        df[constants.SOURCE] = "INA Alerta"
+
+        return df.set_index(constants.GAUGE_ID, drop=True)
+
     @staticmethod
     def get_cached_metadata() -> pd.DataFrame:
-        return utils.load_cached_metadata_csv("argentina")
+        df = utils.load_cached_metadata_csv("argentina").reset_index()
+        return ArgentinaFetcher._standardize_metadata_frame(df)
 
-    # Live metadata download
-    def get_metadata(self) -> pd.DataFrame:
-        """Fetches metadata for both H and A station types, merges them,
-        and standardizes to rivretrieve's global metadata format."""
-        station_types = ["H", "A"]
-        frames = []
-
-        for stype in station_types:
-            url = self.METADATA_URL_TEMPLATE.format(stype=stype)
-            logger.info(f"Fetching metadata from: {url}")
-
-            try:
-                r = requests.get(url, timeout=25)
-                r.raise_for_status()
-                data = r.json().get("data", [])
-
-                if not isinstance(data, list):
-                    logger.warning(f"Unexpected format for type={stype}, skipping.")
-                    continue
-
-                df = pd.DataFrame(data)
-                if df.empty:
-                    continue
-
-                # Standard columns
-                df = df.rename(columns={
-                    "sitecode": constants.GAUGE_ID,
-                    "nombre": constants.STATION_NAME,
-                    "rio": constants.RIVER,
-                    "lat": constants.LATITUDE,
-                    "lon": constants.LONGITUDE,
-                })
-
-                df[constants.LATITUDE] = pd.to_numeric(df[constants.LATITUDE], errors="coerce")
-                df[constants.LONGITUDE] = pd.to_numeric(df[constants.LONGITUDE], errors="coerce")
-
-                df[constants.COUNTRY] = "Argentina"
-                df[constants.SOURCE] = "INA Alerta"
-                df["station_type"] = stype
-
-                # Add missing global metadata fields
-                for col in [
-                    constants.ALTITUDE,
-                    constants.AREA,
-                ]:
-                    if col not in df.columns:
-                        df[col] = np.nan
-
-                frames.append(df)
-
-            except Exception as e:
-                logger.error(f"Failed to fetch metadata type={stype}: {e}")
-
-        if not frames:
-            logger.error("No metadata returned.")
-            return pd.DataFrame()
-
-        df = pd.concat(frames, ignore_index=True)
-        df = df.drop_duplicates(subset=[constants.GAUGE_ID]).reset_index(drop=True)
-
-        logger.info(f"Fetched {len(df)} gauge metadata records.")
-        return df
-
-    # Supported variables
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return ArgentinaFetcher.SUPPORTED_VARIABLES
+        return tuple(ArgentinaFetcher.VARIABLE_CONFIG.keys())
 
-    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str):
-        if variable not in self.VAR_ID_MAP:
-            raise ValueError(f"Variable not supported: {variable}")
+    def _build_url(self, path: str) -> str:
+        return f"{self.BASE_URL}/{path.lstrip('/')}"
 
-        var_id = self.VAR_ID_MAP[variable]
+    def _get_json(self, path: str, params: dict[str, Any]) -> Any:
+        session = utils.requests_retry_session()
+        response = session.get(self._build_url(path), params=params, timeout=25)
+        response.raise_for_status()
+        return response.json()
 
-        url = (
-            f"{self.DATA_URL}"
-            f"&timeStart={start_date}"
-            f"&timeEnd={end_date}"
-            f"&siteCode={gauge_id}"
-            f"&varId={var_id}"
-            f"&format=json"
+    def _fetch_series_index(self, variable: str) -> pd.DataFrame:
+        config = self.VARIABLE_CONFIG[variable]
+        payload = self._get_json(
+            "obs/puntual/series",
+            params={
+                "format": "geojson",
+                "var_id": config["var_id"],
+                "GeneralCategory": config["general_category"],
+                "data_availability": "h",
+            },
         )
 
-        logger.info(f"Fetching INA data: {url}")
+        features = payload.get("features", [])
+        rows = []
+        for feature in features:
+            properties = feature.get("properties", {}) or {}
+            geometry = feature.get("geometry", {}) or {}
+            coordinates = geometry.get("coordinates", [np.nan, np.nan]) or [np.nan, np.nan]
+
+            rows.append(
+                {
+                    constants.GAUGE_ID: str(properties.get("estacion_id")),
+                    constants.STATION_NAME: properties.get("nombre"),
+                    constants.RIVER: properties.get("rio"),
+                    constants.LONGITUDE: self._safe_numeric(coordinates[0] if len(coordinates) > 0 else np.nan),
+                    constants.LATITUDE: self._safe_numeric(coordinates[1] if len(coordinates) > 1 else np.nan),
+                    "series_id": properties.get("id", properties.get("series_id")),
+                    "proc_id": properties.get("proc_id"),
+                    "var_id": properties.get("var_id", config["var_id"]),
+                    "unit": properties.get("unidad"),
+                }
+            )
+
+        return pd.DataFrame(rows)
+
+    def _fetch_station_details(self, gauge_id: str) -> dict[str, float]:
+        try:
+            payload = self._get_json(
+                f"obs/puntual/estaciones/{gauge_id}",
+                params={"format": "json", "get_drainage_basin": "true"},
+            )
+        except requests.exceptions.RequestException as exc:
+            logger.warning(f"Could not fetch metadata details for station {gauge_id}: {exc}")
+            return {constants.ALTITUDE: np.nan, constants.AREA: np.nan}
+
+        altitude = self._safe_numeric(payload.get("altitud"))
+
+        area = np.nan
+        drainage_basin = payload.get("drainage_basin") or {}
+        basin_properties = drainage_basin.get("properties") or {}
+        raw_area = self._safe_numeric(basin_properties.get("area"))
+        if not np.isnan(raw_area):
+            area = raw_area / 1e6
+
+        return {constants.ALTITUDE: altitude, constants.AREA: area}
+
+    def get_metadata(self) -> pd.DataFrame:
+        try:
+            series_index = self._fetch_series_index(constants.DISCHARGE_DAILY_MEAN)
+        except requests.exceptions.RequestException as exc:
+            logger.error(f"Failed to fetch Argentina metadata: {exc}")
+            return pd.DataFrame().set_index(constants.GAUGE_ID)
+
+        if series_index.empty:
+            return pd.DataFrame().set_index(constants.GAUGE_ID)
+
+        metadata = series_index.drop_duplicates(subset=[constants.GAUGE_ID]).copy()
+        metadata[constants.COUNTRY] = "Argentina"
+        metadata[constants.SOURCE] = "INA Alerta"
+
+        details = [self._fetch_station_details(gauge_id) for gauge_id in metadata[constants.GAUGE_ID]]
+        metadata[constants.ALTITUDE] = [item[constants.ALTITUDE] for item in details]
+        metadata[constants.AREA] = [item[constants.AREA] for item in details]
+
+        return self._standardize_metadata_frame(metadata.reset_index(drop=True))
+
+    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> str:
+        if variable not in self.VARIABLE_CONFIG:
+            raise ValueError(f"Unsupported variable: {variable}")
+
+        series_index = self._fetch_series_index(variable)
+        station_rows = series_index[series_index[constants.GAUGE_ID] == str(gauge_id)]
+        if station_rows.empty:
+            logger.warning(f"No Argentina series found for station {gauge_id} and variable {variable}")
+            return ""
+
+        series_id = station_rows.iloc[0]["series_id"]
+        if pd.isna(series_id):
+            logger.warning(f"Missing series_id for station {gauge_id} and variable {variable}")
+            return ""
+
+        request_end_date = (pd.to_datetime(end_date) + timedelta(days=1)).strftime("%Y-%m-%d")
+
+        session = utils.requests_retry_session()
+        response = session.get(
+            self._build_url("getObservaciones"),
+            params={
+                "tipo": "puntual",
+                "series_id": int(series_id),
+                "timestart": start_date,
+                "timeend": request_end_date,
+                "format": "csvless",
+                "no_id": "true",
+            },
+            timeout=25,
+        )
+        response.raise_for_status()
+        return response.text
+
+    def _parse_data(self, gauge_id: str, raw_data: str, variable: str) -> pd.DataFrame:
+        if not raw_data or not raw_data.strip() or raw_data.strip() == "null":
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         try:
-            r = requests.get(url, timeout=25)
-            r.raise_for_status()
-            return r.json()
-        except Exception as e:
-            logger.error(f"Failed to download INA data for {gauge_id}/{variable}: {e}")
-            return {"data": []}
-
-    def _parse_data(self, gauge_id: str, raw_json: dict, variable: str) -> pd.DataFrame:
-        data = raw_json.get("data", [])
-        if not data:
+            df = pd.read_csv(io.StringIO(raw_data), header=None)
+        except Exception as exc:
+            logger.error(f"Failed to parse Argentina csvless payload for station {gauge_id}: {exc}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-        df = pd.DataFrame(data)
-
-        if "timestart" not in df or "valor" not in df:
+        if df.shape[1] < 2:
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
-        df = df.rename(columns={"timestart": constants.TIME_INDEX, "valor": variable})
-        df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX], errors="coerce")
-        df[variable] = pd.to_numeric(df[variable], errors="coerce")
+        parsed = pd.DataFrame(
+            {
+                constants.TIME_INDEX: pd.to_datetime(df.iloc[:, 0], errors="coerce"),
+                variable: pd.to_numeric(df.iloc[:, -1], errors="coerce"),
+            }
+        )
 
-        df = (
-            df[[constants.TIME_INDEX, variable]]
-            .dropna()
+        return (
+            parsed.dropna()
             .drop_duplicates(subset=[constants.TIME_INDEX])
             .sort_values(constants.TIME_INDEX)
             .set_index(constants.TIME_INDEX)
         )
-
-        return df
 
     def get_data(
         self,
@@ -197,7 +238,6 @@ class ArgentinaFetcher(base.RiverDataFetcher):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
 
@@ -205,9 +245,15 @@ class ArgentinaFetcher(base.RiverDataFetcher):
             raise ValueError(f"Unsupported variable: {variable}")
 
         try:
-            raw_json = self._download_data(gauge_id, variable, start_date, end_date)
-            df = self._parse_data(gauge_id, raw_json, variable)
-            return df.loc[(df.index >= start_date) & (df.index <= end_date)]
-        except Exception as e:
-            logger.error(f"Failed to parse INA data for {gauge_id}/{variable}: {e}")
+            raw_data = self._download_data(gauge_id, variable, start_date, end_date)
+            df = self._parse_data(gauge_id, raw_data, variable)
+            start_day = pd.to_datetime(start_date).date()
+            end_day = pd.to_datetime(end_date).date()
+            index_days = pd.Index(df.index.date)
+            return df[(index_days >= start_day) & (index_days <= end_day)]
+        except requests.exceptions.RequestException as exc:
+            logger.error(f"Failed to download Argentina data for {gauge_id}/{variable}: {exc}")
+            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
+        except Exception as exc:
+            logger.error(f"Failed to parse Argentina data for {gauge_id}/{variable}: {exc}")
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
