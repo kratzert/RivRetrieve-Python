@@ -1,0 +1,12 @@
+[
+  {
+    "ts_id": "5756010",
+    "rows": "3",
+    "columns": "Timestamp,Value,Quality Code,Quality Code Name,Quality Code Description",
+    "data": [
+      ["2025-01-02T00:00:00.000+01:00", 20.0, 11, "M_G_1", "Good quality"],
+      ["2025-01-02T12:00:00.000+01:00", 22.0, 11, "M_G_1", "Good quality"],
+      ["2025-01-03T00:00:00.000+01:00", 30.0, 11, "M_G_1", "Good quality"]
+    ]
+  }
+]

@@ -1,0 +1,211 @@
+gauge_id,station_name,river,latitude,longitude,altitude,area,country,source,vertical_datum
+HIS_abk10a-1066,Gellik,Albertkl,50.8808724097444,5.62194835924344,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+HIS_dem02a-SF-1066,Aarschot Afwaarts SF,Demer,50.9875887525357,4.82226578980928,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+HIS_den05c-1066,Aalst Afwaarts,Dender,50.9414148101197,4.04256138795354,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+HIS_den09e-1066,Pollare Opwaarts,Dender,50.8296965118411,4.00959912439749,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+HIS_den10e-1066,Idegem Opwaarts,Dender,50.7989627026483,3.92960531432094,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+HIS_gnt03a-SF-1066,Itegem Hullebrug SF,Grote Nete,51.1222538248508,4.69802484373009,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+HIS_knt03a-SF-1066,Grobbendonk Troon SF,Kleine Nete,51.1887369324682,4.74236403885045,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+HIS_lei05a-SF-1066,Zulte SF,Leie,50.9289074923994,3.43799631514227,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+HIS_lei07a-1066,Desselgem,Leie,50.8894533211378,3.34336250926646,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+HIS_lei11a-1066,Menen,Leie,50.7911965967297,3.12670997662446,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+HIS_maa07a-1066,Uikhoven rkm 24.8,Maas,50.9254757781862,5.72775363213336,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+HIS_maa14b-1066,Kanne Structuur,Jeker,50.8166756009363,5.67000955762706,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+HIS_maa14c-1066,Kanne Opwaarts,Jeker,50.8166756009363,5.67000955762706,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+HIS_rvg03a-1066,Evergem,Ringvaart,51.0898770105185,3.66643384043862,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+HIS_zen03a-SF-1066,Eppegem SF,Zenne,50.9605215725021,4.45565127189749,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+HIS_zes10a-SF-1066,Liefkenshoek SF,Zeeschelde,51.2965863819222,4.28683984663529,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+HIS_zes25j-1066,Kruibeke-Bazel GOG Kleine Uitwatering,Zeeschelde,51.1531523718385,4.32605073411148,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+SINT-WL1-1060,Sint-Pieter Noord rkm 10.8,Maas,50.8285781695375,5.69674242342052,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk04c-1115,Wijnegem Afwaarts,Albertkl,51.2294494695845,4.53120061068357,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk04g-1115,Wijnegem Opwaarts,Albertkl,51.2246640017771,4.54618543346293,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk05a-1066,Viersel,Albertkl,51.1924464488262,4.66166382196447,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk06a-1066,Grobbendonk,Albertkl,51.1787753826577,4.77208129038498,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk06r-1066,Olen Sluis Vijzelkanaal,Albertkl,51.1581858233479,4.85966114371323,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk06t-1115,Olen Opwaarts,Albertkl,51.1570078870914,4.86450541750782,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk07a-1066,Geel Stelen,Albertkl,51.1257980868372,4.97938020440318,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk07r-1066,Ham Sluis Vijzelkanaal,Albertkl,51.0973554171606,5.10802268810797,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk07t-1115,Kwaadmechelen Opwaarts,Albertkl,51.0962211343791,5.11236771276994,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk08a-1066,Beringen,Albertkl,51.0297635145487,5.22483460135229,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk08h-1066,Hasselt Sluis Vijzelkanaal,Albertkl,50.9397854410694,5.36923383025391,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk08k-1115,Hasselt Opwaarts,Albertkl,50.9397659112101,5.37384752886972,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk08p-1115,Diepenbeek Opwaarts,Albertkl,50.9372057131972,5.43697528197556,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk08v-1115,Genk Opwaarts,Albertkl,50.9338698618759,5.50148984184363,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+abk11a-1066,Kanne,Albertkl,50.8259066775242,5.64573583369548,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+akl02a-1066,Oostkerke,Afleidingskl Leie,51.2650576805498,3.29628498629039,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+akl03e-1066,Adegem-Balgerhoeke Opwaarts,Afleidingskl Leie,51.2028044703771,3.51574067376262,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+akl04a-1066,Zomergem,Afleidingskl Leie,51.1011257965685,3.56546697228752,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+akl07a-1066,Merendree,Afleidingskl Leie,51.0899074227213,3.56287609346259,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+akl08a-1066,Deinze,Afleidingskl Leie,50.9878959801445,3.52335264918975,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+bgv03c-1066,Houtem Afwaarts,Bergenvaart,51.022811678469,2.61909850875118,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+bgv03e-1066,Houtem Opwaarts,Bergenvaart,51.0229089527617,2.61959386028197,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+bnt01h-1066,Grote Vijver Noord GOG,Nete,51.0730650258078,4.42561373613891,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+bnt06c-1066,Polder van Lier Afwaarts GOG,Nete,51.1168269994759,4.55265806219233,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+bnt06r-1066,Polder van Lier Opwaarts GOG,Nete,51.1206022681079,4.55984385693839,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+bos01o-1066,Zwijnaarde,Bovenschelde,50.9915081020893,3.72241218573518,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+bos02a-1066,Gavere,Bovenschelde,50.9296307282178,3.6542880951664,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+bos02a-SF-1066,Gavere SF,Bovenschelde,50.9296279824225,3.65403599309026,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+bos03e-1066,Asper Opwaarts,Bovenschelde,50.9148702570649,3.6705370384779,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+bos04e-1066,Oudenaarde Opwaarts,Bovenschelde,50.8473559891235,3.61542461704155,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+bos04o-1066,Kerkhove Opwaarts,Bovenschelde,50.7867091851723,3.49030427575471,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+bos05m-1066,Helkijn,Bovenschelde,50.728698824736,3.38788014170151,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+dem01r-1066,Betekom,Demer,50.9794862001458,4.78170352375756,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+dem02a-1066,Aarschot Afwaarts,Demer,50.9876514488463,4.82232337085119,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+dem02m-1066,Aarschot Opwaarts,Demer,50.9852232220017,4.84085661217778,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+dem02r-1066,Langdorp,Demer,50.9922770639936,4.86974289165077,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+dem03a-1066,Testelt,Demer,51.0085585011076,4.95488273057216,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+dem04a-1066,Zichem,Demer,51.0025986122072,4.99157972958855,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+den02a-1066,Dendermonde,Dender,51.0378155133046,4.07704992952038,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+den02a-SF-1066,Dendermonde SF,Dender,51.0378155133046,4.07704992952038,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+den03e-1066,Denderbelle Opwaarts,Dender,51.0001626404035,4.07806732915739,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+den05k-1115,Aalst Afwaarts m1,Dender,50.9306173352231,4.05198202364574,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+den05m-1115,Aalst Afwaarts m2,Dender,50.9300867420541,4.05190024958135,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+den05o-1115,Aalst Sluis m2,Dender,50.9298444159597,4.0520441285608,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+den05q-1115,Aalst Sluis m1,Dender,50.9297725405047,4.05205883722318,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+den05s-1115,Aalst Opwaarts m2,Dender,50.9294760876841,4.05213195620184,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+den05u-1115,Aalst Opwaarts m1,Dender,50.9290002709942,4.05236274962837,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+den06a-1066,Erembodegem,Dender,50.9200786512053,4.06002871846776,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+den08c-1066,Denderleeuw Opwaarts,Dender,50.8736649492081,4.07715178150251,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+den11e-1066,Geraardsbergen Opwaarts,Dender,50.769556480271,3.88066612268998,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+den12a-1066,Overboelare,Dender,50.7620116684055,3.86733483005445,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+denaad-1066,Pollare Opwaarts tmp,Dender,50.8297614789452,4.0074792652044,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+denaae-1066,Idegem Afwaarts tmp,Dender,50.7989491326296,3.93206607172396,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+denaaf-1066,Idegem Opwaarts tmp,Dender,50.7988107215565,3.9287054780357,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+dij05a-1066,Zennegat GOG,Dijle,51.060806594364,4.43776611561005,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+dij10a-1066,Rijmenam,Dijle,50.9993091666333,4.58524634250655,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+dij13a-1066,Werchter,Dijle,50.969276505467,4.69217891181747,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+dur07a-1066,Zele,Durme,51.0948066780241,4.04502657341674,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+gnt03a-1066,Itegem Hullebrug,Grote Nete,51.1223077166928,4.69803950750083,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+gnt05a-1066,Hulshout,Grote Nete,51.0618504955514,4.78778097430423,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+gnt07a-1066,Geel-Zammel,Grote Nete,51.0917611957854,4.94610627193862,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+ijz01d-1066,Nieuwpoort,Ijzer,51.1353128749276,2.76875389746053,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+ijz02a-1066,Keiem,Ijzer,51.0843386236797,2.8527477363326,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+ijz03a-1066,Diksmuide,Ijzer,51.0332120141757,2.85445974413561,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+ijz04c-1066,Woumen,Ijzer,51.0011276405927,2.82845153665494,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+ijz05e-1066,Lo-Fintele,Ijzer,50.9571484191734,2.73619409474557,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+ijz05m-1066,Stavele,Ijzer,50.9433484538452,2.67218829689136,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+ijz06a-1066,Roesbrugge,Ijzer,50.9201498251022,2.6230671705189,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+ijz07a-1066,Haringe,Ijzer,50.9103217034264,2.60800111173614,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbc02g-1066,Ruisbroek,Kl Brussel-Charleroi,50.7844688516698,4.28839005991179,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbc04e-1066,Lot Opwaarts,Kl Brussel-Charleroi,50.7658454688551,4.26908691804534,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbc05e-1066,Halle Opwaarts,Kl Brussel-Charleroi,50.7377444522881,4.2420029010962,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbc06e-1066,Lembeek,Kl Brussel-Charleroi,50.7080525616443,4.2202229496191,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbh02f-1115,Herentals Sluis 10 Opwaarts,Kl Bocholt-Herentals,51.1686876569584,4.83521981374027,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbh03f-1115,Geel Sluis 9 Opwaarts,Kl Bocholt-Herentals,51.1916715852938,4.95778653956808,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbh04f-1115,Geel Sluis 8 Opwaarts,Kl Bocholt-Herentals,51.2024267263246,4.98958788209279,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbh05f-1115,Geel Sluis 7 Opwaarts,Kl Bocholt-Herentals,51.2120435026462,5.04257125489207,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbh06f-1115,Mol Sluis 6 Opwaarts,Kl Bocholt-Herentals,51.2191311367625,5.08002578249731,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbh07f-1115,Dessel Sluis 5 Opwaarts,Kl Bocholt-Herentals,51.2302277654136,5.14335638035268,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbh08f-1115,Dessel Sluis 4 Opwaarts,Kl Bocholt-Herentals,51.2335583477767,5.16444086103769,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbh08m-1066,Mol,Kl Bocholt-Herentals,51.2353178976313,5.16888990971725,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbh09f-1115,Mol Sluis 3 Opwaarts,Kl Bocholt-Herentals,51.2391329058166,5.19298841645912,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbh10f-1115,Mol Sluis 2 Opwaarts,Kl Bocholt-Herentals,51.237597052777,5.21308315927116,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbh11f-1115,Lommel Sluis 1 Opwaarts,Kl Bocholt-Herentals,51.237970748291,5.22476272926258,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbh12a-1066,Lommel,Kl Bocholt-Herentals,51.2483549746749,5.26252625752597,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbk02c-1066,Kortrijk Vlaanderenkaai,Kl Bossuit-Kortrijk,50.8344355964756,3.27106598180651,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbk03c-1066,Kortrijk Spinnerijkaai,Kl Bossuit-Kortrijk,50.8314266089743,3.28449478724843,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbn02f-1115,Neerharen Opwaarts 1,Kl Briegden-Neerharen,50.8999692906364,5.68084508962512,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbn02g-1066,Neerharen Opwaarts 2,Kl Briegden-Neerharen,50.8999542957389,5.68083528668753,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbn03f-1115,Lanaken Opwaarts,Kl Briegden-Neerharen,50.8833897044282,5.65261067267032,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kbs02a-1066,Damme,Kl Brugge-Sluis,51.2523342559284,3.28011886801746,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kdk03a-1066,Mol Sluis,Kl Dessel-Kwaadmechelen,51.2078174001573,5.15873030880688,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kdn02a-1066,Nieuwpoort,Kl Nieuwpoort-Duinkerke,51.1332743804671,2.75703463011375,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kdn03a-1066,Veurne Afwaarts,Kl Nieuwpoort-Duinkerke,51.0708621988731,2.66826431065748,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kdn03c-1066,Veurne Opwaarts,Kl Nieuwpoort-Duinkerke,51.0703883141555,2.66782486120185,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kdn04a-1066,Veurne,Kl Nieuwpoort-Duinkerke,51.0706915943455,2.65524100489211,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kdn05a-1066,Adinkerke,Kl Nieuwpoort-Duinkerke,51.0721463245775,2.60369087504062,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kds02f-1066,Schoten,Kl Dessel-Schoten,51.2434263470645,4.5026377241042,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kds02g-1115,Schoten Sluis 10 Opwaarts,Kl Dessel-Schoten,51.2434326237168,4.50265106003661,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kds03f-1115,Schoten Sluis 09 Opwaarts,Kl Dessel-Schoten,51.252165241485,4.50705651575256,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kds04f-1115,Schoten Sluis 08 Opwaarts,Kl Dessel-Schoten,51.2722224856114,4.52059573799283,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kds05f-1115,Schoten Sluis 07 Opwaarts,Kl Dessel-Schoten,51.2892464623685,4.54229749111996,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kds06f-1115,Schoten Sluis 06 Opwaarts,Kl Dessel-Schoten,51.295252932433,4.55195575053447,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kds07f-1115,Sint-Job-In-t-Goor Sluis 5 Opwaarts,Kl Dessel-Scho,51.2992624986698,4.56184706362814,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kds08f-1115,Sint-Job-In-t-Goor Sluis 4 Opwaarts,Kl Dessel-Scho,51.3036111967393,4.57260705653574,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kds09f-1115,Brecht Sluis 3 Opwaarts,Kl Dessel-Schoten,51.3073591616924,4.58201374326965,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kds10f-1115,Brecht Sluis 2 Opwaarts,Kl Dessel-Schoten,51.3108982925069,4.59075710027478,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kds11f-1115,Rijkevorsel Sluis 1 Opwaarts,Kl Dessel-Schoten,51.3274393887789,4.78456774633806,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kds13a-1066,Dessel Witgoor,Kl Dessel-Schoten,51.2353865999011,5.16403893284404,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kgo02a-1066,Oudenburg-Plassendale,Kl Gent-Oostende,51.2099607230196,3.00385759798676,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kgo03a-1066,Varsenare,Kl Gent-Oostende,51.2085876631138,3.12554729443741,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kgo04e-1066,Brugge Dampoortsluis Opwaarts,Kl Gent-Oostende,51.2209258241508,3.23421384082123,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kgo06a-1066,Brugge-Steenbrugge,Kl Gent-Oostende,51.1794485742908,3.23424905464403,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kgo06n-1066,Oostkamp,Kl Gent-Oostende,51.1583447280091,3.26405350323317,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kgo08a-1066,Aalter,Kl Gent-Oostende,51.1069984381802,3.43509535017227,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kgo13a-1066,Brugge Carmersbrug,Binnenarm Kl Gent-Oostende,51.2135227252062,3.22904089797062,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kgt04a-1066,Zelzate,Kl Gent-Terneuzen,51.1983396964966,3.80050336467076,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+knt03a-1066,Grobbendonk Troon,Kleine Nete,51.1887369271149,4.74236404327005,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+knt03m-1115,Grobbendonk Opwaarts Krooshekken,Kleine Nete,51.1830644493531,4.72216724308325,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kpn02a-1066,Nieuwpoort,Kl Nieuwpoort-Plassendale,51.1370660635264,2.75883312340084,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kpn03a-1066,Slijpe,Kl Nieuwpoort-Plassendale,51.1647003214603,2.83147874030206,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+kpn04a-1066,Oudenburg-Plassendale,Kl Nieuwpoort-Plassendale,51.2082197064117,3.00256321662929,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+krl03a-1066,Izegem,Kl Roeselare-Leie,50.9227147999659,3.21600115523492,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lei02a-1066,Sint-Martens-Latem,Leie,51.0223304151773,3.6396663123729,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lei03a-1066,Deinze,Leie,50.981891874837,3.53357211241346,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lei04a-1066,Machelen,Leie,50.9761639541353,3.50350061937995,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lei06b-1066,Sint-Baafs-Vijve 1200m Afwaarts,Leie,50.9134704825693,3.4288159529755,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lei06f-1066,Sint-Baafs-Vijve 650m Opwaarts,Leie,50.9093479751192,3.40378795033366,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lei08f-1066,Harelbeke 650m Opwaarts,Leie,50.8502180339217,3.30011979040259,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lei09a-1066,Kortrijk,Leie,50.8345989004698,3.27036380974287,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lei10a-1066,Lauwe,Leie,50.8015911859622,3.1894996472416,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lei11m-1066,Menen Ropswalle,Leie,50.7854607985441,3.10738816895926,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lei12e-1066,Menen Opwaarts,Leie,50.7788710442024,3.09680879429743,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lek03a-1066,Damme,Leopoldkl,51.2614920132158,3.30960538093213,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lek13c-1066,Brugge Afwaarts,Zuidervaart,51.2208120726685,3.23547632019261,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lek13e-1066,Brugge Opwaarts,Zuidervaart,51.2206758914795,3.23533647944662,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lok02a-1066,Lo-Reninge,Lokl,50.9801372834614,2.7418885118437,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+lok03c-1066,Lo-Fintele,Lokl,50.9576956414414,2.73610386763002,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa02a-1066,Maaseik rkm 52.8,Maas,51.0949023304829,5.80144022412334,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa02w-1066,Rotem rkm 44.9,Maas,51.050734021412,5.76987651039601,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa04a-1066,Negenoord rkm 42.5,Maas,51.0300480452586,5.75972172954306,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa05a-1066,Meeswijk Veer rkm 39.0,Maas,51.00640264915,5.76598473411518,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa06a-1066,Eisden-Mazenhoven rkm 34.7,Maas,50.9776258087868,5.73595993371206,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa06x-1066,Uikhoven rkm 25.3,Maas,50.9291969136969,5.73094865917749,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa08a-1066,Lanaken-Smeermaas rkm 18.4,Maas,50.8895268896999,5.68307396843957,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa10a-1066,Ophoven De Spaanjerd,Maasplassen,51.1276338172772,5.81784630409896,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa11a-1066,Maaseik Herenlaak,Maasplassen,51.1011729090361,5.81873912481654,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa11s-1066,Rotem Bichterweerd,Maasplassen,51.0507031598422,5.76793571413708,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa12a-1066,Negenoord-West,Maasplassen,51.0296412139895,5.75918981468683,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa13a-1066,Maasbeemder Greend,Maasplassen,50.9784081814902,5.73517099378128,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa14k-1115,Kanne Opwaarts Duiker Afwaarts rooster,Jeker,50.8082009389969,5.67370561495717,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+maa14l-1115,Kanne Opwaarts Duiker Opwaarts rooster,Jeker,50.8080872531549,5.67341866221214,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+moe02a-1066,Mendonk,Moervaart,51.1488903498472,3.82494273744414,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+moe03a-1066,Sinaai,Moervaart,51.1555611085008,3.99990364679417,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+moe10a-1066,Lokeren,Bovendurme,51.1031686371072,4.00095874581914,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+rup02e-SF-1066,Klein Willebroek SF,Rupel,51.0823375924568,4.36627257693236,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+rup02l-1066,Bovenzanden GOG,Rupel,51.0776203625971,4.41480269415621,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+rvg02f-1066,Evergem Waalbrug,Ringvaart,51.1044792488449,3.71077702814493,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+rvg04e-1066,Evergem Opwaarts,Ringvaart,51.0877134881911,3.6594010889156,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+rvg04x-1066,Zwijnaarde,Ringvaart,51.0136279358373,3.72110104301922,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+rvg05a-1066,Merelbeke 700m Opwaarts,Ringvaart,51.01176661941,3.73874789229143,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zen03a-1066,Eppegem,Zenne,50.9605215675157,4.45565127631139,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zen04a-1066,Vilvoorde Sluisstraat,Zenne,50.9176726362598,4.4205596749182,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes01a-SF-1066,Prosperpolder SF,Zeeschelde,51.3483317661253,4.23793654403513,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+zes07g-SF-B-1066,Lillo Meetpaal-Boven SF,Zeeschelde,51.3195069409791,4.27588434385289,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+zes07g-SF-O-1066,Lillo Meetpaal-Onder SF,Zeeschelde,51.3195069433486,4.27588433983218,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+zes09x-SF-1066,Liefkenshoek Veer SF,Zeeschelde,51.2966845761673,4.28586479120805,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+zes14u-1066,Zwijndrecht Bazeput,Waterloop van de Hoge Landen,51.2589401575299,4.29495611421824,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes19a-SF-B-1066,Oosterweel-Boven SF,Zeeschelde,51.2369683624129,4.37056211394747,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+zes22m-1066,Burchtse Weel,Zeeschelde,51.2052030641949,4.35867008050332,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes24a-SF-1066,Kruibeke SF,Zeeschelde,51.1753993724257,4.32677427195182,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+zes25a-1066,Kruibeke GOG Grote Uitlaat,Zeeschelde,51.1713880623174,4.32333229659431,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes25b-1066,Kruibeke GOG Kapelbeek,Ringgracht KBR,51.1692652542783,4.31677148626586,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes25l-1066,Kruibeke-Bazel GOG Grote Uitwatering,Zeeschelde,51.1491881426566,4.32536831745996,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes25o-1066,Kruibeke-Bazel GOG Langegaanw,Ringgr KBR,51.1464480128606,4.3079507443211,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes25q-1066,Kruibeke-Bazel GOG Kallebeek,Zeeschelde,51.1439833229366,4.32428705680676,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes25t-1066,Rupelmonde Sluis Fassaat GOG,Zeeschelde,51.1359646843388,4.32230864155543,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes28a-SF-1066,Hemiksem SF,Zeeschelde,51.1433201854815,4.33013208685328,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+zes39c-SF-1066,Weert SF,Zeeschelde,51.0917308124327,4.17264871098092,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+zes40b-1066,Lippenbroek GOG,Zeeschelde,51.086642697682,4.17239880419719,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes41k-1066,Zwijn GOG,Zeeschelde,51.0590506928224,4.18607906962556,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes43a-1066,Wal GOG,Zeeschelde,51.0469495390688,4.18478566805995,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes51n-1066,Bergenmeersen 1 GOG,Zeeschelde,51.0190443124544,3.96929279963773,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes54m-SF-1066,Schellebelle SF,Zeeschelde,51.0134341573453,3.93081061343142,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+zes57a-1066,Melle tij,Zeeschelde,51.0043253963864,3.80534724074931,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes57a-SF-1066,Melle SF,Zeeschelde,51.0043254024176,3.80534723706138,,,Belgium,Hydrological Information Centre - HIC (Flanders),
+zes57n-1066,Destelbergen,Zeeschelde,51.0438973238344,3.79255124195868,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zes61a-1066,Melle,Vuntebeek,50.9950619499746,3.8250998464087,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zwv02c-1115,Lozen Afwaarts,Zuid-Willemsvaart,51.2086684298069,5.55906066540858,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zwv02f-1115,Lozen Opwaarts,Zuid-Willemsvaart,51.2068896827952,5.55357713348472,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zwv03f-1115,Bocholt Opwaarts,Zuid-Willemsvaart,51.1873439008716,5.56602937487721,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW
+zwv08a-1115,Dilsen-Stokkem,Zuid-Willemsvaart,51.0476527468703,5.70232156574413,,,Belgium,Hydrological Information Centre - HIC (Flanders),TAW

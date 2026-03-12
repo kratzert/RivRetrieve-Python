@@ -1,0 +1,52 @@
+[
+  [
+    "station_no",
+    "station_name",
+    "station_latitude",
+    "station_longitude",
+    "site_name",
+    "river_name",
+    "CATCHMENT_SIZE",
+    "station_gauge_datum_postfix"
+  ],
+  [
+    "dem04a-1066",
+    "Zichem/Demer",
+    "51.0025986122072",
+    "4.99157972958855",
+    "Zichem",
+    "Demer",
+    "123,45 km²",
+    "TAW"
+  ],
+  [
+    "tmp01-1066",
+    "Temp Station/Schelde",
+    "51.1000",
+    "4.1000",
+    "Temp Station",
+    "Schelde",
+    "1,00 km²",
+    "TAW"
+  ],
+  [
+    "zes00a-1066",
+    "Virtual/Leie",
+    "51.2000",
+    "4.2000",
+    "Virtual",
+    "Leie",
+    "10,00 km²",
+    "TAW"
+  ],
+  [
+    "badcoords-1066",
+    "NoCoords/River",
+    "",
+    "",
+    "NoCoords",
+    "River",
+    "5,00 km²",
+    "TAW"
+  ]
+]

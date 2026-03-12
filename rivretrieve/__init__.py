@@ -2,6 +2,7 @@
 
 from .australia import AustraliaFetcher
 from .base import RiverDataFetcher
+from .belgium_flanders import BelgiumFlandersFetcher
 from .brazil import BrazilFetcher
 from .canada import CanadaFetcher
 from .chile import ChileFetcher
