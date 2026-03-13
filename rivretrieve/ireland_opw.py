@@ -153,8 +153,7 @@ class IrelandOPWFetcher(base.RiverDataFetcher):
     def _build_timeseries_url(gauge_id: str, parameter_code: str) -> str:
         padded_id = IrelandOPWFetcher._normalize_gauge_id(gauge_id, pad=True)
         return (
-            f"{IrelandOPWFetcher.BASE_URL}/hydro-data/data/internet/stations/0/"
-            f"{padded_id}/{parameter_code}/year.json"
+            f"{IrelandOPWFetcher.BASE_URL}/hydro-data/data/internet/stations/0/{padded_id}/{parameter_code}/year.json"
         )
 
     @staticmethod
