@@ -1,0 +1,12 @@
+[
+  {
+    "stationparameter_name": "S",
+    "ts_shortname": "WEB.Day.Mean",
+    "ts_unitsymbol": "m",
+    "columns": "Timestamp,Value,Quality Code",
+    "data": [
+      ["2025-01-01T00:00:00.000Z", 1.23, 31],
+      ["2025-01-02T00:00:00.000Z", 1.45, 31]
+    ]
+  }
+]

@@ -1,0 +1,492 @@
+gauge_id,station_name,river,latitude,longitude,altitude,area,country,source,vertical_datum
+10042,Arklow Town Br,AVOCA,52.79826472,-6.152069167,-1.281,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+10047,Glenavon Park,KILL 0'THE GRANGE,53.247361,-6.12625,8.86,6.27,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+10048,Cherry Wood,LOUGHLINSTOWN,53.246972,-6.137667,15.907,20.04,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+10049,Meadow Vale Park,DEANSGRANGE,53.269639,-6.153056,30.005,1.46,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+10050,Brides Glen,Shanganagh,53.238742,-6.146892,41.333,10.75,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+10051,Powerscourt House,Dargle,53.181773,-6.175674,72.026,58.12,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+10060,Arklow Harbour,AVOCA HARBOUR,52.79204667,-6.145231389,0.021,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+10062,Ravenswell Road,Dargle,53.208295,-6.104617,-0.364,128.04,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+1041,Sandy Mills,DEELE,54.83831806,-7.575758056,3.655,113.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+1042,Dreenan,FINN [Donegal],54.7987225,-7.763996389,14.29,353.0,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+1043,Ballybofey,FINN [Donegal],54.79976861,-7.790749444,13.244,319.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+11001,Boleany,OWENAVORRAGH,52.64369028,-6.270794167,5.986,148.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+12001,Scarrawalsh,SLANEY,52.54851278,-6.550221667,6.027,1036.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+12002,Enniscorthy,SLANEY,52.50230694,-6.566852222,0.056,1319.92,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+12005,Tullow Town Br U/S,SLANEY,52.80201306,-6.738373056,67.462,249.12,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+12006,Tullowbeg,SLANEY,52.79606417,-6.738396944,64.948,251.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head
+12007,St. Johns Br,URRIN,52.49329083,-6.573358611,-0.538,115.43,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+12008,Rafter Br D/S,SLANEY,52.5009175,-6.564173056,-0.418,1320.66,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+12009,Rafter Br U/S,SLANEY,52.50106139,-6.564197778,-0.428,1320.66,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+12043,Ballynagee,HORSE RIVER,52.326228,-6.48205199,40.119,2.72,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+12044,Whitemill South,HORSE RIVER,52.328281,-6.47393299,25.998,3.5,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+12061,Edermine Br,SLANEY,52.45409389,-6.562578056,-1.883,5.54,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+12063,Assaly,ASSALY ESTY,52.27905389,-6.43554,-1.123,39.8,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+12064,Ferrycarrig Br,SLANEY,52.35083694,-6.511451944,-2.036,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+13070,Ladys Island,LADY'S ISLAND LAKE,52.21100444,-6.383141111,-2.558,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+13072,Sigginstown,L. TACUMSHIN,52.20193,-6.45444,-1.453,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+13081,Cull Pump House,BALLYTEIGE LAGOON,52.20454361,-6.629580556,-2.611,22.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14001,Carlow,BARROW,52.83422444,-6.938009444,43.168,2241.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14003,Borness,BARROW,53.13224944,-7.308428889,67.339,276.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14004,Clonbulloge,FIGILE,53.25865583,-7.086853611,63.933,268.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14005,Portarlington,BARROW,53.16181278,-7.192953333,62.494,406.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14006,Pass Bridge,BARROW,53.14592333,-7.070581111,56.361,1096.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14007,Derrybrock,STRADBALLY,53.03905167,-7.085032222,56.486,115.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14009,Cushina,CUSHINA,53.19432139,-7.174493056,62.369,68.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14011,Rathangan,SLATE,53.22061583,-6.992655278,67.102,163.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14013,Ballinacarrig,BURREN,52.82426389,-6.898153889,50.787,155.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14018,Royal Oak,BARROW,52.70019833,-6.981458056,31.098,2415.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14019,Levitstown,BARROW,52.93537778,-6.949797222,46.731,1660.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14022,Barrow New Bridge,BARROW,52.84613806,-6.931752222,44.788,2050.5,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14029,Graiguenamanagh U/S,BARROW,52.54075444,-6.950884444,9.262,2762.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14056,Millford Lock,CANAL,52.77818806,-6.963588889,39.971,3.46,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14067,St. Mullins,BARROW ESTY,52.4854725,-6.92429,-1.564,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14120,Chapel Street,POUND,53.119556,-7.337111,71.686,13.16,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14121,Manor Road,POUND,53.115639,-7.338889,73.415,12.12,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14122,Turf Market,DUISKE,52.540332,-6.95592,11.523,24.41,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14123,Coolroe,DUISKE,52.5472,-6.9917,61.883,10.88,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14124,Rathstewart,---,52.99423023,-6.98381777,52.511,,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+14125,Prusselstown,Moneen,53.008058,-6.96705399,56.157,27.26,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15001,Annamult House,KINGS,52.54845833,-7.199625,22.118,443.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15002,Johns Bridge (Nore),NORE,52.65339167,-7.250432778,41.478,1605.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15003,Dinin Bridge,DININ,52.715345,-7.291780833,56.128,298.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15004,McMahons Bridge,NORE,52.86702444,-7.379327222,73.835,491.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15005,Durrow Foot Bridge,ERKINA,52.84706417,-7.397986667,74.36,379.5,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15006,Brownsbarn,NORE,52.50076972,-7.091699722,4.516,2388.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15007,Kilbricken,NORE,52.95925167,-7.461605556,84.639,339.76,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15008,Borris-in-Ossory,NORE,52.94309056,-7.644112778,97.015,115.5,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15009,Callan,KINGS,52.54510056,-7.388463056,60.318,201.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15010,Ballyboodin Mills,GOUL,52.84692167,-7.4540025,76.177,159.06,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15011,Mount Julliet,NORE,52.53125111,-7.189298889,18.508,2315.5,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15050,Blackfriars Bridge,BREAGAGH [KILKENNY],52.654644,-7.258209,43.982,71.04,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15104,Sycamores,NORE,52.66592,-7.256381944,41.655,1569.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15105,Archers Grove,NORE,52.64154139,-7.217500556,37.514,1689.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+15107,Ballylarkin,Nuenna,52.735137,-7.41668299,82.409,35.34,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16001,Athlummon,DRISH,52.68610139,-7.739544167,105.316,140.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16002,Beakstown,SUIR,52.64883889,-7.864804167,85.913,512.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16003,Rathkennan,CLODIAGH,52.62930278,-7.924926389,72.187,246.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16004,Thurles,SUIR,52.67906389,-7.809622222,93.342,228.74,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16005,Aughnagross,MULTEEN,52.52349611,-8.014062778,67.824,87.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16006,Ballinaclogh,MULTEEN,52.51946889,-8.022296389,67.318,75.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16007,Killardry,AHERLOW,52.41727611,-7.975713611,44.72,273.35,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16008,New Bridge (Suir),SUIR,52.45946972,-7.997889722,52.244,1090.5,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16009,Cahir Park,SUIR,52.35767333,-7.922936944,35.1,1602.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16010,Anner,ANNER,52.381991,-7.62831999,17.496,422.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16011,Clonmel,SUIR,52.35152528,-7.694598056,14.257,2143.97,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16012,Tar Bridge,TAR,52.27300361,-7.842907222,27.462,228.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16013,Fourmilewater,NIRE,52.27379944,-7.756046111,31.238,91.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16051,Clobanna,ROSSESTOWN,52.71583139,-7.791764444,101.46,34.19,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16062,Carrick on Suir,SUIR ESTY,52.34410389,-7.410373611,-0.605,2775.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16073,Marlfield Reservoir,Marfield Lake,52.349257,-7.747831,29.839,18.72,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16115,Sheeps Br Weir,JOHN'S RIVER,52.224244,-7.127888,1.418,28.8,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16125,Piltown,PIL,52.34931667,-7.324866944,1.627,83.65,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16128,Tramore Rd Rdbt,JOHN'S RIVER,52.24692222,-7.119044444,3.091,41.71,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+16129,Johns Bridge (Suir),JOHN'S RIVER,52.25630639,-7.110891944,2.807,51.24,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+16136,Small Br Templemore,MALL,52.79265111,-7.837186944,111.050003051758,19.6,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+16137,Newcastle,SUIR,52.27491472,-7.810274722,24.301,1941.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16139,Knocklofty,SUIR,52.33673361,-7.789266111,19.127,2105.5,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16146,Sandy Banks,SUIR,52.343133,-7.74194399,16.989,2121.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16147,Joyces Lane,SUIR,52.35155588,-7.70670506,17.112,2140.59,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16148,Workhouse Br,SUIR,52.34965744,-7.7168139,19.285,2139.69,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+16155,Ardfinnan,SUIR,52.309754,-7.878913,28.383,1677.93,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16156,Templemore,MALL,52.796265,-7.84057999,108.578,19.3,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16157,Gleann Beag,Glen,52.271401,-7.81088799,28.186,8.1,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16158,Borrisoleigh,Cromoge,52.757323,-7.97084899,106.736,11.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16159,Grove,Clashawley,52.458936,-7.67035299,46.35,158.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+16160,Adelphi Quay,JOHN'S RIVER,52.25966639,-7.102433056,-2.74,3508.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+17061,Dunmore East,WATERFORD HARBOUR,52.14752333,-6.990828889,-2.727,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18001,Mogeely,BRIDE [Waterford],52.09955722,-8.064303333,8.478,335.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18002,Ballyduff,BLACKWATER [MUNSTER],52.14434472,-8.051951667,7.03,2338.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18003,Killavullen,BLACKWATER [MUNSTER],52.14919833,-8.515394444,33.519,1258.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18005,Downing Br,FUNSHION,52.16853417,-8.258959722,22.193,378.59,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18019,Fr. Murphys Br,GLEN,52.12074139,-8.889025278,86.853,73.12,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18024,Glenavuddig Br,FUNSHION,52.24857052,-8.405723056,52.958,248.89,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18053,Glandalane,BLACKWATER [MUNSTER],52.14981139,-8.220838333,17.856,2275.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18055,Mallow Railway Br,BLACKWATER [MUNSTER],52.13112457,-8.65671929,42.574,1178.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18056,Mallow Town Br U/S,BLACKWATER [MUNSTER],52.13234,-8.641607778,40.8,1178.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18057,Mallow Town Br D/S,BLACKWATER [MUNSTER],52.1322175,-8.641036667,40.76,1178.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18061,Youghal Quay,Youghal Harbour,51.957179,-7.847564,-3.268,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18102,Castletownroche Weir,AWBEG,52.17369972,-8.46025,37.297,344.92,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18105,Castlelands,BLACKWATER [MUNSTER],52.13470525,-8.62286074,39.638,1209.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18106,Fermoy Br u/s,BLACKWATER [MUNSTER],52.13856806,-8.276633611,21.201,1749.22,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18107,Fermoy Br D/S,BLACKWATER [MUNSTER],52.13955054,-8.27539831,19.2,1750.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18108,Araglin Br,ARAGLIN,52.16689528,-8.220864444,23.02,125.5,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18109,Lombardstown,BLACKWATER [MUNSTER],52.12261472,-8.783208889,52.808,970.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18110,Kilbrin Road,ALLOW,52.17898944,-8.904015556,79.133,123.47,Ireland,Office of Public Works (OPW) Ireland,Malin Head
+18111,Church Street,DALUA,52.17876639,-8.910823333,80.754,139.77,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18112,Keale Br,BLACKWATER [MUNSTER],52.089673,-9.028653,85.293,322.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18113,Ahane Br,OWENTARAGLIN,52.09607583,-9.132805278,108.98,76.82,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18114,Clashmorgan,LYRE,52.08298722,-8.681001111,115.705,20.27,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18115,Jordans Bridge,CLYDAGH [Cork],52.07804806,-8.625178889,89.907,67.93,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18117,Fermoy Mill,BLACKWATER [MUNSTER],52.1397198,-8.27195591,18.213,1750.18,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18119,Ballydahin,BLACKWATER [MUNSTER],52.13139014,-8.65421144,42.413,1190.19,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18120,Nursetownbeg,LYRE,52.08298729,-8.68100108,115.771,20.2,Ireland,Office of Public Works (OPW) Ireland,Malin Head
+18121,Shronebeha,Glen,52.11067662,-8.88891283,86.857,71.25,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18122,Gortageen,BLACKWATER [MUNSTER],52.08987999,-9.03031378,85.333,319.33,Ireland,Office of Public Works (OPW) Ireland,Malin Head
+18123,Greenane,ALLOW,52.178811,-8.903866,79.142,123.47,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+18124,Fermoy U/S rowing,BLACKWATER [MUNSTER],52.138457,-8.27956099,21.187,1767.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19001,Ballea,OWENBOY,51.82208111,-8.4215625,8.548,106.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19044,Kilmona Bridge,MARTIN,51.98953389,-8.5885725,74.168,39.59,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19045,Gothic Bridge,BLARNEY,51.92805667,-8.558214444,27.861,22.4,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19054,Ballyvourney,Sullane,51.93931,-9.16104,116.823,71.59,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19055,Ballymakera,Sullane,51.934472,-9.146258,111.938,75.24,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19056,Ballincolly,Glen Tributary,51.92285,-8.45611,55.603,3.65,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19057,Glen Park,GLEN,51.91294,-8.45212,35.84,7.85,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19058,Blackpool Retail Park,Bride (Cork),51.91658,-8.47343,10.508,10.76,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19059,Glennamought Bridge,Glen Tributary,51.929203,-8.477429,40.65,17.41,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19068,Ballycotton,SEA,51.82818306,-8.001472778,-2.177,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19069,Ringaskiddy NMCI,SEA,51.83497,-8.30558,-2.87,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19094,Inniscarra Headrace,LEE,51.900141,-8.661891,0.0,786.52,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+19095,Carrigadrohid Headrace,LEE,51.89700912,-8.86418388,0.0,617.15,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+19100,Macroom WWTP,Sullane,51.905806,-8.946694,62.488,218.02,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19101,Macroom Town Bridge,Sullane,51.906031,-8.962501,64.668,211.01,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19102,Waterworks Weir,LEE,51.893989,-8.510053,2.0,1185.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19103,Ovens Bridge,Bride (Cork),51.880537,-8.654934,20.973,117.82,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19104,Morris's Bridge,Laney,51.92933,-8.93616,100.547,82.11,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19105,Muskerry,Shournagh,51.914717,-8.60186,16.168,209.13,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19106,Cooldaniel,LEE,51.85761,-9.02229,66.257,171.54,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19107,Dripsey Bridge,Dripsey,51.915989,-8.746053,46.401,82.17,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19108,Bawnafinny Bridge,BLARNEY,51.93005,-8.58539,24.234,88.5,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19109,Inniscarra Tailrace,LEE,51.89202,-8.63343,11.343,791.14,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19110,Cooleen Bridge,TOON,51.871,-9.07412,67.784,29.97,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19111,Killaclug,Foherish,51.911624,-9.02315,77.182,74.83,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19112,Coolmuckey Br,Bride (Cork),51.86084,-8.783723,42.847,70.21,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19113,County Hall,Curragheen,51.892643,-8.509638,0.886,47.62,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19114,Carrigrohane Bridge,Curragheen,51.889797,-8.540992,3.697,46.4,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19115,Killamucky,Kilta,51.929182,-8.05982899,16.079,21.09,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19116,Dungourney Bridge,Dungourney,51.967773,-8.09837799,65.374,21.3,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19117,Midleton Town Park,Dungourney,51.913101,-8.16597499,1.876,52.14,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19119,Lisgoold Bridge,Owennacurra,51.971604,-8.21581499,48.732,48.25,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19160,Currach Club,LEE,51.901606,-8.44391,-2.199,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19161,St. Patrick's Quay (East),LEE ESTY,51.900174,-8.46393,-4.804,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19162,Fitzgerald's Park,LEE,51.896472,-8.498278,0.151,1185.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19163,Pope's Quay,LEE ESTY,51.900999,-8.473513,-2.943,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19164,Mercy Hospital,LEE,51.90005,-8.48383,-2.954,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19165,Bailick Road U/S,Owennacurra,51.902392,-8.171446,-1.275,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19166,Bailick Road D/S,Owennacurra,51.899643,-8.170463,-2.004,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+19167,Tivoli Docks,LEE ESTY,51.902977,-8.40005099,-3.535,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+20001,Bandon,BANDON,51.74695444,-8.731538056,8.789,406.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+20002,Curranure,BANDON,51.76523222,-8.682671667,4.167,431.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+20008,Longbridge Dunmanway,BANDON,51.72469917,-9.097886944,56.46,104.1,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+20015,Ardcahan Bridge,BANDON,51.74913611,-9.097986667,70.295,97.08,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+20016,Bealaboy  Bridge,BANDON,51.70943583,-9.075758611,51.579,158.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+20019,Clonakilty,FEALGE,51.62263447,-8.89423527,3.067,21.2,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+20020,Skibbereen,Ilen,51.551701,-9.264979,-1.008,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+21018,Sneem D/S,Sneem,51.84175,-9.89931,6.242,58.77,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+21020,Bridge Street,Finnihy,51.88108,-9.58579,1.596,31.47,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+21021,Killowen,KEELNAGOWER,51.884792,-9.577407,5.327,2.75,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+21022,Orchard Grove,Finnihy,51.884092,-9.587665,5.37,27.79,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+21023,Bantry Library,MILL RIVER,51.678456,-9.44923499,7.938,2.63,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+21062,Kenmare Pier,SEA,51.87218,-9.58898,-2.125,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+21063,Bantry,SEA,51.678756,-9.46522599,-1.778,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+22003,Riverville,MAINE,52.19762111,-9.570731944,7.989,272.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+22005,Torc Weir,OWENGARRIFF,52.00097667,-9.506219722,123.812,8.03,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+22006,Flesk Bridge,FLESK(LAUNE),52.04803417,-9.497946944,21.153,325.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+22009,White Bridge,DEENAGH ( LAUNE),52.05492056,-9.527219167,20.504,35.4,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+22016,Old Weir Bridge,LONG RANGE,52.00743556,-9.549443333,17.442,122.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+22035,Laune Bridge,LAUNE,52.06154972,-9.617092222,16.119,559.7,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+22061,Castlemaine,MAINE ESTY,52.167595,-9.70277,-1.153,348.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+22071,Tomies Pier,L.    LEANE,52.05684333,-9.605025,17.174,557.7,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+22082,BVM Park,L.    LEANE,52.02336167,-9.506490556,17.276,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23001,Inch Bridge (Galey),GALEY,52.46805194,-9.534399444,7.107,192.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23002,Listowel,FEALE,52.44265528,-9.475689167,13.928,646.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23012,Ballymullen,LEE (KERRY),52.26005944,-9.691574722,0.779,60.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23030,Sleveen M/C,BRICK,52.43261611,-9.636918056,-0.965,175.09,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23039,Sleveen Back Channel Rattoo Pump House,BRICK,52.438583,-9.636028,-1.657,175.09,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23040,Sleeveen Back Channel 100m US,BRICK,52.437954,-9.635042,-0.61,175.09,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23041,Sleeveen Main Channel DS,BRICK,52.438709,-9.635673,-1.986,177.85,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23042,Sleeveen Back Channel D/S,BRICK,52.441226,-9.636899,-1.189,178.1,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23044,Lisloose,BALLOONAGH,52.288343,-9.699101,41.209,1.79,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23045,Ballyseedy,LEE (KERRY),52.25618,-9.64171,10.928,31.93,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23046,Spring Water Lane,Lissardboola,52.254746,-9.689834,2.523,13.46,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23047,Oakpark Road,BIG [KERRY],52.28572,-9.6814,31.322,9.03,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23048,Abbeydorney D/S,BRICK,52.34722,-9.68818,10.271,8.37,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23049,Manor West,Ballybeggan,52.26334,-9.6757,7.145,12.03,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23050,Riverside Close,BRICK,52.344863,-9.688059,12.699,6.39,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23051,Athea D/S,GALEY,52.461378,-9.286944,66.404,36.3,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23052,Athea U/S,GALEY,52.460679,-9.286718,66.955,36.3,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23061,Ferry Bridge,FEALE ESTY,52.46900083,-9.633367222,-1.182,1117.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23062,Blennerville,LEE ESTY,52.25789889,-9.735782222,-1.296,98.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23063,Ballyard,LEE ESTY,52.2627675,-9.711964722,-1.313,61.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23066,Fenit,SEA,52.26967101,-9.86213048,-3.565,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+23068,Moneycashen,FEALE ESTY,52.48275028,-9.680923333,-0.716,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24001,Croom,MAIGUE,52.51922417,-8.718468611,14.374,770.36,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24002,Grays Bridge,CAMOGE,52.51298806,-8.619798056,44.896,231.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24004,Bruree,MAIGUE,52.42322472,-8.660843889,49.387,242.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24005,Athlacca,MORNINGSTAR,52.45876611,-8.651165833,45.561,131.95,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24006,Creggane,MAIGUE,52.39554417,-8.684918889,56.439998626709,88.0,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+24008,Castleroberts,MAIGUE,52.54344083,-8.767416389,6.134,805.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24009,Adare Manor,MAIGUE,52.56441306,-8.7773675,1.902,839.72,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24011,Deel Bridge,DEEL,52.44214472,-9.031112778,40.296,281.25,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24012,Grange Bridge,DEEL,52.4628125,-9.018853889,36.759,366.28,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24013,Rathkeale,DEEL,52.52096028,-8.943546111,28.693,426.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24034,Riversfield,LOOBAGH,52.38757417,-8.540769444,92.368,54.66,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24047,Rosbrien Railway Br,BALLINACURRA,52.63608639,-8.632613611,3.661,31.79,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24053,Blackabbey,Adare River,52.567713,-8.79192199,-0.164,3.04,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24061,Ferry Bridge,MAIGUE ESTUARY,52.62122556,-8.764818333,-2.624,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24062,Adare Quay,MAIGUE ESTUARY,52.56886722,-8.798123333,0.283,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24063,Limerick Dock,SHANNON ESTY,52.65854,-8.644473,-4.479,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24064,Foynes,SHANNON ESTY,52.614194,-9.101333,-3.023,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24067,Normoyles Bridge,GREANAGH,52.55980917,-8.825606111,1.409,83.74,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24082,Islandmore Weir,MAIGUE,52.50911583,-8.715255278,18.703,762.84,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+24100,Gortboy Hotel,DEEL,52.44866611,-9.050871111,47.077,39.87,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25001,Annacotty,MULKEAR,52.66927583,-8.529146944,7.652,646.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25002,Barringtons Bridge,NEWPORT,52.64494583,-8.475033333,25.022,223.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25003,Abington,MULKEAR,52.63186778,-8.421220833,34.482,397.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25004,New Bridge (Bilboa),BILBOA,52.59164417,-8.314668889,45.558,122.26,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25005,Sunville,DEAD,52.58146778,-8.329348056,42.783,190.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25006,Ferbane,BROSNA,53.2699375,-7.828063056,38.373,1207.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25011,Moystown,BROSNA,53.23825306,-7.932055,33.043,1227.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25012,Groody Bridge,GROODY,52.66475972,-8.583883056,3.106,65.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25014,Millbrook,SILVER,53.21954639,-7.797950278,44.271,164.42,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25015,Pollagh,BROSNA,53.28134944,-7.715862222,40.777,918.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25016,Rahan,CLODIAGH,53.28079861,-7.615675556,45.104,253.78,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25017,Banagher,SHANNON,53.19378667,-7.993646667,30.33,7989.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25019,Conicar,CAPPAGH,53.11475111,-8.370801111,30.804,129.19,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25020,Killeen,KILLIMOR,53.149715,-8.303336111,36.5,197.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25021,Croghan,LITTLE BROSNA,53.10174167,-7.920461944,39.062,493.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25022,Syngefield,CAMCOR,53.09280472,-7.881580278,55.619,160.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25023,Milltown,LITTLE BROSNA,52.96926028,-7.897308611,60.547,113.86,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25024,New Bridge (Little Brosna),LITTLE BROSNA,53.13191167,-7.975743333,32.163,508.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25025,Ballyhooney,BALLYFINBOY,53.01445028,-8.205765556,42.395,182.79,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25027,Gourdeen,OLLATRIM,52.86841167,-8.168575,50.463,118.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25029,Clarianna,NENAGH,52.89162278,-8.207709722,41.901,292.67,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25030,Scarriff,GRANEY,52.90836472,-8.533124722,31.137,279.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25050,Mullingar,BROSNA,53.5278825,-7.334809444,88.398,54.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25056,Meelick Weir,SHANNON,53.17607972,-8.076067778,30.461,1514.9,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25058,Victoria Lock,CANAL,53.16877194,-8.080450833,30.438,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25061,Balls Bridge,ABBEY ESTY,52.666448,-8.61883899,0.014,11689.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25085,Clonsingle,ENNELL L.,53.43766056,-7.427646667,78.014,174.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25149,Tullamore,TULLAMORE RIVER,53.27321361,-7.501240833,55.835,112.02,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+25213,Cullion Fish Farm,BROSNA,53.549125,-7.351569167,93.225,33.6,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25301,Bracknagh Br,CLODIAGH RIVER,53.18079694,-7.504752222,83.487,26.85,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25308,Waterpark Bridge,NEWPORT,52.69524639,-8.464589444,30.952,123.46,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25309,Clonsingle Bridge,ANNAGH,52.68508066,-8.4319945,32.146,66.64,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25340,Fairyhill,STREAM,53.094038,-8.20259699,29.566,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25341,Portumna bridge,SHANNON,53.0915,-8.19565599,29.169,8806.68,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+25342,Ballymackeogh,MULKEAR,52.7073,-8.4406,34.404,98.8,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26001,Ballinamore,SHIVEN,53.48978639,-8.366001667,44.36,230.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26002,Rookwood,SUCK,53.56371722,-8.292659444,45.253,626.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26004,Bookala,ISLAND,53.70559278,-8.512283611,59.83,136.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26005,Derrycahill,SUCK,53.43176389,-8.262761667,39.876,1050.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26006,Willsbrook,SUCK,53.72935694,-8.466028333,58.647,182.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26007,Bellagill,SUCK,53.36168722,-8.238554167,37.421,1184.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26008,Johnstons Bridge,RINN,53.82777028,-7.862745833,37.186,292.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26009,Bellantra Bridge,BLACK [South Leitrim],53.85440056,-7.805156667,41.67,97.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26010,Riverstown,CLOONE,53.93121306,-7.815074167,45.794,100.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26014,Banada Bridge (Lung),LUNG,53.89701361,-8.557030556,64.804,215.14,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26015,Corrascoffey,ESLIN,53.88674,-7.918775,39.446,59.47,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26018,Bellavahan,OWENURE,53.82797889,-8.075036389,38.486,119.48,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26019,Mullagh,CAMLIN,53.73289833,-7.823796667,38.23,252.96,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26020,Argar,CAMLIN,53.76379167,-7.726045833,44.597,122.44,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26021,Ballymahon,INNY,53.56286722,-7.757922778,41.506,1071.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26022,Kilmore,FALLAN,53.71025667,-7.872534167,39.094,61.88,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26025,Cammagh,INNY,53.72893667,-7.407165278,60.447,376.81,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+26027,Athlone,SHANNON,53.42153389,-7.940756389,30.471,4600.65,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26028,Shannonbridge,SHANNON,53.2798725,-8.049581389,30.406,4999.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26074,Blackrock Lock,L.    ALLEN,54.048448,-8.05076799,43.827,442.1,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26075,Cuppanagh,L.    GARA,53.95833306,-8.406193056,62.555,495.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26079,Lough Rinn,LOUGH RINN,53.89398889,-7.851743889,37.036,165.26,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26082,Lough Derravaragh,L.    DERRAVARAGH,53.61131583,-7.30328,57.318,600.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26083,Mount Nugent,L.    SHEELIN,53.82095194,-7.283101944,60.97,256.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26085,Jamestown,SHANNON,53.92306028,-8.030334444,38.39,1379.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26086,Cuil Br,L.    GARA,53.92916139,-8.434545,62.512,461.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26087,Lomcloon,L.    GARA,53.92467278,-8.467148889,62.76,470.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26088,Hodsons bay,L.    REE,53.46740667,-7.987295,32.549,4588.38,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26089,Drumsna,SHANNON,53.92314444,-8.008172778,37.415,1389.62,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26093,Derry Bay,L.    REE,53.55610806,-7.849053333,34.324,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26104,Ballinalack,INNY,53.63141,-7.4747575,56.954,666.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26108,Boyle Abbey Bridge,BOYLE,53.97283889,-8.296673056,48.704,533.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26140,Ahascragh Pump House,BUNOWEN,53.39263583,-8.3310025,45.592,100.35,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26243,Lysterfield,STREAM,53.509258,-8.12438099,71.864,9.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26305,Glen Lough Lower,GLEN LOUGH (BLACK RVR.),53.64828333,-7.566716111,58.594,47.18,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26324,Carrick on Shannon,SHANNON,53.94320444,-8.0958,38.888,1301.21,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26333,Athlone Weir U/S,SHANNON,53.42289111,-7.9417775,32.137,4703.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26351,Derryholmes u/s,SHANNON,53.24801241,-8.0003645,30.108,6689.49,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26352,Derryholmes d/s,SHANNON,53.24395994,-7.99395353,30.108,6690.02,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26353,WOPS,SHANNON,53.26828507,-8.04051571,30.406,6575.53,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26354,Ballinasloe Town,SUCK,53.3295,-8.21493,34.377,1428.26,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26355,Ballinasloe Old Channel,SUCK,53.330403,-8.218688,35.289,1428.26,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26356,Raherbeg Rail Bridge,SUCK,53.273998,-8.086201,30.893,1590.63,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26357,Deerpark Bridge,Derrymullan Stream,53.33889,-8.261261,40.042,57.25,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26358,Bunowen Bridge,BUNOWEN,53.350497,-8.253343,37.658,136.32,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26359,Jamestown Weir U/S,SHANNON,53.928953,-8.030268,38.372,1379.89,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26374,Scragh Bog,STREAM,53.58537,-7.36614,104.043,1.37,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26401,Jamestown Weir D/S,SHANNON,53.928884,-8.03074,38.372,1379.89,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26402,Ballinasloe Rail Station,Derrymullen Stream,53.336079,-8.239177,36.815,61.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26404,Garrycastle,Al,53.419832,-7.885815,49.335,1.01,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26405,Rahara,STREAM,53.525362,-8.13081199,71.885,2.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26406,Atteagh,Cross,53.457476,-8.06526799,49.448,48.2,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26407,Curraghboy,Cross,53.478241,-8.10817599,59.513,32.8,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26408,Kiltoom Stream,STREAM,53.493835,-8.03516899,40.896,,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+26409,Carnagh East,STREAM,53.496471,-8.01937299,36.499,,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27001,Inch Bridge (Fergus),CLAUREEN,52.82529139,-9.036241944,9.566,48.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27002,Ballycorey,FERGUS,52.8700425,-8.974653889,4.319,562.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27003,Corrofin (Fergus),FERGUS,52.94376222,-9.061918889,15.769,166.42,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27004,Carnelly,MANUS,52.80847778,-8.936796667,0.431,15.86,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27011,Owenogarney RB,OWENOGARNEY,52.73270444,-8.771001111,1.687,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27023,Victoria Br,FERGUS,52.8485575,-8.990841667,2.969,55.64,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27025,Knox's Br,FERGUS,52.84817889,-8.972516667,0.006,58.74,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27026,Tulla Br,FERGUS,52.85395222,-8.970894167,0.003,520.4,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27028,Gaurus Br,GAURUS,52.85200583,-8.950469722,2.0,25.86,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27060,Doora Br,FERGUS,52.83877806,-8.967172222,-1.009,608.77,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27063,Carrigaholt Pier,SEA,52.600861,-9.69875,-3.16,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27064,Clarecastle Barrage U/S,FERGUS ESTY,52.817327,-8.96287999,-1.01,625.58,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27065,Clarecastle Barrage D/S,FERGUS ESTY,52.817269,-8.96285399,-1.015,625.58,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27066,Ennis Bridge,FERGUS ESTY,52.84667389,-8.981789444,0.855,58.32,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27068,Clarecastle Br,FERGUS,52.81539694,-8.961536389,-1.996,625.58,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27069,Shannon Airport,SHANNON ESTY,52.678729,-8.917933,-2.709,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+27092,Gaurus Landfill,DRAIN,52.84420833,-8.959100278,0.0,27.45,Ireland,Office of Public Works (OPW) Ireland,Malin Head
+28001,Ennistymon,INAGH,52.938687,-9.293853,15.995,169.53,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+28002,Doonbeg,DOONBEG,52.72837278,-9.521525278,1.985,136.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+28060,Doonbeg Pier,SEA,52.740481,-9.536606,-1.902,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29001,Rathgorgin,RAFORD,53.25784861,-8.679536389,28.894,119.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29002,Rahasan Turlough,DUNKELLIN,53.21694667,-8.807869167,13.032,332.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29004,Clarinbridge,CLARINBRIDGE,53.22934167,-8.874782778,2.462,123.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29007,Craughwell,DUNKELLIN,53.22788724,-8.73639511,16.902,278.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29009,Russaun,BEAGH,53.05341111,-8.772401944,32.228,124.4,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29010,Aggard Bridge,AGGARD,53.22081722,-8.743236389,20.747,45.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29011,Kilcolgan,DUNKELLIN,53.21410944,-8.871328889,1.152,373.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29014,Caherfinesker,LAVALLY,53.26558472,-8.790411389,14.569,83.81,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29015,Oranmore Bridge (Spring),SPRING,53.27176167,-8.929459167,1.08,40.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29020,Gortmackan,STREAM,53.18355667,-8.642417778,54.583,34.54,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29021,Ballycalahan,BALLYCALAHAN,53.09939306,-8.752354167,33.371,47.68,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29022,Kilcrimple,BEAGH,53.04550743,-8.73926398,40.809,10.92,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29023,Killafeen,OWENDAIULLOEG,53.02323944,-8.76927,32.958,89.61,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29024,Poulataggle,STREAM,53.05858833,-8.890516389,12.575,13.27,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+29025,Gort 1B,STREAM,53.058571,-8.890456,12.575,13.27,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30001,Cartronbower,AILLE [MAYO],53.74296694,-9.312859444,16.561,121.02,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30002,Ower Bridge,BLACK [Shrule],53.48148528,-9.160028611,9.087,178.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30004,Corrofin (Clare),CLARE,53.43755722,-8.863839167,21.907,695.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30005,Foxhill,ROBE,53.6581725,-9.154239722,25.697,250.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30007,Ballygaddy,CLARE,53.53082667,-8.874376667,29.7,458.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30017,Carrownagower,CONG CANAL,53.57355667,-9.289988889,13.363,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30031,Cong Weir,CONG,53.53859889,-9.28876,6.278,891.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30034,Cregaree,CONG CANAL,53.54568139,-9.289412778,11.053,887.66,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30037,Clooncormick,ROBE,53.65304917,-9.117483611,29.197,210.2,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30061,Wolfe Tone Bridge,CORRIB ESTY.,53.26998,-9.05567,-0.823,3111.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30081,Caher Pier,L.    MASK,53.61098694,-9.299348889,15.84,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30082,Burriscarra,L.    CARRA,53.73291167,-9.249068889,17.529,109.17,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30083,Annaghdown Pier,L.    CORRIB,53.38703222,-9.076388333,5.27,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30084,Cong Pier,L.    CORRIB,53.53059222,-9.275411667,5.39,893.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30089,Angligham,L     CORRIB,53.31790861,-9.066215556,5.245,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30096,Quincentennial Bridge,CORRIB,53.282653,-9.05982,5.09,3135.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30097,Galway Barrage D/S,CORRIB,53.276276,-9.05644,2.041,3135.4,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30098,Dangan,CORRIB,53.29616944,-9.0765925,5.676,3091.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30099,Galway Barrage (U/S),CORRIB,53.27799361,-9.056271944,5.518,3110.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30101,Oughterard D/S,OWENRIFF,53.43139917,-9.321143611,6.63,66.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+30117,Terryland,Terryland/Sandy River,53.285939,-9.041714,1.349,5.99,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+3055,Glaslough,MOUNTAIN WATER,54.32328083,-6.894343889,33.148,72.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+3058,Cappoge Bridge,BLACKWATER [MONAGHAN],54.26680861,-7.021296944,56.034,65.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+31061,Rossaveel Pier,COSTELLO BAY,53.26692472,-9.562056111,-2.789,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+31063,Spiddal,SEA,53.240418,-9.30904599,-2.964,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+31075,Shannagurraun,OWENBOLISKEY,53.27434528,-9.308306111,53.674,85.17,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+32013,Derrinkee - Sandpit,DERRYCRAFF,53.67494806,-9.546361667,32.653,48.32,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+32014,Owenmore Bridge (Owenmore),OWENMORE,53.69703861,-9.608128889,61.153,31.66,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+32060,Aasleagh Bridge,ERRIFF,53.61774917,-9.671156667,3.5,166.32,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+34001,Rahans (Moy),MOY,54.10392667,-9.157682778,2.974,1911.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34004,Ballylahan,MOY,53.93794028,-9.102895,9.197,935.5,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34005,Scarrownageeragh,GWEESTION,53.92268444,-9.060983333,15.083,309.11,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34007,Ballycarroon,DEEL [Crossmolina],54.08614,-9.344144444,20.483,156.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34009,Curraghbonaun,OWENGARVE,54.01308139,-8.834876667,41.456,117.11,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34010,Cloonacannana,MOY,53.967397,-8.930447,36.215,484.49,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34011,Gneeve Bridge,MANULLA,53.86394667,-9.181784167,20.424,144.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34013,Banada (Moy),MOY,54.03651944,-8.816832222,45.587,175.9,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34014,Mill Br (Clydagh),CLYDAGH,53.90906889,-9.184441944,14.339,52.85,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34018,Turlough,CASTLEBAR,53.88554528,-9.208034444,12.332,95.73,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34060,Enniscrone Pier,SEA,54.22019,-9.098473,-3.027,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34061,Ballina,MOY ESTY,54.11718417,-9.146781389,0.18,1923.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34071,Pollagh (Moy),MOY,53.9652838,-9.12962645,7.001,1797.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34081,Pontoon,L.    CULLIN,53.97766528,-9.208075833,8.012,819.4,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34082,Gortnaraby,L.    CONN,54.09336333,-9.298325556,7.366,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34083,Corryosla,L.    CONN,53.98538917,-9.227888611,8.138,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34114,Keenagh Deel Bridge,DEEL [Crossmolina],54.08130375,-9.514569457,54.615,65.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34117,Mullenmore Spring,DEEL [Crossmolina],54.09038181,-9.30899208,9.363,,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34118,Richmond Br.,DEEL,54.07782056,-9.37275274,32.054,146.81,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34119,Crossmolina,DEEL [Crossmolina],54.10011828,-9.31909478,15.719,154.16,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34120,Crossmolina Weir U/S,DEEL [Crossmolina],54.093213,-9.3249622,15.6,154.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34121,Crossmolina Weir D/S,DEEL [Crossmolina],54.0932731,-9.3231349,15.3,153.95,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34122,Knockglass House,DEEL [Crossmolina],54.12468,-9.29981,10.613,186.21,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34123,Chapel View,DEEL [Crossmolina],54.09638,-9.3208,15.156,154.09,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34124,Crossmolina U/S,DEEL [Crossmolina],54.10004,-9.3193,15.714,154.24,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+34125,Knockanelo,Scruffaunbrogue,54.122681,-9.16127299,16.269,6.58,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+35001,Ballynacarrow,OWENMORE [Sligo],54.14396972,-8.549059722,51.665,299.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+35002,Billa  Bridge,OWENBEG,54.17926583,-8.553355556,44.016,81.15,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+35003,Ballygrania,UNSHIN,54.18171889,-8.468384722,24.939,202.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+35004,Big Bridge,OWENMORE [Sligo],54.05928278,-8.511155556,54.606,116.96,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+35005,Ballysadare,BALLYSADARE,54.20919639,-8.509293889,19.939,642.3,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+35011,Dromahair,BONET,54.22705861,-8.299486667,18.391,294.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+35028,New Bridge (Manorhamilton),BONET,54.31981167,-8.201256111,47.896,47.07,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+35029,Four Masters Bridge,DROWES,54.459445,-8.260686389,16.619,104.58,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+35071,Lareen,L.    MELVIN,54.45230111,-8.240013611,25.628,101.77,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+35078,Templehouse Demesne,L.    TEMPLEHOUSE,54.11164083,-8.582531111,53.734,274.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+35087,Ballynary,L.    ARROW,54.06094,-8.30964999,53.243,66.5,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36010,Butlers Bridge,ANNALEE,54.04187944,-7.377087778,48.279,774.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36011,Bellahillan,ERNE,53.96262361,-7.457176111,48.273998260498,318.0,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+36012,Sallaghan,ERNE,53.88669139,-7.503405,61.325,263.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36013,Derreskit,CULLIES,54.01275778,-7.558754444,45.748,168.06,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36015,Anlore,FINN,54.177075,-7.177330833,47.684,98.27,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36018,Ashfield,DROMORE,54.07216528,-7.121145556,70.195,233.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36019,Belturbet,ERNE,54.09795806,-7.450869167,43.842,1501.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36020,Killywillin,BLACKWATER [NEWTOWNGORE],54.08032667,-7.691128333,51.221,93.4,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36021,Kiltybardan,YELLOW,54.05727611,-7.860888333,62.629,23.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36022,Aghacashlaun,AGHACASHLAUN,54.04731722,-7.926414167,69.11,27.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36037,Urney Bridge,ERNE,54.04891472,-7.405638889,44.412,870.33,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36042,Breffni Park,Cavan River,53.982018,-7.361984,60.578,58.53,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36073,Wood Island,ST. JOHN'S LAKE,54.05074222,-7.866589722,60.9449996948242,94.0,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+36083,Killykeen F.P.,L.   OUGHTER,54.007865,-7.470649444,44.335,592.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36084,Innisconnell P.,L.    OUGHTER,54.01697361,-7.458314167,44.369,592.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+36091,Ballinacur,GARADICE LAKE,54.05657056,-7.693641111,51.667,202.87,Ireland,Office of Public Works (OPW) Ireland,Poolbeg
+36171,Foalies Bridge,L. ERNE UPPER,54.1387075,-7.436896111,42.822,1520.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+38001,Clonconwall Ford,OWENEA,54.78170583,-8.365278056,23.487,109.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+38010,Glenties,Stracashel,54.793407,-8.286056,41.924,42.36,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+39001,New Mills,SWILLY,54.93111333,-7.817926111,17.746,50.71,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+39003,Tullyarvan,CRANA,55.14361194,-7.452395,16.665,99.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+39008,Gartan Bridge,LEANNAN,55.00025333,-7.894476111,66.985,77.39,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+39009,Aghawoney,LEANNAN,55.04378556,-7.720692778,18.102,207.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+39018,Burnfoot Pumping Station,Burnfoot,55.063793,-7.37533999,18.027,16.86,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+39061,Port Bridge,SWILLY ESTUARY,54.94844722,-7.714145833,0.194,111.46,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+40008,Ballyloskey,BALLYWILLY BROOK,55.247114,-7.262751,33.159,2.69,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+40060,Malin Head,SEA,55.37169,-7.33441199,-3.135,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6011,Moyles Mill,FANE,54.01157444,-6.596077222,53.645,230.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6012,Clarebane,FANE,54.09285639,-6.666055833,88.159,163.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6013,Charleville,DEE,53.85584278,-6.413995833,10.084,307.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6014,Tallanstown,GLYDE,53.92109194,-6.54957,13.97,270.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6015,Brewery Park,RAMPARTS,53.993583,-6.416611,2.985,14.76,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6021,Mansfieldstown,GLYDE,53.89660361,-6.444490556,5.688,321.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6025,Burley,DEE,53.8480375,-6.594340833,22.1,175.98,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6026,Aclint,LAGAN (GLYDE),53.92476528,-6.640019444,20.713,144.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6036,Ladyswell,Ramparts,53.993761621,-6.4055840475,3.556,18.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6058,Carlingford Town River,STREAM,54.04022,-6.193224,65.56,,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6060,Port Oriel,IRISH SEA,53.79899,-6.221712778,-3.0,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6061,Dundalk Port,SEA,54.00769064,-6.38555706,-2.868,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6062,Giles Quay,SEA,53.98444001,-6.23990263,-2.491,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+6063,Carlingford,IRISH SEA,54.052486,-6.192115,-3.447,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7001,Tremblestown,TREMBLESTOWN,53.56206472,-6.8556425,55.628,150.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7002,Killyon,DEEL [Raharney],53.48777083,-6.970770833,62.504,285.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7003,Castlerickard,BLACKWATER (ENFIELD),53.48552444,-6.92185,59.885,181.51,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7004,Stramatt,BLACKWATER (KELLS),53.79629806,-7.043613333,80.511,256.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7005,Trim,BOYNE,53.55640528,-6.791843889,50.128,1282.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7006,Fyanstown,MOYNALTY,53.72582306,-6.802883056,43.589,188.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7007,Boyne Aqueduct,BOYNE,53.45313722,-6.958843611,60.731,441.18,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7009,Navan Weir,BOYNE,53.64355944,-6.6720575,30.301,1610.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7010,Liscarton,BLACKWATER (KELLS),53.66326861,-6.7203325,35.521,717.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7011,O Dalys Bridge,BLACKWATER (KELLS),53.76898194,-7.011203333,77.848,294.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7012,Slane Castle,BOYNE,53.70721167,-6.5624225,14.008,2408.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7033,Virginia Hatchery,BLACKWATER (KELLS),53.83437028,-7.078577222,84.624,129.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7037,Blackcastle,BOYNE,53.65469667,-6.680586111,28.494,735.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7049,Tinkers Bridge,STREAM,53.34453417,-7.331587222,92.396,0.57,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7062,Mornington,Mornington,53.71942667,-6.254402778,0.906,0.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7081,Virginia,RAMOR L.,53.83161528,-7.090788333,81.163,246.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+7115,Newfield,Ushers Stream,53.72338,-6.340371,16.172,7.06,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+8008,Broadmeadow,BROADMEADOW,53.47492167,-6.231774722,5.946,108.2,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+8011,Duleek D/S,NANNY,53.65618444,-6.407709444,16.486,181.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+9001,Leixlip,RYEWATER,53.36866472,-6.490438611,27.271,215.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+9045,Botanic Gardens Backup,TOLKA,53.375409,-6.277211,11.451,137.91,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+9107,Tipper,MORELL,53.20466715,-6.6251927,112.253,10.6,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+9108,Killashee,Broadfield,53.19459943,-6.67240854,105.934,16.0,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+9109,Haynestown,HAYNESTOWN,53.21669795,-6.59351873,134.865,9.5,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+9110,Bluebell,Naas Canal Supply Stream,53.20790295,-6.67846311,93.739,0.99,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+9111,Hazelhatch,HAZELHATCH,53.330431,-6.529406,53.779,1.02,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+9112,Clonee Weir,TOLKA,53.41088806,-6.43245192,54.884,68.53,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15
+9369,Anglesea Road,Dodder,53.327878,-6.230943,2.004,106.22,Ireland,Office of Public Works (OPW) Ireland,Malin Head OSGM15

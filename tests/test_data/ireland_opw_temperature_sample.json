@@ -1,0 +1,35 @@
+[
+  {
+    "stationparameter_name": "TWater",
+    "ts_shortname": "WEB.Day.Min-Water-Temp",
+    "ts_unitsymbol": "\u00b0C",
+    "columns": "Timestamp,Value,Quality Code",
+    "data": [
+      ["2025-01-01T00:00:00.000Z", 4.0, 1],
+      ["2025-01-02T00:00:00.000Z", 5.0, 1],
+      ["2025-01-03T00:00:00.000Z", 6.0, 1]
+    ]
+  },
+  {
+    "stationparameter_name": "TWater",
+    "ts_shortname": "WEB.Day.Mean-Water-Temp",
+    "ts_unitsymbol": "\u00b0C",
+    "columns": "Timestamp,Value,Quality Code",
+    "data": [
+      ["2025-01-01T00:00:00.000Z", 8.0, 1],
+      ["2025-01-02T00:00:00.000Z", 8.5, 1],
+      ["2025-01-03T00:00:00.000Z", 9.0, 1]
+    ]
+  },
+  {
+    "stationparameter_name": "TWater",
+    "ts_shortname": "WEB.Day.Max-Water-Temp",
+    "ts_unitsymbol": "\u00b0C",
+    "columns": "Timestamp,Value,Quality Code",
+    "data": [
+      ["2025-01-01T00:00:00.000Z", 12.0, 1],
+      ["2025-01-02T00:00:00.000Z", 13.0, 1],
+      ["2025-01-03T00:00:00.000Z", 14.0, 1]
+    ]
+  }
+]

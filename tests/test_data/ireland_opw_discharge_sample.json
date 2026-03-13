@@ -1,0 +1,32 @@
+[
+  {
+    "stationparameter_name": "Q",
+    "ts_shortname": "WEB.Day.Min",
+    "ts_unitsymbol": "cumec",
+    "columns": "Timestamp,Value,Quality Code",
+    "data": [
+      ["2025-01-01T00:00:00.000Z", 1.0, 31],
+      ["2025-01-02T00:00:00.000Z", 2.0, 31]
+    ]
+  },
+  {
+    "stationparameter_name": "Q",
+    "ts_shortname": "WEB.Day.Max",
+    "ts_unitsymbol": "cumec",
+    "columns": "Timestamp,Value,Quality Code",
+    "data": [
+      ["2025-01-01T00:00:00.000Z", 21.0, 31],
+      ["2025-01-02T00:00:00.000Z", 22.0, 31]
+    ]
+  },
+  {
+    "stationparameter_name": "Q",
+    "ts_shortname": "WEB.Day.Mean",
+    "ts_unitsymbol": "cumec",
+    "columns": "Timestamp,Value,Quality Code",
+    "data": [
+      ["2025-01-01T00:00:00.000Z", 10.5, 31],
+      ["2025-01-02T00:00:00.000Z", 11.5, 31]
+    ]
+  }
+]
