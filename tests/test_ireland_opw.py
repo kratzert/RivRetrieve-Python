@@ -70,6 +70,50 @@ class TestIrelandOPWFetcher(unittest.TestCase):
         self.assertIn("/01234/S/year.json", request_url)
 
     @patch("rivretrieve.utils.requests_retry_session")
+    def test_get_data_stage_min_selects_daily_min_series(self, mock_requests_session):
+        mock_session = MagicMock()
+        mock_requests_session.return_value = mock_session
+        mock_session.get.return_value = self._mock_response(self._load_json("ireland_opw_stage_minmax_sample.json"))
+
+        result_df = self.fetcher.get_data(
+            gauge_id="26402",
+            variable=constants.STAGE_DAILY_MIN,
+            start_date="2025-01-01",
+            end_date="2025-01-02",
+        )
+
+        expected_df = pd.DataFrame(
+            {
+                constants.TIME_INDEX: pd.to_datetime(["2025-01-01", "2025-01-02"]),
+                constants.STAGE_DAILY_MIN: [0.9, 1.1],
+            }
+        ).set_index(constants.TIME_INDEX)
+
+        assert_frame_equal(result_df, expected_df)
+
+    @patch("rivretrieve.utils.requests_retry_session")
+    def test_get_data_stage_max_selects_daily_max_series(self, mock_requests_session):
+        mock_session = MagicMock()
+        mock_requests_session.return_value = mock_session
+        mock_session.get.return_value = self._mock_response(self._load_json("ireland_opw_stage_minmax_sample.json"))
+
+        result_df = self.fetcher.get_data(
+            gauge_id="26402",
+            variable=constants.STAGE_DAILY_MAX,
+            start_date="2025-01-01",
+            end_date="2025-01-02",
+        )
+
+        expected_df = pd.DataFrame(
+            {
+                constants.TIME_INDEX: pd.to_datetime(["2025-01-01", "2025-01-02"]),
+                constants.STAGE_DAILY_MAX: [1.8, 2.0],
+            }
+        ).set_index(constants.TIME_INDEX)
+
+        assert_frame_equal(result_df, expected_df)
+
+    @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_discharge_selects_daily_mean_series(self, mock_requests_session):
         mock_session = MagicMock()
         mock_requests_session.return_value = mock_session
@@ -86,6 +130,50 @@ class TestIrelandOPWFetcher(unittest.TestCase):
             {
                 constants.TIME_INDEX: pd.to_datetime(["2025-01-01", "2025-01-02"]),
                 constants.DISCHARGE_DAILY_MEAN: [10.5, 11.5],
+            }
+        ).set_index(constants.TIME_INDEX)
+
+        assert_frame_equal(result_df, expected_df)
+
+    @patch("rivretrieve.utils.requests_retry_session")
+    def test_get_data_discharge_selects_daily_min_series(self, mock_requests_session):
+        mock_session = MagicMock()
+        mock_requests_session.return_value = mock_session
+        mock_session.get.return_value = self._mock_response(self._load_json("ireland_opw_discharge_sample.json"))
+
+        result_df = self.fetcher.get_data(
+            gauge_id="19001",
+            variable=constants.DISCHARGE_DAILY_MIN,
+            start_date="2025-01-01",
+            end_date="2025-01-02",
+        )
+
+        expected_df = pd.DataFrame(
+            {
+                constants.TIME_INDEX: pd.to_datetime(["2025-01-01", "2025-01-02"]),
+                constants.DISCHARGE_DAILY_MIN: [1.0, 2.0],
+            }
+        ).set_index(constants.TIME_INDEX)
+
+        assert_frame_equal(result_df, expected_df)
+
+    @patch("rivretrieve.utils.requests_retry_session")
+    def test_get_data_discharge_selects_daily_max_series(self, mock_requests_session):
+        mock_session = MagicMock()
+        mock_requests_session.return_value = mock_session
+        mock_session.get.return_value = self._mock_response(self._load_json("ireland_opw_discharge_sample.json"))
+
+        result_df = self.fetcher.get_data(
+            gauge_id="19001",
+            variable=constants.DISCHARGE_DAILY_MAX,
+            start_date="2025-01-01",
+            end_date="2025-01-02",
+        )
+
+        expected_df = pd.DataFrame(
+            {
+                constants.TIME_INDEX: pd.to_datetime(["2025-01-01", "2025-01-02"]),
+                constants.DISCHARGE_DAILY_MAX: [21.0, 22.0],
             }
         ).set_index(constants.TIME_INDEX)
 
@@ -112,6 +200,59 @@ class TestIrelandOPWFetcher(unittest.TestCase):
         ).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
+
+    @patch("rivretrieve.utils.requests_retry_session")
+    def test_get_data_temperature_selects_daily_min_series(self, mock_requests_session):
+        mock_session = MagicMock()
+        mock_requests_session.return_value = mock_session
+        mock_session.get.return_value = self._mock_response(self._load_json("ireland_opw_temperature_sample.json"))
+
+        result_df = self.fetcher.get_data(
+            gauge_id="19001",
+            variable=constants.WATER_TEMPERATURE_DAILY_MIN,
+            start_date="2025-01-02",
+            end_date="2025-01-03",
+        )
+
+        expected_df = pd.DataFrame(
+            {
+                constants.TIME_INDEX: pd.to_datetime(["2025-01-02", "2025-01-03"]),
+                constants.WATER_TEMPERATURE_DAILY_MIN: [5.0, 6.0],
+            }
+        ).set_index(constants.TIME_INDEX)
+
+        assert_frame_equal(result_df, expected_df)
+
+    @patch("rivretrieve.utils.requests_retry_session")
+    def test_get_data_temperature_selects_daily_max_series(self, mock_requests_session):
+        mock_session = MagicMock()
+        mock_requests_session.return_value = mock_session
+        mock_session.get.return_value = self._mock_response(self._load_json("ireland_opw_temperature_sample.json"))
+
+        result_df = self.fetcher.get_data(
+            gauge_id="19001",
+            variable=constants.WATER_TEMPERATURE_DAILY_MAX,
+            start_date="2025-01-02",
+            end_date="2025-01-03",
+        )
+
+        expected_df = pd.DataFrame(
+            {
+                constants.TIME_INDEX: pd.to_datetime(["2025-01-02", "2025-01-03"]),
+                constants.WATER_TEMPERATURE_DAILY_MAX: [13.0, 14.0],
+            }
+        ).set_index(constants.TIME_INDEX)
+
+        assert_frame_equal(result_df, expected_df)
+
+    def test_available_variables_include_daily_extremes(self):
+        available = set(self.fetcher.get_available_variables())
+        self.assertIn(constants.STAGE_DAILY_MIN, available)
+        self.assertIn(constants.STAGE_DAILY_MAX, available)
+        self.assertIn(constants.DISCHARGE_DAILY_MIN, available)
+        self.assertIn(constants.DISCHARGE_DAILY_MAX, available)
+        self.assertIn(constants.WATER_TEMPERATURE_DAILY_MIN, available)
+        self.assertIn(constants.WATER_TEMPERATURE_DAILY_MAX, available)
 
     def test_unsupported_variable_raises(self):
         with self.assertRaises(ValueError):

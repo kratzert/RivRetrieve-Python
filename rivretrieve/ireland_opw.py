@@ -5,9 +5,15 @@ Data source:
     - station metadata endpoint: https://waterlevel.ie/hydro-data/data/internet/stations/stations.json
 
 Supported variables:
+    - ``constants.DISCHARGE_DAILY_MIN`` (m³/s)
     - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
+    - ``constants.DISCHARGE_DAILY_MAX`` (m³/s)
+    - ``constants.STAGE_DAILY_MIN`` (m)
     - ``constants.STAGE_DAILY_MEAN`` (m)
+    - ``constants.STAGE_DAILY_MAX`` (m)
+    - ``constants.WATER_TEMPERATURE_DAILY_MIN`` (°C)
     - ``constants.WATER_TEMPERATURE_DAILY_MEAN`` (°C)
+    - ``constants.WATER_TEMPERATURE_DAILY_MAX`` (°C)
 
 Data description and API:
     - see https://waterlevel.ie/
@@ -45,17 +51,41 @@ class IrelandOPWFetcher(base.RiverDataFetcher):
     VALID_ID_MIN = 1
     VALID_ID_MAX = 41000
     VARIABLE_MAP = {
+        constants.STAGE_DAILY_MIN: {
+            "parameter_code": "S",
+            "preferred_shortname": "WEB.Day.Min",
+        },
         constants.STAGE_DAILY_MEAN: {
             "parameter_code": "S",
             "preferred_shortname": "WEB.Day.Mean",
+        },
+        constants.STAGE_DAILY_MAX: {
+            "parameter_code": "S",
+            "preferred_shortname": "WEB.Day.Max",
+        },
+        constants.DISCHARGE_DAILY_MIN: {
+            "parameter_code": "Q",
+            "preferred_shortname": "WEB.Day.Min",
         },
         constants.DISCHARGE_DAILY_MEAN: {
             "parameter_code": "Q",
             "preferred_shortname": "WEB.Day.Mean",
         },
+        constants.DISCHARGE_DAILY_MAX: {
+            "parameter_code": "Q",
+            "preferred_shortname": "WEB.Day.Max",
+        },
+        constants.WATER_TEMPERATURE_DAILY_MIN: {
+            "parameter_code": "TWater",
+            "preferred_shortname": "WEB.Day.Min-Water-Temp",
+        },
         constants.WATER_TEMPERATURE_DAILY_MEAN: {
             "parameter_code": "TWater",
             "preferred_shortname": "WEB.Day.Mean-Water-Temp",
+        },
+        constants.WATER_TEMPERATURE_DAILY_MAX: {
+            "parameter_code": "TWater",
+            "preferred_shortname": "WEB.Day.Max-Water-Temp",
         },
     }
 

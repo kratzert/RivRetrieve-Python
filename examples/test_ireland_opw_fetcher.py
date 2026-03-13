@@ -8,9 +8,15 @@ logging.basicConfig(level=logging.INFO)
 
 gauge_id = "19001"
 variables = [
+    constants.DISCHARGE_DAILY_MIN,
     constants.DISCHARGE_DAILY_MEAN,
+    constants.DISCHARGE_DAILY_MAX,
+    constants.STAGE_DAILY_MIN,
     constants.STAGE_DAILY_MEAN,
+    constants.STAGE_DAILY_MAX,
+    constants.WATER_TEMPERATURE_DAILY_MIN,
     constants.WATER_TEMPERATURE_DAILY_MEAN,
+    constants.WATER_TEMPERATURE_DAILY_MAX,
 ]
 start_date = "2025-01-01"
 end_date = "2025-01-07"
