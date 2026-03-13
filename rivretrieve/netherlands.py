@@ -344,12 +344,14 @@ class NetherlandsFetcher(base.RiverDataFetcher):
         raw = df["Coordinatenstelsel"]
         if raw.apply(lambda value: isinstance(value, dict)).any():
             raw = raw.apply(
-                lambda value: cls._extract_nested_value(value, "EPSG")
-                or cls._extract_nested_value(value, "Code")
-                or cls._extract_nested_value(value, "Waarde")
-                or cls._extract_nested_value(value, "Id")
-                if isinstance(value, dict)
-                else value
+                lambda value: (
+                    cls._extract_nested_value(value, "EPSG")
+                    or cls._extract_nested_value(value, "Code")
+                    or cls._extract_nested_value(value, "Waarde")
+                    or cls._extract_nested_value(value, "Id")
+                    if isinstance(value, dict)
+                    else value
+                )
             )
 
         return pd.to_numeric(raw, errors="coerce").fillna(25831).astype("Int64")
