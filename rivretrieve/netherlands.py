@@ -427,9 +427,7 @@ class NetherlandsFetcher(base.RiverDataFetcher):
             self._series_nested_value(meta["Compartiment"], "Code") if "Compartiment" in meta.columns else None
         )
         meta["compartment_name"] = (
-            self._series_nested_value(meta["Compartiment"], "Omschrijving")
-            if "Compartiment" in meta.columns
-            else None
+            self._series_nested_value(meta["Compartiment"], "Omschrijving") if "Compartiment" in meta.columns else None
         )
 
         allowed = pd.Series(False, index=meta.index)
