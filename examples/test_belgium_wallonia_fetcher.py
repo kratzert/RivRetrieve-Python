@@ -34,4 +34,3 @@ for variable in variables:
     plot_path = f"belgium_wallonia_{variable}_plot.png"
     plt.savefig(plot_path)
     print(f"Plot saved to {plot_path}")
-
