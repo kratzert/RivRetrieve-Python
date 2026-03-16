@@ -1,0 +1,18 @@
+[
+  [
+    "station_no",
+    "station_name",
+    "station_latitude",
+    "station_longitude",
+    "site_name",
+    "river_name",
+    "CATCHMENT_SIZE",
+    "station_gauge_datum",
+    "station_gauge_datum_unit",
+    "station_gauge_datum_postfix"
+  ],
+  ["2", "Affluents de l'Escaut", "", "", "Bassins", "", "", "", "", ""],
+  ["L5442", "Aiseau", "50.4049997698804", "4.58715293745817", "Direction des Cours d'Eau Non Navigables", "Biesme", "77,50 km²", "105.07", "DNG", "DNG"],
+  ["8133", "YVOIR", "50.3384767350493", "4.90718919084365", "Direction de la Gestion hydrologique", "Bocq", "", "106.266", "---", ""],
+  ["9999", "Unsupported station", "50.0", "4.0", "Direction", "Fake River", "10,00 km²", "12.3", "DNG", "DNG"]
+]

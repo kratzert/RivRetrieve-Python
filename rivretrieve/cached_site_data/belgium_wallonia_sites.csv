@@ -1,0 +1,322 @@
+gauge_id,station_name,river,latitude,longitude,altitude,area,country,source,vertical_datum
+1046,BIERGES,Dyle,50.710582721989,4.60612935738496,42.009,310.19,Belgium,SPW Hydrometrie (Wallonia),DNG
+1081,BOUSVAL,Dyle,50.6130958442321,4.50525036985388,76.959,47.09,Belgium,SPW Hydrometrie (Wallonia),---
+1951,TUBIZE,Senne,50.6902561456463,4.19644630975509,35.768,214.78,Belgium,SPW Hydrometrie (Wallonia),---
+2341,CLABECQ,Hain,50.6805773451218,4.23326986610499,41.918,83.79,Belgium,SPW Hydrometrie (Wallonia),DNG
+2371,RONQUIERES,Samme,50.6059234827651,4.22480885387823,57.488,135.0,Belgium,SPW Hydrometrie (Wallonia),---
+2473,OISQUERCQ,Canal Charleroi-Bruxelles (Senne),50.6668538293959,4.22172411130213,39.0,,Belgium,SPW Hydrometrie (Wallonia),---
+2483,RONQUIERES Bief Aval,Canal Charleroi-Bruxelles (Senne),50.6080359106125,4.22461878987814,52.0,,Belgium,SPW Hydrometrie (Wallonia),---
+2492,RONQUIERES Anc Canal,Ancien canal Charleroi-Bruxelles,50.6011406709453,4.23223927922836,,,Belgium,SPW Hydrometrie (Wallonia),
+2536,GOUY,Piéton,50.4911921837097,4.30848642622926,126.096,16.77,Belgium,SPW Hydrometrie (Wallonia),DNG
+2707,LESSINES Bief Amont,Dendre Canalisée,50.7106703879497,3.83489033942828,20.0,,Belgium,SPW Hydrometrie (Wallonia),DNG
+2708,LESSINES US,Dendre Canalisée,50.7050278859051,3.83560536771653,0.0,515.54,Belgium,SPW Hydrometrie (Wallonia),---
+2713,PAPIGNIES Bief Aval,Dendre Canalisée,50.6832938335524,3.82863392601291,20.0,,Belgium,SPW Hydrometrie (Wallonia),---
+2952,IRCHONWELZ,Dendre Occidentale,50.6189025700288,3.75166128771167,30.911,126.3,Belgium,SPW Hydrometrie (Wallonia),DNG
+2971,ATH,Dendre Orientale,50.6335212063431,3.77783355381171,28.846,228.94,Belgium,SPW Hydrometrie (Wallonia),DNG
+3270,PECQ,Escaut,50.6892525918847,3.34424167013554,0.0,,Belgium,SPW Hydrometrie (Wallonia),---
+3274,KAIN Aval Bar-Ecluse,Escaut,50.6288739773361,3.37072832778531,12.454,,Belgium,SPW Hydrometrie (Wallonia),DNG
+3276,KAIN Amont Bar-Ecl,Escaut,50.6255555594853,3.37379483697375,14.0,,Belgium,SPW Hydrometrie (Wallonia),DNG
+3282,TOURNAI,Escaut,50.6085086422911,3.39078341033867,0.0,4922.09,Belgium,SPW Hydrometrie (Wallonia),---
+3561,BOUSSOIT,Haine,50.4613519141698,4.08660344045252,43.907,163.32,Belgium,SPW Hydrometrie (Wallonia),DNG
+3643,HYON,Trouille,50.4427234414362,3.9643858742062,31.6,223.69,Belgium,SPW Hydrometrie (Wallonia),DNG
+3778,SAINT-DENIS,Obrecheuil,50.4907319333999,4.0199956321724,49.063,29.36,Belgium,SPW Hydrometrie (Wallonia),---
+3884,COMINES Aval Bar-Ecl,Lys,50.7625259845546,2.99557086006732,10.907,,Belgium,SPW Hydrometrie (Wallonia),DNG
+3886,COMINES Amont B-Ecl,Lys,50.7586989330144,2.98515019230688,12.011,,Belgium,SPW Hydrometrie (Wallonia),---
+3891,PLOEGSTEERT,Lys,50.695831696389,2.90899156949704,12.499,,Belgium,SPW Hydrometrie (Wallonia),---
+5291,KELMIS (LA CALAMINE),Gueule,50.7086806864066,6.00185296905441,172.834,,Belgium,SPW Hydrometrie (Wallonia),DNG
+5436,LIXHE Aval,Basse Meuse,50.759883856723,5.68087119300662,46.0,,Belgium,SPW Hydrometrie (Wallonia),DNG
+5447,LIXHE Bief Amont,Basse Meuse,50.7458794332347,5.68932370705599,52.0,,Belgium,SPW Hydrometrie (Wallonia),---
+5451,VISE,Basse Meuse,50.7258988746951,5.69030751519665,0.0,,Belgium,SPW Hydrometrie (Wallonia),---
+5572,BERGILERS Amont,Geer,50.719605929598,5.31705664763385,102.661,123.39,Belgium,SPW Hydrometrie (Wallonia),DNG
+5771,HACCOURT,Canal Albert,50.7352589163208,5.67589217024412,0.0,,Belgium,SPW Hydrometrie (Wallonia),---
+5796,MAREXHE,Canal Albert,50.6552207876055,5.62243119498051,59.0,,Belgium,SPW Hydrometrie (Wallonia),---
+5803,ANGLEUR Aval RD,Ourthe inférieure,50.6151626782273,5.60323647777557,58.978,,Belgium,SPW Hydrometrie (Wallonia),DNG
+5804,ANGLEUR GR BAT. Av,Ourthe inférieure,50.6144233725828,5.60597278507372,59.8,,Belgium,SPW Hydrometrie (Wallonia),DNG
+5806,ANGLEUR GR BAT. Am,Ourthe inférieure,50.6127770934171,5.61112985260064,64.0,,Belgium,SPW Hydrometrie (Wallonia),DNG
+5808,ANGLEUR (2 BIS),Ourthe inférieure,50.6114188430133,5.61202673290491,64.0,3607.16,Belgium,SPW Hydrometrie (Wallonia),DNG
+5811,STREUPAS,Ourthe inférieure,50.6043998321945,5.60665677962622,64.015,,Belgium,SPW Hydrometrie (Wallonia),---
+5826,SAUHEID,Ourthe inférieure,50.5966239535568,5.5911684943194,67.234,2903.8,Belgium,SPW Hydrometrie (Wallonia),---
+5857,MERY,Ourthe inférieure,50.5479856578983,5.5881469901898,75.147,,Belgium,SPW Hydrometrie (Wallonia),---
+5896,CHANXHE,Ourthe inférieure,50.4957698101114,5.590988289041,94.0,,Belgium,SPW Hydrometrie (Wallonia),DNG
+5904,COMBLAIN-AU-PONT,Ourthe moyenne,50.4858821608902,5.58298182529795,94.916,,Belgium,SPW Hydrometrie (Wallonia),DNG
+5921,TABREUX,Ourthe moyenne,50.4379714902009,5.53511135031513,109.9,1607.0,Belgium,SPW Hydrometrie (Wallonia),---
+5922,HAMOIR,Ourthe moyenne,50.4258674465749,5.53616472777943,112.45,1598.53,Belgium,SPW Hydrometrie (Wallonia),DNG
+5953,DURBUY,Ourthe moyenne,50.3526875025289,5.45549816372259,141.976,1214.75,Belgium,SPW Hydrometrie (Wallonia),DNG
+5962,HOTTON,Ourthe moyenne,50.2709293976854,5.43899756471245,173.292,939.9,Belgium,SPW Hydrometrie (Wallonia),DNG
+5991,NISRAMONT,Ourthe supérieure,50.1398075641211,5.67322647155978,259.376,728.71,Belgium,SPW Hydrometrie (Wallonia),---
+6021,MABOMPRE,Ourthe Orientale,50.1360840449774,5.72174036077074,292.29,316.89,Belgium,SPW Hydrometrie (Wallonia),---
+6122,ORTHO,Ourthe Occidentale,50.1067917706187,5.64645838373409,293.113,378.58,Belgium,SPW Hydrometrie (Wallonia),---
+6228,CHAUDFONTAINE Pisc,Vesdre,50.5894603975804,5.65363749806279,77.626,683.26,Belgium,SPW Hydrometrie (Wallonia),DNG
+6229,CHAUDFONTAINE Pont,Vesdre,50.5883944752985,5.65326953312667,77.626,,Belgium,SPW Hydrometrie (Wallonia),DNG
+6353,DOLHAIN,Vesdre,50.6120446508153,5.94511628435517,204.037,,Belgium,SPW Hydrometrie (Wallonia),DNG
+6387,EUPEN,Vesdre,50.6227754264789,6.03757624216869,259.112,,Belgium,SPW Hydrometrie (Wallonia),DNG
+6392,EUPEN Bellmerin,Vesdre,50.6202015502658,6.05099192484594,269.556,,Belgium,SPW Hydrometrie (Wallonia),DNG
+6438,EUPEN Hütte,Helle,50.6093931435709,6.05036847512954,282.823,,Belgium,SPW Hydrometrie (Wallonia),DNG
+6517,POLLEUR,Hoegne,50.536759825471,5.879244999171,213.814,,Belgium,SPW Hydrometrie (Wallonia),---
+6526,BELLEHEID,Hoegne,50.5082136054053,5.95994984084006,357.317,19.64,Belgium,SPW Hydrometrie (Wallonia),DNG
+6621,MARTINRIVE,Amblève,50.4788933403951,5.63712368341341,110.004,1067.53,Belgium,SPW Hydrometrie (Wallonia),---
+6651,REMOUCHAMPS,Amblève,50.4798545071661,5.71012964639935,126.268,,Belgium,SPW Hydrometrie (Wallonia),---
+6671,TARGNON,Amblève,50.4134354089847,5.77597957328469,185.68,806.85,Belgium,SPW Hydrometrie (Wallonia),---
+6732,STAVELOT,Amblève,50.3779667667339,5.88483537967308,245.253,471.67,Belgium,SPW Hydrometrie (Wallonia),---
+6753,LASNENVILLE,Amblève,50.3796926391613,6.00919200157931,315.468,196.23,Belgium,SPW Hydrometrie (Wallonia),DNG
+6804,CHEVRON Pont,Lienne,50.3964432141313,5.7574140862504,215.562,141.82,Belgium,SPW Hydrometrie (Wallonia),DNG
+6832,TROIS-PONTS,Salm,50.3638094659119,5.87613123272315,256.029,198.85,Belgium,SPW Hydrometrie (Wallonia),---
+6933,MALMEDY,Warche,50.4258890833322,6.02175643323402,329.445,183.08,Belgium,SPW Hydrometrie (Wallonia),---
+6946,BEVERCE,Warche,50.4406196109308,6.04430742122036,348.052,149.14,Belgium,SPW Hydrometrie (Wallonia),DNG
+6971,WIRTZFELD,Holzwarche,50.4254557714781,6.25891471222233,550.851,31.99,Belgium,SPW Hydrometrie (Wallonia),---
+6981,BULLINGEN,Warche,50.409719036386,6.2632412156363,556.247,22.59,Belgium,SPW Hydrometrie (Wallonia),DNG
+6991,MALMEDY  Warchenne,Warchenne,50.4239065324628,6.03338469739167,340.615,30.45,Belgium,SPW Hydrometrie (Wallonia),---
+7102,LIEGE,Meuse moyenne,50.6126560747225,5.57729725359624,0.0,,Belgium,SPW Hydrometrie (Wallonia),---
+7117,IVOZ-RAMET Bief Am,Meuse moyenne,50.5888665525447,5.4450712181874,63.01,,Belgium,SPW Hydrometrie (Wallonia),---
+7132,AMAY,Meuse moyenne,50.5364770872078,5.3177713182546,0.0,16416.26,Belgium,SPW Hydrometrie (Wallonia),---
+7133,NEUVILLE Bief Aval,Meuse moyenne,50.5319846049749,5.30854044247458,63.0,,Belgium,SPW Hydrometrie (Wallonia),---
+7137,AMPSIN Bief Amont,Meuse moyenne,50.5354876527505,5.28870500500236,67.26,16416.26,Belgium,SPW Hydrometrie (Wallonia),DNG
+7141,HUY,Meuse moyenne,50.5164135163075,5.23421331783582,68.0,,Belgium,SPW Hydrometrie (Wallonia),DNG
+7197,GRD-MALADES Bief Am,Meuse moyenne,50.4675803967324,4.89567049210182,77.0,,Belgium,SPW Hydrometrie (Wallonia),DNG
+7228,MODAVE,Hoyoux,50.4478510366644,5.28556690664971,168.371,93.98,Belgium,SPW Hydrometrie (Wallonia),---
+7242,MOHA,Mehaigne,50.5508864825373,5.18405740566467,81.257,343.27,Belgium,SPW Hydrometrie (Wallonia),---
+7244,HUCCORGNE,Mehaigne,50.5675065731219,5.16771514903217,93.293,305.1,Belgium,SPW Hydrometrie (Wallonia),DNG
+7319,SALZINNES Ronet,Basse Sambre,50.4599544812943,4.83291275354829,0.0,2841.8,Belgium,SPW Hydrometrie (Wallonia),---
+7371,CHATELET,Basse Sambre,50.4074451630734,4.5194834054327,0.0,,Belgium,SPW Hydrometrie (Wallonia),---
+7394,MONCEAU Aval Bar-Ecl,Basse Sambre,50.3952443756497,4.38033466447232,100.0,,Belgium,SPW Hydrometrie (Wallonia),---
+7408,LANDELIES US,Haute Sambre,50.3753781799651,4.34495235803726,0.0,,Belgium,SPW Hydrometrie (Wallonia),DNG
+7466,FONT-VALMONT Am B-E,Haute Sambre,50.3204222347347,4.22719981951963,118.002,,Belgium,SPW Hydrometrie (Wallonia),DNG
+7474,LA BUISSIERE Av B-E,Haute Sambre,50.3143913446988,4.19523368695653,118.0,,Belgium,SPW Hydrometrie (Wallonia),DNG
+7487,SOLRE,Haute Sambre,50.3091915659649,4.14117485489768,0.0,1188.47,Belgium,SPW Hydrometrie (Wallonia),---
+7711,JAMIOULX,Eau d'Heure,50.3583967323162,4.4044547737481,116.86,322.4,Belgium,SPW Hydrometrie (Wallonia),DNG
+7781,WALCOURT (GARE),Eau d'Heure,50.2598197801927,4.43659315208913,161.9,191.59,Belgium,SPW Hydrometrie (Wallonia),---
+7784,WALCOURT (SEUIL),Eau d'Heure,50.2490728283921,4.4261600091169,166.279,99.91,Belgium,SPW Hydrometrie (Wallonia),---
+7812,WALCOURT-VOGENEE,Ry d'Yves,50.2484154938751,4.44353110831028,169.316,87.07,Belgium,SPW Hydrometrie (Wallonia),---
+7831,SILENRIEUX (BARRAGE),Eau d'Heure,50.2170862065464,4.3981116569485,182.43,78.46,Belgium,SPW Hydrometrie (Wallonia),---
+7836,SILENRIEUX (LAC),Eau d'Heure,50.2153062340877,4.39750805489649,0.0,,Belgium,SPW Hydrometrie (Wallonia),---
+7843,BOUSSU-LEZ-WALCOURT,Ruisseau d'Erpion,50.2148064536694,4.37161540076996,213.395,5.51,Belgium,SPW Hydrometrie (Wallonia),DNG
+7863,SILENRIEUX (RY),Ry Jaune,50.207168627191,4.42477809477408,210.5,7.38,Belgium,SPW Hydrometrie (Wallonia),---
+7883,SOUMOY,Ruisseau de Soumoy,50.1894054201345,4.4373601580152,212.67,15.1,Belgium,SPW Hydrometrie (Wallonia),---
+7891,CERFONTAINE,Eau d'Heure,50.1753128137704,4.40876688761839,209.24,19.82,Belgium,SPW Hydrometrie (Wallonia),DNG
+7944,WIHERIES,Hantes,50.298913910057,4.17509237390395,125.531,142.34,Belgium,SPW Hydrometrie (Wallonia),---
+7978,BERSILLIES-L'ABBAYE,Thure,50.2610527813596,4.14868313548264,143.294,56.98,Belgium,SPW Hydrometrie (Wallonia),DNG
+8001,NAMUR,Haute Meuse (aval Dinant),50.4612749931291,4.86995296926426,0.0,,Belgium,SPW Hydrometrie (Wallonia),---
+8016,TAILFER,Haute Meuse (aval Dinant),50.3937018869131,4.88039357648777,0.0,,Belgium,SPW Hydrometrie (Wallonia),DNG
+8017,PROFONDEVILLE,Haute Meuse (aval Dinant),50.3850334355129,4.87658552190183,81.0,,Belgium,SPW Hydrometrie (Wallonia),---
+8022,LUSTIN,Haute Meuse (aval Dinant),50.3671578984207,4.87297844318265,81.0,,Belgium,SPW Hydrometrie (Wallonia),---
+8059,DINANT,Haute Meuse (aval Dinant),50.2542962795093,4.91495816584235,90.002,,Belgium,SPW Hydrometrie (Wallonia),DNG
+8067,ANSEREMME Monia,Haute Meuse (amont Dinant),50.2419138991552,4.89406731584809,92.0,,Belgium,SPW Hydrometrie (Wallonia),---
+8078,WAULSORT,Haute Meuse (amont Dinant),50.2078527027185,4.8496041126001,0.0,10604.02,Belgium,SPW Hydrometrie (Wallonia),---
+8133,YVOIR,Bocq,50.3384767350493,4.90718919084365,106.266,,Belgium,SPW Hydrometrie (Wallonia),---
+8163,WARNANT,Molignée,50.304477469792,4.82927327273955,107.507,125.39,Belgium,SPW Hydrometrie (Wallonia),---
+8166,SOSOYE,Molignée,50.2983987885206,4.77683244332755,147.802,50.59,Belgium,SPW Hydrometrie (Wallonia),---
+8181,FOY,Flavion,50.2920211511069,4.81893573492453,125.007,61.87,Belgium,SPW Hydrometrie (Wallonia),DNG
+8221,GENDRON,Basse Lesse,50.2113270423334,4.96281486720209,103.42,1286.04,Belgium,SPW Hydrometrie (Wallonia),DNG
+8231,HOUYET,Basse Lesse,50.1901304762494,5.0075880420837,114.581,1208.05,Belgium,SPW Hydrometrie (Wallonia),DNG
+8341,DAVERDISSE,Haute Lesse,50.0404715213607,5.12834165939739,211.873,302.2,Belgium,SPW Hydrometrie (Wallonia),DNG
+8527,JEMELLE,Lhomme,50.1555735648526,5.26178020161282,186.876,274.37,Belgium,SPW Hydrometrie (Wallonia),DNG
+8622,HASTIERE,Hermeton,50.2010874375799,4.79819922552722,102.813,166.04,Belgium,SPW Hydrometrie (Wallonia),DNG
+8661,FELENNE,Houille,50.0428755126103,4.8443687487241,188.847,112.9,Belgium,SPW Hydrometrie (Wallonia),DNG
+8702,CHOOZ,Haute Meuse (amont Dinant),50.092133299138,4.80652567200908,101.428,10120.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+9021,TREIGNES,Viroin,50.0886264782466,4.67597464977044,119.696,548.22,Belgium,SPW Hydrometrie (Wallonia),---
+9071,COUVIN,Eau Noire,50.0409071592922,4.49970006665675,191.085,175.89,Belgium,SPW Hydrometrie (Wallonia),DNG
+9081,NISMES,Eau Blanche,50.0855478597689,4.55649808893709,150.617,248.91,Belgium,SPW Hydrometrie (Wallonia),---
+9111,MARIEMBOURG,Brouffe,50.0945091292349,4.52833035311158,155.921,80.05,Belgium,SPW Hydrometrie (Wallonia),---
+9201,COUVIN Ry de Rome,Ry de Rome,50.0375058562061,4.50216146332806,196.182,15.82,Belgium,SPW Hydrometrie (Wallonia),DNG
+9214,PETIGNY,Ry de Rome,50.0243363691681,4.5351705802585,252.286,,Belgium,SPW Hydrometrie (Wallonia),DNG
+9216,PETIGNY (Lac),Ry de Rome,50.0234465257906,4.53596333943908,0.0,,Belgium,SPW Hydrometrie (Wallonia),---
+9221,PETIGNY  Ry de Rome,Ry de Rome,50.0128305457841,4.55144017495415,280.138,6.4,Belgium,SPW Hydrometrie (Wallonia),---
+9223,PETIGNY Ermitage,Ry de l'Ermitage,50.0134288209524,4.54249918430046,280.127,1.36,Belgium,SPW Hydrometrie (Wallonia),---
+9224,PETIGNY Fd Serpents,Ry du Font Aux Serpents,50.0220715129076,4.54663334897583,281.065,1.69,Belgium,SPW Hydrometrie (Wallonia),---
+9232,BRULY,Ry de Pernelle,49.9980653464837,4.51563591932548,266.052,38.52,Belgium,SPW Hydrometrie (Wallonia),DNG
+9434,MEMBRE Pont,Basse Semois,49.8637673609492,4.90200999678931,175.59,1226.05,Belgium,SPW Hydrometrie (Wallonia),---
+9435,MEMBRE Amont,Basse Semois,49.8755141630542,4.90869340122139,177.502,1224.72,Belgium,SPW Hydrometrie (Wallonia),---
+9461,BOUILLON,Moyenne Semois,49.7924572080678,5.06369803628619,213.251,1043.53,Belgium,SPW Hydrometrie (Wallonia),DNG
+9531,LACUISINE,Moyenne Semois,49.7083650785944,5.32626941398789,295.624,,Belgium,SPW Hydrometrie (Wallonia),DNG
+9541,CHINY,Moyenne Semois,49.7452242879419,5.35025874500371,304.179,738.5,Belgium,SPW Hydrometrie (Wallonia),DNG
+9561,TINTIGNY,Haute Semois,49.687104683569,5.51812528716196,325.737,380.85,Belgium,SPW Hydrometrie (Wallonia),DNG
+9571,SAINTE-MARIE,Haute Semois,49.6848851323871,5.56361171961019,328.341,142.71,Belgium,SPW Hydrometrie (Wallonia),---
+9651,STRAIMONT,Vierre,49.7930305219234,5.38138935832895,346.61,182.21,Belgium,SPW Hydrometrie (Wallonia),---
+9741,TORGNY,Chiers,49.508810743532,5.46612229891821,188.712,643.13,Belgium,SPW Hydrometrie (Wallonia),---
+9914,REULAND,Our,50.1882579336064,6.15180238357024,344.257,356.87,Belgium,SPW Hydrometrie (Wallonia),---
+9926,SCHOENBERG,Our,50.2892765219077,6.26346725492582,419.042,100.5,Belgium,SPW Hydrometrie (Wallonia),---
+L5021,Resteigne,Haute Lesse,50.0907260785366,5.17551185617744,178.81,345.2,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5060,Romedenne,Hermeton,50.1650542037902,4.7117812788986,149.84,115.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5170,Baisieux,Grande Honnelle,50.3848038764999,3.69125448648238,30.834,121.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5183,Onoz,Orneau,50.4833881428119,4.66716917882654,96.385,202.91,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5201,Rhisnes,Houyoux,50.485582090877,4.83617977814837,104.357,46.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5220,Tintigny,Rulles,49.696572855754,5.51812959333223,329.02,219.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5412,Amougies,Rhosnes,50.741108436752,3.49612522501325,13.851,164.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5420,Isières,Sille,50.662162283435,3.82374112042285,24.396,58.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5442,Aiseau,Biesme,50.4049997698804,4.58715293745817,105.07,77.5,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5460,Suzeril,Thyle,50.6319893948985,4.5643322271728,65.532,68.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5491,Juzaine,Aisne,50.3733370898116,5.53549105964945,138.16,183.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5500,Marbehan,Mellier,49.7272267586673,5.53400894469937,348.24,62.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5520,Harnoncourt,Ton,49.5372868917015,5.49376610573495,193.334,293.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5530,Ochamps,Haute Lesse,49.9255867356293,5.27995716032691,409.52,10.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5540,Graide,Ruisseau de Graide,49.9428614007776,5.06186906147981,357.542,10.6,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5550,Opont,Eau d'Our,49.9618782850091,5.1231637149597,304.1,70.3,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5570,Saint-Martin,Ligne,50.505709411986,4.64980146228183,114.35,91.2,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5580,Thioux,Warche,50.3870059898828,5.99175080797662,298.705,192.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5600,Ruette,Vire,49.5523215422849,5.59571172138279,215.01,104.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5610,Martelange,Sûre,49.8337043400059,5.73926935709741,361.077,209.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5630,Hamoir,Néblon,50.4221970528891,5.51559671027222,127.856,76.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5640,Walcourt,Ry d'Yves,50.2540490772559,4.43452352896452,164.32,87.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5660,Steenkerque,Senne,50.6421062498161,4.07110525565506,52.53,145.3,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5661,Steenkerque,Senne,50.6403347155446,4.06739826403833,52.936,115.22,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5670,Ronquières,Sennette,50.6095888926416,4.22276329365557,55.56,61.14,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5690,Brugelette,Dendre Orientale,50.5941072941492,3.85984854188656,42.47,110.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5703,Mesvin,By,50.430433658938,3.95928275821142,36.545,53.77,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5720,Saint-Rémy-Geest,Grande Gette,50.7438920392543,4.87204267566791,55.426,135.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5800,Yvoir,Bocq,50.3339135760749,4.89849883784928,100.576,230.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5820,Wanze,Mehaigne,50.542051268599,5.21765326852068,71.398,352.05,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5861,Hoegne,Hoegne,50.5545082923391,5.80619133061352,147.561,,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5880,Chantemelle,Semois,49.6559186538579,5.64871087790166,334.65,89.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5930,Houffalize,Ourthe Orientale,50.1303240307761,5.79171609529508,326.562,179.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5950,Wyompont,Ourthe Occidentale,50.0854105487081,5.57190249362,325.368,270.1,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5961,Wiers,Verne de Bury,50.5145942459437,3.54360033597421,21.118,24.9,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5970,Habay-la-Vieille,Rulles,49.7256100442263,5.61823276601054,357.98,96.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L5990,Marchin,Hoyoux,50.4925252814476,5.25446666543287,119.452,239.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6001,Profondeville,Burnot,50.3611963685071,4.8648196735136,89.199,66.97,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6023,Athus,Messancy,49.5655113794726,5.83080789458289,266.42,62.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6030,Latour,Vire,49.555718452645,5.55076710013035,205.96,125.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6040,Grandville,Yerne,50.7191388797618,5.34430928169329,100.366,62.3,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6050,Baillonville,Ruisseau d'Heure,50.2833636850276,5.34869744529101,174.022,68.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6060,Thy-le-Château,Thyria,50.2828236865707,4.42513485818542,156.04,50.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6070,Trois-Ponts,Salm,50.3715168785633,5.87189084516187,246.318,202.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6080,Reuland,Ulf,50.1965221352176,6.15066871880674,351.178,57.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6090,Lommersweiler,Die Braunlauf,50.2344944392825,6.15395503810673,383.144,64.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6140,Limelette,Dyle,50.6853967192762,4.57591755648703,48.556,286.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6160,Florival,Dyle,50.7596305572752,4.64711097483199,31.51,430.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6180,Etalle,Semois,49.6757334358866,5.59988162411097,330.586,123.86,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6220,Villers-devant-Orval,Marge,49.6177983441587,5.33448976224559,191.442,82.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6240,Lorcé,Lienne,50.409535531348,5.76906753968805,190.15,147.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6260,Upigny,Mehaigne,50.5806835523476,4.86404775730322,144.68,17.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6270,Lavaux-Sainte-Anne,Wimbe,50.12083806447,5.09986331689282,158.81,93.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6280,Opheylissem,Petite Gette,50.7390020347794,4.98287767780707,51.258,134.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6290,Amberloup,Ourthe Occidentale,50.0356305815099,5.52639526365704,371.902,109.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6300,Vieuxville,Ruisseau de Lembrée,50.3943699154091,5.53710554152364,130.153,51.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6310,Forrières,Lhomme,50.1320837171006,5.27850331317573,200.6,246.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6320,Grupont,Lhomme,50.0923033752133,5.27773111455632,226.33,179.91,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6330,Ouren,Our,50.1419350217663,6.14181425505029,325.046,382.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6340,Eben-Emael,Geer,50.7817807239457,5.66359849345239,63.169,452.26,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6350,Couvin,Eau Noire,50.0335843196992,4.49566002624691,195.688,102.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6360,Eprave,Lhomme,50.1394211651844,5.16398290833778,147.61,478.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6380,Olloy-sur-Viroin,Viroin,50.0744313125907,4.59839191347568,136.46,491.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6390,Dalhem,Berwinne,50.7195281743918,5.72294521452676,83.926,118.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6400,Gedinne,Houille,49.9813461956571,4.9348186202447,308.76,52.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6430,Harmignies,Trouille,50.3985545159616,4.014398487757,44.194,79.89,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6440,Virton,Ton,49.5671321205915,5.53647526653581,207.254,89.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6450,Estaimpuis,Espierres,50.697091254438,3.28050111304968,14.777,72.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6461,Marneffe,Burdinale,50.5748291354949,5.14582827599042,104.97,26.78,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6470,Ambresin,Mehaigne,50.6268347109466,5.04407249910583,123.363,194.72,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6510,Stavelot,Amblève,50.3779579618661,5.88482103628497,245.58,491.63,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6520,Malmedy,Warche,50.425831750978,6.02199374022001,329.55,183.42,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6530,Aublain,Eau Blanche,50.0607927815509,4.40160266133682,0.0,106.22,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6550,Brizy,Ourthe Orientale,50.1480880369537,5.84580157131514,358.026,96.21,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6570,Ghoy,Ruisseau d'Ancre,50.7195463526823,3.81611104035088,20.14,77.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6590,Lens,Dendre Orientale,50.5557860638227,3.90176457613475,56.913,43.95,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6600,Spiennes,Trouille,50.4223848796252,3.9849922496579,38.14,93.03,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6610,Hérock,Lesse,50.1735169113426,5.04673162852466,123.74,1156.02,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6630,Thuin,Bieme l'Eau,50.3377401079343,4.28558512707619,117.537,85.89,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6640,Noirhat,Dyle,50.6314123551909,4.53664005812116,9999.0,52.22,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6650,Rochefort,Lhomme,50.1580940199611,5.22458587168085,0.0,424.87,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6660,Sippenaeken,Gueule,50.750476138336,5.94075456142575,127.414,121.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6671,Hemptinne,Soile,50.6025238898512,4.99091984809068,132.87,61.41,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6690,Erezée,Aisne,50.2975243786484,5.54222078828098,252.01,67.39,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6710,Givry,Trouille,50.3726373258035,4.03338669648699,61.125,55.72,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6721,Bougnies,By,50.3854524571586,3.94028835527884,70.223,27.22,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6770,Dalhem,Bolland,50.713440983012,5.72217546553957,88.65,29.26,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6790,Spixhe,Wayai,50.5211704533669,5.82036877251458,172.132,93.78,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6840,Daverdisse,Ruisseau de Gembes,50.0277834604966,5.11622075416486,223.154,87.23,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6850,Sprimont,Ruisseau de Laval,50.0367553171708,5.54760069743014,377.02,73.87,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6861,Baisieux,Petite Honnelle,50.3875088706854,3.69568781457084,32.11,28.79,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6870,Marchipont,Anneau,50.3783191416963,3.6651252736762,34.201,78.19,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6880,Beaumont,Hantes,50.2295535438712,4.23338305621395,160.355,92.39,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6900,Awirs,Ruisseau des Awirs,50.5923543433161,5.41152059292118,78.063,33.87,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6910,Pecq,Rieu du Pas à Wasmes,50.6739824873243,3.33168652623493,13.188,40.59,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6920,Escanaffles,Rieu de la Lhaye,50.7351164829932,3.45202171575294,12.306,55.85,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6930,Falisolle,Ruisseau de Fosses,50.4241962916439,4.62560440240391,97.922,57.37,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6940,Hargimont,Hédrée,50.1860764640765,5.30658950886016,0.0,45.12,Belgium,SPW Hydrometrie (Wallonia),---
+L6950,Maffle,Grande Hunelle,50.605985163236,3.80911657290653,34.282,80.87,Belgium,SPW Hydrometrie (Wallonia),DNG
+L6980,Martilly,Ruisseau de Neufchâteau,49.8080367170406,5.36503340891827,352.47,65.94,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7000,Vresse-sur-Semois,Ruisseau du Moulin,49.8731141195841,4.93833987616244,184.69,61.78,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7020,Braine-le-Château,Hain,50.6801420375212,4.24618935172967,46.4,80.98,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7070,Rensiwé,Ruisseau de Martin moulin,50.1349539051743,5.72456224082782,294.32,76.64,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7080,Estinnes-au-Val,Ruisseau des Estinnes,50.4124224548207,4.10809637578028,58.066,28.65,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7120,Marche-en-Famenne,Marchette,50.2668168602146,5.34691165269682,174.697,48.88,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7130,Martilly,Vierre,49.8056033519361,5.36257944292355,351.41,173.98,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7140,Suxy,Vierre,49.7697838553042,5.39594831109723,338.206,219.78,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7150,Verviers,Vesdre,50.5889975839603,5.84529255855502,0.0,338.15,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7161,Stavelot,Eau rouge,50.395300453535,5.94715908328871,279.35,,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7180,Biesme-sous-Thuin,Bieme l'Eau,50.3198530930361,4.30644041085282,135.82,79.81,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7190,Wanlin,Biran,50.1588275201869,5.06006995083457,128.41,51.94,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7200,Macquenoise,Oise,49.9772439107667,4.17283367683181,225.495,32.21,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7210,Grandrieu,Thure,50.1845201674845,4.17631152540006,188.39,19.3,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7220,Nethen,Nethen,50.7963189512348,4.65033558353466,29.265,56.43,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7231,Orp-le-Grand,Ruisseau de Petit Hallet,50.6918954298755,4.98936852245036,70.26,73.13,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7241,Jemeppe-sur-Sambre,Orneau,50.4640228900953,4.67411753564536,89.23,210.75,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7260,Gussignies,Grande Honnelle,50.3358038585453,3.73582183543919,64.463,91.2,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7280,Monteneau,Amblève,50.3589723412471,6.12120070646239,417.2,109.14,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7290,Trou de Bra,Lienne,50.3459003047025,5.73200450286035,277.252,104.38,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7300,Herbeumont,Moyenne Semois,49.769188344805,5.23638612960664,259.203,833.6,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7310,Papignies,Trimpont,50.6831597948863,3.81915463115013,21.37,32.19,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7370,Willerzie,Hulle,50.0024121433176,4.81640262750033,277.31,38.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7410,Weweler,Our,50.1980612784065,6.15466314123565,350.56,276.74,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7470,Spontin,Bocq,50.3178486810868,5.02469602672326,189.85,164.35,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7500,Limont,Yerne,50.6583801870278,5.31480719429868,135.34,28.14,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7511,Val-dieu,Berwinne,50.7076671369079,5.78155208714741,119.456,48.36,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7520,Blanmont,Orne,50.6162280045377,4.64124769877856,119.57,30.15,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7530,Rosières,Lasne,50.7338434450631,4.55435906499207,9999.0,106.14,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7550,Ecaussinnes,Sennette,50.5604663951544,4.16774476638753,88.24,43.22,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7560,Thon,Samson,50.4615110879319,4.99874272845155,82.977,111.71,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7570,Obourg,Haine,50.4688078198676,4.00635212254363,36.5,236.1,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7580,Chapelle-à-Wattines,Dendre Occidentale,50.6090846648498,3.65382240567814,39.07,63.4,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7590,Flobecq,Ruisseau d'Ancre,50.7386752509562,3.74924434143767,30.82,14.48,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7600,Foret,Ruisseau des Fonds de Forêt,50.5867232771046,5.67580739519508,0.0,39.79,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7610,Tubize,Sennette,50.6888628285529,4.21600924004684,37.51,98.58,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7620,Archennes,Train,50.7494755560149,4.68127170855849,39.02,73.04,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7630,Ciney,Ruisseau de Leignon,50.2898675839987,5.09286452188129,236.12,29.64,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7640,Hargimont,Wamme,50.1827475943885,5.302407184028,0.0,130.55,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7650,Dottignies,Grande Espierres,50.7370641078048,3.30593051029953,15.49,35.61,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7660,Dampicourt,Chavratte,49.5628198571379,5.49496949433448,201.07,54.42,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7670,La Gleize,Amblève,50.4009018935498,5.85313984952842,211.502,776.12,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7680,Maissin,Haute Lesse,49.9773939974425,5.18421085382036,312.92,88.94,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7690,Han-sur-Lesse,Ry d'Ave,50.1244951463376,5.17703407181182,153.988,26.57,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7750,Nil Saint-Vincent,Nil,50.631825989555,4.64873044086807,125.59,31.31,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7760,Nivelles,Thines,50.5992068567645,4.30491788102512,82.62,34.09,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7840,Braine l'Alleud,Hain,50.6975647414982,4.35984692012157,73.28,49.34,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7850,Jodoigne-Souveraine,Grande Gette,50.7069244716391,4.84432345833096,72.06,111.25,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7860,Modave,Triffoys,50.469730395768,5.266578053538,146.38,30.36,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7870,Marchin (bis),Hoyoux,50.5027014500271,5.23917845545979,87.69,248.83,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7880,Ere,Ruisseau des Barges,50.580568475219,3.3678501135627,28.57,30.8,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7890,Froidmont,Ruisseau des Barges,50.5758105621906,3.33162178296903,36.97,19.12,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7910,Gerpinnes (Hanzinne amont),Ruisseau d'Hanzinne,50.3243290219654,4.53251768023816,190.86,12.29,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7920,Gerpinnes (Hanzinne  aval),Ruisseau d'Hanzinne,50.3378196652619,4.52898230009452,175.14,28.87,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7930,Gerpinnes (St-Pierre),Ruisseau Saint Pierre,50.3352061866069,4.52699288942195,178.43,6.69,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7940,Eppe-Sauvage,Montbliart,50.1179750627314,4.17839654984668,178.04,56.21,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7950,Moustier-en-Fagne,Helpe,50.0977347937249,4.19403300465,181.68,68.5,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7970,Rebecq,Senne,50.6630040481969,4.13245840881994,43.54,164.84,Belgium,SPW Hydrometrie (Wallonia),DNG
+L7990,Yves-Gomzée,Ry d'Yves,50.2375642542197,4.53694204599907,215.43,41.4,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8000,La Hulpe,Argentine,50.7314023260922,4.50597721170342,9999.0,13.07,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8010,Tubize Stincup,Stincup-Laubecq,50.6872917343193,4.1803669655613,37.96,29.59,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8020,Tubize Coeurcq,Coeurcq,50.6847443497008,4.20198510440164,39.51,17.21,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8031,Incourt,Ruisseau d'Orbais,50.6958802747012,4.82054610181627,88.07,,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8080,Soignies,Senne,50.5917246846823,4.06715669278872,70.14,40.46,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8100,Meeffe,Rhée,50.6002844747658,5.02227789137665,137.54,16.97,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8120,Celles,Rieu de la Lhaye,50.7133198468329,3.45730222995431,23.97,38.89,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8140,Seneffe,Samme,50.5231714107041,4.26000480513926,112.03,16.3,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8220,Natoye,Bocq,50.3369587244032,5.06550146904747,189.86,17.41,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8470,Dinant,Ruisseau des Fonds de Leffe,50.2690942208047,4.91131277369429,9999.0,30.8,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8490,Hanret,Ruisseau de la Batterie,50.5873759452015,4.94894767174729,143.713,,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8510,Volaiville,Sûre,49.8778527561294,5.62146222711767,398.76,1.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8590,Thy-le-Bauduin,Thyria,50.2956532308351,4.52321167110348,196.462,,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8630,Gesves,Samson,50.3992996446478,5.03665379949431,186.752,,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8640,Anthée,Flavion,50.243584967972,4.7471589113461,221.641,0.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8650,Gozin,Biran,50.1238851341985,4.99782017938474,143.632,0.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8700,Marche-les-Dames,Ruisseau de Gelbressée,50.492152096721,4.95557355204363,,0.0,Belgium,SPW Hydrometrie (Wallonia),
+L8710,Seilles,Velaine,50.5041390070031,5.08946204910302,0.0,0.0,Belgium,SPW Hydrometrie (Wallonia),---
+L8730,Chevetogne,Molinia,50.2275174478902,5.15585434045496,,0.0,Belgium,SPW Hydrometrie (Wallonia),
+L8740,Olloy - Noyé,Ruisseau de Noyé,50.0692551541153,4.60603562351394,146.079,0.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8750,Scry,Ruisseau de Nefsée,50.3301504038871,4.6438309810041,208.187,0.0,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8900,Donstiennes,Ruisseau du Moulin de Donstiennes,50.2768194761945,4.31400180882086,160.324,,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8910,Clermont,Ruisseau du Moulin de Donstiennes,50.2579847361417,4.31478048299954,174.217,,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8920,Riconvert,Brule,50.2569992527835,4.30389940295274,175.978,,Belgium,SPW Hydrometrie (Wallonia),DNG
+L8930,Han-sur-Lesse,Haute Lesse,50.1290826064438,5.18059450677676,0.0,,Belgium,SPW Hydrometrie (Wallonia),DNG
+L9000,Sauvenière,Orneau,50.5803249272711,4.72338490843572,,,Belgium,SPW Hydrometrie (Wallonia),
+L9010,La Bruyère,Ruisseau du Bois de Linfagne,50.5329067435878,4.83410890433784,,,Belgium,SPW Hydrometrie (Wallonia),
