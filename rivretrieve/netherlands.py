@@ -1,35 +1,4 @@
-"""Fetcher for Netherlands river gauge data from Rijkswaterstaat WaterWebservices.
-
-Data source:
-    - website: https://rijkswaterstaatdata.nl/waterdata/
-
-Supported variables:
-    - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
-    - ``constants.DISCHARGE_INSTANT`` (m³/s)
-    - ``constants.STAGE_DAILY_MEAN`` (m)
-    - ``constants.STAGE_INSTANT`` (m)
-    - ``constants.WATER_TEMPERATURE_DAILY_MEAN`` (°C)
-    - ``constants.WATER_TEMPERATURE_INSTANT`` (°C)
-
-Data description and API:
-    - current API docs: https://ddapi20-waterwebservices.rijkswaterstaat.nl/swagger-ui/index.html
-
-Terms of use:
-    - see https://rijkswaterstaatdata.nl/waterdata/
-
-Notes:
-    - The official Rijkswaterstaat documentation was updated on March 10, 2026 and
-      states that the classic WaterWebservices will be retired at the end of April 2026.
-      This fetcher therefore targets the new ``ddapi20`` endpoints first and falls back
-      to the legacy service if needed.
-    - The Rijkswaterstaat catalog exposes discharge (``Q``), water level
-      (``WATHTE``), and water temperature (``T``) for surface water, which are mapped
-      to the corresponding RivRetrieve daily and instantaneous variables.
-    - Station metadata is filtered to stations that advertise at least one supported
-      surface-water variable.
-    - Rijkswaterstaat often serves observations at 10-minute resolution. This fetcher
-      retrieves raw observations in monthly windows and aggregates them to daily means.
-"""
+"""Fetcher for Netherlands river gauge data from Rijkswaterstaat WaterWebservices."""
 
 from __future__ import annotations
 
@@ -48,7 +17,43 @@ logger = logging.getLogger(__name__)
 
 
 class NetherlandsFetcher(base.RiverDataFetcher):
-    """Fetches Dutch river discharge data from Rijkswaterstaat WaterWebservices."""
+    """Fetches Dutch river gauge data from Rijkswaterstaat WaterWebservices.
+
+    Data source:
+        - website: https://rijkswaterstaatdata.nl/waterdata/
+
+    Supported variables:
+        - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
+        - ``constants.DISCHARGE_INSTANT`` (m³/s)
+        - ``constants.STAGE_DAILY_MEAN`` (m)
+        - ``constants.STAGE_INSTANT`` (m)
+        - ``constants.WATER_TEMPERATURE_DAILY_MEAN`` (°C)
+        - ``constants.WATER_TEMPERATURE_INSTANT`` (°C)
+
+    Data description and API:
+        - current API docs: https://ddapi20-waterwebservices.rijkswaterstaat.nl/swagger-ui/index.html
+        - metadata endpoint: ``/METADATASERVICES/OphalenCatalogus``
+        - observations endpoint: ``/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen``
+
+    Terms of use:
+        - see https://rijkswaterstaatdata.nl/waterdata/
+
+    Notes:
+        - The official Rijkswaterstaat documentation was updated on March 10, 2026 and
+          states that the classic WaterWebservices will be retired at the end of
+          April 2026. This fetcher therefore targets the new ``ddapi20`` endpoints
+          first and falls back to the legacy service if needed.
+        - The Rijkswaterstaat catalog exposes discharge (``Q``), water level
+          (``WATHTE``), and water temperature (``T``) for surface water, which are
+          mapped to the corresponding RivRetrieve daily and instantaneous variables.
+        - Station metadata is filtered to stations that advertise at least one
+          supported surface-water variable.
+        - Rijkswaterstaat often serves observations at 10-minute resolution. This
+          fetcher retrieves raw observations in monthly windows and aggregates them to
+          daily means for daily products.
+        - Stage values are converted from centimeters to meters.
+        - Provider sentinel missing values are filtered before aggregation.
+    """
 
     SOURCE = "Rijkswaterstaat WaterWebservices"
     COUNTRY = "Netherlands"
