@@ -1,0 +1,192 @@
+gauge_id,station_name,river,latitude,longitude,altitude,area,country,source,municipality,province,basin,hydro_zone,zero_idrometrico
+TOS01004005,Carrara,Carrione,44.081991934429944,10.1027816607424,108.0,,Italy,Settore Idrologico Regione Toscana - SIR,Carrara,MS,Carrione,V,95.69
+TOS01004007,Avenza,Carrione,44.045157971012145,10.06012591766429,15.0,,Italy,Settore Idrologico Regione Toscana - SIR,Carrara,MS,Versilia,V,6.41
+TOS01004379,Stia,Arno,43.80051117752395,11.70570195389426,537.0,,Italy,Settore Idrologico Regione Toscana - SIR,Pratovecchio Stia,AR,Casentino,A1,443.12
+TOS01004411,Subbiano,Arno,43.57167989702097,11.867846229902046,262.0,,Italy,Settore Idrologico Regione Toscana - SIR,Capolona,AR,Casentino,A1,248.76
+TOS01004521,Ponte Ferrovia FI-Roma,Canale della Chiana,43.46685946029146,11.824400236013291,238.99,,Italy,Settore Idrologico Regione Toscana - SIR,Arezzo,AR,Chiana,C,229.75
+TOS01004557,Laterina,Oreno,43.51039800104957,11.709367006647028,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Laterina Pergine Valdarno,AR,,A2,177.54
+TOS01004561,Ponte Romito,Arno,43.502515001052004,11.675731006658182,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Laterina Pergine Valdarno,AR,,A2,160.41
+TOS01004568,Bucine,Ambra,43.48352855589643,11.618680322817069,,,Italy,Settore Idrologico Regione Toscana - SIR,Bucine,AR,Valdarno Superiore,A2,169.73
+TOS01004571,Montevarchi,Arno,43.541211501082834,11.566208000183233,133.8,,Italy,Settore Idrologico Regione Toscana - SIR,Montevarchi,AR,Valdarno Superiore,A2,132.23
+TOS01004591,Incisa Valle,Arno,43.68984947731679,11.45619132601989,108.42,,Italy,Settore Idrologico Regione Toscana - SIR,Figline e Incisa Valdarno,FI,Valdarno Superiore,A2,103.11
+TOS01004611,Bilancino,Sieve,43.97497194404387,11.289821735559974,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Barberino di Mugello,FI,Sieve,M,213.39
+TOS01004621,S. Piero a Sieve-Sieve,Sieve,43.96510547112711,11.328012679540539,222.0,,Italy,Settore Idrologico Regione Toscana - SIR,Scarperia e San Piero,FI,Sieve,M,195.85
+TOS01004623,S. Piero a Sieve-Carza,Carza,43.95905776851592,11.322347404445132,,,Italy,Settore Idrologico Regione Toscana - SIR,Scarperia e San Piero,FI,Sieve,M,201.61
+TOS01004625,Dicomano,Sieve,43.886088019269145,11.525412172944327,148.0,,Italy,Settore Idrologico Regione Toscana - SIR,Dicomano,FI,Sieve,M,141.87
+TOS01004641,Fornacina,Sieve,43.800786792090584,11.466156927035316,102.0,,Italy,Settore Idrologico Regione Toscana - SIR,Rufina,FI,Sieve,M,93.44
+TOS01004642,Fornacina 2 ul,Sieve,43.80123591602331,11.467605319902864,102.0,,Italy,Settore Idrologico Regione Toscana - SIR,Rufina,FI,Sieve,M,93.44
+TOS01004659,Nave di Rosano,Arno,43.77119747862404,11.422815592102458,78.84,,Italy,Settore Idrologico Regione Toscana - SIR,Rignano sull'Arno,FI,Valdarno Superiore,A3,72.27
+TOS01004661,Nave Rosano valle,Arno,43.77430250709228,11.413956707076347,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Bagno a Ripoli,FI,Valdarno Medio Firenze,A3,69.43
+TOS01004679,Firenze Uffizi,Arno,43.76763838189677,11.254924542597076,43.78,,Italy,Settore Idrologico Regione Toscana - SIR,Firenze,FI,Valdarno Medio Firenze,A3,40.51
+TOS01004683,Firenze Uffizi 3,Arno,43.76763450797657,11.254919178179156,43.25,,Italy,Settore Idrologico Regione Toscana - SIR,Firenze,FI,Valdarno Medio Firenze,A3,40.51
+TOS01004702,Ponte alle Mosse,Mugnone,43.786859798325644,11.226717815813588,,,Italy,Settore Idrologico Regione Toscana - SIR,Firenze,FI,Valdarno Medio Firenze,A3,40.44
+TOS01004705,Greve,Greve,43.58304915739261,11.318164970161455,,,Italy,Settore Idrologico Regione Toscana - SIR,Greve in Chianti,FI,Greve-Pesa,A3,227.29
+TOS01004723,Tavarnuzze,Greve,43.71248014805972,11.217965907853483,,,Italy,Settore Idrologico Regione Toscana - SIR,Impruneta,FI,Greve-Pesa,A3,67.11
+TOS01004725,Strada in Chianti,Ema,43.66431997511634,11.314542464482075,144.0,,Italy,Settore Idrologico Regione Toscana - SIR,Greve in Chianti,FI,Greve-Pesa,A3,138.41
+TOS01004731,Ponte di Scandicci,Greve,43.75481045722738,11.193711168481231,,,Italy,Settore Idrologico Regione Toscana - SIR,Scandicci,FI,Greve-Pesa,A3,42.26
+TOS01004779,Gamberame,Bisenzio,43.92290610873819,11.12702500066329,107.0,,Italy,Settore Idrologico Regione Toscana - SIR,Vaiano,PO,Bisenzio,B,93.69
+TOS01004782,Prato,Bisenzio,43.87944271171414,11.104984502651241,,,Italy,Settore Idrologico Regione Toscana - SIR,Prato,PO,Bisenzio,B,53.69
+TOS01004784,Calenzano,Marina,43.8608554473959,11.154997500650286,60.0,,Italy,Settore Idrologico Regione Toscana - SIR,Calenzano,FI,Bisenzio,B,55.31
+TOS01004791,S. Piero a Ponti,Bisenzio,43.803684155300616,11.130531663024795,40.0,,Italy,Settore Idrologico Regione Toscana - SIR,Signa,FI,Bisenzio,B,32.29
+TOS01004795,Sesto Fiorentino,Fosso Reale,43.82315124205161,11.19329762227604,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Sesto Fiorentino,FI,Bisenzio,B,35.74
+TOS01004811,Ponte a Signa,Arno,43.77305362668338,11.092945866822543,32.0,,Italy,Settore Idrologico Regione Toscana - SIR,Signa,FI,Valdarno Medio Firenze,B,27.89
+TOS01004839,Pontelungo valle,Ombrone PT,43.919806158100336,10.895925030967875,65.68,,Italy,Settore Idrologico Regione Toscana - SIR,Pistoia,PT,,B,60.74
+TOS01004875,Poggio a Caiano,Ombrone PT,43.814590746548774,11.061444294792185,36.0,,Italy,Settore Idrologico Regione Toscana - SIR,Poggio a Caiano,PO,Ombrone Pistoiese,B,31.03
+TOS01004901,Montelupo,Arno,43.75987291427937,11.049250610170246,,,Italy,Settore Idrologico Regione Toscana - SIR,Lastra a Signa,FI,Valdarno Inferiore e Valdinievole,A3,25.24
+TOS01004915,Montespertoli,Virginio,43.65000294630397,11.09235851921421,117.0,,Italy,Settore Idrologico Regione Toscana - SIR,Montespertoli,FI,Greve-Pesa,A5,114.06
+TOS01004921,Turbone,Pesa,43.71860546463671,11.0359114477738,45.0,,Italy,Settore Idrologico Regione Toscana - SIR,Montelupo Fiorentino,FI,Greve-Pesa,A4,34.36
+TOS01004941,Empoli,Arno,43.72403339153883,10.946222635094966,25.0,,Italy,Settore Idrologico Regione Toscana - SIR,Empoli,FI,Valdarno Inferiore e Valdinievole,A4,20.32
+TOS01004965,Poggibonsi,Elsa,43.47146397588711,11.12875993899587,88.0,,Italy,Settore Idrologico Regione Toscana - SIR,Poggibonsi,SI,Elsa,A5,83.19
+TOS01004967,Certaldo,Elsa,43.54469470938285,11.034768643301641,65.0,,Italy,Settore Idrologico Regione Toscana - SIR,Certaldo,FI,Elsa,A5,60.48
+TOS01004971,Castelfiorentino,Elsa,43.60448413141437,10.968398564776049,50.0,,Italy,Settore Idrologico Regione Toscana - SIR,Castelfiorentino,FI,Elsa,A5,45.91
+TOS01004981,Ponte a Elsa,Elsa,43.689374087287064,10.896315160131463,,,Italy,Settore Idrologico Regione Toscana - SIR,San Miniato,PI,Elsa,A4,26.02
+TOS01005001,Fucecchio valle,Arno,43.71974178753425,10.812358202279821,,,Italy,Settore Idrologico Regione Toscana - SIR,Fucecchio,FI,Valdarno Inferiore e Valdinievole,A4,16.14
+TOS01005005,Fornacino,Egola,43.63155148136716,10.849845654108568,50.0,,Italy,Settore Idrologico Regione Toscana - SIR,San Miniato,PI,Valdarno Inferiore e Valdinievole,A4,43.96
+TOS01005101,Cateratte monte,Usciana,43.68193772050544,10.648874765881098,,,Italy,Settore Idrologico Regione Toscana - SIR,Calcinaia,PI,Valdarno Inferiore e Valdinievole,A4,-0.21
+TOS01005115,Molino d'Era,Era,43.45563458821618,10.830126766870045,100.32,,Italy,Settore Idrologico Regione Toscana - SIR,Volterra,PI,Era,A5,99.51
+TOS01005131,Capannoli,Era,43.59228495471031,10.684419222516238,28.61,,Italy,Settore Idrologico Regione Toscana - SIR,Capannoli,PI,Era,A4,23.94
+TOS01005135,Forcoli,Roglio,43.60257209429441,10.697711713171376,,,Italy,Settore Idrologico Regione Toscana - SIR,Palaia,PI,Valdarno Inferiore e Valdinievole,A5,27.37
+TOS01005151,Ponsacco,Cascina,43.61982498844433,10.633987791419903,,,Italy,Settore Idrologico Regione Toscana - SIR,Ponsacco,PI,Valdarno Inferiore e Valdinievole,A4,16.86
+TOS01005161,Belvedere,Era,43.63782324936099,10.636794125031205,18.11,,Italy,Settore Idrologico Regione Toscana - SIR,Ponsacco,PI,Era,A4,10.65
+TOS01005181,Pontedera,Arno,43.6653337919198,10.631241209431545,10.53,,Italy,Settore Idrologico Regione Toscana - SIR,Pontedera,PI,Valdarno Inferiore e Valdinievole,A4,8.36
+TOS01005191,S. Giovanni alla Vena valle,Arno,43.68458594153186,10.585337884371327,7.63,,Italy,Settore Idrologico Regione Toscana - SIR,Vicopisano,PI,Valdarno Inferiore e Valdinievole,A4,6.41
+TOS01005231,Pisa a Sostegno,Arno,43.71269555262621,10.390983937613273,4.0,,Italy,Settore Idrologico Regione Toscana - SIR,Pisa,PI,Foci Arno e Serchio e Scolmatore,A6,-0.5
+TOS01005251,Bocca d'Arno 1,Arno,43.6807297984788,10.280349261826835,1.0,,Italy,Settore Idrologico Regione Toscana - SIR,Pisa,PI,Foci Arno e Serchio e Scolmatore,A6,-0.4
+TOS01005262,Gello,Scolmatore,43.65161839826759,10.587966449200785,5.0,,Italy,Settore Idrologico Regione Toscana - SIR,Pontedera,PI,Foci Arno e Serchio e Scolmatore,A4,3.16
+TOS01005342,Stagno,Scolmatore,43.599973244474846,10.352130539445124,1.11,,Italy,Settore Idrologico Regione Toscana - SIR,Collesalvetti,LI,Foci Arno e Serchio e Scolmatore,A6,-0.21
+TOS01005365,Castellina Marittima,Fine,43.40629366933841,10.490840125813037,27.0,,Italy,Settore Idrologico Regione Toscana - SIR,Castellina Marittima,PI,BassoSerchio,A6,15.08
+TOS01005372,Masso degli Specchi,Cecina,43.301934686352546,10.952840852757902,,,Italy,Settore Idrologico Regione Toscana - SIR,Castelnuovo di Val di Cecina,PI,Cecina,E1,138.51
+TOS01005377,S. Dalmazio,Pavone,43.25349280333554,10.943568510248983,247.0,,Italy,Settore Idrologico Regione Toscana - SIR,Pomarance,PI,Cecina,E1,241.6
+TOS01005386,Ponte SR439,Cecina,43.33417218598108,10.85806489685659,85.0,,Italy,Settore Idrologico Regione Toscana - SIR,Pomarance,PI,Cecina,E1,78.96
+TOS01005395,Montegemoli,Cecina,43.35467255940075,10.785283501563773,60.0,,Italy,Settore Idrologico Regione Toscana - SIR,Montecatini Val di Cecina,PI,Cecina,E1,57.01
+TOS01005401,Ponte di Monterufoli,Cecina,43.32333569195743,10.66982210384632,32.96,,Italy,Settore Idrologico Regione Toscana - SIR,Guardistallo,PI,Cecina,E1,32.19
+TOS01005403,Case Grisella,Sterza,43.31023844142509,10.673755558400766,40.0,,Italy,Settore Idrologico Regione Toscana - SIR,Guardistallo,PI,Cecina,E1,35.16
+TOS01005441,Portoferraio,Mare,42.81215055185173,10.3301741404535,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Portoferraio,LI,Isole,I,0.0
+TOS01005461,SP Lodano,Cornia,43.1115868275147,10.724056590633646,68.0,,Italy,Settore Idrologico Regione Toscana - SIR,Monteverdi Marittimo,PI,Cornia e Costa Follonica,E1,67.4
+TOS01005465,Molino del Balzone,Massera,43.12698149373848,10.718875848179387,80.0,,Italy,Settore Idrologico Regione Toscana - SIR,Monteverdi Marittimo,PI,Cornia e Costa Follonica,E1,73.02
+TOS01005471,Ponte per Montioni,Cornia,43.0727346230606,10.712372785602255,45.0,,Italy,Settore Idrologico Regione Toscana - SIR,Suvereto,LI,Cornia e Costa Follonica,E1,40.45
+TOS01005472,Ponte per Montioni 2,Cornia,43.0727346230606,10.712372785602255,45.0,,Italy,Settore Idrologico Regione Toscana - SIR,Suvereto,LI,,E1,40.45
+TOS01005485,Calzalunga,Milia,43.06740104127282,10.722643326499055,45.39,,Italy,Settore Idrologico Regione Toscana - SIR,Suvereto,LI,Cornia e Costa Follonica,E1,43.11
+TOS01005489,Vecchia SS Aurelia,Cornia,43.01901013922898,10.613963079945025,12.0,,Italy,Settore Idrologico Regione Toscana - SIR,Campiglia Marittima,LI,Cornia e Costa Follonica,E1,6.76
+TOS01005572,La Cura SP152,Pecora,42.93961559031309,10.801282404961329,15.0,,Italy,Settore Idrologico Regione Toscana - SIR,Follonica,GR,Cornia,E3,7.99
+TOS01005573,Cura Nuova,Pecora,42.96930094921246,10.8064332363242,,,Italy,Settore Idrologico Regione Toscana - SIR,Massa Marittima,GR,Cornia,E3,19.03
+TOS01005601,Macchiascandona,Bruna,42.804629841004534,11.002930086018539,9.19,,Italy,Settore Idrologico Regione Toscana - SIR,Castiglione della Pescaia,GR,Bruna,O3,0.48
+TOS01005672,Buonconvento,OmbroneGR,43.135284718126336,11.476082063449761,140.0,,Italy,Settore Idrologico Regione Toscana - SIR,Buonconvento,SI,Alto Ombrone,O1,131.52
+TOS01005761,Monte Amiata Scalo,Orcia,42.975771521903575,11.546923196244725,,,Italy,Settore Idrologico Regione Toscana - SIR,Montalcino,SI,Ombrone GR,O2,159.78
+TOS01005785,Roccastrada,Gretano,43.00142818532452,11.222662348913499,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Civitella Paganico,GR,Orcia,E1,128.14
+TOS01005791,Sasso d'Ombrone,OmbroneGR,42.9348841163298,11.321926268802843,68.0,,Italy,Settore Idrologico Regione Toscana - SIR,Cinigiano,GR,Orcia e Ombrone Medio,O2,54.46
+TOS01005801,Montieri,Merse,43.12119232886278,11.05786932796352,369.0,,Italy,Settore Idrologico Regione Toscana - SIR,Montieri,GR,Merse,E1,357.0
+TOS01005822,Istia,OmbroneGR,42.777814419096636,11.187914976864583,18.0,,Italy,Settore Idrologico Regione Toscana - SIR,Grosseto,GR,Bruna,O3,12.36
+TOS01005981,Livorno Mareografo,Mare,43.54625604464969,10.299631662411166,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Livorno,LI,Foci Arno e Serchio e Scolmatore,A6,0.0
+TOS02004011,Canevara,Frigido,44.058292643656976,10.168121271512456,105.0,,Italy,Settore Idrologico Regione Toscana - SIR,Massa,MS,Versilia,V,84.26
+TOS02004017,Ruosina,Vezza,43.99910869699603,10.266798741927303,,,Italy,Settore Idrologico Regione Toscana - SIR,Stazzema,LU,Versilia,S1,104.19
+TOS02004028,Seravezza 1,Versilia,43.992189290607854,10.222708590157326,56.0,,Italy,Settore Idrologico Regione Toscana - SIR,Seravezza,LU,Versilia,S1,42.24
+TOS02004029,Seravezza 2,Versilia,43.992814501586096,10.22350252402554,57.0,,Italy,Settore Idrologico Regione Toscana - SIR,Seravezza,LU,Versilia,S1,36.72
+TOS02004045,Ponte Tavole,Versilia,43.97257284649152,10.184916265150292,11.0,,Italy,Settore Idrologico Regione Toscana - SIR,Seravezza,LU,Versilia,S1,2.53
+TOS02004055,Forte dei Marmi,Mare,43.95571143208121,10.163579357827864,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Forte dei Marmi,LU,Versilia,V,0.0
+TOS02004059,Camaiore,Camaiore,43.933730188951955,10.281030614524324,21.0,,Italy,Settore Idrologico Regione Toscana - SIR,Camaiore,LU,Versilia,V,17.11
+TOS02004081,Torre del Lago,Lago Massaciuccoli,43.831815369374866,10.30683366294145,1.0,,Italy,Settore Idrologico Regione Toscana - SIR,Viareggio,LU,Versilia,S3,0.0
+TOS02004091,Viareggio 1,Canale Burlamacca,43.86766831371589,10.25948167572178,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Viareggio,LU,Versilia,S3,-0.07
+TOS02004101,Viareggio 2,Canale Burlamacca,43.867316376022586,10.258513398267752,,,Italy,Settore Idrologico Regione Toscana - SIR,Viareggio,LU,Versilia,S3,-0.05
+TOS02004115,Camporgiano,Serchio,44.16293518714937,10.338424451452354,390.0,,Italy,Settore Idrologico Regione Toscana - SIR,Camporgiano,LU,Serchio,S1,375.68
+TOS02004165,Ponte di Campia,Serchio,44.09005494177615,10.452824403274816,197.0,,Italy,Settore Idrologico Regione Toscana - SIR,Barga,LU,Serchio,S1,188.2
+TOS02004195,Calavorno,Serchio,44.01975034786488,10.53510321852451,137.0,,Italy,Settore Idrologico Regione Toscana - SIR,Coreglia Antelminelli,LU,Serchio,S2,105.92
+TOS02004215,Casotti di Cutigliano,Lima,44.09820332570856,10.751699216294766,593.0,,Italy,Settore Idrologico Regione Toscana - SIR,Abetone Cutigliano,PT,Lima,S1,571.74
+TOS02004231,Ponte di Lucchio,Lima,44.043589170529486,10.719796456845533,350.0,,Italy,Settore Idrologico Regione Toscana - SIR,Bagni di Lucca,LU,Serchio,S1,318.54
+TOS02004255,Chifenti,Lima,44.001998602535885,10.557513810656811,103.0,,Italy,Settore Idrologico Regione Toscana - SIR,Borgo a Mozzano,LU,Serchio,S1,97.19
+TOS02004271,Borgo a Mozzano,Serchio,43.97987669557382,10.551509864324236,100.0,,Italy,Settore Idrologico Regione Toscana - SIR,Borgo a Mozzano,LU,Serchio,S2,82.89
+TOS02004284,Piaggione,Serchio,43.92935290203062,10.51427543878815,72.0,,Italy,Settore Idrologico Regione Toscana - SIR,Lucca,LU,Serchio,S2,44.98
+TOS02004286,Mutigliano,Freddana,43.8817634501146,10.484186418065333,33.94,,Italy,Settore Idrologico Regione Toscana - SIR,Lucca,LU,Serchio,S2,33.56
+TOS02004291,Monte S. Quirico,Serchio,43.85725450412226,10.506863252879652,25.0,,Italy,Settore Idrologico Regione Toscana - SIR,Lucca,LU,Serchio,S2,18.56
+TOS02004305,Ponte Guido,Contesora,43.86504478752555,10.433171400337638,23.0,,Italy,Settore Idrologico Regione Toscana - SIR,Lucca,LU,Serchio,S2,20.0
+TOS02004311,Ripafratta,Serchio,43.81885904733353,10.414257242346109,11.0,,Italy,Settore Idrologico Regione Toscana - SIR,San Giuliano Terme,PI,Foci Arno e Serchio e Scolmatore,S3,6.8
+TOS02004315,Pontetetto,Ozzeri,43.82965338238753,10.469764507200864,12.99,,Italy,Settore Idrologico Regione Toscana - SIR,Lucca,LU,Serchio,S2,9.08
+TOS02004317,Ripafratta 2,Ozzeri,43.81876000998153,10.414255864649446,17.0,,Italy,Settore Idrologico Regione Toscana - SIR,San Giuliano Terme,PI,Serchio,S3,7.06
+TOS02004365,Vecchiano,Serchio,43.78051408812286,10.398886902288547,6.0,,Italy,Settore Idrologico Regione Toscana - SIR,Vecchiano,PI,Foci Arno e Serchio e Scolmatore,S3,-1.08
+TOS02004369,Bocca di Serchio,Serchio,43.781358233098246,10.269733078562195,-0.23,,Italy,Settore Idrologico Regione Toscana - SIR,San Giuliano Terme,PI,Foci Arno e Serchio e Scolmatore,S3,-0.37
+TOS03000109,Soliera,Aulella,44.20232017672397,10.062500245787692,120.0,,Italy,Settore Idrologico Regione Toscana - SIR,Fivizzano,MS,Magra,L,105.65
+TOS03001246,Calamazza,Magra,44.19812826176057,9.950780875943654,53.0,,Italy,Settore Idrologico Regione Toscana - SIR,Aulla,MS,Magra,L,44.29
+TOS03003111,Fibia,Laguna,42.4808740011639,11.198044006719925,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Orbetello,GR,,F2,0.0
+TOS03003116,Diga,Laguna,42.43647200116699,11.206743006711665,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Orbetello,GR,,F2,0.0
+TOS03003117,Nassa,Laguna,42.4320540011696,11.167317006726218,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Orbetello,GR,,F2,0.0
+TOS03003118,Ansedonia,Laguna,42.425181001164184,11.273900006684874,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Orbetello,GR,,F2,0.0
+TOS03004001,Pesa Miseglia,Carrione (ramo Colonnata),44.08155631991701,10.113626487436306,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Carrara,MS,,V,139.2
+TOS03004002,Colonnata Valle,Carrione (ramo Colonnata),44.0822460010962,10.105318007337164,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Carrara,MS,,V,107.7
+TOS03004003,Torano,Carrione (ramo di Torano),44.09103524714238,10.103332169242442,142.0,,Italy,Settore Idrologico Regione Toscana - SIR,Carrara,MS,,V,135.92
+TOS03004005,Ponte della Bugia,Carrione,44.080847001096565,10.101351007338595,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Carrara,MS,,V,95.68
+TOS03004006,Santuario della Salute,Gragnana,44.08003800915267,10.095897085854762,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Carrara,MS,,V,86.43
+TOS03004009,Ricortola,Ricortola,44.031987290403286,10.097204458524786,10.0,,Italy,Settore Idrologico Regione Toscana - SIR,Massa,MS,,V,8.77
+TOS03004373,Firenzuola Coniale,Santerno,44.15212800100819,11.454270006816206,279.0,,Italy,Settore Idrologico Regione Toscana - SIR,Firenzuola,FI,Tevere,R2,275.79
+TOS03004505,Chiusi,Montelungo,43.00560000107918,11.955710006504207,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Chiusi,SI,,C,253.93
+TOS03004508,Sbarchino,Lago di Chiusi,43.052666667741754,11.958261117619744,250.0,,Italy,Settore Idrologico Regione Toscana - SIR,Chiusi,SI,,C,247.49
+TOS03004509,Ponte SP Lauretana,Mucchia,43.23710000105939,11.960790006528514,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Cortona,AR,,C,251.84
+TOS03004511,Camucia,Esse di Cortona,43.24833831721649,11.994369990191567,,,Italy,Settore Idrologico Regione Toscana - SIR,Cortona,AR,,C,256.47
+TOS03004512,Montepulciano,Salarco,43.137990001075025,11.8238000065641,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Montepulciano,SI,,C,264.38
+TOS03004513,Sinalunga,Foenna,43.222945885865485,11.759456018681007,,,Italy,Settore Idrologico Regione Toscana - SIR,Sinalunga,SI,,C,257.62
+TOS03004515,Foiano,Esse,43.23582165181319,11.791675455004027,,,Italy,Settore Idrologico Regione Toscana - SIR,Foiano della Chiana,AR,,C,246.91
+TOS03004517,Foiano SP28,,43.23727000106624,11.830350006573074,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Foiano della Chiana,AR,,C,242.71
+TOS03004519,Ponte di Cesa,Canale della Chiana,43.32028000105889,11.836080006580572,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Marciano della Chiana,AR,,C,236.29
+TOS03004563,Ambra,Ambra,43.41512301709766,11.605106360433467,,,Italy,Settore Idrologico Regione Toscana - SIR,Bucine,AR,,A2,240.01
+TOS03004575,Terranuova,Ciuffenna,43.55613116851025,11.59806287957913,,,Italy,Settore Idrologico Regione Toscana - SIR,Terranova Bracciolini,AR,,A2,150.91
+TOS03004729,Ponte a Niccheri,Ema,43.734600001053344,11.29556000682643,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Bagno a Ripoli,FI,,A3,78.41
+TOS03004847,Variante Pratese,Calice,43.88887900105613,11.02009100695092,,,Italy,Settore Idrologico Regione Toscana - SIR,Agliana,PO,,B,40.15
+TOS03004851,Ponte dei Gelli,Brana,43.88605600105747,11.001034006957953,,,Italy,Settore Idrologico Regione Toscana - SIR,Agliana,PT,,B,37.96
+TOS03004863,Ponte alle Vanne,Ombrone PT,43.86820485746944,11.015568371368166,,,Italy,Settore Idrologico Regione Toscana - SIR,Prato,PO,Ombrone Pistoiese,B,35.31
+TOS03004869,Bagnolo,Bagnolo,43.914990001045844,11.058370006933973,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Montemurlo,PO,,B,
+TOS03004871,Ponte alla Ceppa,Stella,43.86210600106032,10.98735000696046,,,Italy,Settore Idrologico Regione Toscana - SIR,Quarrata,PT,,B,38.51
+TOS03004911,Sambuca,Pesa,43.57100000106644,11.215000006830309,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Barberino Tavarnelle,FI,,A3,171.62
+TOS03004935,Empoli-Pontorme,Orme,43.72119317178969,10.960297697536408,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Empoli,FI,,A4,24.94
+TOS03004995,Cassa Piaggioni Invaso,Arno,43.715860001081715,10.838360007001478,,,Italy,Settore Idrologico Regione Toscana - SIR,San Miniato,PI,,A4,
+TOS03005077,San Salvatore,Pescia di Collodi,43.851450001073445,10.6884500070748,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Montecarlo,LU,,A4,
+TOS03005097,Calcinaia,Allacciante,43.68392583985058,10.634729556165494,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Calcinaia,PI,,A4,5.09
+TOS03005141,Ponte via Chiavaccini,Era,43.619016001101706,10.643830007066654,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Ponsacco,PI,,A4,15.47
+TOS03005193,S. Giovanni alla Vena valle_r,Arno,43.68300000109426,10.585337884376013,7.63,,Italy,Settore Idrologico Regione Toscana - SIR,Vicopisano,PI,,A4,6.41
+TOS03005282,SR206 Emilia,Scolmatore,43.62523794929866,10.461211447615463,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Collesalvetti,LI,,A4,-0.76
+TOS03005335,Ponte SS555,Tora,43.60042775994335,10.444291241160169,,,Italy,Settore Idrologico Regione Toscana - SIR,Collesalvetti,LI,Tora,A4,5.48
+TOS03005379,Bulera,Possera,43.26802100110991,10.912562006916092,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Pomarance,PI,,E1,
+TOS03005415,Steccaia Q,Cecina,43.339968392371695,10.57354104271341,12.0,,Italy,Settore Idrologico Regione Toscana - SIR,Riparbella,PI,Cecina,E1,7.84
+TOS03005417,Steccaia,Cecina,43.33996839236631,10.573541042711913,12.0,,Italy,Settore Idrologico Regione Toscana - SIR,Riparbella,PI,,E1,7.84
+TOS03005435,Cecina SP39,Cecina,43.31487870113518,10.514626507082127,,,Italy,Settore Idrologico Regione Toscana - SIR,Cecina,LI,,E2,0.9
+TOS03005487,Cafaggio,Cornia,43.033910001145216,10.649470006994287,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Campiglia Marittima,LI,,E1,14.65
+TOS03005577,Scarlino,Rigiolato,42.938870321927745,10.837995012709865,10.0,,Italy,Settore Idrologico Regione Toscana - SIR,Scarlino,GR,Cornia e Costa Follonica,E3,8.23
+TOS03005611,Lepri,Bruna,42.90321700896935,11.0374188491449,22.1,,Italy,Settore Idrologico Regione Toscana - SIR,Gavorrano,GR,Bruna e Foce Ombrone,O3,15.73
+TOS03005615,Sovata,Sovata,42.894846688272935,11.005811698124663,13.0,,Italy,Settore Idrologico Regione Toscana - SIR,Castiglione della Pescaia,GR,Bruna e Foce Ombrone,E1,8.75
+TOS03005641,Ponte del Garbo,OmbroneGR,43.240033001080995,11.553432006672464,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Asciano,SI,,O1,163.38
+TOS03005651,Pianella,Arbia,43.35657000107875,11.416200006736707,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Castelnuovo Berardenga,SI,,O1,212.69
+TOS03005655,Podere Nuovo,Arbia,43.20078949089338,11.452689295923737,156.0,,Italy,Settore Idrologico Regione Toscana - SIR,Monteroni d'Arbia,SI,Ombrone Alto,O1,144.96
+TOS03005657,Radi,Sorra,43.215033001092415,11.386919006731338,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Monteroni d'Arbia,SI,,O1,160.26
+TOS03005707,Ponte Orgia,Merse,43.21464539669753,11.25811160288756,,,Italy,Settore Idrologico Regione Toscana - SIR,Sovicille,SI,Merse,O1,178.92
+TOS03005711,Montepescini,Merse,43.097174761594545,11.32692088373282,161.63,,Italy,Settore Idrologico Regione Toscana - SIR,Murlo,SI,Merse-Farma,O1,122.26
+TOS03005725,Petriolo,Farma,43.07928053203866,11.299750322177061,150.0,,Italy,Settore Idrologico Regione Toscana - SIR,Monticiano,SI,Merse-Farma,O1,149.53
+TOS03005781,S. Angelo Cinigiano,Orcia,42.96096511981148,11.42651870178755,104.0,,Italy,Settore Idrologico Regione Toscana - SIR,Montalcino,SI,Orcia e Ombrone Medio,O2,98.55
+TOS03005811,Castellina,Trasubbie,42.7939123384832,11.240868179212447,25.0,,Italy,Settore Idrologico Regione Toscana - SIR,Scansano,GR,Orcia e Ombrone Medio,O2,23.64
+TOS03005831,Ponte Tura Aurelia,OmbroneGR,42.76246791196743,11.141399079758287,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Grosseto,GR,,O3,4.56
+TOS03005865,Podere Peretti,Osa,42.5678476141785,11.233600218321563,12.0,,Italy,Settore Idrologico Regione Toscana - SIR,Orbetello,GR,Albegna e Costa Argentario,F2,8.38
+TOS03005881,Ponte di Montemerano,Albegna,42.63807761009006,11.456518319216201,100.0,,Italy,Settore Idrologico Regione Toscana - SIR,Scansano,GR,Albegna e Costa Argentario,F1,95.19
+TOS03005889,SR74 Maremmana,Elsa,42.545229001150304,11.347080006670629,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Manciano,GR,,F1,16.97
+TOS03005895,Marsiliana,Albegna,42.5441020038108,11.336426360222667,16.0,,Italy,Settore Idrologico Regione Toscana - SIR,Manciano,GR,Albegna e Costa Argentario,F1,12.78
+TOS03005897,SP323 Amiatina,Albegna,42.5185980011583,11.241916006707408,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Orbetello,GR,,F2,-0.47
+TOS03005995,S. S. 1 Aurelia,Chiarone,42.412524001154026,11.475675006608098,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Capalbio,GR,,F2,16.09
+TOS03006123,Sansepolcro,Tevere,43.56530000101775,12.120700006467041,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Sansepolcro,AR,,T,304.28
+TOS06006028,Gorgabuia,Tevere,43.57869658882511,12.057048885435385,,,Italy,Settore Idrologico Regione Toscana - SIR,Anghiari,AR,Tevere,T,337.11
+TOS06006078,Montedoglio,Invaso Diga,43.59138900102423,12.053330006537983,411.76,,Italy,Settore Idrologico Regione Toscana - SIR,Anghiari,AR,Tevere,T,0.0
+TOS07000046,Pitigliano,Fiora,42.59349152405553,11.59964944153123,157.0,,Italy,Settore Idrologico Regione Toscana - SIR,Pitigliano,GR,Fiora,F1,
+TOS09000001,Piccatello,Magra,44.384146261384906,9.883383657373539,273.0,,Italy,Settore Idrologico Regione Toscana - SIR,Pontremoli,MS,Magra,L,258.98
+TOS09000015,Bagnone,Bagnone,44.309663450305536,9.98412479647304,195.0,,Italy,Settore Idrologico Regione Toscana - SIR,Bagnone,MS,Magra,L,189.79
+TOS09000021,Licciana Nardi,,44.2427845222211,10.003428038049751,121.0,,Italy,Settore Idrologico Regione Toscana - SIR,Licciana Nardi,MS,,L,111.78
+TOS09001000,Baccatoio,Baccatoio,43.92402318377094,10.226933416006508,2.0,,Italy,Settore Idrologico Regione Toscana - SIR,Pietrasanta,LU,Baccatoio,V,-0.44
+TOS09001083,S. Giustina,Magra,44.3617025885756,9.896691448991351,205.0,,Italy,Settore Idrologico Regione Toscana - SIR,Pontremoli,MS,Magra,L,200.01
+TOS09001246,Calamazza ARPAL,Magra,44.201787075396055,9.95104010132378,,,Italy,Settore Idrologico Regione Toscana - SIR,Aulla,MS,Magra,L,44.29
+TOS11000705,Ponte Magra,Magra,44.293189739762134,9.942269436774817,,,Italy,Settore Idrologico Regione Toscana - SIR,Villafranca in Lunigiana,MS,Magra,L,113.05
+TOS11000706,Ponte Teglia,Teglia,44.33677080923627,9.899091616688349,,,Italy,Settore Idrologico Regione Toscana - SIR,Pontremoli,MS,Teglia,L,184.04
+TOS15004335,Guappero cassa mezzo,Guappero,43.811409671918476,10.491657985913966,,,Italy,Settore Idrologico Regione Toscana - SIR,Lucca,LU,Serchio,S2,23.0
+TOS15004336,Guappero cassa monte,Guappero,43.8066651580951,10.49222244694921,,,Italy,Settore Idrologico Regione Toscana - SIR,Lucca,LU,Serchio,S2,23.0
+TOS15004337,Guappero cassa valle 1,Guappero,43.81599995156843,10.490732238565522,,,Italy,Settore Idrologico Regione Toscana - SIR,Lucca,LU,Serchio,S2,22.0
+TOS15004338,Guappero cassa valle 2,Guappero,43.81599220999471,10.490726874147434,,,Italy,Settore Idrologico Regione Toscana - SIR,Lucca,LU,Serchio,S2,22.0
+TOS15004682,Firenze Uffizi 2,Arno,43.76763063405609,11.254924542597164,40.58,,Italy,Settore Idrologico Regione Toscana - SIR,Firenze,FI,Valdarno Medio Firenze,A3,40.51
+TOS15004865,Ponte alle Vanne Cassa,Ombrone PT,43.868216459671125,11.01558446462235,0.0,,Italy,Settore Idrologico Regione Toscana - SIR,Prato,PO,,B,39.43
+TOS16005841,Berrettino,OmbroneGR,42.748658276636405,11.123656616138241,11.0,,Italy,Settore Idrologico Regione Toscana - SIR,Grosseto,GR,Bruna e Foce Ombrone,O3,5.05
+TOS19000702,Pieve S. Stefano,Tevere,43.66902858089894,12.042798070041027,434.0,,Italy,Settore Idrologico Regione Toscana - SIR,Pieve Santo Stefano,AR,Tevere,T,423.63
+TOS19000704,Grassina,Ema,43.72416702747577,11.294209053913244,90.0,,Italy,Settore Idrologico Regione Toscana - SIR,Bagno a Ripoli,FI,Greve-Pesa,A3,83.88
+TOS30150800,Pracchia,Reno,44.0554890333655,10.90671327171506,620.0,,Italy,Settore Idrologico Regione Toscana - SIR,Pistoia,PT,RENO,R1,609.84
+TOS30250000,Marradi,Lamone,44.07428331549809,11.609273986609997,323.0,,Italy,Settore Idrologico Regione Toscana - SIR,Marradi,FI,LAMONE,R2,305.4
