@@ -1,0 +1,172 @@
+{
+  "waterlevel_data": {
+    "result": "OK",
+    "data": [
+      {
+        "id": 1218678796,
+        "waterlevel_datetime": "2026-03-18 15:50",
+        "waterlevel_m": null,
+        "waterlevel_msl": "1.31",
+        "waterlevel_msl_previous": "1.31",
+        "flow_rate": null,
+        "discharge": null,
+        "storage_percent": "64.86",
+        "sort_order": null,
+        "station_type": "tele_waterlevel",
+        "situation_level": 3,
+        "agency": {
+          "id": 9,
+          "agency_name": {
+            "th": "สถาบันสารสนเทศทรัพยากรน้ำ (องค์การมหาชน)",
+            "en": "Hydro – Informatics Institute (Public Organization)"
+          },
+          "agency_shortname": {
+            "th": "สสน.",
+            "en": "HII"
+          }
+        },
+        "basin": {
+          "id": 10,
+          "basin_code": 10,
+          "basin_name": {
+            "th": "ลุ่มน้ำเจ้าพระยา",
+            "en": "Chao Phraya Basin"
+          }
+        },
+        "station": {
+          "id": 1,
+          "tele_station_name": {
+            "en": "Klong Ladprao Bang Bua Temple",
+            "th": "คลองลาดพร้าว วัดบางบัว"
+          },
+          "tele_station_lat": 13.85402,
+          "tele_station_long": 100.58746,
+          "tele_station_oldcode": "BKK021",
+          "tele_station_type": "tele_waterlevel",
+          "left_bank": 2.2,
+          "right_bank": 2.2,
+          "min_bank": 2.2,
+          "ground_level": -0.33,
+          "offset": null,
+          "sub_basin_id": 240,
+          "agency_id": 9,
+          "geocode_id": 37,
+          "hydro_id": null,
+          "qmax": null,
+          "is_key_station": false,
+          "warning_level_m": null,
+          "critical_level_m": null,
+          "critical_level_msl": null
+        },
+        "geocode": {
+          "area_code": "1",
+          "area_name": {
+            "th": "กรุงเทพมหานคร",
+            "en": "Bangkok"
+          },
+          "amphoe_code": "05",
+          "amphoe_name": {
+            "th": "บางเขน",
+            "en": "Bang Khen District"
+          },
+          "tumbon_code": "02",
+          "tumbon_name": {
+            "th": "อนุสาวรีย์",
+            "en": "Anusawari"
+          },
+          "province_code": "10",
+          "province_name": {
+            "th": "กรุงเทพมหานคร",
+            "en": "Bangkok"
+          }
+        },
+        "diff_wl_bank": "0.89",
+        "diff_wl_bank_text": "ต่ำกว่าตลิ่ง (ม.)",
+        "river_gid": 186304,
+        "river_name": "คลองบางบัว"
+      },
+      {
+        "id": 1218667426,
+        "waterlevel_datetime": "2026-03-18 15:00",
+        "waterlevel_m": null,
+        "waterlevel_msl": "330.52",
+        "waterlevel_msl_previous": "330.52",
+        "flow_rate": null,
+        "discharge": "2.40",
+        "storage_percent": "99.02",
+        "sort_order": null,
+        "station_type": "tele_waterlevel",
+        "situation_level": 4,
+        "agency": {
+          "id": 12,
+          "agency_name": {
+            "th": "กรมชลประทาน",
+            "en": "Royal Irrigation Department"
+          },
+          "agency_shortname": {
+            "th": "ชป.",
+            "en": "RID"
+          }
+        },
+        "basin": {
+          "id": 5,
+          "basin_code": 5,
+          "basin_name": {
+            "th": "ลุ่มน้ำมูล",
+            "en": "Mun Basin"
+          }
+        },
+        "station": {
+          "id": 1117894,
+          "tele_station_name": {
+            "th": "บ้านขนงพระเหนือ"
+          },
+          "tele_station_lat": 14.60611,
+          "tele_station_long": 101.472778,
+          "tele_station_oldcode": "M.199",
+          "tele_station_type": "tele_waterlevel",
+          "left_bank": 663.260988,
+          "right_bank": 663.583988,
+          "min_bank": 333.8,
+          "ground_level": 0,
+          "offset": 328.799988,
+          "sub_basin_id": 154,
+          "agency_id": 12,
+          "geocode_id": 1921,
+          "hydro_id": 4,
+          "qmax": 190,
+          "is_key_station": false,
+          "warning_level_m": null,
+          "critical_level_m": null,
+          "critical_level_msl": null
+        },
+        "geocode": {
+          "area_code": "4",
+          "area_name": {
+            "th": "ภาคตะวันออกเฉียงเหนือ",
+            "en": "Northeast"
+          },
+          "amphoe_code": "21",
+          "amphoe_name": {
+            "th": "ปากช่อง",
+            "en": "Pak Chong District"
+          },
+          "tumbon_code": "07",
+          "tumbon_name": {
+            "th": "ขนงพระ",
+            "en": "Khanong Phra"
+          },
+          "province_code": "30",
+          "province_name": {
+            "th": "นครราชสีมา",
+            "en": "Nakhon Ratchasima"
+          }
+        },
+        "diff_wl_bank": "3.28",
+        "diff_wl_bank_text": "ต่ำกว่าตลิ่ง (ม.)",
+        "river_gid": 150856,
+        "river_name": "ลำโดมน้อย"
+      }
+    ]
+  }
+}
