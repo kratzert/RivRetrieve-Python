@@ -19,6 +19,7 @@ class UKEAFetcher(base.RiverDataFetcher):
 
     Supported Variables:
         - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
+        - ``constants.DISCHARGE_INSTANT`` (m³/s)
         - ``constants.STAGE_INSTANT`` (m)
     """
 
