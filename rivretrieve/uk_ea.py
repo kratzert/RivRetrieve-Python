@@ -154,9 +154,9 @@ class UKEAFetcher(base.RiverDataFetcher):
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         df = pd.DataFrame(raw_data)
-        
+
         # Only convert to date if the variable is a daily summary
-        if constants.DAILY in variable: 
+        if constants.DAILY in variable:
             df[constants.TIME_INDEX] = pd.to_datetime(df["dateTime"]).dt.date
         else:
             df[constants.TIME_INDEX] = pd.to_datetime(df["dateTime"])
