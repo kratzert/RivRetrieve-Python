@@ -196,7 +196,9 @@ class ThailandFetcher(base.RiverDataFetcher):
                 continue
 
             station_name = cls._pick_localized_text(station.get("tele_station_name"))
-            station_name_local = cls._pick_localized_text(station.get("tele_station_name"), preferred_languages=("th", "en"))
+            station_name_local = cls._pick_localized_text(
+                station.get("tele_station_name"), preferred_languages=("th", "en")
+            )
             records.append(
                 {
                     constants.GAUGE_ID: gauge_id,
@@ -256,7 +258,9 @@ class ThailandFetcher(base.RiverDataFetcher):
         if "datetime" not in df.columns:
             return pd.DataFrame(columns=[constants.TIME_INDEX, "value", "discharge"])
 
-        timestamps = pd.to_datetime(df["datetime"], errors="coerce").dt.tz_localize(cls.LOCAL_TIMEZONE).dt.tz_localize(None)
+        timestamps = (
+            pd.to_datetime(df["datetime"], errors="coerce").dt.tz_localize(cls.LOCAL_TIMEZONE).dt.tz_localize(None)
+        )
         parsed = pd.DataFrame(
             {
                 constants.TIME_INDEX: timestamps,
