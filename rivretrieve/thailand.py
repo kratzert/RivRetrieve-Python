@@ -16,8 +16,8 @@ class ThailandFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from the ThaiWater public API.
 
     Data source:
-        - website: https://www.thaiwater.net/
-        - standards portal: https://standard.thaiwater.net/
+        - official ThaiWater website: https://www.thaiwater.net/
+        - official/public ThaiWater standards portal: https://standard.thaiwater.net/
 
     Supported variables:
         - ``constants.STAGE_DAILY_MEAN`` (m)
@@ -26,18 +26,21 @@ class ThailandFetcher(base.RiverDataFetcher):
         - ``constants.DISCHARGE_INSTANT`` (m³/s)
 
     Data description and API:
-        - station metadata endpoint:
+        - official/public station metadata endpoint:
           https://api-v3.thaiwater.net/api/v1/thaiwater30/public/waterlevel_load
-        - time series endpoint:
+        - official/public time-series endpoint:
           https://api-v3.thaiwater.net/api/v1/thaiwater30/public/waterlevel_graph
-        - ThaiWater station project background:
+        - example graph request:
+          https://api-v3.thaiwater.net/api/v1/thaiwater30/public/waterlevel_graph?station_type=tele_waterlevel&station_id=1&start_date=2025-01-01&end_date=2025-01-03
+        - official ThaiWater telemetry station project background:
           https://www.hii.or.th/en/research-development/project-highlights/2024/02/08/2021-automated-telemetry-station-enhancement-project-to-support-national-water-management/
-        - government catalog entry:
+        - official government catalog entry:
           https://gdcatalog.go.th/en/dataset/gdpublish-water-level
 
     Terms of use:
         - see https://www.thaiwater.net/
         - see https://standard.thaiwater.net/
+        - use the public ThaiWater endpoints according to provider terms and availability
 
     Notes:
         - This v1 implementation uses the broad ``waterlevel_load`` inventory and
