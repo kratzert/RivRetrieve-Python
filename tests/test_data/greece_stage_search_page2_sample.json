@@ -1,0 +1,28 @@
+{
+  "count": 3,
+  "next": null,
+  "previous": "https://system.openhi.net/api/stations/?q=ts_only%3A+variable%3Astage",
+  "results": [
+    {
+      "id": 1534,
+      "last_update": "2026-03-14T22:00:00Z",
+      "last_modified": "2019-10-29T11:15:59.063566+02:00",
+      "name": "Αλαμάνα",
+      "code": "",
+      "remarks": "",
+      "geom": "SRID=4326;POINT (22.4952 38.8125)",
+      "display_timezone": "Etc/GMT-2",
+      "altitude": null,
+      "start_date": null,
+      "end_date": null,
+      "overseer": "",
+      "owner": 11
+    }
+  ],
+  "bounding_box": [
+    22.223609,
+    37.073479,
+    22.4952,
+    38.856109
+  ]
+}

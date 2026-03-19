@@ -1,0 +1,28 @@
+{
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 8424,
+      "last_update": "2026-03-04T07:45:00Z",
+      "last_modified": "2021-11-16T13:35:44.555169+02:00",
+      "name": "Μάνδρα Ρέμα",
+      "code": "",
+      "remarks": "",
+      "geom": "SRID=4326;POINT (23.456293 38.098118)",
+      "display_timezone": "Etc/GMT-2",
+      "altitude": 215.0,
+      "start_date": null,
+      "end_date": null,
+      "overseer": "",
+      "owner": 25
+    }
+  ],
+  "bounding_box": [
+    23.456293,
+    38.098118,
+    23.456293,
+    38.098118
+  ]
+}
