@@ -12,17 +12,16 @@ from . import base, constants, utils
 
 logger = logging.getLogger(__name__)
 
-# from datetime import date, datetime, timedelta, timezone
-# from typing import List
 
 class UKSEPAFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from the Scottish Environment Protection Agency (SEPA). 
     
-    Data Source: SEPA API ()
+    Data Source: SEPA API (https://timeseriesdoc.sepa.org.uk/)
 
     Supported Variables:
         - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
         - ``constants.DISCHARGE_INSTANT`` (m³/s)
+        - ``constants.STAGE_DAILY_MEAN`` (m)
         - ``constants.STAGE_INSTANT`` (m)
     """
 
@@ -35,11 +34,38 @@ class UKSEPAFetcher(base.RiverDataFetcher):
         r"\sTEST$", r"\sTEMP$", r"\stest\s"
     ]
 
-    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> List[Dict[str, Any]]:
-        pass 
+    def __init__(self, api_key: Optional[str] = None):
+        super().__init__()
+        self._auth_header = self._sepa_auth_headers(api_key)
 
-    def _parse_data(self, raw_data: List[Dict[str, Any]], variable: str) -> pd.DataFrame:
-        pass
+    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> List[Dict[str, Any]]:
+        """Downloads the raw data from the SEPA API."""
+        ts_name, stationparameter_name = self._get_ts_and_parameter_name(variable)
+        ts_list = self._sepa_timeseries_list(
+            station_id = gauge_id, 
+            stationparameter_name=stationparameter_name, 
+            ts_name=ts_name, 
+        )
+        if ts_list.shape[0] == 0: 
+            return None 
+        ts_id = ts_list['ts_id'].iloc[0]
+        ts = self._sepa_timeseries_values(
+            ts_id = ts_id, 
+            start_date=start_date, 
+            end_date=end_date, 
+            metadata=True
+        )
+        return ts 
+
+    def _parse_data(self, gauge_id: str, raw_data: any, variable: str) -> pd.DataFrame:
+        """Parses the raw data into a standardized pandas DataFrame.""" 
+        df = raw_data[['Timestamp', 'Value']]
+        df[constants.TIME_INDEX] = pd.to_datetime(df["Timestamp"])
+        df["Value"] = pd.to_numeric(df["Value"], errors="coerce")
+        df = df[[constants.TIME_INDEX, "Value"]]
+        df = df.rename(columns={"Value": variable})
+        df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX])
+        return df.set_index(constants.TIME_INDEX)
 
     def get_available_variables(self): 
         return (
@@ -58,14 +84,12 @@ class UKSEPAFetcher(base.RiverDataFetcher):
         Returns:
             pd.DataFrame: A DataFrame indexed by gauge_id, containing site metadata.
         """
-        pass
-        # return utils.load_cached_metadata_csv("uk_ea")
+        return utils.load_cached_metadata_csv("uk_ea")
 
     def _get_group_metadata(
         self, 
         group_id,
         return_fields: str | List[str] | None = None, 
-        auth_header: dict | None = None, 
         timeout: int = 15
     ):
         if return_fields is None:
@@ -91,8 +115,12 @@ class UKSEPAFetcher(base.RiverDataFetcher):
         }
 
         # Perform request
-        headers = auth_header or {}
-        response = requests.get(self.BASE_URL, params=params, headers=headers, timeout=timeout)
+        response = utils.requests_retry_session().get(
+            self.BASE_URL, 
+            params=params, 
+            headers=self._auth_header, 
+            timeout=timeout
+        )
         response.raise_for_status()
         json_content = response.json()
 
@@ -119,7 +147,6 @@ class UKSEPAFetcher(base.RiverDataFetcher):
     def get_metadata(
         self, 
         return_fields: str | List[str] | None = None, 
-        auth_header: dict | None = None, 
         timeout: int = 15
     ) -> pd.DataFrame:
         """Fetches site metadata for all stations from the EA API.
@@ -131,11 +158,23 @@ class UKSEPAFetcher(base.RiverDataFetcher):
         group_ids = ['270322', '615437']
         stn_list = []
         for group_id in group_ids: 
-            df = self._get_group_metadata(group_id, return_fields, auth_header, timeout)
+            df = self._get_group_metadata(group_id, return_fields, timeout)
             stn_list.append(df)
         stns = pd.concat(stn_list)
         stns = stns.drop_duplicates().reset_index(drop=True)
         return stns
+
+    def _get_ts_and_parameter_name(self, variable): 
+        if variable == constants.STAGE_INSTANT:
+            return "15minute", "Level"
+        elif variable == constants.DISCHARGE_INSTANT: 
+            return "15minute", "Flow"
+        elif variable == constants.STAGE_DAILY_MEAN: 
+            return "Day.Mean", "Level" 
+        elif variable == constants.DISCHARGE_DAILY_MEAN:
+            return "Day.Mean", "Flow"
+        else:
+            raise ValueError(f"Unsupported variable: {variable}")
 
     def get_data(
         self,
@@ -149,7 +188,24 @@ class UKSEPAFetcher(base.RiverDataFetcher):
         end_date = utils.format_end_date(end_date)
         if variable not in self.get_available_variables():
             raise ValueError(f"Unsupported variable: {variable}")
-        
+
+        ts_name, stationparameter_name = self._get_ts_and_parameter_name(variable)
+        ts_list = self._sepa_timeseries_list(
+            station_id = gauge_id, 
+            stationparameter_name=stationparameter_name, 
+            ts_name=ts_name, 
+        )
+        if ts_list.shape[0] == 0: 
+            return None 
+        ts_id = ts_list['ts_id'].iloc[0]
+        ts = self._sepa_timeseries_values(
+            ts_id = ts_id, 
+            start_date=start_date, 
+            end_date=end_date, 
+            metadata=True
+        )
+        ts = self._parse_data(gauge_id=gauge_id, raw_data = ts, variable=variable)
+        return ts 
 
     def _sepa_auth_headers(self, api_key: str | None = None) -> dict:
         """Get access token to access the SEPA Timeseries API as a 
@@ -165,7 +221,7 @@ class UKSEPAFetcher(base.RiverDataFetcher):
         access_token = response.json()['access_token']
         return {'Authorization': 'Bearer ' + access_token}
 
-    def _sepa_group_list(self, auth_header: dict | None = None, timeout: int = 15) -> pd.DataFrame:
+    def _sepa_group_list(self, timeout: int = 15) -> pd.DataFrame:
         """Retrieve the list of available SEPA station groups from the KiWIS API."""
         params = {
             "service": "kisters",
@@ -175,8 +231,12 @@ class UKSEPAFetcher(base.RiverDataFetcher):
             "format": "json",
             "kvp": "true",
         }
-        headers = auth_header or {}
-        response = requests.get(self.BASE_URL, params=params, headers=headers, timeout=timeout)
+        response = utils.requests_retry_session().get(
+            self.BASE_URL, 
+            params=params, 
+            headers=self._auth_header, 
+            timeout=timeout
+        )
         response.raise_for_status()
         json_content = response.json()
         column_names = list(map(str, json_content[0]))
@@ -188,7 +248,6 @@ class UKSEPAFetcher(base.RiverDataFetcher):
         self, 
         group_id: int | str | None = None,
         return_fields: str | List[str] | None = None,
-        auth_header: dict | None = None,
         timeout: int = 15
     ) -> pd.DataFrame:
         """Retrieve a list of SEPA hydrometric stations via the KiWIS API."""
@@ -218,8 +277,12 @@ class UKSEPAFetcher(base.RiverDataFetcher):
             params["stationgroup_id"] = group_id
 
         # Perform request
-        headers = auth_header or {}
-        response = requests.get(self.BASE_URL, params=params, headers=headers, timeout=timeout)
+        response = utils.requests_retry_session().get(
+            self.BASE_URL, 
+            params=params, 
+            headers=self._auth_header, 
+            timeout=timeout
+        )
         response.raise_for_status()
         json_content = response.json()
 
@@ -251,7 +314,6 @@ class UKSEPAFetcher(base.RiverDataFetcher):
         coverage: bool = True,
         group_id: str | None = None,
         return_fields: str | List[str] | None = None,
-        auth_header: dict | None = None,
         timeout=15,
     ):
         """Query SEPA for available timeseries metadata."""
@@ -316,8 +378,12 @@ class UKSEPAFetcher(base.RiverDataFetcher):
             api_query["returnfields"] = f"{api_query['returnfields']},coverage"
 
         # Perform request
-        headers = auth_header or {}
-        response = requests.get(self.BASE_URL, params=api_query, headers=headers, timeout=timeout)
+        response = utils.requests_retry_session().get(
+            self.BASE_URL, 
+            params=api_query, 
+            headers=self._auth_header, 
+            timeout=timeout
+        )
         response.raise_for_status()
         json_content = response.json()
 
@@ -351,7 +417,6 @@ class UKSEPAFetcher(base.RiverDataFetcher):
         md_return_fields: str | List[str] | None = None,
         ca_sta: bool = False,
         ca_sta_return_fields: str | List[str] | None = None,
-        auth_header: dict | None = None,
         timeout: int = 60,
     ):
         """Retrieve time series values from the SEPA KiWIS API."""
@@ -368,7 +433,6 @@ class UKSEPAFetcher(base.RiverDataFetcher):
 
         start_date_str = datetime.strftime(start_date, "%Y-%m-%d")
         end_date_str = datetime.strftime(end_date, "%Y-%m-%d")
-
         if ts_id is None:
             raise ValueError("Please enter a valid ts_id.")
         if isinstance(ts_id, list):
@@ -430,12 +494,16 @@ class UKSEPAFetcher(base.RiverDataFetcher):
         }
 
         # Perform request
-        headers = auth_header or {}
-        response = requests.get(self.BASE_URL, params=api_query, headers=headers, timeout=timeout)
-        response.raise_for_status()
-        json_content = response.json()[0]
-
-        # Handle API errors
+        r = utils.requests_retry_session().get(
+            self.BASE_URL, 
+            params=api_query, 
+            headers=self._auth_header, 
+            timeout=timeout
+        )
+        r.raise_for_status()
+        json_content = r.json()[0]
+        
+        # Handle possible API errors
         if len(json_content.keys()) == 3 and "message" in json_content:
             raise RuntimeError(json_content["message"])
 
