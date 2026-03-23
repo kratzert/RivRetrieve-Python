@@ -1,0 +1,29 @@
+[
+  {
+    "metadata_station_no": "4510",
+    "metadata_station_name": "HS Kaloševići",
+    "metadata_river_name": "Usora",
+    "metadata_catchment_name": "Bosna",
+    "metadata_station_latitude": "44.64680728070949",
+    "metadata_station_longitude": "17.90406242892678",
+    "metadata_station_carteasting": "6492481.45",
+    "metadata_station_cartnorthing": "4944707.34",
+    "metadata_station_local_x": "6492481.45",
+    "metadata_station_local_y": "4944707.34",
+    "metadata_station_elevation": "233.0"
+  },
+  {
+    "metadata_station_no": "4121",
+    "metadata_station_name": "HS Blažuj",
+    "metadata_river_name": "Zujevina",
+    "metadata_catchment_name": "Bosna",
+    "metadata_station_latitude": "43.8431791811352",
+    "metadata_station_longitude": "18.25663613998877",
+    "metadata_station_carteasting": "6520716.67",
+    "metadata_station_cartnorthing": "4855458.11",
+    "metadata_station_local_x": "6520716.67",
+    "metadata_station_local_y": "4855458.11",
+    "metadata_station_elevation": "500.5",
+    "metadata_CATCHMENT_SIZE": "123.4 km²"
+  }
+]

@@ -9,6 +9,7 @@ API Reference
    :caption: Fetchers:
 
    fetchers/australia
+   fetchers/bosnia_herzegovina
    fetchers/brazil
    fetchers/canada
    fetchers/chile
