@@ -36,9 +36,7 @@ class TestBosniaHerzegovinaFetcher(unittest.TestCase):
         mock_session = MagicMock()
         mock_requests_session.return_value = mock_session
 
-        mock_response = self._build_response(
-            json_data=self._load_json("bosnia_herzegovina_metadata_sample.json")
-        )
+        mock_response = self._build_response(json_data=self._load_json("bosnia_herzegovina_metadata_sample.json"))
         mock_session.get.return_value = mock_response
 
         result_df = self.fetcher.get_metadata()
@@ -161,9 +159,9 @@ class TestBosniaHerzegovinaFetcher(unittest.TestCase):
             end_date="2025-03-23",
         )
 
-        expected_df = pd.DataFrame(
-            columns=[constants.TIME_INDEX, constants.WATER_TEMPERATURE_INSTANT]
-        ).set_index(constants.TIME_INDEX)
+        expected_df = pd.DataFrame(columns=[constants.TIME_INDEX, constants.WATER_TEMPERATURE_INSTANT]).set_index(
+            constants.TIME_INDEX
+        )
 
         assert_frame_equal(result_df, expected_df, check_dtype=False)
         self.assertEqual(result_df.index.name, constants.TIME_INDEX)
