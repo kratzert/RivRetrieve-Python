@@ -1,32 +1,4 @@
-"""Fetcher for Ireland river gauge data from the OPW waterlevel.ie service.
-
-Data source:
-    - website: https://waterlevel.ie/
-    - station metadata endpoint: https://waterlevel.ie/hydro-data/data/internet/stations/stations.json
-
-Supported variables:
-    - ``constants.DISCHARGE_DAILY_MIN`` (m³/s)
-    - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
-    - ``constants.DISCHARGE_DAILY_MAX`` (m³/s)
-    - ``constants.STAGE_DAILY_MIN`` (m)
-    - ``constants.STAGE_DAILY_MEAN`` (m)
-    - ``constants.STAGE_DAILY_MAX`` (m)
-    - ``constants.WATER_TEMPERATURE_DAILY_MIN`` (°C)
-    - ``constants.WATER_TEMPERATURE_DAILY_MEAN`` (°C)
-    - ``constants.WATER_TEMPERATURE_DAILY_MAX`` (°C)
-
-Data description and API:
-    - see https://waterlevel.ie/
-
-Terms of use:
-    - see https://waterlevel.ie/
-
-Notes:
-    - Gauge IDs in RivRetrieve use the stripped OPW ``station_no`` identifier.
-      The fetcher accepts either stripped or zero-padded IDs and pads internally
-      when building archive URLs.
-    - Metadata is filtered to station IDs in the republication-safe range ``1..41000``.
-"""
+"""Fetcher for Ireland river gauge data from the OPW waterlevel.ie service."""
 
 import logging
 import re
@@ -42,7 +14,38 @@ logger = logging.getLogger(__name__)
 
 
 class IrelandOPWFetcher(base.RiverDataFetcher):
-    """Fetches river gauge data from Ireland's Office of Public Works."""
+    """Fetches river gauge data from Ireland's Office of Public Works.
+
+    Data source:
+        - website: https://waterlevel.ie/
+        - station metadata endpoint:
+          https://waterlevel.ie/hydro-data/data/internet/stations/stations.json
+
+    Supported variables:
+        - constants.DISCHARGE_DAILY_MIN (m³/s)
+        - constants.DISCHARGE_DAILY_MEAN (m³/s)
+        - constants.DISCHARGE_DAILY_MAX (m³/s)
+        - constants.STAGE_DAILY_MIN (m)
+        - constants.STAGE_DAILY_MEAN (m)
+        - constants.STAGE_DAILY_MAX (m)
+        - constants.WATER_TEMPERATURE_DAILY_MIN (°C)
+        - constants.WATER_TEMPERATURE_DAILY_MEAN (°C)
+        - constants.WATER_TEMPERATURE_DAILY_MAX (°C)
+
+    Data description and API:
+        - station and archive data are served from the OPW waterlevel.ie JSON endpoints
+        - historical annual station archive template:
+          https://waterlevel.ie/hydro-data/data/internet/stations/0/<station_no>/<parameter>/year.json
+
+    Terms of use:
+        - see https://waterlevel.ie/
+
+    Notes:
+        - Gauge IDs in RivRetrieve use the stripped OPW ``station_no`` identifier.
+          The fetcher accepts either stripped or zero-padded IDs and pads internally
+          when building archive URLs.
+        - Metadata is filtered to station IDs in the republication-safe range ``1..41000``.
+    """
 
     BASE_URL = "https://waterlevel.ie"
     METADATA_URL = f"{BASE_URL}/hydro-data/data/internet/stations/stations.json"
@@ -207,7 +210,11 @@ class IrelandOPWFetcher(base.RiverDataFetcher):
         return parsed.set_index(constants.TIME_INDEX).sort_index()
 
     def get_metadata(self) -> pd.DataFrame:
-        """Fetches live station metadata from waterlevel.ie."""
+        """Fetches live station metadata from waterlevel.ie.
+
+        Returns a DataFrame indexed by ``constants.GAUGE_ID`` while preserving
+        the subset of standardized metadata fields used across RivRetrieve.
+        """
         session = utils.requests_retry_session(retries=6, backoff_factor=1, status_forcelist=(429, 500, 502, 503, 504))
 
         try:
@@ -285,7 +292,30 @@ class IrelandOPWFetcher(base.RiverDataFetcher):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-        """Fetches and parses time series data for a specific OPW gauge and variable."""
+        """Fetches and parses time series data for a specific OPW gauge and variable.
+
+        This method retrieves the requested data from the provider's archive endpoint,
+        parses it, and returns it in a standardized pandas DataFrame format.
+
+        Args:
+            gauge_id: The site-specific identifier for the gauge.
+            variable: The variable to fetch. Must be one of the strings listed
+                in the fetcher's ``get_available_variables()`` output.
+                These are typically defined in ``rivretrieve.constants``.
+            start_date: Optional start date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched from the earliest available date.
+            end_date: Optional end date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched up to the latest available date.
+
+        Returns:
+            pd.DataFrame: A pandas DataFrame indexed by datetime objects (``constants.TIME_INDEX``)
+            with a single column named after the requested ``variable``. The DataFrame
+            will be empty if no data is found for the given parameters.
+
+        Raises:
+            ValueError: If the requested ``variable`` is not supported by this fetcher.
+            Exception: For unexpected download or parsing errors.
+        """
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
 

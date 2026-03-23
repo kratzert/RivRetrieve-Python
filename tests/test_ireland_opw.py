@@ -1,5 +1,4 @@
 import json
-import os
 import unittest
 from pathlib import Path
 from unittest.mock import MagicMock, patch
@@ -13,7 +12,7 @@ from rivretrieve import IrelandOPWFetcher, constants
 class TestIrelandOPWFetcher(unittest.TestCase):
     def setUp(self):
         self.fetcher = IrelandOPWFetcher()
-        self.test_data_dir = Path(os.path.dirname(__file__)) / "test_data"
+        self.test_data_dir = Path(__file__).parent / "test_data"
 
     def _load_json(self, filename):
         with open(self.test_data_dir / filename, "r", encoding="utf-8") as f:
@@ -35,6 +34,7 @@ class TestIrelandOPWFetcher(unittest.TestCase):
 
         result_df = self.fetcher.get_metadata()
 
+        self.assertEqual(result_df.index.name, constants.GAUGE_ID)
         self.assertEqual(list(result_df.index), ["18113", "19001"])
         self.assertEqual(result_df.loc["18113", constants.STATION_NAME], "Ahane Br")
         self.assertEqual(result_df.loc["18113", constants.RIVER], "OWENTARAGLIN")
@@ -44,6 +44,7 @@ class TestIrelandOPWFetcher(unittest.TestCase):
         self.assertEqual(result_df.loc["19001", constants.RIVER], "BARROW")
         self.assertEqual(result_df.loc["19001", constants.COUNTRY], "Ireland")
         self.assertEqual(result_df.loc["19001", constants.SOURCE], self.fetcher.SOURCE)
+        mock_session.get.assert_called_once_with(self.fetcher.METADATA_URL, timeout=60)
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_stage_uses_single_series_payload(self, mock_requests_session):
@@ -68,6 +69,7 @@ class TestIrelandOPWFetcher(unittest.TestCase):
         assert_frame_equal(result_df, expected_df)
         request_url = mock_session.get.call_args.args[0]
         self.assertIn("/01234/S/year.json", request_url)
+        self.assertEqual(mock_session.get.call_args.kwargs["timeout"], 60)
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_stage_min_selects_daily_min_series(self, mock_requests_session):
@@ -244,6 +246,26 @@ class TestIrelandOPWFetcher(unittest.TestCase):
         ).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
+
+    @patch("rivretrieve.utils.requests_retry_session")
+    def test_get_data_returns_standardized_empty_frame_for_missing_series(self, mock_requests_session):
+        mock_session = MagicMock()
+        mock_requests_session.return_value = mock_session
+        mock_session.get.return_value = self._mock_response([])
+
+        result_df = self.fetcher.get_data(
+            gauge_id="19001",
+            variable=constants.DISCHARGE_DAILY_MEAN,
+            start_date="2025-01-01",
+            end_date="2025-01-02",
+        )
+
+        expected_df = pd.DataFrame(columns=[constants.TIME_INDEX, constants.DISCHARGE_DAILY_MEAN]).set_index(
+            constants.TIME_INDEX
+        )
+
+        assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
 
     def test_available_variables_include_daily_extremes(self):
         available = set(self.fetcher.get_available_variables())
