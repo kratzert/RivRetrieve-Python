@@ -1,0 +1,27 @@
+[
+  {
+    "stationId": "30000681",
+    "name": "Gudenaa, Langaa",
+    "description": "Catchment area 1234,5 km2",
+    "location": {
+      "x": 562000.0,
+      "y": 6245000.0,
+      "srid": "EPSG:25832"
+    },
+    "measurementPoints": []
+  },
+  {
+    "stationId": "30000682",
+    "name": "Skjern Aa, Ahlergaarde",
+    "description": "No area text",
+    "measurementPoints": [
+      {
+        "location": {
+          "x": 8.50,
+          "y": 56.03,
+          "srid": "EPSG:4326"
+        }
+      }
+    ]
+  }
+]
