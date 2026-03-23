@@ -16,16 +16,21 @@ logger = logging.getLogger(__name__)
 class SouthKoreaFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from South Korea's WAMIS Open API.
 
-    Data Source:
-        - Han River Flood Control Office (WAMIS Open API, http://www.wamis.go.kr)
+    Data source:
+        - Han River Flood Control Office (WAMIS Open API): http://www.wamis.go.kr
 
-    Supported Variables:
+    Supported variables:
         - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
         - ``constants.STAGE_DAILY_MEAN`` (m)
         - ``constants.STAGE_HOURLY_MEAN`` (m)
 
-    Data and API description:
-        - see WAMIS Open API: http://wamis.go.kr:8080/wamisweb/flw/w15.do
+    Data description and API:
+        - WAMIS Open API overview: http://wamis.go.kr:8080/wamisweb/flw/w15.do
+        - station list endpoint: http://www.wamis.go.kr:8080/wamis/openapi/wkw/wl_dubwlobs
+        - station metadata endpoint: http://www.wamis.go.kr:8080/wamis/openapi/wkw/wl_obsinfo
+        - discharge endpoint: http://www.wamis.go.kr:8080/wamis/openapi/wkw/flw_dtdata
+        - daily stage endpoint: http://www.wamis.go.kr:8080/wamis/openapi/wkw/wl_dtdata
+        - hourly stage endpoint: http://www.wamis.go.kr:8080/wamis/openapi/wkw/wl_hrdata
 
     Terms of use:
         - see https://www.hrfco.go.kr/web/openapi/policy.do
@@ -38,6 +43,16 @@ class SouthKoreaFetcher(base.RiverDataFetcher):
     URL_STATION_LIST = "http://www.wamis.go.kr:8080/wamis/openapi/wkw/wl_dubwlobs"
     URL_STATION_INFO = "http://www.wamis.go.kr:8080/wamis/openapi/wkw/wl_obsinfo"
 
+    @staticmethod
+    def _empty_result(variable: str) -> pd.DataFrame:
+        """Returns a standardized empty time series result."""
+        return pd.DataFrame(columns=[variable], index=pd.DatetimeIndex([], name=constants.TIME_INDEX, tz="UTC"))
+
+    @staticmethod
+    def _empty_metadata_frame() -> pd.DataFrame:
+        """Returns a standardized empty metadata result."""
+        return pd.DataFrame(columns=[constants.GAUGE_ID]).set_index(constants.GAUGE_ID)
+
     # --- Public API methods ---
     @staticmethod
     def get_cached_metadata() -> pd.DataFrame:
@@ -45,24 +60,31 @@ class SouthKoreaFetcher(base.RiverDataFetcher):
         return utils.load_cached_metadata_csv("korea")
 
     def get_metadata(self) -> pd.DataFrame:
-        """Downloads and parses site metadata from WAMIS."""
+        """Downloads and parses site metadata from WAMIS.
+
+        Keeps provider-specific columns where available, while mapping standard
+        RivRetrieve metadata fields and returning a DataFrame indexed by
+        ``constants.GAUGE_ID``.
+        """
+        session = utils.requests_retry_session()
         try:
-            # Step 1: fetch list of station IDs
-            resp = requests.get(self.URL_STATION_LIST, params={"output": "json"}, timeout=30)
+            resp = session.get(self.URL_STATION_LIST, params={"output": "json"}, timeout=30)
             resp.raise_for_status()
-            stations = resp.json().get("list", [])
+            payload = resp.json()
+            stations = payload.get("list", []) if isinstance(payload, dict) else []
             if not stations:
                 logger.warning("No stations found in WAMIS wl_dubwlobs.")
-                return pd.DataFrame(columns=[constants.GAUGE_ID]).set_index(constants.GAUGE_ID)
+                return self._empty_metadata_frame()
             station_ids = [s["obscd"] for s in stations if "obscd" in s]
         except Exception as e:
             logger.error(f"Failed to fetch WAMIS station list: {e}")
-            return pd.DataFrame(columns=[constants.GAUGE_ID]).set_index(constants.GAUGE_ID)
+            return self._empty_metadata_frame()
 
         df_all = pd.DataFrame()
         for sid in tqdm(station_ids, desc="Fetching WAMIS metadata"):
             try:
-                r = requests.get(self.URL_STATION_INFO, params={"obscd": sid, "output": "json"}, timeout=10)
+                r = session.get(self.URL_STATION_INFO, params={"obscd": sid, "output": "json"}, timeout=10)
+                r.raise_for_status()
                 data = r.json()
                 if data.get("result", {}).get("code") == "success" and "list" in data:
                     df = pd.json_normalize(data["list"])
@@ -72,7 +94,7 @@ class SouthKoreaFetcher(base.RiverDataFetcher):
 
         if df_all.empty:
             logger.warning("No metadata records retrieved from WAMIS.")
-            return pd.DataFrame(columns=[constants.GAUGE_ID]).set_index(constants.GAUGE_ID)
+            return self._empty_metadata_frame()
 
         # --- Rename + convert ---
         df_all = df_all.rename(
@@ -102,9 +124,7 @@ class SouthKoreaFetcher(base.RiverDataFetcher):
         df_all[constants.AREA] = pd.to_numeric(df_all[constants.AREA], errors="coerce")
         df_all[constants.COUNTRY] = "South Korea"
         df_all[constants.SOURCE] = "WAMIS Open API"
-
-        keep = [
-            constants.GAUGE_ID,
+        for column in (
             constants.STATION_NAME,
             constants.RIVER,
             constants.LATITUDE,
@@ -113,10 +133,13 @@ class SouthKoreaFetcher(base.RiverDataFetcher):
             constants.AREA,
             constants.COUNTRY,
             constants.SOURCE,
-        ]
+        ):
+            if column not in df_all.columns:
+                df_all[column] = np.nan
 
-        df_final = df_all[keep].dropna(subset=[constants.GAUGE_ID]).drop_duplicates(subset=[constants.GAUGE_ID])
-        return df_final.set_index(constants.GAUGE_ID)
+        df_all[constants.GAUGE_ID] = df_all[constants.GAUGE_ID].astype(str).str.strip()
+        df_final = df_all.dropna(subset=[constants.GAUGE_ID]).drop_duplicates(subset=[constants.GAUGE_ID])
+        return df_final.set_index(constants.GAUGE_ID).sort_index()
 
     # --- Variable support ---
     @staticmethod
@@ -192,7 +215,11 @@ class SouthKoreaFetcher(base.RiverDataFetcher):
 
         df_all = pd.concat(all_data, ignore_index=True)
         df_all = df_all.dropna(subset=["time", variable])
-        df_all = df_all[(df_all["time"] >= start_dt) & (df_all["time"] <= end_dt)]
+        if constants.HOURLY in variable or constants.INSTANTANEOUS in variable:
+            end_dt = end_dt + pd.Timedelta(days=1)
+            df_all = df_all[(df_all["time"] >= start_dt) & (df_all["time"] < end_dt)]
+        else:
+            df_all = df_all[(df_all["time"] >= start_dt) & (df_all["time"] <= end_dt)]
         df_all = df_all.drop_duplicates(subset="time", keep="first")
         df_all = df_all.sort_values("time").reset_index(drop=True)
         return df_all
@@ -200,12 +227,16 @@ class SouthKoreaFetcher(base.RiverDataFetcher):
     def _parse_data(self, gauge_id: str, raw_data: pd.DataFrame, variable: str) -> pd.DataFrame:
         """Ensures consistent time index and format."""
         if raw_data.empty:
-            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
+            return self._empty_result(variable)
 
         df = raw_data.copy()
         df = df.dropna(subset=["time", variable])
         df = df.sort_values("time")
-        df = df.set_index("time")
+        if constants.DISCHARGE in variable:
+            df[variable] = df[variable] / 1000.0
+        elif constants.STAGE in variable:
+            df[variable] = df[variable] / 100.0
+        df = df.rename(columns={"time": constants.TIME_INDEX}).set_index(constants.TIME_INDEX)
         df.index = df.index.tz_localize("UTC", nonexistent="NaT", ambiguous="NaT")
         return df[[variable]]
 
@@ -216,7 +247,32 @@ class SouthKoreaFetcher(base.RiverDataFetcher):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-        """Fetches and parses time series data for a specific gauge and variable."""
+        """Fetches and parses time series data for a specific gauge and variable.
+
+        This method retrieves the requested data from the provider's API,
+        parses it, and returns it in a standardized pandas DataFrame format.
+
+        Args:
+            gauge_id: The site-specific identifier for the gauge.
+            variable: The variable to fetch. Must be one of the strings listed
+                in the fetcher's ``get_available_variables()`` output.
+                These are typically defined in ``rivretrieve.constants``.
+            start_date: Optional start date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched from the earliest available date.
+            end_date: Optional end date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched up to the latest available date.
+
+        Returns:
+            pd.DataFrame: A pandas DataFrame indexed by datetime objects
+            (``constants.TIME_INDEX``) with a single column named after the
+            requested ``variable``. The DataFrame will be empty if no data is found
+            for the given parameters.
+
+        Raises:
+            ValueError: If the requested ``variable`` is not supported by this fetcher.
+            requests.exceptions.RequestException: If a network error occurs during data download.
+            Exception: For other unexpected errors during data fetching or parsing.
+        """
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
 
@@ -229,14 +285,18 @@ class SouthKoreaFetcher(base.RiverDataFetcher):
 
             if df.empty:
                 logger.debug(f"No {variable} data returned for gauge {gauge_id}.")
-                return df
+                return self._empty_result(variable)
 
             # Final date filter
             start_dt = pd.to_datetime(start_date).tz_localize("UTC")
             end_dt = pd.to_datetime(end_date).tz_localize("UTC")
+            if constants.HOURLY in variable or constants.INSTANTANEOUS in variable:
+                end_dt = end_dt + pd.Timedelta(days=1)
+                return df[(df.index >= start_dt) & (df.index < end_dt)]
+
             df = df[(df.index >= start_dt) & (df.index <= end_dt)]
             return df
 
         except Exception as e:
             logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}")
-            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
+            return self._empty_result(variable)
