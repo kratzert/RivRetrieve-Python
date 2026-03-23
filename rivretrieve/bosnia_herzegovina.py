@@ -14,17 +14,26 @@ logger = logging.getLogger(__name__)
 
 
 class BosniaHerzegovinaFetcher(base.RiverDataFetcher):
-    """Fetches river gauge data from vodostaji.voda.ba.
+    """Fetches river gauge data from the Federal Hydrometeorological Institute portal.
 
-    Data Source: [Federal Hydrometeorological Institute portal](https://vodostaji.voda.ba/#2031)
+    Data source:
+        - https://vodostaji.voda.ba/
 
-    Supported Variables:
-        - ``constants.DISCHARGE_DAILY_MEAN`` (m3/s)
-        - ``constants.DISCHARGE_INSTANT`` (m3/s)
-        - ``constants.STAGE_DAILY_MEAN`` (m)
-        - ``constants.STAGE_INSTANT`` (m)
-        - ``constants.WATER_TEMPERATURE_DAILY_MEAN`` (degC)
-        - ``constants.WATER_TEMPERATURE_INSTANT`` (degC)
+    Supported variables:
+        - constants.DISCHARGE_DAILY_MEAN (m³/s)
+        - constants.DISCHARGE_INSTANT (m³/s)
+        - constants.STAGE_DAILY_MEAN (m)
+        - constants.STAGE_INSTANT (m)
+        - constants.WATER_TEMPERATURE_DAILY_MEAN (°C)
+        - constants.WATER_TEMPERATURE_INSTANT (°C)
+
+    Data description and API:
+        - live station metadata snapshot: https://vodostaji.voda.ba/data/internet/layers/20/index.json
+        - annual station workbooks:
+          https://vodostaji.voda.ba/data/internet/stations/<group>/<gauge_id>/<parameter>/<file>
+
+    Terms of use:
+        - see https://vodostaji.voda.ba/
     """
 
     METADATA_URL = "https://vodostaji.voda.ba/data/internet/layers/20/index.json"
@@ -53,6 +62,16 @@ class BosniaHerzegovinaFetcher(base.RiverDataFetcher):
     }
 
     @staticmethod
+    def _empty_result(variable: str) -> pd.DataFrame:
+        """Returns an empty standardized RivRetrieve time series frame."""
+        return pd.DataFrame(columns=[constants.TIME_INDEX, variable]).set_index(constants.TIME_INDEX)
+
+    @staticmethod
+    def _empty_metadata() -> pd.DataFrame:
+        """Returns an empty metadata frame indexed by gauge ID."""
+        return pd.DataFrame(columns=[constants.GAUGE_ID]).set_index(constants.GAUGE_ID)
+
+    @staticmethod
     def get_cached_metadata() -> pd.DataFrame:
         """Retrieves cached Bosnia and Herzegovina gauge metadata."""
         return utils.load_cached_metadata_csv("bosnia_herzegovina")
@@ -62,7 +81,11 @@ class BosniaHerzegovinaFetcher(base.RiverDataFetcher):
         return tuple(BosniaHerzegovinaFetcher.VARIABLE_MAP.keys())
 
     def get_metadata(self) -> pd.DataFrame:
-        """Downloads and normalizes station metadata from the live JSON snapshot."""
+        """Downloads and normalizes station metadata from the live JSON snapshot.
+
+        Keeps provider-specific metadata columns, standardizes the key RivRetrieve
+        metadata fields, and returns a DataFrame indexed by ``constants.GAUGE_ID``.
+        """
         session = utils.requests_retry_session()
 
         try:
@@ -77,7 +100,7 @@ class BosniaHerzegovinaFetcher(base.RiverDataFetcher):
             raise
 
         if not isinstance(data, list) or not data:
-            return pd.DataFrame().set_index(constants.GAUGE_ID)
+            return self._empty_metadata()
 
         df = pd.json_normalize(data)
         rename_map = {
@@ -163,20 +186,28 @@ class BosniaHerzegovinaFetcher(base.RiverDataFetcher):
         """Parses the Excel bytes into the standard RivRetrieve data frame layout."""
         content, station_group = raw_data
         if not content:
-            return pd.DataFrame(columns=[constants.TIME_INDEX, variable]).set_index(constants.TIME_INDEX)
+            return self._empty_result(variable)
 
         try:
-            df = pd.read_excel(BytesIO(content), skiprows=8, names=[constants.TIME_INDEX, variable])
+            df = pd.read_excel(
+                BytesIO(content),
+                skiprows=8,
+                header=None,
+                names=[constants.TIME_INDEX, variable],
+            )
         except Exception as exc:
             logger.error(f"Failed to parse Bosnia and Herzegovina data for {gauge_id}: {exc}")
-            return pd.DataFrame(columns=[constants.TIME_INDEX, variable]).set_index(constants.TIME_INDEX)
+            return self._empty_result(variable)
 
         if df.empty:
-            return pd.DataFrame(columns=[constants.TIME_INDEX, variable]).set_index(constants.TIME_INDEX)
+            return self._empty_result(variable)
 
         df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX], dayfirst=True, errors="coerce")
         df[variable] = pd.to_numeric(df[variable], errors="coerce")
         df = df.dropna(subset=[constants.TIME_INDEX, variable])
+
+        if variable in {constants.STAGE_DAILY_MEAN, constants.STAGE_INSTANT}:
+            df[variable] = df[variable] / 100.0
 
         if variable in {
             constants.DISCHARGE_DAILY_MEAN,
@@ -199,18 +230,44 @@ class BosniaHerzegovinaFetcher(base.RiverDataFetcher):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-        """Fetches and parses time series data for a specific gauge and variable."""
+        """Fetches and parses time series data for a specific gauge and variable.
+
+        This method retrieves the requested data from the provider's workbook endpoint,
+        parses it, and returns it in a standardized pandas DataFrame format.
+
+        Args:
+            gauge_id: The site-specific identifier for the gauge.
+            variable: The variable to fetch. Must be one of the strings listed
+                in the fetcher's ``get_available_variables()`` output.
+                These are typically defined in ``rivretrieve.constants``.
+            start_date: Optional start date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched from the earliest available date in the workbook.
+            end_date: Optional end date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched up to the latest available date in the workbook.
+
+        Returns:
+            pd.DataFrame: A pandas DataFrame indexed by datetime objects (``constants.TIME_INDEX``)
+            with a single column named after the requested ``variable``. The DataFrame
+            will be empty if no data is found for the given parameters.
+
+        Raises:
+            ValueError: If the requested ``variable`` is not supported by this fetcher.
+        """
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
 
         if variable not in self.get_available_variables():
             raise ValueError(f"Unsupported variable: {variable}")
 
-        raw_data = self._download_data(gauge_id, variable, start_date, end_date)
-        df = self._parse_data(gauge_id, raw_data, variable)
+        try:
+            raw_data = self._download_data(gauge_id, variable, start_date, end_date)
+            df = self._parse_data(gauge_id, raw_data, variable)
+        except Exception as exc:
+            logger.error(f"Failed to fetch Bosnia and Herzegovina data for {gauge_id} ({variable}): {exc}")
+            return self._empty_result(variable)
 
         if df.empty:
-            return df
+            return self._empty_result(variable)
 
         start_dt = pd.to_datetime(start_date)
         end_dt = pd.to_datetime(end_date) + pd.Timedelta(days=1)
