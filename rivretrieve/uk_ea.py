@@ -169,15 +169,6 @@ class UKEAFetcher(base.RiverDataFetcher):
         df = df.rename(columns={"Value": variable})
         df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX])
 
-        # # Ensure complete time series within the data range
-        # if not df.empty:
-        #     date_range = pd.date_range(
-        #         start=df[constants.TIME_INDEX].min(),
-        #         end=df[constants.TIME_INDEX].max(),
-        #         freq="D",
-        #     )
-        #     complete_ts = pd.DataFrame(date_range, columns=[constants.TIME_INDEX])
-        #     df = pd.merge(complete_ts, df, on=constants.TIME_INDEX, how="left")
         return df.set_index(constants.TIME_INDEX)
 
     def get_data(
