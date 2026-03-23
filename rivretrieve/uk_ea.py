@@ -19,6 +19,7 @@ class UKEAFetcher(base.RiverDataFetcher):
 
     Supported Variables:
         - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
+        - ``constants.DISCHARGE_INSTANT`` (m³/s)
         - ``constants.STAGE_INSTANT`` (m)
     """
 
@@ -48,7 +49,7 @@ class UKEAFetcher(base.RiverDataFetcher):
 
     @staticmethod
     def get_available_variables() -> tuple[str, ...]:
-        return (constants.DISCHARGE_DAILY_MEAN, constants.STAGE_INSTANT)
+        return (constants.DISCHARGE_DAILY_MEAN, constants.DISCHARGE_INSTANT, constants.STAGE_INSTANT)
 
     def get_metadata(self) -> pd.DataFrame:
         """Fetches site metadata for all stations from the EA API.
@@ -87,6 +88,8 @@ class UKEAFetcher(base.RiverDataFetcher):
             return "level-i-900-m-qualified"
         elif variable == constants.DISCHARGE_DAILY_MEAN:
             return "flow-m-86400-m3s-qualified"
+        elif variable == constants.DISCHARGE_INSTANT:
+            return "flow-i-900-m3s-qualified"
         else:
             raise ValueError(f"Unsupported variable: {variable}")
 
@@ -152,23 +155,19 @@ class UKEAFetcher(base.RiverDataFetcher):
             return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
 
         df = pd.DataFrame(raw_data)
-        df[constants.TIME_INDEX] = pd.to_datetime(df["dateTime"]).dt.date
+
+        # Only convert to date if the variable is a daily summary
+        if constants.DAILY in variable:
+            df[constants.TIME_INDEX] = pd.to_datetime(df["dateTime"]).dt.date
+        else:
+            df[constants.TIME_INDEX] = pd.to_datetime(df["dateTime"])
+
         df["Value"] = pd.to_numeric(df["value"], errors="coerce")
 
         df = df[[constants.TIME_INDEX, "Value"]]
 
         df = df.rename(columns={"Value": variable})
         df[constants.TIME_INDEX] = pd.to_datetime(df[constants.TIME_INDEX])
-
-        # Ensure complete time series within the data range
-        if not df.empty:
-            date_range = pd.date_range(
-                start=df[constants.TIME_INDEX].min(),
-                end=df[constants.TIME_INDEX].max(),
-                freq="D",
-            )
-            complete_ts = pd.DataFrame(date_range, columns=[constants.TIME_INDEX])
-            df = pd.merge(complete_ts, df, on=constants.TIME_INDEX, how="left")
 
         return df.set_index(constants.TIME_INDEX)
 
