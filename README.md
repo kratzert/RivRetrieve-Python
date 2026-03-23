@@ -23,29 +23,29 @@ The purpose of this package is to simplify access to streamflow data. All data r
 
 ## Installation
 
-1.  Clone or download the repository to your computer.
+1. Clone or download the repository to your computer.
 
-2.  Set up your environment, for example, using the following command from within the RivRetrieve-Python directory:
+2. Set up your environment, for example, using the following command from within the RivRetrieve-Python directory:
 
     ```bash
     # Creates a virtual Python environment within the directory.
     python3 -m venv .venv
     ```
 
-3.  Activate the virtual environment:
+3. Activate the virtual environment:
 
     ```bash
     source .venv/bin/activate
     ```
 
-4.  Install the package and all requirements:
+4. Install the package and all requirements:
 
     ```bash
     # The -e makes the installed version editable, in case you want to change some code.
     pip install -e .
     ```
 
-5.  Test the installation:
+5. Test the installation:
 
     ```bash
     # Downloads data for one gauge from the US and saves a plot with the discharge data.
@@ -77,3 +77,27 @@ print(discharge_data.head())
 stage_data = fetcher.get_data(gauge_id=gauge_id, variable="stage", start_date="2023-01-01", end_date="2023-01-31")
 print(stage_data.head())
 ```
+
+## Community Contributions
+
+Community-maintained packages that extend RivRetrieve:
+
+### [watershed-retrieve](https://github.com/CooperBigFoot/watershed-retrieve)
+
+Pre-delineated [MERIT-Hydro](https://www.reachhydro.org/home/params/merit-hydro) watershed boundaries and river networks for ~60,000 RivRetrieve gauging stations across 16 countries. Data is served as GeoParquet from a public CDN and cached locally — no configuration required.
+
+- **Author**: [Nicolas Lazaro](https://github.com/CooperBigFoot)
+- **Install**: `pip install watershed-retrieve`
+- **Links**: [PyPI](https://pypi.org/project/watershed-retrieve/) · [GitHub](https://github.com/CooperBigFoot/watershed-retrieve)
+
+```python
+import watershed_retrieve as wr
+
+# Get the watershed boundary for a Portuguese gauging station
+watershed = wr.get_watershed("portugal", "04K/04A")
+
+# Watershed + river network
+watershed, rivers = wr.get_watershed_with_rivers("portugal", "04K/04A")
+```
+
+See [Issue #87](https://github.com/kratzert/RivRetrieve-Python/issues/87) for the original proposal.
