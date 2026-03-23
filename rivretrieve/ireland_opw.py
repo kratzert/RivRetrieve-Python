@@ -33,12 +33,12 @@ class IrelandOPWFetcher(base.RiverDataFetcher):
         - constants.WATER_TEMPERATURE_DAILY_MAX (°C)
 
     Data description and API:
-        - station and archive data are served from the OPW waterlevel.ie JSON endpoints
-        - historical annual station archive template:
-          https://waterlevel.ie/hydro-data/data/internet/stations/0/<station_no>/<parameter>/year.json
+        - OPW API and automated access notes: https://waterlevel.ie/page/api/
+        - historical records portal: https://waterlevel.ie/hydro-data/
 
     Terms of use:
-        - see https://waterlevel.ie/
+        - disclaimer: https://waterlevel.ie/disclaimer/
+        - data reuse and API licensing notes: https://waterlevel.ie/page/api/
 
     Notes:
         - Gauge IDs in RivRetrieve use the stripped OPW ``station_no`` identifier.
