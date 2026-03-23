@@ -7,7 +7,8 @@ API Reference
 .. toctree::
    :maxdepth: 1
    :caption: Fetchers:
-
+   
+   fetchers/argentina
    fetchers/australia
    fetchers/brazil
    fetchers/canada
