@@ -1,0 +1,35 @@
+[
+  {
+    "station_no": "18113",
+    "station_name": "Ahane Br",
+    "station_latitude": "52.09607583",
+    "station_longitude": "-9.132805278",
+    "catchment_name": "BLACKWATER [MUNSTER]",
+    "station_gauge_datum_unit": "Malin Head OSGM15",
+    "station_gauge_datum": "108.98",
+    "CATCHMENT_SIZE": "76.82 km\u00b2",
+    "WTO_OBJECT": "OWENTARAGLIN"
+  },
+  {
+    "station_no": "19001",
+    "station_name": "Bagenalstown",
+    "station_latitude": "52.7000",
+    "station_longitude": "-6.9611",
+    "catchment_name": "BARROW",
+    "station_gauge_datum_unit": "Malin Head OSGM15",
+    "station_gauge_datum": "22.40",
+    "CATCHMENT_SIZE": "1234.50 km\u00b2",
+    "WTO_OBJECT": ""
+  },
+  {
+    "station_no": "50001",
+    "station_name": "Outside Range",
+    "station_latitude": "53.0",
+    "station_longitude": "-7.0",
+    "catchment_name": "SHOULD_BE_FILTERED",
+    "station_gauge_datum_unit": "Malin Head OSGM15",
+    "station_gauge_datum": "10.0",
+    "CATCHMENT_SIZE": "10 km\u00b2",
+    "WTO_OBJECT": "FILTERED"
+  }
+]
