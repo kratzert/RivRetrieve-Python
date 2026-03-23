@@ -34,7 +34,6 @@ class IrelandOPWFetcher(base.RiverDataFetcher):
 
     Data description and API:
         - OPW API and automated access notes: https://waterlevel.ie/page/api/
-        - historical records portal: https://waterlevel.ie/hydro-data/
 
     Terms of use:
         - disclaimer: https://waterlevel.ie/disclaimer/
