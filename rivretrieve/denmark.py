@@ -19,18 +19,32 @@ AREA_RE = re.compile(r"(\d+(?:[.,]\d+)?)\s*(?:km2|km\xb2|km\^2)", re.IGNORECASE)
 class DenmarkFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from Denmark's VandA/H Miljoportal.
 
-    Data Source: VandA/H Miljoportal (https://vandah.miljoeportal.dk/)
+    Data Source:
+        - VandA/H Miljoportal: https://vandah.miljoeportal.dk/
 
     Supported Variables:
         - ``constants.DISCHARGE_DAILY_MEAN`` (m3/s)
         - ``constants.DISCHARGE_INSTANT`` (m3/s)
         - ``constants.STAGE_DAILY_MEAN`` (m)
         - ``constants.STAGE_INSTANT`` (m)
+
+    Data description and API:
+        - station metadata endpoint: https://vandah.miljoeportal.dk/api/stations
+        - discharge endpoint: https://vandah.miljoeportal.dk/api/water-flows
+        - stage endpoint: https://vandah.miljoeportal.dk/api/water-levels
+
+    Terms of use:
+        - see https://vandah.miljoeportal.dk/
     """
 
     BASE_URL = "https://vandah.miljoeportal.dk/api"
     SOURCE = "VandA/H Miljoportal"
     COUNTRY = "Denmark"
+
+    @staticmethod
+    def _empty_result(variable: str) -> pd.DataFrame:
+        """Returns a standardized empty time series result."""
+        return pd.DataFrame(columns=[variable], index=pd.DatetimeIndex([], name=constants.TIME_INDEX))
 
     @staticmethod
     def get_cached_metadata() -> pd.DataFrame:
@@ -166,7 +180,7 @@ class DenmarkFetcher(base.RiverDataFetcher):
             raise
 
         if not isinstance(stations, list) or not stations:
-            return pd.DataFrame().set_index(constants.GAUGE_ID)
+            return pd.DataFrame(columns=[constants.GAUGE_ID]).set_index(constants.GAUGE_ID)
 
         df = pd.json_normalize(stations)
         latitudes = []
@@ -268,7 +282,7 @@ class DenmarkFetcher(base.RiverDataFetcher):
     def _parse_data(self, gauge_id: str, raw_data: list[dict[str, Any]], variable: str) -> pd.DataFrame:
         """Parses raw VandA/H JSON into a standardized DataFrame."""
         if not raw_data:
-            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
+            return self._empty_result(variable)
 
         variable_base, instantaneous = self._get_variable_parts(variable)
         records = []
@@ -292,7 +306,7 @@ class DenmarkFetcher(base.RiverDataFetcher):
                 records.append({constants.TIME_INDEX: parsed_time, variable: value})
 
         if not records:
-            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
+            return self._empty_result(variable)
 
         df = pd.DataFrame(records).sort_values(constants.TIME_INDEX).reset_index(drop=True)
         df.loc[df[variable] <= -777, variable] = np.nan
@@ -328,6 +342,9 @@ class DenmarkFetcher(base.RiverDataFetcher):
             raw_data = self._download_data(gauge_id, variable, start_date, end_date)
             df = self._parse_data(gauge_id, raw_data, variable)
 
+            if df.empty:
+                return self._empty_result(variable)
+
             start_date_dt = pd.to_datetime(start_date)
             end_date_dt = pd.to_datetime(end_date)
             if constants.INSTANTANEOUS in variable or constants.HOURLY in variable:
@@ -337,4 +354,4 @@ class DenmarkFetcher(base.RiverDataFetcher):
             return df[(df.index >= start_date_dt) & (df.index <= end_date_dt)]
         except Exception as e:
             logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {e}")
-            return pd.DataFrame(columns=[constants.TIME_INDEX, variable])
+            return self._empty_result(variable)
