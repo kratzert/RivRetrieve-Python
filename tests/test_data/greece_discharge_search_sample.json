@@ -1,0 +1,43 @@
+{
+  "count": 2,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 1458,
+      "last_update": "2026-03-17T22:00:00Z",
+      "last_modified": "2018-06-05T22:48:12.746929+03:00",
+      "name": "Ανθήλη",
+      "code": "",
+      "remarks": "",
+      "geom": "SRID=4326;POINT (22.466853 38.856109)",
+      "display_timezone": "Etc/GMT-2",
+      "altitude": null,
+      "start_date": null,
+      "end_date": null,
+      "overseer": "",
+      "owner": 11
+    },
+    {
+      "id": 28082,
+      "last_update": null,
+      "last_modified": "2025-07-02T15:11:57.302632+03:00",
+      "name": "Γούρια (παροχή)",
+      "code": "",
+      "remarks": "",
+      "geom": "SRID=4326;POINT (21.26099 38.48039)",
+      "display_timezone": "Etc/GMT-2",
+      "altitude": null,
+      "start_date": null,
+      "end_date": null,
+      "overseer": "",
+      "owner": 11
+    }
+  ],
+  "bounding_box": [
+    21.26099,
+    38.48039,
+    22.466853,
+    38.856109
+  ]
+}

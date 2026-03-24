@@ -1,0 +1,25 @@
+{
+  "count": 2,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 9624,
+      "type": "Initial",
+      "last_modified": "2018-06-05T23:14:51.111152+03:00",
+      "time_step": "15min",
+      "name": "",
+      "publicly_available": true,
+      "timeseries_group": 254
+    },
+    {
+      "id": 9820,
+      "type": "Checked",
+      "last_modified": "2019-12-24T22:43:59.002790+02:00",
+      "time_step": "15min",
+      "name": "",
+      "publicly_available": true,
+      "timeseries_group": 254
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 10306,
+      "type": "Initial",
+      "last_modified": "2022-03-23T12:24:26.808693+02:00",
+      "time_step": "15min",
+      "name": "",
+      "publicly_available": true,
+      "timeseries_group": 881
+    }
+  ]
+}

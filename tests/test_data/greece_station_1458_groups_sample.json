@@ -1,0 +1,18 @@
+{
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 254,
+      "last_modified": "2018-06-05T23:14:51.111152+03:00",
+      "name": "",
+      "hidden": false,
+      "precision": 2,
+      "remarks": "",
+      "gentity": 1458,
+      "variable": 2,
+      "unit_of_measurement": 18
+    }
+  ]
+}

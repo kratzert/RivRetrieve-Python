@@ -1,0 +1,18 @@
+{
+  "count": 1,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 881,
+      "last_modified": "2021-11-19T19:41:37.900822+02:00",
+      "name": "Water Level",
+      "hidden": false,
+      "precision": 2,
+      "remarks": "",
+      "gentity": 8424,
+      "variable": 5710,
+      "unit_of_measurement": 2
+    }
+  ]
+}
