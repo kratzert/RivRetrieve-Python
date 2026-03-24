@@ -1,0 +1,16 @@
+"Stazione";"Vecchiano"
+"Codice";"TOS02004365"
+"Comune";"Vecchiano"
+"Provincia";"PI"
+"GB [m]";"E";1612598;"N";4848462
+"WGS84 [°]";"Lat";43.781;"Lon";10.399
+"Quota [m]";6,00
+
+;;;ATTENZIONE i dati sono nel fomato csv ed utilizzano
+;;;come separatore di colonna il "punto e virgola" e
+;;;come separatore decimale la "virgola"
+
+"gg/mm/aaaa";"Livello [m]";"Tipo Dato"
+01/01/2025;1,45;P
+02/01/2025;1,47;V
+03/01/2025;;@

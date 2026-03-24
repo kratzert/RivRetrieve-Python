@@ -1,0 +1,59 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "cf_idrometri.1",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1588321.62370682, 4881587.54270292]
+      },
+      "properties": {
+        "id_stazione": "TOS01004005",
+        "nome": "Carrara",
+        "comune": "Carrara",
+        "provincia": "MS",
+        "zero_idrometrico": 95.69,
+        "quota": 108,
+        "gc": "GCTN",
+        "zona": "V"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cf_idrometri.2",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1584958.99930749, 4877451.49066202]
+      },
+      "properties": {
+        "id_stazione": "TOS01004007",
+        "nome": "Avenza",
+        "comune": "Carrara",
+        "provincia": "MS",
+        "zero_idrometrico": 6.41,
+        "quota": 15,
+        "gc": "GCTN",
+        "zona": "V"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "cf_idrometri.3",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [1717687.35056621, 4853290.67337372]
+      },
+      "properties": {
+        "id_stazione": "TOS01004379",
+        "nome": "Stia",
+        "comune": "Pratovecchio Stia",
+        "provincia": "AR",
+        "zero_idrometrico": 443.12,
+        "quota": 537,
+        "gc": "GCVS",
+        "zona": "A1"
+      }
+    }
+  ]
+}
