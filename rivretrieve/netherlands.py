@@ -35,18 +35,6 @@ class NetherlandsFetcher(base.RiverDataFetcher):
 
     Terms of use:
         - see https://rijkswaterstaatdata.nl/waterdata/
-
-    Notes:
-        - The Rijkswaterstaat catalog exposes discharge (``Q``), water level
-          (``WATHTE``), and water temperature (``T``) for surface water, which are
-          mapped to the corresponding RivRetrieve daily and instantaneous variables.
-        - Station metadata is filtered to stations that advertise at least one
-          supported surface-water variable.
-        - Rijkswaterstaat often serves observations at 10-minute resolution. This
-          fetcher retrieves raw observations in monthly windows and aggregates them to
-          daily means for daily products.
-        - Stage values are converted from centimeters to meters.
-        - Provider sentinel missing values are filtered before aggregation.
     """
 
     SOURCE = "Rijkswaterstaat WaterWebservices"
