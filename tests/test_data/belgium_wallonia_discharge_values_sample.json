@@ -1,0 +1,14 @@
+[
+  {
+    "ts_id": "271457010",
+    "rows": "5",
+    "columns": "Timestamp,Value,Quality Code,Quality Code Name,Quality Code Description",
+    "data": [
+      ["2025-01-02T00:00:00.000+01:00", 2.861, 200, "Unknown", "Quality control data (Unknown)"],
+      ["2025-01-03T00:00:00.000+01:00", 1.848, 200, "Unknown", "Quality control data (Unknown)"],
+      ["2025-01-04T00:00:00.000+01:00", 1.305, 200, "Unknown", "Quality control data (Unknown)"],
+      ["2025-01-05T00:00:00.000+01:00", 4.339, 200, "Unknown", "Quality control data (Unknown)"],
+      ["2025-01-06T00:00:00.000+01:00", 4.653, 200, "Unknown", "Quality control data (Unknown)"]
+    ]
+  }
+]
