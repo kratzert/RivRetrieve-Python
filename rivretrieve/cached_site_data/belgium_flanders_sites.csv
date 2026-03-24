@@ -1,0 +1,717 @@
+gauge_id,station_name,river,latitude,longitude,altitude,area,country,source,provider,vertical_datum
+HIS_K03_OM102,Mendonk/Stuw,Zuidlede,51.1468063102965,3.8311392348016,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_K03_OM104,Oosteeklo/Burggraevestroom,Burggravenstroom,51.1685626250273,3.68428590753849,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_K03_OM107,Kluizen/Averijevaart,Avrijevaart,51.1612317549606,3.73802588059034,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_K03_OM151,Waarschoot/Pompstation,Oostmoer,51.1542405061857,3.61683870664672,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_K04_MQ01,Deurne/Krooshekken,Groot Schijn - Voorgracht,51.2274825328014,4.44590734495988,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_K04_OM205,Wichelen/Stuw,Molenbeek,50.999624063668,3.9557302334801,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_K05_WM506,Waregem/Stuw6(Vichtseweg),Gaverbeek,50.8617656431294,3.4116893541971,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_K07_OM401,Viane/Stuw1,Mark,50.7423908450858,3.89826852535935,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_K07_OM403,Galmaarden/Stuw3,Mark,50.7511280296486,3.94989906249247,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L01_42G,Oudenburg,Gr. Zwaanhoekgeleed,51.1996332160055,2.99626097452464,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L01_42H,Voorhaven,Moerdijkvaart,51.217861881426,2.93827239449185,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L01_499,Merkem,Stenensluisvaart,50.9680197682874,2.88760462089248,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L02_43B,Lissewege,Leopoldkanaal,51.3317797555197,3.22285903682522,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L03_446,Nevele,Poekebeek,51.0339849416703,3.55124898225949,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L03_447,St-Laureins/StJansinEremo,Roeselarekreek,51.2595399778973,3.57885465087199,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L03_448,St-Laureins/StJansinEremo,Roeselarekreek,51.2674968059999,3.64233768808523,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L05_401,Markegem,Mandel,50.9458059876527,3.38573409129704,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L06_34N,Ronse,Molenbeek,50.7539382277346,3.61538788671548,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L07_28B,Herzele,Ter Erpenbeek,50.872664880671,3.87963841576454,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L08_094,Leuven,Dijle,50.8704986222643,4.69462479761368,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L08_095,Leuven,Dijle Vierde Arm,50.8857958803698,4.69727313029665,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L08_192,Huizingen,Zenne,50.7535746046088,4.2590936113121,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L08_194,Lembeek,Zenne,50.713961434611,4.22964872548814,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L09_124,Diest,Demer,50.9917065694594,5.05246958563842,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L09_129,Halen,Demer,50.9588090946487,5.11666847517572,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L09_142,Houwaart,Winge,50.9119532326935,4.84901995040049,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L09_146,Halen,Velpe,50.9428812126072,5.11070839241021,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L10_086,Vorst,Grote Laak,51.076822343852,4.9968215315238,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L11_049,BaarleHertog,Noordermark,51.407017362661,4.87087467639071,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L11_04A,Rijkevorsel,Kleine Mark,51.3872352100363,4.790074031389,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L11_517,Kessenich,Witbeek,51.1526012161083,5.83087243828601,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L11_518,Opoeteren,Bosbeek,51.076654213862,5.67355005280147,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L11_564,Sint-Martens-Voeren,Veurs,50.7494438357223,5.81299352125226,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L11_568,s-Gravenvoeren,Noorbeek,50.7645098863133,5.78830552345682,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_LS02_429,Sint-Michiels,Zuidervaartje,51.1737250848467,3.20678808572048,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_LS06_34G,Nukerke,Marie Barrebeek,50.7989053212676,3.60402937176697,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_LS09_16A,Heks,Herkebeek,50.7676851385466,5.35746528191046,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_LS09_16B,Vechmaal,Herkebeek,50.7614269760123,5.36497406341573,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_10-2,Oostkamp,Rivierbeek,51.139447130091,3.25148206210613,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_100,Herenthout,Wimp,51.1261273947406,4.76263204907362,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_105,Zandhoven,Tappelbeek,51.2350196067839,4.65900543267595,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_109,Vorselaar,Bosbeek,51.2091878542174,4.7923552152827,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_113,Kasterlee,Grote Calie,51.2369623018682,4.90318990688509,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_115,Geel,Dalemansloop,51.2083559706225,4.99040943830526,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_116-2,Geel,Kleine Nete,51.1986270735431,4.90290752781067,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_117,Kasterlee,Wamp,51.2464105130008,5.00957873567274,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_119,Retie,Desselse Neet,51.248352859161,5.07263791667725,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_124,Halen,Gete,50.9575137163142,5.11680436583258,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_125,Halen,Zwartwater,50.9680669667586,5.0895813244423,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_13-2,Kortrijk,Heulebeek,50.8427739340977,3.23287015545387,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_133,Kinrooi,Lossing,51.1653031749726,5.73960064150678,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_134,Assenede,Isabellawatering,51.2555708501062,3.69593975840751,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_138-2,Sint-Pieters-Leeuw,Zuunbeek,50.8083306897142,4.29345724478555,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_15,Nevele,Poekebeek,51.0319515303387,3.54454118737872,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_18-2,Wezembeek-Oppem,Voer,50.8305604563921,4.50429498480051,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_26,Gavere,Stampkotbeek,50.9172190505091,3.65204891124621,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_29,rotselaar,Molenbeek,50.9380576964999,4.0542793698484,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_30,Liedekerke,Bellebeek (Hunselbeek),50.8852768950304,4.09594367461346,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_36,Ronse,Molenbeek,50.7419419503653,3.56093146151398,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_510-2,Kasterlee,Kleine Nete,51.2102979660181,4.93679965215909,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_511-2,Geel,Kleine Nete,51.2025220780496,4.9217958563098,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_514,Hasselt,Demer,50.9608480101763,5.26820176435012,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_515,Wellen,Herk,50.8436249639881,5.33181449226437,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_530-2,Aalst/Mere,Ter Erpenbeek,50.9566710781005,4.03344615202786,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_534,Sint-Pieters-Leeuw,Zuunbeek,50.7847208291534,4.24678360165504,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_538,Hasselt,Demer,50.9380707730614,5.34653163299883,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_575,Zemst,Zenne,50.9844518236737,4.48540289287373,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_577,Kortenaken,Velpe,50.9200110666079,5.07430747058788,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_67-2,Riemst,Jeker,50.8147344618582,5.67154531628977,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_68,Hasselt,Kleine Herk,50.8966830775275,5.30542472209696,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_700-2,Affligem,Bellebeek (Hunselbeek),50.8872282290731,4.13373541301447,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_703,Leuven,Voer,50.8647300062786,4.67874438248314,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_705,Leuven,Dijle,50.8698486757482,4.69397914233776,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_706,Leuven,Dijle,50.8699911630497,4.69446315208197,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_71,Herk-de-Stad,Herk,50.9502899206923,5.16541758109366,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_73,Geetbets,Gete,50.9005641183815,5.12792322203441,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_74,Herk-de-Stad,Gete,50.9491787575431,5.11985907125829,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_75,Halen,Velpe,50.9480691552614,5.11764975093699,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_76,Halen,Demer,50.9583497616235,5.11680348101559,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_77-2,Halen,Demer,50.9675147266059,5.08874710339852,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_80,Kinrooi,Abeek,51.1633566877322,5.7415451829327,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_82,Balen,Grote Nete,51.1586354596454,5.26125054444681,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_84,Balen,Kleine Hoofdgracht,51.1603006411057,5.19041883779387,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_85,Mol,Molse Nete,51.1872405634086,5.13847028938353,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_860,Tongeren,Jeker,50.7385742007297,5.41526895185054,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_87-2,Mol,Molse Nete,51.1775227794418,5.10763484000344,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_870,Sint-Martens-Voeren,Voer,50.7483466279388,5.8115567981915,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_88,Geel,Grote Nete,51.1477997641259,5.04874036407448,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_894,Zwalm,Zwalmbeek,50.8850004726563,3.68538295618001,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_895,Brakel,Zwalmbeek,50.8227786822507,3.77399664957115,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_899,Essen,Rozendaalsevaart,51.4606953265653,4.50676420890236,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_9,Brugge,Zuidervaartje,51.1880621339642,3.21398426266839,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_901,Zottegem,Passemarebeek,50.884055889489,3.76050269568309,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_902,Brakel,Sassegembeek,50.7849301247916,3.72773312917676,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_91,Tessenderlo,Grote Laak,51.0814094702336,5.09485488119028,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_917,Sint-Laureins,Eeklose watergang,51.2447301398499,3.53482351780408,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_95,Westerlo,Wimp,51.0994608897914,4.9070838557426,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_9501,Zwalm,Wijlegemsebeek,50.8680502210162,3.73094749121236,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_98,Hulshout,Grote Nete,51.0622336042877,4.78874016389466,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_99,Heist-op-den-Berg,Grote Nete,51.1027941078632,4.73707861017998,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_994,Geel,Grote Nete,51.0915736956271,4.94584701978749,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_L_998,Hulshout,Grote Nete,51.0618866030482,4.78773850361581,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_MO08_17,Zenne/St_P_Leeuw,Zenne,50.7891121024869,4.3118533712844,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_MO08_18,Zenne/St_P_Leeuw,Zenne,50.7885180498234,4.31029410195555,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_MO08_24,Halle,Zenne,50.7367425134836,4.2410380713233,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_MO08_25,Kraainem/KleineMaalbeek,Kleine Maelbeek,50.8644146668725,4.46727321135351,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_MO09_19,Assent,Begijnebeek,50.9576327135553,5.01986151666428,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_MO10_15,Geel/Grote Nete,Grote Nete,51.1502088808338,5.01807913416993,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_MO11_14,Hoogstraten,Mark,51.4070178881327,4.77195949447123,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_S02_445,Maldegem-Kleit,Ede,51.1786775298291,3.463724019147,,,Belgium,Flemish Environment Agency - VMM,vmm,
+HIS_abk10a-1066,Gellik,Albertkanaal,50.8808724097444,5.62194835924344,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+HIS_dem02a-SF-1066,Aarschot Afwaarts SF,Demer,50.9875887525357,4.82226578980928,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+HIS_den05c-1066,Aalst Afwaarts,Dender,50.9414148101197,4.04256138795354,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+HIS_den09e-1066,Pollare Opwaarts,Dender,50.8296965118411,4.00959912439749,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+HIS_den10e-1066,Idegem Opwaarts,Dender,50.7989627026483,3.92960531432094,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+HIS_gnt03a-SF-1066,Itegem Hullebrug SF,Grote Nete,51.1222538248508,4.69802484373009,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+HIS_knt03a-SF-1066,Grobbendonk Troon SF,Kleine Nete,51.1887369324682,4.74236403885045,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+HIS_lei05a-SF-1066,Zulte SF,Leie,50.9289074923994,3.43799631514227,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+HIS_lei07a-1066,Desselgem,Leie,50.8894533211378,3.34336250926646,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+HIS_lei11a-1066,Menen,Leie,50.7911965967297,3.12670997662446,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+HIS_maa07a-1066,Uikhoven rkm 24.8,Maas,50.9254757781862,5.72775363213336,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+HIS_maa14b-1066,Kanne Structuur,Jeker,50.8166756009363,5.67000955762706,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+HIS_maa14c-1066,Kanne Opwaarts,Jeker,50.8166756009363,5.67000955762706,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+HIS_rvg03a-1066,Evergem,Ringvaart,51.0898770105185,3.66643384043862,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+HIS_zen03a-SF-1066,Eppegem SF,Zenne,50.9605215725021,4.45565127189749,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+HIS_zes10a-SF-1066,Liefkenshoek SF,Zeeschelde,51.2965863819222,4.28683984663529,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+HIS_zes25j-1066,Kruibeke-Bazel GOG Kleine Uitwatering,Zeeschelde,51.1531523718385,4.32605073411148,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+K01_303,Ieper/Stuw3,Kanaal Van Ieper Naar Komen,50.8563167350282,2.87915701940289,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K01_305,Ieper/Stuw5,Ieperlee,50.8424512097305,2.88981516453012,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K01_307,Ieper/Stuw7,Dikkebusbeek,50.8462914618173,2.8754113793487,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K01_308,Ieper/Stuw8,Ieperlee,50.835629625123,2.89153757038254,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K01_350,Nieuwpoort/PompgemVeurneAmbacht,Grote Beverdijkvaart,51.1270642184278,2.76071074541278,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K02_051,Jabbeke/Pompstation,Geleedbeek,51.2022990976259,3.07721080439963,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K03_OM109,Nevele/debietmeting,Oude Kale,51.0342101856224,3.55534966061619,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K04_004,Deurne,Groot Schijn - Voorgracht,51.226010931417,4.4488923983755,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K04_006,Albertdok/Pompstation,Groot Schijn - Hoofdgracht,51.3051114599274,4.34225881488529,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K04_010,Schelle/Pompstation,Benedenvliet,51.1297015460562,4.3277289194691,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K04_015,Ruisbroek/Pompstation,Birrebeek,51.084256342805,4.35068093900873,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K04_016,Puurs/Pompstation,Grote Molenbeek,51.0963518529529,4.31920687043843,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K04_020,Verrebroek/Pompstation,Noordzuid Verbinding,51.2422410540127,4.20445076380531,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K04_030,Melsele/Pompstation Keetberg,Waterloop van de Hoge Landen,51.243803170231,4.26709818690359,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K04_540,Niel/Pompstation,Wullebeek,51.1155793056815,4.3141883695884,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K04_MQ45,Albertdok,Zeeschelde,51.2914621908115,4.31336706809401,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K04_OW002,Doel/Pompstation,Doorloop,51.3173555905961,4.26235272082977,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K06_221,Etikhove/Schuif,Nederaalbeek,50.8079016788569,3.62669814497067,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K06_301,Opbrakel/Schuif_WBMaaistraat,Molenbeek,50.7860947284482,3.7335884579462,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K06_302,Opbrakel/Schuif_WBLeizemooie,Molenbeek,50.798205605696,3.75067437466501,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K07_102,St-Pieters-Kapelle/Stuw9bis GOG SPK,Mark,50.7060447741074,4.01966617947886,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K07_111,Galmaarden/Stuw4 Driescaertmolen,Mark,50.7533077412169,3.96309879281035,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_001,Neerijse/Ijse,Ijse,50.8174166379733,4.63464677538963,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_010,Egenhoven/Zijloop C,Dijle,50.8518837335343,4.66171907578719,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_011,Egenhoven/Zijloop C,Dijle,50.8585775375638,4.67014637556625,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_013,Leuven/Dijle,Dijle,50.8698519834074,4.69408287249913,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_014,Leuven/Voer-Vloput,Voer,50.8719935905484,4.6910488867977,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_015,Leuven/Dijle1e arm,Dijle,50.8737937566411,4.69767208711678,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_016,Leuven/Dijle,Dijle,50.8730613234847,4.69631297940082,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_017,Leuven/Dijle 4e arm,Dijle Vierde Arm,50.8862339983559,4.69907394665847,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_018,Leuven/Dijle 5e arm,Dijle Vijfde Arm,50.881890295932,4.69714628675702,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_019,Leuven/Dijle-Vunt,Vunt,50.8831108625985,4.69977525104655,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_020,Rotselaar/Dijle,Dijle,50.946537378901,4.70237246859023,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_030,Muizen/Barebeek,Barebeek,51.0084369278813,4.52720646389033,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_040,Bonheiden/Vrouwvliet,Vrouwvliet,51.0333504552011,4.51005425559212,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_042,Mechelen/Vrouwvliet,Vrouwvliet,51.0485566074973,4.4488112291983,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_050,Diegem/Woluwe,Woluwe,50.8916058938465,4.44812491620404,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_052,Machelen/Woluwe,Toevoerkanaal wbekken Trawool,50.913439889053,4.43253204919418,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_060,Lembeek/Zenne,Zenne,50.7140071719664,4.22955513921067,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_065,Lot/Zenne,Zenne,50.7648218921208,4.27166318739828,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_070,Sint-Pieters Leeuw/Zuunbeek,Zuunbeek,50.8095207443429,4.29753869861233,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_075,St-Pieters-Leeuw/Zuunbeek,Zuunbeek,50.7937770682358,4.26983661970379,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_076,St-Pieters-Leeuw/Zuunbeek,Zuunbeek,50.7939662082262,4.27030431758646,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_080,St-Pieters-Leeuw/Zuunbeek,Zuunbeek,50.7834942961154,4.24304314164528,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K08_081,St-Pieters-Leeuw/Zuunbeek,Zuunbeek,50.7838728929911,4.24399230171702,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_001,Linkhout/Stuw K7,Demer,50.9680494961353,5.16430304924004,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_002,Schulen/Inlaat A,Demer,50.9674926836399,5.16779867746614,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_003,Linkhout/Doorlaat D,Zwartwater,50.9586387237821,5.13252666386413,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_004,Linkhout/Uitlaat E,Zwartwater,50.9579448789113,5.12206207881958,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_005,Webbekom/Doorlaat K30,Grote Leigracht,50.9762214739582,5.07656261094029,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_006,Schaffen/Stuw K31,Demer,50.9848123596307,5.07514154766775,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_007,Zelem/Stuw K18,Velpe,50.9658966695971,5.08917494018642,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_008,Zelem/Inlaat K19,Velpe,50.9662217285232,5.08806097439327,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_009,Webbekom/Stuw K24A,Leugebeek,50.974910589246,5.07285636948014,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_010,Webbekom/Stuw K24B,Leugebeek,50.9749186393441,5.07301311744464,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_011,Webbekom/Stuw K7,Begijnebeek,50.963623832417,5.04460035560977,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_012,Webbekom/Stuw K7,Leugebeek,50.963578314912,5.0446993460764,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_013,Schaffen/Uitlaat K29,WB Webbekomsbroek,50.9891271099729,5.07067875979025,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_014,Linkhout/Schuif Houwersbeek,Houwersbeek,50.9576304034961,5.12245698816104,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_016,Linkhout/Schuif Begijnebroekstr,WB Schulensbroek,50.9691413894139,5.16408662936721,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_017,Webbekom/Pompgemaal,Leugebeek,50.9748264600619,5.07339621212117,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_020,Hoeleden/Stuw vistrap,Velpe,50.8752189603263,4.98936334020924,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_021,Hoeleden/Stuw wachtbekken,Velpe,50.8895678250363,5.02061385827905,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_022,Kersbeek-Miskom/Stuw Arnautsmolen,Velpe,50.8958393646288,5.03242249624245,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_023,Halen/Stuw wachtbekken,Velpe,50.9420794066075,5.10955738566857,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_033,Diest/Oude Demer,Oude Demer,50.9891797638769,5.06028063898467,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_035,Diest/Schuif Zichemsepoort,Oude Demer,50.9851347114684,5.0463493210852,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_036,Diest/Uitlaat,Oude Demer,50.9899150004253,5.0324849760256,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_043,Stevoort/Stuw wachtbekken,Herk,50.9159518901616,5.25644720875305,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_044,Stevoort/Stuw wachtbekken,Kleine Herk,50.9174045167428,5.26049945844644,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_045,Stevoort/Stuw Elsaertmolen,Herk,50.9227261919693,5.23046142577386,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_051,Tienen/Stuw Getelaan,Grote Gete,50.7991908707444,4.92896501591358,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_052,Tienen/Krooshekken Getelaan,Grote Gete,50.7997409516918,4.92954892562024,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_053,Tienen/Stuw Sint-Helenavest,Grote Gete,50.8019929546385,4.93514106590625,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_054,Tienen/Stuw Sint-Helenavest,Grote Gete,50.801913148677,4.93491312437106,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_055,Tienen/Stuw Bostsestraat,Grote Gete,50.8029644904066,4.94055785192212,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_056,Tienen/Stuw Bergévest,Grote Gete,50.8035746066029,4.94811262486541,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_057,Zoutleeuw/Stuw Sneyersmolen,Kleine Gete,50.8325368745493,5.09972415950381,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_058,Zoutleeuw/Stuw,Vloedgracht,50.8316034743578,5.09658663430509,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_059,Zoutleeuw/Stuw Verdeyenstraat,Kleine Gete,50.8362900983447,5.1033317861267,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_069,Rotselaar/Schuif Wingepark,Winge,50.9390455644443,4.74065634040636,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_080,Assent/Stuw wachtbekken,Begijnebeek,50.9575354791885,5.0195612615606,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_085,Diest/Begijnebeek,Begijnebeek,50.9721834779718,5.04432522090166,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_086,Diest/Begijnebeek,Begijnebeek,50.9811970005945,5.06029090953488,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_087,Diest/Begijnebeek,Begijnebeek,50.9817658895272,5.05985784461608,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K09_088,Diest/Grote Leigracht,Afsluitschuif,50.9890853334233,5.06409639406933,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K10_100,Meerhout/Stuw,Grote Nete,51.1366548244369,5.08330089549993,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K10_123,Grobbendonk/Stuwmolen,Kleine Nete,51.1941384224853,4.75374858580754,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K10_132,Aa/Poederlee,De Aa,51.2112542718108,4.8361858478729,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K10_133,Aa/Vorselaar,De Aa,51.2060744295862,4.81994322226297,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K10_309,Lier,Itterbeek,51.0854626638632,4.61759822326593,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K10_501,Lier/Pompstation,Lachenebeek,51.1148472555421,4.54331711866736,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K10_502,Duffel/Pompstation,Itterbeek,51.1078378564246,4.52692682750015,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K10_504,Duffel/Pompstation,Lekbeek,51.0965824468603,4.50871414285617,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K10_506,Duffel/Pompstation,Wouwendonkse Beek,51.0874847660516,4.49744208616595,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K10_507,StKatelijneWaver/Pompstation,Goorbosbeek,51.0764669616182,4.48074598575781,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K10_511,Berlaar/Pompstation,Gestelbeek,51.1256751945659,4.64715601110386,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K10_531,Geel/Pompstation,Centrale Loop,51.1979533435244,4.9074574583392,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K10_551,Ravels/Pompstation,Hogemierdse Heideloop,51.3542947532886,5.03464847485708,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_101,Overpelt/Doorlaat wachtbekken,Dommel,51.2037646105576,5.43731748455916,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_102,Overpelt/Inlaat wachtbekken,Dommel,51.2037363535969,5.43745993173281,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_103,Overpelt/Uitlaat wachtbekken,Dommel,51.2113610869184,5.43925201553289,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_110,Kinrooi/Stuw verdeelwerk,Abeek,51.1423907431117,5.75086130794449,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_111,Kinrooi/Stuw verdeelwerk,Abeek,51.1422744130368,5.75081498859452,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_121,Neeroeteren/Stuw verdeelwerk,Witbeek,51.081846397103,5.6836289673429,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_122,Neeroeteren/Stuw verdeelwerk,Bosbeek,51.0817923132236,5.68364171882081,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_123,Geistingen/Stuw verdeelwerk,Witbeek,51.1324051991763,5.81512232551487,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_124,Geistingen/Stuw verdeelwerk,Witbeek,51.1323424654882,5.81510609328238,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_130,Lauw/Stuw wachtbekken,Jeker,50.7368044728858,5.40704073707517,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_131,Tongeren/Stuw verdeelwerk,Jeker,50.7713099803825,5.45850291855406,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_132,Tongeren/Stuw verdeelwerk,Jeker,50.7712281577362,5.45860027019126,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_133,Tongeren/Stuw Motmolen,Jeker,50.7749835363171,5.4637067135324,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_140,'s Gravenvoeren/Voer,stuw,50.7582486490464,5.76917859304261,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_200,Meer,Mark,51.4386612732339,4.7618954075429,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_201,Meer,Mark,51.4482330152323,4.7481396097534,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_202,Meer,Mark,51.457713418914,4.742966240904,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_203,Meer,Mark,51.4852948451552,4.77084232274049,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_204,Meer,Mark,51.4987188560866,4.77967060952616,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_511,Meer/Pompstation,Sluiskensweg,51.4495395726158,4.68207543891401,,,Belgium,Flemish Environment Agency - VMM,vmm,
+K11_553,Kanne,Jeker,50.816902827666,5.66978876722395,,,Belgium,Flemish Environment Agency - VMM,vmm,
+KL01_311,Oudenburg,Moerdijkvaart,51.1802289652303,2.95611557559961,,,Belgium,Flemish Environment Agency - VMM,vmm,
+KL01_316,Watou,Heidebeek,50.875005835887,2.60631721935346,,,Belgium,Flemish Environment Agency - VMM,vmm,
+KL01_318,Dikkebus,Kasteelbeek,50.8216997710346,2.84720064925872,,,Belgium,Flemish Environment Agency - VMM,vmm,
+KL02_002,Klemskerke/Schuiven,Noordede,51.2260606187087,3.00626279979646,,,Belgium,Flemish Environment Agency - VMM,vmm,
+KL02_003,Houtave,Noordede,51.2494594880292,3.13091611615611,,,Belgium,Flemish Environment Agency - VMM,vmm,
+KL08_234,Sint-Pieters-Leeuw/Zuunbeek,Zuunbeek,50.8045518563425,4.28859722505562,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_428,Gistel,Moerdijkvaart,51.1588969744343,2.99761522163947,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_42J,Snaaskerke,Provinciegeleed,51.174730877504,2.91215517139284,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_488,Kortemark,Handzamevaart,51.0260247174146,3.02378672722609,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_489,Oudekapelle,Grote Beverdijkvaart,51.019818752247,2.80110896469757,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_48C,Nieuwpoort,Grote Beverdijkvaart,51.1334996068186,2.75812203728054,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_48D,Kortemark,Handzamevaart,51.0257577291081,3.04706006619047,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_48E,Zarren,Zarrenbeek,51.0170582998981,2.95447306090141,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_491,Oostvleteren,Poperingevaart,50.9134227854584,2.74071549104612,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_492,Reninge,Kemmelbeek,50.9228701318427,2.82512990235995,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_493,Vlamertinge,Kemmelbeek,50.8438822303931,2.81093647335426,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_495,Boezinge,Ieperlee,50.9182861735335,2.84176626642421,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_496,Merkem,Martjevaart,50.9312233943412,2.88734396829959,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_497,Langemark,Martjevaart,50.9190818237287,2.89062877382979,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_49A,Merkem,Stenensluisvaart,50.9680311717763,2.88508496919324,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_49C,Poperinge,Poperingevaart,50.847989839415,2.72066792890535,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_49D,Poperinge,Bommelaarsbeek,50.8517878760491,2.71644392972151,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L01_49E,Woumen,Houtensluisvaart,50.9833126503656,2.86641231522617,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_422,Sint-Michiels,Zuidervaartje,51.1758157779721,3.21005394249372,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_423,Loppem,Zuidervaartje,51.1573186740507,3.18772559141237,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_424,Zwevezele,Jobeek,51.0270512815633,3.20914297986786,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_425,Oostkamp,Rivierbeek,51.1253940070868,3.23521796970963,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_426,Oostkamp,Hertsbergebeek,51.1321070272192,3.25385780886021,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_42B,Bredene,Noordede,51.2242229557041,2.96072737870374,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_42F,Meetkerke,Blankenbergsevaart,51.2313956840418,3.15774291850508,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_42L,Zedelgem,Rollewegbeek,51.1416465701,3.13468805136656,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_42M,Baliebrugge,Jobeek,51.0736946202098,3.18054606123621,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_437,Sint-Laureins,Leopoldkanaal,51.2457777221673,3.53042230732692,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_442,Maldegem,Ede,51.2043430849125,3.43957314555543,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_444,Sint-Laureins,Eeklose watergang,51.2456666753293,3.53072219676572,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_455,Heist,Isabellavaart,51.3276668598556,3.23826941308933,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_456,Oostkerke,Zwinnevaart,51.2824746226188,3.28891789899331,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L02_459,Uitkerke,Blankenbergsevaart,51.2922961226748,3.11851006055306,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L03_301,Mendonk,Zuidlede,51.1468063102965,3.8311392348016,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L03_303,Moerbeke,Zuidlede,51.1510437480765,3.94728726971344,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L03_30A,Oosteeklo,Burggravenstroom,51.1685643978325,3.68428159221835,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L03_438,Boekhoute,Leopoldkanaal,51.2709693962512,3.71215318736276,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L03_43D,Boekhoute,Isabellawatering,51.2555569775043,3.6950804876364,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L03_443,Assenede,Zwartesluisbeek,51.2041054457327,3.76324522687324,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L03_447,Waarschoot,Brakeleike,51.1460721005912,3.64622530820392,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L03_448,Vinderhoute,Borisgracht,51.0758557364736,3.62139534104012,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L03_449,Ruiselede,Poekebeek,51.0458389799915,3.38494661130488,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L03_44F,Nevele/Poekebeek,Poekebeek,51.0291739624223,3.52040132667718,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_006,Ekeren,Schoon Schijn,51.2875452214553,4.41415382743541,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_007,Wijnegem,Groot Schijn - Voorgracht,51.2157774555184,4.49511583219942,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_008,Bazel,Barbierbeek,51.1596096269194,4.28248959449215,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_009,Massemen,Molenbeek (Kottembeek),50.9783737126559,3.8790847082488,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_00A,Wijnegem,Afvoergracht,51.2253221702917,4.54484236828922,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_00C,Letterhoutem,Molenbeek (Kottembeek),50.9337906897032,3.8639794431187,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_00E,Verrebroek,Waterloop van de Hoge Landen,51.2399551202207,4.2036583465568,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_00F,Destelbergen,Lede,51.0742514837087,3.81077005973288,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_00G,Beervelde,Lede,51.0902389587114,3.87869333204623,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_00H,Kieldrecht,Noordzuid Verbinding,51.2783508840818,4.18976506644282,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_00I,Destelbergen/Ledebeek,Ledebeek,51.056287736079,3.7733002015672,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_035,Aartselaar,Benedenvliet,51.1363829953681,4.35786595992588,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_036,Liezele,Molenbeek,51.0449293192916,4.28067440536508,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_037,Malderen,Grote Molenbeek,51.0325643546372,4.26339104742961,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L04_038,Merchtem,Grote Molenbeek,50.9545692167217,4.2348591533389,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L05_402,Roeselare,Mandel,50.9400373616277,3.165559473842,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L05_403,Heule,Heulebeek,50.8438233289146,3.23354061960327,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L05_404,Moorsele,Heulebeek,50.8500912413048,3.13824903877794,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L05_406,Harelbeke,Gaverbeek,50.8460446397132,3.29483264585866,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L05_407,Meulebeke,Devebeek,50.9504677658473,3.27219344156497,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L05_408,Geluwe,Geluwebeek,50.8109767826437,3.08623009064218,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L05_409,Oostrozebeke,Mandel,50.9426290712643,3.37261259556254,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L05_40A,Harelbeke/Gaverbeek,Gaverbeek,50.841266951805,3.31015043632543,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L06_342,Nederzwalm,Zwalmbeek,50.885418346256,3.68613009931732,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L06_343,Eke,Beerhofbeek,50.9475478705799,3.63849383839792,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L06_347,Etikhove,Molenbeek,50.8260145913525,3.61160845853722,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L06_348,Etikhove,Marie Borrebeek,50.8124284499978,3.61266412679552,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L06_34A,Opbrakel,Vaanbuikbeek,50.7933984258941,3.74097901823193,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L06_34D,Nukerke,Molenbeek,50.7915540177546,3.62257299330959,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L06_34E,Maarke-Kerkem,Broekbeek,50.8190208480053,3.67114141932069,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L06_34F,Wannegem-Lede,Stampkotbeek,50.8824186599595,3.55658487352404,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L06_34L,Huise opw,Plankbeek,50.9067525913702,3.57874295119978,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L06_34M,Huise afw,Plankbeek,50.9111191595162,3.58643343804359,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_281,Opwijk,Vondelbeek,50.9827682912497,4.18529296790663,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_282,Mere,Ter Erpenbeek,50.9233188986627,3.96689419479605,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_284,Iddergem,Molenbeek,50.8728273680252,4.056547787685,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_285,Essene,Bellebeek (Hunselbeek),50.8887472223978,4.11626113416879,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_286,Sint-Katarina-Lombeek,Bellebeek (Hunselbeek),50.8765565554923,4.15679208149481,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_287,Ternat,Steenvoordbeek,50.8760324771255,4.17616028773367,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_288,Geraardsbergen,Molenbeek,50.7723496052745,3.87144970082739,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_289,Viane,Mark,50.7413382591609,3.89185247571793,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_28A,Ophasselt,Molenbeek,50.8111275277456,3.90102148601522,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_28C,Aalst,Molenbeek,50.9425818026335,4.06203208759448,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_28D,Aspelare,Molenbeek,50.8393214196529,3.92949108969785,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_28E,Galmaarden,Mark,50.7512081798554,3.97110914987575,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_28L,Sint-Gillis-Dendermonde,Vondelbeek,51.0190852504402,4.10106641610488,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_28O,Denderbelle/Pasbeek,Oude Dender,51.0022469619178,4.08177706010045,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_28R,Teralfene/Bosbeek,Bosbeek,50.8839529944754,4.13068599431848,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L07_28T,Zandbergen/Molenbeek,Molenbeek,50.8074529944633,3.95695999435912,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_093,Wilsele,Dijle,50.9252606469659,4.7063826186718,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_097,Korbeek-Dijle,Dijle,50.8379667806052,4.64326007318994,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_098,Sint-Joris-Weert,Dijle,50.8028999816509,4.64250171357406,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_110,Boortmeerbeek,Weesbeek,50.9864316099246,4.56993235395491,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_111,Elewijt,Barebeek,50.9772322444893,4.49528085131631,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_112,Heverlee,Voer,50.8714768065371,4.69035345534783,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_113,Bertem,Voer,50.8584078531675,4.61555617172796,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_114,Wilsele,Vunt,50.9057393112143,4.71130331533873,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_115,Heverlee,Molenbeek,50.8670749442419,4.6989602849318,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_116,Ijzeren Brugje,Molenbeek,50.8602867368077,4.73842689741877,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_118,Overijse,Laan,50.7685782644589,4.60497663446925,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_119,Huldenberg,Ijse,50.7901592449565,4.59298772597743,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_11A,Neerijse,Leigracht,50.8228698761994,4.64084421044646,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_11L,Bonheiden,Vrouwvliet,51.0127354493776,4.58419569337914,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_11M,Boortmeerbeek,Leibeek,50.9908606170454,4.58161650787895,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_11N,Hofstade,Barebeek,50.9979706481661,4.51057952348587,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_193,Lot,Zenne,50.7656922018074,4.27977512945101,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_231,Grimbergen,Maalbeek,50.9456273918501,4.40122490688286,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_233,Sint-Pieters-Leeuw,Zuunbeek,50.7784406210824,4.21186328740738,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L08_23G,Sint-Pieters-Leeuw,Molenbeek,50.7831913049194,4.20824574992543,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_126,Molenstede,Demer,50.9912672205303,5.04136730087718,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_132,Linkhout,Demer,50.96801734647,5.16413877896124,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_134,Spalbeek,Demer,50.9625778565773,5.2280626095064,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_136,Hasselt,Demer,50.9315276462155,5.37611387147317,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_138,Bilzen,Demer,50.8923773311505,5.49737700088927,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_141,Rotselaar,Winge,50.9400341540724,4.73788979329734,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_143,Wezemaal,Grote Losting,50.9433583865001,4.74413397385209,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_144,Rillaar,Grote Motte,50.9703885994476,4.89628871917746,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_145,Ransberg,Velpe,50.8909403365258,5.0211389216947,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_147,Molenstede,Zwart Water,51.0041405042171,5.01404017758696,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_148,Lummen,Zwartebeek,50.9958062151987,5.14775870087994,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_149,Tessenderlo,Grotebeek,51.0573510867718,5.1446333643621,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_14A,Tielt,Grote Motte,50.955485156657,4.89805649144034,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_14D,Diest,Begijnebeek,50.9772734119221,5.05486467569225,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_151,Halen,Gete,50.9579204761269,5.11645501714627,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_152,Halen,Gete,50.9483172904849,5.11961756998793,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_153,Budingen,Gete,50.8632192243875,5.10694928507997,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_154,Zoutleeuw,Kleine Gete,50.8551697714327,5.1089247189109,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_155,Oorbeek,Grote Gete,50.7892317923981,4.91913138896075,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_156,Rummen,Melsterbeek,50.8604812700222,5.14799910375114,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_157,Zoutleeuw,Dormaalbeek,50.8205440870701,5.10118388305138,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_159,Orsmaal,Kleine Gete,50.8037056067819,5.06436157092958,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_15A,Neerwinden,Waarbeek,50.7628933563469,5.04085185696991,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_15B,Velm,Molenbeek,50.7795260488258,5.1315704680826,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_15D,Muizen,Cicindria,50.7619687470603,5.17960696614979,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_15E,Mielen-boven-Aalst,Melsterbeek,50.7615576125308,5.20982000214533,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_161,Lummen,Mangelbeek,50.9852985040847,5.2038831702157,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_162,Lummen,Mangelbeek,50.979361162812,5.18657484035585,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_163,Spalbeek,Herk,50.9274229734415,5.22004991180518,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_164,Alken,Herk,50.876090688331,5.3094187181573,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_166,Alken,Kleine Herk,50.8777765762377,5.30994984850842,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_167,Wimmertingen,Mombeek,50.8853656204753,5.3525113026053,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_168,Munsterbilzen,Munsterbeek,50.8920316329168,5.52548541263402,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_169,Diepenbeek,Stiemer,50.9404826492501,5.43902823695848,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_16C,Kerniel,St. Annabeek,50.8118712305154,5.37772156390118,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_16D,Piringen,Fonteinbeek,50.7966996435634,5.41914428947049,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_16E,Helchteren,Broekbeek,51.0497735256452,5.36010565330782,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_16F,Zonhoven,Laambeek,51.0115286133285,5.34749615478479,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L09_16G,Wimmertingen,Oude Mombeek,50.8850439367082,5.35227716513571,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_054,Herentals,Kleine Nete,51.1845412065041,4.83972946082156,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_055,Herentals,Kleine Nete,51.1854924887183,4.83785115792751,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_062,Pulle,Molenbeek,51.211608606809,4.69855685707164,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_064,Turnhout,De Aa,51.2998572341995,4.9354277983032,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_066,Kasterlee,Rodeloop,51.2478313768912,5.00613235229208,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_067,Kasterlee,Wamp,51.2464240021121,5.00874826555145,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_068,Retie,Kleine Nete,51.2395713205358,5.06954099551912,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_06A,Turnhout/De_Aa,De Aa,51.2909923549303,4.91099288050297,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_06B,Turnhout/De_Aa,De Aa,51.2955737966765,4.92434789903162,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_077,Geel,Grote Nete,51.1447867526079,5.00390997840452,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_078,Meerhout,Grote Nete,51.138472882243,5.07861061179676,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_079,Balen,Grote Nete,51.1588635820837,5.19282370011181,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_082,Wiekevorst,Wimp,51.111508927171,4.80663385135049,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_083,Meerhout,Kleinbroekbeek,51.1217127060869,5.10282351274886,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_085,Veerle,Grote Laak,51.0777766781846,4.98634592264794,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_087,Tessenderlo,Grote Laak,51.081997235467,5.09429315727324,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_089,Mol,Scheppelijke Nete,51.2040895350392,5.18217620106326,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L10_08C,Balen,Kleine Hoofdgracht,51.158941635773,5.18547736724895,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_021,Overpelt,Holvenloop,51.2233117663368,5.41473219031676,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_022,Overpelt,Dommel,51.2293632452988,5.42162583298208,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_023,Peer,Dommel,51.1346930799076,5.43392178974007,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_024,Achel,Warmbeek,51.2815357697711,5.49301159510721,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_025,Neerpelt,Dommel,51.2602731316363,5.42106412874749,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_026,Neerpelt/Dommel,Dommel,51.2497554388893,5.4164448641951,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_042,Essen,Kleine Aa,51.4399235519452,4.47924317450896,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_044,Wuustwezel,Kleine Aa of Weerijsbeek,51.4075855222607,4.61792231871958,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_046,Brecht,Kleine Aa of Weerijsbeek,51.3361397715996,4.626836528743,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_047,Minderhout,Mark,51.4175674796935,4.76983786467368,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_048,Merksplas,Mark,51.3812530753493,4.82775110668572,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_512,Bocholt,Abeek,51.1815577801357,5.63825195613121,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_513,Bree,Abeek,51.1661238698061,5.59818221582674,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_51A,Opoeteren/Bosbeek,Bosbeek,51.0684820325062,5.65537894380553,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_555,Nerem,Jeker,50.7684050173438,5.5196392137884,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_561,Moelingen,Berwijn,50.7567461502885,5.71331416796086,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_567,s-Gravenvoeren,Voer,50.759546298601,5.75762159518389,,,Belgium,Flemish Environment Agency - VMM,vmm,
+L11_569,Sint-Martens-Voeren,Veurs,50.7496277942878,5.81265901853646,,,Belgium,Flemish Environment Agency - VMM,vmm,
+LS09_165,Wellen,Herk,50.8505353726327,5.32560803601561,,,Belgium,Flemish Environment Agency - VMM,vmm,
+MO10_23,Vorselaar,De Aa,51.1962555205798,4.77399531942865,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S01_42E,Oudenburg,Magdalenakreek,51.1822817852672,2.98694430710232,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S01_42K,Oostende_Zandvoorde,Grote Keignaert,51.2020094304521,2.98033565599146,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S01_42U,Zandvoorde,Magdalenakreek,51.1947118361801,2.97289809344023,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S02_45B,Dudzele,Ronselarebeek,51.281618723167,3.27013220321964,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S03_302,Wachtebeke,Zuidlede,51.1482607642924,3.90272357445957,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S03_304,Wachtebeke,Zwartebeek,51.156555452895,3.86287538740376,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S03_305,Moerbeke,Bosbeek,51.1642928484482,3.92508027836769,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S03_306,Zaffelare,Dijkgracht,51.1283636262559,3.85598044265697,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S03_307,Eksaarde,Mariabeek,51.1341443309547,3.94715374521773,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S03_308,Lochristi,Westlede,51.1106103138589,3.83763969317165,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S03_309,Oostakker,Wittewalle,51.109942003115,3.7693759596302,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S04_00B,Wijnegem,Zwanebeek_WezelseBeek,51.2297818205833,4.53135925019036,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S04_00D,Merelbeke,Schellebellebeek,50.9964982595421,3.76767730486551,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S04_00J,Sint-Gillis-Waas,ZuidelijkeWatergang(Groenendijk),51.2374152773527,4.12720701943632,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S04_00K,Sint-Gillis-Waas,Noordzuid Verbinding,51.2484702495592,4.11819874047133,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S04_00M,Sint-Gillis-Waas,Blokstraatbeek(sifon),51.226500522026,4.12146579926159,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S04_039,Asse/Grote Molenbeek,Grote Molenbeek,50.919891798006,4.24272251024108,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S04_03C,Asse/Grote Molenbeek,Grote Molenbeek,50.9325412313627,4.22809352656834,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S04_03F,Merchtem/Grote Molenbeek,Grote Molenbeek,50.9467085642941,4.22827892593465,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S04_03J,Londerzeel,Molenbeek,50.9982895714301,4.30232646828702,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S04_03K,Kapelle-op-den-bos,Birrebeek,51.0129303620029,4.34406660437096,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S06_344,Welden,Oossebeek,50.8713699967582,3.6592830911294,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S07_28F,Wambeek/Keurebeek,Kruisstraat,50.8667484118604,4.1666663521676,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S07_28I,St-Martens-Bodegem/Zierbeek,Molenstraat,50.861999437612,4.21225313486826,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S07_28J,Gooik/Molenbeek,Kroonstraat,50.7996933936168,4.07143226942538,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S07_28K,Gooik/Molenbeek,Letterbeekstraat,50.7974815120006,4.09097910168898,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_11D,Vossem/Voer,Voer,50.8347830937954,4.56327645469558,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_11E,Haacht/Binnenbeek,Keerbergenbroek,50.9901203721597,4.6195845985579,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_11F,Wespelaar,Leibeek,50.967675623805,4.61472358499743,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_11G,Tremelo,Vrouwvliet,51.0086113498747,4.72693259436863,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_11H,Haacht/Binnenbeek,Bessemhoefweg,50.9771622425763,4.66408298012881,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_11I,Boortmeerbeek/Leigracht,Maenrot,50.9719359409519,4.56228144586178,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_11J,Hever,Dambeek,50.9974231487152,4.55493692805426,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_11K,Schiplaken,Bergbeek,50.9796651188624,4.51354266904218,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_11O,Werchter,Grote Laak,50.9796405358155,4.70088527302124,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_11P,Overijse,Ijse,50.769823548053,4.5279210623846,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_11Q,Kampenhout,Weesbeek,50.9305562055242,4.57036935017666,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_11R,Kampenhout,Molenbeek,50.9353250418905,4.58381035235747,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_11T,Erps_Kwerps,Leibeek,50.9122442246534,4.60880646886589,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_236,Meise,Amelvonnesbeek,50.9312191876441,4.34115714720804,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_239,Huizingen,Molenbeek,50.7535570834951,4.26976461821304,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_23A,Alsemberg,Molenbeek,50.741278044782,4.33610862663992,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_23D,Halle,Groebengracht,50.7334668754645,4.22962514472418,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S08_23H,Sint-Genesius-Rode,Molenbeek,50.7486391043249,4.35302730688102,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S09_14E,Aarschot,Grote Motte,50.981212351509,4.86419089261289,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S09_14F,Kortrijk-Dutsel,Winge,50.9384674371979,4.80342383431681,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S09_15H,Landen/Dormaalbeek,Fabriekstr_Rufferding,50.7523540000297,5.08371611,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S09_15J,Hoegaarden/Schoorbroekbeek,Nerm_opw_duik,50.7691984924253,4.86152538801169,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S09_15L,Neerlanden,Dormaalbeek,46.129744749473,-1.44389999018061,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S10_069,Tielen,Grote Calie,51.2440178366942,4.9131379246401,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S10_08A,Mol,Scheppelijke Nete,51.1923842924582,5.13123091618589,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S10_08B,Mol,Molse Nete,51.1873090720449,5.13761319589141,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S11_557,Xhendremael/Beek,Rue_du_Bourdon_opw,50.6980525702343,5.49927733956631,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S11_55A,Tongeren/Beek,Diets_Heur_opw_overwelving,50.741115476996,5.48464027003172,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S11_55B,Xhendremael/Ezelsbeek,Chmn_de_Villers_opw,50.6984887483627,5.46865355967022,,,Belgium,Flemish Environment Agency - VMM,vmm,
+S11_56A,Voeren/Gulp,Gieveldstraat_afw,50.7553963860233,5.87779821659193,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SINT-WL1-1060,Sint-Pieter Noord rkm 10.8,Maas,50.8285781695375,5.69674242342052,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+SK04_03A,Asse/Grote_Molenbeek,Grote Molenbeek,50.9179111577475,4.23995472415737,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK04_03B,Asse/Grote_Molenbeek,Grote Molenbeek,50.9295681363265,4.2300938159169,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK04_03D,Asse/Grote_Molenbeek,Grote Molenbeek,50.9389845040606,4.22638125559054,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK04_03E,Merchtem/Grote_Molenbeek,Grote Molenbeek,50.9432725810815,4.22653904765456,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK04_03H,Merchtem/Grote_Molenbeek,Grote Molenbeek,50.9436038306236,4.22712569330998,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK04_03I,Merchtem/Stambeek,Stambeek,50.9541666665947,4.19564030633275,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK04_03L,Opwijk,Puttenbeek,50.9576858938793,4.21119283279234,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK04_03M,Kapelle-op-den-bos/Birrebeek,Birrebeek,50.9761033769789,4.34591551440366,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK07_28G,Wambeek/Keurebeek/Wachtbekken,Keurebeek,50.8598332535142,4.16023345956444,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK07_28H,St-Martens-Bodegem/Zierbeek/Wachtbekken,Zierbeek,50.8566043741648,4.20464435327373,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK08_11B,Vossem/Voer,Voer,50.8330212231626,4.55774718731503,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK08_11C,Vossem/Voer,Voer,50.8331806998684,4.55358860847204,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK08_235,Grimbergen/Maalbeek/Wachtbekken,Maalbeek,50.9309693332859,4.35102932669679,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK08_237,Wemmel/Maalbeek/Wachtbekken,Maalbeek,50.9158348571338,4.32839618074787,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK08_238,Wemmel/Maalbeek/Wachtbekken,Maalbeek,50.9143774662225,4.32521217496622,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK08_23B,Sint-Martens-Lennik/Neerpedebeek,Molenbeek,50.8217046976983,4.19604643987026,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK08_23C,Sint-Martens-Lennik/Neerpedebeek,Molenbeek,50.8240034639391,4.20715091598584,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK08_23I,Strombeek-Bever/Tangebeek,Tangebeek,50.9162893807497,4.37036414091053,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK09_15F,Walshoutem/Zevenbronnenbeek,Beek Der Zeven Bronnen,50.7234530091234,5.10225127980901,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK09_15G,Landen/Dormaalbeek,Dormaalbeek,50.7452823468578,5.0876002103286,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK09_15I,Hoegaarden/Schoorbroekbeek,Schoorbroekbeek,50.7773520940995,4.84860896365322,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK09_16A,Heks,Herkebeek,50.7672747665264,5.35815131435827,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK09_16H,Wellen/Kleine_Herk,Kleine Herk,50.8378386062663,5.34444556384344,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK09_16I,Wellen/Kleine_Herk,Kleine Herk,50.8308115889552,5.35477613,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK11_559,Tongeren/Beek,Beek,50.7315015219471,5.48775568930463,,,Belgium,Flemish Environment Agency - VMM,vmm,
+SK11_55C,Tongeren/Ezelsbeek,Ezelsbeek,50.7426128170127,5.44478859368364,,,Belgium,Flemish Environment Agency - VMM,vmm,
+abk04c-1115,Wijnegem Afwaarts,Albertkanaal,51.2294494695845,4.53120061068357,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk04g-1115,Wijnegem Opwaarts,Albertkanaal,51.2246640017771,4.54618543346293,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk05a-1066,Viersel,Albertkanaal,51.1924464488262,4.66166382196447,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk06a-1066,Grobbendonk,Albertkanaal,51.1787753826577,4.77208129038498,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk06r-1066,Olen Sluis Vijzelkanaal,Albertkanaal,51.1581858233479,4.85966114371323,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk06t-1115,Olen Opwaarts,Albertkanaal,51.1570078870914,4.86450541750782,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk07a-1066,Geel Stelen,Albertkanaal,51.1257980868372,4.97938020440318,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk07r-1066,Ham Sluis Vijzelkanaal,Albertkanaal,51.0973554171606,5.10802268810797,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk07t-1115,Kwaadmechelen Opwaarts,Albertkanaal,51.0962211343791,5.11236771276994,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk08a-1066,Beringen,Albertkanaal,51.0297635145487,5.22483460135229,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk08h-1066,Hasselt Sluis Vijzelkanaal,Albertkanaal,50.9397854410694,5.36923383025391,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk08k-1115,Hasselt Opwaarts,Albertkanaal,50.9397659112101,5.37384752886972,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk08p-1115,Diepenbeek Opwaarts,Albertkanaal,50.9372057131972,5.43697528197556,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk08v-1115,Genk Opwaarts,Albertkanaal,50.9338698618759,5.50148984184363,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+abk11a-1066,Kanne,Albertkanaal,50.8259066775242,5.64573583369548,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+akl02a-1066,Oostkerke,Afleidingskanaal van de Leie,51.2650576805498,3.29628498629039,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+akl03e-1066,Adegem-Balgerhoeke Opwaarts,Afleidingskanaal van de Leie,51.2028044703771,3.51574067376262,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+akl04a-1066,Zomergem,Afleidingskanaal van de Leie,51.1011257965685,3.56546697228752,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+akl07a-1066,Merendree,Afleidingskanaal van de Leie,51.0899074227213,3.56287609346259,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+akl08a-1066,Deinze,Afleidingskanaal van de Leie,50.9878959801445,3.52335264918975,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+bgv03c-1066,Houtem Afwaarts,Bergenvaart,51.022811678469,2.61909850875118,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+bgv03e-1066,Houtem Opwaarts,Bergenvaart,51.0229089527617,2.61959386028197,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+bnt01h-1066,Grote Vijver Noord GOG,Nete,51.0730650258078,4.42561373613891,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+bnt06c-1066,Polder van Lier Afwaarts GOG,Nete,51.1168269994759,4.55265806219233,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+bnt06r-1066,Polder van Lier Opwaarts GOG,Nete,51.1206022681079,4.55984385693839,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+bos01o-1066,Zwijnaarde,Boven-Schelde,50.9915081020893,3.72241218573518,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+bos02a-1066,Gavere,Boven-Schelde,50.9296307282178,3.6542880951664,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+bos02a-SF-1066,Gavere SF,Bovenschelde,50.9296279824225,3.65403599309026,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+bos03e-1066,Asper Opwaarts,Boven-Schelde,50.9148702570649,3.6705370384779,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+bos04e-1066,Oudenaarde Opwaarts,Boven-Schelde,50.8473559891235,3.61542461704155,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+bos04o-1066,Kerkhove Opwaarts,Boven-Schelde,50.7867091851723,3.49030427575471,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+bos05m-1066,Helkijn,Boven-Schelde,50.728698824736,3.38788014170151,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+dem01r-1066,Betekom,Demer,50.9794862001458,4.78170352375756,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+dem02a-1066,Aarschot Afwaarts,Demer,50.9876514488463,4.82232337085119,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+dem02m-1066,Aarschot Opwaarts,Demer,50.9852232220017,4.84085661217778,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+dem02r-1066,Langdorp,Demer,50.9922770639936,4.86974289165077,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+dem03a-1066,Testelt,Demer,51.0085585011076,4.95488273057216,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+dem04a-1066,Zichem,Demer,51.0025986122072,4.99157972958855,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+den02a-1066,Dendermonde,Dender,51.0378155133046,4.07704992952038,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+den02a-SF-1066,Dendermonde SF,Dender,51.0378155133046,4.07704992952038,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+den03e-1066,Denderbelle Opwaarts,Dender,51.0001626404035,4.07806732915739,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+den05k-1115,Aalst Afwaarts m1,Dender,50.9306173352231,4.05198202364574,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+den05m-1115,Aalst Afwaarts m2,Dender,50.9300867420541,4.05190024958135,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+den05o-1115,Aalst Sluis m2,Dender,50.9298444159597,4.0520441285608,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+den05q-1115,Aalst Sluis m1,Dender,50.9297725405047,4.05205883722318,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+den05s-1115,Aalst Opwaarts m2,Dender,50.9294760876841,4.05213195620184,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+den05u-1115,Aalst Opwaarts m1,Dender,50.9290002709942,4.05236274962837,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+den06a-1066,Erembodegem,Dender,50.9200786512053,4.06002871846776,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+den08c-1066,Denderleeuw Opwaarts,Dender,50.8736649492081,4.07715178150251,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+den11e-1066,Geraardsbergen Opwaarts,Dender,50.769556480271,3.88066612268998,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+den12a-1066,Overboelare,Dender,50.7620116684055,3.86733483005445,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+denaad-1066,Pollare Opwaarts tmp,Dender,50.8297614789452,4.0074792652044,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+denaae-1066,Idegem Afwaarts tmp,Dender,50.7989491326296,3.93206607172396,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+denaaf-1066,Idegem Opwaarts tmp,Dender,50.7988107215565,3.9287054780357,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+dij05a-1066,Zennegat GOG,Dijle,51.060806594364,4.43776611561005,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+dij10a-1066,Rijmenam,Dijle,50.9993091666333,4.58524634250655,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+dij13a-1066,Werchter,Dijle,50.969276505467,4.69217891181747,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+dur07a-1066,Zele,Durme,51.0948066780241,4.04502657341674,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+gnt03a-1066,Itegem Hullebrug,Grote Nete,51.1223077166928,4.69803950750083,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+gnt05a-1066,Hulshout,Grote Nete,51.0618504955514,4.78778097430423,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+gnt07a-1066,Geel-Zammel,Grote Nete,51.0917611957854,4.94610627193862,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+ijz01d-1066,Nieuwpoort,Ijzer,51.1353128749276,2.76875389746053,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+ijz02a-1066,Keiem,Ijzer,51.0843386236797,2.8527477363326,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+ijz03a-1066,Diksmuide,Ijzer,51.0332120141757,2.85445974413561,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+ijz04c-1066,Woumen,Ijzer,51.0011276405927,2.82845153665494,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+ijz05e-1066,Lo-Fintele,Ijzer,50.9571484191734,2.73619409474557,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+ijz05m-1066,Stavele,Ijzer,50.9433484538452,2.67218829689136,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+ijz06a-1066,Roesbrugge,Ijzer,50.9201498251022,2.6230671705189,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+ijz07a-1066,Haringe,Ijzer,50.9103217034264,2.60800111173614,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbc02g-1066,Ruisbroek,Kanaal Brussel-Charleroi,50.7844688516698,4.28839005991179,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbc04e-1066,Lot Opwaarts,Kanaal Brussel-Charleroi,50.7658454688551,4.26908691804534,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbc05e-1066,Halle Opwaarts,Kanaal Brussel-Charleroi,50.7377444522881,4.2420029010962,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbc06e-1066,Lembeek,Kanaal Brussel-Charleroi,50.7080525616443,4.2202229496191,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbh02f-1115,Herentals Sluis 10 Opwaarts,Kanaal Bocholt-Herentals,51.1686876569584,4.83521981374027,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbh03f-1115,Geel Sluis 9 Opwaarts,Kanaal Bocholt-Herentals,51.1916715852938,4.95778653956808,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbh04f-1115,Geel Sluis 8 Opwaarts,Kanaal Bocholt-Herentals,51.2024267263246,4.98958788209279,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbh05f-1115,Geel Sluis 7 Opwaarts,Kanaal Bocholt-Herentals,51.2120435026462,5.04257125489207,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbh06f-1115,Mol Sluis 6 Opwaarts,Kanaal Bocholt-Herentals,51.2191311367625,5.08002578249731,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbh07f-1115,Dessel Sluis 5 Opwaarts,Kanaal Bocholt-Herentals,51.2302277654136,5.14335638035268,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbh08f-1115,Dessel Sluis 4 Opwaarts,Kanaal Bocholt-Herentals,51.2335583477767,5.16444086103769,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbh08m-1066,Mol,Kanaal Bocholt-Herentals,51.2353178976313,5.16888990971725,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbh09f-1115,Mol Sluis 3 Opwaarts,Kanaal Bocholt-Herentals,51.2391329058166,5.19298841645912,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbh10f-1115,Mol Sluis 2 Opwaarts,Kanaal Bocholt-Herentals,51.237597052777,5.21308315927116,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbh11f-1115,Lommel Sluis 1 Opwaarts,Kanaal Bocholt-Herentals,51.237970748291,5.22476272926258,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbh12a-1066,Lommel,Kanaal Bocholt-Herentals,51.2483549746749,5.26252625752597,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbk02c-1066,Kortrijk Vlaanderenkaai,Kanaal Bossuit-Kortrijk,50.8344355964756,3.27106598180651,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbk03c-1066,Kortrijk Spinnerijkaai,Kanaal Bossuit-Kortrijk,50.8314266089743,3.28449478724843,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbn02f-1115,Neerharen Opwaarts 1,Kanaal Briegden-Neerharen,50.8999692906364,5.68084508962512,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbn02g-1066,Neerharen Opwaarts 2,Kanaal Briegden-Neerharen,50.8999542957389,5.68083528668753,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbn03f-1115,Lanaken Opwaarts,Kanaal Briegden-Neerharen,50.8833897044282,5.65261067267032,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kbs02a-1066,Damme,Kanaal Brugge-Sluis,51.2523342559284,3.28011886801746,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kdk03a-1066,Mol Sluis,Kanaal Dessel-Kwaadmechelen,51.2078174001573,5.15873030880688,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kdn02a-1066,Nieuwpoort,Kanaal Nieuwpoort-Duinkerke,51.1332743804671,2.75703463011375,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kdn03a-1066,Veurne Afwaarts,Kanaal Nieuwpoort-Duinkerke,51.0708621988731,2.66826431065748,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kdn03c-1066,Veurne Opwaarts,Kanaal Nieuwpoort-Duinkerke,51.0703883141555,2.66782486120185,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kdn04a-1066,Veurne,Kanaal Nieuwpoort-Duinkerke,51.0706915943455,2.65524100489211,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kdn05a-1066,Adinkerke,Kanaal Nieuwpoort-Duinkerke,51.0721463245775,2.60369087504062,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kds02f-1066,Schoten,Kanaal Dessel-Schoten,51.2434263470645,4.5026377241042,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kds02g-1115,Schoten Sluis 10 Opwaarts,Kanaal Dessel-Schoten,51.2434326237168,4.50265106003661,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kds03f-1115,Schoten Sluis 09 Opwaarts,Kanaal Dessel-Schoten,51.252165241485,4.50705651575256,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kds04f-1115,Schoten Sluis 08 Opwaarts,Kanaal Dessel-Schoten,51.2722224856114,4.52059573799283,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kds05f-1115,Schoten Sluis 07 Opwaarts,Kanaal Dessel-Schoten,51.2892464623685,4.54229749111996,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kds06f-1115,Schoten Sluis 06 Opwaarts,Kanaal Dessel-Schoten,51.295252932433,4.55195575053447,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kds07f-1115,Sint-Job-In-t-Goor Sluis 5 Opwaarts,Kanaal Dessel-Schoten,51.2992624986698,4.56184706362814,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kds08f-1115,Sint-Job-In-t-Goor Sluis 4 Opwaarts,Kanaal Dessel-Schoten,51.3036111967393,4.57260705653574,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kds09f-1115,Brecht Sluis 3 Opwaarts,Kanaal Dessel-Schoten,51.3073591616924,4.58201374326965,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kds10f-1115,Brecht Sluis 2 Opwaarts,Kanaal Dessel-Schoten,51.3108982925069,4.59075710027478,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kds11f-1115,Rijkevorsel Sluis 1 Opwaarts,Kanaal Dessel-Schoten,51.3274393887789,4.78456774633806,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kds13a-1066,Dessel Witgoor,Kanaal Dessel-Schoten,51.2353865999011,5.16403893284404,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kgo02a-1066,Oudenburg-Plassendale,Kanaal Gent-Oostende,51.2099607230196,3.00385759798676,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kgo03a-1066,Varsenare,Kanaal Gent-Oostende,51.2085876631138,3.12554729443741,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kgo04e-1066,Brugge Dampoortsluis Opwaarts,Kanaal Gent-Oostende,51.2209258241508,3.23421384082123,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kgo06a-1066,Brugge-Steenbrugge,Kanaal Gent-Oostende,51.1794485742908,3.23424905464403,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kgo06n-1066,Oostkamp,Kanaal Gent-Oostende,51.1583447280091,3.26405350323317,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kgo08a-1066,Aalter,Kanaal Gent-Oostende,51.1069984381802,3.43509535017227,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kgo13a-1066,Brugge Carmersbrug,Binnenarm Kanaal Gent-Oostende,51.2135227252062,3.22904089797062,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kgt04a-1066,Zelzate,Kanaal Gent-Terneuzen,51.1983396964966,3.80050336467076,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+knt03a-1066,Grobbendonk Troon,Kleine Nete,51.1887369271149,4.74236404327005,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+knt03m-1115,Grobbendonk Opwaarts Krooshekken,Kleine Nete,51.1830644493531,4.72216724308325,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kpn02a-1066,Nieuwpoort,Kanaal Nieuwpoort-Plassendale,51.1370660635264,2.75883312340084,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kpn03a-1066,Slijpe,Kanaal Nieuwpoort-Plassendale,51.1647003214603,2.83147874030206,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+kpn04a-1066,Oudenburg-Plassendale,Kanaal Nieuwpoort-Plassendale,51.2082197064117,3.00256321662929,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+krl03a-1066,Izegem,Kanaal Roeselare-Leie,50.9227147999659,3.21600115523492,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lei02a-1066,Sint-Martens-Latem,Leie,51.0223304151773,3.6396663123729,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lei03a-1066,Deinze,Leie,50.981891874837,3.53357211241346,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lei04a-1066,Machelen,Leie,50.9761639541353,3.50350061937995,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lei06b-1066,Sint-Baafs-Vijve 1200m Afwaarts,Leie,50.9134704825693,3.4288159529755,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lei06f-1066,Sint-Baafs-Vijve 650m Opwaarts,Leie,50.9093479751192,3.40378795033366,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lei08f-1066,Harelbeke 650m Opwaarts,Leie,50.8502180339217,3.30011979040259,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lei09a-1066,Kortrijk,Leie,50.8345989004698,3.27036380974287,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lei10a-1066,Lauwe,Leie,50.8015911859622,3.1894996472416,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lei11m-1066,Menen Ropswalle,Leie,50.7854607985441,3.10738816895926,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lei12e-1066,Menen Opwaarts,Leie,50.7788710442024,3.09680879429743,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lek03a-1066,Damme,Leopoldkanaal,51.2614920132158,3.30960538093213,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lek13c-1066,Brugge Afwaarts,Zuidervaart,51.2208120726685,3.23547632019261,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lek13e-1066,Brugge Opwaarts,Zuidervaart,51.2206758914795,3.23533647944662,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lok02a-1066,Lo-Reninge,Lokanaal,50.9801372834614,2.7418885118437,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+lok03c-1066,Lo-Fintele,Lokanaal,50.9576956414414,2.73610386763002,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa02a-1066,Maaseik rkm 52.8,Maas,51.0949023304829,5.80144022412334,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa02w-1066,Rotem rkm 44.9,Maas,51.050734021412,5.76987651039601,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa04a-1066,Negenoord rkm 42.5,Maas,51.0300480452586,5.75972172954306,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa05a-1066,Meeswijk Veer rkm 39.0,Maas,51.00640264915,5.76598473411518,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa06a-1066,Eisden-Mazenhoven rkm 34.7,Maas,50.9776258087868,5.73595993371206,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa06x-1066,Uikhoven rkm 25.3,Maas,50.9291969136969,5.73094865917749,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa08a-1066,Lanaken-Smeermaas rkm 18.4,Maas,50.8895268896999,5.68307396843957,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa10a-1066,Ophoven De Spaanjerd,Maasplassen,51.1276338172772,5.81784630409896,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa11a-1066,Maaseik Herenlaak,Maasplassen,51.1011729090361,5.81873912481654,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa11s-1066,Rotem Bichterweerd,Maasplassen,51.0507031598422,5.76793571413708,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa12a-1066,Negenoord-West,Maasplassen,51.0296412139895,5.75918981468683,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa13a-1066,Maasbeemder Greend,Maasplassen,50.9784081814902,5.73517099378128,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa14k-1115,Kanne Opwaarts Duiker Afwaarts rooster,Jeker,50.8082009389969,5.67370561495717,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+maa14l-1115,Kanne Opwaarts Duiker Opwaarts rooster,Jeker,50.8080872531549,5.67341866221214,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+moe02a-1066,Mendonk,Moervaart,51.1488903498472,3.82494273744414,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+moe03a-1066,Sinaai,Moervaart,51.1555611085008,3.99990364679417,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+moe10a-1066,Lokeren,Bovendurme,51.1031686371072,4.00095874581914,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+rup02e-SF-1066,Klein Willebroek SF,Rupel,51.0823375924568,4.36627257693236,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+rup02l-1066,Bovenzanden GOG,Rupel,51.0776203625971,4.41480269415621,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+rvg02f-1066,Evergem Waalbrug,Ringvaart,51.1044792488449,3.71077702814493,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+rvg04e-1066,Evergem Opwaarts,Ringvaart,51.0877134881911,3.6594010889156,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+rvg04x-1066,Zwijnaarde,Ringvaart,51.0136279358373,3.72110104301922,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+rvg05a-1066,Merelbeke 700m Opwaarts,Ringvaart,51.01176661941,3.73874789229143,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zen03a-1066,Eppegem,Zenne,50.9605215675157,4.45565127631139,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zen04a-1066,Vilvoorde Sluisstraat,Zenne,50.9176726362598,4.4205596749182,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes01a-SF-1066,Prosperpolder SF,Zeeschelde,51.3483317661253,4.23793654403513,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+zes07g-SF-B-1066,Lillo Meetpaal-Boven SF,Zeeschelde,51.3195069409791,4.27588434385289,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+zes07g-SF-O-1066,Lillo Meetpaal-Onder SF,Zeeschelde,51.3195069433486,4.27588433983218,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+zes09x-SF-1066,Liefkenshoek Veer SF,Zeeschelde,51.2966845761673,4.28586479120805,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+zes14u-1066,Zwijndrecht Bazeput,Waterloop van de Hoge Landen,51.2589401575299,4.29495611421824,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes19a-SF-B-1066,Oosterweel-Boven SF,Zeeschelde,51.2369683624129,4.37056211394747,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+zes22m-1066,Burchtse Weel,Zeeschelde,51.2052030641949,4.35867008050332,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes24a-SF-1066,Kruibeke SF,Zeeschelde,51.1753993724257,4.32677427195182,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+zes25a-1066,Kruibeke GOG Grote Uitlaat,Zeeschelde,51.1713880623174,4.32333229659431,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes25b-1066,Kruibeke GOG Kapelbeek,Ringgracht KBR,51.1692652542783,4.31677148626586,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes25l-1066,Kruibeke-Bazel GOG Grote Uitwatering,Zeeschelde,51.1491881426566,4.32536831745996,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes25o-1066,Kruibeke-Bazel GOG Langegaanw,Ringgracht KBR,51.1464480128606,4.3079507443211,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes25q-1066,Kruibeke-Bazel GOG Kallebeek,Zeeschelde,51.1439833229366,4.32428705680676,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes25t-1066,Rupelmonde Sluis Fassaat GOG,Zeeschelde,51.1359646843388,4.32230864155543,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes28a-SF-1066,Hemiksem SF,Zeeschelde,51.1433201854815,4.33013208685328,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+zes39c-SF-1066,Weert SF,Zeeschelde,51.0917308124327,4.17264871098092,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+zes40b-1066,Lippenbroek GOG,Zeeschelde,51.086642697682,4.17239880419719,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes41k-1066,Zwijn GOG,Zeeschelde,51.0590506928224,4.18607906962556,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes43a-1066,Wal GOG,Zeeschelde,51.0469495390688,4.18478566805995,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes51n-1066,Bergenmeersen 1 GOG,Zeeschelde,51.0190443124544,3.96929279963773,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes54m-SF-1066,Schellebelle SF,Zeeschelde,51.0134341573453,3.93081061343142,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+zes57a-1066,Melle tij,Zeeschelde,51.0043253963864,3.80534724074931,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes57a-SF-1066,Melle SF,Zeeschelde,51.0043254024176,3.80534723706138,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,
+zes57n-1066,Destelbergen,Zeeschelde,51.0438973238344,3.79255124195868,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zes61a-1066,Melle,Vuntebeek,50.9950619499746,3.8250998464087,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zwv02c-1115,Lozen Afwaarts,Zuid-Willemsvaart,51.2086684298069,5.55906066540858,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zwv02f-1115,Lozen Opwaarts,Zuid-Willemsvaart,51.2068896827952,5.55357713348472,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zwv03f-1115,Bocholt Opwaarts,Zuid-Willemsvaart,51.1873439008716,5.56602937487721,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
+zwv08a-1115,Dilsen-Stokkem,Zuid-Willemsvaart,51.0476527468703,5.70232156574413,,,Belgium,Hydrological Information Centre - HIC (Flanders),hic,TAW
