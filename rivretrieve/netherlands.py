@@ -32,17 +32,11 @@ class NetherlandsFetcher(base.RiverDataFetcher):
 
     Data description and API:
         - current API docs: https://ddapi20-waterwebservices.rijkswaterstaat.nl/swagger-ui/index.html
-        - metadata endpoint: ``/METADATASERVICES/OphalenCatalogus``
-        - observations endpoint: ``/ONLINEWAARNEMINGENSERVICES/OphalenWaarnemingen``
 
     Terms of use:
         - see https://rijkswaterstaatdata.nl/waterdata/
 
     Notes:
-        - The official Rijkswaterstaat documentation was updated on March 10, 2026 and
-          states that the classic WaterWebservices will be retired at the end of
-          April 2026. This fetcher therefore targets the new ``ddapi20`` endpoints
-          first and falls back to the legacy service if needed.
         - The Rijkswaterstaat catalog exposes discharge (``Q``), water level
           (``WATHTE``), and water temperature (``T``) for surface water, which are
           mapped to the corresponding RivRetrieve daily and instantaneous variables.
@@ -462,7 +456,11 @@ class NetherlandsFetcher(base.RiverDataFetcher):
         return set(matched_locs[loc_code].dropna().astype(str).str.strip())
 
     def get_metadata(self) -> pd.DataFrame:
-        """Fetches live metadata for Dutch discharge stations."""
+        """Fetches live metadata for Dutch surface-water stations.
+
+        Returns a DataFrame indexed by ``constants.GAUGE_ID`` and filtered to
+        stations that advertise at least one supported RivRetrieve variable.
+        """
         catalog = self._get_catalog()
         locs = self._as_frame(catalog.get("LocatieLijst"))
         if locs.empty:
@@ -662,7 +660,30 @@ class NetherlandsFetcher(base.RiverDataFetcher):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-        """Fetches and parses Dutch time series data for a specific gauge and variable."""
+        """Fetches and parses Dutch time series data for a specific gauge and variable.
+
+        This method retrieves the requested data from Rijkswaterstaat's observation API,
+        parses it, and returns it in a standardized pandas DataFrame format.
+
+        Args:
+            gauge_id: The site-specific identifier for the gauge.
+            variable: The variable to fetch. Must be one of the strings listed
+                in the fetcher's ``get_available_variables()`` output.
+                These are typically defined in ``rivretrieve.constants``.
+            start_date: Optional start date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched from the earliest available date.
+            end_date: Optional end date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched up to the latest available date.
+
+        Returns:
+            pd.DataFrame: A pandas DataFrame indexed by datetime objects (``constants.TIME_INDEX``)
+            with a single column named after the requested ``variable``. The DataFrame
+            will be empty if no data is found for the given parameters.
+
+        Raises:
+            ValueError: If the requested ``variable`` is not supported by this fetcher.
+            Exception: For unexpected download or parsing errors.
+        """
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
 

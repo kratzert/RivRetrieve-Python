@@ -1,5 +1,4 @@
 import json
-import os
 import unittest
 from pathlib import Path
 from unittest.mock import MagicMock, patch
@@ -13,7 +12,7 @@ from rivretrieve import NetherlandsFetcher, constants
 class TestNetherlandsFetcher(unittest.TestCase):
     def setUp(self):
         self.fetcher = NetherlandsFetcher()
-        self.test_data_dir = Path(os.path.dirname(__file__)) / "test_data"
+        self.test_data_dir = Path(__file__).parent / "test_data"
 
     def _load_json(self, filename):
         with open(self.test_data_dir / filename, "r", encoding="utf-8") as f:
@@ -34,6 +33,7 @@ class TestNetherlandsFetcher(unittest.TestCase):
 
         result_df = self.fetcher.get_metadata()
 
+        self.assertEqual(result_df.index.name, constants.GAUGE_ID)
         self.assertEqual(list(result_df.index), ["borgharen", "lobith"])
         self.assertEqual(result_df.loc["lobith", constants.STATION_NAME], "Lobith")
         self.assertEqual(result_df.loc["lobith", constants.RIVER], "Rijn")
@@ -42,6 +42,11 @@ class TestNetherlandsFetcher(unittest.TestCase):
         self.assertEqual(result_df.loc["lobith", constants.COUNTRY], "Netherlands")
         self.assertEqual(result_df.loc["lobith", constants.SOURCE], self.fetcher.SOURCE)
         self.assertEqual(mock_session.post.call_count, 1)
+        self.assertEqual(mock_session.post.call_args.kwargs["timeout"], 60)
+        self.assertEqual(
+            mock_session.post.call_args.kwargs["json"]["CatalogusFilter"]["Compartimenten"],
+            True,
+        )
 
     def test_available_variables(self):
         self.assertEqual(
@@ -86,6 +91,7 @@ class TestNetherlandsFetcher(unittest.TestCase):
         self.assertEqual(data_body["Locatie"]["Code"], "lobith")
         self.assertEqual(data_body["AquoPlusWaarnemingMetadata"]["AquoMetadata"]["Grootheid"]["Code"], "Q")
         self.assertEqual(data_body["AquoPlusWaarnemingMetadata"]["AquoMetadata"]["Eenheid"]["Code"], "m3/s")
+        self.assertEqual(mock_session.post.call_args_list[1].kwargs["timeout"], 60)
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_instant_discharge(self, mock_requests_session):
@@ -180,6 +186,29 @@ class TestNetherlandsFetcher(unittest.TestCase):
     def test_unsupported_variable_raises(self):
         with self.assertRaises(ValueError):
             self.fetcher.get_data("lobith", constants.DISCHARGE_HOURLY_MEAN)
+
+    @patch("rivretrieve.utils.requests_retry_session")
+    def test_get_data_returns_standardized_empty_frame_for_empty_payload(self, mock_requests_session):
+        mock_session = MagicMock()
+        mock_requests_session.return_value = mock_session
+        mock_session.post.side_effect = [
+            self._mock_response(self._load_json("netherlands_catalog_sample.json")),
+            self._mock_response({}),
+        ]
+
+        result_df = self.fetcher.get_data(
+            gauge_id="lobith",
+            variable=constants.DISCHARGE_DAILY_MEAN,
+            start_date="2025-01-01",
+            end_date="2025-01-02",
+        )
+
+        expected_df = pd.DataFrame(columns=[constants.TIME_INDEX, constants.DISCHARGE_DAILY_MEAN]).set_index(
+            constants.TIME_INDEX
+        )
+
+        assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
 
 
 if __name__ == "__main__":
