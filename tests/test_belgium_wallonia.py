@@ -1,5 +1,4 @@
 import json
-import os
 import unittest
 from pathlib import Path
 from unittest.mock import MagicMock, patch
@@ -13,7 +12,7 @@ from rivretrieve import BelgiumWalloniaFetcher, constants
 class TestBelgiumWalloniaFetcher(unittest.TestCase):
     def setUp(self):
         self.fetcher = BelgiumWalloniaFetcher()
-        self.test_data_dir = Path(os.path.dirname(__file__)) / "test_data"
+        self.test_data_dir = Path(__file__).parent / "test_data"
 
     def _load_json(self, filename):
         with open(self.test_data_dir / filename, "r", encoding="utf-8") as f:
@@ -38,6 +37,7 @@ class TestBelgiumWalloniaFetcher(unittest.TestCase):
 
         result_df = self.fetcher.get_metadata()
 
+        self.assertEqual(result_df.index.name, constants.GAUGE_ID)
         self.assertEqual(set(result_df.index), {"L5442", "8133"})
         self.assertEqual(result_df.loc["L5442", constants.STATION_NAME], "Aiseau")
         self.assertEqual(result_df.loc["L5442", constants.RIVER], "Biesme")
@@ -45,6 +45,12 @@ class TestBelgiumWalloniaFetcher(unittest.TestCase):
         self.assertEqual(result_df.loc["L5442", "vertical_datum"], "DNG")
         self.assertEqual(result_df.loc["8133", constants.COUNTRY], "Belgium")
         self.assertEqual(result_df.loc["8133", constants.SOURCE], self.fetcher.SOURCE)
+        self.assertEqual(mock_session.get.call_count, 3)
+        self.assertEqual(mock_session.get.call_args_list[0].args[0], self.fetcher.BASE_URL)
+        self.assertEqual(mock_session.get.call_args_list[0].kwargs["params"]["request"], "getStationList")
+        self.assertEqual(mock_session.get.call_args_list[1].kwargs["params"]["timeseriesgroup_id"], "7256919")
+        self.assertEqual(mock_session.get.call_args_list[2].kwargs["params"]["timeseriesgroup_id"], "7255151")
+        self.assertTrue(all(call.kwargs["timeout"] == 60 for call in mock_session.get.call_args_list))
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_daily_discharge(self, mock_requests_session):
@@ -70,9 +76,12 @@ class TestBelgiumWalloniaFetcher(unittest.TestCase):
         ).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
         self.assertEqual(mock_session.get.call_count, 2)
         ts_map_request = mock_session.get.call_args_list[0].kwargs["params"]
         self.assertEqual(ts_map_request["timeseriesgroup_id"], "7256919")
+        self.assertEqual(mock_session.get.call_args_list[1].kwargs["params"]["request"], "getTimeseriesValues")
+        self.assertEqual(mock_session.get.call_args_list[1].kwargs["timeout"], 60)
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_daily_stage(self, mock_requests_session):
@@ -98,6 +107,9 @@ class TestBelgiumWalloniaFetcher(unittest.TestCase):
         ).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
+        self.assertEqual(mock_session.get.call_args_list[0].kwargs["params"]["timeseriesgroup_id"], "7255151")
+        self.assertEqual(mock_session.get.call_args_list[1].kwargs["params"]["request"], "getTimeseriesValues")
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_returns_empty_for_unknown_station(self, mock_requests_session):
@@ -114,7 +126,12 @@ class TestBelgiumWalloniaFetcher(unittest.TestCase):
             end_date="2025-01-05",
         )
 
-        self.assertTrue(result_df.empty)
+        expected_df = pd.DataFrame(columns=[constants.TIME_INDEX, constants.DISCHARGE_DAILY_MEAN]).set_index(
+            constants.TIME_INDEX
+        )
+
+        assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
 
     def test_unsupported_variable_raises(self):
         with self.assertRaises(ValueError):

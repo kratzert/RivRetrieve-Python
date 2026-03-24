@@ -17,23 +17,18 @@ class BelgiumWalloniaFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from the SPW Hydrometrie KiWIS service for Wallonia.
 
     Data source:
-        - website: https://hydrometrie.wallonie.be/services/KiWIS/KiWIS
+        https://hydrometrie.wallonie.be/
 
     Supported variables:
-        - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
-        - ``constants.STAGE_DAILY_MEAN`` (m)
+        - 'discharge_daily_mean' (m³/s)
+        - 'stage_daily_mean' (m)
 
     Data description and API:
-        - KiWIS endpoint: https://hydrometrie.wallonie.be/services/KiWIS/KiWIS
-        - request reference: https://hydrometrie.wallonie.be/services/KiWIS/KiWIS?service=kisters&type=queryServices&request=getRequestInfo&format=html
+        - see https://hydrometrie.wallonie.be/services/KiWIS/KiWIS?format=html&request=getrequestinfo&service=kisters&type=QueryServices
+        - see https://hydrometrie.wallonie.be/home/services/telechargements-des-donnees.html
 
     Terms of use:
-        - see https://hydrometrie.wallonie.be/
-
-    Notes:
-        - The Wallonia KiWIS service exposes parameter groups instead of RivRetrieve-native variable names.
-        - This fetcher maps Wallonia discharge and stage groups to RivRetrieve daily-mean variables.
-        - Metadata includes only stations with at least one supported time series.
+        - see https://hydrometrie.wallonie.be/mentions-legales.html
     """
 
     BASE_URL = "https://hydrometrie.wallonie.be/services/KiWIS/KiWIS"
@@ -202,7 +197,12 @@ class BelgiumWalloniaFetcher(base.RiverDataFetcher):
         return parsed.copy()
 
     def get_metadata(self) -> pd.DataFrame:
-        """Fetches live metadata for stations with supported Belgium-Wallonia variables."""
+        """Fetches live metadata for stations with supported Belgium-Wallonia variables.
+
+        Retrieves the public Wallonia station list, keeps stations with at least
+        one supported discharge or stage time series, and returns standardized
+        metadata indexed by ``constants.GAUGE_ID``.
+        """
         station_df = self._get_station_list()
         if station_df.empty:
             return self._empty_metadata_frame()
@@ -308,7 +308,6 @@ class BelgiumWalloniaFetcher(base.RiverDataFetcher):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-        """Fetches and parses time series data for a specific gauge and variable."""
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
 
