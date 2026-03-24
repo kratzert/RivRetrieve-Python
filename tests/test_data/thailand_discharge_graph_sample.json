@@ -1,0 +1,48 @@
+{
+  "result": "OK",
+  "data": {
+    "graph_data": [
+      {
+        "datetime": "2025-01-01 00:00",
+        "value": null,
+        "value_out": null,
+        "discharge": null
+      },
+      {
+        "datetime": "2025-01-01 06:00",
+        "value": 330.54,
+        "value_out": null,
+        "discharge": 2.8
+      },
+      {
+        "datetime": "2025-01-01 09:00",
+        "value": 330.54,
+        "value_out": null,
+        "discharge": 2.4
+      },
+      {
+        "datetime": "2025-01-02 06:00",
+        "value": 330.52,
+        "value_out": null,
+        "discharge": 2.6
+      },
+      {
+        "datetime": "2025-01-02 09:00",
+        "value": 330.52,
+        "value_out": null,
+        "discharge": null
+      },
+      {
+        "datetime": "2025-01-02 12:00",
+        "value": 330.52,
+        "value_out": null,
+        "discharge": 2.2
+      }
+    ],
+    "min_bank": 333.8,
+    "warning_level": null,
+    "critical_level": null,
+    "ground_level": 0,
+    "qmax": 190
+  }
+}
