@@ -1,5 +1,4 @@
 import json
-import os
 import unittest
 from pathlib import Path
 from unittest.mock import MagicMock, patch
@@ -13,7 +12,7 @@ from rivretrieve import ThailandFetcher, constants
 class TestThailandFetcher(unittest.TestCase):
     def setUp(self):
         self.fetcher = ThailandFetcher()
-        self.test_data_dir = Path(os.path.dirname(__file__)) / "test_data"
+        self.test_data_dir = Path(__file__).parent / "test_data"
 
     def _load_json(self, filename):
         with open(self.test_data_dir / filename, "r", encoding="utf-8") as f:
@@ -34,6 +33,7 @@ class TestThailandFetcher(unittest.TestCase):
 
         result_df = self.fetcher.get_metadata()
 
+        self.assertEqual(result_df.index.name, constants.GAUGE_ID)
         self.assertEqual(list(result_df.index), ["1", "1117894"])
         self.assertEqual(result_df.loc["1", constants.STATION_NAME], "Klong Ladprao Bang Bua Temple")
         self.assertEqual(result_df.loc["1", "station_name_local"], "คลองลาดพร้าว วัดบางบัว")
@@ -44,6 +44,7 @@ class TestThailandFetcher(unittest.TestCase):
         self.assertEqual(result_df.loc["1117894", constants.STATION_NAME], "บ้านขนงพระเหนือ")
         self.assertEqual(result_df.loc["1117894", constants.COUNTRY], "Thailand")
         self.assertEqual(result_df.loc["1117894", constants.SOURCE], self.fetcher.SOURCE)
+        mock_session.get.assert_called_once_with(self.fetcher.METADATA_URL, params=None, timeout=60)
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_daily_stage_aggregates_graph_values(self, mock_requests_session):
@@ -66,6 +67,19 @@ class TestThailandFetcher(unittest.TestCase):
         ).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
+        mock_session.get.assert_called_once()
+        self.assertEqual(mock_session.get.call_args.args[0], self.fetcher.GRAPH_URL)
+        self.assertEqual(
+            mock_session.get.call_args.kwargs["params"],
+            {
+                "station_type": "tele_waterlevel",
+                "station_id": "1",
+                "start_date": "2025-01-01",
+                "end_date": "2025-01-02",
+            },
+        )
+        self.assertEqual(mock_session.get.call_args.kwargs["timeout"], 60)
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_instant_discharge_drops_null_values(self, mock_requests_session):
@@ -90,6 +104,7 @@ class TestThailandFetcher(unittest.TestCase):
         ).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_long_range_splits_windows_and_combines_payloads(self, mock_requests_session):
@@ -138,6 +153,30 @@ class TestThailandFetcher(unittest.TestCase):
         self.assertEqual(first_params["end_date"], "2023-12-31")
         self.assertEqual(second_params["start_date"], "2024-01-01")
         self.assertEqual(second_params["end_date"], "2024-01-02")
+        self.assertEqual(mock_session.get.call_args_list[0].args[0], self.fetcher.GRAPH_URL)
+        self.assertEqual(mock_session.get.call_args_list[1].args[0], self.fetcher.GRAPH_URL)
+        self.assertEqual(mock_session.get.call_args_list[0].kwargs["timeout"], 60)
+        self.assertEqual(mock_session.get.call_args_list[1].kwargs["timeout"], 60)
+
+    @patch("rivretrieve.utils.requests_retry_session")
+    def test_get_data_returns_standardized_empty_frame_for_empty_payload(self, mock_requests_session):
+        mock_session = MagicMock()
+        mock_requests_session.return_value = mock_session
+        mock_session.get.return_value = self._mock_response({"result": "OK", "data": {"graph_data": []}})
+
+        result_df = self.fetcher.get_data(
+            gauge_id="1",
+            variable=constants.STAGE_INSTANT,
+            start_date="2025-01-01",
+            end_date="2025-01-02",
+        )
+
+        expected_df = pd.DataFrame(columns=[constants.TIME_INDEX, constants.STAGE_INSTANT]).set_index(
+            constants.TIME_INDEX
+        )
+
+        assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
 
     def test_unsupported_variable_raises(self):
         with self.assertRaises(ValueError):

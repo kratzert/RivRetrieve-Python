@@ -16,47 +16,21 @@ class ThailandFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from the ThaiWater public API.
 
     Data source:
-        - official ThaiWater website: https://www.thaiwater.net/
-        - official/public ThaiWater standards portal: https://standard.thaiwater.net/
+        https://www.thaiwater.net/
 
     Supported variables:
-        - ``constants.STAGE_DAILY_MEAN`` (m)
-        - ``constants.STAGE_INSTANT`` (m)
-        - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
-        - ``constants.DISCHARGE_INSTANT`` (m³/s)
+        - 'stage_daily_mean' (m)
+        - 'stage_instantaneous' (m)
+        - 'discharge_daily_mean' (m³/s)
+        - 'discharge_instantaneous' (m³/s)
 
     Data description and API:
-        - official/public station metadata endpoint:
-          https://api-v3.thaiwater.net/api/v1/thaiwater30/public/waterlevel_load
-        - official/public time-series endpoint:
-          https://api-v3.thaiwater.net/api/v1/thaiwater30/public/waterlevel_graph
-        - example graph request:
-          https://api-v3.thaiwater.net/api/v1/thaiwater30/public/waterlevel_graph?station_type=tele_waterlevel&station_id=1&start_date=2025-01-01&end_date=2025-01-03
-        - official ThaiWater telemetry station project background:
-          https://www.hii.or.th/en/research-development/project-highlights/2024/02/08/2021-automated-telemetry-station-enhancement-project-to-support-national-water-management/
-        - official government catalog entry:
-          https://gdcatalog.go.th/en/dataset/gdpublish-water-level
+        - see https://standard.thaiwater.net/docs/
+        - see https://standard.thaiwater.net/docs/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%97%E0%B8%B3%E0%B8%A1%E0%B8%B2%E0%B8%95%E0%B8%A3%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%B3-%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B0/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1%E0%B9%82%E0%B8%A2%E0%B8%87%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%A5%E0%B8%81%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%94%E0%B9%89%E0%B8%B2/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%81%E0%B8%A5%E0%B8%81%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5-online-%E0%B8%9C%E0%B9%88/api-%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A%E0%B8%AD%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%97%E0%B9%88/
+        - see https://standard.thaiwater.net/docs/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%88%E0%B8%B1%E0%B8%94%E0%B8%97%E0%B8%B3%E0%B8%A1%E0%B8%B2%E0%B8%95%E0%B8%A3%E0%B8%90%E0%B8%B2%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%B3-%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B0/%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1/%E0%B9%82%E0%B8%84%E0%B8%A3%E0%B8%87%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%95%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B8%A7%E0%B8%B1%E0%B8%94/%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%97%E0%B9%88%E0%B8%B2-%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B8%99%E0%B9%89%E0%B8%B3-water-level/
 
     Terms of use:
         - see https://www.thaiwater.net/
-        - see https://standard.thaiwater.net/
-        - use the public ThaiWater endpoints according to provider terms and availability
-
-    Notes:
-        - This v1 implementation uses the broad ``waterlevel_load`` inventory and
-          ``waterlevel_graph`` time-series endpoints.
-        - The narrower ``flow`` endpoints are intentionally not used in v1.
-        - Long ranges are requested in smaller windows because the upstream
-          ``waterlevel_graph`` endpoint currently truncates oversized requests to
-          about the most recent year.
-        - Stage values are parsed from ``waterlevel_graph.data.graph_data[].value``.
-        - The live metadata currently populates ``waterlevel_msl`` while
-          ``waterlevel_m`` appears to be mostly null.
-        - This fetcher therefore interprets graph ``value`` as stage relative to
-          mean sea level (MSL). This is an inference from current source payloads
-          and should be revisited if ThaiWater changes the API semantics.
-        - Discharge is only available for a subset of stations. Station-variable
-          combinations without discharge data return an empty DataFrame.
     """
 
     BASE_URL = "https://api-v3.thaiwater.net/api/v1/thaiwater30/public"
@@ -231,7 +205,11 @@ class ThailandFetcher(base.RiverDataFetcher):
         return df.set_index(constants.GAUGE_ID)
 
     def get_metadata(self) -> pd.DataFrame:
-        """Fetches live metadata for ThaiWater telemetered water-level stations."""
+        """Fetches live metadata for ThaiWater telemetered water-level stations.
+
+        Returns a DataFrame indexed by ``constants.GAUGE_ID`` for telemetered
+        surface-water stations available through the ThaiWater public service.
+        """
         if self._metadata_cache is not None:
             return self._metadata_cache.copy()
 
@@ -323,7 +301,6 @@ class ThailandFetcher(base.RiverDataFetcher):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-        """Fetches and parses time series data for a specific gauge and variable."""
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
 
