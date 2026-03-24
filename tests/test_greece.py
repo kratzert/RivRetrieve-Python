@@ -1,5 +1,4 @@
 import json
-import os
 import unittest
 from pathlib import Path
 from unittest.mock import MagicMock, patch
@@ -13,7 +12,7 @@ from rivretrieve import GreeceFetcher, constants
 class TestGreeceFetcher(unittest.TestCase):
     def setUp(self):
         self.fetcher = GreeceFetcher()
-        self.test_data_dir = Path(os.path.dirname(__file__)) / "test_data"
+        self.test_data_dir = Path(__file__).parent / "test_data"
 
     def _load_json(self, filename):
         with open(self.test_data_dir / filename, "r", encoding="utf-8") as f:
@@ -69,6 +68,7 @@ class TestGreeceFetcher(unittest.TestCase):
 
         result_df = self.fetcher.get_metadata()
 
+        self.assertEqual(result_df.index.name, constants.GAUGE_ID)
         self.assertEqual(list(result_df.index), ["1356", "1458", "1534", "28082", "8424"])
         self.assertEqual(result_df.loc["1458", constants.STATION_NAME], "Ανθήλη")
         self.assertAlmostEqual(result_df.loc["1458", constants.LATITUDE], 38.856109)
@@ -77,6 +77,7 @@ class TestGreeceFetcher(unittest.TestCase):
         self.assertEqual(result_df.loc["8424", "owner_name"], "Mandra Project")
         self.assertEqual(result_df.loc["28082", constants.SOURCE], self.fetcher.SOURCE)
         self.assertEqual(result_df.loc["28082", constants.COUNTRY], "Greece")
+        self.assertTrue(all(call.kwargs["timeout"] == 60 for call in mock_session.get.call_args_list))
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_daily_stage_normalizes_water_level_and_converts_cm(self, mock_requests_session):
@@ -120,6 +121,7 @@ class TestGreeceFetcher(unittest.TestCase):
         ).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_instant_discharge_prefers_initial_subdaily_series(self, mock_requests_session):
@@ -213,6 +215,7 @@ class TestGreeceFetcher(unittest.TestCase):
         ).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_daily_stage_falls_back_when_primary_group_is_empty(self, mock_requests_session):
@@ -411,6 +414,33 @@ class TestGreeceFetcher(unittest.TestCase):
         ).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
+
+    @patch("rivretrieve.utils.requests_retry_session")
+    def test_get_data_returns_standardized_empty_frame_when_no_groups_match(self, mock_requests_session):
+        mock_session = MagicMock()
+        mock_requests_session.return_value = mock_session
+        self.fetcher = GreeceFetcher()
+        mock_session.get.return_value = self._json_response({"count": 0, "next": None, "previous": None, "results": []})
+
+        result_df = self.fetcher.get_data(
+            gauge_id="1458",
+            variable=constants.STAGE_INSTANT,
+            start_date="2025-01-01",
+            end_date="2025-01-02",
+        )
+
+        expected_df = pd.DataFrame(columns=[constants.TIME_INDEX, constants.STAGE_INSTANT]).set_index(
+            constants.TIME_INDEX
+        )
+
+        assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
+        mock_session.get.assert_called_once_with(
+            f"{self.fetcher.BASE_URL}/stations/1458/timeseriesgroups/",
+            params=None,
+            timeout=60,
+        )
 
     def test_available_variables(self):
         self.assertEqual(

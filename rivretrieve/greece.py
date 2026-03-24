@@ -20,55 +20,20 @@ class GreeceFetcher(base.RiverDataFetcher):
     """Fetches Greek river gauge data from the public OpenHI / Enhydris API.
 
     Data source:
-        - website: https://openhi.net/en/
-        - API root: https://system.openhi.net/api/
-        - station search endpoint: https://system.openhi.net/api/stations/
+        https://openhi.net/en/
 
     Supported variables:
-        - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
-        - ``constants.DISCHARGE_INSTANT`` (m³/s)
-        - ``constants.STAGE_DAILY_MEAN`` (m)
-        - ``constants.STAGE_INSTANT`` (m)
+        - 'discharge_daily_mean' (m³/s)
+        - 'discharge_instantaneous' (m³/s)
+        - 'stage_daily_mean' (m)
+        - 'stage_instantaneous' (m)
 
     Data description and API:
-        - OpenHI public API browser: https://system.openhi.net/api/
-        - Enhydris webservice docs: https://enhydris.readthedocs.io/en/latest/dev/webservice-api.html
-        - station time series groups: ``/api/stations/{station_id}/timeseriesgroups/``
-        - group time series listing: ``/api/stations/{station_id}/timeseriesgroups/{group_id}/timeseries/``
-        - historical data download:
-          ``/api/stations/{station_id}/timeseriesgroups/{group_id}/timeseries/{timeseries_id}/data/?fmt=csv``
+        - see https://system.openhi.net/api/
+        - see https://enhydris.readthedocs.io/en/latest/dev/webservice-api.html
 
     Terms of use:
-        - OpenHI data licence: https://openhi.net/licence/
-
-    Notes:
-        - The upstream platform is OpenHI / Enhydris, an integrated national portal
-          that aggregates stations from multiple owners. This fetcher keeps
-          ``source`` fixed to OpenHI / Enhydris and exposes owner metadata
-          separately when available.
-        - Station discovery uses the union of the public search queries
-          ``ts_only:+variable:stage``, ``ts_only:+variable:level``, and
-          ``ts_only:+variable:discharge``. This avoids over-matching broader search
-          terms such as ``water`` while still capturing stations published as
-          either ``Stage`` or ``Water Level``.
-        - The upstream hydrometric metadata are not fully uniform. This fetcher
-          normalizes provider variables ``Stage`` and ``Water Level`` into
-          RivRetrieve ``stage`` variables, while ``Discharge`` maps to RivRetrieve
-          discharge variables.
-        - Stage values are normalized to meters. Provider series advertised in
-          centimeters are converted to meters before return or daily aggregation.
-        - Provider sentinel missing values such as ``-999``, ``-9999``, and
-          ``-6999`` are converted to missing values before aggregation.
-        - Series selection is deterministic but provider-aware. For each station,
-          the fetcher ranks compatible time series groups, prefers checked/public
-          series where available, and uses lower-priority groups only to backfill
-          timestamps or days that are missing from higher-priority groups.
-        - Daily products are returned as daily means. When a provider daily-mean
-          series is not available, this fetcher aggregates the selected subdaily
-          series to daily means.
-        - OpenHI metadata and bundled provider-derived fixtures remain subject to
-          the OpenHI data licence (CC BY-SA 4.0). The repository MIT licence
-          applies only to RivRetrieve code.
+        - see https://openhi.net/licence/
     """
 
     BASE_URL = "https://system.openhi.net/api"
@@ -282,7 +247,12 @@ class GreeceFetcher(base.RiverDataFetcher):
         return self._organization_cache[cache_key]
 
     def get_metadata(self) -> pd.DataFrame:
-        """Fetches live metadata for stations with supported Greek variables."""
+        """Fetches live metadata for stations with supported Greek variables.
+
+        Merges the public OpenHI station searches for stage, water level, and
+        discharge stations and returns standardized metadata indexed by
+        ``constants.GAUGE_ID``.
+        """
         stations_by_id: dict[str, dict[str, Any]] = {}
 
         for query in self.STATION_SEARCH_QUERIES:
@@ -602,7 +572,6 @@ class GreeceFetcher(base.RiverDataFetcher):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-        """Fetches and parses time series data for a specific gauge and variable."""
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
         gauge_id = str(gauge_id).strip()
