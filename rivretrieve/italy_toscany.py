@@ -20,30 +20,18 @@ class ItalyToscanyFetcher(base.RiverDataFetcher):
 
     Data source:
         - monitoring website: https://www.sir.toscana.it/monitoraggio/stazioni.php?type=idro
-        - metadata WFS: https://geo.sir.toscana.it/geoserver/geo/ows
-        - archive download endpoint: https://www.sir.toscana.it/archivio/download.php
+        - historical archive portal: https://www.sir.toscana.it/consistenza-rete
 
     Supported variables:
         - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
         - ``constants.STAGE_DAILY_MEAN`` (m)
 
     Data description and API:
-        - public idrometer metadata layer: ``geo:cf_idrometri``
-        - monitoring station table: ``monitoraggio/stazioni.php?type=idro``
-        - historical download endpoint parameters:
-          ``IDST=idro_p`` for discharge and ``IDST=idro_l`` for stage
+        - archive data description: https://www.sir.toscana.it/consistenza-rete
+        - GIS layers overview for idrometers: https://www.sir.toscana.it/strati-gis
 
     Terms of use:
-        - see https://www.sir.toscana.it/
-
-    Notes:
-        - metadata merges the static WFS idrometer layer with the public monitoring table
-          so river names and basin labels are retained alongside stable coordinates
-        - coordinates are transformed from EPSG:3003 to WGS84
-        - the archive endpoint returns provider CSV files that use semicolons,
-          decimal commas, Latin-1 text, and a separate quality-flag column
-        - some stations do not expose discharge data in the archive;
-          in those cases ``get_data()`` returns an empty DataFrame
+        - data usage notes for archived data: https://www.sir.toscana.it/consistenza-rete
     """
 
     METADATA_URL = (
@@ -217,7 +205,11 @@ class ItalyToscanyFetcher(base.RiverDataFetcher):
         return df.set_index(constants.GAUGE_ID)
 
     def get_metadata(self) -> pd.DataFrame:
-        """Fetches live metadata for Italy-Toscany stations."""
+        """Fetches live metadata for Italy-Toscany stations.
+
+        Merges the live GIS layer with the public monitoring table and returns
+        a DataFrame indexed by ``constants.GAUGE_ID``.
+        """
         session = utils.requests_retry_session(
             retries=6,
             backoff_factor=1,
@@ -342,7 +334,30 @@ class ItalyToscanyFetcher(base.RiverDataFetcher):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-        """Fetches and parses time series data for a specific gauge and variable."""
+        """Fetches and parses time series data for a specific gauge and variable.
+
+        This method retrieves the requested data from the provider's archive service,
+        parses it, and returns it in a standardized pandas DataFrame format.
+
+        Args:
+            gauge_id: The site-specific identifier for the gauge.
+            variable: The variable to fetch. Must be one of the strings listed
+                in the fetcher's ``get_available_variables()`` output.
+                These are typically defined in ``rivretrieve.constants``.
+            start_date: Optional start date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched from the earliest available date.
+            end_date: Optional end date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched up to the latest available date.
+
+        Returns:
+            pd.DataFrame: A pandas DataFrame indexed by datetime objects (``constants.TIME_INDEX``)
+            with a single column named after the requested ``variable``. The DataFrame
+            will be empty if no data is found for the given parameters.
+
+        Raises:
+            ValueError: If the requested ``variable`` is not supported by this fetcher.
+            Exception: For unexpected download or parsing errors.
+        """
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
 
