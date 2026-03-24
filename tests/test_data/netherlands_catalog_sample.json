@@ -1,0 +1,113 @@
+{
+  "AquoMetadataLijst": [
+    {
+      "AquoMetadata_MessageID": "meta-discharge",
+      "Compartiment": {
+        "Code": "OW",
+        "Omschrijving": "Oppervlaktewater"
+      },
+      "Grootheid": {
+        "Code": "Q",
+        "Omschrijving": "Debiet"
+      },
+      "Eenheid": {
+        "Code": "m3/s"
+      },
+      "Hoedanigheid": {
+        "Code": "NVT"
+      }
+    },
+    {
+      "AquoMetadata_MessageID": "meta-stage",
+      "Compartiment": {
+        "Code": "OW",
+        "Omschrijving": "Oppervlaktewater"
+      },
+      "Grootheid": {
+        "Code": "WATHTE",
+        "Omschrijving": "Waterhoogte"
+      },
+      "Eenheid": {
+        "Code": "cm"
+      },
+      "Hoedanigheid": {
+        "Code": "NAP"
+      }
+    },
+    {
+      "AquoMetadata_MessageID": "meta-temperature",
+      "Compartiment": {
+        "Code": "OW",
+        "Omschrijving": "Oppervlaktewater"
+      },
+      "Grootheid": {
+        "Code": "T",
+        "Omschrijving": "Temperatuur"
+      },
+      "Eenheid": {
+        "Code": "oC"
+      },
+      "Hoedanigheid": {
+        "Code": "NVT"
+      }
+    },
+    {
+      "AquoMetadata_MessageID": "meta-groundwater",
+      "Compartiment": {
+        "Code": "GW",
+        "Omschrijving": "Grondwater"
+      },
+      "Grootheid": {
+        "Code": "Q",
+        "Omschrijving": "Debiet"
+      }
+    }
+  ],
+  "LocatieLijst": [
+    {
+      "MessageID": "loc-1",
+      "Code": "lobith",
+      "Naam": "Lobith",
+      "Waternaam": "Rijn",
+      "X": 6.114,
+      "Y": 51.8621,
+      "Coordinatenstelsel": 4326
+    },
+    {
+      "MessageID": "loc-2",
+      "Code": "borgharen",
+      "Naam": "Borgharen",
+      "Waternaam": "Maas",
+      "X": 5.7066,
+      "Y": 50.8774,
+      "Coordinatenstelsel": 4326
+    },
+    {
+      "MessageID": "loc-3",
+      "Code": "groundwater-only",
+      "Naam": "Groundwater only",
+      "Waternaam": "Aquifer",
+      "X": 5.0,
+      "Y": 52.0,
+      "Coordinatenstelsel": 4326
+    }
+  ],
+  "AquoMetadataLocatieLijst": [
+    {
+      "AquoMetaData_MessageID": "meta-discharge",
+      "Locatie_MessageID": "loc-1"
+    },
+    {
+      "AquoMetaData_MessageID": "meta-discharge",
+      "Locatie_MessageID": "loc-2"
+    },
+    {
+      "AquoMetaData_MessageID": "meta-temperature",
+      "Locatie_MessageID": "loc-2"
+    },
+    {
+      "AquoMetaData_MessageID": "meta-groundwater",
+      "Locatie_MessageID": "loc-3"
+    }
+  ]
+}

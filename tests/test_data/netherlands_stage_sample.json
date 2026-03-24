@@ -1,0 +1,20 @@
+{
+  "WaarnemingenLijst": [
+    {
+      "MetingenLijst": [
+        {
+          "Tijdstip": "2025-01-01T00:00:00.000+00:00",
+          "Meetwaarde": {
+            "Waarde_Numeriek": 120.0
+          }
+        },
+        {
+          "Tijdstip": "2025-01-01T12:00:00.000+00:00",
+          "Meetwaarde": {
+            "Waarde_Numeriek": 140.0
+          }
+        }
+      ]
+    }
+  ]
+}
