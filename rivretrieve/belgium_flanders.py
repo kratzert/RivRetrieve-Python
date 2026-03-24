@@ -17,8 +17,8 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
     """Fetches river gauge data for Flanders from HIC and VMM KiWIS services.
 
     Data source:
-        - HIC KiWIS: https://hicws.vlaanderen.be/KiWIS/KiWIS
-        - VMM KiWIS: https://download.waterinfo.be/tsmdownload/KiWIS/KiWIS
+        - HIC (Flanders): https://hicws.vlaanderen.be/
+        - VMM Open Data Webservice: https://download.waterinfo.be/
 
     Supported variables:
         - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
@@ -27,19 +27,11 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
 
     Data description and API:
         - HIC webservices manual: https://hicws.vlaanderen.be/Manual_for_the_use_of_webservices_HIC.pdf
-        - pywaterinfo tutorial documenting the Flemish KiWIS backends:
-          https://fluves.github.io/pywaterinfo/tutorial.html
+        - VMM open data manual: https://www.waterinfo.be/download/c4bc2c28-0251-40e3-8ecb-a139298597aa
 
     Terms of use:
         - HIC: https://hicws.vlaanderen.be/
-        - VMM waterinfo: https://www.waterinfo.be/
-
-    Notes:
-        - HIC mainly covers navigable waterways.
-        - VMM provides a separate KiWIS backend covering additional Flemish stations,
-          including non-navigable waters.
-        - This fetcher keeps the RivRetrieve variable surface area limited to daily
-          discharge, stage, and water temperature.
+        - VMM: https://download.waterinfo.be/
     """
 
     COUNTRY = "Belgium"
@@ -84,17 +76,17 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
         """Retrieves cached Belgium-Flanders gauge metadata."""
         return utils.load_cached_metadata_csv("belgium_flanders")
 
-    @classmethod
-    def get_available_variables(cls) -> tuple[str, ...]:
+    @staticmethod
+    def get_available_variables() -> tuple[str, ...]:
         variables = []
-        for provider_config in cls.PROVIDERS.values():
+        for provider_config in BelgiumFlandersFetcher.PROVIDERS.values():
             for variable in provider_config["variable_map"]:
                 if variable not in variables:
                     variables.append(variable)
         return tuple(variables)
 
     @staticmethod
-    def _empty_data_frame(variable: str) -> pd.DataFrame:
+    def _empty_result(variable: str) -> pd.DataFrame:
         return pd.DataFrame(columns=[constants.TIME_INDEX, variable]).set_index(constants.TIME_INDEX)
 
     @staticmethod
@@ -327,7 +319,11 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
         return df.set_index(constants.GAUGE_ID)
 
     def get_metadata(self) -> pd.DataFrame:
-        """Fetches live metadata for HIC and VMM stations in Flanders."""
+        """Fetches site metadata for HIC and VMM stations in Flanders.
+
+        Maps both provider responses to the standard RivRetrieve metadata columns and
+        returns a DataFrame indexed by ``constants.GAUGE_ID``.
+        """
         frames = [self._get_provider_metadata(provider) for provider in self.PROVIDERS]
         frames = [frame.reset_index() for frame in frames if not frame.empty]
         if not frames:
@@ -381,11 +377,11 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
 
     def _parse_data(self, gauge_id: str, raw_data: list[pd.DataFrame], variable: str) -> pd.DataFrame:
         if not raw_data:
-            return self._empty_data_frame(variable)
+            return self._empty_result(variable)
 
         df = pd.concat(raw_data, ignore_index=True)
         if df.empty or "Timestamp" not in df.columns or "Value" not in df.columns:
-            return self._empty_data_frame(variable)
+            return self._empty_result(variable)
 
         timestamps = pd.to_datetime(df["Timestamp"], utc=True, errors="coerce")
         timestamps = timestamps.dt.tz_convert(self.LOCAL_TIMEZONE).dt.tz_localize(None)
@@ -398,7 +394,7 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
         ).dropna(subset=[constants.TIME_INDEX, variable])
 
         if parsed.empty:
-            return self._empty_data_frame(variable)
+            return self._empty_result(variable)
 
         parsed[constants.TIME_INDEX] = parsed[constants.TIME_INDEX].dt.floor("D")
         parsed = parsed.groupby(constants.TIME_INDEX, as_index=False)[variable].mean()
@@ -411,7 +407,32 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-        """Fetches and parses time series data for a specific Flemish gauge and variable."""
+        """Fetches and parses time series data for a specific gauge and variable.
+
+        This method retrieves the requested data from the provider's API or data source,
+        parses it, and returns it in a standardized pandas DataFrame format.
+
+        Args:
+            gauge_id: The site-specific identifier for the gauge.
+            variable: The variable to fetch. Must be one of the strings listed
+                in the fetcher's ``get_available_variables()`` output.
+                These are typically defined in ``rivretrieve.constants``.
+            start_date: Optional start date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched from the earliest available date.
+            end_date: Optional end date for the data retrieval in 'YYYY-MM-DD' format.
+                If None, data is fetched up to the latest available date.
+
+        Returns:
+            pd.DataFrame: A pandas DataFrame indexed by datetime objects
+            (``constants.TIME_INDEX``) with a single column named after the
+            requested ``variable``. The DataFrame will be empty if no data is found
+            for the given parameters.
+
+        Raises:
+            ValueError: If the requested ``variable`` is not supported by this fetcher.
+            requests.exceptions.RequestException: If a network error occurs during data download.
+            Exception: For other unexpected errors during data fetching or parsing.
+        """
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
 
@@ -423,7 +444,7 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
             df = self._parse_data(str(gauge_id), raw_data, variable)
         except Exception as exc:
             logger.error(f"Failed to get data for site {gauge_id}, variable {variable}: {exc}")
-            return self._empty_data_frame(variable)
+            return self._empty_result(variable)
 
         if df.empty:
             return df

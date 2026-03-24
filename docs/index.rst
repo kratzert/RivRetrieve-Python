@@ -8,6 +8,13 @@
 
    api
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Design Docs:
+
+   design_docs/data_fetcher
+   design_docs/data_fetcher_test
+
 Indices and tables
 ==================
 
