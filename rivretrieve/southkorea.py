@@ -16,20 +16,15 @@ class SouthKoreaFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from South Korea's WAMIS Open API.
 
     Data source:
-        - Han River Flood Control Office (WAMIS Open API): http://www.wamis.go.kr
+        https://www.wamis.go.kr/
 
     Supported variables:
-        - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
-        - ``constants.STAGE_DAILY_MEAN`` (m)
-        - ``constants.STAGE_HOURLY_MEAN`` (m)
+        - 'discharge_daily_mean' (m³/s)
+        - 'stage_daily_mean' (m)
+        - 'stage_hourly_mean' (m)
 
     Data description and API:
-        - WAMIS Open API overview: http://wamis.go.kr:8080/wamisweb/flw/w15.do
-        - station list endpoint: http://www.wamis.go.kr:8080/wamis/openapi/wkw/wl_dubwlobs
-        - station metadata endpoint: http://www.wamis.go.kr:8080/wamis/openapi/wkw/wl_obsinfo
-        - discharge endpoint: http://www.wamis.go.kr:8080/wamis/openapi/wkw/flw_dtdata
-        - daily stage endpoint: http://www.wamis.go.kr:8080/wamis/openapi/wkw/wl_dtdata
-        - hourly stage endpoint: http://www.wamis.go.kr:8080/wamis/openapi/wkw/wl_hrdata
+        - see http://wamis.go.kr:8080/wamisweb/flw/w15.do
 
     Terms of use:
         - see https://www.hrfco.go.kr/web/openapi/policy.do
@@ -246,32 +241,6 @@ class SouthKoreaFetcher(base.RiverDataFetcher):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-        """Fetches and parses time series data for a specific gauge and variable.
-
-        This method retrieves the requested data from the provider's API,
-        parses it, and returns it in a standardized pandas DataFrame format.
-
-        Args:
-            gauge_id: The site-specific identifier for the gauge.
-            variable: The variable to fetch. Must be one of the strings listed
-                in the fetcher's ``get_available_variables()`` output.
-                These are typically defined in ``rivretrieve.constants``.
-            start_date: Optional start date for the data retrieval in 'YYYY-MM-DD' format.
-                If None, data is fetched from the earliest available date.
-            end_date: Optional end date for the data retrieval in 'YYYY-MM-DD' format.
-                If None, data is fetched up to the latest available date.
-
-        Returns:
-            pd.DataFrame: A pandas DataFrame indexed by datetime objects
-            (``constants.TIME_INDEX``) with a single column named after the
-            requested ``variable``. The DataFrame will be empty if no data is found
-            for the given parameters.
-
-        Raises:
-            ValueError: If the requested ``variable`` is not supported by this fetcher.
-            requests.exceptions.RequestException: If a network error occurs during data download.
-            Exception: For other unexpected errors during data fetching or parsing.
-        """
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
 

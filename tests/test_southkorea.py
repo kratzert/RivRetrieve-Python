@@ -1,5 +1,4 @@
 import json
-import os
 import unittest
 from pathlib import Path
 from unittest.mock import MagicMock, patch
@@ -13,7 +12,7 @@ from rivretrieve import SouthKoreaFetcher, constants
 class TestSouthKoreaFetcher(unittest.TestCase):
     def setUp(self):
         self.fetcher = SouthKoreaFetcher()
-        self.test_data_dir = Path(os.path.dirname(__file__)) / "test_data"
+        self.test_data_dir = Path(__file__).parent / "test_data"
 
     def _load_json(self, filename):
         with open(self.test_data_dir / filename, "r", encoding="utf-8") as f:
@@ -48,6 +47,10 @@ class TestSouthKoreaFetcher(unittest.TestCase):
         self.assertEqual(mock_session.get.call_count, 2)
         self.assertIn("wl_dubwlobs", mock_session.get.call_args_list[0].args[0])
         self.assertIn("wl_obsinfo", mock_session.get.call_args_list[1].args[0])
+        self.assertEqual(mock_session.get.call_args_list[0].kwargs["params"], {"output": "json"})
+        self.assertEqual(mock_session.get.call_args_list[1].kwargs["params"], {"obscd": "1001602", "output": "json"})
+        self.assertEqual(mock_session.get.call_args_list[0].kwargs["timeout"], 30)
+        self.assertEqual(mock_session.get.call_args_list[1].kwargs["timeout"], 10)
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_daily_discharge(self, mock_requests_session):
@@ -74,12 +77,14 @@ class TestSouthKoreaFetcher(unittest.TestCase):
         ).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
         mock_session.get.assert_called_once()
         _, mock_kwargs = mock_session.get.call_args
         self.assertIn("flw_dtdata", mock_session.get.call_args.args[0])
         self.assertEqual(mock_kwargs["params"]["obscd"], "1001602")
         self.assertEqual(mock_kwargs["params"]["startdt"], "20230101")
         self.assertEqual(mock_kwargs["params"]["enddt"], "20230102")
+        self.assertEqual(mock_kwargs["timeout"], 30)
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_daily_stage(self, mock_requests_session):
@@ -106,8 +111,12 @@ class TestSouthKoreaFetcher(unittest.TestCase):
         ).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
         mock_session.get.assert_called_once()
         self.assertIn("wl_dtdata", mock_session.get.call_args.args[0])
+        self.assertEqual(mock_session.get.call_args.kwargs["params"]["startdt"], "20230101")
+        self.assertEqual(mock_session.get.call_args.kwargs["params"]["enddt"], "20230102")
+        self.assertEqual(mock_session.get.call_args.kwargs["timeout"], 30)
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_hourly_stage_includes_full_end_day(self, mock_requests_session):
@@ -136,11 +145,13 @@ class TestSouthKoreaFetcher(unittest.TestCase):
         ).set_index(constants.TIME_INDEX)
 
         assert_frame_equal(result_df, expected_df)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
         mock_session.get.assert_called_once()
         _, mock_kwargs = mock_session.get.call_args
         self.assertIn("wl_hrdata", mock_session.get.call_args.args[0])
         self.assertEqual(mock_kwargs["params"]["startdt"], "20230101")
         self.assertEqual(mock_kwargs["params"]["enddt"], "20230101")
+        self.assertEqual(mock_kwargs["timeout"], 30)
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_empty_response_returns_standardized_empty_dataframe(self, mock_requests_session):
@@ -165,6 +176,7 @@ class TestSouthKoreaFetcher(unittest.TestCase):
         )
 
         assert_frame_equal(result_df, expected_df, check_dtype=False)
+        self.assertEqual(result_df.index.name, constants.TIME_INDEX)
         mock_session.get.assert_called_once()
 
 
