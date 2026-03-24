@@ -1,0 +1,18 @@
+{
+  "result": {
+    "code": "success"
+  },
+  "list": [
+    {
+      "wlobscd": "1001602",
+      "obsnm": "평창군(송정교)",
+      "obsnmeng": "Pyeongchanggun(Songjeonggyo)",
+      "rivnm": "오대천",
+      "gdt": "511.589",
+      "bsnara": "229.84",
+      "lon": "128-33-04",
+      "lat": "37-37-27",
+      "addr": "강원특별자치도 평창군 진부면 하진부리 송정교"
+    }
+  ]
+}
