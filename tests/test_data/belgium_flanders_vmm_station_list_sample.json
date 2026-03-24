@@ -1,0 +1,34 @@
+[
+  [
+    "station_no",
+    "station_name",
+    "station_latitude",
+    "station_longitude",
+    "site_name",
+    "river_name"
+  ],
+  [
+    "L09_16D",
+    "Aalst/Meetpunt/Dender",
+    "50.9500",
+    "4.0400",
+    "Hydrometrische stations",
+    "Dender"
+  ],
+  [
+    "T01_001",
+    "Temp/Test/Mark",
+    "50.8500",
+    "4.8500",
+    "Hydrometrische stations",
+    "---"
+  ],
+  [
+    "VIRTUAL01",
+    "Virtual/Station/River",
+    "50.8600",
+    "4.8600",
+    "Hydrometrische stations",
+    "River"
+  ]
+]

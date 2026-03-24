@@ -1,4 +1,4 @@
-"""Fetcher for Belgium-Flanders river gauge data from the HIC KiWIS service."""
+"""Fetcher for Belgium-Flanders river gauge data from HIC and VMM KiWIS services."""
 
 import logging
 import math
@@ -14,10 +14,11 @@ logger = logging.getLogger(__name__)
 
 
 class BelgiumFlandersFetcher(base.RiverDataFetcher):
-    """Fetches river gauge data from the HIC KiWIS service for Flanders.
+    """Fetches river gauge data for Flanders from HIC and VMM KiWIS services.
 
     Data source:
-        - website: https://hicws.vlaanderen.be/KiWIS/KiWIS
+        - HIC KiWIS: https://hicws.vlaanderen.be/KiWIS/KiWIS
+        - VMM KiWIS: https://download.waterinfo.be/tsmdownload/KiWIS/KiWIS
 
     Supported variables:
         - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
@@ -25,49 +26,72 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
         - ``constants.WATER_TEMPERATURE_DAILY_MEAN`` (°C)
 
     Data description and API:
-        - HIC KiWIS endpoint: https://hicws.vlaanderen.be/KiWIS/KiWIS
-        - webservices manual: https://hicws.vlaanderen.be/Manual_for_the_use_of_webservices_HIC.pdf
+        - HIC webservices manual: https://hicws.vlaanderen.be/Manual_for_the_use_of_webservices_HIC.pdf
+        - pywaterinfo tutorial documenting the Flemish KiWIS backends:
+          https://fluves.github.io/pywaterinfo/tutorial.html
 
     Terms of use:
-        - see https://hicws.vlaanderen.be/
+        - HIC: https://hicws.vlaanderen.be/
+        - VMM waterinfo: https://www.waterinfo.be/
 
     Notes:
-        - The HIC service exposes parameter groups instead of RivRetrieve-native variable names.
-        - This fetcher translates HIC series into RivRetrieve daily-mean variables.
-        - Metadata excludes the virtual discharge-only group ``260592`` from the upstream service.
+        - HIC mainly covers navigable waterways.
+        - VMM provides a separate KiWIS backend covering additional Flemish stations,
+          including non-navigable waters.
+        - This fetcher keeps the RivRetrieve variable surface area limited to daily
+          discharge, stage, and water temperature.
     """
 
-    BASE_URL = "https://hicws.vlaanderen.be/KiWIS/KiWIS"
-    SOURCE = "Hydrological Information Centre - HIC (Flanders)"
     COUNTRY = "Belgium"
     LOCAL_TIMEZONE = "Europe/Brussels"
-    VIRTUAL_GROUP_ID = "260592"
-    VARIABLE_MAP = {
-        constants.DISCHARGE_DAILY_MEAN: {
-            "group_id": "156169",
-            "unit": "m^3/s",
+    SOURCE = "Hydrological Information Centre - HIC (Flanders) / Flemish Environment Agency - VMM"
+    PROVIDERS = {
+        "hic": {
+            "base_url": "https://hicws.vlaanderen.be/KiWIS/KiWIS",
+            "datasource": 4,
+            "source": "Hydrological Information Centre - HIC (Flanders)",
+            "station_list_returnfields": "station_no,station_name,station_latitude,station_longitude,site_name,ca_sta",
+            "ca_sta_returnfields": "",
+            "virtual_group_id": "260592",
+            "variable_map": {
+                constants.DISCHARGE_DAILY_MEAN: {"group_id": "156169", "unit": "m^3/s"},
+                constants.STAGE_DAILY_MEAN: {"group_id": "156162", "unit": "m"},
+                constants.WATER_TEMPERATURE_DAILY_MEAN: {"group_id": "156200", "unit": "degC"},
+            },
         },
-        constants.STAGE_DAILY_MEAN: {
-            "group_id": "156162",
-            "unit": "m",
-        },
-        constants.WATER_TEMPERATURE_DAILY_MEAN: {
-            "group_id": "156200",
-            "unit": "degC",
+        "vmm": {
+            "base_url": "https://download.waterinfo.be/tsmdownload/KiWIS/KiWIS",
+            "datasource": 1,
+            "source": "Flemish Environment Agency - VMM",
+            "station_list_returnfields": (
+                "station_no,station_name,station_latitude,station_longitude,site_name,river_name"
+            ),
+            "virtual_group_id": None,
+            "variable_map": {
+                constants.DISCHARGE_DAILY_MEAN: {"group_id": "192893", "unit": "m^3/s"},
+                constants.STAGE_DAILY_MEAN: {"group_id": "192782", "unit": "m"},
+                constants.WATER_TEMPERATURE_DAILY_MEAN: {"group_id": "325066", "unit": "degC"},
+            },
         },
     }
 
     def __init__(self):
-        self._timeseries_map_cache: dict[str, pd.DataFrame] = {}
+        self._timeseries_map_cache: dict[tuple[str, str], pd.DataFrame] = {}
+        self._station_list_cache: dict[str, pd.DataFrame] = {}
 
     @staticmethod
     def get_cached_metadata() -> pd.DataFrame:
         """Retrieves cached Belgium-Flanders gauge metadata."""
         return utils.load_cached_metadata_csv("belgium_flanders")
 
-    @staticmethod
-    def get_available_variables() -> tuple[str, ...]:
-        return tuple(BelgiumFlandersFetcher.VARIABLE_MAP.keys())
+    @classmethod
+    def get_available_variables(cls) -> tuple[str, ...]:
+        variables = []
+        for provider_config in cls.PROVIDERS.values():
+            for variable in provider_config["variable_map"]:
+                if variable not in variables:
+                    variables.append(variable)
+        return tuple(variables)
 
     @staticmethod
     def _empty_data_frame(variable: str) -> pd.DataFrame:
@@ -85,13 +109,15 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
             constants.AREA,
             constants.COUNTRY,
             constants.SOURCE,
+            "provider",
             "vertical_datum",
         ]
         return pd.DataFrame(columns=columns).set_index(constants.GAUGE_ID)
 
-    def _request_json(self, params: dict[str, Any]) -> Any:
+    def _request_json(self, provider: str, params: dict[str, Any]) -> Any:
+        config = self.PROVIDERS[provider]
         session = utils.requests_retry_session(retries=6, backoff_factor=1, status_forcelist=(429, 500, 502, 503, 504))
-        response = session.get(self.BASE_URL, params=params, timeout=60)
+        response = session.get(config["base_url"], params=params, timeout=60)
         response.raise_for_status()
         return response.json()
 
@@ -157,40 +183,64 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
         if "/" not in name:
             return name or None, None
 
-        station_name, river = name.split("/", 1)
+        station_name, river = name.rsplit("/", 1)
         station_name = station_name.strip() or None
         river = river.strip() or None
         return station_name, river
 
-    def _get_station_list(self) -> pd.DataFrame:
+    @staticmethod
+    def _normalize_string(value: Any) -> Optional[str]:
+        if value is None or (isinstance(value, float) and math.isnan(value)):
+            return None
+        text = str(value).strip()
+        if not text or text == "---":
+            return None
+        return text
+
+    def _get_station_list(self, provider: str) -> pd.DataFrame:
+        if provider in self._station_list_cache:
+            return self._station_list_cache[provider].copy()
+
+        config = self.PROVIDERS[provider]
         params = {
             "service": "kisters",
             "type": "queryServices",
             "request": "getStationList",
-            "datasource": 4,
+            "datasource": config["datasource"],
             "format": "json",
-            "returnfields": "station_no,station_name,station_latitude,station_longitude,site_name,ca_sta",
-            "ca_sta_returnfields": "",
+            "returnfields": config["station_list_returnfields"],
         }
-        return self._parse_header_table(self._request_json(params))
+        if "ca_sta_returnfields" in config:
+            params["ca_sta_returnfields"] = config["ca_sta_returnfields"]
 
-    def _get_timeseries_map(self, variable: str) -> pd.DataFrame:
-        if variable in self._timeseries_map_cache:
-            return self._timeseries_map_cache[variable].copy()
+        station_list = self._parse_header_table(self._request_json(provider, params))
+        self._station_list_cache[provider] = station_list
+        return station_list.copy()
 
-        config = self.VARIABLE_MAP[variable]
+    def _get_timeseries_map(self, provider: str, variable: str) -> pd.DataFrame:
+        cache_key = (provider, variable)
+        if cache_key in self._timeseries_map_cache:
+            return self._timeseries_map_cache[cache_key].copy()
+
+        config = self.PROVIDERS[provider]
+        variable_config = config["variable_map"].get(variable)
+        if variable_config is None:
+            parsed = pd.DataFrame(columns=[constants.GAUGE_ID, "ts_id", "provider"])
+            self._timeseries_map_cache[cache_key] = parsed
+            return parsed.copy()
+
         params = {
             "service": "kisters",
             "type": "queryServices",
             "request": "getTimeseriesList",
-            "timeseriesgroup_id": config["group_id"],
-            "datasource": 4,
+            "timeseriesgroup_id": variable_config["group_id"],
+            "datasource": config["datasource"],
             "format": "json",
             "returnfields": "station_no,ts_id",
         }
-        df = self._parse_header_table(self._request_json(params))
+        df = self._parse_header_table(self._request_json(provider, params))
         if df.empty:
-            parsed = pd.DataFrame(columns=[constants.GAUGE_ID, "ts_id"])
+            parsed = pd.DataFrame(columns=[constants.GAUGE_ID, "ts_id", "provider"])
         else:
             parsed = (
                 df.rename(columns={"station_no": constants.GAUGE_ID})[[constants.GAUGE_ID, "ts_id"]]
@@ -199,52 +249,59 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
                     **{
                         constants.GAUGE_ID: lambda frame: frame[constants.GAUGE_ID].astype(str).str.strip(),
                         "ts_id": lambda frame: frame["ts_id"].astype(str).str.strip(),
+                        "provider": provider,
                     }
                 )
                 .drop_duplicates()
             )
 
-        self._timeseries_map_cache[variable] = parsed
+        self._timeseries_map_cache[cache_key] = parsed
         return parsed.copy()
 
-    def _get_virtual_station_ids(self) -> set[str]:
+    def _get_virtual_station_ids(self, provider: str) -> set[str]:
+        config = self.PROVIDERS[provider]
+        virtual_group_id = config.get("virtual_group_id")
+        if not virtual_group_id:
+            return set()
+
         params = {
             "service": "kisters",
             "type": "queryServices",
             "request": "getTimeseriesList",
-            "timeseriesgroup_id": self.VIRTUAL_GROUP_ID,
-            "datasource": 4,
+            "timeseriesgroup_id": virtual_group_id,
+            "datasource": config["datasource"],
             "format": "json",
             "returnfields": "station_no,ts_id",
         }
-        df = self._parse_header_table(self._request_json(params))
+        df = self._parse_header_table(self._request_json(provider, params))
         if df.empty or "station_no" not in df.columns:
             return set()
         return set(df["station_no"].dropna().astype(str).str.strip())
 
-    def get_metadata(self) -> pd.DataFrame:
-        """Fetches live metadata for stations with supported Belgium-Flanders variables."""
-        station_df = self._get_station_list()
+    def _get_provider_metadata(self, provider: str) -> pd.DataFrame:
+        station_df = self._get_station_list(provider)
         if station_df.empty:
             return self._empty_metadata_frame()
 
         supported_station_ids = set()
         for variable in self.get_available_variables():
-            supported_station_ids.update(self._get_timeseries_map(variable)[constants.GAUGE_ID].tolist())
+            supported_station_ids.update(self._get_timeseries_map(provider, variable)[constants.GAUGE_ID].tolist())
 
         if not supported_station_ids:
             return self._empty_metadata_frame()
 
-        virtual_station_ids = self._get_virtual_station_ids()
+        virtual_station_ids = self._get_virtual_station_ids(provider)
         station_df = station_df.rename(columns={"station_no": constants.GAUGE_ID})
         station_df[constants.GAUGE_ID] = station_df[constants.GAUGE_ID].astype(str).str.strip()
         station_df = station_df[station_df[constants.GAUGE_ID].isin(supported_station_ids)]
-        station_df = station_df[~station_df[constants.GAUGE_ID].isin(virtual_station_ids)]
+        if virtual_station_ids:
+            station_df = station_df[~station_df[constants.GAUGE_ID].isin(virtual_station_ids)]
 
+        config = self.PROVIDERS[provider]
         records = []
         for _, row in station_df.iterrows():
             station_name, river_from_name = self._split_station_name(row.get("station_name"))
-            river = river_from_name or row.get("river_name")
+            river = self._normalize_string(row.get("river_name")) or river_from_name
             records.append(
                 {
                     constants.GAUGE_ID: row.get(constants.GAUGE_ID),
@@ -255,8 +312,9 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
                     constants.ALTITUDE: pd.to_numeric(row.get("ALTITUDE"), errors="coerce"),
                     constants.AREA: self._parse_area_km2(row.get("CATCHMENT_SIZE")),
                     constants.COUNTRY: self.COUNTRY,
-                    constants.SOURCE: self.SOURCE,
-                    "vertical_datum": row.get("station_gauge_datum_postfix"),
+                    constants.SOURCE: config["source"],
+                    "provider": provider,
+                    "vertical_datum": self._normalize_string(row.get("station_gauge_datum_postfix")),
                 }
             )
 
@@ -268,30 +326,54 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
         df = df.drop_duplicates(subset=[constants.GAUGE_ID]).sort_values(constants.GAUGE_ID)
         return df.set_index(constants.GAUGE_ID)
 
-    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> list[pd.DataFrame]:
-        ts_map = self._get_timeseries_map(variable)
-        ts_ids = ts_map.loc[ts_map[constants.GAUGE_ID] == str(gauge_id), "ts_id"].dropna().unique().tolist()
+    def get_metadata(self) -> pd.DataFrame:
+        """Fetches live metadata for HIC and VMM stations in Flanders."""
+        frames = [self._get_provider_metadata(provider) for provider in self.PROVIDERS]
+        frames = [frame.reset_index() for frame in frames if not frame.empty]
+        if not frames:
+            return self._empty_metadata_frame()
 
-        if not ts_ids:
+        metadata = pd.concat(frames, ignore_index=True)
+        metadata = metadata.drop_duplicates(subset=[constants.GAUGE_ID]).sort_values(constants.GAUGE_ID)
+        return metadata.set_index(constants.GAUGE_ID)
+
+    def _get_station_timeseries_entries(self, gauge_id: str, variable: str) -> pd.DataFrame:
+        frames = []
+        for provider in self.PROVIDERS:
+            ts_map = self._get_timeseries_map(provider, variable)
+            if not ts_map.empty:
+                frames.append(ts_map)
+
+        if not frames:
+            return pd.DataFrame(columns=[constants.GAUGE_ID, "ts_id", "provider"])
+
+        station_map = pd.concat(frames, ignore_index=True)
+        return station_map[station_map[constants.GAUGE_ID] == str(gauge_id)].copy()
+
+    def _download_data(self, gauge_id: str, variable: str, start_date: str, end_date: str) -> list[pd.DataFrame]:
+        station_entries = self._get_station_timeseries_entries(gauge_id, variable)
+        if station_entries.empty:
             return []
 
         start_ts = f"{start_date}T00:00:00Z"
         end_ts = f"{end_date}T23:59:59Z"
         payloads: list[pd.DataFrame] = []
 
-        for ts_id in ts_ids:
+        for _, entry in station_entries.iterrows():
+            provider = entry["provider"]
+            datasource = self.PROVIDERS[provider]["datasource"]
             params = {
                 "service": "kisters",
                 "type": "queryServices",
                 "request": "getTimeseriesValues",
                 "format": "json",
-                "datasource": 4,
-                "ts_id": ts_id,
+                "datasource": datasource,
+                "ts_id": entry["ts_id"],
                 "from": start_ts,
                 "to": end_ts,
                 "returnfields": "Timestamp,Value,Quality Code,Quality Code Name,Quality Code Description",
             }
-            payload = self._parse_values_payload(self._request_json(params))
+            payload = self._parse_values_payload(self._request_json(provider, params))
             if not payload.empty:
                 payloads.append(payload)
 
@@ -329,7 +411,7 @@ class BelgiumFlandersFetcher(base.RiverDataFetcher):
         start_date: Optional[str] = None,
         end_date: Optional[str] = None,
     ) -> pd.DataFrame:
-        """Fetches and parses time series data for a specific gauge and variable."""
+        """Fetches and parses time series data for a specific Flemish gauge and variable."""
         start_date = utils.format_start_date(start_date)
         end_date = utils.format_end_date(end_date)
 
