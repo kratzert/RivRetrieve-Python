@@ -1,0 +1,247 @@
+gauge_id,station_name,river,latitude,longitude,altitude,area,country,source
+2004,Murten,Murtensee,46.9308,7.1169,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2007,Le Pont,Lac de Joux,46.6653,6.324,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2009,Porte du Scex,Rhône,46.3496,6.8886,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2011,Sion,Rhône,46.2191,7.3579,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2014,Schmerikon,Zürichsee,47.2248,8.9401,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2016,Brugg,Aare,47.4825,8.1949,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2017,Zug,Zugersee,47.1679,8.5143,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2018,Mellingen,Reuss,47.421,8.2713,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2019,Brienzwiler,Aare,46.7457,8.092,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2020,Bellinzona,Ticino,46.1938,9.0093,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2021,Ponte Tresa,Lago di Lugano,45.9688,8.8603,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2022,Locarno,Lago Maggiore,46.1636,8.8043,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2023,Ringgenberg,Brienzersee,46.7299,7.9755,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2024,Branson,Rhône,46.1257,7.0913,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2025,Brunnen,Vierwaldstättersee,46.9935,8.6038,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2026,Chillon,Lac Léman,46.4146,6.9277,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2027,St-Prex,Lac Léman,46.4828,6.4611,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2028,"Genève, Sécheron",Lac Léman,46.2186,6.1524,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2029,"Brügg, Aegerten",Aare,47.1221,7.2834,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2030,Thun,Aare,46.7646,7.6118,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2031,Unterägeri,Aegerisee,47.138,8.5918,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2032,Romanshorn,"Bodensee, Obersee",47.5648,9.381,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2033,Ilanz,Vorderrhein,46.7758,9.2064,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2034,"Payerne, Caserne d'aviation",Broye,46.8359,6.9361,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2041,"Oberriet, Blatten",Rhein,47.3069,9.5708,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2043,Berlingen,"Bodensee, Untersee",47.6755,9.0176,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2044,Andelfingen,Thur,47.5965,8.682,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2053,"Martigny, Pont de Rossettan",Drance,46.0977,7.0627,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2056,Seedorf,Reuss,46.8839,8.6206,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2057,Les Brenets,Lac des Brenets,47.0826,6.7086,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2063,Murgenthal,Aare,47.2661,7.8288,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2066,St. Moritz,St. Moritzersee,46.4975,9.8481,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2067,Martina,Inn,46.8858,10.4654,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2068,Riazzino,Ticino,46.1634,8.9103,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2070,Emmenmatt,Emme,46.9544,7.7488,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2071,Emmenmatt (N),Emme,46.9536,7.7516,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2072,Sils Baselgia,Silsersee,46.4344,9.7532,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2073,Silvaplana,Silvaplanersee,46.4601,9.8024,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2074,Brissago,Lago Maggiore,46.1181,8.7109,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2078,Le Prese,Poschiavino,46.2954,10.08,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2079,Le Prese,Canale industriale,46.2947,10.0795,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2081,Pfäffikon,Pfäffikersee,47.364,8.7786,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2082,Greifensee,Greifensee,47.3652,8.6735,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2084,Ingenbohl,Muota,47.0004,8.5987,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2085,Hagneck,Aare,47.0556,7.1844,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2086,Loderio,Brenno,46.3765,8.9694,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2087,Andermatt,Reuss,46.6423,8.5896,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2088,Sarnen,Sarnersee,46.8877,8.2424,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2091,Rheinfelden,Rhein,47.5607,7.7999,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2093,Spiez,Thunersee,46.6967,7.6646,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2097,Meisterschwanden,Hallwilersee,47.2958,8.2203,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2099,Zürich Unterhard,Limmat,47.3906,8.5254,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2101,"Melide, Ferrera",Lago di Lugano,45.9663,8.9489,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2102,Sarnen,Sarner Aa,46.8962,8.2452,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2104,"Weesen, Biäsche",Linth,47.1316,9.0884,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2105,St. Moritzbad,Inn,46.4847,9.8341,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2106,"Münchenstein, Hofmatt",Birs,47.5183,7.6188,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2109,Gsteig,Lütschine,46.6642,7.8715,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2110,"Mühlau, Hünenberg",Reuss,47.2223,8.3961,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2112,Appenzell,Sitter,47.332,9.4106,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2113,Klingnau,Aare,47.5941,8.2251,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2116,Koblenz,Rhein,47.609,8.2343,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2117,"Le Châble, Villette",Drance de Bagnes,46.0807,7.2131,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2118,Murg,Walensee,47.1134,9.21,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2119,Fribourg,Sarine,46.8039,7.169,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2122,"Moutier, La Charrue",Birse,47.284,7.3823,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2125,Frauenthal,Lorze,47.2153,8.425,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2126,Wängi,Murg,47.4963,8.953,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2130,Laufenburg,Rhein (Oberwasser),47.5558,8.0498,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2132,Neftenbach,Töss,47.5188,8.653,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2135,"Bern, Schönau",Aare,46.9331,7.448,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2137,Gelfingen,Baldeggersee,47.2099,8.2664,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2139,St.Margrethen,Rheintaler Binnenkanal,47.4496,9.6553,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2141,Tiefencastel,Albula,46.6625,9.5741,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2143,Rekingen,Rhein,47.5703,8.3298,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2150,Felsenbach,Landquart,46.9746,9.6121,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2151,Oberwil,Simme,46.655,7.4394,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2152,"Luzern, Geissmattbrücke",Reuss,47.054,8.2985,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2154,Grandson,Lac de Neuchâtel,46.8058,6.6424,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2155,"Wiler, Limpachmündung",Emme,47.1601,7.547,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2156,Gerlafingen,Werkkanal,47.1638,7.5543,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2157,Gerlafingen,Strackbach,47.1606,7.5609,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2159,"Belp, Mülimatt",Gürbe,46.8852,7.5017,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2160,"Broc, Château d'en bas",Sarine,46.6028,7.093,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2161,Blatten bei Naters,Massa,46.3856,8.0067,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2167,"Ponte Tresa, Rocchetta",Tresa,45.972,8.8524,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2168,Sempach,Sempachersee,47.1343,8.1892,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2170,"Genève, Bout du Monde",Arve,46.1803,6.1593,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2174,"Chancy, Aux Ripes",Rhône,46.153,5.9707,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2176,Zürich,Sihl,47.3677,8.5262,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2179,"Thörishaus, Sensematt",Sense,46.8883,7.3514,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2181,Halden,Thur,47.5058,9.2115,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2185,Chur,Plessur,46.8597,9.5105,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2187,Salez,Werdenberger Binnenkanal,47.2383,9.5096,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2199,Basel,Wiese,47.5779,7.5955,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2200,Zweilütschinen,Weisse Lütschine,46.6313,7.8997,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2202,Liestal,Ergolz,47.4881,7.7341,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2203,Aigle,Grande Eau,46.3189,6.9709,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2205,"Untersiggenthal, Stilli",Aare,47.5159,8.2347,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2206,"Melera, (Valle Morobbia)",Melera,46.1715,9.083,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2207,Luzern,Vierwaldstättersee,47.0549,8.3198,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2208,"Ligerz, Klein Twann",Bielersee,47.0917,7.1531,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2209,Zürich,Zürichsee,47.3548,8.5505,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2210,Ocourt,Doubs,47.3504,7.0751,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2215,Laupen,Saane,46.9086,7.2344,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2217,"Chancy, Vers Vaux",Rhône,46.1321,5.9563,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2219,Oberried/Lenk,Simme,46.4263,7.4729,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2232,Adelboden,Allenbach,46.486,7.5521,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2239,Punt dal Gall,Spöl,46.6292,10.1947,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2243,"Baden, Limmatpromenade",Limmat,47.4757,8.3094,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2244,Klusmatten,Krummbach,46.2248,8.0154,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2247,Les Brenets,Doubs,47.0844,6.7103,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2251,"Plaffeien, Schwyberg",Rotenbach,46.6864,7.2816,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2252,"Plaffeien, Schwyberg",Schwändlibach,46.6903,7.2863,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2256,Pontresina,Rosegbach,46.4899,9.8981,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2262,Pontresina,Berninabach,46.4864,9.9062,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2263,La Punt-Chamues-ch,Chamuerabach,46.5693,9.9359,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2265,Tarasp,Inn,46.789,10.2786,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2268,Gletsch,Rhône,46.5623,8.3621,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2269,Blatten,Lonza,46.4189,7.8175,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2270,Combe des Sarrasins,Doubs,47.1951,6.878,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2276,Isenthal,Grosstalbach,46.9101,8.561,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2282,"Wasen, Kurzeneialp",Sperbelgraben,47.0158,7.8427,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2283,"Wasen, Riedbad",Rappengraben,47.0163,7.8903,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2288,"Neuhausen, Flurlingerbrücke",Rhein,47.6815,8.6263,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2289,"Basel, Rheinhalle",Rhein,47.5594,7.6167,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2290,St-Sulpice,Areuse,46.9106,6.5589,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2300,"Euthal, Rüti",Minster,47.0806,8.8138,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2303,"Jonschwil, Mühlau",Thur,47.4137,9.0775,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2304,"Zernez, Punt la Drossa",Ova dal Fuorn,46.6551,10.19,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2305,"Herisau, Zellersmühle",Glatt,47.3981,9.2571,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2307,Sonceboz,Suze,47.1968,7.1722,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2308,"Goldach, Bleiche",Goldach,47.4873,9.4715,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2312,"Salmsach, Hungerbühl",Aach,47.5504,9.3572,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2319,Zernez,Ova da Cluozza,46.6932,10.1183,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2321,Pregassona,Cassarate,46.0177,8.9625,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2327,"Davos, Kriegsmatte",Dischmabach,46.7755,9.8773,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2329,San Giacomo di Fraéle,Derivazione Spöl,46.5489,10.2503,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2342,Brig,Saltina,46.3167,7.9868,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2343,"Huttwil, Häberenbad",Langeten,47.1225,7.8282,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2346,Brig,Rhône,46.3174,7.9754,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2347,"Roveredo, Bacino di compenso",Riale di Roggiasca,46.2016,9.1689,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2349,"Chiasso, Ponte di Polenta",Breggia,45.8455,9.0131,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2351,Visp,Vispa,46.2742,7.8817,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2352,"Linthal, Ausgleichsbecken KLL",Linth,46.9164,8.9915,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2353,"Linthal, Wasserrückgabe KLL",Betriebswasser KLL,46.9172,8.9925,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2355,"Davos, Frauenkirch",Landwasser,46.7578,9.7903,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2356,"Cavergno, Pontit",Riale di Calneggia,46.3696,8.5429,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2364,Piotta,Ticino,46.5167,8.6715,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2366,La Rösa,Poschiavino,46.399,10.0672,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2368,"Locarno, Solduno",Maggia,46.1683,8.7736,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2369,Yvonand,Menthue,46.7768,6.7242,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2370,"Le Noirmont, La Goule",Doubs,47.2292,6.9293,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2371,"Le Chenit, Frontière",Orbe,46.5508,6.1535,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2372,"Mollis, Linthbrücke",Linth,47.1011,9.072,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2374,"Mogelsberg, Aachsäge",Necker,47.3642,9.1214,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2378,"Orbe, Le Chalet",Orbe,46.7276,6.5239,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2384,Simplonpass,Bisse kalte Wasser,46.2459,8.0361,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2386,Frauenfeld,Murg,44.89,-0.1617,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2387,Fürstenau,Hinterrhein,46.7151,9.4473,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2392,Rheinau,Rhein (Oberwasser),47.6391,8.6019,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2403,Cinuos - Chel,Inn,46.6355,10.0209,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2404,"Cinuos-chel, Val Torta",Innabl. EKW,46.6431,10.0321,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2409,"Eggiwil, Heidbüel",Emme,46.8712,7.8047,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2410,Ruggell,Liechtensteiner Binnenkanal,47.2434,9.5225,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2412,"Vuippens, Château",Sionge,46.6585,7.0783,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2414,"Mosnang, Rietholz",Rietholzbach,47.3761,9.0123,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2415,Rheinsfelden,Glatt,47.5735,8.4758,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2416,"Hitzkirch, Richensee",Aabach,47.2201,8.2491,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2417,Oberkirch,Suhre,47.1572,8.1154,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2418,Tiefencastel,Julia,46.6604,9.576,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2419,Reckingen,Rhône,46.4695,8.2447,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2420,"Lumino, Sassello",Moesa,46.2231,9.0558,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2426,Mels,Seez,47.0465,9.4182,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2430,"Sumvitg, Encardens",Rein da Sumvitg,46.6499,8.9907,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2432,"Ecublens, Les Bois",Venoge,46.5353,6.5527,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2433,"Allaman, Le Coulet",Aubonne,46.4733,6.4064,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2434,"Olten, Hammermühle",Dünnern,47.3503,7.893,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2436,"Alpnach, Chilch Erli",Chli Schliere,46.9441,8.2766,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2437,"Ecublens, Eschiens",Parimbot,46.6044,6.8129,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2446,"Gampelen, Zihlbrücke",Zihlkanal,47.0211,7.0342,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2447,Sugiez,Canal de la Broye,46.9637,7.1146,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2450,Zofingen,Wigger,47.2835,7.9354,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2457,"Ringgenberg, Goldswil",Aare,46.694,7.8796,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2458,Valangin,Seyon,47.0111,6.9043,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2461,"Magliaso, Ponte",Magliasina,45.982,8.879,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2462,S-Chanf,Inn,46.6157,9.9952,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2467,Gümmenen,Saane,46.9441,7.2429,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2468,"St. Gallen, Bruggen/Au",Sitter,47.4144,9.3275,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2469,Hondrich,Kander,46.6666,7.6711,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2471,"Murgenthal, Walliswil",Murg,47.2523,7.8262,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2473,"Diepoldsau, Rietbrücke",Rhein,47.3831,9.6409,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2474,Buseno,Calancasca,46.2836,9.1182,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2475,"Bignasco, Ponte nuovo",Maggia,46.3383,8.6081,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2477,"Zug, Letzi",Lorze,47.1807,8.502,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2478,"Soyhières, Bois du Treuil",Birse,47.3924,7.396,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2480,Boudry,Areuse,46.949,6.839,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2481,"Buochs, Flugplatz",Engelberger Aa,46.9728,8.4053,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2484,"Lauerz, Chlostermatt",Lauerzersee,47.031,8.5966,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2485,"Boncourt, Frontière",Allaine,47.5008,7.0117,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2486,"Vevey, Coppet",Veveyse,46.4689,6.8485,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2487,"Werthenstein, Chappelboden",Kleine Emme,47.0349,8.0684,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2488,Latterbach,Simme,46.6617,7.5782,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2490,"Dardagny, Les Granges",Allondon,46.2174,5.9985,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2491,"Bürglen, Galgenwäldli",Schächen,46.8709,8.6517,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2492,"Buerglen, EW Altdorf",Dorfbachableitung,46.8758,8.6592,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2493,"Gland, Route Suisse",Promenthouse,46.406,6.2693,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2494,"Pollegio, Campagna",Ticino,46.3593,8.9475,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2497,Nebikon,Luthern,47.1904,7.9738,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2498,Castrisch,Glenner,46.7735,9.2106,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2499,Muotathal,Schlichenden Brünnen,46.9731,8.7843,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2500,Ittigen,Worble,46.9732,7.4781,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2602,Domat/Ems,Rhein,46.8377,9.4561,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2603,Langnau,Ilfis,46.9379,7.7974,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2604,Biberbrugg,Biber,47.1533,8.7209,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2605,"Lavertezzo, Campiöi",Verzasca,46.249,8.8446,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2606,"Genève, Halle de l'Île",Rhône,46.2047,6.1415,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2607,Oberwald,Goneri,46.532,8.3578,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2608,Neuenkirch,Sellenbodenbach,47.113,8.2098,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2609,Einsiedeln,Alp,47.1508,8.7393,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2610,Vicques,Scheulte,47.3482,7.4318,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2612,Lavertezzo,Riale di Pincascia,46.2583,8.8401,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2613,"Weil, Palmrainbrücke",Rhein,47.6014,7.5947,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2615,Basel LHG,Rhein,47.5617,7.5867,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2617,Müstair,Rom,46.6296,10.4532,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2620,Soglio,Mera,46.3332,9.5268,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2623,Oberwald,Rhône,46.5344,8.3494,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2629,Agno,Vedeggio,46.003,8.9117,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2630,Sion,Sionne,46.2305,7.366,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2631,"Hinterrhein, Schiessplatz",Hinterrhein,46.5234,9.1813,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2632,Mühlbach. Trennbauwerk Sand,Mühlbach,46.8453,9.5373,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2634,Emmen,Kleine Emme,47.072,8.2753,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2635,"Einsiedeln, Gross",Grossbach,47.1065,8.7655,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2636,"Muotathal, Hölloch",Hölloch,46.9764,8.7884,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2639,"Martina, Sclamischot",Inn,46.8704,10.4461,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2640,Delémont,Sorne,47.3643,7.351,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2642,"Neuchâtel, Nid-du-Crô",Lac de Neuchâtel,46.9965,6.951,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2643,Montlingen,Rhein,47.3337,9.5947,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2646,"Emdthal, Heustrich",Kander,46.6525,7.6828,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+2650,Chur,Untertorer Mühlbach,46.8473,9.5356,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+4601,Buch,Biber,47.7151,8.7924,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+520,Rämismühle,Töss,47.443,8.8148,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+9020,Bellinzona,Ticino,46.1938,9.0093,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+9632,Chur,Untertorer Mühlbach,46.8473,9.5356,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+A270,Combe des Sarrasins,Doubs,47.1955,6.8782,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
+C384,Simplonpass,Bisse kalte Wasser,46.2459,8.0361,,,Switzerland,Swiss Federal Office for the Environment FOEN / BAFU
