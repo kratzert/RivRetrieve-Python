@@ -1,15 +1,10 @@
 import logging
-import os
 
 import matplotlib.pyplot as plt
 
 from rivretrieve import SwitzerlandFetcher, constants
 
 logging.basicConfig(level=logging.INFO)
-
-influx_token = os.environ.get("RIVRETRIEVE_SWITZERLAND_INFLUX_TOKEN")
-if not influx_token:
-    raise SystemExit("Set RIVRETRIEVE_SWITZERLAND_INFLUX_TOKEN before running this example.")
 
 gauge_id = "2016"
 variables = [
@@ -19,7 +14,7 @@ variables = [
 start_date = "2026-02-01"
 end_date = "2026-02-07"
 
-fetcher = SwitzerlandFetcher(influx_token=influx_token)
+fetcher = SwitzerlandFetcher()
 
 for variable in variables:
     data = fetcher.get_data(gauge_id=gauge_id, variable=variable, start_date=start_date, end_date=end_date)

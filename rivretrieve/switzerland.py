@@ -1,7 +1,6 @@
 """Fetcher for Swiss river gauge data from the BAFU hydro API."""
 
 import logging
-import os
 from io import StringIO
 from typing import Optional
 
@@ -12,8 +11,6 @@ import requests
 from . import base, constants, utils
 
 logger = logging.getLogger(__name__)
-
-INFLUX_TOKEN_ENV_VAR = "RIVRETRIEVE_SWITZERLAND_INFLUX_TOKEN"
 
 
 class SwitzerlandFetcher(base.RiverDataFetcher):
@@ -40,6 +37,7 @@ class SwitzerlandFetcher(base.RiverDataFetcher):
     BASE_URL = "https://api.existenz.ch/apiv1"
     METADATA_URL = f"{BASE_URL}/hydro/locations"
     INFLUX_URL = "https://influx.konzept.space/api/v2/query?org=api.existenz.ch"
+    INFLUX_TOKEN = "0yLbh-D7RMe1sX1iIudFel8CcqCI8sVfuRTaliUp56MgE6kub8-nSd05_EJ4zTTKt0lUzw8zcO73zL9QhC3jtA=="
     SOURCE = "Swiss Federal Office for the Environment FOEN / BAFU"
     COUNTRY = "Switzerland"
     MAX_WINDOW_DAYS = 366
@@ -81,15 +79,6 @@ class SwitzerlandFetcher(base.RiverDataFetcher):
             "aggregate_daily": False,
         },
     }
-
-    def __init__(self, influx_token: Optional[str] = None):
-        super().__init__()
-        self.influx_token = influx_token or os.environ.get(INFLUX_TOKEN_ENV_VAR)
-        if not self.influx_token:
-            logger.error(
-                "Switzerland Influx token not provided. Set %s or pass influx_token to the constructor.",
-                INFLUX_TOKEN_ENV_VAR,
-            )
 
     @staticmethod
     def _empty_result(variable: str) -> pd.DataFrame:
@@ -208,7 +197,7 @@ class SwitzerlandFetcher(base.RiverDataFetcher):
         session = utils.requests_retry_session()
         payloads: list[str] = []
         headers = {
-            "Authorization": f"Token {self.influx_token}",
+            "Authorization": f"Token {self.INFLUX_TOKEN}",
             "Accept": "application/csv",
             "Content-type": "application/vnd.flux",
         }
@@ -336,8 +325,7 @@ class SwitzerlandFetcher(base.RiverDataFetcher):
             for the given parameters.
 
         Raises:
-            ValueError: If the requested ``variable`` is not supported by this fetcher,
-                or if no Switzerland Influx token is configured.
+            ValueError: If the requested ``variable`` is not supported by this fetcher.
             requests.exceptions.RequestException: If a network error occurs during data download.
             Exception: For other unexpected errors during data fetching or parsing.
         """
@@ -346,11 +334,6 @@ class SwitzerlandFetcher(base.RiverDataFetcher):
 
         if variable not in self.get_available_variables():
             raise ValueError(f"Unsupported variable: {variable}")
-        if not self.influx_token:
-            raise ValueError(
-                "Switzerland Influx token not provided. Set "
-                f"{INFLUX_TOKEN_ENV_VAR} or pass influx_token to SwitzerlandFetcher()."
-            )
 
         try:
             raw_data = self._download_data(gauge_id, variable, start_date, end_date)

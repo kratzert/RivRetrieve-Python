@@ -12,7 +12,7 @@ from rivretrieve import SwitzerlandFetcher, constants
 
 class TestSwitzerlandFetcher(unittest.TestCase):
     def setUp(self):
-        self.fetcher = SwitzerlandFetcher(influx_token="test-token")
+        self.fetcher = SwitzerlandFetcher()
         self.test_data_dir = Path(os.path.dirname(__file__)) / "test_data"
 
     def _load_json(self, filename):
