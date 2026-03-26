@@ -23,6 +23,7 @@ API Reference
    fetchers/slovenia
    fetchers/southafrica
    fetchers/spain
+   fetchers/sweden
    fetchers/uk_ea
    fetchers/uk_nrfa
    fetchers/usa
