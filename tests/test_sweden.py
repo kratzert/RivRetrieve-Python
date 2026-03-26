@@ -146,13 +146,13 @@ class TestSwedenFetcher(unittest.TestCase):
         mock_requests_session.return_value = mock_session
 
         mock_response = MagicMock()
-        mock_response.json.return_value = self._load_json("sweden_1906_stage_instant_20260325.json")
+        mock_response.json.return_value = self._load_json("sweden_1906_stage_daily_mean_20260325.json")
         mock_response.raise_for_status = MagicMock()
         mock_session.get.return_value = mock_response
 
         result_df = self.fetcher.get_data(
             gauge_id="1906",
-            variable=constants.STAGE_INSTANT,
+            variable=constants.STAGE_DAILY_MEAN,
             start_date="2026-03-25",
             end_date="2026-03-26",
         )
@@ -160,7 +160,7 @@ class TestSwedenFetcher(unittest.TestCase):
         expected_df = pd.DataFrame(
             {
                 constants.TIME_INDEX: pd.to_datetime(["2026-03-25 00:00:00", "2026-03-26 00:00:00"]),
-                constants.STAGE_INSTANT: [161.33, 161.40],
+                constants.STAGE_DAILY_MEAN: [161.33, 161.40],
             }
         ).set_index(constants.TIME_INDEX)
 
@@ -173,13 +173,13 @@ class TestSwedenFetcher(unittest.TestCase):
         mock_requests_session.return_value = mock_session
 
         mock_response = MagicMock()
-        mock_response.json.return_value = self._load_json("sweden_80107_water_temperature_instant_19930726.json")
+        mock_response.json.return_value = self._load_json("sweden_80107_water_temperature_daily_mean_19930726.json")
         mock_response.raise_for_status = MagicMock()
         mock_session.get.return_value = mock_response
 
         result_df = self.fetcher.get_data(
             gauge_id="80107",
-            variable=constants.WATER_TEMPERATURE_INSTANT,
+            variable=constants.WATER_TEMPERATURE_DAILY_MEAN,
             start_date="1993-07-26",
             end_date="1993-07-31",
         )
@@ -196,7 +196,7 @@ class TestSwedenFetcher(unittest.TestCase):
                         "1993-07-31 00:00:00",
                     ]
                 ),
-                constants.WATER_TEMPERATURE_INSTANT: [20.0, 19.0, 19.0, 18.0, 19.0, 19.0],
+                constants.WATER_TEMPERATURE_DAILY_MEAN: [20.0, 19.0, 19.0, 18.0, 19.0, 19.0],
             }
         ).set_index(constants.TIME_INDEX)
 

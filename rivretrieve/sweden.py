@@ -21,8 +21,8 @@ class SwedenFetcher(base.RiverDataFetcher):
     Supported variables:
         - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
         - ``constants.DISCHARGE_INSTANT`` (m³/s)
-        - ``constants.STAGE_INSTANT`` (m)
-        - ``constants.WATER_TEMPERATURE_INSTANT`` (°C)
+        - ``constants.STAGE_DAILY_MEAN`` (m)
+        - ``constants.WATER_TEMPERATURE_DAILY_MEAN`` (°C)
         - ``constants.DISCHARGE_MONTHLY_MEAN`` (m³/s)
 
     Data description and API:
@@ -30,6 +30,11 @@ class SwedenFetcher(base.RiverDataFetcher):
 
     Terms of use:
         - see https://www.smhi.se/data/om-smhis-data/smhis-datapolicy
+
+    Notes:
+        - SMHI documents ``Vattenstånd`` and ``Vattendragstemperatur`` as daily measurements.
+          RivRetrieve normalizes these Sweden series to the daily mean constants for a consistent
+          daily-resolution API.
     """
 
     BASE_URL = "https://opendata-download-hydroobs.smhi.se/api/version/1.0"
@@ -39,8 +44,8 @@ class SwedenFetcher(base.RiverDataFetcher):
     VARIABLE_CONFIG = {
         constants.DISCHARGE_DAILY_MEAN: {"parameter_id": 1, "scale": 1.0},
         constants.DISCHARGE_INSTANT: {"parameter_id": 2, "scale": 1.0},
-        constants.STAGE_INSTANT: {"parameter_id": 3, "scale": 0.01},
-        constants.WATER_TEMPERATURE_INSTANT: {"parameter_id": 4, "scale": 1.0},
+        constants.STAGE_DAILY_MEAN: {"parameter_id": 3, "scale": 0.01},
+        constants.WATER_TEMPERATURE_DAILY_MEAN: {"parameter_id": 4, "scale": 1.0},
         constants.DISCHARGE_MONTHLY_MEAN: {"parameter_id": 10, "scale": 1.0},
     }
 
