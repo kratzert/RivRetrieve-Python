@@ -1,0 +1,1192 @@
+[
+    {
+        "code": "SJA8821000",
+        "name": "Ahja jõgi: Ahja",
+        "area": 896.51,
+        "overlapArea": 0.0,
+        "countryArea": 896.54,
+        "calculationArea": 896.51,
+        "distance": 25.55,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA0664000",
+        "name": "Ahja jõgi: Kiidjärve",
+        "area": 328.22,
+        "overlapArea": 0.0,
+        "countryArea": 328.22,
+        "calculationArea": 328.22,
+        "distance": 59.14,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA7675000",
+        "name": "Ahja jõgi: Lääniste sild",
+        "area": 933.84,
+        "overlapArea": 0.0,
+        "countryArea": 933.84,
+        "calculationArea": 933.84,
+        "distance": 17.04,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA9946000",
+        "name": "Alajõgi: Alajõe",
+        "area": 137.03,
+        "overlapArea": 0.0,
+        "countryArea": 137.04,
+        "calculationArea": 137.03,
+        "distance": 6.59,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA8127000",
+        "name": "Alajõgi: Griini (Alajõe)",
+        "area": 144.23,
+        "overlapArea": 0.0,
+        "countryArea": 144.23,
+        "calculationArea": 144.23,
+        "distance": 2.58,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA5784000",
+        "name": "Audru jõgi: Audru",
+        "area": 331.76,
+        "overlapArea": 0.0,
+        "countryArea": 331.76,
+        "calculationArea": 331.76,
+        "distance": 8.24,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA9683000",
+        "name": "Audru jõgi: Audru",
+        "area": 321.83,
+        "overlapArea": 0.0,
+        "countryArea": 321.87,
+        "calculationArea": 321.83,
+        "distance": 11.69,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA8211000",
+        "name": "Avijõgi: Mulgi",
+        "area": 396.95,
+        "overlapArea": 0.0,
+        "countryArea": 396.95,
+        "calculationArea": 396.95,
+        "distance": 1.62,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA2401000",
+        "name": "Avijõgi: Separa",
+        "area": 388.36,
+        "overlapArea": 0.0,
+        "countryArea": 388.39,
+        "calculationArea": 388.36,
+        "distance": 4.05,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA7196000",
+        "name": "Elva jõgi: Elva",
+        "area": 230.68,
+        "overlapArea": 0.0,
+        "countryArea": 230.69,
+        "calculationArea": 230.68,
+        "distance": 32.66,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA8007000",
+        "name": "Emajõgi: Kavastu",
+        "area": 8530.75,
+        "overlapArea": 0.0,
+        "countryArea": 8436.55,
+        "calculationArea": 8530.75,
+        "distance": 16.49,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA2302000",
+        "name": "Emajõgi: Rannu-Jõesuu",
+        "area": 3366.4,
+        "overlapArea": 0.0,
+        "countryArea": 3272.2,
+        "calculationArea": 3366.4,
+        "distance": 99.41,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA5524000",
+        "name": "Emajõgi: Rannu-Jõesuu",
+        "area": 3366.41,
+        "overlapArea": 0.0,
+        "countryArea": 3272.3,
+        "calculationArea": 3366.41,
+        "distance": 99.36,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA7331000",
+        "name": "Emajõgi: Tartu",
+        "area": 7849.21,
+        "overlapArea": 0.0,
+        "countryArea": 7755.61,
+        "calculationArea": 7849.21,
+        "distance": 41.5,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA7982000",
+        "name": "Emajõgi: Tartu (Kvissental)",
+        "area": 7837.74,
+        "overlapArea": 0.0,
+        "countryArea": 7743.54,
+        "calculationArea": 7837.74,
+        "distance": 45.03,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA1593000",
+        "name": "Esna jõgi: Põhjaka I",
+        "area": 196.12,
+        "overlapArea": 0.0,
+        "countryArea": 196.14,
+        "calculationArea": 196.12,
+        "distance": 8.39,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA4385000",
+        "name": "Halliste jõgi: Riisa",
+        "area": 1880.61,
+        "overlapArea": 0.0,
+        "countryArea": 1870.5,
+        "calculationArea": 1880.61,
+        "distance": 5.19,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA6180000",
+        "name": "Jägala jõgi: Jägala juga",
+        "area": 1278.04,
+        "overlapArea": 0.0,
+        "countryArea": 1278.04,
+        "calculationArea": 1128.58,
+        "distance": 4.52,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA3814000",
+        "name": "Jägala jõgi: Kehra",
+        "area": 1150.75,
+        "overlapArea": 0.0,
+        "countryArea": 1150.75,
+        "calculationArea": 866.07,
+        "distance": 26.23,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA2203000",
+        "name": "Jägala jõgi: Linnamäe (suue)",
+        "area": 1592.65,
+        "overlapArea": 0.0,
+        "countryArea": 1592.65,
+        "calculationArea": 1443.19,
+        "distance": 0.57,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA8358000",
+        "name": "Jänijõgi: Jäneda",
+        "area": 39.67,
+        "overlapArea": 0.0,
+        "countryArea": 39.67,
+        "calculationArea": 39.67,
+        "distance": 25.51,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA9179000",
+        "name": "Kasari jõgi: Kasari",
+        "area": 2642.45,
+        "overlapArea": 0.0,
+        "countryArea": 2642.76,
+        "calculationArea": 2642.45,
+        "distance": 19.62,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA4483000",
+        "name": "Kasari jõgi: Kasari sild",
+        "area": 2645.85,
+        "overlapArea": 0.0,
+        "countryArea": 2645.85,
+        "calculationArea": 2645.85,
+        "distance": 18.67,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA4444000",
+        "name": "Keila jõgi: Keila",
+        "area": 635.7,
+        "overlapArea": 0.0,
+        "countryArea": 635.74,
+        "calculationArea": 635.7,
+        "distance": 17.73,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA6896000",
+        "name": "Keila jõgi: Keila linn",
+        "area": 635.7,
+        "overlapArea": 0.0,
+        "countryArea": 635.7,
+        "calculationArea": 635.7,
+        "distance": 17.73,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA5960000",
+        "name": "Keila jõgi: suue, Keila-Joa",
+        "area": 673.08,
+        "overlapArea": 0.0,
+        "countryArea": 673.08,
+        "calculationArea": 673.08,
+        "distance": 1.81,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA5768000",
+        "name": "Kullavere jõgi: hüdrokeemia - Tartu-Mustvee mnt sild",
+        "area": 221.52,
+        "overlapArea": 0.0,
+        "countryArea": 221.52,
+        "calculationArea": 221.52,
+        "distance": 8.26,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA8841000",
+        "name": "Kunda jõgi: suue",
+        "area": 532.43,
+        "overlapArea": 0.0,
+        "countryArea": 532.43,
+        "calculationArea": 532.43,
+        "distance": 0.87,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA1098000",
+        "name": "Kunda jõgi: Sämi",
+        "area": 420.81,
+        "overlapArea": 0.0,
+        "countryArea": 420.82,
+        "calculationArea": 420.81,
+        "distance": 24.59,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA1417000",
+        "name": "Kunda jõgi: Sämi",
+        "area": 420.81,
+        "overlapArea": 0.0,
+        "countryArea": 420.81,
+        "calculationArea": 420.81,
+        "distance": 24.59,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA2259000",
+        "name": "Kääpa jõgi: Kääpa",
+        "area": 263.73,
+        "overlapArea": 0.0,
+        "countryArea": 263.76,
+        "calculationArea": 263.73,
+        "distance": 11.33,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJB4324000",
+        "name": "Leisi jõgi: Elu",
+        "area": 52.58,
+        "overlapArea": 0.0,
+        "countryArea": 52.58,
+        "calculationArea": 52.58,
+        "distance": 8.68,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA1582000",
+        "name": "Leivajõgi: Pajupea",
+        "area": 84.37,
+        "overlapArea": 0.0,
+        "countryArea": 84.37,
+        "calculationArea": 84.37,
+        "distance": 2.36,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA2115000",
+        "name": "Linnusaare oja: Linnusaare",
+        "area": 2.32,
+        "overlapArea": 0.0,
+        "countryArea": 2.32,
+        "calculationArea": 2.32,
+        "distance": 0.22,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJB4488000",
+        "name": "Linnussaare oja: Linnusaare",
+        "area": 2.32,
+        "overlapArea": 0.0,
+        "countryArea": 2.32,
+        "calculationArea": 2.32,
+        "distance": 0.0,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA7798000",
+        "name": "Loobu jõgi: Arbavere",
+        "area": 245.55,
+        "overlapArea": 0.0,
+        "countryArea": 245.55,
+        "calculationArea": 245.55,
+        "distance": 32.83,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA5258000",
+        "name": "Loobu jõgi: Jõekääru (Vihasoo)",
+        "area": 349.01,
+        "overlapArea": 0.0,
+        "countryArea": 349.01,
+        "calculationArea": 349.01,
+        "distance": 3.15,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA7233000",
+        "name": "Luguse jõgi: Luguse",
+        "area": 98.19,
+        "overlapArea": 0.0,
+        "countryArea": 98.2,
+        "calculationArea": 98.19,
+        "distance": 1.97,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJB4327000",
+        "name": "Luguse jõgi: Luguse",
+        "area": 98.19,
+        "overlapArea": 0.0,
+        "countryArea": 98.19,
+        "calculationArea": 98.19,
+        "distance": 1.97,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA6159000",
+        "name": "Lõve jõgi: Uue-Lõve",
+        "area": 142.52,
+        "overlapArea": 0.0,
+        "countryArea": 142.54,
+        "calculationArea": 142.52,
+        "distance": 2.89,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA0680000",
+        "name": "Lõve jõgi: Uue-Lõve sild",
+        "area": 142.52,
+        "overlapArea": 0.0,
+        "countryArea": 142.52,
+        "calculationArea": 142.52,
+        "distance": 2.86,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA7746000",
+        "name": "Mustajõgi: Narva karjääri",
+        "area": 293.52,
+        "overlapArea": 0.0,
+        "countryArea": 293.53,
+        "calculationArea": 293.52,
+        "distance": 6.8,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA6683000",
+        "name": "Mustjõgi: Taheva",
+        "area": 1765.68,
+        "overlapArea": 0.0,
+        "countryArea": 978.23,
+        "calculationArea": 1765.68,
+        "distance": 4.51,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA7631000",
+        "name": "Mustjõgi: Tsirgumäe",
+        "area": 1765.68,
+        "overlapArea": 0.0,
+        "countryArea": 978.4,
+        "calculationArea": 1765.68,
+        "distance": 4.54,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJB4487000",
+        "name": "Mustjõgi: Tulijärve",
+        "area": 19.44,
+        "overlapArea": 0.0,
+        "countryArea": 19.44,
+        "calculationArea": 19.44,
+        "distance": 0.0,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA5432000",
+        "name": "Narva jõgi: Kuningaküla",
+        "area": 47981.83,
+        "overlapArea": 0.0,
+        "countryArea": 16409.06,
+        "calculationArea": 47981.83,
+        "distance": 56.17,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA4515000",
+        "name": "Narva jõgi: Narva linn",
+        "area": 56047.31,
+        "overlapArea": 0.0,
+        "countryArea": 17148.92,
+        "calculationArea": 56047.31,
+        "distance": 14.08,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA9741000",
+        "name": "Narva jõgi: Narvast allavoolu",
+        "area": 56063.94,
+        "overlapArea": 0.0,
+        "countryArea": 17154.99,
+        "calculationArea": 56063.94,
+        "distance": 8.88,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA2718000",
+        "name": "Narva jõgi: Vasknarva",
+        "area": 47806.99,
+        "overlapArea": 0.0,
+        "countryArea": 16290.23,
+        "calculationArea": 47806.99,
+        "distance": 72.11,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA4328000",
+        "name": "Narva jõgi: Vasknarva",
+        "area": 47806.99,
+        "overlapArea": 0.0,
+        "countryArea": 16289.15,
+        "calculationArea": 47806.99,
+        "distance": 72.12,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA6334000",
+        "name": "Navesti jõgi: Aesoo",
+        "area": 1048.86,
+        "overlapArea": 0.0,
+        "countryArea": 1049.0,
+        "calculationArea": 1048.86,
+        "distance": 13.95,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA2802000",
+        "name": "Oostriku jõgi: Oostriku",
+        "area": 80.07,
+        "overlapArea": 0.0,
+        "countryArea": 80.07,
+        "calculationArea": 80.07,
+        "distance": 6.18,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA0301000",
+        "name": "Pedja jõgi: Jõgeva sordiaretusjaam",
+        "area": 631.52,
+        "overlapArea": 0.0,
+        "countryArea": 631.52,
+        "calculationArea": 631.52,
+        "distance": 70.88,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA0430000",
+        "name": "Pedja jõgi: Tõrve",
+        "area": 738.89,
+        "overlapArea": 0.0,
+        "countryArea": 738.89,
+        "calculationArea": 738.89,
+        "distance": 46.57,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA3204000",
+        "name": "Pedja jõgi: Tõrve",
+        "area": 738.89,
+        "overlapArea": 0.0,
+        "countryArea": 738.97,
+        "calculationArea": 738.89,
+        "distance": 46.57,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA6279000",
+        "name": "Pirita jõgi: Kloostrimetsa",
+        "area": 1970.01,
+        "overlapArea": 0.0,
+        "countryArea": 1970.01,
+        "calculationArea": 843.12,
+        "distance": 5.07,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA5140000",
+        "name": "Pirita jõgi: Lükati sild",
+        "area": 1975.95,
+        "overlapArea": 0.0,
+        "countryArea": 1975.95,
+        "calculationArea": 849.06,
+        "distance": 2.62,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA5928000",
+        "name": "Piusa jõgi: Korela",
+        "area": 743.82,
+        "overlapArea": 0.0,
+        "countryArea": 521.79,
+        "calculationArea": 741.32,
+        "distance": 14.37,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA9977000",
+        "name": "Piusa jõgi: Värska-Saatse mnt.",
+        "area": 745.66,
+        "overlapArea": 0.0,
+        "countryArea": 523.68,
+        "calculationArea": 743.16,
+        "distance": 12.92,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA8796000",
+        "name": "Porijõgi / Reola jõgi: Reola",
+        "area": 240.5,
+        "overlapArea": 0.0,
+        "countryArea": 240.52,
+        "calculationArea": 240.5,
+        "distance": 10.16,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA3124000",
+        "name": "Porijõgi: Reola - Vana-Kuuste tee (Uhti)",
+        "area": 240.5,
+        "overlapArea": 0.0,
+        "countryArea": 240.5,
+        "calculationArea": 240.5,
+        "distance": 10.16,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA4084000",
+        "name": "Prandi jõgi: Tori",
+        "area": 283.84,
+        "overlapArea": 0.0,
+        "countryArea": 283.88,
+        "calculationArea": 283.84,
+        "distance": 5.04,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA4253000",
+        "name": "Preedi jõgi: Varangu",
+        "area": 12.52,
+        "overlapArea": 0.0,
+        "countryArea": 12.52,
+        "calculationArea": 12.52,
+        "distance": 25.03,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA9316000",
+        "name": "Pudisoo jõgi: Pudisoo",
+        "area": 135.13,
+        "overlapArea": 0.0,
+        "countryArea": 135.13,
+        "calculationArea": 135.13,
+        "distance": 1.94,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA2129000",
+        "name": "Purtse jõgi: Lüganuse",
+        "area": 784.97,
+        "overlapArea": 0.0,
+        "countryArea": 784.98,
+        "calculationArea": 784.97,
+        "distance": 8.15,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA9900000",
+        "name": "Purtse jõgi: suue (Tallinn-Narva mnt)",
+        "area": 811.29,
+        "overlapArea": 0.0,
+        "countryArea": 811.29,
+        "calculationArea": 811.29,
+        "distance": 0.58,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA8256000",
+        "name": "Põltsamaa jõgi: Pajusi",
+        "area": 1082.14,
+        "overlapArea": 0.0,
+        "countryArea": 1082.25,
+        "calculationArea": 1082.14,
+        "distance": 47.7,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA7946000",
+        "name": "Põltsamaa jõgi: Rutikvere",
+        "area": 909.0,
+        "overlapArea": 0.0,
+        "countryArea": 909.0,
+        "calculationArea": 909.0,
+        "distance": 60.17,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA0177000",
+        "name": "Põltsamaa jõgi: Rõika",
+        "area": 1307.47,
+        "overlapArea": 0.0,
+        "countryArea": 1307.47,
+        "calculationArea": 1307.47,
+        "distance": 12.94,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA4401000",
+        "name": "Pärlijõgi / Pudisoo jõgi: Pudisoo",
+        "area": 124.34,
+        "overlapArea": 0.0,
+        "countryArea": 124.33,
+        "calculationArea": 124.34,
+        "distance": 6.66,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA2731000",
+        "name": "Pärnu jõgi: Oore",
+        "area": 5130.72,
+        "overlapArea": 0.0,
+        "countryArea": 5121.01,
+        "calculationArea": 5130.72,
+        "distance": 25.82,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA8483000",
+        "name": "Pärnu jõgi: Oore",
+        "area": 5132.92,
+        "overlapArea": 0.0,
+        "countryArea": 5122.64,
+        "calculationArea": 5132.92,
+        "distance": 24.88,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJB3766000",
+        "name": "Pärnu jõgi: Särevere",
+        "area": 572.14,
+        "overlapArea": 0.0,
+        "countryArea": 572.2,
+        "calculationArea": 553.17,
+        "distance": 101.81,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA0234000",
+        "name": "Pärnu jõgi: Tahkuse",
+        "area": 2047.12,
+        "overlapArea": 0.0,
+        "countryArea": 2047.37,
+        "calculationArea": 2047.12,
+        "distance": 41.39,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA8617000",
+        "name": "Pärnu jõgi: Türi-Alliku",
+        "area": 560.4,
+        "overlapArea": 0.0,
+        "countryArea": 560.4,
+        "calculationArea": 541.43,
+        "distance": 108.66,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJB4152000",
+        "name": "Pärnu jõgi: Türi-Alliku",
+        "area": 560.4,
+        "overlapArea": 0.0,
+        "countryArea": 560.46,
+        "calculationArea": 541.43,
+        "distance": 108.66,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA1934000",
+        "name": "Pühajõgi: suue",
+        "area": 215.23,
+        "overlapArea": 0.0,
+        "countryArea": 215.23,
+        "calculationArea": 215.23,
+        "distance": 0.78,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA5604000",
+        "name": "Pühajõgi: Toila-Oru",
+        "area": 215.23,
+        "overlapArea": 0.0,
+        "countryArea": 215.23,
+        "calculationArea": 215.23,
+        "distance": 0.77,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA1361000",
+        "name": "Rannapungerja jõgi: Mustvee mnt sild",
+        "area": 591.99,
+        "overlapArea": 0.0,
+        "countryArea": 591.99,
+        "calculationArea": 591.99,
+        "distance": 1.9,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA2558000",
+        "name": "Rannapungerja jõgi: Roostoja",
+        "area": 318.64,
+        "overlapArea": 0.0,
+        "countryArea": 318.66,
+        "calculationArea": 318.64,
+        "distance": 12.7,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA9057000",
+        "name": "Reiu jõgi: Laadi",
+        "area": 543.83,
+        "overlapArea": 0.0,
+        "countryArea": 536.07,
+        "calculationArea": 543.83,
+        "distance": 14.57,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA0088000",
+        "name": "Reiu jõgi: Laadi koole",
+        "area": 704.47,
+        "overlapArea": 0.0,
+        "countryArea": 696.68,
+        "calculationArea": 704.47,
+        "distance": 11.47,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA8438000",
+        "name": "Reiu jõgi: Lähkma",
+        "area": 534.08,
+        "overlapArea": 0.0,
+        "countryArea": 526.3,
+        "calculationArea": 534.08,
+        "distance": 17.94,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA7093000",
+        "name": "Saarjõgi: Kaansoo",
+        "area": 177.86,
+        "overlapArea": 0.0,
+        "countryArea": 177.86,
+        "calculationArea": 177.86,
+        "distance": 1.01,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA7595000",
+        "name": "Saarjõgi: Kaansoo",
+        "area": 177.86,
+        "overlapArea": 0.0,
+        "countryArea": 177.89,
+        "calculationArea": 177.86,
+        "distance": 1.0,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA4331000",
+        "name": "Sargvere peakraav: Põhjaka II",
+        "area": 7.67,
+        "overlapArea": 0.0,
+        "countryArea": 7.67,
+        "calculationArea": 7.67,
+        "distance": 0.97,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA4736000",
+        "name": "Sauga jõgi: Nurme",
+        "area": 546.14,
+        "overlapArea": 0.0,
+        "countryArea": 546.14,
+        "calculationArea": 546.14,
+        "distance": 10.37,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA4907000",
+        "name": "Sauga jõgi: Nurme",
+        "area": 550.07,
+        "overlapArea": 0.0,
+        "countryArea": 550.14,
+        "calculationArea": 550.07,
+        "distance": 10.14,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA3956000",
+        "name": "Selja jõgi: suue",
+        "area": 428.82,
+        "overlapArea": 0.0,
+        "countryArea": 428.82,
+        "calculationArea": 428.82,
+        "distance": 0.71,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA8909000",
+        "name": "Selja jõgi: Varangu",
+        "area": 376.19,
+        "overlapArea": 0.0,
+        "countryArea": 376.19,
+        "calculationArea": 376.19,
+        "distance": 18.19,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA6231000",
+        "name": "Taebla jõgi: Saunja sild",
+        "area": 108.22,
+        "overlapArea": 0.0,
+        "countryArea": 108.22,
+        "calculationArea": 108.22,
+        "distance": 1.05,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA5321000",
+        "name": "Tagajõgi: Tudulinna",
+        "area": 237.8,
+        "overlapArea": 0.0,
+        "countryArea": 237.8,
+        "calculationArea": 237.8,
+        "distance": 5.69,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA8056000",
+        "name": "Tagajõgi: Tudulinna",
+        "area": 240.17,
+        "overlapArea": 0.0,
+        "countryArea": 240.19,
+        "calculationArea": 240.17,
+        "distance": 3.76,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA8903000",
+        "name": "Tarvastu jõgi: Tarvastu",
+        "area": 83.34,
+        "overlapArea": 0.0,
+        "countryArea": 83.35,
+        "calculationArea": 83.34,
+        "distance": 8.68,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA4484000",
+        "name": "Tänassilma jõgi: Kõrtsi (Oiu)",
+        "area": 442.59,
+        "overlapArea": 0.0,
+        "countryArea": 442.59,
+        "calculationArea": 442.59,
+        "distance": 0.43,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA6842000",
+        "name": "Tänassilma jõgi: Tänassilma",
+        "area": 306.5,
+        "overlapArea": 0.0,
+        "countryArea": 306.53,
+        "calculationArea": 306.5,
+        "distance": 17.49,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA6880000",
+        "name": "Valgejõgi: Loksa jalakäijate sild",
+        "area": 354.94,
+        "overlapArea": 0.0,
+        "countryArea": 354.94,
+        "calculationArea": 354.94,
+        "distance": 0.34,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA9895000",
+        "name": "Valgejõgi: Porkuni, Oruveski talust põhjasuunas",
+        "area": 40.59,
+        "overlapArea": 0.0,
+        "countryArea": 40.59,
+        "calculationArea": 40.59,
+        "distance": 88.85,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA8764000",
+        "name": "Valgejõgi: Vanaküla",
+        "area": 307.94,
+        "overlapArea": 0.0,
+        "countryArea": 307.94,
+        "calculationArea": 307.94,
+        "distance": 27.23,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA8444000",
+        "name": "Velise jõgi: Valgu",
+        "area": 155.77,
+        "overlapArea": 0.0,
+        "countryArea": 155.77,
+        "calculationArea": 155.77,
+        "distance": 37.84,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA8799000",
+        "name": "Velise jõgi: Valgu",
+        "area": 121.48,
+        "overlapArea": 0.0,
+        "countryArea": 121.5,
+        "calculationArea": 121.48,
+        "distance": 42.02,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA9204000",
+        "name": "Vigala jõgi: Konuvere",
+        "area": 584.49,
+        "overlapArea": 0.0,
+        "countryArea": 584.56,
+        "calculationArea": 584.49,
+        "distance": 28.28,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA2051000",
+        "name": "Vihterpalu jõgi: Vihterpalu",
+        "area": 480.66,
+        "overlapArea": 0.0,
+        "countryArea": 480.66,
+        "calculationArea": 480.66,
+        "distance": 1.62,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA3959000",
+        "name": "Vihterpalu jõgi: Vihterpalu",
+        "area": 478.32,
+        "overlapArea": 0.0,
+        "countryArea": 478.36,
+        "calculationArea": 478.32,
+        "distance": 2.61,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA1133000",
+        "name": "Vodja jõgi: Vodja",
+        "area": 71.47,
+        "overlapArea": 0.0,
+        "countryArea": 71.48,
+        "calculationArea": 71.47,
+        "distance": 7.03,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA6742000",
+        "name": "Vodja jõgi: Vodja",
+        "area": 71.47,
+        "overlapArea": 0.0,
+        "countryArea": 71.47,
+        "calculationArea": 71.47,
+        "distance": 7.04,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA7548000",
+        "name": "Võhandu jõgi: Himmiste",
+        "area": 843.21,
+        "overlapArea": 0.0,
+        "countryArea": 843.21,
+        "calculationArea": 829.03,
+        "distance": 60.2,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA5230000",
+        "name": "Võhandu jõgi: Kirumpää",
+        "area": 584.78,
+        "overlapArea": 0.0,
+        "countryArea": 584.75,
+        "calculationArea": 584.78,
+        "distance": 91.11,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA4456000",
+        "name": "Võhandu jõgi: Räpina",
+        "area": 1132.34,
+        "overlapArea": 0.0,
+        "countryArea": 1132.29,
+        "calculationArea": 1118.16,
+        "distance": 12.16,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA7164000",
+        "name": "Võhandu jõgi: Räpinast allavoolu, Ristipalo küla",
+        "area": 1135.86,
+        "overlapArea": 0.0,
+        "countryArea": 1135.86,
+        "calculationArea": 1121.68,
+        "distance": 10.14,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA6796000",
+        "name": "Võhandu jõgi: Süvahavva",
+        "area": 915.37,
+        "overlapArea": 0.0,
+        "countryArea": 915.37,
+        "calculationArea": 901.19,
+        "distance": 51.74,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA0106000",
+        "name": "Võisiku pkr: enne Võisiku paisjärve",
+        "area": 26.55,
+        "overlapArea": 0.0,
+        "countryArea": 26.55,
+        "calculationArea": 26.55,
+        "distance": 3.5,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA6005000",
+        "name": "Väike Emajõgi: Pikasilla",
+        "area": 1255.49,
+        "overlapArea": 0.0,
+        "countryArea": 1172.22,
+        "calculationArea": 1255.49,
+        "distance": 1.71,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA3413000",
+        "name": "Väike Emajõgi: Tõlliste",
+        "area": 1044.84,
+        "overlapArea": 0.0,
+        "countryArea": 974.93,
+        "calculationArea": 1044.84,
+        "distance": 37.39,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA2072000",
+        "name": "Vääna jõgi: Hüüru",
+        "area": 202.07,
+        "overlapArea": 0.0,
+        "countryArea": 202.08,
+        "calculationArea": 202.07,
+        "distance": 28.85,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA7837000",
+        "name": "Vääna jõgi: suue, Vääna-Jõesuu sild",
+        "area": 309.6,
+        "overlapArea": 0.0,
+        "countryArea": 309.6,
+        "calculationArea": 309.6,
+        "distance": 1.93,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA4377000",
+        "name": "Õhne jõgi: Sõõriknurme (Suislepast allavoolu)",
+        "area": 576.52,
+        "overlapArea": 0.0,
+        "countryArea": 565.59,
+        "calculationArea": 576.52,
+        "distance": 6.09,
+        "type": "HYDROCHEMICAL"
+    },
+    {
+        "code": "SJA2835000",
+        "name": "Õhne jõgi: Tõrva",
+        "area": 272.25,
+        "overlapArea": 0.0,
+        "countryArea": 261.32,
+        "calculationArea": 272.25,
+        "distance": 39.21,
+        "type": "HYDROLOGICAL"
+    },
+    {
+        "code": "SJA2589000",
+        "name": "Õhne jõgi: Tõrvast ülesvoolu, Roobe sild",
+        "area": 261.41,
+        "overlapArea": 0.0,
+        "countryArea": 250.48,
+        "calculationArea": 261.41,
+        "distance": 45.45,
+        "type": "HYDROCHEMICAL"
+    }
+]
