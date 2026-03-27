@@ -1,0 +1,11 @@
+{
+  "odata.metadata":"https://rajapinnat.ymparisto.fi/api/Hydrologiarajapinta/1.1/odata/$metadata#Vedenkorkeus","value":[
+    {
+      "Paikka_Id":1900,"Aika":"2025-01-01T00:00:00","Arvo":329,"ArvoMin":null,"ArvoMax":null,"Lippu_id":null
+    },{
+      "Paikka_Id":1900,"Aika":"2025-01-02T00:00:00","Arvo":331,"ArvoMin":null,"ArvoMax":null,"Lippu_id":null
+    },{
+      "Paikka_Id":1900,"Aika":"2025-01-03T00:00:00","Arvo":330,"ArvoMin":null,"ArvoMax":null,"Lippu_id":null
+    }
+  ]
+}

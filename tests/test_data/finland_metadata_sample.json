@@ -1,0 +1,11 @@
+{
+  "odata.metadata":"https://rajapinnat.ymparisto.fi/api/Hydrologiarajapinta/1.1/odata/$metadata#Paikka","value":[
+    {
+      "Paikka_Id":897,"Suure_Id":2,"H_Kunta_Id":689,"KuntaNimi":"Rautj\u00e4rvi","Nro":"0300250","Nimi":"Juankoski","KoordYkPohj":6816330,"KoordYkIta":3625189,"KoordPkPohj":6814253,"KoordPkIta":4465100,"KoordLat":"612604","KoordLong":"292045","KoordTarkkuus":10,"Karttalehti":"412302C","Omistaja_Id":2,"Tila_Id":1,"Laitteisto_Id":9,"H_Vesal_Id":81,"VesalNimi":"Simpelej\u00e4rven alaosan la","H_PaaVesal_Id":3,"PaaVesalNimi":"Hiitolanjoki","KoordErTmPohj":6813473,"KoordErTmIta":624968,"Jarvi_Id":835,"JarviNro":"03.012.1.020","JarviNimi":"Konkanlampi"
+    },{
+      "Paikka_Id":1900,"Suure_Id":1,"H_Kunta_Id":405,"KuntaNimi":"Lappeenranta","Nro":"0411200","Nimi":"Saimaa, Lauritsala","KoordYkPohj":6775555,"KoordYkIta":3568816,"KoordPkPohj":6775555,"KoordPkIta":3568816,"KoordLat":"610458","KoordLong":"281630","KoordTarkkuus":0,"Karttalehti":"313407D","Omistaja_Id":16,"Tila_Id":1,"Laitteisto_Id":25,"H_Vesal_Id":110,"VesalNimi":"Ala-Saimaan la","H_PaaVesal_Id":4,"PaaVesalNimi":"Vuoksi","KoordErTmPohj":6772714,"KoordErTmIta":568618,"Jarvi_Id":1069,"JarviNro":"04.112.1.001","JarviNimi":"Saimaa"
+    },{
+      "Paikka_Id":3094,"Suure_Id":11,"H_Kunta_Id":781,"KuntaNimi":"Sysm\u00e4","Nro":"1499001","Nimi":"P\u00e4ij\u00e4nne, P\u00e4ij\u00e4tsalo","KoordYkPohj":6818582,"KoordYkIta":3424839,"KoordPkPohj":6818582,"KoordPkIta":3424839,"KoordLat":"612803","KoordLong":"253524","KoordTarkkuus":0,"Karttalehti":"312102 ","Omistaja_Id":16,"Tila_Id":1,"Laitteisto_Id":21,"H_Vesal_Id":798,"VesalNimi":"P\u00e4ij\u00e4nteen la","H_PaaVesal_Id":14,"PaaVesalNimi":"Kymijoki","KoordErTmPohj":6815722,"KoordErTmIta":424699,"Jarvi_Id":null,"JarviNro":null,"JarviNimi":null
+    }
+  ]
+}
