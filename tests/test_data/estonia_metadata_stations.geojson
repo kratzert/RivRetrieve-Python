@@ -1,0 +1,1741 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8821000",
+                "name": "Ahja jõgi: Ahja"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.1125992,
+                    58.2094013
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA0664000",
+                "name": "Ahja jõgi: Kiidjärve"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.997405,
+                    58.1582115
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7675000",
+                "name": "Ahja jõgi: Lääniste sild"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.1309477,
+                    58.268947
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA9946000",
+                "name": "Alajõgi: Alajõe"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.3929578,
+                    59.0308954
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8127000",
+                "name": "Alajõgi: Griini (Alajõe)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.4189242,
+                    59.0163225
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA5784000",
+                "name": "Audru jõgi: Audru"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.3641607,
+                    58.4130574
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA9683000",
+                "name": "Audru jõgi: Audru"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.3188628,
+                    58.4234552
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8211000",
+                "name": "Avijõgi: Mulgi"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.0499713,
+                    58.9525393
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2401000",
+                "name": "Avijõgi: Separa"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.0366758,
+                    58.9661517
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7196000",
+                "name": "Elva jõgi: Elva"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.434672,
+                    58.2116205
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8007000",
+                "name": "Emajõgi: Kavastu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.0450792,
+                    58.3769784
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2302000",
+                "name": "Emajõgi: Rannu-Jõesuu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.1341108,
+                    58.3849293
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA5524000",
+                "name": "Emajõgi: Rannu-Jõesuu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.1340336,
+                    58.3854623
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7331000",
+                "name": "Emajõgi: Tartu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.7261801,
+                    58.3800219
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7982000",
+                "name": "Emajõgi: Tartu (Kvissental)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.6919511,
+                    58.4041623
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA1593000",
+                "name": "Esna jõgi: Põhjaka I"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.6695539,
+                    58.8922222
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4385000",
+                "name": "Halliste jõgi: Riisa"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.9944344,
+                    58.4797269
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA6180000",
+                "name": "Jägala jõgi: Jägala juga"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.1790053,
+                    59.4498423
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA3814000",
+                "name": "Jägala jõgi: Kehra"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.3404184,
+                    59.3443609
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2203000",
+                "name": "Jägala jõgi: Linnamäe (suue)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.1518327,
+                    59.4716926
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8358000",
+                "name": "Jänijõgi: Jäneda"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.6945799,
+                    59.2331966
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA9179000",
+                "name": "Kasari jõgi: Kasari"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    23.9969306,
+                    58.7266338
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4483000",
+                "name": "Kasari jõgi: Kasari sild"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    23.989444,
+                    58.733611
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4444000",
+                "name": "Keila jõgi: Keila"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.4347064,
+                    59.3087907
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA6896000",
+                "name": "Keila jõgi: Keila linn"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.4346953,
+                    59.3087697
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA5960000",
+                "name": "Keila jõgi: suue, Keila-Joa"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.2945923,
+                    59.3952394
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA5768000",
+                "name": "Kullavere jõgi: hüdrokeemia - Tartu-Mustvee mnt sild"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.9002112,
+                    58.7688448
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA1098000",
+                "name": "Kunda jõgi: Sämi"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.5827816,
+                    59.3730778
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA1417000",
+                "name": "Kunda jõgi: Sämi"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.5827816,
+                    59.3730778
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8841000",
+                "name": "Kunda jõgi: suue"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.5368744,
+                    59.5138634
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2259000",
+                "name": "Kääpa jõgi: Kääpa"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.8490114,
+                    58.7006869
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJB4324000",
+                "name": "Leisi jõgi: Elu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    22.6973784,
+                    58.5129301
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA1582000",
+                "name": "Leivajõgi: Pajupea"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.9689147,
+                    59.3809086
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2115000",
+                "name": "Linnusaare oja: Linnusaare"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.1977923,
+                    58.8708197
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJB4488000",
+                "name": "Linnussaare oja: Linnusaare"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.1977787,
+                    58.8708136
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7798000",
+                "name": "Loobu jõgi: Arbavere"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.963537,
+                    59.4400408
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA5258000",
+                "name": "Loobu jõgi: Jõekääru (Vihasoo)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.7849657,
+                    59.5516495
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7233000",
+                "name": "Luguse jõgi: Luguse"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    22.712465,
+                    58.8102604
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJB4327000",
+                "name": "Luguse jõgi: Luguse"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    22.7122665,
+                    58.8101679
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA6159000",
+                "name": "Lõve jõgi: Uue-Lõve"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    22.8340819,
+                    58.3565439
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA0680000",
+                "name": "Lõve jõgi: Uue-Lõve sild"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    22.8344447,
+                    58.3563881
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7746000",
+                "name": "Mustajõgi: Narva karjääri"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.857163,
+                    59.267274
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA6683000",
+                "name": "Mustjõgi: Taheva"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.3493756,
+                    57.598463
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7631000",
+                "name": "Mustjõgi: Tsirgumäe"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.3495741,
+                    57.5986839
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJB4487000",
+                "name": "Mustjõgi: Tulijärve"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.2397623,
+                    58.8845822
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA5432000",
+                "name": "Narva jõgi: Kuningaküla"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.8039372,
+                    59.1244541
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4515000",
+                "name": "Narva jõgi: Narva linn"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    28.2066506,
+                    59.3827528
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA9741000",
+                "name": "Narva jõgi: Narvast allavoolu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    28.1479597,
+                    59.4146009
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4328000",
+                "name": "Narva jõgi: Vasknarva"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.7406177,
+                    59.0009313
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2718000",
+                "name": "Narva jõgi: Vasknarva"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.7403866,
+                    59.0010026
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4875000",
+                "name": "Narva veehoidla: Kulgu sadam"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    28.1726042,
+                    59.3435762
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA6334000",
+                "name": "Navesti jõgi: Aesoo"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.0618244,
+                    58.5153039
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2802000",
+                "name": "Oostriku jõgi: Oostriku"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.0485211,
+                    58.8871229
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA0301000",
+                "name": "Pedja jõgi: Jõgeva sordiaretusjaam"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.400278,
+                    58.763333
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA0430000",
+                "name": "Pedja jõgi: Tõrve"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.3750688,
+                    58.6024249
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA3204000",
+                "name": "Pedja jõgi: Tõrve"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.3748957,
+                    58.6024865
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA5411000",
+                "name": "Peipsi järv: Mehikoorma"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.4748245,
+                    58.237748
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA5000000",
+                "name": "Peipsi järv: Mustvee"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.952583,
+                    58.8469775
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8843000",
+                "name": "Peipsi järv: Praaga"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.235444,
+                    58.4362965
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA6279000",
+                "name": "Pirita jõgi: Kloostrimetsa"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.8795184,
+                    59.4662913
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA5140000",
+                "name": "Pirita jõgi: Lükati sild"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.8557771,
+                    59.4612002
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA5928000",
+                "name": "Piusa jõgi: Korela"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.7262554,
+                    57.8853395
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA9977000",
+                "name": "Piusa jõgi: Värska-Saatse mnt."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.7361807,
+                    57.8893381
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8796000",
+                "name": "Porijõgi / Reola jõgi: Reola"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.7421148,
+                    58.273392
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA3124000",
+                "name": "Porijõgi: Reola - Vana-Kuuste tee (Uhti)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.7421914,
+                    58.2733904
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4084000",
+                "name": "Prandi jõgi: Tori"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.4764901,
+                    58.7994165
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4253000",
+                "name": "Preedi jõgi: Varangu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.1106086,
+                    59.0344376
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA9316000",
+                "name": "Pudisoo jõgi: Pudisoo"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.5559266,
+                    59.5174736
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2129000",
+                "name": "Purtse jõgi: Lüganuse"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.0390659,
+                    59.3838602
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA9900000",
+                "name": "Purtse jõgi: suue (Tallinn-Narva mnt)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.9939742,
+                    59.4314822
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4401000",
+                "name": "Pärlijõgi / Pudisoo jõgi: Pudisoo"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.5947537,
+                    59.5087001
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8483000",
+                "name": "Pärnu jõgi: Oore"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.7635324,
+                    58.4558223
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2731000",
+                "name": "Pärnu jõgi: Oore"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.7676674,
+                    58.4632528
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJB3766000",
+                "name": "Pärnu jõgi: Särevere"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.4211102,
+                    58.7889981
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA0234000",
+                "name": "Pärnu jõgi: Tahkuse"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.9157694,
+                    58.5184912
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJB4152000",
+                "name": "Pärnu jõgi: Türi-Alliku"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.4730234,
+                    58.8302558
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8617000",
+                "name": "Pärnu jõgi: Türi-Alliku"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.4731678,
+                    58.8302066
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8256000",
+                "name": "Põltsamaa jõgi: Pajusi"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.9277924,
+                    58.7032473
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7946000",
+                "name": "Põltsamaa jõgi: Rutikvere"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.963511,
+                    58.7897395
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA0177000",
+                "name": "Põltsamaa jõgi: Rõika"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.0516382,
+                    58.4880447
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA5604000",
+                "name": "Pühajõgi: Toila-Oru"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.5300216,
+                    59.4231125
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA1934000",
+                "name": "Pühajõgi: suue"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.5298105,
+                    59.423084
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA1361000",
+                "name": "Rannapungerja jõgi: Mustvee mnt sild"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.1729456,
+                    58.9891264
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2558000",
+                "name": "Rannapungerja jõgi: Roostoja"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.1056794,
+                    59.0237441
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA9057000",
+                "name": "Reiu jõgi: Laadi"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.646769,
+                    58.2674458
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA0088000",
+                "name": "Reiu jõgi: Laadi koole"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.6316745,
+                    58.2833307
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8438000",
+                "name": "Reiu jõgi: Lähkma"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.685266,
+                    58.263695
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7093000",
+                "name": "Saarjõgi: Kaansoo"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.2215664,
+                    58.5772145
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7595000",
+                "name": "Saarjõgi: Kaansoo"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.2216984,
+                    58.5772033
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4331000",
+                "name": "Sargvere peakraav: Põhjaka II"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.6766976,
+                    58.8891385
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4736000",
+                "name": "Sauga jõgi: Nurme"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.501252,
+                    58.4459849
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4907000",
+                "name": "Sauga jõgi: Nurme"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.4977151,
+                    58.4463192
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8909000",
+                "name": "Selja jõgi: Varangu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.351557,
+                    59.4722208
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA3956000",
+                "name": "Selja jõgi: suue"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.4047596,
+                    59.5433815
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA6231000",
+                "name": "Taebla jõgi: Saunja sild"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    23.6768014,
+                    58.9663122
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA5321000",
+                "name": "Tagajõgi: Tudulinna"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.0750786,
+                    59.047442
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8056000",
+                "name": "Tagajõgi: Tudulinna"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.0888724,
+                    59.0361091
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA3914000",
+                "name": "Tamula järv: Roosisaare"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.9808458,
+                    57.8468306
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8903000",
+                "name": "Tarvastu jõgi: Tarvastu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.8843678,
+                    58.2287415
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4484000",
+                "name": "Tänassilma jõgi: Kõrtsi (Oiu)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.9743438,
+                    58.3986646
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA6842000",
+                "name": "Tänassilma jõgi: Tänassilma"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.8221168,
+                    58.3949017
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA6880000",
+                "name": "Valgejõgi: Loksa jalakäijate sild"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.7117271,
+                    59.583024
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA9895000",
+                "name": "Valgejõgi: Porkuni, Oruveski talust põhjasuunas"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.1774982,
+                    59.1950014
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8764000",
+                "name": "Valgejõgi: Vanaküla"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.7892425,
+                    59.4677818
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8444000",
+                "name": "Velise jõgi: Valgu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.5925164,
+                    58.8169369
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA8799000",
+                "name": "Velise jõgi: Valgu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.6450127,
+                    58.8178888
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA9204000",
+                "name": "Vigala jõgi: Konuvere"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.4128838,
+                    58.8077828
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2051000",
+                "name": "Vihterpalu jõgi: Vihterpalu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    23.8733331,
+                    59.259444
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA3959000",
+                "name": "Vihterpalu jõgi: Vihterpalu"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    23.8665502,
+                    59.2521098
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA6742000",
+                "name": "Vodja jõgi: Vodja"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.6444273,
+                    58.9390862
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA1133000",
+                "name": "Vodja jõgi: Vodja"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.6444588,
+                    58.9389825
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA6005000",
+                "name": "Väike Emajõgi: Pikasilla"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.0610045,
+                    58.0826853
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA3413000",
+                "name": "Väike Emajõgi: Tõlliste"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.1325177,
+                    57.8510685
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2072000",
+                "name": "Vääna jõgi: Hüüru"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.5349324,
+                    59.3802651
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7837000",
+                "name": "Vääna jõgi: suue, Vääna-Jõesuu sild"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    24.363892,
+                    59.4314302
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7548000",
+                "name": "Võhandu jõgi: Himmiste"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.2081717,
+                    57.9474276
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA5230000",
+                "name": "Võhandu jõgi: Kirumpää"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    26.9932844,
+                    57.8660219
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4456000",
+                "name": "Võhandu jõgi: Räpina"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.4545805,
+                    58.0955844
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA7164000",
+                "name": "Võhandu jõgi: Räpinast allavoolu, Ristipalo küla"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.4761955,
+                    58.0879449
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA6796000",
+                "name": "Võhandu jõgi: Süvahavva"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    27.2180761,
+                    57.9891528
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA0106000",
+                "name": "Võisiku pkr: enne Võisiku paisjärve"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.9148046,
+                    58.6277128
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA4377000",
+                "name": "Õhne jõgi: Sõõriknurme (Suislepast allavoolu)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.9972528,
+                    58.1489289
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2835000",
+                "name": "Õhne jõgi: Tõrva"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.9211191,
+                    58.0038061
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "code": "SJA2589000",
+                "name": "Õhne jõgi: Tõrvast ülesvoolu, Roobe sild"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    25.9302639,
+                    57.9720018
+                ]
+            }
+        }
+    ]
+}
