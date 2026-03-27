@@ -19,6 +19,16 @@ class TestFinlandFetcher(unittest.TestCase):
         with open(self.test_data_dir / filename, "r", encoding="utf-8") as f:
             return json.load(f)
 
+    @staticmethod
+    def _build_expected_df(records, variable, scale=1.0):
+        expected_df = pd.DataFrame(
+            {
+                constants.TIME_INDEX: pd.to_datetime([record["Aika"] for record in records]),
+                variable: [float(record["Arvo"]) * scale for record in records],
+            }
+        )
+        return expected_df.set_index(constants.TIME_INDEX)
+
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_metadata(self, mock_requests_session):
         mock_session = MagicMock()
@@ -82,6 +92,48 @@ class TestFinlandFetcher(unittest.TestCase):
         self.assertIn("/odata/Virtaama", mock_session.get.call_args.args[0])
         self.assertEqual(mock_session.get.call_args.kwargs["params"]["$orderby"], "Aika asc")
         self.assertIn("Paikka_Id eq 897", mock_session.get.call_args.kwargs["params"]["$filter"])
+
+    @patch("rivretrieve.utils.requests_retry_session")
+    def test_get_data_daily_discharge_splits_long_ranges_to_avoid_500_row_truncation(self, mock_requests_session):
+        mock_session = MagicMock()
+        mock_requests_session.return_value = mock_session
+
+        first_payload = self._load_json("finland_897_discharge_20250101_20251231.json")
+        second_payload = self._load_json("finland_897_discharge_20260101_20260327.json")
+
+        first_response = MagicMock()
+        first_response.json.return_value = first_payload
+        first_response.raise_for_status = MagicMock()
+
+        second_response = MagicMock()
+        second_response.json.return_value = second_payload
+        second_response.raise_for_status = MagicMock()
+
+        mock_session.get.side_effect = [first_response, second_response]
+
+        result_df = self.fetcher.get_data(
+            gauge_id="897",
+            variable=constants.DISCHARGE_DAILY_MEAN,
+            start_date="2025-01-01",
+            end_date="2026-03-27",
+        )
+
+        expected_df = pd.concat(
+            [
+                self._build_expected_df(first_payload["value"], constants.DISCHARGE_DAILY_MEAN),
+                self._build_expected_df(second_payload["value"], constants.DISCHARGE_DAILY_MEAN),
+            ]
+        )
+
+        assert_frame_equal(result_df, expected_df)
+        self.assertEqual(len(result_df), 451)
+        self.assertEqual(mock_session.get.call_count, 2)
+        first_call = mock_session.get.call_args_list[0]
+        second_call = mock_session.get.call_args_list[1]
+        self.assertIn("Aika ge datetime'2025-01-01T00:00:00'", first_call.kwargs["params"]["$filter"])
+        self.assertIn("Aika le datetime'2025-12-31T23:59:59'", first_call.kwargs["params"]["$filter"])
+        self.assertIn("Aika ge datetime'2026-01-01T00:00:00'", second_call.kwargs["params"]["$filter"])
+        self.assertIn("Aika le datetime'2026-03-27T23:59:59'", second_call.kwargs["params"]["$filter"])
 
     @patch("rivretrieve.utils.requests_retry_session")
     def test_get_data_daily_stage_converts_centimeters_to_meters(self, mock_requests_session):

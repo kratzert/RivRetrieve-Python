@@ -36,6 +36,7 @@ class FinlandFetcher(base.RiverDataFetcher):
     COUNTRY = "Finland"
     SOURCE = "Finnish Environment Institute (SYKE)"
     METADATA_PAGE_SIZE = 500
+    MAX_TIMESERIES_WINDOW_DAYS = 365
     SUPPORTED_VARIABLE_COLUMN = "supported_variable"
     VARIABLE_MAP = {
         constants.DISCHARGE_DAILY_MEAN: {
@@ -97,6 +98,21 @@ class FinlandFetcher(base.RiverDataFetcher):
         result["_gauge_sort"] = gauge_ids
         result = result.sort_values(["_gauge_sort", constants.GAUGE_ID], na_position="last")
         return result.drop(columns="_gauge_sort")
+
+    @classmethod
+    def _split_date_windows(cls, start_date: str, end_date: str) -> list[tuple[pd.Timestamp, pd.Timestamp]]:
+        start = pd.Timestamp(start_date)
+        end = pd.Timestamp(end_date)
+        if pd.isna(start) or pd.isna(end) or start > end:
+            return []
+
+        windows = []
+        current = start
+        while current <= end:
+            window_end = min(end, current + pd.Timedelta(days=cls.MAX_TIMESERIES_WINDOW_DAYS - 1))
+            windows.append((current, window_end))
+            current = window_end + pd.Timedelta(days=1)
+        return windows
 
     @staticmethod
     def _fetch_odata_records(
@@ -214,25 +230,29 @@ class FinlandFetcher(base.RiverDataFetcher):
         """Downloads raw JSON data from the SYKE OData API."""
         config = self.VARIABLE_MAP[variable]
         resource = config["resource"]
+        windows = self._split_date_windows(start_date, end_date)
 
         try:
             paikka_id = int(str(gauge_id).strip())
         except ValueError as exc:
             raise ValueError("Finland gauge_id must be a numeric Paikka_Id.") from exc
 
-        params = {
-            "$filter": (
-                f"Paikka_Id eq {paikka_id} and "
-                f"Aika ge datetime'{start_date}T00:00:00' and "
-                f"Aika le datetime'{end_date}T23:59:59'"
-            ),
-            "$orderby": "Aika asc",
-            "$top": self.METADATA_PAGE_SIZE,
-        }
         session = utils.requests_retry_session()
+        records: list[dict[str, Any]] = []
 
         try:
-            return self._fetch_odata_records(session, f"{self.ODATA_URL}/{resource}", params=params)
+            for window_start, window_end in windows:
+                params = {
+                    "$filter": (
+                        f"Paikka_Id eq {paikka_id} and "
+                        f"Aika ge datetime'{window_start.strftime('%Y-%m-%d')}T00:00:00' and "
+                        f"Aika le datetime'{window_end.strftime('%Y-%m-%d')}T23:59:59'"
+                    ),
+                    "$orderby": "Aika asc",
+                    "$top": self.METADATA_PAGE_SIZE,
+                }
+                records.extend(self._fetch_odata_records(session, f"{self.ODATA_URL}/{resource}", params=params))
+            return records
         except requests.exceptions.RequestException as exc:
             logger.error(f"Failed to fetch Finnish data for {gauge_id}: {exc}")
             raise
