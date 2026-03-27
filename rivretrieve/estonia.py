@@ -16,8 +16,8 @@ class EstoniaFetcher(base.RiverDataFetcher):
     """Fetches river gauge data from EstModel.
 
     Data source:
-        https://estmodel.envir.ee/
-        https://estmodel.app/
+        - https://estmodel.envir.ee/
+        - https://estmodel.app/
 
     Supported variables:
         - ``constants.DISCHARGE_DAILY_MEAN`` (m³/s)
