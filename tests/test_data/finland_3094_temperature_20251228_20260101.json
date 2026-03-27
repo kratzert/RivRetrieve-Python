@@ -1,0 +1,15 @@
+{
+  "odata.metadata":"https://rajapinnat.ymparisto.fi/api/Hydrologiarajapinta/1.1/odata/$metadata#LampoPintavesi","value":[
+    {
+      "Paikka_Id":3094,"Aika":"2025-12-28T00:00:00","Arvo":"2.0"
+    },{
+      "Paikka_Id":3094,"Aika":"2025-12-29T00:00:00","Arvo":"1.6"
+    },{
+      "Paikka_Id":3094,"Aika":"2025-12-30T00:00:00","Arvo":"1.3"
+    },{
+      "Paikka_Id":3094,"Aika":"2025-12-31T00:00:00","Arvo":"0.3"
+    },{
+      "Paikka_Id":3094,"Aika":"2026-01-01T00:00:00","Arvo":"0.2"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "odata.metadata":"https://rajapinnat.ymparisto.fi/api/Hydrologiarajapinta/1.1/odata/$metadata#Virtaama","value":[
+    {
+      "Paikka_Id":897,"Aika":"2026-03-25T00:00:00","Arvo":"6.02","ArvoMin":null,"ArvoMax":null,"Lippu_id":null,"huomautus":null
+    },{
+      "Paikka_Id":897,"Aika":"2026-03-26T00:00:00","Arvo":"6.02","ArvoMin":null,"ArvoMax":null,"Lippu_id":108,"huomautus":null
+    },{
+      "Paikka_Id":897,"Aika":"2026-03-27T00:00:00","Arvo":"6.02","ArvoMin":null,"ArvoMax":null,"Lippu_id":108,"huomautus":null
+    }
+  ]
+}
