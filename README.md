@@ -9,6 +9,12 @@ Welcome to RivRetrieve-Python! We're actively developing this library to make gl
 
 - Documentation: [rivretrieve-python.readthedocs.io](https://rivretrieve-python.readthedocs.io/en/latest/) (Work in Progress)
 
+## Current coverage
+
+The map below shows station locations for the fetchers currently implemented on `main`.
+
+![Station coverage map](_static/station-coverage-map.png)
+
 ## Background
 
 This package originated as a Python translation of the [RivRetrieve R package](https://github.com/Ryan-Riggs/RivRetrieve). The initial translation was performed by Gemini, with a few manual adjustments for API changes.

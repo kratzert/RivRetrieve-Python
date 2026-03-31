@@ -10,6 +10,8 @@ rivretrieve/data
 
 **/*.pyc
 **/*.png
+!_static/station-coverage-map.png
+!docs/_static/station-coverage-map.png
 **/*.env
 
 .ipynb_checkpoints/
