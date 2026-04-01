@@ -87,8 +87,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--readme-output",
         type=Path,
-        default=REPO_ROOT / "_static" / "station-coverage-map.png",
-        help="Optional duplicate output for the repo-root README image path.",
+        default=None,
+        help="Optional duplicate output path if you want a second copy outside docs/_static.",
     )
     parser.add_argument(
         "--update-readme",
@@ -186,9 +186,9 @@ def build_coverage_block(pending_labels: list[str]) -> str:
         [
             "## Current coverage",
             "",
-            "The map below shows station locations for the fetchers currently implemented on `main`.",
+            "The map below shows station locations for the data sources currently supported by RivRetrieve-Python.",
             "",
-            "![Station coverage map](_static/station-coverage-map.png)",
+            "![Station coverage map](docs/_static/station-coverage-map.png)",
         ]
     )
 
@@ -350,8 +350,9 @@ def main() -> None:
     cleaned_stations = drop_obvious_outliers(stations)
     pending_labels = detect_under_implementation_labels()
     render_map(world, cleaned_stations, args.output, pending_labels)
-    args.readme_output.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(args.output, args.readme_output)
+    if args.readme_output is not None:
+        args.readme_output.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(args.output, args.readme_output)
     if args.update_readme:
         update_readme(args.readme_path, pending_labels)
 

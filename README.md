@@ -11,15 +11,15 @@ Welcome to RivRetrieve-Python! We're actively developing this library to make gl
 
 ## Current coverage
 
-The map below shows station locations for the fetchers currently implemented on `main`.
+The map below shows station locations for the data sources currently supported by RivRetrieve-Python.
 
-![Station coverage map](_static/station-coverage-map.png)
+![Station coverage map](docs/_static/station-coverage-map.png)
 
 ## Background
 
 This package originated as a Python translation of the [RivRetrieve R package](https://github.com/Ryan-Riggs/RivRetrieve). The initial translation was performed by Gemini, with a few manual adjustments for API changes.
 
-Since then, the package has evolved significantly and is under heavy development. See [Issues](https://github.com/kratzert/RivRetrieve-Python/issues) for more details.
+Since then, the package has evolved significantly into a collaborative effort also involving [@simonmoulds](https://github.com/simonmoulds) and [@thiagovmdon](https://github.com/thiagovmdon), and is under heavy development. See [Issues](https://github.com/kratzert/RivRetrieve-Python/issues) for more details.
 
 Initially, I ([@kratzert](https://github.com/kratzert)) used this project to experiment with the Gemini-CLI. I was surprised by its effectiveness for this purpose. So far, all code, tests, and everything you see is the output of the Gemini-CLI, including this README.md. Using the Gemini-CLI allows for rapid iteration and integration of new fetchers. I may write a blog post later with more details on my custom `Gemini.md` instruction file. For now, I am focusing on prompting it to resolve all open [Issues](https://github.com/kratzert/RivRetrieve-Python/issues).
 
