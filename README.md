@@ -1,9 +1,9 @@
-# RivRetrieve (Python)
+# [DEPRECATED] - RivRetrieve (Python)
+
+> [!WARNING]
+> This package is deprecated in favor of [https://github.com/RivRetrieve/RivRetrieve](https://github.com/RivRetrieve/RivRetrieve), which is a ground-up rewrite focused on scaling more effectively to dozens of new data providers. No additional issues will be resolved in this repository. Please head to our new repository and check the accompanying documentation at [rivretrieve.github.io](https://rivretrieve.github.io)
 
 A Python package for facilitating and unifying access to global streamflow data.
-
-> [!NOTE]
-> RivRetrieve-Python is currently under active development and has not yet reached a stable version. APIs and functionality are subject to change.
 
 Welcome to RivRetrieve-Python! We're actively developing this library to make global streamflow data more accessible. As an early-stage project, it's not yet stable, and we appreciate your understanding as things evolve. Contributions and feedback are welcome! Please check out the active development under [Issues](https://github.com/kratzert/RivRetrieve-Python/issues) or start posting under [Discussions](https://github.com/kratzert/RivRetrieve-Python/discussions).
 
